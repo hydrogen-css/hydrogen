@@ -1,0 +1,14 @@
+{
+  "media": {
+    "s": "300px"
+  },
+  "colors": {
+    "green": "rgba(0, 255, 0, 1)",
+    "red": "rgba(255, 0, 0, 1)"
+  },
+  "flexbox-grid": true,
+  "gradients": true,
+  "type-scale": "1.33",
+  "markup": "path/to/markup/folder",
+  "destination": "path/to/css/destination"
+}

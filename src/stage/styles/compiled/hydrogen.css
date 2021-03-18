@@ -1,0 +1,396 @@
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(green-light)"] {
+  background-color: #40ff40;
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(green-light[1])"] {
+  background-color: #40ff40;
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(green-light[.9])"] {
+  background-color: rgba(64, 255, 64, 0.9);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(green-light[.8])"] {
+  background-color: rgba(64, 255, 64, 0.8);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(green-light[.7])"] {
+  background-color: rgba(64, 255, 64, 0.7);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(green-light[.6])"] {
+  background-color: rgba(64, 255, 64, 0.6);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(green-light[.5])"] {
+  background-color: rgba(64, 255, 64, 0.5);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(green-light[.4])"] {
+  background-color: rgba(64, 255, 64, 0.4);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(green-light[.3])"] {
+  background-color: rgba(64, 255, 64, 0.3);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(green-light[.2])"] {
+  background-color: rgba(64, 255, 64, 0.2);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(green-light[.1])"] {
+  background-color: rgba(64, 255, 64, 0.1);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(green)"] {
+  background-color: lime;
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(green[1])"] {
+  background-color: lime;
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(green[.9])"] {
+  background-color: rgba(0, 255, 0, 0.9);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(green[.8])"] {
+  background-color: rgba(0, 255, 0, 0.8);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(green[.7])"] {
+  background-color: rgba(0, 255, 0, 0.7);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(green[.6])"] {
+  background-color: rgba(0, 255, 0, 0.6);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(green[.5])"] {
+  background-color: rgba(0, 255, 0, 0.5);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(green[.4])"] {
+  background-color: rgba(0, 255, 0, 0.4);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(green[.3])"] {
+  background-color: rgba(0, 255, 0, 0.3);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(green[.2])"] {
+  background-color: rgba(0, 255, 0, 0.2);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(green[.1])"] {
+  background-color: rgba(0, 255, 0, 0.1);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(green-dark)"] {
+  background-color: #0bce0b;
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(green-dark[1])"] {
+  background-color: #0bce0b;
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(green-dark[.9])"] {
+  background-color: rgba(11, 206, 11, 0.9);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(green-dark[.8])"] {
+  background-color: rgba(11, 206, 11, 0.8);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(green-dark[.7])"] {
+  background-color: rgba(11, 206, 11, 0.7);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(green-dark[.6])"] {
+  background-color: rgba(11, 206, 11, 0.6);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(green-dark[.5])"] {
+  background-color: rgba(11, 206, 11, 0.5);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(green-dark[.4])"] {
+  background-color: rgba(11, 206, 11, 0.4);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(green-dark[.3])"] {
+  background-color: rgba(11, 206, 11, 0.3);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(green-dark[.2])"] {
+  background-color: rgba(11, 206, 11, 0.2);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(green-dark[.1])"] {
+  background-color: rgba(11, 206, 11, 0.1);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(red-light)"] {
+  background-color: #ff4040;
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(red-light[1])"] {
+  background-color: #ff4040;
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(red-light[.9])"] {
+  background-color: rgba(255, 64, 64, 0.9);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(red-light[.8])"] {
+  background-color: rgba(255, 64, 64, 0.8);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(red-light[.7])"] {
+  background-color: rgba(255, 64, 64, 0.7);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(red-light[.6])"] {
+  background-color: rgba(255, 64, 64, 0.6);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(red-light[.5])"] {
+  background-color: rgba(255, 64, 64, 0.5);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(red-light[.4])"] {
+  background-color: rgba(255, 64, 64, 0.4);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(red-light[.3])"] {
+  background-color: rgba(255, 64, 64, 0.3);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(red-light[.2])"] {
+  background-color: rgba(255, 64, 64, 0.2);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(red-light[.1])"] {
+  background-color: rgba(255, 64, 64, 0.1);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(red)"] {
+  background-color: red;
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(red[1])"] {
+  background-color: red;
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(red[.9])"] {
+  background-color: rgba(255, 0, 0, 0.9);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(red[.8])"] {
+  background-color: rgba(255, 0, 0, 0.8);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(red[.7])"] {
+  background-color: rgba(255, 0, 0, 0.7);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(red[.6])"] {
+  background-color: rgba(255, 0, 0, 0.6);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(red[.5])"] {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(red[.4])"] {
+  background-color: rgba(255, 0, 0, 0.4);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(red[.3])"] {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(red[.2])"] {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(red[.1])"] {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(red-dark)"] {
+  background-color: #ce0b0b;
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(red-dark[1])"] {
+  background-color: #ce0b0b;
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(red-dark[.9])"] {
+  background-color: rgba(206, 11, 11, 0.9);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(red-dark[.8])"] {
+  background-color: rgba(206, 11, 11, 0.8);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(red-dark[.7])"] {
+  background-color: rgba(206, 11, 11, 0.7);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(red-dark[.6])"] {
+  background-color: rgba(206, 11, 11, 0.6);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(red-dark[.5])"] {
+  background-color: rgba(206, 11, 11, 0.5);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(red-dark[.4])"] {
+  background-color: rgba(206, 11, 11, 0.4);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(red-dark[.3])"] {
+  background-color: rgba(206, 11, 11, 0.3);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(red-dark[.2])"] {
+  background-color: rgba(206, 11, 11, 0.2);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="b(red-dark[.1])"] {
+  background-color: rgba(206, 11, 11, 0.1);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(green-light)"] {
+  background-color: #40ff40;
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(green-light[1])"] {
+  background-color: #40ff40;
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(green-light[.9])"] {
+  background-color: rgba(64, 255, 64, 0.9);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(green-light[.8])"] {
+  background-color: rgba(64, 255, 64, 0.8);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(green-light[.7])"] {
+  background-color: rgba(64, 255, 64, 0.7);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(green-light[.6])"] {
+  background-color: rgba(64, 255, 64, 0.6);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(green-light[.5])"] {
+  background-color: rgba(64, 255, 64, 0.5);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(green-light[.4])"] {
+  background-color: rgba(64, 255, 64, 0.4);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(green-light[.3])"] {
+  background-color: rgba(64, 255, 64, 0.3);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(green-light[.2])"] {
+  background-color: rgba(64, 255, 64, 0.2);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(green-light[.1])"] {
+  background-color: rgba(64, 255, 64, 0.1);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(green)"] {
+  background-color: lime;
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(green[1])"] {
+  background-color: lime;
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(green[.9])"] {
+  background-color: rgba(0, 255, 0, 0.9);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(green[.8])"] {
+  background-color: rgba(0, 255, 0, 0.8);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(green[.7])"] {
+  background-color: rgba(0, 255, 0, 0.7);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(green[.6])"] {
+  background-color: rgba(0, 255, 0, 0.6);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(green[.5])"] {
+  background-color: rgba(0, 255, 0, 0.5);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(green[.4])"] {
+  background-color: rgba(0, 255, 0, 0.4);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(green[.3])"] {
+  background-color: rgba(0, 255, 0, 0.3);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(green[.2])"] {
+  background-color: rgba(0, 255, 0, 0.2);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(green[.1])"] {
+  background-color: rgba(0, 255, 0, 0.1);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(green-dark)"] {
+  background-color: #0bce0b;
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(green-dark[1])"] {
+  background-color: #0bce0b;
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(green-dark[.9])"] {
+  background-color: rgba(11, 206, 11, 0.9);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(green-dark[.8])"] {
+  background-color: rgba(11, 206, 11, 0.8);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(green-dark[.7])"] {
+  background-color: rgba(11, 206, 11, 0.7);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(green-dark[.6])"] {
+  background-color: rgba(11, 206, 11, 0.6);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(green-dark[.5])"] {
+  background-color: rgba(11, 206, 11, 0.5);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(green-dark[.4])"] {
+  background-color: rgba(11, 206, 11, 0.4);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(green-dark[.3])"] {
+  background-color: rgba(11, 206, 11, 0.3);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(green-dark[.2])"] {
+  background-color: rgba(11, 206, 11, 0.2);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(green-dark[.1])"] {
+  background-color: rgba(11, 206, 11, 0.1);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(red-light)"] {
+  background-color: #ff4040;
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(red-light[1])"] {
+  background-color: #ff4040;
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(red-light[.9])"] {
+  background-color: rgba(255, 64, 64, 0.9);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(red-light[.8])"] {
+  background-color: rgba(255, 64, 64, 0.8);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(red-light[.7])"] {
+  background-color: rgba(255, 64, 64, 0.7);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(red-light[.6])"] {
+  background-color: rgba(255, 64, 64, 0.6);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(red-light[.5])"] {
+  background-color: rgba(255, 64, 64, 0.5);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(red-light[.4])"] {
+  background-color: rgba(255, 64, 64, 0.4);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(red-light[.3])"] {
+  background-color: rgba(255, 64, 64, 0.3);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(red-light[.2])"] {
+  background-color: rgba(255, 64, 64, 0.2);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(red-light[.1])"] {
+  background-color: rgba(255, 64, 64, 0.1);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(red)"] {
+  background-color: red;
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(red[1])"] {
+  background-color: red;
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(red[.9])"] {
+  background-color: rgba(255, 0, 0, 0.9);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(red[.8])"] {
+  background-color: rgba(255, 0, 0, 0.8);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(red[.7])"] {
+  background-color: rgba(255, 0, 0, 0.7);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(red[.6])"] {
+  background-color: rgba(255, 0, 0, 0.6);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(red[.5])"] {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(red[.4])"] {
+  background-color: rgba(255, 0, 0, 0.4);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(red[.3])"] {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(red[.2])"] {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(red[.1])"] {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(red-dark)"] {
+  background-color: #ce0b0b;
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(red-dark[1])"] {
+  background-color: #ce0b0b;
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(red-dark[.9])"] {
+  background-color: rgba(206, 11, 11, 0.9);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(red-dark[.8])"] {
+  background-color: rgba(206, 11, 11, 0.8);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(red-dark[.7])"] {
+  background-color: rgba(206, 11, 11, 0.7);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(red-dark[.6])"] {
+  background-color: rgba(206, 11, 11, 0.6);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(red-dark[.5])"] {
+  background-color: rgba(206, 11, 11, 0.5);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(red-dark[.4])"] {
+  background-color: rgba(206, 11, 11, 0.4);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(red-dark[.3])"] {
+  background-color: rgba(206, 11, 11, 0.3);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(red-dark[.2])"] {
+  background-color: rgba(206, 11, 11, 0.2);
+}
+[data-hydrogen-VARVERSION] [data-h2-bg-color*="s(red-dark[.1])"] {
+  background-color: rgba(206, 11, 11, 0.1);
+}

@@ -1,0 +1,77 @@
+@use "sass:color";
+
+@use "maps/map-media-user" as mediaMap;
+@use "maps/map-color-user" as colorMap;
+
+$h2-map-color-variations: (
+  "light": "$lightness: 25%",
+  "normal": "",
+  "dark": "$lightness: -15%, $saturation: -10%"
+);
+
+$h2-map-color-opacity: (
+  "[1]": "",
+  "[.9]": -.1%,
+  "[.8]": -.2%,
+  "[.7]": -.3%,
+  "[.6]": -.4%,
+  "[.5]": -.5%,
+  "[.4]": -.6%,
+  "[.3]": -.7%,
+  "[.2]": -.8%,
+  "[.1]": -.9%
+);
+
+[data-hydrogen-VARVERSION] {
+  @each $mediaKey, $mediaValue in mediaMap.$h2-map-media {
+    // Background Color
+    @each $colorKey, $colorValue in colorMap.$h2-map-color {
+      @each $variationKey, $variationValue in $h2-map-color-variations {
+        @each $opacityKey, $opacityValue in $h2-map-color-opacity {
+          @if $variationKey == "light" {
+            @if $opacityKey == "[1]" {
+              [data-h2-bg-color*="#{$mediaKey}(#{$colorKey}-light)"] {
+                background-color: color.scale($colorValue, $lightness: 25%);
+              }
+              [data-h2-bg-color*="#{$mediaKey}(#{$colorKey}-light#{$opacityKey})"] {
+                background-color: color.scale($colorValue, $lightness: 25%);
+              }
+            } @else {
+              [data-h2-bg-color*="#{$mediaKey}(#{$colorKey}-light#{$opacityKey})"] {
+                background-color: color.adjust(color.scale($colorValue, $lightness: 25%), $alpha: $opacityValue);
+              }
+            }
+          }
+          @if $variationKey == "normal" {
+            @if $opacityKey == "[1]" {
+              [data-h2-bg-color*="#{$mediaKey}(#{$colorKey})"] {
+                background-color: $colorValue;
+              }
+              [data-h2-bg-color*="#{$mediaKey}(#{$colorKey}#{$opacityKey})"] {
+                background-color: $colorValue;
+              }
+            } @else {
+              [data-h2-bg-color*="#{$mediaKey}(#{$colorKey}#{$opacityKey})"] {
+                background-color: color.adjust($colorValue, $alpha: $opacityValue);
+              }
+            }
+          }
+          @if $variationKey == "dark" {
+            @if $opacityKey == "[1]" {
+              [data-h2-bg-color*="#{$mediaKey}(#{$colorKey}-dark)"] {
+                background-color: color.scale($colorValue, $lightness: -15%, $saturation: -10%);
+              }
+              [data-h2-bg-color*="#{$mediaKey}(#{$colorKey}-dark#{$opacityKey})"] {
+                background-color: color.scale($colorValue, $lightness: -15%, $saturation: -10%);
+              }
+            } @else {
+              [data-h2-bg-color*="#{$mediaKey}(#{$colorKey}-dark#{$opacityKey})"] {
+                background-color: color.adjust(color.scale($colorValue, $lightness: -15%, $saturation: -10%), $alpha: $opacityValue);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

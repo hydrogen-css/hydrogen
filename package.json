@@ -1,0 +1,56 @@
+{
+  "name": "@hydrogen-design-system/utilities",
+  "version": "0.0.1",
+  "description": "A new iteration of Hydrogen's dynamic CSS utility tool.",
+  "keywords": [
+    "Hydrogen",
+    "design",
+    "system",
+    "component",
+    "library"
+  ],
+  "main": "npm.js",
+  "scripts": {
+    "dev": "npx gulp dev",
+    "build": "npx gulp build",
+    "prepublishOnly": "npx gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hydrogen-design-system/utility.git"
+  },
+  "author": "Josh Beveridge",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hydrogen-design-system/utility/issues"
+  },
+  "homepage": "https://hydrogen.design",
+  "devDependencies": {
+    "@babel/core": "^7.12.17",
+    "@babel/preset-env": "^7.12.17",
+    "autoprefixer": "^9.7.3",
+    "browser-sync": "^2.26.14",
+    "browserify": "^17.0.0",
+    "browserslist": "^4.16.3",
+    "cash-dom": "^8.1.0",
+    "cssnano": "^4.1.10",
+    "del": "^3.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-footer": "^2.0.2",
+    "gulp-gzip": "^1.4.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.1",
+    "merge-stream": "^2.0.0",
+    "sass": "^1.32.8",
+    "vinyl-source-stream": "^2.0.0",
+    "yargs": "^15.4.0"
+  },
+  "browserslist": [
+    "last 1 version and not dead"
+  ]
+}
