@@ -233,12 +233,33 @@ function cleanCSS(done) {
       });
     });
     // Loop through each media query array now that they're populated with CSS and concatenate them into the final file.
+      // console.log(queries);
     for (let query in queries) {
-        // console.log(queries[query]);
+      var queryValue;
+      var defaultQueries = mediaConfig;
+      // Construct the query RegEx.
+      var queryRegEx = `"` + query + `": ".*?(?:")`;
+      // Create the RegEx.
+      var createQueryRegEx = new RegExp(queryRegEx, 'g');
+      // Search the default queries for the value.
+      var queryMatch = defaultQueries.match(createQueryRegEx); // Returns media query: "x": "screen and..."
+        // console.log(queryMatch);
+      // Isolate the query itself so it can be used as text.
+      if (queryMatch != null) {
+          // console.log("queryMatch: ", queryMatch[0]);
+        queryValue = queryMatch[0].match(/[^"]([^"]*)[^"\s]/g); // Returns the media side of the media query: screen and...
+      } else {
+        console.log('There\'s no matching media query in the media query map for the query "' + query + '".');
+      }
+      // Append the media query to the CSS group.
+      finalCSS = finalCSS + '@media ' + queryValue + '{';
+      // Add the CSS to the media query.
       queries[query].forEach(function(item) {
           // console.log(item);
         finalCSS = finalCSS + item;
       })
+      // Close the media query.
+      finalCSS = finalCSS + '}';
     }
       // console.log('final css: ', finalCSS);
     // Create the cleaned folder and write the file.
