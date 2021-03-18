@@ -25,7 +25,7 @@ $h2-map-color-opacity: (
 
 [data-hydrogen="VARVERSION"] {
   @each $mediaKey, $mediaValue in mediaMap.$h2-map-media {
-    // Background Color
+    // Background Color (COLOR[OPACITY])
     @each $colorKey, $colorValue in colorMap.$h2-map-color {
       @each $variationKey, $variationValue in $h2-map-color-variations {
         @each $opacityKey, $opacityValue in $h2-map-color-opacity {
@@ -74,10 +74,55 @@ $h2-map-color-opacity: (
         }
       }
     }
-    // Shadows
+    // Shadows (COLOR[OPACITY], SIZE)
     @each $shadowKey, $shadowValue in shadowMap.$h2-map-shadow {
-      [data-h2-shadow*="#{$mediaKey}(#{$shadowKey})"] {
-        box-shadow: $shadowValue;
+      @each $colorKey, $colorValue in colorMap.$h2-map-color {
+        @each $variationKey, $variationValue in $h2-map-color-variations {
+          @each $opacityKey, $opacityValue in $h2-map-color-opacity {
+            @if $variationKey == "light" {
+              @if $opacityKey == "[1]" {
+                [data-h2-shadow*="#{$mediaKey}(#{$colorKey}-light, #{$shadowKey})"] {
+                  box-shadow: #{$shadowValue} color.scale($colorValue, $lightness: 25%);
+                }
+                [data-h2-shadow*="#{$mediaKey}(#{$colorKey}-light#{$opacityKey}, #{$shadowKey})"] {
+                  box-shadow: #{$shadowValue} color.scale($colorValue, $lightness: 25%);
+                }
+              } @else {
+                [data-h2-shadow*="#{$mediaKey}(#{$colorKey}-light#{$opacityKey}, #{$shadowKey})"] {
+                  box-shadow: #{$shadowValue} color.adjust(color.scale($colorValue, $lightness: 25%), $alpha: $opacityValue);
+                }
+              }
+            }
+            @if $variationKey == "normal" {
+              @if $opacityKey == "[1]" {
+                [data-h2-shadow*="#{$mediaKey}(#{$colorKey}, #{$shadowKey})"] {
+                  box-shadow: #{$shadowValue} $colorValue;
+                }
+                [data-h2-shadow*="#{$mediaKey}(#{$colorKey}#{$opacityKey}, #{$shadowKey})"] {
+                  box-shadow: #{$shadowValue} $colorValue;
+                }
+              } @else {
+                [data-h2-shadow*="#{$mediaKey}(#{$colorKey}#{$opacityKey}, #{$shadowKey})"] {
+                  box-shadow: #{$shadowValue} color.adjust($colorValue, $alpha: $opacityValue);
+                }
+              }
+            }
+            @if $variationKey == "dark" {
+              @if $opacityKey == "[1]" {
+                [data-h2-shadow*="#{$mediaKey}(#{$colorKey}-dark, #{$shadowKey})"] {
+                  box-shadow: #{$shadowValue} color.scale($colorValue, $lightness: -15%, $saturation: -10%);
+                }
+                [data-h2-shadow*="#{$mediaKey}(#{$colorKey}-dark#{$opacityKey}, #{$shadowKey})"] {
+                  box-shadow: #{$shadowValue} color.scale($colorValue, $lightness: -15%, $saturation: -10%);
+                }
+              } @else {
+                [data-h2-shadow*="#{$mediaKey}(#{$colorKey}-dark#{$opacityKey}, #{$shadowKey})"] {
+                  box-shadow: #{$shadowValue} color.adjust(color.scale($colorValue, $lightness: -15%, $saturation: -10%), $alpha: $opacityValue);
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

@@ -41,16 +41,16 @@
   ],
   "shadows": [
     {
-      "key": "s",
-      "value": "0 .15rem .4rem rgba(0, 0, 0, .3)"
+      "key": "small",
+      "value": "0 .15rem .4rem"
     },
     {
-      "key": "m",
-      "value": "0 .35rem .6rem rgba(0, 0, 0, .3)"
+      "key": "medium",
+      "value": "0 .35rem .6rem"
     },
     {
-      "key": "l",
-      "value": "0 .6rem .8rem rgba(0, 0, 0, .3)"
+      "key": "large",
+      "value": "0 .6rem .8rem"
     }
   ],
   "typeScale": "1.33"
