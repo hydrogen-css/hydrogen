@@ -1,7 +1,8 @@
 @use "sass:color";
 
-@use "maps/map-media-user" as mediaMap;
-@use "maps/map-color-user" as colorMap;
+@use "maps/map-media" as mediaMap;
+@use "maps/map-color" as colorMap;
+@use "maps/map-shadow" as shadowMap;
 
 $h2-map-color-variations: (
   "light": "$lightness: 25%",
@@ -22,7 +23,7 @@ $h2-map-color-opacity: (
   "[.1]": -.9%
 );
 
-[data-hydrogen-VARVERSION] {
+[data-hydrogen="VARVERSION"] {
   @each $mediaKey, $mediaValue in mediaMap.$h2-map-media {
     // Background Color
     @each $colorKey, $colorValue in colorMap.$h2-map-color {
@@ -71,6 +72,12 @@ $h2-map-color-opacity: (
             }
           }
         }
+      }
+    }
+    // Shadows
+    @each $shadowKey, $shadowValue in shadowMap.$h2-map-shadow {
+      [data-h2-shadow*="#{$mediaKey}(#{$shadowKey})"] {
+        box-shadow: $shadowValue;
       }
     }
   }

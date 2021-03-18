@@ -1,0 +1,57 @@
+{
+  "styles": {
+    "path": "path/to/css/folder"
+  },
+  "markup": {
+    "path": "path/to/markup/folder",
+    "type": "html"
+  },
+  "colors": [
+    {
+      "key": "theme-1",
+      "value": "purple"
+    },
+    {
+      "key": "theme-2",
+      "value": "yellow"
+    },
+    {
+      "key": "theme-3",
+      "value": "#FF0000"
+    }
+  ],
+  "flexgrid": {
+    "enabled": true,
+    "columns": 12
+  },
+  "gradients": true,
+  "media": [
+    {
+      "key": "s",
+      "value": "48em"
+    },
+    {
+      "key": "m",
+      "value": "64em"
+    },
+    {
+      "key": "l",
+      "value": "100em"
+    }
+  ],
+  "shadows": [
+    {
+      "key": "s",
+      "value": "0 .15rem .4rem rgba(0, 0, 0, .3)"
+    },
+    {
+      "key": "m",
+      "value": "0 .35rem .6rem rgba(0, 0, 0, .3)"
+    },
+    {
+      "key": "l",
+      "value": "0 .6rem .8rem rgba(0, 0, 0, .3)"
+    }
+  ],
+  "typeScale": "1.33"
+}

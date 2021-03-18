@@ -1,14 +1,26 @@
 {
-  "media": {
-    "s": "300px"
+  "styles": {
+    "path": "./src/stage/styles"
   },
-  "colors": {
-    "green": "rgba(0, 255, 0, 1)",
-    "red": "rgba(255, 0, 0, 1)"
+  "markup": {
+    "path": "./src/stage/markup",
+    "type": "html"
   },
-  "flexbox-grid": true,
-  "gradients": true,
-  "type-scale": "1.33",
-  "markup": "path/to/markup/folder",
-  "destination": "path/to/css/destination"
+  "media": [
+    {
+      "key": "s",
+      "value": "300px"
+    }
+  ],
+  "colors": [
+    {
+      "key": "green",
+      "value": "rgba(0, 255, 0, 1)"
+    },
+    {
+      "key": "red",
+      "value": "rgba(255, 0, 0, 1)"
+    }
+  ],
+  "shadows": []
 }
