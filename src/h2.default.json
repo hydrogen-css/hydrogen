@@ -1,4 +1,6 @@
 {
+  "debug": false,
+  "environment": "production",
   "styles": {
     "path": "path/to/css/folder"
   },
@@ -8,49 +10,93 @@
   },
   "colors": [
     {
-      "key": "theme-1",
-      "value": "purple"
+      "name": "black",
+      "color": "rgba(20, 20, 30, 1)"
     },
     {
-      "key": "theme-2",
-      "value": "yellow"
+      "name": "white",
+      "color": "rgba(255, 255, 255, 1)"
     },
     {
-      "key": "theme-3",
-      "value": "#FF0000"
+      "name": "theme-1",
+      "color": "purple"
+    },
+    {
+      "name": "theme-2",
+      "color": "yellow"
+    },
+    {
+      "name": "theme-3",
+      "color": "#FF0000"
     }
   ],
   "flexgrid": {
     "enabled": true,
     "columns": 12
   },
-  "gradients": true,
+  "gradients": [
+    {
+      "type": "radial",
+      "colorStops": [
+        {
+          "name": "green",
+          "color": "green"
+        },
+        {
+          "name": "red",
+          "color": "red"
+        },
+        {
+          "name": "blue",
+          "color": "blue"
+        }
+      ]
+    },
+    {
+      "type": "linear",
+      "angle": "135deg",
+      "colorStops": [
+        {
+          "name": "green",
+          "color": "green"
+        },
+        {
+          "name": "red",
+          "color": "red"
+        },
+        {
+          "name": "blue",
+          "color": "blue"
+        }
+      ]
+    }
+  ],
   "media": [
     {
-      "key": "s",
+      "name": "small",
       "value": "48em"
     },
     {
-      "key": "m",
+      "name": "medium",
       "value": "64em"
     },
     {
-      "key": "l",
+      "name": "large",
       "value": "100em"
     }
   ],
   "shadows": [
     {
-      "key": "small",
-      "value": "0 .15rem .4rem"
+      "name": "small",
+      "value": "0 .15rem .4rem rgba(0, 0, 0, .3)"
     },
     {
-      "key": "medium",
-      "value": "0 .35rem .6rem"
+      "name": "medium",
+      "value": "0 .35rem .6rem rgba(0, 0, 0, .3)"
     },
     {
-      "key": "large",
-      "value": "0 .6rem .8rem"
+      "name": "large",
+      "value": "0 .6rem .8rem rgba(0, 0, 0, .3)"
     }
   ],
   "typeScale": "1.33"

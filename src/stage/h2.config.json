@@ -1,4 +1,6 @@
 {
+  "debug": true,
+  "environment": "development",
   "styles": {
     "path": "./src/stage/styles"
   },
@@ -8,18 +10,59 @@
   },
   "media": [
     {
-      "key": "s",
+      "name": "hugaboo",
       "value": "300px"
     }
   ],
   "colors": [
     {
-      "key": "green",
-      "value": "rgba(0, 255, 0, 1)"
+      "name": "black",
+      "color": "rgba(20, 20, 30, 1)"
     },
     {
-      "key": "red",
-      "value": "rgba(255, 0, 0, 1)"
+      "name": "green",
+      "color": "rgba(0, 255, 0, 1)"
+    },
+    {
+      "name": "red",
+      "color": "rgba(255, 0, 0, 1)"
+    }
+  ],
+  "gradients": [
+    {
+      "type": "radial",
+      "colorStops": [
+        {
+          "name": "green",
+          "color": "green"
+        },
+        {
+          "name": "red",
+          "color": "red"
+        },
+        {
+          "name": "blue",
+          "color": "blue"
+        }
+      ]
+    },
+    {
+      "type": "linear",
+      "angle": "135deg",
+      "colorStops": [
+        {
+          "name": "green",
+          "color": "green"
+        },
+        {
+          "name": "red",
+          "color": "red"
+        },
+        {
+          "name": "blue",
+          "color": "blue"
+        }
+      ]
     }
   ],
   "shadows": []

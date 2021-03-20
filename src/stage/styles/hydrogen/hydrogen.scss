@@ -2,127 +2,55 @@
 
 @use "maps/map-media" as mediaMap;
 @use "maps/map-color" as colorMap;
+@use "maps/map-gradient" as gradientMap;
 @use "maps/map-shadow" as shadowMap;
 
-$h2-map-color-variations: (
-  "light": "$lightness: 25%",
-  "normal": "",
-  "dark": "$lightness: -15%, $saturation: -10%"
-);
+// @use "utilities/utility-gradients";
 
-$h2-map-color-opacity: (
-  "[1]": "",
-  "[.9]": -.1%,
-  "[.8]": -.2%,
-  "[.7]": -.3%,
-  "[.6]": -.4%,
-  "[.5]": -.5%,
-  "[.4]": -.6%,
-  "[.3]": -.7%,
-  "[.2]": -.8%,
-  "[.1]": -.9%
-);
+// $h2-map-color-opacity: (
+//   "": 1,
+//   "[1]": 1,
+//   "[.9]": -.1,
+//   "[.8]": -.2,
+//   "[.7]": -.3,
+//   "[.6]": -.4,
+//   "[.5]": -.5,
+//   "[.4]": -.6,
+//   "[.3]": -.7,
+//   "[.2]": -.8,
+//   "[.1]": -.9,
+//   "[0]": -1
+// );
+
+// $h2-map-degrees: (
+//   "0": "0deg",
+//   "45": "45deg",
+//   "90": "90deg",
+//   "135": "135deg",
+//   "180": "180deg",
+//   "225": "225deg",
+//   "270": "270deg",
+//   "315": "315deg",
+//   "360": "0deg"
+// );
 
 [data-hydrogen="VARVERSION"] {
   @each $mediaKey, $mediaValue in mediaMap.$h2-map-media {
-    // Background Color (COLOR[OPACITY])
+    // Background Color - COLOR[OPACITY]
     @each $colorKey, $colorValue in colorMap.$h2-map-color {
-      @each $variationKey, $variationValue in $h2-map-color-variations {
-        @each $opacityKey, $opacityValue in $h2-map-color-opacity {
-          @if $variationKey == "light" {
-            @if $opacityKey == "[1]" {
-              [data-h2-bg-color*="#{$mediaKey}(#{$colorKey}-light)"] {
-                background-color: color.scale($colorValue, $lightness: 25%);
-              }
-              [data-h2-bg-color*="#{$mediaKey}(#{$colorKey}-light#{$opacityKey})"] {
-                background-color: color.scale($colorValue, $lightness: 25%);
-              }
-            } @else {
-              [data-h2-bg-color*="#{$mediaKey}(#{$colorKey}-light#{$opacityKey})"] {
-                background-color: color.adjust(color.scale($colorValue, $lightness: 25%), $alpha: $opacityValue);
-              }
-            }
-          }
-          @if $variationKey == "normal" {
-            @if $opacityKey == "[1]" {
-              [data-h2-bg-color*="#{$mediaKey}(#{$colorKey})"] {
-                background-color: $colorValue;
-              }
-              [data-h2-bg-color*="#{$mediaKey}(#{$colorKey}#{$opacityKey})"] {
-                background-color: $colorValue;
-              }
-            } @else {
-              [data-h2-bg-color*="#{$mediaKey}(#{$colorKey}#{$opacityKey})"] {
-                background-color: color.adjust($colorValue, $alpha: $opacityValue);
-              }
-            }
-          }
-          @if $variationKey == "dark" {
-            @if $opacityKey == "[1]" {
-              [data-h2-bg-color*="#{$mediaKey}(#{$colorKey}-dark)"] {
-                background-color: color.scale($colorValue, $lightness: -15%, $saturation: -10%);
-              }
-              [data-h2-bg-color*="#{$mediaKey}(#{$colorKey}-dark#{$opacityKey})"] {
-                background-color: color.scale($colorValue, $lightness: -15%, $saturation: -10%);
-              }
-            } @else {
-              [data-h2-bg-color*="#{$mediaKey}(#{$colorKey}-dark#{$opacityKey})"] {
-                background-color: color.adjust(color.scale($colorValue, $lightness: -15%, $saturation: -10%), $alpha: $opacityValue);
-              }
-            }
-          }
-        }
+      [data-h2-bg-color*="#{$mediaKey}(#{$colorKey})"] {
+        background-color: $colorValue;
       }
     }
-    // Shadows (COLOR[OPACITY], SIZE)
+    @each $gradientKey, $gradientValue in gradientMap.$h2-map-gradient {
+      [data-h2-bg-color*="#{$mediaKey}(#{$gradientKey})"] {
+        background-image: #{$gradientValue};
+      }
+    }
+    // Shadows - COLOR[OPACITY], SIZE
     @each $shadowKey, $shadowValue in shadowMap.$h2-map-shadow {
-      @each $colorKey, $colorValue in colorMap.$h2-map-color {
-        @each $variationKey, $variationValue in $h2-map-color-variations {
-          @each $opacityKey, $opacityValue in $h2-map-color-opacity {
-            @if $variationKey == "light" {
-              @if $opacityKey == "[1]" {
-                [data-h2-shadow*="#{$mediaKey}(#{$colorKey}-light, #{$shadowKey})"] {
-                  box-shadow: #{$shadowValue} color.scale($colorValue, $lightness: 25%);
-                }
-                [data-h2-shadow*="#{$mediaKey}(#{$colorKey}-light#{$opacityKey}, #{$shadowKey})"] {
-                  box-shadow: #{$shadowValue} color.scale($colorValue, $lightness: 25%);
-                }
-              } @else {
-                [data-h2-shadow*="#{$mediaKey}(#{$colorKey}-light#{$opacityKey}, #{$shadowKey})"] {
-                  box-shadow: #{$shadowValue} color.adjust(color.scale($colorValue, $lightness: 25%), $alpha: $opacityValue);
-                }
-              }
-            }
-            @if $variationKey == "normal" {
-              @if $opacityKey == "[1]" {
-                [data-h2-shadow*="#{$mediaKey}(#{$colorKey}, #{$shadowKey})"] {
-                  box-shadow: #{$shadowValue} $colorValue;
-                }
-                [data-h2-shadow*="#{$mediaKey}(#{$colorKey}#{$opacityKey}, #{$shadowKey})"] {
-                  box-shadow: #{$shadowValue} $colorValue;
-                }
-              } @else {
-                [data-h2-shadow*="#{$mediaKey}(#{$colorKey}#{$opacityKey}, #{$shadowKey})"] {
-                  box-shadow: #{$shadowValue} color.adjust($colorValue, $alpha: $opacityValue);
-                }
-              }
-            }
-            @if $variationKey == "dark" {
-              @if $opacityKey == "[1]" {
-                [data-h2-shadow*="#{$mediaKey}(#{$colorKey}-dark, #{$shadowKey})"] {
-                  box-shadow: #{$shadowValue} color.scale($colorValue, $lightness: -15%, $saturation: -10%);
-                }
-                [data-h2-shadow*="#{$mediaKey}(#{$colorKey}-dark#{$opacityKey}, #{$shadowKey})"] {
-                  box-shadow: #{$shadowValue} color.scale($colorValue, $lightness: -15%, $saturation: -10%);
-                }
-              } @else {
-                [data-h2-shadow*="#{$mediaKey}(#{$colorKey}-dark#{$opacityKey}, #{$shadowKey})"] {
-                  box-shadow: #{$shadowValue} color.adjust(color.scale($colorValue, $lightness: -15%, $saturation: -10%), $alpha: $opacityValue);
-                }
-              }
-            }
-          }
-        }
+      [data-h2-shadow*="#{$mediaKey}(#{$shadowKey})"] {
+        box-shadow: #{$shadowValue};
       }
     }
   }

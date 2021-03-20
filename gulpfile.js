@@ -28,34 +28,45 @@ var defaults = JSON.parse(fs.readFileSync('src/h2.default.json'));
 // Import the user's JSON config file.
 var config = JSON.parse(fs.readFileSync('./src/stage/h2.config.json'));
 
+// Clean Stage
+function cleanCache() {
+  return del([config.styles.path + '/hydrogen']);
+}
+
+// Create the Hydrogen folder in the user's specified style path.
+function createHydrogen(done) {
+  fs.mkdirSync(config.styles.path + '/hydrogen');
+  done();
+}
+
 // Cached H2
 // This is required because each config setting needs to update a single instance of the Hydrogen file, otherwise they each create their own and overwrite the last.
-function cacheH2() {
+function cacheHydrogen() {
   return src('src/styles/hydrogen.scss')
-  .pipe(dest(config.styles.path + '/hydrogen'));
+    .pipe(dest(config.styles.path + '/hydrogen'));
 }
 
 // Media
-var mediaConfig = "";
+var mediaConfig = '';
 
 if (config.media != null && config.media != undefined && config.media.length > 0) {
-  var mediaStringStart = '$h2-map-media: ("b": "screen",';
+  var mediaStringStart = '$h2-map-media: ("base": "screen",';
   var mediaStringContent = '';
   var mediaStringEnd = ');';
   config.media.forEach(function(mediaQuery) {
       // console.log(mediaQuery);
-    var mediaString = '"' + mediaQuery.key + '": ' + '"screen and (min-width: ' + mediaQuery.value + ')",';
+    var mediaString = '"' + mediaQuery.name + '": ' + '"screen and (min-width: ' + mediaQuery.value + ')",';
     mediaStringContent = mediaStringContent.concat(mediaString);
       // console.log(mediaStringContent);
   });
   mediaConfig = mediaConfig.concat(mediaStringStart).concat(mediaStringContent).concat(mediaStringEnd);
 } else {
-  var mediaStringStart = '$h2-map-media: ("b": "screen",';
+  var mediaStringStart = '$h2-map-media: ("base": "screen",';
   var mediaStringContent = '';
   var mediaStringEnd = ');';
   defaults.media.forEach(function(mediaQuery) {
       // console.log(mediaQuery);
-    var mediaString = '"' + mediaQuery.key + '": ' + '"screen and (min-width: ' + mediaQuery.value + ')",';
+    var mediaString = '"' + mediaQuery.name + '": ' + '"screen and (min-width: ' + mediaQuery.value + ')",';
     mediaStringContent = mediaStringContent.concat(mediaString);
       // console.log(mediaStringContent);
   });
@@ -69,15 +80,17 @@ function customMedia() {
 }
 
 // Color
-var colorConfig = "";
+var colorConfig = '';
 
 if (config.colors != null && config.colors != undefined && config.colors.length > 0) {
-  var colorStringStart = '$h2-map-color: (';
+  var colorStringStart = '@use "sass:color"; $h2-map-color: (';
   var colorStringContent = '';
   var colorStringEnd = ');';
   config.colors.forEach(function(color) {
-    var colorString = '"' + color.key + '": ' + color.value + ',';
-    colorStringContent = colorStringContent.concat(colorString);
+    var colorString = '"' + color.name + '": ' + color.color + ',';
+    var colorLightString = '"[light]' + color.name + '": color.scale(' + color.color + ', $lightness: 25%),';
+    var colorDarkString = '"[dark]' + color.name + '": color.scale(' + color.color + ', $lightness: -15%, $saturation: -10%),';
+    colorStringContent = colorStringContent.concat(colorString).concat(colorLightString).concat(colorDarkString);
   });
   colorConfig = colorConfig.concat(colorStringStart).concat(colorStringContent).concat(colorStringEnd);
 } else {
@@ -85,8 +98,10 @@ if (config.colors != null && config.colors != undefined && config.colors.length 
   var colorStringContent = '';
   var colorStringEnd = ');';
   defaults.colors.forEach(function(color) {
-    var colorString = '"' + color.key + '": ' + color.value + ',';
-    colorStringContent = colorStringContent.concat(colorString);
+    var colorString = '"' + color.name + '": ' + color.color + ',';
+    var colorLightString = '"[light]' + color.name + '": color.scale(' + color.color + ', $lightness: 25%),';
+    var colorDarkString = '"[dark]' + color.name + '": color.scale(' + color.color + ', $lightness: -15%, $saturation: -10%),';
+    colorStringContent = colorStringContent.concat(colorString).concat(colorLightString).concat(colorDarkString);
   });
   colorConfig = colorConfig.concat(colorStringStart).concat(colorStringContent).concat(colorStringEnd);
 }
@@ -97,15 +112,66 @@ function customColor() {
   .pipe(dest(config.styles.path + '/hydrogen/maps'));
 }
 
+// Gradients
+var gradientConfig = '';
+
+if (config.gradients != null && config.gradients != undefined && config.gradients.length > 0) {
+  // The user has specified their own gradients. There is no default alternative to this, because Hydrogen doesn't ship with gradients by default.
+  var gradientStringStart = '@use "sass:color"; $h2-map-gradient: (';
+  var gradientStringContent = '';
+  var gradientStringEnd = ');';
+  config.gradients.forEach(function(gradient) {
+    var gradientType = gradient.type; 
+    if (gradientType == "radial") {
+      var radialColorStopKeys = 'radial';
+      var radialColorStopColors = '';
+      gradient.colorStops.forEach(function(color, index, array) {
+        radialColorStopKeys = radialColorStopKeys + '[' + color.name + ']';
+        if (index === array.length -1) {
+          radialColorStopColors = radialColorStopColors + color.color;
+        } else {
+          radialColorStopColors = radialColorStopColors + color.color + ',';
+        }
+      });
+      gradientStringContent = gradientStringContent + '"' + radialColorStopKeys + '": "radial-gradient(' + radialColorStopColors + ')",'
+    } else if (gradientType == "linear") {
+      var linearColorStopKeys = 'linear';
+      var linearColorStopColors = '';
+      gradient.colorStops.forEach(function(color, index, array) {
+        linearColorStopKeys = linearColorStopKeys + '[' + color.name + ']';
+        if (index === array.length -1) {
+          linearColorStopColors = linearColorStopColors + color.color;
+        } else {
+          linearColorStopColors = linearColorStopColors + color.color + ',';
+        }
+      });
+      if (gradient.angle == null || gradient.angle == undefined) {
+        console.log("Hydrogen: Please specify an angle (45deg) value for all linear gradients defined in your Hydrogen configuration file.");
+      } else {
+        gradientStringContent = gradientStringContent + '"' + linearColorStopKeys + '": "linear-gradient(' + gradient.angle + ',' + linearColorStopColors + ')",'
+      }
+    } else {
+      console.log("Hydrogen: Please specify a gradient type in your Hydrogen configuration file.");
+    }
+  });
+  gradientConfig = gradientStringStart + gradientStringContent + gradientStringEnd;
+}
+
+function customGradient() {
+  return src('src/styles/maps/_map-gradient.scss')
+  .pipe(footer(gradientConfig))
+  .pipe(dest(config.styles.path + '/hydrogen/maps'));
+}
+
 // Shadow
-var shadowConfig = "";
+var shadowConfig = '';
 
 if (config.shadows != null && config.shadows != undefined && config.shadows.length > 0) {
   var shadowStringStart = '$h2-map-shadow: (';
   var shadowStringContent = '';
   var shadowStringEnd = ');';
   config.shadows.forEach(function(shadow) {
-    var shadowString = '"' + shadow.key + '": "' + shadow.value + '",';
+    var shadowString = '"' + shadow.name + '": "' + shadow.value + '",';
     shadowStringContent = shadowStringContent.concat(shadowString);
   });
   shadowConfig = shadowConfig.concat(shadowStringStart).concat(shadowStringContent).concat(shadowStringEnd);
@@ -114,7 +180,7 @@ if (config.shadows != null && config.shadows != undefined && config.shadows.leng
   var shadowStringContent = '';
   var shadowStringEnd = ');';
   defaults.shadows.forEach(function(shadow) {
-    var shadowString = '"' + shadow.key + '": "' + shadow.value + '",';
+    var shadowString = '"' + shadow.name + '": "' + shadow.value + '",';
     shadowStringContent = shadowStringContent.concat(shadowString);
   });
   shadowConfig = shadowConfig.concat(shadowStringStart).concat(shadowStringContent).concat(shadowStringEnd);
@@ -137,10 +203,7 @@ function compile() {
 function preCleanCompress() {
   return src(config.styles.path + '/hydrogen/compiled/hydrogen.css')
   .pipe(postcss([cssnano({
-    preset: ['default', {
-      // preset options here, e.g...
-      mergeRules: false
-  }]
+    preset: ['lite']
   })]))
   .pipe(dest(config.styles.path + '/hydrogen/compressed'));
 }
@@ -162,22 +225,22 @@ function cleanCSS(done) {
   // Get the utility portion of the attribute (data-h2-*).
   var utilityRegex = /data-h2-([^=]*)/g;
   // Get individual attribute values (x(y)).
-  var valueRegex = /.\(([^)]*)\)/g;
+  var valueRegex = /([^" ]*?)\(([^)]*)\)/g;
   // var valueRegex = /.\(.*\)/g;
   // Get the temporary compressed Hydrogen file, located in the user's specified location in the config.
   var hydrogenCSS = fs.readFileSync(config.styles.path + '/hydrogen/compressed/hydrogen.css').toString();
     // console.log('sampleCSS file: ', hydrogenCSS);
   // Set up a variable list of arrays for each media query in the config. Thanks Chris Wiseman!
   let queries = {
-    b: []
+    base: []
   };
   if (config.media != null && config.media != undefined && config.media.length > 0) {
     config.media.forEach(function(mediaQuery) {
-      queries[mediaQuery.key] = [];
+      queries[mediaQuery.name] = [];
     }); 
   } else {
     defaults.media.forEach(function(mediaQuery) {
-      queries[mediaQuery.key] = [];
+      queries[mediaQuery.name] = [];
     }); 
   }
     // console.log(queries);
@@ -224,6 +287,7 @@ function cleanCSS(done) {
             // var CSSwithMedia = '@media ' + queryValue[0] + '{' + cssMatch + '}';
               // console.log(CSSwithMedia);
             // finalCSS = finalCSS.concat(CSSwithMedia);
+              // console.log(queries);
             queries[mediaValue] = queries[mediaValue].concat(cssMatch);
               // console.log(queries);
           }
@@ -263,26 +327,40 @@ function cleanCSS(done) {
     }
       // console.log('final css: ', finalCSS);
     // Create the cleaned folder and write the file.
-    fs.mkdirSync(config.styles.path + '/hydrogen/cleaned');
-    fs.writeFile(config.styles.path + '/hydrogen/cleaned/hydrogen.css', finalCSS, function(err) {
-      if (err) {
-        console.log('Uh oh: ', err);
-      }
-    });
+    if (config.environment == "development") {
+      fs.writeFile(config.styles.path + '/hydrogen/hydrogen.css', finalCSS, function(err) {
+        if (err) {
+          console.log('Uh oh: ', err);
+        }
+      });
+    } else {
+      fs.mkdirSync(config.styles.path + '/hydrogen/cleaned');
+      fs.writeFile(config.styles.path + '/hydrogen/cleaned/hydrogen.css', finalCSS, function(err) {
+        if (err) {
+          console.log('Uh oh: ', err);
+        }
+      });
+    }
   }
   done();
 }
 
 // Compress
-function postCleanCompress() {
-  return src(config.styles.path + '/hydrogen/cleaned/hydrogen.css')
-  .pipe(postcss([cssnano()]))
-  .pipe(dest(config.styles.path + '/hydrogen/final'));
+function postCleanCompress(done) {
+  if (config.environment == "production" || config.environment == null || config.environment == undefined) {
+    return src(config.styles.path + '/hydrogen/cleaned/hydrogen.css')
+      .pipe(postcss([cssnano()]))
+      .pipe(dest(config.styles.path));
+  }
+  done();
 }
 
-// Clean Stage
-function cleanStage() {
-  return del([config.styles.path + '/hydrogen/**/*']);
+// Delete the cache if debug isn't set to true.
+function deleteCache(done) {
+  if (config.debug == false || config.debug == null || config.debug == undefined) {
+    return del([config.styles.path + '/hydrogen']);
+  }
+  done();
 }
 
-exports.test = series(cleanStage, cacheH2, customMedia, customColor, customShadow, compile, preCleanCompress, getUserMarkup, cleanCSS, postCleanCompress);
+exports.test = series(cleanCache, createHydrogen, cacheHydrogen, customMedia, customColor, customGradient, customShadow, compile, preCleanCompress, getUserMarkup, cleanCSS, postCleanCompress, deleteCache);

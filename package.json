@@ -52,5 +52,8 @@
   },
   "browserslist": [
     "last 1 version and not dead"
-  ]
+  ],
+  "dependencies": {
+    "cssnano-preset-lite": "^1.0.1"
+  }
 }
