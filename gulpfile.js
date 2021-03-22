@@ -48,30 +48,22 @@ function cacheHydrogen() {
 
 // Media
 var mediaConfig = '';
-
+var mediaStringStart = '$h2-map-media: ("base": "screen",';
+var mediaStringContent = '';
+var mediaStringEnd = ');';
+var mediaSource;
 if (config.media != null && config.media != undefined && config.media.length > 0) {
-  var mediaStringStart = '$h2-map-media: ("base": "screen",';
-  var mediaStringContent = '';
-  var mediaStringEnd = ');';
-  config.media.forEach(function(mediaQuery) {
-      // console.log(mediaQuery);
-    var mediaString = '"' + mediaQuery.name + '": ' + '"screen and (min-width: ' + mediaQuery.value + ')",';
-    mediaStringContent = mediaStringContent.concat(mediaString);
-      // console.log(mediaStringContent);
-  });
-  mediaConfig = mediaConfig.concat(mediaStringStart).concat(mediaStringContent).concat(mediaStringEnd);
+  mediaSource = config.media;
 } else {
-  var mediaStringStart = '$h2-map-media: ("base": "screen",';
-  var mediaStringContent = '';
-  var mediaStringEnd = ');';
-  defaults.media.forEach(function(mediaQuery) {
-      // console.log(mediaQuery);
-    var mediaString = '"' + mediaQuery.name + '": ' + '"screen and (min-width: ' + mediaQuery.value + ')",';
-    mediaStringContent = mediaStringContent.concat(mediaString);
-      // console.log(mediaStringContent);
-  });
-  mediaConfig = mediaConfig.concat(mediaStringStart).concat(mediaStringContent).concat(mediaStringEnd);
+  mediaSource = defaults.media;
 }
+mediaSource.forEach(function(mediaQuery) {
+  // console.log(mediaQuery);
+var mediaString = '"' + mediaQuery.name + '": ' + '"screen and (min-width: ' + mediaQuery.value + ')",';
+mediaStringContent = mediaStringContent.concat(mediaString);
+  // console.log(mediaStringContent);
+});
+mediaConfig = mediaConfig.concat(mediaStringStart).concat(mediaStringContent).concat(mediaStringEnd);
 
 function customMedia() {
   return src('src/styles/maps/_map-media.scss')
@@ -180,26 +172,20 @@ function customGradient() {
 
 // Shadow
 var shadowConfig = '';
-
+var shadowStringStart = '$h2-map-shadow: (';
+var shadowStringContent = '';
+var shadowStringEnd = ');';
+var shadowSource;
 if (config.shadows != null && config.shadows != undefined && config.shadows.length > 0) {
-  var shadowStringStart = '$h2-map-shadow: (';
-  var shadowStringContent = '';
-  var shadowStringEnd = ');';
-  config.shadows.forEach(function(shadow) {
-    var shadowString = '"' + shadow.name + '": "' + shadow.value + '",';
-    shadowStringContent = shadowStringContent.concat(shadowString);
-  });
-  shadowConfig = shadowConfig.concat(shadowStringStart).concat(shadowStringContent).concat(shadowStringEnd);
+  shadowSource = config.shadows;
 } else {
-  var shadowStringStart = '$h2-map-shadow: (';
-  var shadowStringContent = '';
-  var shadowStringEnd = ');';
-  defaults.shadows.forEach(function(shadow) {
-    var shadowString = '"' + shadow.name + '": "' + shadow.value + '",';
-    shadowStringContent = shadowStringContent.concat(shadowString);
-  });
-  shadowConfig = shadowConfig.concat(shadowStringStart).concat(shadowStringContent).concat(shadowStringEnd);
+  shadowSource = defaults.shadows;
 }
+shadowSource.forEach(function(shadow) {
+  var shadowString = '"' + shadow.name + '": "' + shadow.value + '",';
+  shadowStringContent = shadowStringContent.concat(shadowString);
+});
+shadowConfig = shadowConfig.concat(shadowStringStart).concat(shadowStringContent).concat(shadowStringEnd);
 
 function customShadow() {
   return src('src/styles/maps/_map-shadow.scss')

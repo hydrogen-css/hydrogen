@@ -1,1 +1,1 @@
-@media base,screen{}@media hugaboo,screen and (min-width: 300px){}
+@media base,screen{[data-hydrogen=VARVERSION] [data-h2-bg-color*="base(green)"]{background-color:lime}[data-hydrogen=VARVERSION] [data-h2-bg-color*="base([light]green)"]{background-color:#40ff40}}@media hugaboo,screen and (min-width: 300px){[data-hydrogen=VARVERSION] [data-h2-bg-color*="hugaboo(red)"]{background-color:red}}
