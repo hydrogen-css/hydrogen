@@ -81,30 +81,45 @@ function customMedia() {
 
 // Color
 var colorConfig = '';
+var colorOpacityMap = {
+  '[1]': '1',
+  '[.9]': '-.1',
+  '[.8]': '-.2',
+  '[.7]': '-.3',
+  '[.6]': '-.4',
+  '[.5]': '-.5',
+  '[.4]': '-.6',
+  '[.3]': '-.7',
+  '[.2]': '-.8',
+  '[.1]': '-.9',
+  '[0]': '-1'
+};
 
+var colorStringStart = '@use "sass:color"; $h2-map-color: (';
+var colorStringContent = '';
+var colorStringEnd = ');';
+var colorSource;
 if (config.colors != null && config.colors != undefined && config.colors.length > 0) {
-  var colorStringStart = '@use "sass:color"; $h2-map-color: (';
-  var colorStringContent = '';
-  var colorStringEnd = ');';
-  config.colors.forEach(function(color) {
-    var colorString = '"' + color.name + '": ' + color.color + ',';
-    var colorLightString = '"[light]' + color.name + '": color.scale(' + color.color + ', $lightness: 25%),';
-    var colorDarkString = '"[dark]' + color.name + '": color.scale(' + color.color + ', $lightness: -15%, $saturation: -10%),';
-    colorStringContent = colorStringContent.concat(colorString).concat(colorLightString).concat(colorDarkString);
-  });
-  colorConfig = colorConfig.concat(colorStringStart).concat(colorStringContent).concat(colorStringEnd);
+  colorSource = config.colors;
 } else {
-  var colorStringStart = '$h2-map-color: (';
-  var colorStringContent = '';
-  var colorStringEnd = ');';
-  defaults.colors.forEach(function(color) {
-    var colorString = '"' + color.name + '": ' + color.color + ',';
-    var colorLightString = '"[light]' + color.name + '": color.scale(' + color.color + ', $lightness: 25%),';
-    var colorDarkString = '"[dark]' + color.name + '": color.scale(' + color.color + ', $lightness: -15%, $saturation: -10%),';
-    colorStringContent = colorStringContent.concat(colorString).concat(colorLightString).concat(colorDarkString);
-  });
-  colorConfig = colorConfig.concat(colorStringStart).concat(colorStringContent).concat(colorStringEnd);
+  colorSource = defaults.colors;
 }
+colorSource.forEach(function(color) {
+  var colorString = '"' + color.name + '": ' + color.color + ',';
+  var colorLightString = '"[light]' + color.name + '": color.scale(' + color.color + ', $lightness: 25%),';
+  var colorDarkString = '"[dark]' + color.name + '": color.scale(' + color.color + ', $lightness: -15%, $saturation: -10%),';
+  var colorOpacityString = '';
+  if (color.opacity != null && color.opacity != undefined && color.opacity == true) {
+    for (let opacity in colorOpacityMap) {
+      colorOpacityString = colorOpacityString + '"' + color.name + opacity + '": color.adjust(' + color.color + ', $alpha: ' + colorOpacityMap[opacity] + '),';
+        // console.log('Color Opacity String: ', colorOpacityString);
+      colorOpacityString = colorOpacityString + '"[light]' + color.name + opacity + '": color.scale(color.adjust(' + color.color + ', $alpha: ' + colorOpacityMap[opacity] + '), $lightness: 25%),';
+      colorOpacityString = colorOpacityString + '"[dark]' + color.name + opacity + '": color.scale(color.adjust(' + color.color + ', $alpha: ' + colorOpacityMap[opacity] + '), $lightness: -15%, $saturation: -10%),';
+    }
+  }
+  colorStringContent = colorStringContent.concat(colorString).concat(colorLightString).concat(colorDarkString);
+});
+colorConfig = colorConfig.concat(colorStringStart).concat(colorStringContent).concat(colorStringEnd);
 
 function customColor() {
   return src('src/styles/maps/_map-color.scss')

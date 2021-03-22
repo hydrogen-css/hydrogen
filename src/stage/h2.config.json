@@ -17,15 +17,18 @@
   "colors": [
     {
       "name": "black",
-      "color": "rgba(20, 20, 30, 1)"
+      "color": "rgba(20, 20, 30, 1)",
+      "opacity": true
     },
     {
       "name": "green",
-      "color": "rgba(0, 255, 0, 1)"
+      "color": "rgba(0, 255, 0, 1)",
+      "opacity": false
     },
     {
       "name": "red",
-      "color": "rgba(255, 0, 0, 1)"
+      "color": "rgba(255, 0, 0, 1)",
+      "opacity": false
     }
   ],
   "gradients": [

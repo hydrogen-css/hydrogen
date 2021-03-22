@@ -5,35 +5,6 @@
 @use "maps/map-gradient" as gradientMap;
 @use "maps/map-shadow" as shadowMap;
 
-// @use "utilities/utility-gradients";
-
-// $h2-map-color-opacity: (
-//   "": 1,
-//   "[1]": 1,
-//   "[.9]": -.1,
-//   "[.8]": -.2,
-//   "[.7]": -.3,
-//   "[.6]": -.4,
-//   "[.5]": -.5,
-//   "[.4]": -.6,
-//   "[.3]": -.7,
-//   "[.2]": -.8,
-//   "[.1]": -.9,
-//   "[0]": -1
-// );
-
-// $h2-map-degrees: (
-//   "0": "0deg",
-//   "45": "45deg",
-//   "90": "90deg",
-//   "135": "135deg",
-//   "180": "180deg",
-//   "225": "225deg",
-//   "270": "270deg",
-//   "315": "315deg",
-//   "360": "0deg"
-// );
-
 [data-hydrogen="VARVERSION"] {
   @each $mediaKey, $mediaValue in mediaMap.$h2-map-media {
     // Background Color - COLOR[OPACITY]
@@ -47,7 +18,7 @@
         background-image: #{$gradientValue};
       }
     }
-    // Shadows - COLOR[OPACITY], SIZE
+    // Shadows - SIZE
     @each $shadowKey, $shadowValue in shadowMap.$h2-map-shadow {
       [data-h2-shadow*="#{$mediaKey}(#{$shadowKey})"] {
         box-shadow: #{$shadowValue};
