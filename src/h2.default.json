@@ -90,6 +90,19 @@
       "value": "100em"
     }
   ],
+  "radius": [
+    {
+      "name": "small",
+      "value": "10px"
+    },
+    {
+      "name": "medium",
+      "value": "50rem"
+    },{
+      "name": "large",
+      "value": "100%"
+    }
+  ],
   "shadows": [
     {
       "name": "small",

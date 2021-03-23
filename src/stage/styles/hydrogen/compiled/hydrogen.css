@@ -31,6 +31,786 @@
 [data-hydrogen=VARVERSION] [data-h2-bg-color*="base(linear[green][red][blue])"] {
   background-image: linear-gradient(135deg,green,red,blue);
 }
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square)"] {
+  border-radius: 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small)"] {
+  border-radius: 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium)"] {
+  border-radius: 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large)"] {
+  border-radius: 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, square, square, square)"] {
+  border-radius: 0 0 0 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, square, square, small)"] {
+  border-radius: 0 0 0 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, square, square, medium)"] {
+  border-radius: 0 0 0 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, square, square, large)"] {
+  border-radius: 0 0 0 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, square, small, square)"] {
+  border-radius: 0 0 10px 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, square, small, small)"] {
+  border-radius: 0 0 10px 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, square, small, medium)"] {
+  border-radius: 0 0 10px 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, square, small, large)"] {
+  border-radius: 0 0 10px 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, square, medium, square)"] {
+  border-radius: 0 0 50rem 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, square, medium, small)"] {
+  border-radius: 0 0 50rem 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, square, medium, medium)"] {
+  border-radius: 0 0 50rem 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, square, medium, large)"] {
+  border-radius: 0 0 50rem 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, square, large, square)"] {
+  border-radius: 0 0 100% 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, square, large, small)"] {
+  border-radius: 0 0 100% 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, square, large, medium)"] {
+  border-radius: 0 0 100% 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, square, large, large)"] {
+  border-radius: 0 0 100% 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, small, square, square)"] {
+  border-radius: 0 10px 0 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, small, square, small)"] {
+  border-radius: 0 10px 0 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, small, square, medium)"] {
+  border-radius: 0 10px 0 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, small, square, large)"] {
+  border-radius: 0 10px 0 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, small, small, square)"] {
+  border-radius: 0 10px 10px 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, small, small, small)"] {
+  border-radius: 0 10px 10px 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, small, small, medium)"] {
+  border-radius: 0 10px 10px 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, small, small, large)"] {
+  border-radius: 0 10px 10px 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, small, medium, square)"] {
+  border-radius: 0 10px 50rem 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, small, medium, small)"] {
+  border-radius: 0 10px 50rem 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, small, medium, medium)"] {
+  border-radius: 0 10px 50rem 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, small, medium, large)"] {
+  border-radius: 0 10px 50rem 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, small, large, square)"] {
+  border-radius: 0 10px 100% 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, small, large, small)"] {
+  border-radius: 0 10px 100% 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, small, large, medium)"] {
+  border-radius: 0 10px 100% 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, small, large, large)"] {
+  border-radius: 0 10px 100% 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, medium, square, square)"] {
+  border-radius: 0 50rem 0 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, medium, square, small)"] {
+  border-radius: 0 50rem 0 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, medium, square, medium)"] {
+  border-radius: 0 50rem 0 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, medium, square, large)"] {
+  border-radius: 0 50rem 0 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, medium, small, square)"] {
+  border-radius: 0 50rem 10px 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, medium, small, small)"] {
+  border-radius: 0 50rem 10px 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, medium, small, medium)"] {
+  border-radius: 0 50rem 10px 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, medium, small, large)"] {
+  border-radius: 0 50rem 10px 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, medium, medium, square)"] {
+  border-radius: 0 50rem 50rem 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, medium, medium, small)"] {
+  border-radius: 0 50rem 50rem 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, medium, medium, medium)"] {
+  border-radius: 0 50rem 50rem 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, medium, medium, large)"] {
+  border-radius: 0 50rem 50rem 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, medium, large, square)"] {
+  border-radius: 0 50rem 100% 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, medium, large, small)"] {
+  border-radius: 0 50rem 100% 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, medium, large, medium)"] {
+  border-radius: 0 50rem 100% 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, medium, large, large)"] {
+  border-radius: 0 50rem 100% 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, large, square, square)"] {
+  border-radius: 0 100% 0 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, large, square, small)"] {
+  border-radius: 0 100% 0 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, large, square, medium)"] {
+  border-radius: 0 100% 0 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, large, square, large)"] {
+  border-radius: 0 100% 0 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, large, small, square)"] {
+  border-radius: 0 100% 10px 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, large, small, small)"] {
+  border-radius: 0 100% 10px 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, large, small, medium)"] {
+  border-radius: 0 100% 10px 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, large, small, large)"] {
+  border-radius: 0 100% 10px 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, large, medium, square)"] {
+  border-radius: 0 100% 50rem 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, large, medium, small)"] {
+  border-radius: 0 100% 50rem 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, large, medium, medium)"] {
+  border-radius: 0 100% 50rem 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, large, medium, large)"] {
+  border-radius: 0 100% 50rem 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, large, large, square)"] {
+  border-radius: 0 100% 100% 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, large, large, small)"] {
+  border-radius: 0 100% 100% 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, large, large, medium)"] {
+  border-radius: 0 100% 100% 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(square, large, large, large)"] {
+  border-radius: 0 100% 100% 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, square, square, square)"] {
+  border-radius: 10px 0 0 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, square, square, small)"] {
+  border-radius: 10px 0 0 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, square, square, medium)"] {
+  border-radius: 10px 0 0 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, square, square, large)"] {
+  border-radius: 10px 0 0 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, square, small, square)"] {
+  border-radius: 10px 0 10px 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, square, small, small)"] {
+  border-radius: 10px 0 10px 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, square, small, medium)"] {
+  border-radius: 10px 0 10px 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, square, small, large)"] {
+  border-radius: 10px 0 10px 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, square, medium, square)"] {
+  border-radius: 10px 0 50rem 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, square, medium, small)"] {
+  border-radius: 10px 0 50rem 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, square, medium, medium)"] {
+  border-radius: 10px 0 50rem 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, square, medium, large)"] {
+  border-radius: 10px 0 50rem 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, square, large, square)"] {
+  border-radius: 10px 0 100% 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, square, large, small)"] {
+  border-radius: 10px 0 100% 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, square, large, medium)"] {
+  border-radius: 10px 0 100% 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, square, large, large)"] {
+  border-radius: 10px 0 100% 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, small, square, square)"] {
+  border-radius: 10px 10px 0 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, small, square, small)"] {
+  border-radius: 10px 10px 0 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, small, square, medium)"] {
+  border-radius: 10px 10px 0 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, small, square, large)"] {
+  border-radius: 10px 10px 0 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, small, small, square)"] {
+  border-radius: 10px 10px 10px 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, small, small, small)"] {
+  border-radius: 10px 10px 10px 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, small, small, medium)"] {
+  border-radius: 10px 10px 10px 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, small, small, large)"] {
+  border-radius: 10px 10px 10px 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, small, medium, square)"] {
+  border-radius: 10px 10px 50rem 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, small, medium, small)"] {
+  border-radius: 10px 10px 50rem 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, small, medium, medium)"] {
+  border-radius: 10px 10px 50rem 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, small, medium, large)"] {
+  border-radius: 10px 10px 50rem 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, small, large, square)"] {
+  border-radius: 10px 10px 100% 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, small, large, small)"] {
+  border-radius: 10px 10px 100% 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, small, large, medium)"] {
+  border-radius: 10px 10px 100% 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, small, large, large)"] {
+  border-radius: 10px 10px 100% 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, medium, square, square)"] {
+  border-radius: 10px 50rem 0 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, medium, square, small)"] {
+  border-radius: 10px 50rem 0 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, medium, square, medium)"] {
+  border-radius: 10px 50rem 0 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, medium, square, large)"] {
+  border-radius: 10px 50rem 0 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, medium, small, square)"] {
+  border-radius: 10px 50rem 10px 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, medium, small, small)"] {
+  border-radius: 10px 50rem 10px 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, medium, small, medium)"] {
+  border-radius: 10px 50rem 10px 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, medium, small, large)"] {
+  border-radius: 10px 50rem 10px 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, medium, medium, square)"] {
+  border-radius: 10px 50rem 50rem 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, medium, medium, small)"] {
+  border-radius: 10px 50rem 50rem 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, medium, medium, medium)"] {
+  border-radius: 10px 50rem 50rem 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, medium, medium, large)"] {
+  border-radius: 10px 50rem 50rem 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, medium, large, square)"] {
+  border-radius: 10px 50rem 100% 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, medium, large, small)"] {
+  border-radius: 10px 50rem 100% 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, medium, large, medium)"] {
+  border-radius: 10px 50rem 100% 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, medium, large, large)"] {
+  border-radius: 10px 50rem 100% 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, large, square, square)"] {
+  border-radius: 10px 100% 0 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, large, square, small)"] {
+  border-radius: 10px 100% 0 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, large, square, medium)"] {
+  border-radius: 10px 100% 0 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, large, square, large)"] {
+  border-radius: 10px 100% 0 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, large, small, square)"] {
+  border-radius: 10px 100% 10px 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, large, small, small)"] {
+  border-radius: 10px 100% 10px 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, large, small, medium)"] {
+  border-radius: 10px 100% 10px 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, large, small, large)"] {
+  border-radius: 10px 100% 10px 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, large, medium, square)"] {
+  border-radius: 10px 100% 50rem 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, large, medium, small)"] {
+  border-radius: 10px 100% 50rem 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, large, medium, medium)"] {
+  border-radius: 10px 100% 50rem 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, large, medium, large)"] {
+  border-radius: 10px 100% 50rem 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, large, large, square)"] {
+  border-radius: 10px 100% 100% 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, large, large, small)"] {
+  border-radius: 10px 100% 100% 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, large, large, medium)"] {
+  border-radius: 10px 100% 100% 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(small, large, large, large)"] {
+  border-radius: 10px 100% 100% 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, square, square, square)"] {
+  border-radius: 50rem 0 0 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, square, square, small)"] {
+  border-radius: 50rem 0 0 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, square, square, medium)"] {
+  border-radius: 50rem 0 0 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, square, square, large)"] {
+  border-radius: 50rem 0 0 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, square, small, square)"] {
+  border-radius: 50rem 0 10px 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, square, small, small)"] {
+  border-radius: 50rem 0 10px 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, square, small, medium)"] {
+  border-radius: 50rem 0 10px 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, square, small, large)"] {
+  border-radius: 50rem 0 10px 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, square, medium, square)"] {
+  border-radius: 50rem 0 50rem 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, square, medium, small)"] {
+  border-radius: 50rem 0 50rem 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, square, medium, medium)"] {
+  border-radius: 50rem 0 50rem 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, square, medium, large)"] {
+  border-radius: 50rem 0 50rem 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, square, large, square)"] {
+  border-radius: 50rem 0 100% 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, square, large, small)"] {
+  border-radius: 50rem 0 100% 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, square, large, medium)"] {
+  border-radius: 50rem 0 100% 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, square, large, large)"] {
+  border-radius: 50rem 0 100% 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, small, square, square)"] {
+  border-radius: 50rem 10px 0 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, small, square, small)"] {
+  border-radius: 50rem 10px 0 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, small, square, medium)"] {
+  border-radius: 50rem 10px 0 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, small, square, large)"] {
+  border-radius: 50rem 10px 0 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, small, small, square)"] {
+  border-radius: 50rem 10px 10px 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, small, small, small)"] {
+  border-radius: 50rem 10px 10px 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, small, small, medium)"] {
+  border-radius: 50rem 10px 10px 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, small, small, large)"] {
+  border-radius: 50rem 10px 10px 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, small, medium, square)"] {
+  border-radius: 50rem 10px 50rem 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, small, medium, small)"] {
+  border-radius: 50rem 10px 50rem 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, small, medium, medium)"] {
+  border-radius: 50rem 10px 50rem 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, small, medium, large)"] {
+  border-radius: 50rem 10px 50rem 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, small, large, square)"] {
+  border-radius: 50rem 10px 100% 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, small, large, small)"] {
+  border-radius: 50rem 10px 100% 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, small, large, medium)"] {
+  border-radius: 50rem 10px 100% 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, small, large, large)"] {
+  border-radius: 50rem 10px 100% 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, medium, square, square)"] {
+  border-radius: 50rem 50rem 0 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, medium, square, small)"] {
+  border-radius: 50rem 50rem 0 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, medium, square, medium)"] {
+  border-radius: 50rem 50rem 0 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, medium, square, large)"] {
+  border-radius: 50rem 50rem 0 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, medium, small, square)"] {
+  border-radius: 50rem 50rem 10px 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, medium, small, small)"] {
+  border-radius: 50rem 50rem 10px 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, medium, small, medium)"] {
+  border-radius: 50rem 50rem 10px 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, medium, small, large)"] {
+  border-radius: 50rem 50rem 10px 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, medium, medium, square)"] {
+  border-radius: 50rem 50rem 50rem 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, medium, medium, small)"] {
+  border-radius: 50rem 50rem 50rem 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, medium, medium, medium)"] {
+  border-radius: 50rem 50rem 50rem 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, medium, medium, large)"] {
+  border-radius: 50rem 50rem 50rem 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, medium, large, square)"] {
+  border-radius: 50rem 50rem 100% 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, medium, large, small)"] {
+  border-radius: 50rem 50rem 100% 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, medium, large, medium)"] {
+  border-radius: 50rem 50rem 100% 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, medium, large, large)"] {
+  border-radius: 50rem 50rem 100% 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, large, square, square)"] {
+  border-radius: 50rem 100% 0 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, large, square, small)"] {
+  border-radius: 50rem 100% 0 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, large, square, medium)"] {
+  border-radius: 50rem 100% 0 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, large, square, large)"] {
+  border-radius: 50rem 100% 0 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, large, small, square)"] {
+  border-radius: 50rem 100% 10px 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, large, small, small)"] {
+  border-radius: 50rem 100% 10px 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, large, small, medium)"] {
+  border-radius: 50rem 100% 10px 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, large, small, large)"] {
+  border-radius: 50rem 100% 10px 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, large, medium, square)"] {
+  border-radius: 50rem 100% 50rem 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, large, medium, small)"] {
+  border-radius: 50rem 100% 50rem 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, large, medium, medium)"] {
+  border-radius: 50rem 100% 50rem 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, large, medium, large)"] {
+  border-radius: 50rem 100% 50rem 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, large, large, square)"] {
+  border-radius: 50rem 100% 100% 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, large, large, small)"] {
+  border-radius: 50rem 100% 100% 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, large, large, medium)"] {
+  border-radius: 50rem 100% 100% 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(medium, large, large, large)"] {
+  border-radius: 50rem 100% 100% 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, square, square, square)"] {
+  border-radius: 100% 0 0 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, square, square, small)"] {
+  border-radius: 100% 0 0 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, square, square, medium)"] {
+  border-radius: 100% 0 0 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, square, square, large)"] {
+  border-radius: 100% 0 0 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, square, small, square)"] {
+  border-radius: 100% 0 10px 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, square, small, small)"] {
+  border-radius: 100% 0 10px 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, square, small, medium)"] {
+  border-radius: 100% 0 10px 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, square, small, large)"] {
+  border-radius: 100% 0 10px 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, square, medium, square)"] {
+  border-radius: 100% 0 50rem 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, square, medium, small)"] {
+  border-radius: 100% 0 50rem 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, square, medium, medium)"] {
+  border-radius: 100% 0 50rem 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, square, medium, large)"] {
+  border-radius: 100% 0 50rem 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, square, large, square)"] {
+  border-radius: 100% 0 100% 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, square, large, small)"] {
+  border-radius: 100% 0 100% 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, square, large, medium)"] {
+  border-radius: 100% 0 100% 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, square, large, large)"] {
+  border-radius: 100% 0 100% 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, small, square, square)"] {
+  border-radius: 100% 10px 0 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, small, square, small)"] {
+  border-radius: 100% 10px 0 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, small, square, medium)"] {
+  border-radius: 100% 10px 0 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, small, square, large)"] {
+  border-radius: 100% 10px 0 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, small, small, square)"] {
+  border-radius: 100% 10px 10px 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, small, small, small)"] {
+  border-radius: 100% 10px 10px 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, small, small, medium)"] {
+  border-radius: 100% 10px 10px 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, small, small, large)"] {
+  border-radius: 100% 10px 10px 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, small, medium, square)"] {
+  border-radius: 100% 10px 50rem 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, small, medium, small)"] {
+  border-radius: 100% 10px 50rem 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, small, medium, medium)"] {
+  border-radius: 100% 10px 50rem 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, small, medium, large)"] {
+  border-radius: 100% 10px 50rem 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, small, large, square)"] {
+  border-radius: 100% 10px 100% 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, small, large, small)"] {
+  border-radius: 100% 10px 100% 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, small, large, medium)"] {
+  border-radius: 100% 10px 100% 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, small, large, large)"] {
+  border-radius: 100% 10px 100% 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, medium, square, square)"] {
+  border-radius: 100% 50rem 0 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, medium, square, small)"] {
+  border-radius: 100% 50rem 0 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, medium, square, medium)"] {
+  border-radius: 100% 50rem 0 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, medium, square, large)"] {
+  border-radius: 100% 50rem 0 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, medium, small, square)"] {
+  border-radius: 100% 50rem 10px 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, medium, small, small)"] {
+  border-radius: 100% 50rem 10px 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, medium, small, medium)"] {
+  border-radius: 100% 50rem 10px 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, medium, small, large)"] {
+  border-radius: 100% 50rem 10px 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, medium, medium, square)"] {
+  border-radius: 100% 50rem 50rem 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, medium, medium, small)"] {
+  border-radius: 100% 50rem 50rem 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, medium, medium, medium)"] {
+  border-radius: 100% 50rem 50rem 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, medium, medium, large)"] {
+  border-radius: 100% 50rem 50rem 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, medium, large, square)"] {
+  border-radius: 100% 50rem 100% 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, medium, large, small)"] {
+  border-radius: 100% 50rem 100% 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, medium, large, medium)"] {
+  border-radius: 100% 50rem 100% 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, medium, large, large)"] {
+  border-radius: 100% 50rem 100% 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, large, square, square)"] {
+  border-radius: 100% 100% 0 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, large, square, small)"] {
+  border-radius: 100% 100% 0 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, large, square, medium)"] {
+  border-radius: 100% 100% 0 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, large, square, large)"] {
+  border-radius: 100% 100% 0 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, large, small, square)"] {
+  border-radius: 100% 100% 10px 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, large, small, small)"] {
+  border-radius: 100% 100% 10px 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, large, small, medium)"] {
+  border-radius: 100% 100% 10px 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, large, small, large)"] {
+  border-radius: 100% 100% 10px 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, large, medium, square)"] {
+  border-radius: 100% 100% 50rem 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, large, medium, small)"] {
+  border-radius: 100% 100% 50rem 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, large, medium, medium)"] {
+  border-radius: 100% 100% 50rem 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, large, medium, large)"] {
+  border-radius: 100% 100% 50rem 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, large, large, square)"] {
+  border-radius: 100% 100% 100% 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, large, large, small)"] {
+  border-radius: 100% 100% 100% 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, large, large, medium)"] {
+  border-radius: 100% 100% 100% 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="base(large, large, large, large)"] {
+  border-radius: 100% 100% 100% 100%;
+}
 [data-hydrogen=VARVERSION] [data-h2-shadow*="base(small)"] {
   box-shadow: 0 .15rem .4rem rgba(0, 0, 0, .3);
 }
@@ -72,6 +852,786 @@
 }
 [data-hydrogen=VARVERSION] [data-h2-bg-color*="hugaboo(linear[green][red][blue])"] {
   background-image: linear-gradient(135deg,green,red,blue);
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square)"] {
+  border-radius: 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small)"] {
+  border-radius: 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium)"] {
+  border-radius: 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large)"] {
+  border-radius: 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, square, square, square)"] {
+  border-radius: 0 0 0 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, square, square, small)"] {
+  border-radius: 0 0 0 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, square, square, medium)"] {
+  border-radius: 0 0 0 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, square, square, large)"] {
+  border-radius: 0 0 0 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, square, small, square)"] {
+  border-radius: 0 0 10px 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, square, small, small)"] {
+  border-radius: 0 0 10px 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, square, small, medium)"] {
+  border-radius: 0 0 10px 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, square, small, large)"] {
+  border-radius: 0 0 10px 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, square, medium, square)"] {
+  border-radius: 0 0 50rem 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, square, medium, small)"] {
+  border-radius: 0 0 50rem 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, square, medium, medium)"] {
+  border-radius: 0 0 50rem 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, square, medium, large)"] {
+  border-radius: 0 0 50rem 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, square, large, square)"] {
+  border-radius: 0 0 100% 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, square, large, small)"] {
+  border-radius: 0 0 100% 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, square, large, medium)"] {
+  border-radius: 0 0 100% 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, square, large, large)"] {
+  border-radius: 0 0 100% 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, small, square, square)"] {
+  border-radius: 0 10px 0 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, small, square, small)"] {
+  border-radius: 0 10px 0 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, small, square, medium)"] {
+  border-radius: 0 10px 0 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, small, square, large)"] {
+  border-radius: 0 10px 0 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, small, small, square)"] {
+  border-radius: 0 10px 10px 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, small, small, small)"] {
+  border-radius: 0 10px 10px 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, small, small, medium)"] {
+  border-radius: 0 10px 10px 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, small, small, large)"] {
+  border-radius: 0 10px 10px 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, small, medium, square)"] {
+  border-radius: 0 10px 50rem 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, small, medium, small)"] {
+  border-radius: 0 10px 50rem 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, small, medium, medium)"] {
+  border-radius: 0 10px 50rem 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, small, medium, large)"] {
+  border-radius: 0 10px 50rem 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, small, large, square)"] {
+  border-radius: 0 10px 100% 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, small, large, small)"] {
+  border-radius: 0 10px 100% 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, small, large, medium)"] {
+  border-radius: 0 10px 100% 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, small, large, large)"] {
+  border-radius: 0 10px 100% 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, medium, square, square)"] {
+  border-radius: 0 50rem 0 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, medium, square, small)"] {
+  border-radius: 0 50rem 0 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, medium, square, medium)"] {
+  border-radius: 0 50rem 0 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, medium, square, large)"] {
+  border-radius: 0 50rem 0 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, medium, small, square)"] {
+  border-radius: 0 50rem 10px 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, medium, small, small)"] {
+  border-radius: 0 50rem 10px 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, medium, small, medium)"] {
+  border-radius: 0 50rem 10px 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, medium, small, large)"] {
+  border-radius: 0 50rem 10px 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, medium, medium, square)"] {
+  border-radius: 0 50rem 50rem 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, medium, medium, small)"] {
+  border-radius: 0 50rem 50rem 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, medium, medium, medium)"] {
+  border-radius: 0 50rem 50rem 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, medium, medium, large)"] {
+  border-radius: 0 50rem 50rem 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, medium, large, square)"] {
+  border-radius: 0 50rem 100% 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, medium, large, small)"] {
+  border-radius: 0 50rem 100% 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, medium, large, medium)"] {
+  border-radius: 0 50rem 100% 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, medium, large, large)"] {
+  border-radius: 0 50rem 100% 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, large, square, square)"] {
+  border-radius: 0 100% 0 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, large, square, small)"] {
+  border-radius: 0 100% 0 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, large, square, medium)"] {
+  border-radius: 0 100% 0 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, large, square, large)"] {
+  border-radius: 0 100% 0 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, large, small, square)"] {
+  border-radius: 0 100% 10px 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, large, small, small)"] {
+  border-radius: 0 100% 10px 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, large, small, medium)"] {
+  border-radius: 0 100% 10px 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, large, small, large)"] {
+  border-radius: 0 100% 10px 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, large, medium, square)"] {
+  border-radius: 0 100% 50rem 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, large, medium, small)"] {
+  border-radius: 0 100% 50rem 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, large, medium, medium)"] {
+  border-radius: 0 100% 50rem 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, large, medium, large)"] {
+  border-radius: 0 100% 50rem 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, large, large, square)"] {
+  border-radius: 0 100% 100% 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, large, large, small)"] {
+  border-radius: 0 100% 100% 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, large, large, medium)"] {
+  border-radius: 0 100% 100% 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(square, large, large, large)"] {
+  border-radius: 0 100% 100% 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, square, square, square)"] {
+  border-radius: 10px 0 0 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, square, square, small)"] {
+  border-radius: 10px 0 0 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, square, square, medium)"] {
+  border-radius: 10px 0 0 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, square, square, large)"] {
+  border-radius: 10px 0 0 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, square, small, square)"] {
+  border-radius: 10px 0 10px 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, square, small, small)"] {
+  border-radius: 10px 0 10px 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, square, small, medium)"] {
+  border-radius: 10px 0 10px 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, square, small, large)"] {
+  border-radius: 10px 0 10px 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, square, medium, square)"] {
+  border-radius: 10px 0 50rem 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, square, medium, small)"] {
+  border-radius: 10px 0 50rem 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, square, medium, medium)"] {
+  border-radius: 10px 0 50rem 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, square, medium, large)"] {
+  border-radius: 10px 0 50rem 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, square, large, square)"] {
+  border-radius: 10px 0 100% 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, square, large, small)"] {
+  border-radius: 10px 0 100% 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, square, large, medium)"] {
+  border-radius: 10px 0 100% 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, square, large, large)"] {
+  border-radius: 10px 0 100% 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, small, square, square)"] {
+  border-radius: 10px 10px 0 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, small, square, small)"] {
+  border-radius: 10px 10px 0 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, small, square, medium)"] {
+  border-radius: 10px 10px 0 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, small, square, large)"] {
+  border-radius: 10px 10px 0 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, small, small, square)"] {
+  border-radius: 10px 10px 10px 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, small, small, small)"] {
+  border-radius: 10px 10px 10px 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, small, small, medium)"] {
+  border-radius: 10px 10px 10px 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, small, small, large)"] {
+  border-radius: 10px 10px 10px 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, small, medium, square)"] {
+  border-radius: 10px 10px 50rem 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, small, medium, small)"] {
+  border-radius: 10px 10px 50rem 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, small, medium, medium)"] {
+  border-radius: 10px 10px 50rem 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, small, medium, large)"] {
+  border-radius: 10px 10px 50rem 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, small, large, square)"] {
+  border-radius: 10px 10px 100% 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, small, large, small)"] {
+  border-radius: 10px 10px 100% 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, small, large, medium)"] {
+  border-radius: 10px 10px 100% 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, small, large, large)"] {
+  border-radius: 10px 10px 100% 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, medium, square, square)"] {
+  border-radius: 10px 50rem 0 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, medium, square, small)"] {
+  border-radius: 10px 50rem 0 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, medium, square, medium)"] {
+  border-radius: 10px 50rem 0 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, medium, square, large)"] {
+  border-radius: 10px 50rem 0 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, medium, small, square)"] {
+  border-radius: 10px 50rem 10px 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, medium, small, small)"] {
+  border-radius: 10px 50rem 10px 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, medium, small, medium)"] {
+  border-radius: 10px 50rem 10px 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, medium, small, large)"] {
+  border-radius: 10px 50rem 10px 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, medium, medium, square)"] {
+  border-radius: 10px 50rem 50rem 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, medium, medium, small)"] {
+  border-radius: 10px 50rem 50rem 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, medium, medium, medium)"] {
+  border-radius: 10px 50rem 50rem 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, medium, medium, large)"] {
+  border-radius: 10px 50rem 50rem 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, medium, large, square)"] {
+  border-radius: 10px 50rem 100% 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, medium, large, small)"] {
+  border-radius: 10px 50rem 100% 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, medium, large, medium)"] {
+  border-radius: 10px 50rem 100% 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, medium, large, large)"] {
+  border-radius: 10px 50rem 100% 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, large, square, square)"] {
+  border-radius: 10px 100% 0 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, large, square, small)"] {
+  border-radius: 10px 100% 0 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, large, square, medium)"] {
+  border-radius: 10px 100% 0 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, large, square, large)"] {
+  border-radius: 10px 100% 0 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, large, small, square)"] {
+  border-radius: 10px 100% 10px 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, large, small, small)"] {
+  border-radius: 10px 100% 10px 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, large, small, medium)"] {
+  border-radius: 10px 100% 10px 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, large, small, large)"] {
+  border-radius: 10px 100% 10px 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, large, medium, square)"] {
+  border-radius: 10px 100% 50rem 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, large, medium, small)"] {
+  border-radius: 10px 100% 50rem 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, large, medium, medium)"] {
+  border-radius: 10px 100% 50rem 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, large, medium, large)"] {
+  border-radius: 10px 100% 50rem 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, large, large, square)"] {
+  border-radius: 10px 100% 100% 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, large, large, small)"] {
+  border-radius: 10px 100% 100% 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, large, large, medium)"] {
+  border-radius: 10px 100% 100% 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(small, large, large, large)"] {
+  border-radius: 10px 100% 100% 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, square, square, square)"] {
+  border-radius: 50rem 0 0 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, square, square, small)"] {
+  border-radius: 50rem 0 0 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, square, square, medium)"] {
+  border-radius: 50rem 0 0 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, square, square, large)"] {
+  border-radius: 50rem 0 0 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, square, small, square)"] {
+  border-radius: 50rem 0 10px 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, square, small, small)"] {
+  border-radius: 50rem 0 10px 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, square, small, medium)"] {
+  border-radius: 50rem 0 10px 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, square, small, large)"] {
+  border-radius: 50rem 0 10px 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, square, medium, square)"] {
+  border-radius: 50rem 0 50rem 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, square, medium, small)"] {
+  border-radius: 50rem 0 50rem 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, square, medium, medium)"] {
+  border-radius: 50rem 0 50rem 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, square, medium, large)"] {
+  border-radius: 50rem 0 50rem 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, square, large, square)"] {
+  border-radius: 50rem 0 100% 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, square, large, small)"] {
+  border-radius: 50rem 0 100% 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, square, large, medium)"] {
+  border-radius: 50rem 0 100% 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, square, large, large)"] {
+  border-radius: 50rem 0 100% 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, small, square, square)"] {
+  border-radius: 50rem 10px 0 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, small, square, small)"] {
+  border-radius: 50rem 10px 0 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, small, square, medium)"] {
+  border-radius: 50rem 10px 0 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, small, square, large)"] {
+  border-radius: 50rem 10px 0 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, small, small, square)"] {
+  border-radius: 50rem 10px 10px 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, small, small, small)"] {
+  border-radius: 50rem 10px 10px 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, small, small, medium)"] {
+  border-radius: 50rem 10px 10px 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, small, small, large)"] {
+  border-radius: 50rem 10px 10px 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, small, medium, square)"] {
+  border-radius: 50rem 10px 50rem 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, small, medium, small)"] {
+  border-radius: 50rem 10px 50rem 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, small, medium, medium)"] {
+  border-radius: 50rem 10px 50rem 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, small, medium, large)"] {
+  border-radius: 50rem 10px 50rem 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, small, large, square)"] {
+  border-radius: 50rem 10px 100% 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, small, large, small)"] {
+  border-radius: 50rem 10px 100% 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, small, large, medium)"] {
+  border-radius: 50rem 10px 100% 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, small, large, large)"] {
+  border-radius: 50rem 10px 100% 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, medium, square, square)"] {
+  border-radius: 50rem 50rem 0 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, medium, square, small)"] {
+  border-radius: 50rem 50rem 0 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, medium, square, medium)"] {
+  border-radius: 50rem 50rem 0 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, medium, square, large)"] {
+  border-radius: 50rem 50rem 0 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, medium, small, square)"] {
+  border-radius: 50rem 50rem 10px 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, medium, small, small)"] {
+  border-radius: 50rem 50rem 10px 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, medium, small, medium)"] {
+  border-radius: 50rem 50rem 10px 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, medium, small, large)"] {
+  border-radius: 50rem 50rem 10px 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, medium, medium, square)"] {
+  border-radius: 50rem 50rem 50rem 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, medium, medium, small)"] {
+  border-radius: 50rem 50rem 50rem 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, medium, medium, medium)"] {
+  border-radius: 50rem 50rem 50rem 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, medium, medium, large)"] {
+  border-radius: 50rem 50rem 50rem 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, medium, large, square)"] {
+  border-radius: 50rem 50rem 100% 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, medium, large, small)"] {
+  border-radius: 50rem 50rem 100% 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, medium, large, medium)"] {
+  border-radius: 50rem 50rem 100% 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, medium, large, large)"] {
+  border-radius: 50rem 50rem 100% 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, large, square, square)"] {
+  border-radius: 50rem 100% 0 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, large, square, small)"] {
+  border-radius: 50rem 100% 0 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, large, square, medium)"] {
+  border-radius: 50rem 100% 0 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, large, square, large)"] {
+  border-radius: 50rem 100% 0 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, large, small, square)"] {
+  border-radius: 50rem 100% 10px 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, large, small, small)"] {
+  border-radius: 50rem 100% 10px 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, large, small, medium)"] {
+  border-radius: 50rem 100% 10px 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, large, small, large)"] {
+  border-radius: 50rem 100% 10px 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, large, medium, square)"] {
+  border-radius: 50rem 100% 50rem 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, large, medium, small)"] {
+  border-radius: 50rem 100% 50rem 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, large, medium, medium)"] {
+  border-radius: 50rem 100% 50rem 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, large, medium, large)"] {
+  border-radius: 50rem 100% 50rem 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, large, large, square)"] {
+  border-radius: 50rem 100% 100% 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, large, large, small)"] {
+  border-radius: 50rem 100% 100% 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, large, large, medium)"] {
+  border-radius: 50rem 100% 100% 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(medium, large, large, large)"] {
+  border-radius: 50rem 100% 100% 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, square, square, square)"] {
+  border-radius: 100% 0 0 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, square, square, small)"] {
+  border-radius: 100% 0 0 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, square, square, medium)"] {
+  border-radius: 100% 0 0 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, square, square, large)"] {
+  border-radius: 100% 0 0 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, square, small, square)"] {
+  border-radius: 100% 0 10px 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, square, small, small)"] {
+  border-radius: 100% 0 10px 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, square, small, medium)"] {
+  border-radius: 100% 0 10px 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, square, small, large)"] {
+  border-radius: 100% 0 10px 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, square, medium, square)"] {
+  border-radius: 100% 0 50rem 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, square, medium, small)"] {
+  border-radius: 100% 0 50rem 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, square, medium, medium)"] {
+  border-radius: 100% 0 50rem 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, square, medium, large)"] {
+  border-radius: 100% 0 50rem 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, square, large, square)"] {
+  border-radius: 100% 0 100% 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, square, large, small)"] {
+  border-radius: 100% 0 100% 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, square, large, medium)"] {
+  border-radius: 100% 0 100% 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, square, large, large)"] {
+  border-radius: 100% 0 100% 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, small, square, square)"] {
+  border-radius: 100% 10px 0 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, small, square, small)"] {
+  border-radius: 100% 10px 0 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, small, square, medium)"] {
+  border-radius: 100% 10px 0 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, small, square, large)"] {
+  border-radius: 100% 10px 0 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, small, small, square)"] {
+  border-radius: 100% 10px 10px 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, small, small, small)"] {
+  border-radius: 100% 10px 10px 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, small, small, medium)"] {
+  border-radius: 100% 10px 10px 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, small, small, large)"] {
+  border-radius: 100% 10px 10px 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, small, medium, square)"] {
+  border-radius: 100% 10px 50rem 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, small, medium, small)"] {
+  border-radius: 100% 10px 50rem 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, small, medium, medium)"] {
+  border-radius: 100% 10px 50rem 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, small, medium, large)"] {
+  border-radius: 100% 10px 50rem 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, small, large, square)"] {
+  border-radius: 100% 10px 100% 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, small, large, small)"] {
+  border-radius: 100% 10px 100% 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, small, large, medium)"] {
+  border-radius: 100% 10px 100% 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, small, large, large)"] {
+  border-radius: 100% 10px 100% 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, medium, square, square)"] {
+  border-radius: 100% 50rem 0 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, medium, square, small)"] {
+  border-radius: 100% 50rem 0 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, medium, square, medium)"] {
+  border-radius: 100% 50rem 0 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, medium, square, large)"] {
+  border-radius: 100% 50rem 0 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, medium, small, square)"] {
+  border-radius: 100% 50rem 10px 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, medium, small, small)"] {
+  border-radius: 100% 50rem 10px 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, medium, small, medium)"] {
+  border-radius: 100% 50rem 10px 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, medium, small, large)"] {
+  border-radius: 100% 50rem 10px 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, medium, medium, square)"] {
+  border-radius: 100% 50rem 50rem 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, medium, medium, small)"] {
+  border-radius: 100% 50rem 50rem 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, medium, medium, medium)"] {
+  border-radius: 100% 50rem 50rem 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, medium, medium, large)"] {
+  border-radius: 100% 50rem 50rem 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, medium, large, square)"] {
+  border-radius: 100% 50rem 100% 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, medium, large, small)"] {
+  border-radius: 100% 50rem 100% 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, medium, large, medium)"] {
+  border-radius: 100% 50rem 100% 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, medium, large, large)"] {
+  border-radius: 100% 50rem 100% 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, large, square, square)"] {
+  border-radius: 100% 100% 0 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, large, square, small)"] {
+  border-radius: 100% 100% 0 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, large, square, medium)"] {
+  border-radius: 100% 100% 0 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, large, square, large)"] {
+  border-radius: 100% 100% 0 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, large, small, square)"] {
+  border-radius: 100% 100% 10px 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, large, small, small)"] {
+  border-radius: 100% 100% 10px 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, large, small, medium)"] {
+  border-radius: 100% 100% 10px 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, large, small, large)"] {
+  border-radius: 100% 100% 10px 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, large, medium, square)"] {
+  border-radius: 100% 100% 50rem 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, large, medium, small)"] {
+  border-radius: 100% 100% 50rem 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, large, medium, medium)"] {
+  border-radius: 100% 100% 50rem 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, large, medium, large)"] {
+  border-radius: 100% 100% 50rem 100%;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, large, large, square)"] {
+  border-radius: 100% 100% 100% 0;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, large, large, small)"] {
+  border-radius: 100% 100% 100% 10px;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, large, large, medium)"] {
+  border-radius: 100% 100% 100% 50rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-radius*="hugaboo(large, large, large, large)"] {
+  border-radius: 100% 100% 100% 100%;
 }
 [data-hydrogen=VARVERSION] [data-h2-shadow*="hugaboo(small)"] {
   box-shadow: 0 .15rem .4rem rgba(0, 0, 0, .3);

@@ -3,6 +3,7 @@
 @use "maps/map-media" as mediaMap;
 @use "maps/map-color" as colorMap;
 @use "maps/map-gradient" as gradientMap;
+@use "maps/map-radius" as radiusMap;
 @use "maps/map-shadow" as shadowMap;
 
 [data-hydrogen="VARVERSION"] {
@@ -16,6 +17,23 @@
     @each $gradientKey, $gradientValue in gradientMap.$h2-map-gradient {
       [data-h2-bg-color*="#{$mediaKey}(#{$gradientKey})"] {
         background-image: #{$gradientValue};
+      }
+    }
+    // Radius
+    @each $radiusKey, $radiusValue in radiusMap.$h2-map-radius {
+      [data-h2-radius*="#{$mediaKey}(#{$radiusKey})"] {
+        border-radius: #{$radiusValue};
+      }
+    }
+    @each $radiusKey1, $radiusValue1 in radiusMap.$h2-map-radius {
+      @each $radiusKey2, $radiusValue2 in radiusMap.$h2-map-radius {
+        @each $radiusKey3, $radiusValue3 in radiusMap.$h2-map-radius {
+          @each $radiusKey4, $radiusValue4 in radiusMap.$h2-map-radius {
+            [data-h2-radius*="#{$mediaKey}(#{$radiusKey1}, #{$radiusKey2}, #{$radiusKey3}, #{$radiusKey4})"] {
+              border-radius: #{$radiusValue1} #{$radiusValue2} #{$radiusValue3} #{$radiusValue4};
+            }
+          }
+        }
       }
     }
     // Shadows - SIZE

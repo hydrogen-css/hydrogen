@@ -170,6 +170,29 @@ function customGradient() {
   .pipe(dest(config.styles.path + '/hydrogen/maps'));
 }
 
+// Radius
+var radiusConfigSource;
+var radiusMap = '$h2-map-radius: ("square": "0",';
+var radiusMapStringStart = '';
+var radiusMapStringContent = '';
+var radiusMapStringEnd = ');';
+if (config.radius != null && config.radius != undefined && config.radius.length > 0) {
+  radiusConfigSource = config.radius;
+} else {
+  radiusConfigSource = defaults.radius;
+}
+radiusConfigSource.forEach(function(radius) {
+  var radiusString = '"' + radius.name + '": "' + radius.value + '",';
+  radiusMapStringContent = radiusMapStringContent.concat(radiusString);
+});
+radiusMap = radiusMap.concat(radiusMapStringStart).concat(radiusMapStringContent).concat(radiusMapStringEnd);
+
+function buildRadius() {
+  return src('src/styles/maps/_map-radius.scss')
+  .pipe(footer(radiusMap))
+  .pipe(dest(config.styles.path + '/hydrogen/maps'));
+}
+
 // Shadow
 var shadowConfig = '';
 var shadowStringStart = '$h2-map-shadow: (';
@@ -364,4 +387,4 @@ function deleteCache(done) {
   done();
 }
 
-exports.test = series(cleanCache, createHydrogen, cacheHydrogen, customMedia, customColor, customGradient, customShadow, compile, preCleanCompress, getUserMarkup, cleanCSS, postCleanCompress, deleteCache);
+exports.test = series(cleanCache, createHydrogen, cacheHydrogen, customMedia, customColor, customGradient, buildRadius, customShadow, compile, preCleanCompress, getUserMarkup, cleanCSS, postCleanCompress, deleteCache);
