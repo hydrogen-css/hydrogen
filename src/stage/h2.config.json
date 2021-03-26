@@ -8,12 +8,7 @@
     "path": "./src/stage/markup",
     "type": "html"
   },
-  "media": [
-    {
-      "name": "hugaboo",
-      "value": "300px"
-    }
-  ],
+  "media": [],
   "colors": [
     {
       "name": "black",
@@ -68,5 +63,6 @@
       ]
     }
   ],
-  "shadows": []
+  "shadows": [],
+  "whitespaceScale": "1.25"
 }

@@ -117,5 +117,7 @@
       "value": "0 .6rem .8rem rgba(0, 0, 0, .3)"
     }
   ],
-  "typeScale": "1.33"
+  "whitespaceScale": "1.5",
+  "typeBaseSize": "112.5%",
+  "typeScale": "1.25"
 }

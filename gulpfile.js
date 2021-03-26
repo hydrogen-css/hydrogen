@@ -102,6 +102,7 @@ colorSource.forEach(function(color) {
   var colorDarkString = '"[dark]' + color.name + '": color.scale(' + color.color + ', $lightness: -15%, $saturation: -10%),';
   var colorOpacityString = '';
   if (color.opacity != null && color.opacity != undefined && color.opacity == true) {
+    // console.log('Color:', color.name, 'has opacity set to true!');
     for (let opacity in colorOpacityMap) {
       colorOpacityString = colorOpacityString + '"' + color.name + opacity + '": color.adjust(' + color.color + ', $alpha: ' + colorOpacityMap[opacity] + '),';
         // console.log('Color Opacity String: ', colorOpacityString);
@@ -109,7 +110,7 @@ colorSource.forEach(function(color) {
       colorOpacityString = colorOpacityString + '"[dark]' + color.name + opacity + '": color.scale(color.adjust(' + color.color + ', $alpha: ' + colorOpacityMap[opacity] + '), $lightness: -15%, $saturation: -10%),';
     }
   }
-  colorStringContent = colorStringContent.concat(colorString).concat(colorLightString).concat(colorDarkString);
+  colorStringContent = colorStringContent.concat(colorString).concat(colorLightString).concat(colorDarkString).concat(colorOpacityString);
 });
 colorConfig = colorConfig.concat(colorStringStart).concat(colorStringContent).concat(colorStringEnd);
 
@@ -216,6 +217,34 @@ function customShadow() {
   .pipe(dest(config.styles.path + '/hydrogen/maps'));
 }
 
+// Whitespace
+// This map is used by both margins and padding in the Sass file.
+var whitespaceScaleSource;
+if (config.whitespaceScale != null && config.whitespaceScale != undefined && config.whitespaceScale.length > 0) {
+  whitespaceScaleSource = config.whitespaceScale;
+} else {
+  whitespaceScaleSource = defaults.whitespaceScale;
+}
+var whitespaceMap = '$h2-map-whitespace: (';
+var whitespaceMapStringStart = '';
+var whitespaceMapStringContent = '';
+var whitespaceMapStringEnd = ');';
+var smallest = '"smallest": ' + (1 / whitespaceScaleSource) / whitespaceScaleSource + 'rem,';
+var smaller = '"smaller": ' + 1 / whitespaceScaleSource + 'rem,';
+var small = '"small": 1rem,';
+var medium = '"medium": ' + 1 * whitespaceScaleSource + 'rem,';
+var large = '"large": ' + (1 * whitespaceScaleSource) * whitespaceScaleSource + 'rem,';
+var larger = '"larger": ' + ((1 * whitespaceScaleSource) * whitespaceScaleSource) * whitespaceScaleSource + 'rem,';
+var largest = '"largest": ' + (((1 * whitespaceScaleSource) * whitespaceScaleSource) * whitespaceScaleSource) * whitespaceScaleSource + 'rem,';
+whitespaceMapStringContent = whitespaceMapStringContent + smallest + smaller + small + medium + large + larger + largest;
+whitespaceMap = whitespaceMap.concat(whitespaceMapStringStart).concat(whitespaceMapStringContent).concat(whitespaceMapStringEnd);
+
+function buildwhitespace() {
+  return src('src/styles/maps/_map-whitespace.scss')
+  .pipe(footer(whitespaceMap))
+  .pipe(dest(config.styles.path + '/hydrogen/maps'));
+}
+
 // Compile
 function compile() {
   return src(config.styles.path + '/hydrogen/hydrogen.scss')
@@ -316,7 +345,7 @@ function cleanCSS(done) {
               // console.log(queries);
           }
         } else {
-          console.log('There\'s no matching media query in the media query map for the query "' + mediaValue[0] + '".');
+          console.log('Hydrogen: there\'s no matching media query in the media query map for the query "' + mediaValue[0] + '".');
         }
       });
     });
@@ -337,7 +366,7 @@ function cleanCSS(done) {
           // console.log("queryMatch: ", queryMatch[0]);
         queryValue = queryMatch[0].match(/[^"]([^"]*)[^"\s]/g); // Returns the media side of the media query: screen and...
       } else {
-        console.log('There\'s no matching media query in the media query map for the query "' + query + '".');
+        console.log('Hydrogen: there\'s no matching media query in the media query map for the query "' + query + '".');
       }
       // Append the media query to the CSS group.
       finalCSS = finalCSS + '@media ' + queryValue + '{';
@@ -354,14 +383,14 @@ function cleanCSS(done) {
     if (config.environment == "development") {
       fs.writeFile(config.styles.path + '/hydrogen/hydrogen.css', finalCSS, function(err) {
         if (err) {
-          console.log('Uh oh: ', err);
+          console.log('Hydrogen: ', err);
         }
       });
     } else {
       fs.mkdirSync(config.styles.path + '/hydrogen/cleaned');
       fs.writeFile(config.styles.path + '/hydrogen/cleaned/hydrogen.css', finalCSS, function(err) {
         if (err) {
-          console.log('Uh oh: ', err);
+          console.log('Hydrogen: ', err);
         }
       });
     }
@@ -387,4 +416,4 @@ function deleteCache(done) {
   done();
 }
 
-exports.test = series(cleanCache, createHydrogen, cacheHydrogen, customMedia, customColor, customGradient, buildRadius, customShadow, compile, preCleanCompress, getUserMarkup, cleanCSS, postCleanCompress, deleteCache);
+exports.test = series(cleanCache, createHydrogen, cacheHydrogen, customMedia, customColor, customGradient, buildRadius, customShadow, buildwhitespace, compile, preCleanCompress, getUserMarkup, cleanCSS, postCleanCompress, deleteCache);

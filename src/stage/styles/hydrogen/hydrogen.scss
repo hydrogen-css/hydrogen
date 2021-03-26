@@ -5,6 +5,20 @@
 @use "maps/map-gradient" as gradientMap;
 @use "maps/map-radius" as radiusMap;
 @use "maps/map-shadow" as shadowMap;
+@use "maps/map-whitespace" as whitespaceMap;
+
+$h2-map-sides: (
+  // Note that tb and rl are for backwards compatibility purposes and are deprecated.
+  "all": "",
+  "top": "-top",
+  "right": "-right",
+  "bottom": "-bottom",
+  "left": "-left",
+  "top-bottom": "",
+  "tb": "",
+  "right-left": "",
+  "rl" : ""
+);
 
 [data-hydrogen="VARVERSION"] {
   @each $mediaKey, $mediaValue in mediaMap.$h2-map-media {
@@ -19,7 +33,54 @@
         background-image: #{$gradientValue};
       }
     }
+    // Margins
+    // SIDE, SIZE
+    @each $sideKey, $sideValue in $h2-map-sides {
+      @each $whitespaceKey, $whitespaceValue in whitespaceMap.$h2-map-whitespace {
+        [data-h2-margin*="#{$mediaKey}(#{$sideKey}, #{$whitespaceKey})"] {
+          @if $sideKey == "top-bottom" or $sideKey == "tb" {
+            margin-top: #{$whitespaceValue};
+            margin-bottom: #{$whitespaceValue};
+          } @else if $sideKey == "right-left" or $sideKey == "rl" {
+            margin-right: #{$whitespaceValue};
+            margin-left: #{$whitespaceValue};
+          } @else {
+            margin#{$sideValue}: #{$whitespaceValue};
+          }
+        }
+      }
+      [data-h2-margin*="#{$mediaKey}(#{$sideKey}, auto)"] {
+        @if $sideKey == "top-bottom" or $sideKey == "tb" {
+          margin-top: auto;
+          margin-bottom: auto;
+        } @else if $sideKey == "right-left" or $sideKey == "rl" {
+          margin-right: auto;
+          margin-left: auto;
+        } @else {
+          margin#{$sideValue}: auto;
+        }
+      }
+    }
+    // Padding
+    // SIDE, SIZE
+    @each $sideKey, $sideValue in $h2-map-sides {
+      @each $whitespaceKey, $whitespaceValue in whitespaceMap.$h2-map-whitespace {
+        [data-h2-padding*="#{$mediaKey}(#{$sideKey}, #{$whitespaceKey})"] {
+          @if $sideKey == "top-bottom" or $sideKey == "tb" {
+            padding-top: #{$whitespaceValue};
+            padding-bottom: #{$whitespaceValue};
+          } @else if $sideKey == "right-left" or $sideKey == "rl" {
+            padding-right: #{$whitespaceValue};
+            padding-left: #{$whitespaceValue};
+          } @else {
+            padding#{$sideValue}: #{$whitespaceValue};
+          }
+        }
+      }
+    }
     // Radius
+    // SIZE
+    // SIZE, SIZE, SIZE, SIZE
     @each $radiusKey, $radiusValue in radiusMap.$h2-map-radius {
       [data-h2-radius*="#{$mediaKey}(#{$radiusKey})"] {
         border-radius: #{$radiusValue};
