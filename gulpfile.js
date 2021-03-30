@@ -225,7 +225,7 @@ if (config.whitespaceScale != null && config.whitespaceScale != undefined && con
 } else {
   whitespaceScaleSource = defaults.whitespaceScale;
 }
-var whitespaceMap = '$h2-map-whitespace: (';
+var whitespaceMap = '$h2-map-whitespace: ("none": 0,';
 var whitespaceMapStringStart = '';
 var whitespaceMapStringContent = '';
 var whitespaceMapStringEnd = ');';
@@ -263,8 +263,8 @@ function preCleanCompress() {
 
 // Get Markup
 function getUserMarkup() {
-  return src(config.markup.path + '/**/*.' + config.markup.type)
-  .pipe(concat('markup.' + config.markup.type))
+  return src(config.markup.path + '/**/*')
+  .pipe(concat('markup.txt'))
   // This destination will have to be the CSS folder the user specifies.
   .pipe(dest(config.styles.path + '/hydrogen/markup'))
 }
@@ -272,11 +272,13 @@ function getUserMarkup() {
 // Remove Unwanted CSS
 function cleanCSS(done) {
   // Get the Hydrogen markup from the user's folder.
-  var markup = fs.readFileSync(config.styles.path + '/hydrogen/markup/markup.' + config.markup.type).toString();
+  var markup = fs.readFileSync(config.styles.path + '/hydrogen/markup/markup.txt').toString();
   // Get all instances of Hydrogen data attributes (data-h2-*="*").
-  var dataRegex = /data-h2-([^"]*)="([^"]*)"/g;
+  // var dataRegex = /data-h2-([^"]*)="([^"]*)"/g;
+  var dataRegex = /data-h2-([^=\s]+)(?:(\s)|=["'{](.*)["'}]|.*)/g;
   // Get the utility portion of the attribute (data-h2-*).
-  var utilityRegex = /data-h2-([^=]*)/g;
+  // var utilityRegex = /data-h2-([^=]*)/g;
+  var utilityRegex = /data-h2-(?:([^=\s]*)|([^\s]+))/g;
   // Get individual attribute values (x(y)).
   var valueRegex = /([^" ]*?)\(([^)]*)\)/g;
   // var valueRegex = /.\(.*\)/g;
@@ -308,46 +310,49 @@ function cleanCSS(done) {
         // console.log(attribute);
       var utility = attribute.match(utilityRegex);
       var values = attribute.match(valueRegex);
-      values.forEach(function(value) {
-        // Get the media query set for this particular value.
-        var mediaValue = value.match(/^.*?(?=\()/g); // Returns media value: x
-          // console.log("media query: ", mediaValue);
-        // We have to build a RegEx to match the correct media query by checking against the list of available media queries and getting their screen value. Don't forget that "b" will always be an option, which has an empty value because it represents all "screen" queries.
-        var queryValue;
-        var defaultQueries = mediaConfig;
-        // Construct the query RegEx.
-        var queryRegEx = `"` + mediaValue + `": ".*?(?:")`;
-        // Create the RegEx.
-        var createQueryRegEx = new RegExp(queryRegEx, 'g');
-        // Search the default queries for the value.
-        var queryMatch = defaultQueries.match(createQueryRegEx); // Returns media query: "x": "screen and..."
-          // console.log(queryMatch);
-        // Isolate the query itself so it can be used as text.
-        if (queryMatch != null) {
-            // console.log("queryMatch: ", queryMatch[0]);
-          queryValue = queryMatch[0].match(/[^"]([^"]*)[^"\s]/g); // Returns the media side of the media query: screen and...
-            // console.log("final media query: ", queryValue);
-          var newRegEx = '\\[data-hydrogen=("*VARVERSION"*)\\] \\[' + utility + '\\*="' + value.replace(/\(/g, '\\(').replace(/\)/g, '\\)').replace(/\[/g, '\\[').replace(/\]/g, '\\]') + '"\\]{([^}])*}'
-            // console.log(value);
-            // console.log(newRegEx);
-          var cssRegex = new RegExp(newRegEx, 'g');
-            // console.log('css specific regex: ', cssRegex);
-            // console.log('test css regex: ', /\[data-h2-bg-color\*="b\(red\)"\]{([^}])*}/g);
-          var cssMatch = hydrogenCSS.match(cssRegex); // Returns the full CSS selector: [data-hydrogen=VARVERSION] [data-h2-ATTRIBUTE*="MEDIA(VALUE)"]{CSS}
-            // console.log('css match values: ', cssMatch);
-          if (cssMatch != null) {
-            // Transform the matched CSS to include its media query.
-            // var CSSwithMedia = '@media ' + queryValue[0] + '{' + cssMatch + '}';
-              // console.log(CSSwithMedia);
-            // finalCSS = finalCSS.concat(CSSwithMedia);
-              // console.log(queries);
-            queries[mediaValue] = queries[mediaValue].concat(cssMatch);
-              // console.log(queries);
+        // console.log('Values inside each attribute:', values);
+      if (values != null) {
+        values.forEach(function(value) {
+          // Get the media query set for this particular value.
+          var mediaValue = value.match(/^.*?(?=\()/g); // Returns media value: x
+            // console.log("media query: ", mediaValue);
+          // We have to build a RegEx to match the correct media query by checking against the list of available media queries and getting their screen value. Don't forget that "b" will always be an option, which has an empty value because it represents all "screen" queries.
+          var queryValue;
+          var defaultQueries = mediaConfig;
+          // Construct the query RegEx.
+          var queryRegEx = `"` + mediaValue + `": ".*?(?:")`;
+          // Create the RegEx.
+          var createQueryRegEx = new RegExp(queryRegEx, 'g');
+          // Search the default queries for the value.
+          var queryMatch = defaultQueries.match(createQueryRegEx); // Returns media query: "x": "screen and..."
+            // console.log(queryMatch);
+          // Isolate the query itself so it can be used as text.
+          if (queryMatch != null) {
+              // console.log("queryMatch: ", queryMatch[0]);
+            queryValue = queryMatch[0].match(/[^"]([^"]*)[^"\s]/g); // Returns the media side of the media query: screen and...
+              // console.log("final media query: ", queryValue);
+            var newRegEx = '\\[data-hydrogen=("*VARVERSION"*)\\] \\[' + utility + '\\*="' + value.replace(/\(/g, '\\(').replace(/\)/g, '\\)').replace(/\[/g, '\\[').replace(/\]/g, '\\]') + '"\\]{([^}])*}'
+              // console.log(value);
+              // console.log(newRegEx);
+            var cssRegex = new RegExp(newRegEx, 'g');
+              // console.log('css specific regex: ', cssRegex);
+              // console.log('test css regex: ', /\[data-h2-bg-color\*="b\(red\)"\]{([^}])*}/g);
+            var cssMatch = hydrogenCSS.match(cssRegex); // Returns the full CSS selector: [data-hydrogen=VARVERSION] [data-h2-ATTRIBUTE*="MEDIA(VALUE)"]{CSS}
+              // console.log('css match values: ', cssMatch);
+            if (cssMatch != null) {
+              // Transform the matched CSS to include its media query.
+              // var CSSwithMedia = '@media ' + queryValue[0] + '{' + cssMatch + '}';
+                // console.log(CSSwithMedia);
+              // finalCSS = finalCSS.concat(CSSwithMedia);
+                // console.log(queries);
+              queries[mediaValue] = queries[mediaValue].concat(cssMatch);
+                // console.log(queries);
+            }
+          } else {
+            console.log('Hydrogen: there\'s no matching media query in the media query map for the query "' + mediaValue[0] + '".');
           }
-        } else {
-          console.log('Hydrogen: there\'s no matching media query in the media query map for the query "' + mediaValue[0] + '".');
-        }
-      });
+        }); 
+      }
     });
     // Loop through each media query array now that they're populated with CSS and concatenate them into the final file.
       // console.log(queries);

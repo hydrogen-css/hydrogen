@@ -30,6 +30,14 @@ $h2-map-display: (
   "list-item": "list-item"
 );
 
+$h2-map-position: (
+  "static"
+  "relative"
+  "fixed"
+  "absolute"
+  "sticky"
+);
+
 $h2-map-sides: (
   // Note that tb and rl are for backwards compatibility purposes and are deprecated.
   "all": "",
@@ -109,6 +117,15 @@ $h2-map-sides: (
         }
       }
     }
+    // Position
+    // POSITION
+    // [data-h2-position*="#{$mediaKey}(#{$position})"],
+    // [data-h2-position*="#{$mediaKey}(#{$position})"][data-h2-visibility] {
+    //   position: #{$position};
+    //   @if $position == "sticky" {
+    //     top: 0;
+    //   }
+    // }
     // Radius
     // SIZE
     // SIZE, SIZE, SIZE, SIZE
@@ -141,6 +158,30 @@ $h2-map-sides: (
       [data-h2-text-align*="#{$mediaKey}(#{$alignmentKey})"] {
         text-align: $alignmentValue;
       }
+    }
+    // Visibility
+    // VALUE
+    [data-h2-visibility*="#{$mediaKey}(invisible)"]{
+      height: 1px;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: -100vw;
+      width: 1px;
+    }
+    [data-h2-visibility*="#{$mediaKey}(hidden)"] {
+      display: none;
+      visibility: hidden;
+    }
+    [data-h2-visibility*="#{$mediaKey}(visible)"] {
+      display: block;
+      height: auto;
+      overflow: auto;
+      position: static;
+      top: auto;
+      left: auto;
+      width: auto;
+      visibility: visible;
     }
   }
 }
