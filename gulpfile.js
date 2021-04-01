@@ -41,8 +41,12 @@ function createHydrogen(done) {
 
 // Cached H2
 // This is required because each config setting needs to update a single instance of the Hydrogen file, otherwise they each create their own and overwrite the last.
-function cacheHydrogen() {
-  return src('src/styles/hydrogen.scss')
+function cacheHydrogenCore() {
+  return src('src/styles/core.scss')
+    .pipe(dest(config.styles.path + '/hydrogen'));
+}
+function cacheHydrogenUtility() {
+  return src('src/styles/utility.scss')
     .pipe(dest(config.styles.path + '/hydrogen'));
 }
 
@@ -67,8 +71,8 @@ mediaConfig = mediaConfig.concat(mediaStringStart).concat(mediaStringContent).co
 
 function customMedia() {
   return src('src/styles/maps/_map-media.scss')
-  .pipe(footer(mediaConfig))
-  .pipe(dest(config.styles.path + '/hydrogen/maps'));
+    .pipe(footer(mediaConfig))
+    .pipe(dest(config.styles.path + '/hydrogen/maps'));
 }
 
 // Color
@@ -116,8 +120,87 @@ colorConfig = colorConfig.concat(colorStringStart).concat(colorStringContent).co
 
 function customColor() {
   return src('src/styles/maps/_map-color.scss')
-  .pipe(footer(colorConfig))
-  .pipe(dest(config.styles.path + '/hydrogen/maps'));
+    .pipe(footer(colorConfig))
+    .pipe(dest(config.styles.path + '/hydrogen/maps'));
+}
+
+// Containers
+var containersConfigSource;
+var containerMap = '$h2-map-containers: ("full": "none",';
+var containerMapStringStart = '';
+var containerMapStringContent = '';
+var containerMapStringEnd = ');';
+if (config.containers != null && config.containers != undefined && config.containers.length > 0) {
+  containersConfigSource = config.containers;
+} else {
+  containersConfigSource = defaults.containers;
+}
+containersConfigSource.forEach(function(containers) {
+  var containersString = '"' + containers.name + '": "' + containers.maxWidth + '",';
+  containerMapStringContent = containerMapStringContent.concat(containersString);
+});
+containerMap = containerMap.concat(containerMapStringStart).concat(containerMapStringContent).concat(containerMapStringEnd);
+
+function buildContainers() {
+  return src('src/styles/maps/_map-containers.scss')
+    .pipe(footer(containerMap))
+    .pipe(dest(config.styles.path + '/hydrogen/maps'));
+}
+
+// Flex Grid
+var flexgridEnabled = false;
+var flexgridColumns = defaults.flexgrid.columns;
+if (config.flexgrid != null && config.flexgrid != undefined && config.flexgrid.enabled == true) {
+  console.log('Hydrogen: you\'ve successfully enabled flexgrid!');
+  flexgridEnabled = true;
+}
+if (config.flexgrid.columns != null && config.flexgrid.columns != undefined) {
+  console.log('Hydrogen: you\'ve set a custom grid column value!');
+  flexgridColumns = config.flexgrid.columns;
+}
+
+// Move the flexgrid core file.
+function moveFlexgridCore(done) {
+  if (flexgridEnabled == true) {
+    return src('src/styles/utilities/_core-flex-grid.scss')
+      .pipe(dest(config.styles.path + '/hydrogen/utilities'));
+  } else {
+    done();
+  }
+}
+
+// Modify the cached version of H2's core.
+function enableFlexgridCore(done) {
+  if (flexgridEnabled == true) {
+    return src(config.styles.path + '/hydrogen/core.scss')
+      .pipe(replace('// @use "utilities/core-flex-grid";', '@use "utilities/core-flex-grid";'))
+      .pipe(dest(config.styles.path + '/hydrogen'));
+  } else {
+    done();
+  }
+}
+
+// Move the flexgrid utility file.
+function moveFlexgrid(done) {
+  if (flexgridEnabled == true) {
+    return src('src/styles/utilities/_utility-flex-grid.scss')
+      // Set the column variable to the user's specification, or use the default.
+      .pipe(replace('$h2GridColumns: 12;', '$h2GridColumns: ' + flexgridColumns + ';'))
+      .pipe(dest(config.styles.path + '/hydrogen/utilities'));
+  } else {
+    done();
+  }
+}
+
+// Modify the cached version of H2.
+function enableFlexgrid(done) {
+  if (flexgridEnabled == true) {
+    return src(config.styles.path + '/hydrogen/utility.scss')
+      .pipe(replace('// @use "utilities/utility-flex-grid";', '@use "utilities/utility-flex-grid";'))
+      .pipe(dest(config.styles.path + '/hydrogen'));
+  } else {
+    done();
+  }
 }
 
 // Gradients
@@ -246,19 +329,29 @@ function buildwhitespace() {
 }
 
 // Compile
-function compile() {
-  return src(config.styles.path + '/hydrogen/hydrogen.scss')
-  .pipe(sass())
-  .pipe(dest(config.styles.path + '/hydrogen/compiled'));
+function compileCore() {
+  return src(config.styles.path + '/hydrogen/core.scss')
+    .pipe(sass())
+    .pipe(dest(config.styles.path + '/hydrogen/compiled'));
+}
+function compileUtility() {
+  return src(config.styles.path + '/hydrogen/utility.scss')
+    .pipe(sass())
+    .pipe(dest(config.styles.path + '/hydrogen/compiled'));
 }
 
 // Compress
+function compressCore() {
+  return src(config.styles.path + '/hydrogen/compiled/core.css')
+    .pipe(postcss([cssnano()]))
+    .pipe(dest(config.styles.path + '/hydrogen/compressed'));
+}
 function preCleanCompress() {
-  return src(config.styles.path + '/hydrogen/compiled/hydrogen.css')
-  .pipe(postcss([cssnano({
-    preset: ['lite']
-  })]))
-  .pipe(dest(config.styles.path + '/hydrogen/compressed'));
+  return src(config.styles.path + '/hydrogen/compiled/utility.css')
+    .pipe(postcss([cssnano({
+      preset: ['lite']
+    })]))
+    .pipe(dest(config.styles.path + '/hydrogen/compressed'));
 }
 
 // Get Markup
@@ -282,8 +375,10 @@ function cleanCSS(done) {
   // Get individual attribute values (x(y)).
   var valueRegex = /([^" ]*?)\(([^)]*)\)/g;
   // var valueRegex = /.\(.*\)/g;
+  // Get the temporary core Hydrogen.
+  var hydrogenCore = fs.readFileSync(config.styles.path + '/hydrogen/compressed/core.css').toString();
   // Get the temporary compressed Hydrogen file, located in the user's specified location in the config.
-  var hydrogenCSS = fs.readFileSync(config.styles.path + '/hydrogen/compressed/hydrogen.css').toString();
+  var hydrogenCSS = fs.readFileSync(config.styles.path + '/hydrogen/compressed/utility.css').toString();
     // console.log('sampleCSS file: ', hydrogenCSS);
   // Set up a variable list of arrays for each media query in the config. Thanks Chris Wiseman!
   let queries = {
@@ -300,7 +395,7 @@ function cleanCSS(done) {
   }
     // console.log(queries);
   // Set up a string variable for our final CSS file.
-  var finalCSS = "";
+  var finalCSS = "" + hydrogenCore;
   // We'll then have to parse through each one and break things apart by media query, and add the * selector...
   // e.g. data-h2-bg-color="b(red) m(yellow)" needs to become [data-h2-bg-color*="b(red)"] and [data-h2-bg-color*="m(yellow)"]
   var usedAttributes = markup.match(dataRegex);
@@ -310,6 +405,7 @@ function cleanCSS(done) {
         // console.log(attribute);
       var utility = attribute.match(utilityRegex);
       var values = attribute.match(valueRegex);
+        // console.log("Utility:", utility[0]);
         // console.log('Values inside each attribute:', values);
       if (values != null) {
         values.forEach(function(value) {
@@ -331,13 +427,22 @@ function cleanCSS(done) {
               // console.log("queryMatch: ", queryMatch[0]);
             queryValue = queryMatch[0].match(/[^"]([^"]*)[^"\s]/g); // Returns the media side of the media query: screen and...
               // console.log("final media query: ", queryValue);
-            var newRegEx = '\\[data-hydrogen=("*VARVERSION"*)\\] \\[' + utility + '\\*="' + value.replace(/\(/g, '\\(').replace(/\)/g, '\\)').replace(/\[/g, '\\[').replace(/\]/g, '\\]') + '"\\]{([^}])*}'
+            // This if statement is required to work around the nested nature of the flex-grid CSS. All of the grid CSS is applied to the file at the end of the build every time until this can be solved.
+            var newRegEx;
+            if (utility[0] == "data-h2-flex-item") {
+                // console.log("There's a flex item here.");
+              newRegEx = '\\[data-hydrogen=("*VARVERSION"*)\\] \\[data-h2-flex-grid\\] > \\[' + utility + '\\*="' + value.replace(/\(/g, '\\(').replace(/\)/g, '\\)').replace(/\[/g, '\\[').replace(/\]/g, '\\]') + '"\\]([^{])*{([^}])*}';
+            } else if (utility[0] == "data-h2-flex-item-content") {
+              // Do nothing.
+            } else {
+              newRegEx = '\\[data-hydrogen=("*VARVERSION"*)\\] \\[' + utility + '\\*="' + value.replace(/\(/g, '\\(').replace(/\)/g, '\\)').replace(/\[/g, '\\[').replace(/\]/g, '\\]') + '"\\]([^{])*{([^}])*}';
+            }
               // console.log(value);
               // console.log(newRegEx);
             var cssRegex = new RegExp(newRegEx, 'g');
               // console.log('css specific regex: ', cssRegex);
               // console.log('test css regex: ', /\[data-h2-bg-color\*="b\(red\)"\]{([^}])*}/g);
-            var cssMatch = hydrogenCSS.match(cssRegex); // Returns the full CSS selector: [data-hydrogen=VARVERSION] [data-h2-ATTRIBUTE*="MEDIA(VALUE)"]{CSS}
+            var cssMatch = hydrogenCSS.match(cssRegex); // Returns the full CSS selector: [data-hydrogen=VARVERSION] [data-h2-ATTRIBUTE*="MEDIA(VALUE)"]***{CSS}
               // console.log('css match values: ', cssMatch);
             if (cssMatch != null) {
               // Transform the matched CSS to include its media query.
@@ -358,6 +463,7 @@ function cleanCSS(done) {
       // console.log(queries);
     for (let query in queries) {
       var queryValue;
+        // console.log(queryValue);
       var defaultQueries = mediaConfig;
       // Construct the query RegEx.
       var queryRegEx = `"` + query + `": ".*?(?:")`;
@@ -369,12 +475,12 @@ function cleanCSS(done) {
       // Isolate the query itself so it can be used as text.
       if (queryMatch != null) {
           // console.log("queryMatch: ", queryMatch[0]);
-        queryValue = queryMatch[0].match(/[^"]([^"]*)[^"\s]/g); // Returns the media side of the media query: screen and...
+        queryValue = queryMatch[0].match(/ "([^"])*"/g); // Returns the media side of the media query: screen and...
       } else {
         console.log('Hydrogen: there\'s no matching media query in the media query map for the query "' + query + '".');
       }
       // Append the media query to the CSS group.
-      finalCSS = finalCSS + '@media ' + queryValue + '{';
+      finalCSS = finalCSS + '@media' + queryValue[0].replace(/["']/g, "") + ' {';
       // Add the CSS to the media query.
       queries[query].forEach(function(item) {
           // console.log(item);
@@ -386,7 +492,7 @@ function cleanCSS(done) {
       // console.log('final css: ', finalCSS);
     // Create the cleaned folder and write the file.
     if (config.environment == "development") {
-      fs.writeFile(config.styles.path + '/hydrogen/hydrogen.css', finalCSS, function(err) {
+      fs.writeFile(config.styles.path + '/hydrogen.css', finalCSS, function(err) {
         if (err) {
           console.log('Hydrogen: ', err);
         }
@@ -421,4 +527,4 @@ function deleteCache(done) {
   done();
 }
 
-exports.test = series(cleanCache, createHydrogen, cacheHydrogen, customMedia, customColor, customGradient, buildRadius, customShadow, buildwhitespace, compile, preCleanCompress, getUserMarkup, cleanCSS, postCleanCompress, deleteCache);
+exports.test = series(cleanCache, createHydrogen, cacheHydrogenCore, cacheHydrogenUtility, customMedia, customColor, buildContainers, moveFlexgridCore, enableFlexgridCore, moveFlexgrid, enableFlexgrid, customGradient, buildRadius, customShadow, buildwhitespace, compileCore, compileUtility, compressCore, preCleanCompress, getUserMarkup, cleanCSS, postCleanCompress, deleteCache);

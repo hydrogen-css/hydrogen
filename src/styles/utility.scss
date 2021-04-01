@@ -2,16 +2,25 @@
 
 @use "maps/map-media" as mediaMap;
 @use "maps/map-color" as colorMap;
+@use "maps/map-containers" as containerMap;
 @use "maps/map-gradient" as gradientMap;
 @use "maps/map-radius" as radiusMap;
 @use "maps/map-shadow" as shadowMap;
 @use "maps/map-whitespace" as whitespaceMap;
+
+// @use "utilities/utility-flex-grid";
 
 $h2-map-alignment: (
   "center": "center",
   "justify": "justify",
   "right": "right",
   "left": "left"
+);
+
+$h2-map-container-alignment: (
+  "left": auto auto auto 0,
+  "center": 0 auto,
+  "right": auto 0 auto auto
 );
 
 $h2-map-display: (
@@ -55,18 +64,40 @@ $h2-map-sides: (
   @each $mediaKey, $mediaValue in mediaMap.$h2-map-media {
     // Background Color
     // [MODIFIER]COLOR[OPACITY]
+    // e.g. data-h2-bg-color="base(green)"
+    // e.g. data-h2-bg-color="base(green[.9])"
+    // e.g. data-h2-bg-color="base([light]green[.5])"
     @each $colorKey, $colorValue in colorMap.$h2-map-color {
       [data-h2-bg-color*="#{$mediaKey}(#{$colorKey})"] {
         background-color: $colorValue;
       }
     }
+    // TYPE-DEGREE[STOP][STOP]
+    // e.g. data-h2-bg-color="base(linear-45[green][blue])"
+    // e.g. data-h2-bg-color="base(radial[blue][green])"
     @each $gradientKey, $gradientValue in gradientMap.$h2-map-gradient {
       [data-h2-bg-color*="#{$mediaKey}(#{$gradientKey})"] {
         background-image: #{$gradientValue};
       }
     }
+    // Containers
+    // ALIGNMENT, SIZE
+    // e.g. data-h2-container="base(center, medium)"
+    [data-h2-container] {
+      margin: 0 auto;
+      width: 90%;
+    }
+    @each $containerKey, $containerValue in containerMap.$h2-map-containers {
+      @each $alignmentKey, $alignmentValue in $h2-map-container-alignment {
+        [data-h2-container*="#{$mediaKey}(#{$alignmentKey}, #{$containerKey})"] {
+          margin: $alignmentValue;
+          max-width: #{$containerValue};
+        }
+      }
+    }
     // Display
     // VALUE
+    // e.g. data-h2-display="base(block)"
     @each $displayKey, $displayValue in $h2-map-display {
       [data-h2-display*="#{$mediaKey}(#{$displayKey})"] {
         display: $displayValue;
@@ -74,6 +105,8 @@ $h2-map-sides: (
     }
     // Margins
     // SIDE, SIZE
+    // e.g. data-h2-margin="base(top, small)"
+    // e.g. data-h2-margin="base(rl, largest)"
     @each $sideKey, $sideValue in $h2-map-sides {
       @each $whitespaceKey, $whitespaceValue in whitespaceMap.$h2-map-whitespace {
         [data-h2-margin*="#{$mediaKey}(#{$sideKey}, #{$whitespaceKey})"] {
@@ -100,8 +133,24 @@ $h2-map-sides: (
         }
       }
     }
+    // Overflow
+    // OVERFLOW
+    // e.g. data-h2-overflow="base(hidden)"
+    $h2-map-overflow: (
+      "visible": visible,
+      "hidden": hidden,
+      "scroll": scroll,
+      "auto": auto
+    );
+    @each $overflowKey, $overflowValue in $h2-map-overflow {
+      [data-h2-overflow*="#{$mediaKey}(#{overflowKey})"] {
+        overflow: $overflowValue;
+      }
+    }
     // Padding
     // SIDE, SIZE
+    // e.g. data-h2-padding="base(tb, medium)"
+    // e.g. data-h2-padding="base(right, smallest)"
     @each $sideKey, $sideValue in $h2-map-sides {
       @each $whitespaceKey, $whitespaceValue in whitespaceMap.$h2-map-whitespace {
         [data-h2-padding*="#{$mediaKey}(#{$sideKey}, #{$whitespaceKey})"] {
@@ -119,21 +168,54 @@ $h2-map-sides: (
     }
     // Position
     // POSITION
-    // [data-h2-position*="#{$mediaKey}(#{$position})"],
-    // [data-h2-position*="#{$mediaKey}(#{$position})"][data-h2-visibility] {
-    //   position: #{$position};
-    //   @if $position == "sticky" {
-    //     top: 0;
-    //   }
-    // }
+    // e.g. data-h2-position="base(relative)"
+    @each $positionKey, $positionValue in $h2-map-position {
+    [data-h2-position*="#{$mediaKey}(#{$positionKey})"],
+      [data-h2-position*="#{$mediaKey}(#{$positionKey})"][data-h2-visibility] {
+        position: #{$positionValue};
+      }
+    }
+    // Position: Location
+    // SIDE, SIZE
+    // e.g. data-h2-location="base(top, medium)"
+    // e.g. data-h2-location="base(rl, smallest)"
+    @each $sideKey, $sideValue in $h2-map-sides {
+      @each $whitespaceKey, $whitespaceValue in whitespaceMap.$h2-map-whitespace {
+        [data-h2-location*="#{$mediaKey}(#{$sideKey}, #{$whitespaceKey})"],
+        [data-h2-location*="#{$mediaKey}(#{$sideKey}, #{$whitespaceKey})"][data-h2-visibility] {
+          @if $sideKey == "top-bottom" or $sideKey == "tb" {
+            top: #{$whitespaceValue};
+            bottom: #{$whitespaceValue};
+          } @else if $sideKey == "right-left" or $sideKey == "rl" {
+            right: #{$whitespaceValue};
+            left: #{$whitespaceValue};
+          } @else if $sideKey == "top" {
+            top: #{$whitespaceValue};
+          } @else if $sideKey == "right" {
+            right: #{$whitespaceValue};
+          } @else if $sideKey == "bottom" {
+            bottom: #{$whitespaceValue};
+          } @else if $sideKey == "left" {
+            left: #{$whitespaceValue};
+          } @else if $sideKey == "all" {
+            top: #{$whitespaceValue};
+            right: #{$whitespaceValue};
+            bottom: #{$whitespaceValue};
+            left: #{$whitespaceValue};
+          }
+        }
+      }
+    }
     // Radius
     // SIZE
-    // SIZE, SIZE, SIZE, SIZE
+    // e.g. data-h2-radius="base(small)"
     @each $radiusKey, $radiusValue in radiusMap.$h2-map-radius {
       [data-h2-radius*="#{$mediaKey}(#{$radiusKey})"] {
         border-radius: #{$radiusValue};
       }
     }
+    // SIZE, SIZE, SIZE, SIZE
+    // e.g. data-h2-radius="base(small, square, medium, small)"
     @each $radiusKey1, $radiusValue1 in radiusMap.$h2-map-radius {
       @each $radiusKey2, $radiusValue2 in radiusMap.$h2-map-radius {
         @each $radiusKey3, $radiusValue3 in radiusMap.$h2-map-radius {
@@ -147,6 +229,7 @@ $h2-map-sides: (
     }
     // Shadows
     // SIZE
+    // e.g. data-h2-shadow="base(small)"
     @each $shadowKey, $shadowValue in shadowMap.$h2-map-shadow {
       [data-h2-shadow*="#{$mediaKey}(#{$shadowKey})"] {
         box-shadow: #{$shadowValue};
@@ -154,6 +237,7 @@ $h2-map-sides: (
     }
     // Text Alignment
     // ALIGNMENT
+    // e.g. data-h2-text-align="base(center)"
     @each $alignmentKey, $alignmentValue in $h2-map-alignment {
       [data-h2-text-align*="#{$mediaKey}(#{$alignmentKey})"] {
         text-align: $alignmentValue;
@@ -161,6 +245,7 @@ $h2-map-sides: (
     }
     // Visibility
     // VALUE
+    // e.g. data-h2-visibility="base(visible)"
     [data-h2-visibility*="#{$mediaKey}(invisible)"]{
       height: 1px;
       overflow: hidden;

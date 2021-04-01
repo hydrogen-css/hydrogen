@@ -26,6 +26,11 @@
       "opacity": false
     }
   ],
+  "containers": [],
+  "flexgrid": {
+    "enabled": true,
+    "columns": 6
+  },
   "gradients": [
     {
       "type": "radial",

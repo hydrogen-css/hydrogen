@@ -35,8 +35,22 @@
       "opacity": false
     }
   ],
+  "containers": [
+    {
+      "name": "small",
+      "maxWidth": "39rem"
+    },
+    {
+      "name": "medium",
+      "maxWidth": "60rem"
+    },
+    {
+      "name": "large",
+      "maxWidth": "80rem"
+    }
+  ],
   "flexgrid": {
-    "enabled": true,
+    "enabled": false,
     "columns": 12
   },
   "gradients": [

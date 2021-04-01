@@ -14,7 +14,7 @@
     <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="../styles/hydrogen/hydrogen.css">
+    <link rel="stylesheet" type="text/css" href="../styles/hydrogen.css">
   </head>
   <body data-hydrogen="VARVERSION">
     <div>
@@ -41,6 +41,26 @@
           style="padding: 1rem;">
           Sample Text
         </div>
+    </div>
+    <div data-h2-flex-grid="base(top, expanded, padded, large)">
+      <div data-h2-flex-item="base(2of6) medium(1of6)">
+        <div 
+          data-h2-bg-color="base(green)"
+          data-h2-padding="base(all, large)"
+          data-h2-flex-item-content></div>
+      </div>
+      <div data-h2-flex-item="base(2of6) medium(1of6)">
+        <div 
+          data-h2-bg-color="base(green)"
+          data-h2-padding="base(all, large)"
+          data-h2-flex-item-content></div>
+      </div>
+      <div data-h2-flex-item="base(2of6) medium(1of6)">
+        <div 
+          data-h2-bg-color="base(green)"
+          data-h2-padding="base(all, large)"
+          data-h2-flex-item-content></div>
+      </div>
     </div>
   </body>
 </html>

@@ -1,0 +1,8 @@
+@use "utilities/core-flex-grid";
+
+[data-hydrogen="VARVERSION"] {
+  box-sizing: border-box;
+  * {
+    box-sizing: border-box;
+  }
+}
