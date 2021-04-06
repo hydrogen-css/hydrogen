@@ -7518,6 +7518,99 @@
 [data-hydrogen=VARVERSION] [data-h2-display*="base(list-item)"] {
   display: "list-item";
 }
+[data-hydrogen=VARVERSION] [data-h2-align-content*="base(center)"] {
+  align-content: center;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-content*="base(flex-end)"] {
+  align-content: flex-end;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-content*="base(flex-start)"] {
+  align-content: flex-start;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-content*="base(space-around)"] {
+  align-content: space-around;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-content*="base(space-between)"] {
+  align-content: space-between;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-content*="base(stretch)"] {
+  align-content: stretch;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-items*="base(baseline)"] {
+  align-items: baseline;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-items*="base(center)"] {
+  align-items: center;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-items*="base(flex-end)"] {
+  align-items: flex-end;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-items*="base(flex-start)"] {
+  align-items: flex-start;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-items*="base(stretch)"] {
+  align-items: stretch;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-self*="base(auto)"] {
+  align-self: auto;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-self*="base(baseline)"] {
+  align-self: baseline;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-self*="base(center)"] {
+  align-self: center;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-self*="base(inherit)"] {
+  align-self: inherit;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-self*="base(initial)"] {
+  align-self: initial;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-self*="base(flex-end)"] {
+  align-self: flex-end;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-self*="base(flex-start)"] {
+  align-self: flex-start;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-self*="base(stretch)"] {
+  align-self: stretch;
+}
+[data-hydrogen=VARVERSION] [data-h2-flex-direction*="base(column)"] {
+  flex-direction: column;
+}
+[data-hydrogen=VARVERSION] [data-h2-flex-direction*="base(column-reverse)"] {
+  flex-direction: column-reverse;
+}
+[data-hydrogen=VARVERSION] [data-h2-flex-direction*="base(row)"] {
+  flex-direction: row;
+}
+[data-hydrogen=VARVERSION] [data-h2-flex-direction*="base(row-reverse)"] {
+  flex-direction: row-reverse;
+}
+[data-hydrogen=VARVERSION] [data-h2-flex-wrap*="base(nowrap)"] {
+  flex-wrap: nowrap;
+}
+[data-hydrogen=VARVERSION] [data-h2-flex-wrap*="base(wrap)"] {
+  flex-wrap: wrap;
+}
+[data-hydrogen=VARVERSION] [data-h2-flex-wrap*="base(wrap-reverse)"] {
+  flex-wrap: wrap-reverse;
+}
+[data-hydrogen=VARVERSION] [data-h2-justify-content*="base(center)"] {
+  justify-content: center;
+}
+[data-hydrogen=VARVERSION] [data-h2-justify-content*="base(flex-end)"] {
+  justify-content: flex-end;
+}
+[data-hydrogen=VARVERSION] [data-h2-justify-content*="base(flex-start)"] {
+  justify-content: flex-start;
+}
+[data-hydrogen=VARVERSION] [data-h2-justify-content*="base(space-around)"] {
+  justify-content: space-around;
+}
+[data-hydrogen=VARVERSION] [data-h2-justify-content*="base(space-between)"] {
+  justify-content: space-between;
+}
 [data-hydrogen=VARVERSION] [data-h2-margin*="base(all, none)"] {
   margin: 0;
 }
@@ -8056,6 +8149,26 @@
 [data-hydrogen=VARVERSION] [data-h2-padding*="base(rl, largest)"] {
   padding-right: 2.44140625rem;
   padding-left: 2.44140625rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-position*="base(static)"],
+[data-hydrogen=VARVERSION] [data-h2-position*="base(static)"][data-h2-visibility] {
+  position: static;
+}
+[data-hydrogen=VARVERSION] [data-h2-position*="base(relative)"],
+[data-hydrogen=VARVERSION] [data-h2-position*="base(relative)"][data-h2-visibility] {
+  position: relative;
+}
+[data-hydrogen=VARVERSION] [data-h2-position*="base(fixed)"],
+[data-hydrogen=VARVERSION] [data-h2-position*="base(fixed)"][data-h2-visibility] {
+  position: fixed;
+}
+[data-hydrogen=VARVERSION] [data-h2-position*="base(absolute)"],
+[data-hydrogen=VARVERSION] [data-h2-position*="base(absolute)"][data-h2-visibility] {
+  position: absolute;
+}
+[data-hydrogen=VARVERSION] [data-h2-position*="base(sticky)"],
+[data-hydrogen=VARVERSION] [data-h2-position*="base(sticky)"][data-h2-visibility] {
+  position: sticky;
 }
 [data-hydrogen=VARVERSION] [data-h2-location*="base(all, none)"],
 [data-hydrogen=VARVERSION] [data-h2-location*="base(all, none)"][data-h2-visibility] {
@@ -9447,6 +9560,99 @@
 [data-hydrogen=VARVERSION] [data-h2-display*="small(list-item)"] {
   display: "list-item";
 }
+[data-hydrogen=VARVERSION] [data-h2-align-content*="small(center)"] {
+  align-content: center;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-content*="small(flex-end)"] {
+  align-content: flex-end;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-content*="small(flex-start)"] {
+  align-content: flex-start;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-content*="small(space-around)"] {
+  align-content: space-around;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-content*="small(space-between)"] {
+  align-content: space-between;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-content*="small(stretch)"] {
+  align-content: stretch;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-items*="small(baseline)"] {
+  align-items: baseline;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-items*="small(center)"] {
+  align-items: center;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-items*="small(flex-end)"] {
+  align-items: flex-end;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-items*="small(flex-start)"] {
+  align-items: flex-start;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-items*="small(stretch)"] {
+  align-items: stretch;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-self*="small(auto)"] {
+  align-self: auto;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-self*="small(baseline)"] {
+  align-self: baseline;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-self*="small(center)"] {
+  align-self: center;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-self*="small(inherit)"] {
+  align-self: inherit;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-self*="small(initial)"] {
+  align-self: initial;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-self*="small(flex-end)"] {
+  align-self: flex-end;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-self*="small(flex-start)"] {
+  align-self: flex-start;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-self*="small(stretch)"] {
+  align-self: stretch;
+}
+[data-hydrogen=VARVERSION] [data-h2-flex-direction*="small(column)"] {
+  flex-direction: column;
+}
+[data-hydrogen=VARVERSION] [data-h2-flex-direction*="small(column-reverse)"] {
+  flex-direction: column-reverse;
+}
+[data-hydrogen=VARVERSION] [data-h2-flex-direction*="small(row)"] {
+  flex-direction: row;
+}
+[data-hydrogen=VARVERSION] [data-h2-flex-direction*="small(row-reverse)"] {
+  flex-direction: row-reverse;
+}
+[data-hydrogen=VARVERSION] [data-h2-flex-wrap*="small(nowrap)"] {
+  flex-wrap: nowrap;
+}
+[data-hydrogen=VARVERSION] [data-h2-flex-wrap*="small(wrap)"] {
+  flex-wrap: wrap;
+}
+[data-hydrogen=VARVERSION] [data-h2-flex-wrap*="small(wrap-reverse)"] {
+  flex-wrap: wrap-reverse;
+}
+[data-hydrogen=VARVERSION] [data-h2-justify-content*="small(center)"] {
+  justify-content: center;
+}
+[data-hydrogen=VARVERSION] [data-h2-justify-content*="small(flex-end)"] {
+  justify-content: flex-end;
+}
+[data-hydrogen=VARVERSION] [data-h2-justify-content*="small(flex-start)"] {
+  justify-content: flex-start;
+}
+[data-hydrogen=VARVERSION] [data-h2-justify-content*="small(space-around)"] {
+  justify-content: space-around;
+}
+[data-hydrogen=VARVERSION] [data-h2-justify-content*="small(space-between)"] {
+  justify-content: space-between;
+}
 [data-hydrogen=VARVERSION] [data-h2-margin*="small(all, none)"] {
   margin: 0;
 }
@@ -9985,6 +10191,26 @@
 [data-hydrogen=VARVERSION] [data-h2-padding*="small(rl, largest)"] {
   padding-right: 2.44140625rem;
   padding-left: 2.44140625rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-position*="small(static)"],
+[data-hydrogen=VARVERSION] [data-h2-position*="small(static)"][data-h2-visibility] {
+  position: static;
+}
+[data-hydrogen=VARVERSION] [data-h2-position*="small(relative)"],
+[data-hydrogen=VARVERSION] [data-h2-position*="small(relative)"][data-h2-visibility] {
+  position: relative;
+}
+[data-hydrogen=VARVERSION] [data-h2-position*="small(fixed)"],
+[data-hydrogen=VARVERSION] [data-h2-position*="small(fixed)"][data-h2-visibility] {
+  position: fixed;
+}
+[data-hydrogen=VARVERSION] [data-h2-position*="small(absolute)"],
+[data-hydrogen=VARVERSION] [data-h2-position*="small(absolute)"][data-h2-visibility] {
+  position: absolute;
+}
+[data-hydrogen=VARVERSION] [data-h2-position*="small(sticky)"],
+[data-hydrogen=VARVERSION] [data-h2-position*="small(sticky)"][data-h2-visibility] {
+  position: sticky;
 }
 [data-hydrogen=VARVERSION] [data-h2-location*="small(all, none)"],
 [data-hydrogen=VARVERSION] [data-h2-location*="small(all, none)"][data-h2-visibility] {
@@ -11376,6 +11602,99 @@
 [data-hydrogen=VARVERSION] [data-h2-display*="medium(list-item)"] {
   display: "list-item";
 }
+[data-hydrogen=VARVERSION] [data-h2-align-content*="medium(center)"] {
+  align-content: center;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-content*="medium(flex-end)"] {
+  align-content: flex-end;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-content*="medium(flex-start)"] {
+  align-content: flex-start;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-content*="medium(space-around)"] {
+  align-content: space-around;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-content*="medium(space-between)"] {
+  align-content: space-between;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-content*="medium(stretch)"] {
+  align-content: stretch;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-items*="medium(baseline)"] {
+  align-items: baseline;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-items*="medium(center)"] {
+  align-items: center;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-items*="medium(flex-end)"] {
+  align-items: flex-end;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-items*="medium(flex-start)"] {
+  align-items: flex-start;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-items*="medium(stretch)"] {
+  align-items: stretch;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-self*="medium(auto)"] {
+  align-self: auto;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-self*="medium(baseline)"] {
+  align-self: baseline;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-self*="medium(center)"] {
+  align-self: center;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-self*="medium(inherit)"] {
+  align-self: inherit;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-self*="medium(initial)"] {
+  align-self: initial;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-self*="medium(flex-end)"] {
+  align-self: flex-end;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-self*="medium(flex-start)"] {
+  align-self: flex-start;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-self*="medium(stretch)"] {
+  align-self: stretch;
+}
+[data-hydrogen=VARVERSION] [data-h2-flex-direction*="medium(column)"] {
+  flex-direction: column;
+}
+[data-hydrogen=VARVERSION] [data-h2-flex-direction*="medium(column-reverse)"] {
+  flex-direction: column-reverse;
+}
+[data-hydrogen=VARVERSION] [data-h2-flex-direction*="medium(row)"] {
+  flex-direction: row;
+}
+[data-hydrogen=VARVERSION] [data-h2-flex-direction*="medium(row-reverse)"] {
+  flex-direction: row-reverse;
+}
+[data-hydrogen=VARVERSION] [data-h2-flex-wrap*="medium(nowrap)"] {
+  flex-wrap: nowrap;
+}
+[data-hydrogen=VARVERSION] [data-h2-flex-wrap*="medium(wrap)"] {
+  flex-wrap: wrap;
+}
+[data-hydrogen=VARVERSION] [data-h2-flex-wrap*="medium(wrap-reverse)"] {
+  flex-wrap: wrap-reverse;
+}
+[data-hydrogen=VARVERSION] [data-h2-justify-content*="medium(center)"] {
+  justify-content: center;
+}
+[data-hydrogen=VARVERSION] [data-h2-justify-content*="medium(flex-end)"] {
+  justify-content: flex-end;
+}
+[data-hydrogen=VARVERSION] [data-h2-justify-content*="medium(flex-start)"] {
+  justify-content: flex-start;
+}
+[data-hydrogen=VARVERSION] [data-h2-justify-content*="medium(space-around)"] {
+  justify-content: space-around;
+}
+[data-hydrogen=VARVERSION] [data-h2-justify-content*="medium(space-between)"] {
+  justify-content: space-between;
+}
 [data-hydrogen=VARVERSION] [data-h2-margin*="medium(all, none)"] {
   margin: 0;
 }
@@ -11914,6 +12233,26 @@
 [data-hydrogen=VARVERSION] [data-h2-padding*="medium(rl, largest)"] {
   padding-right: 2.44140625rem;
   padding-left: 2.44140625rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-position*="medium(static)"],
+[data-hydrogen=VARVERSION] [data-h2-position*="medium(static)"][data-h2-visibility] {
+  position: static;
+}
+[data-hydrogen=VARVERSION] [data-h2-position*="medium(relative)"],
+[data-hydrogen=VARVERSION] [data-h2-position*="medium(relative)"][data-h2-visibility] {
+  position: relative;
+}
+[data-hydrogen=VARVERSION] [data-h2-position*="medium(fixed)"],
+[data-hydrogen=VARVERSION] [data-h2-position*="medium(fixed)"][data-h2-visibility] {
+  position: fixed;
+}
+[data-hydrogen=VARVERSION] [data-h2-position*="medium(absolute)"],
+[data-hydrogen=VARVERSION] [data-h2-position*="medium(absolute)"][data-h2-visibility] {
+  position: absolute;
+}
+[data-hydrogen=VARVERSION] [data-h2-position*="medium(sticky)"],
+[data-hydrogen=VARVERSION] [data-h2-position*="medium(sticky)"][data-h2-visibility] {
+  position: sticky;
 }
 [data-hydrogen=VARVERSION] [data-h2-location*="medium(all, none)"],
 [data-hydrogen=VARVERSION] [data-h2-location*="medium(all, none)"][data-h2-visibility] {
@@ -13305,6 +13644,99 @@
 [data-hydrogen=VARVERSION] [data-h2-display*="large(list-item)"] {
   display: "list-item";
 }
+[data-hydrogen=VARVERSION] [data-h2-align-content*="large(center)"] {
+  align-content: center;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-content*="large(flex-end)"] {
+  align-content: flex-end;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-content*="large(flex-start)"] {
+  align-content: flex-start;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-content*="large(space-around)"] {
+  align-content: space-around;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-content*="large(space-between)"] {
+  align-content: space-between;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-content*="large(stretch)"] {
+  align-content: stretch;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-items*="large(baseline)"] {
+  align-items: baseline;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-items*="large(center)"] {
+  align-items: center;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-items*="large(flex-end)"] {
+  align-items: flex-end;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-items*="large(flex-start)"] {
+  align-items: flex-start;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-items*="large(stretch)"] {
+  align-items: stretch;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-self*="large(auto)"] {
+  align-self: auto;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-self*="large(baseline)"] {
+  align-self: baseline;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-self*="large(center)"] {
+  align-self: center;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-self*="large(inherit)"] {
+  align-self: inherit;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-self*="large(initial)"] {
+  align-self: initial;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-self*="large(flex-end)"] {
+  align-self: flex-end;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-self*="large(flex-start)"] {
+  align-self: flex-start;
+}
+[data-hydrogen=VARVERSION] [data-h2-align-self*="large(stretch)"] {
+  align-self: stretch;
+}
+[data-hydrogen=VARVERSION] [data-h2-flex-direction*="large(column)"] {
+  flex-direction: column;
+}
+[data-hydrogen=VARVERSION] [data-h2-flex-direction*="large(column-reverse)"] {
+  flex-direction: column-reverse;
+}
+[data-hydrogen=VARVERSION] [data-h2-flex-direction*="large(row)"] {
+  flex-direction: row;
+}
+[data-hydrogen=VARVERSION] [data-h2-flex-direction*="large(row-reverse)"] {
+  flex-direction: row-reverse;
+}
+[data-hydrogen=VARVERSION] [data-h2-flex-wrap*="large(nowrap)"] {
+  flex-wrap: nowrap;
+}
+[data-hydrogen=VARVERSION] [data-h2-flex-wrap*="large(wrap)"] {
+  flex-wrap: wrap;
+}
+[data-hydrogen=VARVERSION] [data-h2-flex-wrap*="large(wrap-reverse)"] {
+  flex-wrap: wrap-reverse;
+}
+[data-hydrogen=VARVERSION] [data-h2-justify-content*="large(center)"] {
+  justify-content: center;
+}
+[data-hydrogen=VARVERSION] [data-h2-justify-content*="large(flex-end)"] {
+  justify-content: flex-end;
+}
+[data-hydrogen=VARVERSION] [data-h2-justify-content*="large(flex-start)"] {
+  justify-content: flex-start;
+}
+[data-hydrogen=VARVERSION] [data-h2-justify-content*="large(space-around)"] {
+  justify-content: space-around;
+}
+[data-hydrogen=VARVERSION] [data-h2-justify-content*="large(space-between)"] {
+  justify-content: space-between;
+}
 [data-hydrogen=VARVERSION] [data-h2-margin*="large(all, none)"] {
   margin: 0;
 }
@@ -13843,6 +14275,26 @@
 [data-hydrogen=VARVERSION] [data-h2-padding*="large(rl, largest)"] {
   padding-right: 2.44140625rem;
   padding-left: 2.44140625rem;
+}
+[data-hydrogen=VARVERSION] [data-h2-position*="large(static)"],
+[data-hydrogen=VARVERSION] [data-h2-position*="large(static)"][data-h2-visibility] {
+  position: static;
+}
+[data-hydrogen=VARVERSION] [data-h2-position*="large(relative)"],
+[data-hydrogen=VARVERSION] [data-h2-position*="large(relative)"][data-h2-visibility] {
+  position: relative;
+}
+[data-hydrogen=VARVERSION] [data-h2-position*="large(fixed)"],
+[data-hydrogen=VARVERSION] [data-h2-position*="large(fixed)"][data-h2-visibility] {
+  position: fixed;
+}
+[data-hydrogen=VARVERSION] [data-h2-position*="large(absolute)"],
+[data-hydrogen=VARVERSION] [data-h2-position*="large(absolute)"][data-h2-visibility] {
+  position: absolute;
+}
+[data-hydrogen=VARVERSION] [data-h2-position*="large(sticky)"],
+[data-hydrogen=VARVERSION] [data-h2-position*="large(sticky)"][data-h2-visibility] {
+  position: sticky;
 }
 [data-hydrogen=VARVERSION] [data-h2-location*="large(all, none)"],
 [data-hydrogen=VARVERSION] [data-h2-location*="large(all, none)"][data-h2-visibility] {

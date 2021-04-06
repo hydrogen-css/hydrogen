@@ -40,11 +40,11 @@ $h2-map-display: (
 );
 
 $h2-map-position: (
-  "static"
-  "relative"
-  "fixed"
-  "absolute"
-  "sticky"
+  "static": static,
+  "relative": relative,
+  "fixed": fixed,
+  "absolute": absolute,
+  "sticky": sticky
 );
 
 $h2-map-sides: (
@@ -101,6 +101,80 @@ $h2-map-sides: (
     @each $displayKey, $displayValue in $h2-map-display {
       [data-h2-display*="#{$mediaKey}(#{$displayKey})"] {
         display: $displayValue;
+      }
+    }
+    // Flex Properties
+    $h2-map-align-content: (
+      "center": center,
+      "flex-end": flex-end,
+      "flex-start": flex-start,
+      "space-around": space-around,
+      "space-between": space-between,
+      "stretch": stretch
+    );
+    @each $alignKey, $alignValue in $h2-map-align-content {
+      [data-h2-align-content*="#{$mediaKey}(#{$alignKey})"] {
+        align-content: $alignValue;
+      }
+    }
+    $h2-map-align-items: (
+      "baseline": baseline,
+      "center": center,
+      "flex-end": flex-end,
+      "flex-start": flex-start,
+      "stretch": stretch
+    );
+    @each $alignKey, $alignValue in $h2-map-align-items {
+      [data-h2-align-items*="#{$mediaKey}(#{$alignKey})"] {
+        align-items: $alignValue;
+      }
+    }
+    $h2-map-align-self: (
+      "auto": auto,
+      "baseline": baseline,
+      "center": center,
+      "inherit": inherit,
+      "initial": initial,
+      "flex-end": flex-end,
+      "flex-start": flex-start,
+      "stretch": stretch
+    );
+    @each $alignKey, $alignValue in $h2-map-align-self {
+      [data-h2-align-self*="#{$mediaKey}(#{$alignKey})"] {
+        align-self: $alignValue;
+      }
+    }
+    $h2-map-flex-direction: (
+      "column": column,
+      "column-reverse": column-reverse,
+      "row": row,
+      "row-reverse": row-reverse
+    );
+    @each $directionKey, $directionValue in $h2-map-flex-direction {
+      [data-h2-flex-direction*="#{$mediaKey}(#{$directionKey})"] {
+        flex-direction: $directionValue;
+      }
+    }
+    $h2-map-flex-wrap: (
+      "nowrap": nowrap,
+      "wrap": wrap,
+      "wrap-reverse": wrap-reverse
+    );
+    @each $wrapKey, $wrapValue in $h2-map-flex-wrap {
+      [data-h2-flex-wrap*="#{$mediaKey}(#{$wrapKey})"] {
+        flex-wrap: $wrapValue;
+      }
+    }
+    $h2-map-justify-content: (
+      "center": center,
+      "flex-end": flex-end,
+      "flex-start": flex-start,
+      "space-around": space-around,
+      "space-between": space-between
+    );
+    @each $justifyKey, $justifyValue in $h2-map-justify-content {
+      [data-h2-justify-content*="#{$mediaKey}(#{$justifyKey})"] {
+        justify-content: $justifyValue;
       }
     }
     // Margins
