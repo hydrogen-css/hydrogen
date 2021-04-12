@@ -124,6 +124,29 @@ function customColor() {
     .pipe(dest(config.styles.path + '/hydrogen/maps'));
 }
 
+// Border Weights
+var borderWeightsConfigSource;
+var borderWeightMap = '$h2-map-border-weight: (';
+var borderWeightMapStringStart = '';
+var borderWeightMapStringContent = '';
+var borderWeightMapStringEnd = ');';
+if (config.borderWeights != null && config.borderWeights != undefined && config.borderWeights.length > 0) {
+  borderWeightsConfigSource = config.borderWeights;
+} else {
+  borderWeightsConfigSource = defaults.borderWeights;
+}
+borderWeightsConfigSource.forEach(function(borderWeights) {
+  var borderWeightsString = '"' + borderWeights.name + '": ' + borderWeights.weight + ',';
+  borderWeightMapStringContent = borderWeightMapStringContent.concat(borderWeightsString);
+});
+borderWeightMap = borderWeightMap.concat(borderWeightMapStringStart).concat(borderWeightMapStringContent).concat(borderWeightMapStringEnd);
+
+function buildBorderWeights() {
+  return src('src/styles/maps/_map-border-weight.scss')
+    .pipe(footer(borderWeightMap))
+    .pipe(dest(config.styles.path + '/hydrogen/maps'));
+}
+
 // Containers
 var containersConfigSource;
 var containerMap = '$h2-map-containers: ("full": "none",';
@@ -197,6 +220,51 @@ function enableFlexgrid(done) {
   if (flexgridEnabled == true) {
     return src(config.styles.path + '/hydrogen/utility.scss')
       .pipe(replace('// @use "utilities/utility-flex-grid";', '@use "utilities/utility-flex-grid";'))
+      .pipe(dest(config.styles.path + '/hydrogen'));
+  } else {
+    done();
+  }
+}
+
+// Font Family
+var fontFace = "";
+var fontFamilyConfigSource;
+var fontFamilyMap = '$h2-map-font-families: (';
+var fontFamilyMapStringStart = '';
+var fontFamilyMapStringContent = '';
+var fontFamilyMapStringEnd = ');';
+if (config.fonts != null && config.fonts != undefined && config.fonts.length > 0) {
+  fontFamilyConfigSource = config.fonts;
+  // Font Face Styles
+  fontFamilyConfigSource.forEach(function(fontFamily) {
+    if (fontFamily.loadType == 'font-face' || fontFamily.loadType == 'fontFace') {
+      var fontFaceCSSStringStart = '@font-face {';
+      var fontFaceCSSStringContent = 'font-family: ' + fontFamily.name + '; src: url(' + fontFamily.url + ');';
+      var fontFaceCSSStringEnd = '}';
+      fontFace = fontFace.concat(fontFaceCSSStringStart).concat(fontFaceCSSStringContent).concat(fontFaceCSSStringEnd);
+    }
+  });
+} else {
+  fontFamilyConfigSource = defaults.fonts;
+}
+// Font Family Generation
+fontFamilyConfigSource.forEach(function(fontFamily) {
+  var fontFamilyString = '"' + fontFamily.name + '": "' + fontFamily.value + '",';
+  fontFamilyMapStringContent = fontFamilyMapStringContent.concat(fontFamilyString);
+});
+fontFamilyMap = fontFamilyMap.concat(fontFamilyMapStringStart).concat(fontFamilyMapStringContent).concat(fontFamilyMapStringEnd);
+
+function buildfontFamily() {
+  return src('src/styles/maps/_map-font-families.scss')
+    .pipe(footer(fontFamilyMap))
+    .pipe(dest(config.styles.path + '/hydrogen/maps'));
+}
+
+// Font Scale
+function modifyFontScale(done) {
+  if (config.fontScale != null && config.fontScale != undefined && config.fontScale > 0) {
+    return src(config.styles.path + '/hydrogen/utility.scss')
+      .pipe(replace('$h2-font-scale: 1.333;', '$h2-font-scale: ' + config.fontScale + ';'))
       .pipe(dest(config.styles.path + '/hydrogen'));
   } else {
     done();
@@ -395,7 +463,7 @@ function cleanCSS(done) {
   }
     // console.log(queries);
   // Set up a string variable for our final CSS file.
-  var finalCSS = "" + hydrogenCore;
+  var finalCSS = "" + fontFace + hydrogenCore;
   // We'll then have to parse through each one and break things apart by media query, and add the * selector...
   // e.g. data-h2-bg-color="b(red) m(yellow)" needs to become [data-h2-bg-color*="b(red)"] and [data-h2-bg-color*="m(yellow)"]
   var usedAttributes = markup.match(dataRegex);
@@ -527,4 +595,4 @@ function deleteCache(done) {
   done();
 }
 
-exports.test = series(cleanCache, createHydrogen, cacheHydrogenCore, cacheHydrogenUtility, customMedia, customColor, buildContainers, moveFlexgridCore, enableFlexgridCore, moveFlexgrid, enableFlexgrid, customGradient, buildRadius, customShadow, buildwhitespace, compileCore, compileUtility, compressCore, preCleanCompress, getUserMarkup, cleanCSS, postCleanCompress, deleteCache);
+exports.test = series(cleanCache, createHydrogen, cacheHydrogenCore, cacheHydrogenUtility, customMedia, customColor, buildBorderWeights, buildContainers, moveFlexgridCore, enableFlexgridCore, moveFlexgrid, enableFlexgrid, buildfontFamily, modifyFontScale, customGradient, buildRadius, customShadow, buildwhitespace, compileCore, compileUtility, compressCore, preCleanCompress, getUserMarkup, cleanCSS, postCleanCompress, deleteCache);

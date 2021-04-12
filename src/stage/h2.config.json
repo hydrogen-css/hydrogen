@@ -9,6 +9,12 @@
     "type": "html"
   },
   "media": [],
+  "borderWeights": [
+    {
+      "name": "thing",
+      "weight": "1px"
+    }
+  ],
   "colors": [
     {
       "name": "black",
@@ -31,6 +37,15 @@
     "enabled": true,
     "columns": 6
   },
+  "fonts": [
+    {
+      "name": "testFont",
+      "loadType": "font-face",
+      "value": "'testFont', sans-serif",
+      "url": "google.com"
+    }
+  ],
+  "fontScale": "1.33",
   "gradients": [
     {
       "type": "radial",

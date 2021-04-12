@@ -8,6 +8,20 @@
     "path": "path/to/markup/folder",
     "type": "html"
   },
+  "borderWeights": [
+    {
+      "name": "small",
+      "weight": "1px"
+    },
+    {
+      "name": "medium",
+      "weight": ".5rem"
+    },
+    {
+      "name": "large",
+      "weight": "1rem"
+    }
+  ],
   "colors": [
     {
       "name": "black",
@@ -53,6 +67,33 @@
     "enabled": false,
     "columns": 12
   },
+  "fonts": [
+    {
+      "name": "sans",
+      "loadType": "system",
+      "value": "sans-serif",
+      "url": null
+    },
+    {
+      "name": "serif",
+      "loadType": "system",
+      "value": "serif",
+      "url": null
+    },{
+      "name": "script",
+      "loadType": "system",
+      "value": "script",
+      "url": null
+    },
+    {
+      "name": "mono",
+      "loadType": "system",
+      "value": "monospace",
+      "url": ""
+    }
+  ],
+  "fontBaseSize": "112.5%",
+  "fontScale": "1.25",
   "gradients": [
     {
       "type": "radial",
@@ -131,7 +172,5 @@
       "value": "0 .6rem .8rem rgba(0, 0, 0, .3)"
     }
   ],
-  "whitespaceScale": "1.5",
-  "typeBaseSize": "112.5%",
-  "typeScale": "1.25"
+  "whitespaceScale": "1.5"
 }
