@@ -13,7 +13,7 @@
 // @use "utilities/utility-flex-grid";
 
 // Font Variables
-$h2-font-scale: 1.333;
+$h2-font-scale: $H2FONTSCALE;
 $h2-font-size-default: 1rem;
 $h2-font-size-caption: calc(#{$h2-font-size-default}/#{$h2-font-scale});
 $h2-font-size-h6: $h2-font-size-default;
@@ -107,10 +107,6 @@ $h2-map-sides: (
       "center": 0 auto,
       "right": auto 0 auto auto
     );
-    [data-h2-container] {
-      margin: 0 auto;
-      width: 90%;
-    }
     @each $containerKey, $containerValue in containerMap.$h2-map-containers {
       @each $alignmentKey, $alignmentValue in $h2-map-container-alignment {
         [data-h2-container*="#{$mediaKey}(#{$alignmentKey}, #{$containerKey})"] {

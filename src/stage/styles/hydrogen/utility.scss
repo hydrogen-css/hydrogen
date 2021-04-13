@@ -107,10 +107,6 @@ $h2-map-sides: (
       "center": 0 auto,
       "right": auto 0 auto auto
     );
-    [data-h2-container] {
-      margin: 0 auto;
-      width: 90%;
-    }
     @each $containerKey, $containerValue in containerMap.$h2-map-containers {
       @each $alignmentKey, $alignmentValue in $h2-map-container-alignment {
         [data-h2-container*="#{$mediaKey}(#{$alignmentKey}, #{$containerKey})"] {

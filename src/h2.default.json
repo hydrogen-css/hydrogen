@@ -1,6 +1,6 @@
 {
-  "debug": false,
-  "environment": "production",
+  "debug": true,
+  "env": "prod",
   "styles": {
     "path": "path/to/css/folder"
   },

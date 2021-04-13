@@ -11711,10 +11711,6 @@
   border-right-width: 1px;
   border-left-width: 1px;
 }
-[data-hydrogen=VARVERSION] [data-h2-container] {
-  margin: 0 auto;
-  width: 90%;
-}
 [data-hydrogen=VARVERSION] [data-h2-container*="base(left, full)"] {
   margin: auto auto auto 0;
   max-width: none;
@@ -18240,10 +18236,6 @@
   border-left-style: dashed;
   border-right-width: 1px;
   border-left-width: 1px;
-}
-[data-hydrogen=VARVERSION] [data-h2-container] {
-  margin: 0 auto;
-  width: 90%;
 }
 [data-hydrogen=VARVERSION] [data-h2-container*="small(left, full)"] {
   margin: auto auto auto 0;
@@ -24771,10 +24763,6 @@
   border-right-width: 1px;
   border-left-width: 1px;
 }
-[data-hydrogen=VARVERSION] [data-h2-container] {
-  margin: 0 auto;
-  width: 90%;
-}
 [data-hydrogen=VARVERSION] [data-h2-container*="medium(left, full)"] {
   margin: auto auto auto 0;
   max-width: none;
@@ -31300,10 +31288,6 @@
   border-left-style: dashed;
   border-right-width: 1px;
   border-left-width: 1px;
-}
-[data-hydrogen=VARVERSION] [data-h2-container] {
-  margin: 0 auto;
-  width: 90%;
 }
 [data-hydrogen=VARVERSION] [data-h2-container*="large(left, full)"] {
   margin: auto auto auto 0;

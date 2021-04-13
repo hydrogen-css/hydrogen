@@ -1,6 +1,5 @@
 {
-  "debug": true,
-  "environment": "development",
+  "debug": false,
   "styles": {
     "path": "./src/stage/styles"
   },
@@ -46,6 +45,7 @@
     }
   ],
   "fontScale": "1.33",
+  "fontBaseSize": "150%",
   "gradients": [
     {
       "type": "radial",
