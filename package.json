@@ -11,9 +11,8 @@
   ],
   "main": "npm.js",
   "scripts": {
-    "dev": "npx gulp dev",
-    "build": "npx gulp build",
-    "prepublishOnly": "npx gulp build"
+    "hydrogen-watch": "npx gulp watch",
+    "hydrogen-compile": "npx gulp compile"
   },
   "repository": {
     "type": "git",

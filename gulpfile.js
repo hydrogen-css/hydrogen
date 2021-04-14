@@ -24,9 +24,9 @@ function devLoadHydrogenConfig(done) {
   defaults = undefined;
   config = undefined;
   // Import the default JSON config file.
-  defaults = JSON.parse(fs.readFileSync('src/h2.default.json'));
+  defaults = JSON.parse(fs.readFileSync('src/hydrogen.default.json'));
   // Import the user's JSON config file.
-  config = JSON.parse(fs.readFileSync('./src/stage/h2.config.json'));
+  config = JSON.parse(fs.readFileSync('./src/stage/hydrogen.config.json'));
   done();
 }
 
@@ -35,15 +35,15 @@ function loadHydrogenConfig(done) {
   defaults = undefined;
   config = undefined;
   // Import the default JSON config file.
-  defaults = JSON.parse(fs.readFileSync('src/h2.default.json'));
+  defaults = JSON.parse(fs.readFileSync('src/hydrogen.default.json'));
   console.log("Hydrogen: defaults loaded!");
   // Check to see if the user has a config file and load it.
-  if (fs.existsSync('./h2.config.json') == false) {
-    console.log('Hydrogen: you do not have a h2.config.json file in your project root. Please create one to continue.');
+  if (fs.existsSync('./hydrogen.config.json') == false) {
+    console.log('Hydrogen: you do not have a hydrogen.config.json file in your project root. Please create one to continue.');
     return false;
   } else {
     // Import the user's JSON config file.
-    config = JSON.parse(fs.readFileSync('./h2.config.json'));
+    config = JSON.parse(fs.readFileSync('./hydrogen.config.json'));
   }
   done();
 }
@@ -767,7 +767,7 @@ exports.devDev = series(devWatchSeries);
 
 // Watch the config files for changes.
 function devWatchConfig() {
-  watch(['./src/stage/h2.config.json'], series(devWatchSeries));
+  watch(['./src/stage/hydrogen.config.json'], series(devWatchSeries));
 }
 
 exports.devWatch = series(
@@ -794,7 +794,7 @@ const watchSeries = series(
 
 // Watch the config files for changes.
 function watchConfig() {
-  watch(['.h2.config.json'], series(watchSeries));
+  watch(['./hydrogen.config.json'], series(watchSeries));
 }
 
 exports.dev = series(watchSeries);
