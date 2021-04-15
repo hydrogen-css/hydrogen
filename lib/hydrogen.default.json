@@ -1,12 +1,8 @@
 {
   "debug": true,
-  "env": "prod",
-  "styles": {
-    "path": "path/to/css/folder"
-  },
-  "markup": {
-    "path": "path/to/markup/folder",
-    "type": "html"
+  "folders": {
+    "markup": "path/to/markup/folder",
+    "styles": "path/to/styles/folder"
   },
   "borderWeights": [
     {

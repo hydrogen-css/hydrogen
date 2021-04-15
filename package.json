@@ -1,6 +1,6 @@
 {
   "name": "@hydrogen-design-system/hydrogen.css",
-  "version": "0.0.13",
+  "version": "0.0.25",
   "description": "A new iteration of Hydrogen's dynamic CSS utility tool.",
   "keywords": [
     "Hydrogen",
@@ -38,6 +38,7 @@
     "autoprefixer": "^9.8.6",
     "browser-sync": "^2.26.14",
     "browserslist": "^4.16.4",
+    "colors": "^1.4.0",
     "cssnano": "^4.1.11",
     "cssnano-preset-lite": "^1.0.1",
     "del": "^3.0.0",
@@ -51,6 +52,7 @@
     "gulp-sass": "^4.1.0",
     "merge-stream": "^2.0.0",
     "normalize.css": "^8.0.1",
+    "prompt": "^1.1.0",
     "sass": "^1.32.8",
     "vinyl-source-stream": "^2.0.0",
     "yargs": "^15.4.0"

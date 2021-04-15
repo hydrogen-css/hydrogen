@@ -1,11 +1,8 @@
 {
   "debug": false,
-  "styles": {
-    "path": "src/stage/styles"
-  },
-  "markup": {
-    "path": "src/stage/markup",
-    "type": "html"
+  "folders": {
+    "markup": "src/stage/markup",
+    "styles": "src/stage/styles"
   },
   "media": [],
   "borderWeights": [
