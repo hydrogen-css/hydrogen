@@ -1,6 +1,6 @@
 {
-  "name": "hydrogen.css",
-  "version": "0.0.1",
+  "name": "@hydrogen-design-system/hydrogen.css",
+  "version": "0.0.13",
   "description": "A new iteration of Hydrogen's dynamic CSS utility tool.",
   "keywords": [
     "Hydrogen",
@@ -9,7 +9,17 @@
     "component",
     "library"
   ],
-  "main": "npm.js",
+  "main": "./bin/index.js",
+  "bin": {
+    "hydrogen-init": "./bin/init.js",
+    "hydrogen-watch": "./bin/watch.js",
+    "hydrogen-compile": "./bin/compile.js",
+    "hydrogen-build": "./bin/build.js",
+    "h2-init": "./bin/init.js",
+    "h2-watch": "./bin/watch.js",
+    "h2-compile": "./bin/compile.js",
+    "h2-build": "./bin/build.js"
+  },
   "scripts": {
     "hydrogen-watch": "npx gulp watch",
     "hydrogen-compile": "npx gulp compile"

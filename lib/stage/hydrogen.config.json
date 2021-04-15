@@ -1,10 +1,10 @@
 {
   "debug": false,
   "styles": {
-    "path": "./src/stage/styles"
+    "path": "src/stage/styles"
   },
   "markup": {
-    "path": "./src/stage/markup",
+    "path": "src/stage/markup",
     "type": "html"
   },
   "media": [],
