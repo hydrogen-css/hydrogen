@@ -1,4 +1,4 @@
-[data-hydrogen=VARVERSION] [data-h2-flex-grid] > [data-h2-flex-item] {
+[data-hydrogen] [data-h2-flex-grid] > [data-h2-flex-item] {
   flex: 0 0 100%;
   max-width: 100%;
   min-width: 0;
@@ -8,8 +8,8 @@ html {
   font-size: 150%;
 }
 
-[data-hydrogen=VARVERSION] body,
-body[data-hydrogen=VARVERSION] {
+[data-hydrogen] body,
+body[data-hydrogen] {
   margin: 0;
   max-width: 100%;
   min-height: 100vh;
@@ -17,66 +17,66 @@ body[data-hydrogen=VARVERSION] {
   width: 100%;
 }
 
-[data-hydrogen=VARVERSION] {
+[data-hydrogen] {
   box-sizing: border-box;
 }
-[data-hydrogen=VARVERSION] * {
+[data-hydrogen] * {
   box-sizing: border-box;
 }
-[data-hydrogen=VARVERSION] blockquote,
-[data-hydrogen=VARVERSION] dl,
-[data-hydrogen=VARVERSION] fieldset,
-[data-hydrogen=VARVERSION] figure {
+[data-hydrogen] blockquote,
+[data-hydrogen] dl,
+[data-hydrogen] fieldset,
+[data-hydrogen] figure {
   margin: 0;
 }
-[data-hydrogen=VARVERSION] img,
-[data-hydrogen=VARVERSION] iframe {
+[data-hydrogen] img,
+[data-hydrogen] iframe {
   max-width: 100%;
 }
-[data-hydrogen=VARVERSION] h1, [data-hydrogen=VARVERSION] h2, [data-hydrogen=VARVERSION] h3, [data-hydrogen=VARVERSION] h4, [data-hydrogen=VARVERSION] h5, [data-hydrogen=VARVERSION] h6, [data-hydrogen=VARVERSION] p {
+[data-hydrogen] h1, [data-hydrogen] h2, [data-hydrogen] h3, [data-hydrogen] h4, [data-hydrogen] h5, [data-hydrogen] h6, [data-hydrogen] p {
   font-weight: normal;
   margin: 0;
 }
-[data-hydrogen=VARVERSION] h1 {
+[data-hydrogen] h1 {
   font-size: calc(calc(calc(calc(calc(1rem*1.33)*1.33)*1.33)*1.33)*1.33);
 }
-[data-hydrogen=VARVERSION] h2 {
+[data-hydrogen] h2 {
   font-size: calc(calc(calc(calc(1rem*1.33)*1.33)*1.33)*1.33);
 }
-[data-hydrogen=VARVERSION] h3 {
+[data-hydrogen] h3 {
   font-size: calc(calc(calc(1rem*1.33)*1.33)*1.33);
 }
-[data-hydrogen=VARVERSION] h4 {
+[data-hydrogen] h4 {
   font-size: calc(calc(1rem*1.33)*1.33);
 }
-[data-hydrogen=VARVERSION] h5 {
+[data-hydrogen] h5 {
   font-size: calc(1rem*1.33);
 }
-[data-hydrogen=VARVERSION] h6 {
+[data-hydrogen] h6 {
   font-size: 1rem;
 }
-[data-hydrogen=VARVERSION] p, [data-hydrogen=VARVERSION] div {
+[data-hydrogen] p, [data-hydrogen] div {
   font-size: 1rem;
 }
-[data-hydrogen=VARVERSION] span {
+[data-hydrogen] span {
   color: inherit;
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
 }
-[data-hydrogen=VARVERSION] em {
+[data-hydrogen] em {
   color: inherit;
   font-family: inherit;
   font-size: inherit;
   font-style: italic;
 }
-[data-hydrogen=VARVERSION] strong {
+[data-hydrogen] strong {
   color: inherit;
   font-family: inherit;
   font-size: inherit;
   font-weight: 600;
 }
-[data-hydrogen=VARVERSION] a {
+[data-hydrogen] a {
   color: inherit;
   font-family: inherit;
   font-size: inherit;
@@ -84,21 +84,21 @@ body[data-hydrogen=VARVERSION] {
   text-decoration: underline;
   transition: color 0.2s ease;
 }
-[data-hydrogen=VARVERSION] ul,
-[data-hydrogen=VARVERSION] ol {
+[data-hydrogen] ul,
+[data-hydrogen] ol {
   margin: 0;
 }
-[data-hydrogen=VARVERSION] ul li,
-[data-hydrogen=VARVERSION] ol li {
+[data-hydrogen] ul li,
+[data-hydrogen] ol li {
   color: inherit;
   font-family: inherit;
   font-size: inherit;
 }
-[data-hydrogen=VARVERSION] ul li:last-child,
-[data-hydrogen=VARVERSION] ol li:last-child {
+[data-hydrogen] ul li:last-child,
+[data-hydrogen] ol li:last-child {
   margin-bottom: 0;
 }
-[data-hydrogen=VARVERSION] [data-h2-container] {
+[data-hydrogen] [data-h2-container] {
   margin: 0 auto;
   width: 90%;
 }

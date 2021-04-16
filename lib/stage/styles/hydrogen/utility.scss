@@ -36,7 +36,7 @@ $h2-map-sides: (
   "rl" : ""
 );
 
-[data-hydrogen="VARVERSION"] {
+[data-hydrogen] {
   @each $mediaKey, $mediaValue in mediaMap.$h2-map-media {
     // Background Color
       // [MODIFIER]COLOR[OPACITY]

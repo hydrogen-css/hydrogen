@@ -1,6 +1,6 @@
 @use "../maps/map-media" as mediaMap;
 
-[data-hydrogen="VARVERSION"] {
+[data-hydrogen] {
   [data-h2-flex-grid] >[data-h2-flex-item] {
     flex: 0 0 100%;
     max-width: 100%;

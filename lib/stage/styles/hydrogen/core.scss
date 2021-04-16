@@ -15,8 +15,8 @@ html {
   font-size: $h2-font-base-size;
 }
 
-[data-hydrogen="VARVERSION"] body,
-body[data-hydrogen="VARVERSION"] {
+[data-hydrogen] body,
+body[data-hydrogen] {
   margin: 0; // Resets the default 8px value.
   max-width: 100%;
   min-height: 100vh;
@@ -24,7 +24,7 @@ body[data-hydrogen="VARVERSION"] {
   width: 100%;
 }
 
-[data-hydrogen="VARVERSION"] {
+[data-hydrogen] {
   box-sizing: border-box;
   * {
     box-sizing: border-box;

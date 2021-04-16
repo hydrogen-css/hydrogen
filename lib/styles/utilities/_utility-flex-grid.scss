@@ -23,7 +23,7 @@ $h2-map-grid-padding: (
 
 $h2GridColumns: 12;
 
-[data-hydrogen="VARVERSION"] {
+[data-hydrogen] {
   @each $mediaKey, $mediaValue in mediaMap.$h2-map-media {
     @each $alignmentKey, $alignmentValue in $h2-map-grid-alignment {
       @each $expansionKey, $expansionValue in $h2-map-grid-expansion {

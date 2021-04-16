@@ -1,8 +1,8 @@
 {
   "debug": false,
   "folders": {
-    "markup": "src/stage/markup",
-    "styles": "src/stage/styles"
+    "markup": "lib/stage/markup",
+    "styles": "lib/stage/styles"
   },
   "media": [],
   "borderWeights": [
