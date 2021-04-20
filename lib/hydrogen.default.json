@@ -1,5 +1,6 @@
 {
   "debug": true,
+  "mediaWarnings": true,
   "folders": {
     "markup": "path/to/markup/folder",
     "styles": "path/to/styles/folder"

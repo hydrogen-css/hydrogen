@@ -67,6 +67,46 @@
     </div>
   </body>
 </html>
+{% include attribute.html 
+  type="child"
+  name="Flex Grid Item"
+  syntax="data-h2-flex-item=\"MEDIA(XofY)\"" 
+  example="<div data-h2-flex-grid='base(top, expanded, flush, medium)'>
+    <div data-h2-flex-item='base(1of1) medium(1of3)'>
+      <div data-h2-bg-color='base(theme-1)' data-h2-padding='base(all, large)'></div>
+    </div>
+    <div data-h2-flex-item='base(1of1) medium(1of3)'>
+      <div data-h2-bg-color='base(theme-1)' data-h2-padding='base(all, large)'></div>
+    </div>
+    <div data-h2-flex-item='base(1of1) medium(1of3)'>
+      <div data-h2-bg-color='base(theme-1)' data-h2-padding='base(all, large)'></div>
+    </div>
+    <div data-h2-flex-item='base(1of1) medium(1of8)'>
+      <div data-h2-bg-color='base(theme-2)' data-h2-padding='base(all, large)'></div>
+    </div>
+    <div data-h2-flex-item='base(1of1) medium(1of8)'>
+      <div data-h2-bg-color='base(theme-2)' data-h2-padding='base(all, large)'></div>
+    </div>
+    <div data-h2-flex-item='base(1of1) medium(1of8)'>
+      <div data-h2-bg-color='base(theme-2)' data-h2-padding='base(all, large)'></div>
+    </div>
+    <div data-h2-flex-item='base(1of1) medium(1of8)'>
+      <div data-h2-bg-color='base(theme-2)' data-h2-padding='base(all, large)'></div>
+    </div>
+    <div data-h2-flex-item='base(1of1) medium(1of8)'>
+      <div data-h2-bg-color='base(theme-2)' data-h2-padding='base(all, large)'></div>
+    </div>
+    <div data-h2-flex-item='base(1of1) medium(1of8)'>
+      <div data-h2-bg-color='base(theme-2)' data-h2-padding='base(all, large)'></div>
+    </div>
+    <div data-h2-flex-item='base(1of1) medium(1of8)'>
+      <div data-h2-bg-color='base(theme-2)' data-h2-padding='base(all, large)'></div>
+    </div>
+    <div data-h2-flex-item='base(1of1) medium(1of8)'>
+      <div data-h2-bg-color='base(theme-2)' data-h2-padding='base(all, large)'></div>
+    </div>
+  </div>"
+%}
 import * as React from "react";
 import {
   h2DialogResizeOnViewport,

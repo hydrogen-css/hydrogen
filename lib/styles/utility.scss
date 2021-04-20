@@ -24,16 +24,17 @@ $h2-font-size-h2: calc(#{$h2-font-size-h3}*#{$h2-font-scale});
 $h2-font-size-h1: calc(#{$h2-font-size-h2}*#{$h2-font-scale});
 
 $h2-map-sides: (
-  // Note that tb and rl are for backwards compatibility purposes and are deprecated.
   "all": "",
   "top": "-top",
   "right": "-right",
   "bottom": "-bottom",
   "left": "-left",
+  "top-right": "",
   "top-bottom": "",
-  "tb": "",
-  "right-left": "",
-  "rl" : ""
+  "top-left": "",
+  "bottom-right": "",
+  "bottom-left": "",
+  "right-left": ""
 );
 
 [data-hydrogen] {
@@ -73,24 +74,49 @@ $h2-map-sides: (
                   border-color: $colorValue;
                   border-style: $styleValue;
                   border-width: $weightValue;
-                }
-                @else if $sideKey == "tb" {
+                } @else if $sideKey == "top-bottom" or $sideKey == "tb" {
                   border-top-color: $colorValue;
                   border-bottom-color: $colorValue;
                   border-top-style: $styleValue;
                   border-bottom-style: $styleValue;
                   border-top-width: $weightValue;
                   border-bottom-width: $weightValue;
-                }
-                @else if $sideKey == "rl" {
+                } @else if $sideKey == "right-left" or $sideKey == "rl" {
                   border-right-color: $colorValue;
                   border-left-color: $colorValue;
                   border-right-style: $styleValue;
                   border-left-style: $styleValue;
                   border-right-width: $weightValue;
                   border-left-width: $weightValue;
-                }
-                @else {
+                } @else if $sideKey == "top-right" {
+                  border-right-color: $colorValue;
+                  border-top-color: $colorValue;
+                  border-right-style: $styleValue;
+                  border-top-style: $styleValue;
+                  border-right-width: $weightValue;
+                  border-top-width: $weightValue;
+                } @else if $sideKey == "top-left" {
+                  border-top-color: $colorValue;
+                  border-left-color: $colorValue;
+                  border-top-style: $styleValue;
+                  border-left-style: $styleValue;
+                  border-top-width: $weightValue;
+                  border-left-width: $weightValue;
+                } @else if $sideKey == "bottom-right" {
+                  border-right-color: $colorValue;
+                  border-bottom-color: $colorValue;
+                  border-right-style: $styleValue;
+                  border-bottom-style: $styleValue;
+                  border-right-width: $weightValue;
+                  border-bottom-width: $weightValue;
+                } @else if $sideKey == "bottom-left" {
+                  border-bottom-color: $colorValue;
+                  border-left-color: $colorValue;
+                  border-bottom-style: $styleValue;
+                  border-left-style: $styleValue;
+                  border-bottom-width: $weightValue;
+                  border-left-width: $weightValue;
+                } @else {
                   border#{$sideValue}-color: $colorValue;
                   border#{$sideValue}-style: $styleValue;
                   border#{$sideValue}-width: $weightValue;
@@ -252,7 +278,7 @@ $h2-map-sides: (
         );
         @each $sizeKey, $sizeValue in $h2-map-font-size {
           [data-h2-font-size*="#{$mediaKey}(#{$sizeKey})"] {
-            font-weight: $sizeValue;
+            font-size: $sizeValue;
           }
         }
         // Font Style
@@ -304,6 +330,18 @@ $h2-map-sides: (
             } @else if $sideKey == "right-left" or $sideKey == "rl" {
               margin-right: #{$whitespaceValue};
               margin-left: #{$whitespaceValue};
+            } @else if $sideKey == "top-right" {
+              margin-top: #{$whitespaceValue};
+              margin-right: #{$whitespaceValue};
+            } @else if $sideKey == "top-left" {
+              margin-top: #{$whitespaceValue};
+              margin-left: #{$whitespaceValue};
+            } @else if $sideKey == "bottom-right" {
+              margin-bottom: #{$whitespaceValue};
+              margin-right: #{$whitespaceValue};
+            } @else if $sideKey == "bottom-left" {
+              margin-bottom: #{$whitespaceValue};
+              margin-left: #{$whitespaceValue};
             } @else {
               margin#{$sideValue}: #{$whitespaceValue};
             }
@@ -315,6 +353,18 @@ $h2-map-sides: (
             margin-bottom: auto;
           } @else if $sideKey == "right-left" or $sideKey == "rl" {
             margin-right: auto;
+            margin-left: auto;
+          } @else if $sideKey == "top-right" {
+            margin-top: auto;
+            margin-right: auto;
+          } @else if $sideKey == "top-left" {
+            margin-top: auto;
+            margin-left: auto;
+          } @else if $sideKey == "bottom-right" {
+            margin-bottom: auto;
+            margin-right: auto;
+          } @else if $sideKey == "bottom-left" {
+            margin-bottom: auto;
             margin-left: auto;
           } @else {
             margin#{$sideValue}: auto;
@@ -347,6 +397,18 @@ $h2-map-sides: (
               padding-bottom: #{$whitespaceValue};
             } @else if $sideKey == "right-left" or $sideKey == "rl" {
               padding-right: #{$whitespaceValue};
+              padding-left: #{$whitespaceValue};
+            } @else if $sideKey == "top-right" {
+              padding-top: #{$whitespaceValue};
+              padding-right: #{$whitespaceValue};
+            } @else if $sideKey == "top-left" {
+              padding-top: #{$whitespaceValue};
+              padding-left: #{$whitespaceValue};
+            } @else if $sideKey == "bottom-right" {
+              padding-bottom: #{$whitespaceValue};
+              padding-right: #{$whitespaceValue};
+            } @else if $sideKey == "bottom-left" {
+              padding-bottom: #{$whitespaceValue};
               padding-left: #{$whitespaceValue};
             } @else {
               padding#{$sideValue}: #{$whitespaceValue};
@@ -383,6 +445,18 @@ $h2-map-sides: (
               bottom: #{$whitespaceValue};
             } @else if $sideKey == "right-left" or $sideKey == "rl" {
               right: #{$whitespaceValue};
+              left: #{$whitespaceValue};
+            } @else if $sideKey == "top-right" {
+              top: #{$whitespaceValue};
+              right: #{$whitespaceValue};
+            } @else if $sideKey == "top-left" {
+              top: #{$whitespaceValue};
+              left: #{$whitespaceValue};
+            } @else if $sideKey == "bottom-right" {
+              bottom: #{$whitespaceValue};
+              right: #{$whitespaceValue};
+            } @else if $sideKey == "bottom-left" {
+              bottom: #{$whitespaceValue};
               left: #{$whitespaceValue};
             } @else if $sideKey == "top" {
               top: #{$whitespaceValue};
@@ -441,7 +515,7 @@ $h2-map-sides: (
       );
       @each $alignmentKey, $alignmentValue in $h2-map-alignment {
         [data-h2-text-align*="#{$mediaKey}(#{$alignmentKey})"] {
-          text-align: $alignmentValue;
+          text-align: #{$alignmentValue};
         }
       }
       // Visibility
