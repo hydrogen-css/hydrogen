@@ -5713,7 +5713,7 @@
   [data-hydrogen] [data-h2-bg-color*="base(radial[green][red][blue])"] {
     background-image: radial-gradient(green,red,blue);
   }
-  [data-hydrogen] [data-h2-bg-color*="base(linear[green][red][blue])"] {
+  [data-hydrogen] [data-h2-bg-color*="base(linear-135[green][red][blue])"] {
     background-image: linear-gradient(135deg,green,red,blue);
   }
   [data-hydrogen] [data-h2-border*="base(black, all, solid, thing)"] {
@@ -12369,7 +12369,7 @@
   [data-hydrogen] [data-h2-bg-color*="small(radial[green][red][blue])"] {
     background-image: radial-gradient(green,red,blue);
   }
-  [data-hydrogen] [data-h2-bg-color*="small(linear[green][red][blue])"] {
+  [data-hydrogen] [data-h2-bg-color*="small(linear-135[green][red][blue])"] {
     background-image: linear-gradient(135deg,green,red,blue);
   }
   [data-hydrogen] [data-h2-border*="small(black, all, solid, thing)"] {
@@ -19025,7 +19025,7 @@
   [data-hydrogen] [data-h2-bg-color*="medium(radial[green][red][blue])"] {
     background-image: radial-gradient(green,red,blue);
   }
-  [data-hydrogen] [data-h2-bg-color*="medium(linear[green][red][blue])"] {
+  [data-hydrogen] [data-h2-bg-color*="medium(linear-135[green][red][blue])"] {
     background-image: linear-gradient(135deg,green,red,blue);
   }
   [data-hydrogen] [data-h2-border*="medium(black, all, solid, thing)"] {
@@ -25681,7 +25681,7 @@
   [data-hydrogen] [data-h2-bg-color*="large(radial[green][red][blue])"] {
     background-image: radial-gradient(green,red,blue);
   }
-  [data-hydrogen] [data-h2-bg-color*="large(linear[green][red][blue])"] {
+  [data-hydrogen] [data-h2-bg-color*="large(linear-135[green][red][blue])"] {
     background-image: linear-gradient(135deg,green,red,blue);
   }
   [data-hydrogen] [data-h2-border*="large(black, all, solid, thing)"] {
