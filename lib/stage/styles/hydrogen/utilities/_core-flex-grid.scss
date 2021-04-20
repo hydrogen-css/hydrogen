@@ -1,9 +1,53 @@
 @use "../maps/map-media" as mediaMap;
+@use "../maps/map-whitespace" as whitespaceMap;
+
+// Grid Alignment Map
+$h2-map-grid-alignment: (
+  "top": "flex-start",
+  "middle": "center",
+  "bottom": "flex-end",
+  "stretch": "stretch"
+);
+
+// Grid Expansion Map
+$h2-map-grid-expansion: (
+  "contained": "contained",
+  "expanded": "expanded"
+);
+
+// Grid Padding Map
+$h2-map-grid-padding: (
+  "padded": "padded",
+  "flush": "flush"
+);
+
+$h2GridColumns: 6;
 
 [data-hydrogen] {
   [data-h2-flex-grid] >[data-h2-flex-item] {
     flex: 0 0 100%;
     max-width: 100%;
     min-width: 0;
+  }
+  @each $mediaKey, $mediaValue in mediaMap.$h2-map-media {
+    @media #{$mediaValue} {
+      @each $alignmentKey, $alignmentValue in $h2-map-grid-alignment {
+        @each $expansionKey, $expansionValue in $h2-map-grid-expansion {
+          @each $paddingKey, $paddingValue in $h2-map-grid-padding {
+            @each $whitespaceKey, $whitespaceValue in whitespaceMap.$h2-map-whitespace {
+              [data-h2-flex-grid*="#{$mediaKey}(#{$alignmentKey}, #{$expansionKey}, #{$paddingKey}, #{$whitespaceKey})"] {
+                >[data-h2-flex-item] {
+                  @if $alignmentKey == "stretch" {
+                    >div {
+                      height: 100%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

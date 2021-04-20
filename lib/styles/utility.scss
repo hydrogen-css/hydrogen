@@ -232,7 +232,7 @@ $h2-map-sides: (
         // e.g. data-h2-font-family="base(sans)"
         @each $fontKey, $fontValue in fontFamilyMap.$h2-map-font-families {
           [data-h2-font-family*="#{$mediaKey}(#{$fontKey})"] {
-            font-family: $fontValue;
+            font-family: #{$fontValue};
           }
         }
         // Font Size

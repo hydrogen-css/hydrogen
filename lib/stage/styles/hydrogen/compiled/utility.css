@@ -10433,7 +10433,7 @@
     color: #ce0b0b;
   }
   [data-hydrogen] [data-h2-font-family*="base(testFont)"] {
-    font-family: "'testFont', sans-serif";
+    font-family: 'testFont', sans-serif;
   }
   [data-hydrogen] [data-h2-font-size*="base(h1)"] {
     font-weight: calc(calc(calc(calc(calc(1rem*1.33)*1.33)*1.33)*1.33)*1.33);
@@ -17089,7 +17089,7 @@
     color: #ce0b0b;
   }
   [data-hydrogen] [data-h2-font-family*="small(testFont)"] {
-    font-family: "'testFont', sans-serif";
+    font-family: 'testFont', sans-serif;
   }
   [data-hydrogen] [data-h2-font-size*="small(h1)"] {
     font-weight: calc(calc(calc(calc(calc(1rem*1.33)*1.33)*1.33)*1.33)*1.33);
@@ -23745,7 +23745,7 @@
     color: #ce0b0b;
   }
   [data-hydrogen] [data-h2-font-family*="medium(testFont)"] {
-    font-family: "'testFont', sans-serif";
+    font-family: 'testFont', sans-serif;
   }
   [data-hydrogen] [data-h2-font-size*="medium(h1)"] {
     font-weight: calc(calc(calc(calc(calc(1rem*1.33)*1.33)*1.33)*1.33)*1.33);
@@ -30401,7 +30401,7 @@
     color: #ce0b0b;
   }
   [data-hydrogen] [data-h2-font-family*="large(testFont)"] {
-    font-family: "'testFont', sans-serif";
+    font-family: 'testFont', sans-serif;
   }
   [data-hydrogen] [data-h2-font-size*="large(h1)"] {
     font-weight: calc(calc(calc(calc(calc(1rem*1.33)*1.33)*1.33)*1.33)*1.33);
