@@ -362,12 +362,10 @@ function compileUtility() {
 }
 
 // Build the development CSS file.
-// Get normalize.css
-var normalizeCSS = fs.readFileSync('./node_modules/normalize.css/normalize.css').toString();
 
 function createDevelopmentCSS(done) {
   // Build the CSS.
-  buildDevCSS(config, normalizeCSS, fontFaceCSS);
+  buildDevCSS(config, fontFaceCSS);
   // Signal completion.
   done();
 }
@@ -412,6 +410,14 @@ function createUserMarkup() {
     .pipe(dest('./' + config.folders.styles + '/hydrogen/markup'));
 }
 
+function cleanUserMarkup() {
+  return del('./' + config.folders.styles + '/hydrogen/markup/**/*');
+}
+
+function cleanCleanedFolder() {
+  return del('./' + config.folders.styles + '/hydrogen/cleaned');
+}
+
 // Remove Unwanted CSS
 var hydrogen = '';
 
@@ -448,8 +454,8 @@ function createCleanCSS(done) {
     }); 
   }
     // console.log(queries);
-  // Set up a string variable for our final CSS file and assemble normalize, font face, and the core.
-  hydrogen = '' + normalizeCSS + fontFaceCSS + hydrogenCoreCSS;
+  // Set up a string variable for our final CSS file and assemble font face, and the core.
+  hydrogen = '' + fontFaceCSS + hydrogenCoreCSS;
   // We'll then have to parse through each one and break things apart by media query, and add the * selector...
   // e.g. data-h2-bg-color="b(red) m(yellow)" needs to become [data-h2-bg-color*="b(red)"] and [data-h2-bg-color*="m(yellow)"]
   var usedAttributes = markup.match(dataRegex);
@@ -485,11 +491,11 @@ function createCleanCSS(done) {
             var newRegEx;
             if (utility[0] == "data-h2-flex-item") {
                 // console.log("There's a flex item here.");
-              newRegEx = '\\[data-hydrogen\\] \\[data-h2-flex-grid\\] > \\[' + utility + '\\*="' + value.replace(/\(/g, '\\(').replace(/\)/g, '\\)').replace(/\[/g, '\\[').replace(/\]/g, '\\]') + '"\\]([^{])*{([^}])*}';
+              newRegEx = '\\[data-h2-flex-grid\\] > \\[' + utility + '\\*="' + value.replace(/\(/g, '\\(').replace(/\)/g, '\\)').replace(/\[/g, '\\[').replace(/\]/g, '\\]') + '"\\]([^{])*{([^}])*}';
             } else if (utility[0] == "data-h2-flex-item-content") {
               // Do nothing.
             } else {
-              newRegEx = '\\[data-hydrogen\\] \\[' + utility + '\\*="' + value.replace(/\(/g, '\\(').replace(/\)/g, '\\)').replace(/\[/g, '\\[').replace(/\]/g, '\\]') + '"\\]([^{])*{([^}])*}';
+              newRegEx = '\\[' + utility + '\\*="' + value.replace(/\(/g, '\\(').replace(/\)/g, '\\)').replace(/\[/g, '\\[').replace(/\]/g, '\\]') + '"\\]([^{])*{([^}])*}';
             }
               // console.log(value);
               // console.log(newRegEx);
@@ -572,7 +578,7 @@ function postCleanCompress() {
 }
 
 function watchSuccessMessage(done) {
-  console.log('[SUCCESS] Hydrogen: you\'ve successfully compiled Hydrogen. Hydrogen is now watching for changes to your hydrogen.config.json file.'.green);
+  console.log('[SUCCESS] Hydrogen: you\'ve successfully compiled Hydrogen. Hydrogen is watching for changes to your hydrogen.config.json file, as well as your markup.'.green);
   done();
 }
 
@@ -583,6 +589,11 @@ function compileSuccessMessage(done) {
 
 function buildSuccessMessage(done) {
   console.log('[SUCCESS] Hydrogen: you\'ve successfully built a production version of Hydrogen in the '.green + config.folders.styles + '/' + ' folder.'.green);
+  done();
+}
+
+function watchCleanStartMessage(done) {
+  console.log('Hydrogen: changes detected to your markup... compiling...');
   done();
 }
 
@@ -605,8 +616,22 @@ const buildScripts = series(
   buildShadowMap, setShadowMap, 
   buildWhitespaceMap, setWhitespaceMap, 
   compileCore, 
-  compileUtility
+  compileUtility,
+  compressCore, 
+  preCleanCompress, 
+  getUserMarkup, createUserMarkup,
+  createCleanCSS, 
+  postCleanCompress
 )
+
+const devWatchCleanSeries = series(
+  watchCleanStartMessage,
+  cleanUserMarkup,
+  cleanCleanedFolder,
+  getUserMarkup, createUserMarkup,
+  createCleanCSS, 
+  postCleanCompress
+);
 
 // Dev Prep Task
 const devWatchSeries = series(
@@ -618,7 +643,20 @@ exports.compile = series(devWatchSeries, compileSuccessMessage);
 
 // Watch the config files for changes.
 function devWatchConfig() {
-  watch(['./lib/stage/hydrogen.config.json'], series(devWatchSeries, watchSuccessMessage));
+  watch('./lib/stage/hydrogen.config.json', series(devWatchSeries, watchSuccessMessage));
+  var watchMarkupArray = [];
+  function getWatchUserMarkup() {
+    if (Array.isArray(config.folders.markup) == true) {
+      config.folders.markup.forEach(function(path, index, array) {
+        watchMarkupArray = watchMarkupArray.concat('./' + path + '/**/*');
+      });
+    } else {
+      watchMarkupArray = watchMarkupArray.concat('./' + config.folders.markup + '/**/*');
+    }
+  }
+  getWatchUserMarkup();
+  // console.log(watchMarkupArray);
+  watch(watchMarkupArray, series(devWatchCleanSeries, watchSuccessMessage));
 }
 
 exports.watch = series(
@@ -628,10 +666,5 @@ exports.watch = series(
 
 exports.build = series(
   buildScripts, 
-  compressCore, 
-  preCleanCompress, 
-  getUserMarkup, createUserMarkup,
-  createCleanCSS, 
-  postCleanCompress,
   buildSuccessMessage
 );

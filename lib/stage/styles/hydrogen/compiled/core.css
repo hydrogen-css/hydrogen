@@ -1,4 +1,4 @@
-[data-hydrogen] [data-h2-flex-grid] > [data-h2-flex-item] {
+[data-h2-flex-grid] > [data-h2-flex-item] {
   flex: 0 0 100%;
   max-width: 100%;
   min-width: 0;
@@ -8,8 +8,8 @@ html {
   font-size: 150%;
 }
 
-[data-hydrogen] body,
-body[data-hydrogen] {
+[data-h2-reset] body,
+body[data-h2-reset] {
   margin: 0;
   max-width: 100%;
   min-height: 100vh;
@@ -17,66 +17,67 @@ body[data-hydrogen] {
   width: 100%;
 }
 
-[data-hydrogen] {
+[data-h2-reset] {
   box-sizing: border-box;
 }
-[data-hydrogen] * {
+[data-h2-reset] * {
   box-sizing: border-box;
 }
-[data-hydrogen] blockquote,
-[data-hydrogen] dl,
-[data-hydrogen] fieldset,
-[data-hydrogen] figure {
+
+[data-h2-typography] blockquote,
+[data-h2-typography] dl,
+[data-h2-typography] fieldset,
+[data-h2-typography] figure {
   margin: 0;
 }
-[data-hydrogen] img,
-[data-hydrogen] iframe {
+[data-h2-typography] img,
+[data-h2-typography] iframe {
   max-width: 100%;
 }
-[data-hydrogen] h1, [data-hydrogen] h2, [data-hydrogen] h3, [data-hydrogen] h4, [data-hydrogen] h5, [data-hydrogen] h6, [data-hydrogen] p {
+[data-h2-typography] h1, [data-h2-typography] h2, [data-h2-typography] h3, [data-h2-typography] h4, [data-h2-typography] h5, [data-h2-typography] h6, [data-h2-typography] p {
   font-weight: normal;
   margin: 0;
 }
-[data-hydrogen] h1 {
+[data-h2-typography] h1 {
   font-size: calc(calc(calc(calc(calc(1rem*1.33)*1.33)*1.33)*1.33)*1.33);
 }
-[data-hydrogen] h2 {
+[data-h2-typography] h2 {
   font-size: calc(calc(calc(calc(1rem*1.33)*1.33)*1.33)*1.33);
 }
-[data-hydrogen] h3 {
+[data-h2-typography] h3 {
   font-size: calc(calc(calc(1rem*1.33)*1.33)*1.33);
 }
-[data-hydrogen] h4 {
+[data-h2-typography] h4 {
   font-size: calc(calc(1rem*1.33)*1.33);
 }
-[data-hydrogen] h5 {
+[data-h2-typography] h5 {
   font-size: calc(1rem*1.33);
 }
-[data-hydrogen] h6 {
+[data-h2-typography] h6 {
   font-size: 1rem;
 }
-[data-hydrogen] p, [data-hydrogen] div {
+[data-h2-typography] p, [data-h2-typography] div {
   font-size: 1rem;
 }
-[data-hydrogen] span {
+[data-h2-typography] span {
   color: inherit;
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
 }
-[data-hydrogen] em {
+[data-h2-typography] em {
   color: inherit;
   font-family: inherit;
   font-size: inherit;
   font-style: italic;
 }
-[data-hydrogen] strong {
+[data-h2-typography] strong {
   color: inherit;
   font-family: inherit;
   font-size: inherit;
   font-weight: 600;
 }
-[data-hydrogen] a {
+[data-h2-typography] a {
   color: inherit;
   font-family: inherit;
   font-size: inherit;
@@ -84,21 +85,22 @@ body[data-hydrogen] {
   text-decoration: underline;
   transition: color 0.2s ease;
 }
-[data-hydrogen] ul,
-[data-hydrogen] ol {
+[data-h2-typography] ul,
+[data-h2-typography] ol {
   margin: 0;
 }
-[data-hydrogen] ul li,
-[data-hydrogen] ol li {
+[data-h2-typography] ul li,
+[data-h2-typography] ol li {
   color: inherit;
   font-family: inherit;
   font-size: inherit;
 }
-[data-hydrogen] ul li:last-child,
-[data-hydrogen] ol li:last-child {
+[data-h2-typography] ul li:last-child,
+[data-h2-typography] ol li:last-child {
   margin-bottom: 0;
 }
-[data-hydrogen] [data-h2-container] {
+
+[data-h2-container] {
   margin: 0 auto;
   width: 90%;
 }

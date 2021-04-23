@@ -28,6 +28,7 @@
             <div data-h2-bg-color="b([light]green) s([dark]red)"> 
               <div data-h2-bg-color="b(red[.5])"></div>
             </div>
+            <div data-h2-bg-color="BIGGERTHINGS(red[.5])"></div>
           </div>
         </div>
       </div>
