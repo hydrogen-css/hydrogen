@@ -436,7 +436,7 @@ function createCleanCSS(done) {
     // console.log('sampleCSS file: ', hydrogenUtilityCSS);
   // Set up a variable list of arrays for each media query in the config. Thanks Chris Wiseman!
   let queries = {
-    base: []
+    b: []
   };
   if (config.media != null && config.media != undefined && config.media.length > 0) {
     config.media.forEach(function(mediaQuery) {
@@ -504,6 +504,7 @@ function createCleanCSS(done) {
                 // console.log(CSSwithMedia);
               // hydrogen = hydrogen.concat(CSSwithMedia);
                 // console.log(queries);
+                // console.log(queries[mediaValue]);
               queries[mediaValue] = queries[mediaValue].concat(cssMatch);
                 // console.log(queries);
             }

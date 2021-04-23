@@ -42,11 +42,6 @@ $h2GridColumns: 12;
                 }
                 >[data-h2-flex-item] {
                   padding: calc(#{$whitespaceValue}/2);
-                  @if $alignmentKey == "stretch" {
-                    >[data-h2-flex-item-content] {
-                      height: 100%;
-                    }
-                  }
                 }
               }
             }

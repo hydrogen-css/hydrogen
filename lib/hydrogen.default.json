@@ -21,28 +21,28 @@
   ],
   "colors": [
     {
-      "name": "black",
-      "color": "rgba(20, 20, 30, 1)",
-      "opacity": false
-    },
-    {
       "name": "white",
       "color": "rgba(255, 255, 255, 1)",
       "opacity": false
     },
     {
-      "name": "theme-1",
-      "color": "purple",
-      "opacity": true
-    },
-    {
-      "name": "theme-2",
-      "color": "yellow",
+      "name": "black",
+      "color": "rgba(20, 20, 30, 1)",
       "opacity": false
     },
     {
-      "name": "theme-3",
-      "color": "#FF0000",
+      "name": "purple",
+      "color": "#9D5CFF",
+      "opacity": false
+    },
+    {
+      "name": "blue",
+      "color": "#5CFFEE",
+      "opacity": false
+    },
+    {
+      "name": "pink",
+      "color": "#FF5C6D",
       "opacity": false
     }
   ],
@@ -86,59 +86,23 @@
       "name": "mono",
       "loadType": "system",
       "value": "monospace",
-      "url": ""
+      "url": null
     }
   ],
   "fontBaseSize": "112.5%",
   "fontScale": "1.25",
-  "gradients": [
-    {
-      "type": "radial",
-      "colorStops": [
-        {
-          "name": "green",
-          "color": "green"
-        },
-        {
-          "name": "red",
-          "color": "red"
-        },
-        {
-          "name": "blue",
-          "color": "blue"
-        }
-      ]
-    },
-    {
-      "type": "linear",
-      "angle": "135deg",
-      "colorStops": [
-        {
-          "name": "green",
-          "color": "green"
-        },
-        {
-          "name": "red",
-          "color": "red"
-        },
-        {
-          "name": "blue",
-          "color": "blue"
-        }
-      ]
-    }
-  ],
+  "gradients": [],
   "media": [
     {
-      "name": "small",
+      "name": "s",
       "value": "48em"
     },
     {
-      "name": "medium",
+      "name": "m",
       "value": "64em"
     },
     {
-      "name": "large",
+      "name": "l",
       "value": "100em"
     }
   ],
@@ -157,16 +121,24 @@
   ],
   "shadows": [
     {
+      "name": "smaller",
+      "value": "0 0.1rem 0.2rem 0 rgba(0, 0, 0, .2)"
+    },
+    {
       "name": "small",
-      "value": "0 .15rem .4rem rgba(0, 0, 0, .3)"
+      "value": "0 0.25rem 0.5rem -0.05rem rgba(0, 0, 0, .2)"
     },
     {
       "name": "medium",
-      "value": "0 .35rem .6rem rgba(0, 0, 0, .3)"
+      "value": "0 0.4rem 0.7rem -0.1rem rgba(0, 0, 0, .2)"
     },
     {
       "name": "large",
-      "value": "0 .6rem .8rem rgba(0, 0, 0, .3)"
+      "value": "0 0.55rem 1rem -0.2rem rgba(0, 0, 0, .2)"
+    },
+    {
+      "name": "larger",
+      "value": "0 0.7rem 1.5rem -0.3rem rgba(0, 0, 0, .2)"
     }
   ],
   "whitespaceScale": "1.5"
