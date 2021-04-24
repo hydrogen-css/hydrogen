@@ -23,41 +23,33 @@ $h2-map-grid-padding: (
 
 $h2GridColumns: 6;
 
-@each $mediaKey, $mediaValue in mediaMap.$h2-map-media {
-  @media #{$mediaValue} {
-    @each $alignmentKey, $alignmentValue in $h2-map-grid-alignment {
-      @each $expansionKey, $expansionValue in $h2-map-grid-expansion {
-        @each $paddingKey, $paddingValue in $h2-map-grid-padding {
-          @each $whitespaceKey, $whitespaceValue in whitespaceMap.$h2-map-whitespace {
-            [data-h2-flex-grid*="#{$mediaKey}(#{$alignmentKey}, #{$expansionKey}, #{$paddingKey}, #{$whitespaceKey})"] {
-              align-items: #{$alignmentValue};
-              display: flex;
-              flex-wrap: wrap;
-              @if $expansionKey == "expanded" {
-                margin: calc((#{$whitespaceValue}/2) * -1);
-              }
-              @if $paddingKey == "padded" {
-                padding: calc(#{$whitespaceValue}/2);
-              }
-              >[data-h2-flex-item] {
-                padding: calc(#{$whitespaceValue}/2);
-              }
-            }
+@each $alignmentKey, $alignmentValue in $h2-map-grid-alignment {
+  @each $expansionKey, $expansionValue in $h2-map-grid-expansion {
+    @each $paddingKey, $paddingValue in $h2-map-grid-padding {
+      @each $whitespaceKey, $whitespaceValue in whitespaceMap.$h2-map-whitespace {
+        [data-h2-flex-grid*="MEDIAKEY(#{$alignmentKey}, #{$expansionKey}, #{$paddingKey}, #{$whitespaceKey})"] {
+          align-items: #{$alignmentValue};
+          display: flex;
+          flex-wrap: wrap;
+          @if $expansionKey == "expanded" {
+            margin: calc((#{$whitespaceValue}/2) * -1);
+          }
+          @if $paddingKey == "padded" {
+            padding: calc(#{$whitespaceValue}/2);
+          }
+          >[data-h2-flex-item] {
+            padding: calc(#{$whitespaceValue}/2);
           }
         }
       }
     }
   }
 }
-@each $mediaKey, $mediaValue in mediaMap.$h2-map-media {
-  @media #{$mediaValue} {
-    @for $i from 1 through $h2GridColumns {
-      @for $r from 1 through $h2GridColumns {
-        [data-h2-flex-grid] >[data-h2-flex-item*="#{$mediaKey}(#{$i}of#{$r})"] {
-          flex: 0 0 calc(#{$i} / #{$r} * 100%);
-          max-width: ($i / $r * 100%);
-        }
-      }
+@for $i from 1 through $h2GridColumns {
+  @for $r from 1 through $h2GridColumns {
+    [data-h2-flex-grid] >[data-h2-flex-item*="MEDIAKEY(#{$i}of#{$r})"] {
+      flex: 0 0 calc(#{$i} / #{$r} * 100%);
+      max-width: ($i / $r * 100%);
     }
   }
 }
