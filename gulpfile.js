@@ -70,6 +70,36 @@ function cacheHydrogenUtility() {
     .pipe(dest('./' + config.folders.styles + '/hydrogen'));
 }
 
+function cacheHydrogenPartials() {
+  return src([
+    './lib/styles/utilities/_utility-align-content.scss',
+    './lib/styles/utilities/_utility-align-items.scss',
+    './lib/styles/utilities/_utility-align-self.scss',
+    './lib/styles/utilities/_utility-bg-color.scss',
+    './lib/styles/utilities/_utility-border.scss',
+    './lib/styles/utilities/_utility-container.scss',
+    './lib/styles/utilities/_utility-display.scss',
+    './lib/styles/utilities/_utility-flex-direction.scss',
+    './lib/styles/utilities/_utility-flex-wrap.scss',
+    './lib/styles/utilities/_utility-font-color.scss',
+    './lib/styles/utilities/_utility-font-family.scss',
+    './lib/styles/utilities/_utility-font-size.scss',
+    './lib/styles/utilities/_utility-font-style.scss',
+    './lib/styles/utilities/_utility-font-weight.scss',
+    './lib/styles/utilities/_utility-justify-content.scss',
+    './lib/styles/utilities/_utility-location.scss',
+    './lib/styles/utilities/_utility-margin.scss',
+    './lib/styles/utilities/_utility-overflow.scss',
+    './lib/styles/utilities/_utility-padding.scss',
+    './lib/styles/utilities/_utility-position.scss',
+    './lib/styles/utilities/_utility-radius.scss',
+    './lib/styles/utilities/_utility-shadow.scss',
+    './lib/styles/utilities/_utility-text-align.scss',
+    './lib/styles/utilities/_utility-visibility.scss'
+  ])
+    .pipe(dest('./' + config.folders.styles + '/hydrogen/utilities'));
+}
+
 // Media
 var mediaMap = '';
 
@@ -497,20 +527,24 @@ function createCleanCSS(done) {
             // console.log(newRegEx);
             var cssRegex = new RegExp(newRegEx, 'g');
             // console.log('css specific regex: ', cssRegex);
-              // console.log('test css regex: ', /\[data-h2-bg-color\*="b\(red\)"\]{([^}])*}/g);
+            // console.log('test css regex: ', /\[data-h2-bg-color\*="b\(red\)"\]{([^}])*}/g);
             var cssMatch = hydrogenUtilityCSS.match(cssRegex); // Returns the full CSS selector: [data-hydrogen=VARVERSION] [data-h2-ATTRIBUTE*="MEDIA(VALUE)"]***{CSS}
-              // console.log('css match values: ', cssMatch);
+            // console.log('css match values: ', cssMatch);
             // console.log("CSSMATCH:".green, cssMatch);
             if (cssMatch != null) {
-              var cssFinal = cssMatch[0].replace("MEDIAKEY", mediaValue);
+              // var cssFinal = cssMatch[0].replace("MEDIAKEY", mediaValue);
+              var cssFinal = [];
+              cssMatch.forEach(function(match) {
+                cssFinal = cssFinal.concat(match.replace("MEDIAKEY", mediaValue));
+              });
               // Transform the matched CSS to include its media query.
               // var CSSwithMedia = '@media ' + queryValue[0] + '{' + cssMatch + '}';
-                // console.log(CSSwithMedia);
+              // console.log(CSSwithMedia);
               // hydrogen = hydrogen.concat(CSSwithMedia);
-                // console.log(queries);
-                // console.log(queries[mediaValue]);
+              // console.log(queries);
+              // console.log(queries[mediaValue]);
               queries[mediaValue] = queries[mediaValue].concat(cssFinal);
-                // console.log(queries);
+              // console.log(queries);
             }
           } else {
             if (config.mediaWarnings != false) {
@@ -605,6 +639,7 @@ const buildScripts = series(
   createHydrogenCache, 
   cacheHydrogenCore, 
   cacheHydrogenUtility, 
+  cacheHydrogenPartials,
   buildMediaMap, setMediaMap, 
   buildColorMap, setColorMap, 
   buildBorderWeightMap, setBorderWeightMap, 

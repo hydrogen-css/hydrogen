@@ -1,0 +1,18 @@
+// Font Families
+// FAMILY
+// e.g. data-h2-font-family="b(sans)"
+@mixin h2-utility-font-family(
+  $mediaKey,
+  $fontFamilyMap
+) {
+  @each $fontKey, $fontValue in $fontFamilyMap {
+    [data-h2-font-family*="#{$mediaKey}(#{$fontKey})"],
+    p[data-h2-font-family*="#{$mediaKey}(#{$fontKey})"],
+    span[data-h2-font-family*="#{$mediaKey}(#{$fontKey})"],
+    em[data-h2-font-family*="#{$mediaKey}(#{$fontKey})"],
+    strong[data-h2-font-family*="#{$mediaKey}(#{$fontKey})"],
+    a[data-h2-font-family*="#{$mediaKey}(#{$fontKey})"] {
+      font-family: #{$fontValue};
+    }
+  }
+}

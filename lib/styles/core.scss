@@ -12,23 +12,19 @@ $h2-font-size-h2: calc(#{$h2-font-size-h3}*#{$h2-font-scale});
 $h2-font-size-h1: calc(#{$h2-font-size-h2}*#{$h2-font-scale});
 
 html {
+  box-sizing: border-box;
   font-size: $h2-font-base-size;
+  * {
+    box-sizing: border-box;
+  }
 }
 
-[data-h2-reset] body,
-body[data-h2-reset] {
+body {
   margin: 0; // Resets the default 8px value.
   max-width: 100%;
   min-height: 100vh;
   position: relative;
   width: 100%;
-}
-
-[data-h2-reset] {
-  box-sizing: border-box;
-  * {
-    box-sizing: border-box;
-  }
 }
 
 [data-h2-typography] {
@@ -69,7 +65,8 @@ body[data-h2-reset] {
     font-size: $h2-font-size-h6;
   }
   // Copy
-  p, div {
+  p, 
+  div {
     font-size: $h2-font-size-default
   }
   span {
@@ -104,13 +101,13 @@ body[data-h2-reset] {
   ul,
   ol {
     margin: 0;
-    li {
-      color: inherit;
-      font-family: inherit;
-      font-size: inherit;
-      &:last-child {
-        margin-bottom: 0;
-      }
+  }
+  li {
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }
