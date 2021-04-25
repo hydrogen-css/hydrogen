@@ -1,5 +1,6 @@
 // @use "utilities/core-flex-grid";
 
+$h2-whitespace-scale: $H2WHITESPACESCALE;
 $h2-font-base-size: $H2FONTBASESIZE;
 $h2-font-scale: $H2FONTSCALE;
 $h2-font-size-default: 1rem;
@@ -43,30 +44,46 @@ iframe {
 // Headings
 h1, h2, h3, h4, h5, h6, p {
   font-weight: normal;
-  margin: 0
 }
 h1 {
   font-size: $h2-font-size-h1;
+  margin-top: calc((((1rem * #{$h2-whitespace-scale}) * #{$h2-whitespace-scale}) * #{$h2-whitespace-scale}) * #{$h2-whitespace-scale});
 }
 h2 {
   font-size: $h2-font-size-h2;
+  margin-top: calc(((1rem * #{$h2-whitespace-scale}) * #{$h2-whitespace-scale}) * #{$h2-whitespace-scale});
+  margin-bottom: 1rem;
 }
 h3 {
   font-size: $h2-font-size-h3;
+  margin-top: calc((1rem * #{$h2-whitespace-scale}) * #{$h2-whitespace-scale});
+  margin-bottom: 1rem;
 }
 h4 {
   font-size: $h2-font-size-h4;
+  margin-top: calc(1rem * #{$h2-whitespace-scale});
+  margin-bottom: 1rem;
 }
 h5 {
   font-size: $h2-font-size-h5;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 h6 {
   font-size: $h2-font-size-h6;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 // Copy
 p, 
 div {
   font-size: $h2-font-size-default
+}
+p {
+  margin-top: 1rem;
+}
+p+p {
+  margin-top: calc(1rem / #{$h2-whitespace-scale});
 }
 span {
   color: inherit;
@@ -100,11 +117,13 @@ a {
 ul,
 ol {
   margin: 0;
+  margin-top: 1rem;
 }
 li {
   color: inherit;
   font-family: inherit;
   font-size: inherit;
+  margin-top: calc(1rem / #{$h2-whitespace-scale});
   &:last-child {
     margin-bottom: 0;
   }

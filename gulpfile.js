@@ -362,13 +362,23 @@ function setShadowMap() {
 // This map is used by both margins and padding in the Sass file.
 var whitespaceMap = '';
 
-function buildWhitespaceMap(done) {
+function buildWhitespaceMap() {
   // Reset the variables.
   whitespaceMap = '';
   // Get the whitespace map.
   whitespaceMap = loadWhitespaceMap(defaults, config);
-  // Signal completion.
-  done();
+  var whitespaceScaleConfig;
+  // Check to see if the user has defined any options in their config, and if not, load the defaults.
+  if (config.whitespaceScale != null && config.whitespaceScale != undefined && config.whitespaceScale.length > 0) {
+    return src('./' + config.folders.styles + '/hydrogen/core.scss')
+      .pipe(replace('$h2-whitespace-scale: $H2WHITESPACESCALE;', '$h2-whitespace-scale: ' + config.whitespaceScale + ';'))
+      .pipe(dest('./' + config.folders.styles + '/hydrogen'));
+  } else {
+    whitespaceScaleConfig = defaults.whitespaceScale;
+    return src('./' + config.folders.styles + '/hydrogen/core.scss')
+      .pipe(replace('$h2-whitespace-scale: $H2WHITESPACESCALE;', '$h2-whitespace-scale: ' + defaults.whitespaceScale + ';'))
+      .pipe(dest('./' + config.folders.styles + '/hydrogen'));
+  }
 }
 
 function setWhitespaceMap() {
@@ -549,7 +559,7 @@ function createCleanCSS(done) {
             }
           } else {
             if (config.mediaWarnings != false) {
-              console.log('[WARNING] Hydrogen: there\'s no matching media query in the media query map for the query '.yellow + mediaValue[0] + '.'.yellow);
+              console.log('[WARNING]'.yellow, 'Hydrogen: there is a media query being used in your markup', '('.yellow + mediaValue[0].yellow + ')'.yellow, 'that hasn\'t been defined in the media section of your configuration file.');
             }
           }
         }); 
@@ -574,7 +584,7 @@ function createCleanCSS(done) {
         queryValue = queryMatch[0].match(/ "([^"])*"/g); // Returns the media side of the media query: screen and...
       } else {
         if (config.mediaWarnings != false) {
-          console.log('[WARNING] Hydrogen: there\'s no matching media query in the media query map for the query '.yellow + mediaValue[0] + '.'.yellow);
+          console.log('[WARNING]'.yellow, 'Hydrogen: there is a media query being used in your markup', '('.yellow + mediaValue[0].yellow + ')'.yellow, 'that hasn\'t been defined in the media section of your configuration file.');
         }
       }
       // Append the media query to the CSS group.
@@ -594,11 +604,11 @@ function createCleanCSS(done) {
     fs.mkdirSync('./' + config.folders.styles + '/hydrogen/cleaned');
     fs.writeFile('./' + config.folders.styles + '/hydrogen/cleaned/hydrogen.css', hydrogen, function(err) {
       if (err) {
-        console.log('Hydrogen: ', err);
+        console.log('[ERROR]'.red, 'Hydrogen: ', err);
       }
     });
   } else {
-    console.error('[ERROR] Hydrogen: we couldn\'t find any Hydrogen attributes in your markup so the build failed.'.red);
+    console.error('[ERROR]'.red, 'Hydrogen: we couldn\'t find any Hydrogen attributes in your markup so the build failed.');
     return false;
   }
   done();
@@ -613,22 +623,22 @@ function postCleanCompress() {
 }
 
 function watchSuccessMessage(done) {
-  console.log('[SUCCESS] Hydrogen: you\'ve successfully compiled Hydrogen. Hydrogen is watching for changes to your hydrogen.config.json file, as well as your markup.'.green);
+  console.log('[SUCCESS]'.green, 'Hydrogen: you\'ve successfully compiled Hydrogen. We\'re now watching for changes to your configuration file and markup.');
   done();
 }
 
 function compileSuccessMessage(done) {
-  console.log('[SUCCESS] Hydrogen: you\'ve successfully compiled a development version of Hydrogen in the '.green + config.folders.styles + '/' + ' folder.'.green);
+  console.log('[SUCCESS]'.green, 'Hydrogen: you\'ve successfully compiled a development version of Hydrogen in the ' + config.folders.styles.green + '/'.green + ' folder.');
   done();
 }
 
 function buildSuccessMessage(done) {
-  console.log('[SUCCESS] Hydrogen: you\'ve successfully built a production version of Hydrogen in the '.green + config.folders.styles + '/' + ' folder.'.green);
+  console.log('[SUCCESS]'.green, 'Hydrogen: you\'ve successfully built a production version of Hydrogen in the ' + config.folders.styles.green + '/'.green + ' folder.');
   done();
 }
 
 function watchCleanStartMessage(done) {
-  console.log('Hydrogen: changes detected to your markup... compiling...');
+  console.log('[WORKING]'.blue, 'Hydrogen: we noticed some changes, so we\'re compiling...');
   done();
 }
 

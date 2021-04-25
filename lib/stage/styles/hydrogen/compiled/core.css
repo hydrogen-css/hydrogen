@@ -34,36 +34,54 @@ iframe {
 
 h1, h2, h3, h4, h5, h6, p {
   font-weight: normal;
-  margin: 0;
 }
 
 h1 {
   font-size: calc(calc(calc(calc(calc(1rem*1.33)*1.33)*1.33)*1.33)*1.33);
+  margin-top: calc((((1rem * 1.25) * 1.25) * 1.25) * 1.25);
 }
 
 h2 {
   font-size: calc(calc(calc(calc(1rem*1.33)*1.33)*1.33)*1.33);
+  margin-top: calc(((1rem * 1.25) * 1.25) * 1.25);
+  margin-bottom: 1rem;
 }
 
 h3 {
   font-size: calc(calc(calc(1rem*1.33)*1.33)*1.33);
+  margin-top: calc((1rem * 1.25) * 1.25);
+  margin-bottom: 1rem;
 }
 
 h4 {
   font-size: calc(calc(1rem*1.33)*1.33);
+  margin-top: calc(1rem * 1.25);
+  margin-bottom: 1rem;
 }
 
 h5 {
   font-size: calc(1rem*1.33);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 h6 {
   font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 p,
 div {
   font-size: 1rem;
+}
+
+p {
+  margin-top: 1rem;
+}
+
+p + p {
+  margin-top: calc(1rem / 1.25);
 }
 
 span {
@@ -99,12 +117,14 @@ a {
 ul,
 ol {
   margin: 0;
+  margin-top: 1rem;
 }
 
 li {
   color: inherit;
   font-family: inherit;
   font-size: inherit;
+  margin-top: calc(1rem / 1.25);
 }
 li:last-child {
   margin-bottom: 0;

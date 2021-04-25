@@ -34,36 +34,54 @@ iframe {
 
 h1, h2, h3, h4, h5, h6, p {
   font-weight: normal;
-  margin: 0;
 }
 
 h1 {
   font-size: calc(calc(calc(calc(calc(1rem*1.33)*1.33)*1.33)*1.33)*1.33);
+  margin-top: calc((((1rem * 1.25) * 1.25) * 1.25) * 1.25);
 }
 
 h2 {
   font-size: calc(calc(calc(calc(1rem*1.33)*1.33)*1.33)*1.33);
+  margin-top: calc(((1rem * 1.25) * 1.25) * 1.25);
+  margin-bottom: 1rem;
 }
 
 h3 {
   font-size: calc(calc(calc(1rem*1.33)*1.33)*1.33);
+  margin-top: calc((1rem * 1.25) * 1.25);
+  margin-bottom: 1rem;
 }
 
 h4 {
   font-size: calc(calc(1rem*1.33)*1.33);
+  margin-top: calc(1rem * 1.25);
+  margin-bottom: 1rem;
 }
 
 h5 {
   font-size: calc(1rem*1.33);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 h6 {
   font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 p,
 div {
   font-size: 1rem;
+}
+
+p {
+  margin-top: 1rem;
+}
+
+p + p {
+  margin-top: calc(1rem / 1.25);
 }
 
 span {
@@ -99,12 +117,14 @@ a {
 ul,
 ol {
   margin: 0;
+  margin-top: 1rem;
 }
 
 li {
   color: inherit;
   font-family: inherit;
   font-size: inherit;
+  margin-top: calc(1rem / 1.25);
 }
 li:last-child {
   margin-bottom: 0;
@@ -9994,452 +10014,1442 @@ li:last-child {
   left: 2.44140625rem;
 }
 
-[data-h2-margin*="MEDIAKEY(all, none)"] {
+[data-h2-margin*="MEDIAKEY(all, none)"],
+p[data-h2-margin*="MEDIAKEY(all, none)"],
+p + p[data-h2-margin*="MEDIAKEY(all, none)"],
+h1[data-h2-margin*="MEDIAKEY(all, none)"],
+h2[data-h2-margin*="MEDIAKEY(all, none)"],
+h3[data-h2-margin*="MEDIAKEY(all, none)"],
+h4[data-h2-margin*="MEDIAKEY(all, none)"],
+h5[data-h2-margin*="MEDIAKEY(all, none)"],
+h6[data-h2-margin*="MEDIAKEY(all, none)"],
+ul[data-h2-margin*="MEDIAKEY(all, none)"],
+li[data-h2-margin*="MEDIAKEY(all, none)"] {
   margin: 0;
 }
 
-[data-h2-margin*="MEDIAKEY(all, xxs)"] {
+[data-h2-margin*="MEDIAKEY(all, xxs)"],
+p[data-h2-margin*="MEDIAKEY(all, xxs)"],
+p + p[data-h2-margin*="MEDIAKEY(all, xxs)"],
+h1[data-h2-margin*="MEDIAKEY(all, xxs)"],
+h2[data-h2-margin*="MEDIAKEY(all, xxs)"],
+h3[data-h2-margin*="MEDIAKEY(all, xxs)"],
+h4[data-h2-margin*="MEDIAKEY(all, xxs)"],
+h5[data-h2-margin*="MEDIAKEY(all, xxs)"],
+h6[data-h2-margin*="MEDIAKEY(all, xxs)"],
+ul[data-h2-margin*="MEDIAKEY(all, xxs)"],
+li[data-h2-margin*="MEDIAKEY(all, xxs)"] {
   margin: 0.64rem;
 }
 
-[data-h2-margin*="MEDIAKEY(all, xs)"] {
+[data-h2-margin*="MEDIAKEY(all, xs)"],
+p[data-h2-margin*="MEDIAKEY(all, xs)"],
+p + p[data-h2-margin*="MEDIAKEY(all, xs)"],
+h1[data-h2-margin*="MEDIAKEY(all, xs)"],
+h2[data-h2-margin*="MEDIAKEY(all, xs)"],
+h3[data-h2-margin*="MEDIAKEY(all, xs)"],
+h4[data-h2-margin*="MEDIAKEY(all, xs)"],
+h5[data-h2-margin*="MEDIAKEY(all, xs)"],
+h6[data-h2-margin*="MEDIAKEY(all, xs)"],
+ul[data-h2-margin*="MEDIAKEY(all, xs)"],
+li[data-h2-margin*="MEDIAKEY(all, xs)"] {
   margin: 0.8rem;
 }
 
-[data-h2-margin*="MEDIAKEY(all, s)"] {
+[data-h2-margin*="MEDIAKEY(all, s)"],
+p[data-h2-margin*="MEDIAKEY(all, s)"],
+p + p[data-h2-margin*="MEDIAKEY(all, s)"],
+h1[data-h2-margin*="MEDIAKEY(all, s)"],
+h2[data-h2-margin*="MEDIAKEY(all, s)"],
+h3[data-h2-margin*="MEDIAKEY(all, s)"],
+h4[data-h2-margin*="MEDIAKEY(all, s)"],
+h5[data-h2-margin*="MEDIAKEY(all, s)"],
+h6[data-h2-margin*="MEDIAKEY(all, s)"],
+ul[data-h2-margin*="MEDIAKEY(all, s)"],
+li[data-h2-margin*="MEDIAKEY(all, s)"] {
   margin: 1rem;
 }
 
-[data-h2-margin*="MEDIAKEY(all, m)"] {
+[data-h2-margin*="MEDIAKEY(all, m)"],
+p[data-h2-margin*="MEDIAKEY(all, m)"],
+p + p[data-h2-margin*="MEDIAKEY(all, m)"],
+h1[data-h2-margin*="MEDIAKEY(all, m)"],
+h2[data-h2-margin*="MEDIAKEY(all, m)"],
+h3[data-h2-margin*="MEDIAKEY(all, m)"],
+h4[data-h2-margin*="MEDIAKEY(all, m)"],
+h5[data-h2-margin*="MEDIAKEY(all, m)"],
+h6[data-h2-margin*="MEDIAKEY(all, m)"],
+ul[data-h2-margin*="MEDIAKEY(all, m)"],
+li[data-h2-margin*="MEDIAKEY(all, m)"] {
   margin: 1.25rem;
 }
 
-[data-h2-margin*="MEDIAKEY(all, l)"] {
+[data-h2-margin*="MEDIAKEY(all, l)"],
+p[data-h2-margin*="MEDIAKEY(all, l)"],
+p + p[data-h2-margin*="MEDIAKEY(all, l)"],
+h1[data-h2-margin*="MEDIAKEY(all, l)"],
+h2[data-h2-margin*="MEDIAKEY(all, l)"],
+h3[data-h2-margin*="MEDIAKEY(all, l)"],
+h4[data-h2-margin*="MEDIAKEY(all, l)"],
+h5[data-h2-margin*="MEDIAKEY(all, l)"],
+h6[data-h2-margin*="MEDIAKEY(all, l)"],
+ul[data-h2-margin*="MEDIAKEY(all, l)"],
+li[data-h2-margin*="MEDIAKEY(all, l)"] {
   margin: 1.5625rem;
 }
 
-[data-h2-margin*="MEDIAKEY(all, xl)"] {
+[data-h2-margin*="MEDIAKEY(all, xl)"],
+p[data-h2-margin*="MEDIAKEY(all, xl)"],
+p + p[data-h2-margin*="MEDIAKEY(all, xl)"],
+h1[data-h2-margin*="MEDIAKEY(all, xl)"],
+h2[data-h2-margin*="MEDIAKEY(all, xl)"],
+h3[data-h2-margin*="MEDIAKEY(all, xl)"],
+h4[data-h2-margin*="MEDIAKEY(all, xl)"],
+h5[data-h2-margin*="MEDIAKEY(all, xl)"],
+h6[data-h2-margin*="MEDIAKEY(all, xl)"],
+ul[data-h2-margin*="MEDIAKEY(all, xl)"],
+li[data-h2-margin*="MEDIAKEY(all, xl)"] {
   margin: 1.953125rem;
 }
 
-[data-h2-margin*="MEDIAKEY(all, xxl)"] {
+[data-h2-margin*="MEDIAKEY(all, xxl)"],
+p[data-h2-margin*="MEDIAKEY(all, xxl)"],
+p + p[data-h2-margin*="MEDIAKEY(all, xxl)"],
+h1[data-h2-margin*="MEDIAKEY(all, xxl)"],
+h2[data-h2-margin*="MEDIAKEY(all, xxl)"],
+h3[data-h2-margin*="MEDIAKEY(all, xxl)"],
+h4[data-h2-margin*="MEDIAKEY(all, xxl)"],
+h5[data-h2-margin*="MEDIAKEY(all, xxl)"],
+h6[data-h2-margin*="MEDIAKEY(all, xxl)"],
+ul[data-h2-margin*="MEDIAKEY(all, xxl)"],
+li[data-h2-margin*="MEDIAKEY(all, xxl)"] {
   margin: 2.44140625rem;
 }
 
-[data-h2-margin*="MEDIAKEY(all, auto)"] {
+[data-h2-margin*="MEDIAKEY(all, auto)"],
+p[data-h2-margin*="MEDIAKEY(all, auto)"],
+p + p[data-h2-margin*="MEDIAKEY(all, auto)"],
+h1[data-h2-margin*="MEDIAKEY(all, auto)"],
+h2[data-h2-margin*="MEDIAKEY(all, auto)"],
+h3[data-h2-margin*="MEDIAKEY(all, auto)"],
+h4[data-h2-margin*="MEDIAKEY(all, auto)"],
+h5[data-h2-margin*="MEDIAKEY(all, auto)"],
+h6[data-h2-margin*="MEDIAKEY(all, auto)"],
+ul[data-h2-margin*="MEDIAKEY(all, auto)"],
+li[data-h2-margin*="MEDIAKEY(all, auto)"] {
   margin: auto;
 }
 
-[data-h2-margin*="MEDIAKEY(top, none)"] {
+[data-h2-margin*="MEDIAKEY(top, none)"],
+p[data-h2-margin*="MEDIAKEY(top, none)"],
+p + p[data-h2-margin*="MEDIAKEY(top, none)"],
+h1[data-h2-margin*="MEDIAKEY(top, none)"],
+h2[data-h2-margin*="MEDIAKEY(top, none)"],
+h3[data-h2-margin*="MEDIAKEY(top, none)"],
+h4[data-h2-margin*="MEDIAKEY(top, none)"],
+h5[data-h2-margin*="MEDIAKEY(top, none)"],
+h6[data-h2-margin*="MEDIAKEY(top, none)"],
+ul[data-h2-margin*="MEDIAKEY(top, none)"],
+li[data-h2-margin*="MEDIAKEY(top, none)"] {
   margin-top: 0;
 }
 
-[data-h2-margin*="MEDIAKEY(top, xxs)"] {
+[data-h2-margin*="MEDIAKEY(top, xxs)"],
+p[data-h2-margin*="MEDIAKEY(top, xxs)"],
+p + p[data-h2-margin*="MEDIAKEY(top, xxs)"],
+h1[data-h2-margin*="MEDIAKEY(top, xxs)"],
+h2[data-h2-margin*="MEDIAKEY(top, xxs)"],
+h3[data-h2-margin*="MEDIAKEY(top, xxs)"],
+h4[data-h2-margin*="MEDIAKEY(top, xxs)"],
+h5[data-h2-margin*="MEDIAKEY(top, xxs)"],
+h6[data-h2-margin*="MEDIAKEY(top, xxs)"],
+ul[data-h2-margin*="MEDIAKEY(top, xxs)"],
+li[data-h2-margin*="MEDIAKEY(top, xxs)"] {
   margin-top: 0.64rem;
 }
 
-[data-h2-margin*="MEDIAKEY(top, xs)"] {
+[data-h2-margin*="MEDIAKEY(top, xs)"],
+p[data-h2-margin*="MEDIAKEY(top, xs)"],
+p + p[data-h2-margin*="MEDIAKEY(top, xs)"],
+h1[data-h2-margin*="MEDIAKEY(top, xs)"],
+h2[data-h2-margin*="MEDIAKEY(top, xs)"],
+h3[data-h2-margin*="MEDIAKEY(top, xs)"],
+h4[data-h2-margin*="MEDIAKEY(top, xs)"],
+h5[data-h2-margin*="MEDIAKEY(top, xs)"],
+h6[data-h2-margin*="MEDIAKEY(top, xs)"],
+ul[data-h2-margin*="MEDIAKEY(top, xs)"],
+li[data-h2-margin*="MEDIAKEY(top, xs)"] {
   margin-top: 0.8rem;
 }
 
-[data-h2-margin*="MEDIAKEY(top, s)"] {
+[data-h2-margin*="MEDIAKEY(top, s)"],
+p[data-h2-margin*="MEDIAKEY(top, s)"],
+p + p[data-h2-margin*="MEDIAKEY(top, s)"],
+h1[data-h2-margin*="MEDIAKEY(top, s)"],
+h2[data-h2-margin*="MEDIAKEY(top, s)"],
+h3[data-h2-margin*="MEDIAKEY(top, s)"],
+h4[data-h2-margin*="MEDIAKEY(top, s)"],
+h5[data-h2-margin*="MEDIAKEY(top, s)"],
+h6[data-h2-margin*="MEDIAKEY(top, s)"],
+ul[data-h2-margin*="MEDIAKEY(top, s)"],
+li[data-h2-margin*="MEDIAKEY(top, s)"] {
   margin-top: 1rem;
 }
 
-[data-h2-margin*="MEDIAKEY(top, m)"] {
+[data-h2-margin*="MEDIAKEY(top, m)"],
+p[data-h2-margin*="MEDIAKEY(top, m)"],
+p + p[data-h2-margin*="MEDIAKEY(top, m)"],
+h1[data-h2-margin*="MEDIAKEY(top, m)"],
+h2[data-h2-margin*="MEDIAKEY(top, m)"],
+h3[data-h2-margin*="MEDIAKEY(top, m)"],
+h4[data-h2-margin*="MEDIAKEY(top, m)"],
+h5[data-h2-margin*="MEDIAKEY(top, m)"],
+h6[data-h2-margin*="MEDIAKEY(top, m)"],
+ul[data-h2-margin*="MEDIAKEY(top, m)"],
+li[data-h2-margin*="MEDIAKEY(top, m)"] {
   margin-top: 1.25rem;
 }
 
-[data-h2-margin*="MEDIAKEY(top, l)"] {
+[data-h2-margin*="MEDIAKEY(top, l)"],
+p[data-h2-margin*="MEDIAKEY(top, l)"],
+p + p[data-h2-margin*="MEDIAKEY(top, l)"],
+h1[data-h2-margin*="MEDIAKEY(top, l)"],
+h2[data-h2-margin*="MEDIAKEY(top, l)"],
+h3[data-h2-margin*="MEDIAKEY(top, l)"],
+h4[data-h2-margin*="MEDIAKEY(top, l)"],
+h5[data-h2-margin*="MEDIAKEY(top, l)"],
+h6[data-h2-margin*="MEDIAKEY(top, l)"],
+ul[data-h2-margin*="MEDIAKEY(top, l)"],
+li[data-h2-margin*="MEDIAKEY(top, l)"] {
   margin-top: 1.5625rem;
 }
 
-[data-h2-margin*="MEDIAKEY(top, xl)"] {
+[data-h2-margin*="MEDIAKEY(top, xl)"],
+p[data-h2-margin*="MEDIAKEY(top, xl)"],
+p + p[data-h2-margin*="MEDIAKEY(top, xl)"],
+h1[data-h2-margin*="MEDIAKEY(top, xl)"],
+h2[data-h2-margin*="MEDIAKEY(top, xl)"],
+h3[data-h2-margin*="MEDIAKEY(top, xl)"],
+h4[data-h2-margin*="MEDIAKEY(top, xl)"],
+h5[data-h2-margin*="MEDIAKEY(top, xl)"],
+h6[data-h2-margin*="MEDIAKEY(top, xl)"],
+ul[data-h2-margin*="MEDIAKEY(top, xl)"],
+li[data-h2-margin*="MEDIAKEY(top, xl)"] {
   margin-top: 1.953125rem;
 }
 
-[data-h2-margin*="MEDIAKEY(top, xxl)"] {
+[data-h2-margin*="MEDIAKEY(top, xxl)"],
+p[data-h2-margin*="MEDIAKEY(top, xxl)"],
+p + p[data-h2-margin*="MEDIAKEY(top, xxl)"],
+h1[data-h2-margin*="MEDIAKEY(top, xxl)"],
+h2[data-h2-margin*="MEDIAKEY(top, xxl)"],
+h3[data-h2-margin*="MEDIAKEY(top, xxl)"],
+h4[data-h2-margin*="MEDIAKEY(top, xxl)"],
+h5[data-h2-margin*="MEDIAKEY(top, xxl)"],
+h6[data-h2-margin*="MEDIAKEY(top, xxl)"],
+ul[data-h2-margin*="MEDIAKEY(top, xxl)"],
+li[data-h2-margin*="MEDIAKEY(top, xxl)"] {
   margin-top: 2.44140625rem;
 }
 
-[data-h2-margin*="MEDIAKEY(top, auto)"] {
+[data-h2-margin*="MEDIAKEY(top, auto)"],
+p[data-h2-margin*="MEDIAKEY(top, auto)"],
+p + p[data-h2-margin*="MEDIAKEY(top, auto)"],
+h1[data-h2-margin*="MEDIAKEY(top, auto)"],
+h2[data-h2-margin*="MEDIAKEY(top, auto)"],
+h3[data-h2-margin*="MEDIAKEY(top, auto)"],
+h4[data-h2-margin*="MEDIAKEY(top, auto)"],
+h5[data-h2-margin*="MEDIAKEY(top, auto)"],
+h6[data-h2-margin*="MEDIAKEY(top, auto)"],
+ul[data-h2-margin*="MEDIAKEY(top, auto)"],
+li[data-h2-margin*="MEDIAKEY(top, auto)"] {
   margin-top: auto;
 }
 
-[data-h2-margin*="MEDIAKEY(right, none)"] {
+[data-h2-margin*="MEDIAKEY(right, none)"],
+p[data-h2-margin*="MEDIAKEY(right, none)"],
+p + p[data-h2-margin*="MEDIAKEY(right, none)"],
+h1[data-h2-margin*="MEDIAKEY(right, none)"],
+h2[data-h2-margin*="MEDIAKEY(right, none)"],
+h3[data-h2-margin*="MEDIAKEY(right, none)"],
+h4[data-h2-margin*="MEDIAKEY(right, none)"],
+h5[data-h2-margin*="MEDIAKEY(right, none)"],
+h6[data-h2-margin*="MEDIAKEY(right, none)"],
+ul[data-h2-margin*="MEDIAKEY(right, none)"],
+li[data-h2-margin*="MEDIAKEY(right, none)"] {
   margin-right: 0;
 }
 
-[data-h2-margin*="MEDIAKEY(right, xxs)"] {
+[data-h2-margin*="MEDIAKEY(right, xxs)"],
+p[data-h2-margin*="MEDIAKEY(right, xxs)"],
+p + p[data-h2-margin*="MEDIAKEY(right, xxs)"],
+h1[data-h2-margin*="MEDIAKEY(right, xxs)"],
+h2[data-h2-margin*="MEDIAKEY(right, xxs)"],
+h3[data-h2-margin*="MEDIAKEY(right, xxs)"],
+h4[data-h2-margin*="MEDIAKEY(right, xxs)"],
+h5[data-h2-margin*="MEDIAKEY(right, xxs)"],
+h6[data-h2-margin*="MEDIAKEY(right, xxs)"],
+ul[data-h2-margin*="MEDIAKEY(right, xxs)"],
+li[data-h2-margin*="MEDIAKEY(right, xxs)"] {
   margin-right: 0.64rem;
 }
 
-[data-h2-margin*="MEDIAKEY(right, xs)"] {
+[data-h2-margin*="MEDIAKEY(right, xs)"],
+p[data-h2-margin*="MEDIAKEY(right, xs)"],
+p + p[data-h2-margin*="MEDIAKEY(right, xs)"],
+h1[data-h2-margin*="MEDIAKEY(right, xs)"],
+h2[data-h2-margin*="MEDIAKEY(right, xs)"],
+h3[data-h2-margin*="MEDIAKEY(right, xs)"],
+h4[data-h2-margin*="MEDIAKEY(right, xs)"],
+h5[data-h2-margin*="MEDIAKEY(right, xs)"],
+h6[data-h2-margin*="MEDIAKEY(right, xs)"],
+ul[data-h2-margin*="MEDIAKEY(right, xs)"],
+li[data-h2-margin*="MEDIAKEY(right, xs)"] {
   margin-right: 0.8rem;
 }
 
-[data-h2-margin*="MEDIAKEY(right, s)"] {
+[data-h2-margin*="MEDIAKEY(right, s)"],
+p[data-h2-margin*="MEDIAKEY(right, s)"],
+p + p[data-h2-margin*="MEDIAKEY(right, s)"],
+h1[data-h2-margin*="MEDIAKEY(right, s)"],
+h2[data-h2-margin*="MEDIAKEY(right, s)"],
+h3[data-h2-margin*="MEDIAKEY(right, s)"],
+h4[data-h2-margin*="MEDIAKEY(right, s)"],
+h5[data-h2-margin*="MEDIAKEY(right, s)"],
+h6[data-h2-margin*="MEDIAKEY(right, s)"],
+ul[data-h2-margin*="MEDIAKEY(right, s)"],
+li[data-h2-margin*="MEDIAKEY(right, s)"] {
   margin-right: 1rem;
 }
 
-[data-h2-margin*="MEDIAKEY(right, m)"] {
+[data-h2-margin*="MEDIAKEY(right, m)"],
+p[data-h2-margin*="MEDIAKEY(right, m)"],
+p + p[data-h2-margin*="MEDIAKEY(right, m)"],
+h1[data-h2-margin*="MEDIAKEY(right, m)"],
+h2[data-h2-margin*="MEDIAKEY(right, m)"],
+h3[data-h2-margin*="MEDIAKEY(right, m)"],
+h4[data-h2-margin*="MEDIAKEY(right, m)"],
+h5[data-h2-margin*="MEDIAKEY(right, m)"],
+h6[data-h2-margin*="MEDIAKEY(right, m)"],
+ul[data-h2-margin*="MEDIAKEY(right, m)"],
+li[data-h2-margin*="MEDIAKEY(right, m)"] {
   margin-right: 1.25rem;
 }
 
-[data-h2-margin*="MEDIAKEY(right, l)"] {
+[data-h2-margin*="MEDIAKEY(right, l)"],
+p[data-h2-margin*="MEDIAKEY(right, l)"],
+p + p[data-h2-margin*="MEDIAKEY(right, l)"],
+h1[data-h2-margin*="MEDIAKEY(right, l)"],
+h2[data-h2-margin*="MEDIAKEY(right, l)"],
+h3[data-h2-margin*="MEDIAKEY(right, l)"],
+h4[data-h2-margin*="MEDIAKEY(right, l)"],
+h5[data-h2-margin*="MEDIAKEY(right, l)"],
+h6[data-h2-margin*="MEDIAKEY(right, l)"],
+ul[data-h2-margin*="MEDIAKEY(right, l)"],
+li[data-h2-margin*="MEDIAKEY(right, l)"] {
   margin-right: 1.5625rem;
 }
 
-[data-h2-margin*="MEDIAKEY(right, xl)"] {
+[data-h2-margin*="MEDIAKEY(right, xl)"],
+p[data-h2-margin*="MEDIAKEY(right, xl)"],
+p + p[data-h2-margin*="MEDIAKEY(right, xl)"],
+h1[data-h2-margin*="MEDIAKEY(right, xl)"],
+h2[data-h2-margin*="MEDIAKEY(right, xl)"],
+h3[data-h2-margin*="MEDIAKEY(right, xl)"],
+h4[data-h2-margin*="MEDIAKEY(right, xl)"],
+h5[data-h2-margin*="MEDIAKEY(right, xl)"],
+h6[data-h2-margin*="MEDIAKEY(right, xl)"],
+ul[data-h2-margin*="MEDIAKEY(right, xl)"],
+li[data-h2-margin*="MEDIAKEY(right, xl)"] {
   margin-right: 1.953125rem;
 }
 
-[data-h2-margin*="MEDIAKEY(right, xxl)"] {
+[data-h2-margin*="MEDIAKEY(right, xxl)"],
+p[data-h2-margin*="MEDIAKEY(right, xxl)"],
+p + p[data-h2-margin*="MEDIAKEY(right, xxl)"],
+h1[data-h2-margin*="MEDIAKEY(right, xxl)"],
+h2[data-h2-margin*="MEDIAKEY(right, xxl)"],
+h3[data-h2-margin*="MEDIAKEY(right, xxl)"],
+h4[data-h2-margin*="MEDIAKEY(right, xxl)"],
+h5[data-h2-margin*="MEDIAKEY(right, xxl)"],
+h6[data-h2-margin*="MEDIAKEY(right, xxl)"],
+ul[data-h2-margin*="MEDIAKEY(right, xxl)"],
+li[data-h2-margin*="MEDIAKEY(right, xxl)"] {
   margin-right: 2.44140625rem;
 }
 
-[data-h2-margin*="MEDIAKEY(right, auto)"] {
+[data-h2-margin*="MEDIAKEY(right, auto)"],
+p[data-h2-margin*="MEDIAKEY(right, auto)"],
+p + p[data-h2-margin*="MEDIAKEY(right, auto)"],
+h1[data-h2-margin*="MEDIAKEY(right, auto)"],
+h2[data-h2-margin*="MEDIAKEY(right, auto)"],
+h3[data-h2-margin*="MEDIAKEY(right, auto)"],
+h4[data-h2-margin*="MEDIAKEY(right, auto)"],
+h5[data-h2-margin*="MEDIAKEY(right, auto)"],
+h6[data-h2-margin*="MEDIAKEY(right, auto)"],
+ul[data-h2-margin*="MEDIAKEY(right, auto)"],
+li[data-h2-margin*="MEDIAKEY(right, auto)"] {
   margin-right: auto;
 }
 
-[data-h2-margin*="MEDIAKEY(bottom, none)"] {
+[data-h2-margin*="MEDIAKEY(bottom, none)"],
+p[data-h2-margin*="MEDIAKEY(bottom, none)"],
+p + p[data-h2-margin*="MEDIAKEY(bottom, none)"],
+h1[data-h2-margin*="MEDIAKEY(bottom, none)"],
+h2[data-h2-margin*="MEDIAKEY(bottom, none)"],
+h3[data-h2-margin*="MEDIAKEY(bottom, none)"],
+h4[data-h2-margin*="MEDIAKEY(bottom, none)"],
+h5[data-h2-margin*="MEDIAKEY(bottom, none)"],
+h6[data-h2-margin*="MEDIAKEY(bottom, none)"],
+ul[data-h2-margin*="MEDIAKEY(bottom, none)"],
+li[data-h2-margin*="MEDIAKEY(bottom, none)"] {
   margin-bottom: 0;
 }
 
-[data-h2-margin*="MEDIAKEY(bottom, xxs)"] {
+[data-h2-margin*="MEDIAKEY(bottom, xxs)"],
+p[data-h2-margin*="MEDIAKEY(bottom, xxs)"],
+p + p[data-h2-margin*="MEDIAKEY(bottom, xxs)"],
+h1[data-h2-margin*="MEDIAKEY(bottom, xxs)"],
+h2[data-h2-margin*="MEDIAKEY(bottom, xxs)"],
+h3[data-h2-margin*="MEDIAKEY(bottom, xxs)"],
+h4[data-h2-margin*="MEDIAKEY(bottom, xxs)"],
+h5[data-h2-margin*="MEDIAKEY(bottom, xxs)"],
+h6[data-h2-margin*="MEDIAKEY(bottom, xxs)"],
+ul[data-h2-margin*="MEDIAKEY(bottom, xxs)"],
+li[data-h2-margin*="MEDIAKEY(bottom, xxs)"] {
   margin-bottom: 0.64rem;
 }
 
-[data-h2-margin*="MEDIAKEY(bottom, xs)"] {
+[data-h2-margin*="MEDIAKEY(bottom, xs)"],
+p[data-h2-margin*="MEDIAKEY(bottom, xs)"],
+p + p[data-h2-margin*="MEDIAKEY(bottom, xs)"],
+h1[data-h2-margin*="MEDIAKEY(bottom, xs)"],
+h2[data-h2-margin*="MEDIAKEY(bottom, xs)"],
+h3[data-h2-margin*="MEDIAKEY(bottom, xs)"],
+h4[data-h2-margin*="MEDIAKEY(bottom, xs)"],
+h5[data-h2-margin*="MEDIAKEY(bottom, xs)"],
+h6[data-h2-margin*="MEDIAKEY(bottom, xs)"],
+ul[data-h2-margin*="MEDIAKEY(bottom, xs)"],
+li[data-h2-margin*="MEDIAKEY(bottom, xs)"] {
   margin-bottom: 0.8rem;
 }
 
-[data-h2-margin*="MEDIAKEY(bottom, s)"] {
+[data-h2-margin*="MEDIAKEY(bottom, s)"],
+p[data-h2-margin*="MEDIAKEY(bottom, s)"],
+p + p[data-h2-margin*="MEDIAKEY(bottom, s)"],
+h1[data-h2-margin*="MEDIAKEY(bottom, s)"],
+h2[data-h2-margin*="MEDIAKEY(bottom, s)"],
+h3[data-h2-margin*="MEDIAKEY(bottom, s)"],
+h4[data-h2-margin*="MEDIAKEY(bottom, s)"],
+h5[data-h2-margin*="MEDIAKEY(bottom, s)"],
+h6[data-h2-margin*="MEDIAKEY(bottom, s)"],
+ul[data-h2-margin*="MEDIAKEY(bottom, s)"],
+li[data-h2-margin*="MEDIAKEY(bottom, s)"] {
   margin-bottom: 1rem;
 }
 
-[data-h2-margin*="MEDIAKEY(bottom, m)"] {
+[data-h2-margin*="MEDIAKEY(bottom, m)"],
+p[data-h2-margin*="MEDIAKEY(bottom, m)"],
+p + p[data-h2-margin*="MEDIAKEY(bottom, m)"],
+h1[data-h2-margin*="MEDIAKEY(bottom, m)"],
+h2[data-h2-margin*="MEDIAKEY(bottom, m)"],
+h3[data-h2-margin*="MEDIAKEY(bottom, m)"],
+h4[data-h2-margin*="MEDIAKEY(bottom, m)"],
+h5[data-h2-margin*="MEDIAKEY(bottom, m)"],
+h6[data-h2-margin*="MEDIAKEY(bottom, m)"],
+ul[data-h2-margin*="MEDIAKEY(bottom, m)"],
+li[data-h2-margin*="MEDIAKEY(bottom, m)"] {
   margin-bottom: 1.25rem;
 }
 
-[data-h2-margin*="MEDIAKEY(bottom, l)"] {
+[data-h2-margin*="MEDIAKEY(bottom, l)"],
+p[data-h2-margin*="MEDIAKEY(bottom, l)"],
+p + p[data-h2-margin*="MEDIAKEY(bottom, l)"],
+h1[data-h2-margin*="MEDIAKEY(bottom, l)"],
+h2[data-h2-margin*="MEDIAKEY(bottom, l)"],
+h3[data-h2-margin*="MEDIAKEY(bottom, l)"],
+h4[data-h2-margin*="MEDIAKEY(bottom, l)"],
+h5[data-h2-margin*="MEDIAKEY(bottom, l)"],
+h6[data-h2-margin*="MEDIAKEY(bottom, l)"],
+ul[data-h2-margin*="MEDIAKEY(bottom, l)"],
+li[data-h2-margin*="MEDIAKEY(bottom, l)"] {
   margin-bottom: 1.5625rem;
 }
 
-[data-h2-margin*="MEDIAKEY(bottom, xl)"] {
+[data-h2-margin*="MEDIAKEY(bottom, xl)"],
+p[data-h2-margin*="MEDIAKEY(bottom, xl)"],
+p + p[data-h2-margin*="MEDIAKEY(bottom, xl)"],
+h1[data-h2-margin*="MEDIAKEY(bottom, xl)"],
+h2[data-h2-margin*="MEDIAKEY(bottom, xl)"],
+h3[data-h2-margin*="MEDIAKEY(bottom, xl)"],
+h4[data-h2-margin*="MEDIAKEY(bottom, xl)"],
+h5[data-h2-margin*="MEDIAKEY(bottom, xl)"],
+h6[data-h2-margin*="MEDIAKEY(bottom, xl)"],
+ul[data-h2-margin*="MEDIAKEY(bottom, xl)"],
+li[data-h2-margin*="MEDIAKEY(bottom, xl)"] {
   margin-bottom: 1.953125rem;
 }
 
-[data-h2-margin*="MEDIAKEY(bottom, xxl)"] {
+[data-h2-margin*="MEDIAKEY(bottom, xxl)"],
+p[data-h2-margin*="MEDIAKEY(bottom, xxl)"],
+p + p[data-h2-margin*="MEDIAKEY(bottom, xxl)"],
+h1[data-h2-margin*="MEDIAKEY(bottom, xxl)"],
+h2[data-h2-margin*="MEDIAKEY(bottom, xxl)"],
+h3[data-h2-margin*="MEDIAKEY(bottom, xxl)"],
+h4[data-h2-margin*="MEDIAKEY(bottom, xxl)"],
+h5[data-h2-margin*="MEDIAKEY(bottom, xxl)"],
+h6[data-h2-margin*="MEDIAKEY(bottom, xxl)"],
+ul[data-h2-margin*="MEDIAKEY(bottom, xxl)"],
+li[data-h2-margin*="MEDIAKEY(bottom, xxl)"] {
   margin-bottom: 2.44140625rem;
 }
 
-[data-h2-margin*="MEDIAKEY(bottom, auto)"] {
+[data-h2-margin*="MEDIAKEY(bottom, auto)"],
+p[data-h2-margin*="MEDIAKEY(bottom, auto)"],
+p + p[data-h2-margin*="MEDIAKEY(bottom, auto)"],
+h1[data-h2-margin*="MEDIAKEY(bottom, auto)"],
+h2[data-h2-margin*="MEDIAKEY(bottom, auto)"],
+h3[data-h2-margin*="MEDIAKEY(bottom, auto)"],
+h4[data-h2-margin*="MEDIAKEY(bottom, auto)"],
+h5[data-h2-margin*="MEDIAKEY(bottom, auto)"],
+h6[data-h2-margin*="MEDIAKEY(bottom, auto)"],
+ul[data-h2-margin*="MEDIAKEY(bottom, auto)"],
+li[data-h2-margin*="MEDIAKEY(bottom, auto)"] {
   margin-bottom: auto;
 }
 
-[data-h2-margin*="MEDIAKEY(left, none)"] {
+[data-h2-margin*="MEDIAKEY(left, none)"],
+p[data-h2-margin*="MEDIAKEY(left, none)"],
+p + p[data-h2-margin*="MEDIAKEY(left, none)"],
+h1[data-h2-margin*="MEDIAKEY(left, none)"],
+h2[data-h2-margin*="MEDIAKEY(left, none)"],
+h3[data-h2-margin*="MEDIAKEY(left, none)"],
+h4[data-h2-margin*="MEDIAKEY(left, none)"],
+h5[data-h2-margin*="MEDIAKEY(left, none)"],
+h6[data-h2-margin*="MEDIAKEY(left, none)"],
+ul[data-h2-margin*="MEDIAKEY(left, none)"],
+li[data-h2-margin*="MEDIAKEY(left, none)"] {
   margin-left: 0;
 }
 
-[data-h2-margin*="MEDIAKEY(left, xxs)"] {
+[data-h2-margin*="MEDIAKEY(left, xxs)"],
+p[data-h2-margin*="MEDIAKEY(left, xxs)"],
+p + p[data-h2-margin*="MEDIAKEY(left, xxs)"],
+h1[data-h2-margin*="MEDIAKEY(left, xxs)"],
+h2[data-h2-margin*="MEDIAKEY(left, xxs)"],
+h3[data-h2-margin*="MEDIAKEY(left, xxs)"],
+h4[data-h2-margin*="MEDIAKEY(left, xxs)"],
+h5[data-h2-margin*="MEDIAKEY(left, xxs)"],
+h6[data-h2-margin*="MEDIAKEY(left, xxs)"],
+ul[data-h2-margin*="MEDIAKEY(left, xxs)"],
+li[data-h2-margin*="MEDIAKEY(left, xxs)"] {
   margin-left: 0.64rem;
 }
 
-[data-h2-margin*="MEDIAKEY(left, xs)"] {
+[data-h2-margin*="MEDIAKEY(left, xs)"],
+p[data-h2-margin*="MEDIAKEY(left, xs)"],
+p + p[data-h2-margin*="MEDIAKEY(left, xs)"],
+h1[data-h2-margin*="MEDIAKEY(left, xs)"],
+h2[data-h2-margin*="MEDIAKEY(left, xs)"],
+h3[data-h2-margin*="MEDIAKEY(left, xs)"],
+h4[data-h2-margin*="MEDIAKEY(left, xs)"],
+h5[data-h2-margin*="MEDIAKEY(left, xs)"],
+h6[data-h2-margin*="MEDIAKEY(left, xs)"],
+ul[data-h2-margin*="MEDIAKEY(left, xs)"],
+li[data-h2-margin*="MEDIAKEY(left, xs)"] {
   margin-left: 0.8rem;
 }
 
-[data-h2-margin*="MEDIAKEY(left, s)"] {
+[data-h2-margin*="MEDIAKEY(left, s)"],
+p[data-h2-margin*="MEDIAKEY(left, s)"],
+p + p[data-h2-margin*="MEDIAKEY(left, s)"],
+h1[data-h2-margin*="MEDIAKEY(left, s)"],
+h2[data-h2-margin*="MEDIAKEY(left, s)"],
+h3[data-h2-margin*="MEDIAKEY(left, s)"],
+h4[data-h2-margin*="MEDIAKEY(left, s)"],
+h5[data-h2-margin*="MEDIAKEY(left, s)"],
+h6[data-h2-margin*="MEDIAKEY(left, s)"],
+ul[data-h2-margin*="MEDIAKEY(left, s)"],
+li[data-h2-margin*="MEDIAKEY(left, s)"] {
   margin-left: 1rem;
 }
 
-[data-h2-margin*="MEDIAKEY(left, m)"] {
+[data-h2-margin*="MEDIAKEY(left, m)"],
+p[data-h2-margin*="MEDIAKEY(left, m)"],
+p + p[data-h2-margin*="MEDIAKEY(left, m)"],
+h1[data-h2-margin*="MEDIAKEY(left, m)"],
+h2[data-h2-margin*="MEDIAKEY(left, m)"],
+h3[data-h2-margin*="MEDIAKEY(left, m)"],
+h4[data-h2-margin*="MEDIAKEY(left, m)"],
+h5[data-h2-margin*="MEDIAKEY(left, m)"],
+h6[data-h2-margin*="MEDIAKEY(left, m)"],
+ul[data-h2-margin*="MEDIAKEY(left, m)"],
+li[data-h2-margin*="MEDIAKEY(left, m)"] {
   margin-left: 1.25rem;
 }
 
-[data-h2-margin*="MEDIAKEY(left, l)"] {
+[data-h2-margin*="MEDIAKEY(left, l)"],
+p[data-h2-margin*="MEDIAKEY(left, l)"],
+p + p[data-h2-margin*="MEDIAKEY(left, l)"],
+h1[data-h2-margin*="MEDIAKEY(left, l)"],
+h2[data-h2-margin*="MEDIAKEY(left, l)"],
+h3[data-h2-margin*="MEDIAKEY(left, l)"],
+h4[data-h2-margin*="MEDIAKEY(left, l)"],
+h5[data-h2-margin*="MEDIAKEY(left, l)"],
+h6[data-h2-margin*="MEDIAKEY(left, l)"],
+ul[data-h2-margin*="MEDIAKEY(left, l)"],
+li[data-h2-margin*="MEDIAKEY(left, l)"] {
   margin-left: 1.5625rem;
 }
 
-[data-h2-margin*="MEDIAKEY(left, xl)"] {
+[data-h2-margin*="MEDIAKEY(left, xl)"],
+p[data-h2-margin*="MEDIAKEY(left, xl)"],
+p + p[data-h2-margin*="MEDIAKEY(left, xl)"],
+h1[data-h2-margin*="MEDIAKEY(left, xl)"],
+h2[data-h2-margin*="MEDIAKEY(left, xl)"],
+h3[data-h2-margin*="MEDIAKEY(left, xl)"],
+h4[data-h2-margin*="MEDIAKEY(left, xl)"],
+h5[data-h2-margin*="MEDIAKEY(left, xl)"],
+h6[data-h2-margin*="MEDIAKEY(left, xl)"],
+ul[data-h2-margin*="MEDIAKEY(left, xl)"],
+li[data-h2-margin*="MEDIAKEY(left, xl)"] {
   margin-left: 1.953125rem;
 }
 
-[data-h2-margin*="MEDIAKEY(left, xxl)"] {
+[data-h2-margin*="MEDIAKEY(left, xxl)"],
+p[data-h2-margin*="MEDIAKEY(left, xxl)"],
+p + p[data-h2-margin*="MEDIAKEY(left, xxl)"],
+h1[data-h2-margin*="MEDIAKEY(left, xxl)"],
+h2[data-h2-margin*="MEDIAKEY(left, xxl)"],
+h3[data-h2-margin*="MEDIAKEY(left, xxl)"],
+h4[data-h2-margin*="MEDIAKEY(left, xxl)"],
+h5[data-h2-margin*="MEDIAKEY(left, xxl)"],
+h6[data-h2-margin*="MEDIAKEY(left, xxl)"],
+ul[data-h2-margin*="MEDIAKEY(left, xxl)"],
+li[data-h2-margin*="MEDIAKEY(left, xxl)"] {
   margin-left: 2.44140625rem;
 }
 
-[data-h2-margin*="MEDIAKEY(left, auto)"] {
+[data-h2-margin*="MEDIAKEY(left, auto)"],
+p[data-h2-margin*="MEDIAKEY(left, auto)"],
+p + p[data-h2-margin*="MEDIAKEY(left, auto)"],
+h1[data-h2-margin*="MEDIAKEY(left, auto)"],
+h2[data-h2-margin*="MEDIAKEY(left, auto)"],
+h3[data-h2-margin*="MEDIAKEY(left, auto)"],
+h4[data-h2-margin*="MEDIAKEY(left, auto)"],
+h5[data-h2-margin*="MEDIAKEY(left, auto)"],
+h6[data-h2-margin*="MEDIAKEY(left, auto)"],
+ul[data-h2-margin*="MEDIAKEY(left, auto)"],
+li[data-h2-margin*="MEDIAKEY(left, auto)"] {
   margin-left: auto;
 }
 
-[data-h2-margin*="MEDIAKEY(top-right, none)"] {
+[data-h2-margin*="MEDIAKEY(top-right, none)"],
+p[data-h2-margin*="MEDIAKEY(top-right, none)"],
+p + p[data-h2-margin*="MEDIAKEY(top-right, none)"],
+h1[data-h2-margin*="MEDIAKEY(top-right, none)"],
+h2[data-h2-margin*="MEDIAKEY(top-right, none)"],
+h3[data-h2-margin*="MEDIAKEY(top-right, none)"],
+h4[data-h2-margin*="MEDIAKEY(top-right, none)"],
+h5[data-h2-margin*="MEDIAKEY(top-right, none)"],
+h6[data-h2-margin*="MEDIAKEY(top-right, none)"],
+ul[data-h2-margin*="MEDIAKEY(top-right, none)"],
+li[data-h2-margin*="MEDIAKEY(top-right, none)"] {
   margin-top: 0;
   margin-right: 0;
 }
 
-[data-h2-margin*="MEDIAKEY(top-right, xxs)"] {
+[data-h2-margin*="MEDIAKEY(top-right, xxs)"],
+p[data-h2-margin*="MEDIAKEY(top-right, xxs)"],
+p + p[data-h2-margin*="MEDIAKEY(top-right, xxs)"],
+h1[data-h2-margin*="MEDIAKEY(top-right, xxs)"],
+h2[data-h2-margin*="MEDIAKEY(top-right, xxs)"],
+h3[data-h2-margin*="MEDIAKEY(top-right, xxs)"],
+h4[data-h2-margin*="MEDIAKEY(top-right, xxs)"],
+h5[data-h2-margin*="MEDIAKEY(top-right, xxs)"],
+h6[data-h2-margin*="MEDIAKEY(top-right, xxs)"],
+ul[data-h2-margin*="MEDIAKEY(top-right, xxs)"],
+li[data-h2-margin*="MEDIAKEY(top-right, xxs)"] {
   margin-top: 0.64rem;
   margin-right: 0.64rem;
 }
 
-[data-h2-margin*="MEDIAKEY(top-right, xs)"] {
+[data-h2-margin*="MEDIAKEY(top-right, xs)"],
+p[data-h2-margin*="MEDIAKEY(top-right, xs)"],
+p + p[data-h2-margin*="MEDIAKEY(top-right, xs)"],
+h1[data-h2-margin*="MEDIAKEY(top-right, xs)"],
+h2[data-h2-margin*="MEDIAKEY(top-right, xs)"],
+h3[data-h2-margin*="MEDIAKEY(top-right, xs)"],
+h4[data-h2-margin*="MEDIAKEY(top-right, xs)"],
+h5[data-h2-margin*="MEDIAKEY(top-right, xs)"],
+h6[data-h2-margin*="MEDIAKEY(top-right, xs)"],
+ul[data-h2-margin*="MEDIAKEY(top-right, xs)"],
+li[data-h2-margin*="MEDIAKEY(top-right, xs)"] {
   margin-top: 0.8rem;
   margin-right: 0.8rem;
 }
 
-[data-h2-margin*="MEDIAKEY(top-right, s)"] {
+[data-h2-margin*="MEDIAKEY(top-right, s)"],
+p[data-h2-margin*="MEDIAKEY(top-right, s)"],
+p + p[data-h2-margin*="MEDIAKEY(top-right, s)"],
+h1[data-h2-margin*="MEDIAKEY(top-right, s)"],
+h2[data-h2-margin*="MEDIAKEY(top-right, s)"],
+h3[data-h2-margin*="MEDIAKEY(top-right, s)"],
+h4[data-h2-margin*="MEDIAKEY(top-right, s)"],
+h5[data-h2-margin*="MEDIAKEY(top-right, s)"],
+h6[data-h2-margin*="MEDIAKEY(top-right, s)"],
+ul[data-h2-margin*="MEDIAKEY(top-right, s)"],
+li[data-h2-margin*="MEDIAKEY(top-right, s)"] {
   margin-top: 1rem;
   margin-right: 1rem;
 }
 
-[data-h2-margin*="MEDIAKEY(top-right, m)"] {
+[data-h2-margin*="MEDIAKEY(top-right, m)"],
+p[data-h2-margin*="MEDIAKEY(top-right, m)"],
+p + p[data-h2-margin*="MEDIAKEY(top-right, m)"],
+h1[data-h2-margin*="MEDIAKEY(top-right, m)"],
+h2[data-h2-margin*="MEDIAKEY(top-right, m)"],
+h3[data-h2-margin*="MEDIAKEY(top-right, m)"],
+h4[data-h2-margin*="MEDIAKEY(top-right, m)"],
+h5[data-h2-margin*="MEDIAKEY(top-right, m)"],
+h6[data-h2-margin*="MEDIAKEY(top-right, m)"],
+ul[data-h2-margin*="MEDIAKEY(top-right, m)"],
+li[data-h2-margin*="MEDIAKEY(top-right, m)"] {
   margin-top: 1.25rem;
   margin-right: 1.25rem;
 }
 
-[data-h2-margin*="MEDIAKEY(top-right, l)"] {
+[data-h2-margin*="MEDIAKEY(top-right, l)"],
+p[data-h2-margin*="MEDIAKEY(top-right, l)"],
+p + p[data-h2-margin*="MEDIAKEY(top-right, l)"],
+h1[data-h2-margin*="MEDIAKEY(top-right, l)"],
+h2[data-h2-margin*="MEDIAKEY(top-right, l)"],
+h3[data-h2-margin*="MEDIAKEY(top-right, l)"],
+h4[data-h2-margin*="MEDIAKEY(top-right, l)"],
+h5[data-h2-margin*="MEDIAKEY(top-right, l)"],
+h6[data-h2-margin*="MEDIAKEY(top-right, l)"],
+ul[data-h2-margin*="MEDIAKEY(top-right, l)"],
+li[data-h2-margin*="MEDIAKEY(top-right, l)"] {
   margin-top: 1.5625rem;
   margin-right: 1.5625rem;
 }
 
-[data-h2-margin*="MEDIAKEY(top-right, xl)"] {
+[data-h2-margin*="MEDIAKEY(top-right, xl)"],
+p[data-h2-margin*="MEDIAKEY(top-right, xl)"],
+p + p[data-h2-margin*="MEDIAKEY(top-right, xl)"],
+h1[data-h2-margin*="MEDIAKEY(top-right, xl)"],
+h2[data-h2-margin*="MEDIAKEY(top-right, xl)"],
+h3[data-h2-margin*="MEDIAKEY(top-right, xl)"],
+h4[data-h2-margin*="MEDIAKEY(top-right, xl)"],
+h5[data-h2-margin*="MEDIAKEY(top-right, xl)"],
+h6[data-h2-margin*="MEDIAKEY(top-right, xl)"],
+ul[data-h2-margin*="MEDIAKEY(top-right, xl)"],
+li[data-h2-margin*="MEDIAKEY(top-right, xl)"] {
   margin-top: 1.953125rem;
   margin-right: 1.953125rem;
 }
 
-[data-h2-margin*="MEDIAKEY(top-right, xxl)"] {
+[data-h2-margin*="MEDIAKEY(top-right, xxl)"],
+p[data-h2-margin*="MEDIAKEY(top-right, xxl)"],
+p + p[data-h2-margin*="MEDIAKEY(top-right, xxl)"],
+h1[data-h2-margin*="MEDIAKEY(top-right, xxl)"],
+h2[data-h2-margin*="MEDIAKEY(top-right, xxl)"],
+h3[data-h2-margin*="MEDIAKEY(top-right, xxl)"],
+h4[data-h2-margin*="MEDIAKEY(top-right, xxl)"],
+h5[data-h2-margin*="MEDIAKEY(top-right, xxl)"],
+h6[data-h2-margin*="MEDIAKEY(top-right, xxl)"],
+ul[data-h2-margin*="MEDIAKEY(top-right, xxl)"],
+li[data-h2-margin*="MEDIAKEY(top-right, xxl)"] {
   margin-top: 2.44140625rem;
   margin-right: 2.44140625rem;
 }
 
-[data-h2-margin*="MEDIAKEY(top-right, auto)"] {
+[data-h2-margin*="MEDIAKEY(top-right, auto)"],
+p[data-h2-margin*="MEDIAKEY(top-right, auto)"],
+p + p[data-h2-margin*="MEDIAKEY(top-right, auto)"],
+h1[data-h2-margin*="MEDIAKEY(top-right, auto)"],
+h2[data-h2-margin*="MEDIAKEY(top-right, auto)"],
+h3[data-h2-margin*="MEDIAKEY(top-right, auto)"],
+h4[data-h2-margin*="MEDIAKEY(top-right, auto)"],
+h5[data-h2-margin*="MEDIAKEY(top-right, auto)"],
+h6[data-h2-margin*="MEDIAKEY(top-right, auto)"],
+ul[data-h2-margin*="MEDIAKEY(top-right, auto)"],
+li[data-h2-margin*="MEDIAKEY(top-right, auto)"] {
   margin-top: auto;
   margin-right: auto;
 }
 
-[data-h2-margin*="MEDIAKEY(top-bottom, none)"] {
+[data-h2-margin*="MEDIAKEY(top-bottom, none)"],
+p[data-h2-margin*="MEDIAKEY(top-bottom, none)"],
+p + p[data-h2-margin*="MEDIAKEY(top-bottom, none)"],
+h1[data-h2-margin*="MEDIAKEY(top-bottom, none)"],
+h2[data-h2-margin*="MEDIAKEY(top-bottom, none)"],
+h3[data-h2-margin*="MEDIAKEY(top-bottom, none)"],
+h4[data-h2-margin*="MEDIAKEY(top-bottom, none)"],
+h5[data-h2-margin*="MEDIAKEY(top-bottom, none)"],
+h6[data-h2-margin*="MEDIAKEY(top-bottom, none)"],
+ul[data-h2-margin*="MEDIAKEY(top-bottom, none)"],
+li[data-h2-margin*="MEDIAKEY(top-bottom, none)"] {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-[data-h2-margin*="MEDIAKEY(top-bottom, xxs)"] {
+[data-h2-margin*="MEDIAKEY(top-bottom, xxs)"],
+p[data-h2-margin*="MEDIAKEY(top-bottom, xxs)"],
+p + p[data-h2-margin*="MEDIAKEY(top-bottom, xxs)"],
+h1[data-h2-margin*="MEDIAKEY(top-bottom, xxs)"],
+h2[data-h2-margin*="MEDIAKEY(top-bottom, xxs)"],
+h3[data-h2-margin*="MEDIAKEY(top-bottom, xxs)"],
+h4[data-h2-margin*="MEDIAKEY(top-bottom, xxs)"],
+h5[data-h2-margin*="MEDIAKEY(top-bottom, xxs)"],
+h6[data-h2-margin*="MEDIAKEY(top-bottom, xxs)"],
+ul[data-h2-margin*="MEDIAKEY(top-bottom, xxs)"],
+li[data-h2-margin*="MEDIAKEY(top-bottom, xxs)"] {
   margin-top: 0.64rem;
   margin-bottom: 0.64rem;
 }
 
-[data-h2-margin*="MEDIAKEY(top-bottom, xs)"] {
+[data-h2-margin*="MEDIAKEY(top-bottom, xs)"],
+p[data-h2-margin*="MEDIAKEY(top-bottom, xs)"],
+p + p[data-h2-margin*="MEDIAKEY(top-bottom, xs)"],
+h1[data-h2-margin*="MEDIAKEY(top-bottom, xs)"],
+h2[data-h2-margin*="MEDIAKEY(top-bottom, xs)"],
+h3[data-h2-margin*="MEDIAKEY(top-bottom, xs)"],
+h4[data-h2-margin*="MEDIAKEY(top-bottom, xs)"],
+h5[data-h2-margin*="MEDIAKEY(top-bottom, xs)"],
+h6[data-h2-margin*="MEDIAKEY(top-bottom, xs)"],
+ul[data-h2-margin*="MEDIAKEY(top-bottom, xs)"],
+li[data-h2-margin*="MEDIAKEY(top-bottom, xs)"] {
   margin-top: 0.8rem;
   margin-bottom: 0.8rem;
 }
 
-[data-h2-margin*="MEDIAKEY(top-bottom, s)"] {
+[data-h2-margin*="MEDIAKEY(top-bottom, s)"],
+p[data-h2-margin*="MEDIAKEY(top-bottom, s)"],
+p + p[data-h2-margin*="MEDIAKEY(top-bottom, s)"],
+h1[data-h2-margin*="MEDIAKEY(top-bottom, s)"],
+h2[data-h2-margin*="MEDIAKEY(top-bottom, s)"],
+h3[data-h2-margin*="MEDIAKEY(top-bottom, s)"],
+h4[data-h2-margin*="MEDIAKEY(top-bottom, s)"],
+h5[data-h2-margin*="MEDIAKEY(top-bottom, s)"],
+h6[data-h2-margin*="MEDIAKEY(top-bottom, s)"],
+ul[data-h2-margin*="MEDIAKEY(top-bottom, s)"],
+li[data-h2-margin*="MEDIAKEY(top-bottom, s)"] {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-[data-h2-margin*="MEDIAKEY(top-bottom, m)"] {
+[data-h2-margin*="MEDIAKEY(top-bottom, m)"],
+p[data-h2-margin*="MEDIAKEY(top-bottom, m)"],
+p + p[data-h2-margin*="MEDIAKEY(top-bottom, m)"],
+h1[data-h2-margin*="MEDIAKEY(top-bottom, m)"],
+h2[data-h2-margin*="MEDIAKEY(top-bottom, m)"],
+h3[data-h2-margin*="MEDIAKEY(top-bottom, m)"],
+h4[data-h2-margin*="MEDIAKEY(top-bottom, m)"],
+h5[data-h2-margin*="MEDIAKEY(top-bottom, m)"],
+h6[data-h2-margin*="MEDIAKEY(top-bottom, m)"],
+ul[data-h2-margin*="MEDIAKEY(top-bottom, m)"],
+li[data-h2-margin*="MEDIAKEY(top-bottom, m)"] {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
 }
 
-[data-h2-margin*="MEDIAKEY(top-bottom, l)"] {
+[data-h2-margin*="MEDIAKEY(top-bottom, l)"],
+p[data-h2-margin*="MEDIAKEY(top-bottom, l)"],
+p + p[data-h2-margin*="MEDIAKEY(top-bottom, l)"],
+h1[data-h2-margin*="MEDIAKEY(top-bottom, l)"],
+h2[data-h2-margin*="MEDIAKEY(top-bottom, l)"],
+h3[data-h2-margin*="MEDIAKEY(top-bottom, l)"],
+h4[data-h2-margin*="MEDIAKEY(top-bottom, l)"],
+h5[data-h2-margin*="MEDIAKEY(top-bottom, l)"],
+h6[data-h2-margin*="MEDIAKEY(top-bottom, l)"],
+ul[data-h2-margin*="MEDIAKEY(top-bottom, l)"],
+li[data-h2-margin*="MEDIAKEY(top-bottom, l)"] {
   margin-top: 1.5625rem;
   margin-bottom: 1.5625rem;
 }
 
-[data-h2-margin*="MEDIAKEY(top-bottom, xl)"] {
+[data-h2-margin*="MEDIAKEY(top-bottom, xl)"],
+p[data-h2-margin*="MEDIAKEY(top-bottom, xl)"],
+p + p[data-h2-margin*="MEDIAKEY(top-bottom, xl)"],
+h1[data-h2-margin*="MEDIAKEY(top-bottom, xl)"],
+h2[data-h2-margin*="MEDIAKEY(top-bottom, xl)"],
+h3[data-h2-margin*="MEDIAKEY(top-bottom, xl)"],
+h4[data-h2-margin*="MEDIAKEY(top-bottom, xl)"],
+h5[data-h2-margin*="MEDIAKEY(top-bottom, xl)"],
+h6[data-h2-margin*="MEDIAKEY(top-bottom, xl)"],
+ul[data-h2-margin*="MEDIAKEY(top-bottom, xl)"],
+li[data-h2-margin*="MEDIAKEY(top-bottom, xl)"] {
   margin-top: 1.953125rem;
   margin-bottom: 1.953125rem;
 }
 
-[data-h2-margin*="MEDIAKEY(top-bottom, xxl)"] {
+[data-h2-margin*="MEDIAKEY(top-bottom, xxl)"],
+p[data-h2-margin*="MEDIAKEY(top-bottom, xxl)"],
+p + p[data-h2-margin*="MEDIAKEY(top-bottom, xxl)"],
+h1[data-h2-margin*="MEDIAKEY(top-bottom, xxl)"],
+h2[data-h2-margin*="MEDIAKEY(top-bottom, xxl)"],
+h3[data-h2-margin*="MEDIAKEY(top-bottom, xxl)"],
+h4[data-h2-margin*="MEDIAKEY(top-bottom, xxl)"],
+h5[data-h2-margin*="MEDIAKEY(top-bottom, xxl)"],
+h6[data-h2-margin*="MEDIAKEY(top-bottom, xxl)"],
+ul[data-h2-margin*="MEDIAKEY(top-bottom, xxl)"],
+li[data-h2-margin*="MEDIAKEY(top-bottom, xxl)"] {
   margin-top: 2.44140625rem;
   margin-bottom: 2.44140625rem;
 }
 
-[data-h2-margin*="MEDIAKEY(top-bottom, auto)"] {
+[data-h2-margin*="MEDIAKEY(top-bottom, auto)"],
+p[data-h2-margin*="MEDIAKEY(top-bottom, auto)"],
+p + p[data-h2-margin*="MEDIAKEY(top-bottom, auto)"],
+h1[data-h2-margin*="MEDIAKEY(top-bottom, auto)"],
+h2[data-h2-margin*="MEDIAKEY(top-bottom, auto)"],
+h3[data-h2-margin*="MEDIAKEY(top-bottom, auto)"],
+h4[data-h2-margin*="MEDIAKEY(top-bottom, auto)"],
+h5[data-h2-margin*="MEDIAKEY(top-bottom, auto)"],
+h6[data-h2-margin*="MEDIAKEY(top-bottom, auto)"],
+ul[data-h2-margin*="MEDIAKEY(top-bottom, auto)"],
+li[data-h2-margin*="MEDIAKEY(top-bottom, auto)"] {
   margin-top: auto;
   margin-bottom: auto;
 }
 
-[data-h2-margin*="MEDIAKEY(top-left, none)"] {
+[data-h2-margin*="MEDIAKEY(top-left, none)"],
+p[data-h2-margin*="MEDIAKEY(top-left, none)"],
+p + p[data-h2-margin*="MEDIAKEY(top-left, none)"],
+h1[data-h2-margin*="MEDIAKEY(top-left, none)"],
+h2[data-h2-margin*="MEDIAKEY(top-left, none)"],
+h3[data-h2-margin*="MEDIAKEY(top-left, none)"],
+h4[data-h2-margin*="MEDIAKEY(top-left, none)"],
+h5[data-h2-margin*="MEDIAKEY(top-left, none)"],
+h6[data-h2-margin*="MEDIAKEY(top-left, none)"],
+ul[data-h2-margin*="MEDIAKEY(top-left, none)"],
+li[data-h2-margin*="MEDIAKEY(top-left, none)"] {
   margin-top: 0;
   margin-left: 0;
 }
 
-[data-h2-margin*="MEDIAKEY(top-left, xxs)"] {
+[data-h2-margin*="MEDIAKEY(top-left, xxs)"],
+p[data-h2-margin*="MEDIAKEY(top-left, xxs)"],
+p + p[data-h2-margin*="MEDIAKEY(top-left, xxs)"],
+h1[data-h2-margin*="MEDIAKEY(top-left, xxs)"],
+h2[data-h2-margin*="MEDIAKEY(top-left, xxs)"],
+h3[data-h2-margin*="MEDIAKEY(top-left, xxs)"],
+h4[data-h2-margin*="MEDIAKEY(top-left, xxs)"],
+h5[data-h2-margin*="MEDIAKEY(top-left, xxs)"],
+h6[data-h2-margin*="MEDIAKEY(top-left, xxs)"],
+ul[data-h2-margin*="MEDIAKEY(top-left, xxs)"],
+li[data-h2-margin*="MEDIAKEY(top-left, xxs)"] {
   margin-top: 0.64rem;
   margin-left: 0.64rem;
 }
 
-[data-h2-margin*="MEDIAKEY(top-left, xs)"] {
+[data-h2-margin*="MEDIAKEY(top-left, xs)"],
+p[data-h2-margin*="MEDIAKEY(top-left, xs)"],
+p + p[data-h2-margin*="MEDIAKEY(top-left, xs)"],
+h1[data-h2-margin*="MEDIAKEY(top-left, xs)"],
+h2[data-h2-margin*="MEDIAKEY(top-left, xs)"],
+h3[data-h2-margin*="MEDIAKEY(top-left, xs)"],
+h4[data-h2-margin*="MEDIAKEY(top-left, xs)"],
+h5[data-h2-margin*="MEDIAKEY(top-left, xs)"],
+h6[data-h2-margin*="MEDIAKEY(top-left, xs)"],
+ul[data-h2-margin*="MEDIAKEY(top-left, xs)"],
+li[data-h2-margin*="MEDIAKEY(top-left, xs)"] {
   margin-top: 0.8rem;
   margin-left: 0.8rem;
 }
 
-[data-h2-margin*="MEDIAKEY(top-left, s)"] {
+[data-h2-margin*="MEDIAKEY(top-left, s)"],
+p[data-h2-margin*="MEDIAKEY(top-left, s)"],
+p + p[data-h2-margin*="MEDIAKEY(top-left, s)"],
+h1[data-h2-margin*="MEDIAKEY(top-left, s)"],
+h2[data-h2-margin*="MEDIAKEY(top-left, s)"],
+h3[data-h2-margin*="MEDIAKEY(top-left, s)"],
+h4[data-h2-margin*="MEDIAKEY(top-left, s)"],
+h5[data-h2-margin*="MEDIAKEY(top-left, s)"],
+h6[data-h2-margin*="MEDIAKEY(top-left, s)"],
+ul[data-h2-margin*="MEDIAKEY(top-left, s)"],
+li[data-h2-margin*="MEDIAKEY(top-left, s)"] {
   margin-top: 1rem;
   margin-left: 1rem;
 }
 
-[data-h2-margin*="MEDIAKEY(top-left, m)"] {
+[data-h2-margin*="MEDIAKEY(top-left, m)"],
+p[data-h2-margin*="MEDIAKEY(top-left, m)"],
+p + p[data-h2-margin*="MEDIAKEY(top-left, m)"],
+h1[data-h2-margin*="MEDIAKEY(top-left, m)"],
+h2[data-h2-margin*="MEDIAKEY(top-left, m)"],
+h3[data-h2-margin*="MEDIAKEY(top-left, m)"],
+h4[data-h2-margin*="MEDIAKEY(top-left, m)"],
+h5[data-h2-margin*="MEDIAKEY(top-left, m)"],
+h6[data-h2-margin*="MEDIAKEY(top-left, m)"],
+ul[data-h2-margin*="MEDIAKEY(top-left, m)"],
+li[data-h2-margin*="MEDIAKEY(top-left, m)"] {
   margin-top: 1.25rem;
   margin-left: 1.25rem;
 }
 
-[data-h2-margin*="MEDIAKEY(top-left, l)"] {
+[data-h2-margin*="MEDIAKEY(top-left, l)"],
+p[data-h2-margin*="MEDIAKEY(top-left, l)"],
+p + p[data-h2-margin*="MEDIAKEY(top-left, l)"],
+h1[data-h2-margin*="MEDIAKEY(top-left, l)"],
+h2[data-h2-margin*="MEDIAKEY(top-left, l)"],
+h3[data-h2-margin*="MEDIAKEY(top-left, l)"],
+h4[data-h2-margin*="MEDIAKEY(top-left, l)"],
+h5[data-h2-margin*="MEDIAKEY(top-left, l)"],
+h6[data-h2-margin*="MEDIAKEY(top-left, l)"],
+ul[data-h2-margin*="MEDIAKEY(top-left, l)"],
+li[data-h2-margin*="MEDIAKEY(top-left, l)"] {
   margin-top: 1.5625rem;
   margin-left: 1.5625rem;
 }
 
-[data-h2-margin*="MEDIAKEY(top-left, xl)"] {
+[data-h2-margin*="MEDIAKEY(top-left, xl)"],
+p[data-h2-margin*="MEDIAKEY(top-left, xl)"],
+p + p[data-h2-margin*="MEDIAKEY(top-left, xl)"],
+h1[data-h2-margin*="MEDIAKEY(top-left, xl)"],
+h2[data-h2-margin*="MEDIAKEY(top-left, xl)"],
+h3[data-h2-margin*="MEDIAKEY(top-left, xl)"],
+h4[data-h2-margin*="MEDIAKEY(top-left, xl)"],
+h5[data-h2-margin*="MEDIAKEY(top-left, xl)"],
+h6[data-h2-margin*="MEDIAKEY(top-left, xl)"],
+ul[data-h2-margin*="MEDIAKEY(top-left, xl)"],
+li[data-h2-margin*="MEDIAKEY(top-left, xl)"] {
   margin-top: 1.953125rem;
   margin-left: 1.953125rem;
 }
 
-[data-h2-margin*="MEDIAKEY(top-left, xxl)"] {
+[data-h2-margin*="MEDIAKEY(top-left, xxl)"],
+p[data-h2-margin*="MEDIAKEY(top-left, xxl)"],
+p + p[data-h2-margin*="MEDIAKEY(top-left, xxl)"],
+h1[data-h2-margin*="MEDIAKEY(top-left, xxl)"],
+h2[data-h2-margin*="MEDIAKEY(top-left, xxl)"],
+h3[data-h2-margin*="MEDIAKEY(top-left, xxl)"],
+h4[data-h2-margin*="MEDIAKEY(top-left, xxl)"],
+h5[data-h2-margin*="MEDIAKEY(top-left, xxl)"],
+h6[data-h2-margin*="MEDIAKEY(top-left, xxl)"],
+ul[data-h2-margin*="MEDIAKEY(top-left, xxl)"],
+li[data-h2-margin*="MEDIAKEY(top-left, xxl)"] {
   margin-top: 2.44140625rem;
   margin-left: 2.44140625rem;
 }
 
-[data-h2-margin*="MEDIAKEY(top-left, auto)"] {
+[data-h2-margin*="MEDIAKEY(top-left, auto)"],
+p[data-h2-margin*="MEDIAKEY(top-left, auto)"],
+p + p[data-h2-margin*="MEDIAKEY(top-left, auto)"],
+h1[data-h2-margin*="MEDIAKEY(top-left, auto)"],
+h2[data-h2-margin*="MEDIAKEY(top-left, auto)"],
+h3[data-h2-margin*="MEDIAKEY(top-left, auto)"],
+h4[data-h2-margin*="MEDIAKEY(top-left, auto)"],
+h5[data-h2-margin*="MEDIAKEY(top-left, auto)"],
+h6[data-h2-margin*="MEDIAKEY(top-left, auto)"],
+ul[data-h2-margin*="MEDIAKEY(top-left, auto)"],
+li[data-h2-margin*="MEDIAKEY(top-left, auto)"] {
   margin-top: auto;
   margin-left: auto;
 }
 
-[data-h2-margin*="MEDIAKEY(bottom-right, none)"] {
+[data-h2-margin*="MEDIAKEY(bottom-right, none)"],
+p[data-h2-margin*="MEDIAKEY(bottom-right, none)"],
+p + p[data-h2-margin*="MEDIAKEY(bottom-right, none)"],
+h1[data-h2-margin*="MEDIAKEY(bottom-right, none)"],
+h2[data-h2-margin*="MEDIAKEY(bottom-right, none)"],
+h3[data-h2-margin*="MEDIAKEY(bottom-right, none)"],
+h4[data-h2-margin*="MEDIAKEY(bottom-right, none)"],
+h5[data-h2-margin*="MEDIAKEY(bottom-right, none)"],
+h6[data-h2-margin*="MEDIAKEY(bottom-right, none)"],
+ul[data-h2-margin*="MEDIAKEY(bottom-right, none)"],
+li[data-h2-margin*="MEDIAKEY(bottom-right, none)"] {
   margin-bottom: 0;
   margin-right: 0;
 }
 
-[data-h2-margin*="MEDIAKEY(bottom-right, xxs)"] {
+[data-h2-margin*="MEDIAKEY(bottom-right, xxs)"],
+p[data-h2-margin*="MEDIAKEY(bottom-right, xxs)"],
+p + p[data-h2-margin*="MEDIAKEY(bottom-right, xxs)"],
+h1[data-h2-margin*="MEDIAKEY(bottom-right, xxs)"],
+h2[data-h2-margin*="MEDIAKEY(bottom-right, xxs)"],
+h3[data-h2-margin*="MEDIAKEY(bottom-right, xxs)"],
+h4[data-h2-margin*="MEDIAKEY(bottom-right, xxs)"],
+h5[data-h2-margin*="MEDIAKEY(bottom-right, xxs)"],
+h6[data-h2-margin*="MEDIAKEY(bottom-right, xxs)"],
+ul[data-h2-margin*="MEDIAKEY(bottom-right, xxs)"],
+li[data-h2-margin*="MEDIAKEY(bottom-right, xxs)"] {
   margin-bottom: 0.64rem;
   margin-right: 0.64rem;
 }
 
-[data-h2-margin*="MEDIAKEY(bottom-right, xs)"] {
+[data-h2-margin*="MEDIAKEY(bottom-right, xs)"],
+p[data-h2-margin*="MEDIAKEY(bottom-right, xs)"],
+p + p[data-h2-margin*="MEDIAKEY(bottom-right, xs)"],
+h1[data-h2-margin*="MEDIAKEY(bottom-right, xs)"],
+h2[data-h2-margin*="MEDIAKEY(bottom-right, xs)"],
+h3[data-h2-margin*="MEDIAKEY(bottom-right, xs)"],
+h4[data-h2-margin*="MEDIAKEY(bottom-right, xs)"],
+h5[data-h2-margin*="MEDIAKEY(bottom-right, xs)"],
+h6[data-h2-margin*="MEDIAKEY(bottom-right, xs)"],
+ul[data-h2-margin*="MEDIAKEY(bottom-right, xs)"],
+li[data-h2-margin*="MEDIAKEY(bottom-right, xs)"] {
   margin-bottom: 0.8rem;
   margin-right: 0.8rem;
 }
 
-[data-h2-margin*="MEDIAKEY(bottom-right, s)"] {
+[data-h2-margin*="MEDIAKEY(bottom-right, s)"],
+p[data-h2-margin*="MEDIAKEY(bottom-right, s)"],
+p + p[data-h2-margin*="MEDIAKEY(bottom-right, s)"],
+h1[data-h2-margin*="MEDIAKEY(bottom-right, s)"],
+h2[data-h2-margin*="MEDIAKEY(bottom-right, s)"],
+h3[data-h2-margin*="MEDIAKEY(bottom-right, s)"],
+h4[data-h2-margin*="MEDIAKEY(bottom-right, s)"],
+h5[data-h2-margin*="MEDIAKEY(bottom-right, s)"],
+h6[data-h2-margin*="MEDIAKEY(bottom-right, s)"],
+ul[data-h2-margin*="MEDIAKEY(bottom-right, s)"],
+li[data-h2-margin*="MEDIAKEY(bottom-right, s)"] {
   margin-bottom: 1rem;
   margin-right: 1rem;
 }
 
-[data-h2-margin*="MEDIAKEY(bottom-right, m)"] {
+[data-h2-margin*="MEDIAKEY(bottom-right, m)"],
+p[data-h2-margin*="MEDIAKEY(bottom-right, m)"],
+p + p[data-h2-margin*="MEDIAKEY(bottom-right, m)"],
+h1[data-h2-margin*="MEDIAKEY(bottom-right, m)"],
+h2[data-h2-margin*="MEDIAKEY(bottom-right, m)"],
+h3[data-h2-margin*="MEDIAKEY(bottom-right, m)"],
+h4[data-h2-margin*="MEDIAKEY(bottom-right, m)"],
+h5[data-h2-margin*="MEDIAKEY(bottom-right, m)"],
+h6[data-h2-margin*="MEDIAKEY(bottom-right, m)"],
+ul[data-h2-margin*="MEDIAKEY(bottom-right, m)"],
+li[data-h2-margin*="MEDIAKEY(bottom-right, m)"] {
   margin-bottom: 1.25rem;
   margin-right: 1.25rem;
 }
 
-[data-h2-margin*="MEDIAKEY(bottom-right, l)"] {
+[data-h2-margin*="MEDIAKEY(bottom-right, l)"],
+p[data-h2-margin*="MEDIAKEY(bottom-right, l)"],
+p + p[data-h2-margin*="MEDIAKEY(bottom-right, l)"],
+h1[data-h2-margin*="MEDIAKEY(bottom-right, l)"],
+h2[data-h2-margin*="MEDIAKEY(bottom-right, l)"],
+h3[data-h2-margin*="MEDIAKEY(bottom-right, l)"],
+h4[data-h2-margin*="MEDIAKEY(bottom-right, l)"],
+h5[data-h2-margin*="MEDIAKEY(bottom-right, l)"],
+h6[data-h2-margin*="MEDIAKEY(bottom-right, l)"],
+ul[data-h2-margin*="MEDIAKEY(bottom-right, l)"],
+li[data-h2-margin*="MEDIAKEY(bottom-right, l)"] {
   margin-bottom: 1.5625rem;
   margin-right: 1.5625rem;
 }
 
-[data-h2-margin*="MEDIAKEY(bottom-right, xl)"] {
+[data-h2-margin*="MEDIAKEY(bottom-right, xl)"],
+p[data-h2-margin*="MEDIAKEY(bottom-right, xl)"],
+p + p[data-h2-margin*="MEDIAKEY(bottom-right, xl)"],
+h1[data-h2-margin*="MEDIAKEY(bottom-right, xl)"],
+h2[data-h2-margin*="MEDIAKEY(bottom-right, xl)"],
+h3[data-h2-margin*="MEDIAKEY(bottom-right, xl)"],
+h4[data-h2-margin*="MEDIAKEY(bottom-right, xl)"],
+h5[data-h2-margin*="MEDIAKEY(bottom-right, xl)"],
+h6[data-h2-margin*="MEDIAKEY(bottom-right, xl)"],
+ul[data-h2-margin*="MEDIAKEY(bottom-right, xl)"],
+li[data-h2-margin*="MEDIAKEY(bottom-right, xl)"] {
   margin-bottom: 1.953125rem;
   margin-right: 1.953125rem;
 }
 
-[data-h2-margin*="MEDIAKEY(bottom-right, xxl)"] {
+[data-h2-margin*="MEDIAKEY(bottom-right, xxl)"],
+p[data-h2-margin*="MEDIAKEY(bottom-right, xxl)"],
+p + p[data-h2-margin*="MEDIAKEY(bottom-right, xxl)"],
+h1[data-h2-margin*="MEDIAKEY(bottom-right, xxl)"],
+h2[data-h2-margin*="MEDIAKEY(bottom-right, xxl)"],
+h3[data-h2-margin*="MEDIAKEY(bottom-right, xxl)"],
+h4[data-h2-margin*="MEDIAKEY(bottom-right, xxl)"],
+h5[data-h2-margin*="MEDIAKEY(bottom-right, xxl)"],
+h6[data-h2-margin*="MEDIAKEY(bottom-right, xxl)"],
+ul[data-h2-margin*="MEDIAKEY(bottom-right, xxl)"],
+li[data-h2-margin*="MEDIAKEY(bottom-right, xxl)"] {
   margin-bottom: 2.44140625rem;
   margin-right: 2.44140625rem;
 }
 
-[data-h2-margin*="MEDIAKEY(bottom-right, auto)"] {
+[data-h2-margin*="MEDIAKEY(bottom-right, auto)"],
+p[data-h2-margin*="MEDIAKEY(bottom-right, auto)"],
+p + p[data-h2-margin*="MEDIAKEY(bottom-right, auto)"],
+h1[data-h2-margin*="MEDIAKEY(bottom-right, auto)"],
+h2[data-h2-margin*="MEDIAKEY(bottom-right, auto)"],
+h3[data-h2-margin*="MEDIAKEY(bottom-right, auto)"],
+h4[data-h2-margin*="MEDIAKEY(bottom-right, auto)"],
+h5[data-h2-margin*="MEDIAKEY(bottom-right, auto)"],
+h6[data-h2-margin*="MEDIAKEY(bottom-right, auto)"],
+ul[data-h2-margin*="MEDIAKEY(bottom-right, auto)"],
+li[data-h2-margin*="MEDIAKEY(bottom-right, auto)"] {
   margin-bottom: auto;
   margin-right: auto;
 }
 
-[data-h2-margin*="MEDIAKEY(bottom-left, none)"] {
+[data-h2-margin*="MEDIAKEY(bottom-left, none)"],
+p[data-h2-margin*="MEDIAKEY(bottom-left, none)"],
+p + p[data-h2-margin*="MEDIAKEY(bottom-left, none)"],
+h1[data-h2-margin*="MEDIAKEY(bottom-left, none)"],
+h2[data-h2-margin*="MEDIAKEY(bottom-left, none)"],
+h3[data-h2-margin*="MEDIAKEY(bottom-left, none)"],
+h4[data-h2-margin*="MEDIAKEY(bottom-left, none)"],
+h5[data-h2-margin*="MEDIAKEY(bottom-left, none)"],
+h6[data-h2-margin*="MEDIAKEY(bottom-left, none)"],
+ul[data-h2-margin*="MEDIAKEY(bottom-left, none)"],
+li[data-h2-margin*="MEDIAKEY(bottom-left, none)"] {
   margin-bottom: 0;
   margin-left: 0;
 }
 
-[data-h2-margin*="MEDIAKEY(bottom-left, xxs)"] {
+[data-h2-margin*="MEDIAKEY(bottom-left, xxs)"],
+p[data-h2-margin*="MEDIAKEY(bottom-left, xxs)"],
+p + p[data-h2-margin*="MEDIAKEY(bottom-left, xxs)"],
+h1[data-h2-margin*="MEDIAKEY(bottom-left, xxs)"],
+h2[data-h2-margin*="MEDIAKEY(bottom-left, xxs)"],
+h3[data-h2-margin*="MEDIAKEY(bottom-left, xxs)"],
+h4[data-h2-margin*="MEDIAKEY(bottom-left, xxs)"],
+h5[data-h2-margin*="MEDIAKEY(bottom-left, xxs)"],
+h6[data-h2-margin*="MEDIAKEY(bottom-left, xxs)"],
+ul[data-h2-margin*="MEDIAKEY(bottom-left, xxs)"],
+li[data-h2-margin*="MEDIAKEY(bottom-left, xxs)"] {
   margin-bottom: 0.64rem;
   margin-left: 0.64rem;
 }
 
-[data-h2-margin*="MEDIAKEY(bottom-left, xs)"] {
+[data-h2-margin*="MEDIAKEY(bottom-left, xs)"],
+p[data-h2-margin*="MEDIAKEY(bottom-left, xs)"],
+p + p[data-h2-margin*="MEDIAKEY(bottom-left, xs)"],
+h1[data-h2-margin*="MEDIAKEY(bottom-left, xs)"],
+h2[data-h2-margin*="MEDIAKEY(bottom-left, xs)"],
+h3[data-h2-margin*="MEDIAKEY(bottom-left, xs)"],
+h4[data-h2-margin*="MEDIAKEY(bottom-left, xs)"],
+h5[data-h2-margin*="MEDIAKEY(bottom-left, xs)"],
+h6[data-h2-margin*="MEDIAKEY(bottom-left, xs)"],
+ul[data-h2-margin*="MEDIAKEY(bottom-left, xs)"],
+li[data-h2-margin*="MEDIAKEY(bottom-left, xs)"] {
   margin-bottom: 0.8rem;
   margin-left: 0.8rem;
 }
 
-[data-h2-margin*="MEDIAKEY(bottom-left, s)"] {
+[data-h2-margin*="MEDIAKEY(bottom-left, s)"],
+p[data-h2-margin*="MEDIAKEY(bottom-left, s)"],
+p + p[data-h2-margin*="MEDIAKEY(bottom-left, s)"],
+h1[data-h2-margin*="MEDIAKEY(bottom-left, s)"],
+h2[data-h2-margin*="MEDIAKEY(bottom-left, s)"],
+h3[data-h2-margin*="MEDIAKEY(bottom-left, s)"],
+h4[data-h2-margin*="MEDIAKEY(bottom-left, s)"],
+h5[data-h2-margin*="MEDIAKEY(bottom-left, s)"],
+h6[data-h2-margin*="MEDIAKEY(bottom-left, s)"],
+ul[data-h2-margin*="MEDIAKEY(bottom-left, s)"],
+li[data-h2-margin*="MEDIAKEY(bottom-left, s)"] {
   margin-bottom: 1rem;
   margin-left: 1rem;
 }
 
-[data-h2-margin*="MEDIAKEY(bottom-left, m)"] {
+[data-h2-margin*="MEDIAKEY(bottom-left, m)"],
+p[data-h2-margin*="MEDIAKEY(bottom-left, m)"],
+p + p[data-h2-margin*="MEDIAKEY(bottom-left, m)"],
+h1[data-h2-margin*="MEDIAKEY(bottom-left, m)"],
+h2[data-h2-margin*="MEDIAKEY(bottom-left, m)"],
+h3[data-h2-margin*="MEDIAKEY(bottom-left, m)"],
+h4[data-h2-margin*="MEDIAKEY(bottom-left, m)"],
+h5[data-h2-margin*="MEDIAKEY(bottom-left, m)"],
+h6[data-h2-margin*="MEDIAKEY(bottom-left, m)"],
+ul[data-h2-margin*="MEDIAKEY(bottom-left, m)"],
+li[data-h2-margin*="MEDIAKEY(bottom-left, m)"] {
   margin-bottom: 1.25rem;
   margin-left: 1.25rem;
 }
 
-[data-h2-margin*="MEDIAKEY(bottom-left, l)"] {
+[data-h2-margin*="MEDIAKEY(bottom-left, l)"],
+p[data-h2-margin*="MEDIAKEY(bottom-left, l)"],
+p + p[data-h2-margin*="MEDIAKEY(bottom-left, l)"],
+h1[data-h2-margin*="MEDIAKEY(bottom-left, l)"],
+h2[data-h2-margin*="MEDIAKEY(bottom-left, l)"],
+h3[data-h2-margin*="MEDIAKEY(bottom-left, l)"],
+h4[data-h2-margin*="MEDIAKEY(bottom-left, l)"],
+h5[data-h2-margin*="MEDIAKEY(bottom-left, l)"],
+h6[data-h2-margin*="MEDIAKEY(bottom-left, l)"],
+ul[data-h2-margin*="MEDIAKEY(bottom-left, l)"],
+li[data-h2-margin*="MEDIAKEY(bottom-left, l)"] {
   margin-bottom: 1.5625rem;
   margin-left: 1.5625rem;
 }
 
-[data-h2-margin*="MEDIAKEY(bottom-left, xl)"] {
+[data-h2-margin*="MEDIAKEY(bottom-left, xl)"],
+p[data-h2-margin*="MEDIAKEY(bottom-left, xl)"],
+p + p[data-h2-margin*="MEDIAKEY(bottom-left, xl)"],
+h1[data-h2-margin*="MEDIAKEY(bottom-left, xl)"],
+h2[data-h2-margin*="MEDIAKEY(bottom-left, xl)"],
+h3[data-h2-margin*="MEDIAKEY(bottom-left, xl)"],
+h4[data-h2-margin*="MEDIAKEY(bottom-left, xl)"],
+h5[data-h2-margin*="MEDIAKEY(bottom-left, xl)"],
+h6[data-h2-margin*="MEDIAKEY(bottom-left, xl)"],
+ul[data-h2-margin*="MEDIAKEY(bottom-left, xl)"],
+li[data-h2-margin*="MEDIAKEY(bottom-left, xl)"] {
   margin-bottom: 1.953125rem;
   margin-left: 1.953125rem;
 }
 
-[data-h2-margin*="MEDIAKEY(bottom-left, xxl)"] {
+[data-h2-margin*="MEDIAKEY(bottom-left, xxl)"],
+p[data-h2-margin*="MEDIAKEY(bottom-left, xxl)"],
+p + p[data-h2-margin*="MEDIAKEY(bottom-left, xxl)"],
+h1[data-h2-margin*="MEDIAKEY(bottom-left, xxl)"],
+h2[data-h2-margin*="MEDIAKEY(bottom-left, xxl)"],
+h3[data-h2-margin*="MEDIAKEY(bottom-left, xxl)"],
+h4[data-h2-margin*="MEDIAKEY(bottom-left, xxl)"],
+h5[data-h2-margin*="MEDIAKEY(bottom-left, xxl)"],
+h6[data-h2-margin*="MEDIAKEY(bottom-left, xxl)"],
+ul[data-h2-margin*="MEDIAKEY(bottom-left, xxl)"],
+li[data-h2-margin*="MEDIAKEY(bottom-left, xxl)"] {
   margin-bottom: 2.44140625rem;
   margin-left: 2.44140625rem;
 }
 
-[data-h2-margin*="MEDIAKEY(bottom-left, auto)"] {
+[data-h2-margin*="MEDIAKEY(bottom-left, auto)"],
+p[data-h2-margin*="MEDIAKEY(bottom-left, auto)"],
+p + p[data-h2-margin*="MEDIAKEY(bottom-left, auto)"],
+h1[data-h2-margin*="MEDIAKEY(bottom-left, auto)"],
+h2[data-h2-margin*="MEDIAKEY(bottom-left, auto)"],
+h3[data-h2-margin*="MEDIAKEY(bottom-left, auto)"],
+h4[data-h2-margin*="MEDIAKEY(bottom-left, auto)"],
+h5[data-h2-margin*="MEDIAKEY(bottom-left, auto)"],
+h6[data-h2-margin*="MEDIAKEY(bottom-left, auto)"],
+ul[data-h2-margin*="MEDIAKEY(bottom-left, auto)"],
+li[data-h2-margin*="MEDIAKEY(bottom-left, auto)"] {
   margin-bottom: auto;
   margin-left: auto;
 }
 
-[data-h2-margin*="MEDIAKEY(right-left, none)"] {
+[data-h2-margin*="MEDIAKEY(right-left, none)"],
+p[data-h2-margin*="MEDIAKEY(right-left, none)"],
+p + p[data-h2-margin*="MEDIAKEY(right-left, none)"],
+h1[data-h2-margin*="MEDIAKEY(right-left, none)"],
+h2[data-h2-margin*="MEDIAKEY(right-left, none)"],
+h3[data-h2-margin*="MEDIAKEY(right-left, none)"],
+h4[data-h2-margin*="MEDIAKEY(right-left, none)"],
+h5[data-h2-margin*="MEDIAKEY(right-left, none)"],
+h6[data-h2-margin*="MEDIAKEY(right-left, none)"],
+ul[data-h2-margin*="MEDIAKEY(right-left, none)"],
+li[data-h2-margin*="MEDIAKEY(right-left, none)"] {
   margin-right: 0;
   margin-left: 0;
 }
 
-[data-h2-margin*="MEDIAKEY(right-left, xxs)"] {
+[data-h2-margin*="MEDIAKEY(right-left, xxs)"],
+p[data-h2-margin*="MEDIAKEY(right-left, xxs)"],
+p + p[data-h2-margin*="MEDIAKEY(right-left, xxs)"],
+h1[data-h2-margin*="MEDIAKEY(right-left, xxs)"],
+h2[data-h2-margin*="MEDIAKEY(right-left, xxs)"],
+h3[data-h2-margin*="MEDIAKEY(right-left, xxs)"],
+h4[data-h2-margin*="MEDIAKEY(right-left, xxs)"],
+h5[data-h2-margin*="MEDIAKEY(right-left, xxs)"],
+h6[data-h2-margin*="MEDIAKEY(right-left, xxs)"],
+ul[data-h2-margin*="MEDIAKEY(right-left, xxs)"],
+li[data-h2-margin*="MEDIAKEY(right-left, xxs)"] {
   margin-right: 0.64rem;
   margin-left: 0.64rem;
 }
 
-[data-h2-margin*="MEDIAKEY(right-left, xs)"] {
+[data-h2-margin*="MEDIAKEY(right-left, xs)"],
+p[data-h2-margin*="MEDIAKEY(right-left, xs)"],
+p + p[data-h2-margin*="MEDIAKEY(right-left, xs)"],
+h1[data-h2-margin*="MEDIAKEY(right-left, xs)"],
+h2[data-h2-margin*="MEDIAKEY(right-left, xs)"],
+h3[data-h2-margin*="MEDIAKEY(right-left, xs)"],
+h4[data-h2-margin*="MEDIAKEY(right-left, xs)"],
+h5[data-h2-margin*="MEDIAKEY(right-left, xs)"],
+h6[data-h2-margin*="MEDIAKEY(right-left, xs)"],
+ul[data-h2-margin*="MEDIAKEY(right-left, xs)"],
+li[data-h2-margin*="MEDIAKEY(right-left, xs)"] {
   margin-right: 0.8rem;
   margin-left: 0.8rem;
 }
 
-[data-h2-margin*="MEDIAKEY(right-left, s)"] {
+[data-h2-margin*="MEDIAKEY(right-left, s)"],
+p[data-h2-margin*="MEDIAKEY(right-left, s)"],
+p + p[data-h2-margin*="MEDIAKEY(right-left, s)"],
+h1[data-h2-margin*="MEDIAKEY(right-left, s)"],
+h2[data-h2-margin*="MEDIAKEY(right-left, s)"],
+h3[data-h2-margin*="MEDIAKEY(right-left, s)"],
+h4[data-h2-margin*="MEDIAKEY(right-left, s)"],
+h5[data-h2-margin*="MEDIAKEY(right-left, s)"],
+h6[data-h2-margin*="MEDIAKEY(right-left, s)"],
+ul[data-h2-margin*="MEDIAKEY(right-left, s)"],
+li[data-h2-margin*="MEDIAKEY(right-left, s)"] {
   margin-right: 1rem;
   margin-left: 1rem;
 }
 
-[data-h2-margin*="MEDIAKEY(right-left, m)"] {
+[data-h2-margin*="MEDIAKEY(right-left, m)"],
+p[data-h2-margin*="MEDIAKEY(right-left, m)"],
+p + p[data-h2-margin*="MEDIAKEY(right-left, m)"],
+h1[data-h2-margin*="MEDIAKEY(right-left, m)"],
+h2[data-h2-margin*="MEDIAKEY(right-left, m)"],
+h3[data-h2-margin*="MEDIAKEY(right-left, m)"],
+h4[data-h2-margin*="MEDIAKEY(right-left, m)"],
+h5[data-h2-margin*="MEDIAKEY(right-left, m)"],
+h6[data-h2-margin*="MEDIAKEY(right-left, m)"],
+ul[data-h2-margin*="MEDIAKEY(right-left, m)"],
+li[data-h2-margin*="MEDIAKEY(right-left, m)"] {
   margin-right: 1.25rem;
   margin-left: 1.25rem;
 }
 
-[data-h2-margin*="MEDIAKEY(right-left, l)"] {
+[data-h2-margin*="MEDIAKEY(right-left, l)"],
+p[data-h2-margin*="MEDIAKEY(right-left, l)"],
+p + p[data-h2-margin*="MEDIAKEY(right-left, l)"],
+h1[data-h2-margin*="MEDIAKEY(right-left, l)"],
+h2[data-h2-margin*="MEDIAKEY(right-left, l)"],
+h3[data-h2-margin*="MEDIAKEY(right-left, l)"],
+h4[data-h2-margin*="MEDIAKEY(right-left, l)"],
+h5[data-h2-margin*="MEDIAKEY(right-left, l)"],
+h6[data-h2-margin*="MEDIAKEY(right-left, l)"],
+ul[data-h2-margin*="MEDIAKEY(right-left, l)"],
+li[data-h2-margin*="MEDIAKEY(right-left, l)"] {
   margin-right: 1.5625rem;
   margin-left: 1.5625rem;
 }
 
-[data-h2-margin*="MEDIAKEY(right-left, xl)"] {
+[data-h2-margin*="MEDIAKEY(right-left, xl)"],
+p[data-h2-margin*="MEDIAKEY(right-left, xl)"],
+p + p[data-h2-margin*="MEDIAKEY(right-left, xl)"],
+h1[data-h2-margin*="MEDIAKEY(right-left, xl)"],
+h2[data-h2-margin*="MEDIAKEY(right-left, xl)"],
+h3[data-h2-margin*="MEDIAKEY(right-left, xl)"],
+h4[data-h2-margin*="MEDIAKEY(right-left, xl)"],
+h5[data-h2-margin*="MEDIAKEY(right-left, xl)"],
+h6[data-h2-margin*="MEDIAKEY(right-left, xl)"],
+ul[data-h2-margin*="MEDIAKEY(right-left, xl)"],
+li[data-h2-margin*="MEDIAKEY(right-left, xl)"] {
   margin-right: 1.953125rem;
   margin-left: 1.953125rem;
 }
 
-[data-h2-margin*="MEDIAKEY(right-left, xxl)"] {
+[data-h2-margin*="MEDIAKEY(right-left, xxl)"],
+p[data-h2-margin*="MEDIAKEY(right-left, xxl)"],
+p + p[data-h2-margin*="MEDIAKEY(right-left, xxl)"],
+h1[data-h2-margin*="MEDIAKEY(right-left, xxl)"],
+h2[data-h2-margin*="MEDIAKEY(right-left, xxl)"],
+h3[data-h2-margin*="MEDIAKEY(right-left, xxl)"],
+h4[data-h2-margin*="MEDIAKEY(right-left, xxl)"],
+h5[data-h2-margin*="MEDIAKEY(right-left, xxl)"],
+h6[data-h2-margin*="MEDIAKEY(right-left, xxl)"],
+ul[data-h2-margin*="MEDIAKEY(right-left, xxl)"],
+li[data-h2-margin*="MEDIAKEY(right-left, xxl)"] {
   margin-right: 2.44140625rem;
   margin-left: 2.44140625rem;
 }
 
-[data-h2-margin*="MEDIAKEY(right-left, auto)"] {
+[data-h2-margin*="MEDIAKEY(right-left, auto)"],
+p[data-h2-margin*="MEDIAKEY(right-left, auto)"],
+p + p[data-h2-margin*="MEDIAKEY(right-left, auto)"],
+h1[data-h2-margin*="MEDIAKEY(right-left, auto)"],
+h2[data-h2-margin*="MEDIAKEY(right-left, auto)"],
+h3[data-h2-margin*="MEDIAKEY(right-left, auto)"],
+h4[data-h2-margin*="MEDIAKEY(right-left, auto)"],
+h5[data-h2-margin*="MEDIAKEY(right-left, auto)"],
+h6[data-h2-margin*="MEDIAKEY(right-left, auto)"],
+ul[data-h2-margin*="MEDIAKEY(right-left, auto)"],
+li[data-h2-margin*="MEDIAKEY(right-left, auto)"] {
   margin-right: auto;
   margin-left: auto;
 }

@@ -9,7 +9,17 @@
 ) {
   @each $sideKey, $sideValue in $sideMap {
     @each $whitespaceKey, $whitespaceValue in $whitespaceMap {
-      [data-h2-margin*="#{$mediaKey}(#{$sideKey}, #{$whitespaceKey})"] {
+      [data-h2-margin*="#{$mediaKey}(#{$sideKey}, #{$whitespaceKey})"],
+      p[data-h2-margin*="#{$mediaKey}(#{$sideKey}, #{$whitespaceKey})"],
+      p+p[data-h2-margin*="#{$mediaKey}(#{$sideKey}, #{$whitespaceKey})"],
+      h1[data-h2-margin*="#{$mediaKey}(#{$sideKey}, #{$whitespaceKey})"],
+      h2[data-h2-margin*="#{$mediaKey}(#{$sideKey}, #{$whitespaceKey})"],
+      h3[data-h2-margin*="#{$mediaKey}(#{$sideKey}, #{$whitespaceKey})"],
+      h4[data-h2-margin*="#{$mediaKey}(#{$sideKey}, #{$whitespaceKey})"],
+      h5[data-h2-margin*="#{$mediaKey}(#{$sideKey}, #{$whitespaceKey})"],
+      h6[data-h2-margin*="#{$mediaKey}(#{$sideKey}, #{$whitespaceKey})"],
+      ul[data-h2-margin*="#{$mediaKey}(#{$sideKey}, #{$whitespaceKey})"],
+      li[data-h2-margin*="#{$mediaKey}(#{$sideKey}, #{$whitespaceKey})"] {
         @if $sideKey == "top-bottom" or $sideKey == "tb" {
           margin-top: #{$whitespaceValue};
           margin-bottom: #{$whitespaceValue};
@@ -33,7 +43,17 @@
         }
       }
     }
-    [data-h2-margin*="#{$mediaKey}(#{$sideKey}, auto)"] {
+    [data-h2-margin*="#{$mediaKey}(#{$sideKey}, auto)"],
+    p[data-h2-margin*="#{$mediaKey}(#{$sideKey}, auto)"],
+    p+p[data-h2-margin*="#{$mediaKey}(#{$sideKey}, auto)"],
+    h1[data-h2-margin*="#{$mediaKey}(#{$sideKey}, auto)"],
+    h2[data-h2-margin*="#{$mediaKey}(#{$sideKey}, auto)"],
+    h3[data-h2-margin*="#{$mediaKey}(#{$sideKey}, auto)"],
+    h4[data-h2-margin*="#{$mediaKey}(#{$sideKey}, auto)"],
+    h5[data-h2-margin*="#{$mediaKey}(#{$sideKey}, auto)"],
+    h6[data-h2-margin*="#{$mediaKey}(#{$sideKey}, auto)"],
+    ul[data-h2-margin*="#{$mediaKey}(#{$sideKey}, auto)"],
+    li[data-h2-margin*="#{$mediaKey}(#{$sideKey}, auto)"] {
       @if $sideKey == "top-bottom" or $sideKey == "tb" {
         margin-top: auto;
         margin-bottom: auto;
