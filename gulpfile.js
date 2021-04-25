@@ -231,7 +231,8 @@ function moveFlexgrid(done) {
 function enableFlexgrid(done) {
   if (flexgridEnabled == true) {
     return src('./' + config.folders.styles + '/hydrogen/utility.scss')
-      .pipe(replace('// @use "utilities/utility-flex-grid";', '@use "utilities/utility-flex-grid";'))
+      .pipe(replace('// @use "utilities/utility-flex-grid" as flexGridStyles;', '@use "utilities/utility-flex-grid" as flexGridStyles;'))
+      .pipe(replace('// @include flexGridStyles.h2-utility-flex-grid($mediaKey: "MEDIAKEY");', '@include flexGridStyles.h2-utility-flex-grid($mediaKey: "MEDIAKEY");'))
       .pipe(dest('./' + config.folders.styles + '/hydrogen'));
   } else {
     done();

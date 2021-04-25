@@ -27,88 +27,86 @@ body {
   width: 100%;
 }
 
-[data-h2-typography] {
-  // Margin Resets
-  blockquote,
-  dl,
-  fieldset,
-  figure {
-    margin: 0;
-  }
+// Margin Resets
+blockquote,
+dl,
+fieldset,
+figure {
+  margin: 0;
+}
 
-  // Max Image Widths
-  img,
-  iframe {
-    max-width: 100%;
-  }
-  // Headings
-  h1, h2, h3, h4, h5, h6, p {
-    font-weight: normal;
-    margin: 0
-  }
-  h1 {
-    font-size: $h2-font-size-h1;
-  }
-  h2 {
-    font-size: $h2-font-size-h2;
-  }
-  h3 {
-    font-size: $h2-font-size-h3;
-  }
-  h4 {
-    font-size: $h2-font-size-h4;
-  }
-  h5 {
-    font-size: $h2-font-size-h5;
-  }
-  h6 {
-    font-size: $h2-font-size-h6;
-  }
-  // Copy
-  p, 
-  div {
-    font-size: $h2-font-size-default
-  }
-  span {
-    color: inherit;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-  }
-  // Styled Typography
-  em {
-    color: inherit;
-    font-family: inherit;
-    font-size: inherit;
-    font-style: italic;
-  }
-  strong {
-    color: inherit;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: 600;
-  }
-  // Anchors
-  a {
-    color: inherit;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    text-decoration: underline;
-    transition: color .2s ease;
-  }
-  // Lists
-  ul,
-  ol {
-    margin: 0;
-  }
-  li {
-    color: inherit;
-    font-family: inherit;
-    font-size: inherit;
-    &:last-child {
-      margin-bottom: 0;
-    }
+// Max Image Widths
+img,
+iframe {
+  max-width: 100%;
+}
+// Headings
+h1, h2, h3, h4, h5, h6, p {
+  font-weight: normal;
+  margin: 0
+}
+h1 {
+  font-size: $h2-font-size-h1;
+}
+h2 {
+  font-size: $h2-font-size-h2;
+}
+h3 {
+  font-size: $h2-font-size-h3;
+}
+h4 {
+  font-size: $h2-font-size-h4;
+}
+h5 {
+  font-size: $h2-font-size-h5;
+}
+h6 {
+  font-size: $h2-font-size-h6;
+}
+// Copy
+p, 
+div {
+  font-size: $h2-font-size-default
+}
+span {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+// Styled Typography
+em {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: italic;
+}
+strong {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+}
+// Anchors
+a {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: underline;
+  transition: color .2s ease;
+}
+// Lists
+ul,
+ol {
+  margin: 0;
+}
+li {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 

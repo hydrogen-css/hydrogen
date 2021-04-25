@@ -18,18 +18,7 @@ $h2-map-font-weight: (
   $mediaKey
 ) {
   @each $weightKey, $weightValue in $h2-map-font-weight {
-    [data-h2-font-weight*="#{$mediaKey}(#{$weightKey})"],
-    p[data-h2-font-weight*="#{$mediaKey}(#{$weightKey})"],
-    span[data-h2-font-weight*="#{$mediaKey}(#{$weightKey})"],
-    em[data-h2-font-weight*="#{$mediaKey}(#{$weightKey})"],
-    strong[data-h2-font-weight*="#{$mediaKey}(#{$weightKey})"],
-    a[data-h2-font-weight*="#{$mediaKey}(#{$weightKey})"],
-    h1[data-h2-font-weight*="#{$mediaKey}(#{$weightKey})"],
-    h2[data-h2-font-weight*="#{$mediaKey}(#{$weightKey})"],
-    h3[data-h2-font-weight*="#{$mediaKey}(#{$weightKey})"],
-    h4[data-h2-font-weight*="#{$mediaKey}(#{$weightKey})"],
-    h5[data-h2-font-weight*="#{$mediaKey}(#{$weightKey})"],
-    h6[data-h2-font-weight*="#{$mediaKey}(#{$weightKey})"] {
+    [data-h2-font-weight*="#{$mediaKey}(#{$weightKey})"] {
       font-weight: $weightValue;
     }
   }

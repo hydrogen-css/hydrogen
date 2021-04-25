@@ -20,61 +20,74 @@ body {
   width: 100%;
 }
 
-[data-h2-typography] blockquote,
-[data-h2-typography] dl,
-[data-h2-typography] fieldset,
-[data-h2-typography] figure {
+blockquote,
+dl,
+fieldset,
+figure {
   margin: 0;
 }
-[data-h2-typography] img,
-[data-h2-typography] iframe {
+
+img,
+iframe {
   max-width: 100%;
 }
-[data-h2-typography] h1, [data-h2-typography] h2, [data-h2-typography] h3, [data-h2-typography] h4, [data-h2-typography] h5, [data-h2-typography] h6, [data-h2-typography] p {
+
+h1, h2, h3, h4, h5, h6, p {
   font-weight: normal;
   margin: 0;
 }
-[data-h2-typography] h1 {
+
+h1 {
   font-size: calc(calc(calc(calc(calc(1rem*1.33)*1.33)*1.33)*1.33)*1.33);
 }
-[data-h2-typography] h2 {
+
+h2 {
   font-size: calc(calc(calc(calc(1rem*1.33)*1.33)*1.33)*1.33);
 }
-[data-h2-typography] h3 {
+
+h3 {
   font-size: calc(calc(calc(1rem*1.33)*1.33)*1.33);
 }
-[data-h2-typography] h4 {
+
+h4 {
   font-size: calc(calc(1rem*1.33)*1.33);
 }
-[data-h2-typography] h5 {
+
+h5 {
   font-size: calc(1rem*1.33);
 }
-[data-h2-typography] h6 {
+
+h6 {
   font-size: 1rem;
 }
-[data-h2-typography] p,
-[data-h2-typography] div {
+
+p,
+div {
   font-size: 1rem;
 }
-[data-h2-typography] span {
+
+span {
   color: inherit;
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
 }
-[data-h2-typography] em {
+
+em {
   color: inherit;
   font-family: inherit;
   font-size: inherit;
   font-style: italic;
 }
-[data-h2-typography] strong {
+
+strong {
   color: inherit;
   font-family: inherit;
   font-size: inherit;
   font-weight: 600;
 }
-[data-h2-typography] a {
+
+a {
   color: inherit;
   font-family: inherit;
   font-size: inherit;
@@ -82,16 +95,18 @@ body {
   text-decoration: underline;
   transition: color 0.2s ease;
 }
-[data-h2-typography] ul,
-[data-h2-typography] ol {
+
+ul,
+ol {
   margin: 0;
 }
-[data-h2-typography] li {
+
+li {
   color: inherit;
   font-family: inherit;
   font-size: inherit;
 }
-[data-h2-typography] li:last-child {
+li:last-child {
   margin-bottom: 0;
 }
 

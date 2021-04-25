@@ -6,18 +6,7 @@
   $fontSizeMap
 ) {
   @each $sizeKey, $sizeValue in $fontSizeMap {
-    [data-h2-font-size*="#{$mediaKey}(#{$sizeKey})"],
-    p[data-h2-font-size*="#{$mediaKey}(#{$sizeKey})"],
-    span[data-h2-font-size*="#{$mediaKey}(#{$sizeKey})"],
-    em[data-h2-font-size*="#{$mediaKey}(#{$sizeKey})"],
-    strong[data-h2-font-size*="#{$mediaKey}(#{$sizeKey})"],
-    a[data-h2-font-size*="#{$mediaKey}(#{$sizeKey})"],
-    h1[data-h2-font-size*="#{$mediaKey}(#{$sizeKey})"],
-    h2[data-h2-font-size*="#{$mediaKey}(#{$sizeKey})"],
-    h3[data-h2-font-size*="#{$mediaKey}(#{$sizeKey})"],
-    h4[data-h2-font-size*="#{$mediaKey}(#{$sizeKey})"],
-    h5[data-h2-font-size*="#{$mediaKey}(#{$sizeKey})"],
-    h6[data-h2-font-size*="#{$mediaKey}(#{$sizeKey})"] {
+    [data-h2-font-size*="#{$mediaKey}(#{$sizeKey})"] {
       font-size: $sizeValue;
     }
   }
