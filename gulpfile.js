@@ -32,6 +32,7 @@ var defaults;
 var config;
 
 function loadConfig(done) {
+  console.time('Compile Time');
   // Reset the variables.
   defaults = undefined;
   config = undefined;
@@ -436,9 +437,11 @@ function getUserMarkup(done) {
       markupArray = markupArray.concat('./' + path + '/**/*');
     });
     // console.log(markupString);
+    // console.timeLog('Compile Time');
     done();
   } else {
     markupArray = markupArray.concat('./' + config.folders.markup + '/**/*');
+    // console.timeLog('Compile Time');
     done();
   }
 }
@@ -623,7 +626,9 @@ function postCleanCompress() {
 }
 
 function watchSuccessMessage(done) {
-  console.log('[SUCCESS]'.green, 'Hydrogen: you\'ve successfully compiled Hydrogen. We\'re now watching for changes to your configuration file and markup.');
+  // console.log(process.hrtime(start)[0] + " s, " + elapsed.toFixed(precision) + " ms - ");
+  console.log('[WATCHING]'.blue, 'Hydrogen: you\'ve successfully compiled Hydrogen. We\'re now watching for changes to your configuration file and markup.');
+  console.timeEnd('Compile Time');
   done();
 }
 
@@ -676,20 +681,22 @@ const devWatchCleanSeries = series(
   cleanCleanedFolder,
   getUserMarkup, createUserMarkup,
   createCleanCSS, 
-  postCleanCompress
+  postCleanCompress,
+  watchSuccessMessage
 );
 
 // Dev Prep Task
 const devWatchSeries = series(
   buildScripts,
-  createDevelopmentCSS
+  createDevelopmentCSS,
+  watchSuccessMessage
 );
 
 exports.compile = series(devWatchSeries, compileSuccessMessage);
 
 // Watch the config files for changes.
 function devWatchConfig() {
-  watch('./lib/stage/hydrogen.config.json', series(devWatchSeries, watchSuccessMessage));
+  watch('./lib/stage/hydrogen.config.json', series(devWatchSeries));
   var watchMarkupArray = [];
   function getWatchUserMarkup() {
     if (Array.isArray(config.folders.markup) == true) {
@@ -702,7 +709,7 @@ function devWatchConfig() {
   }
   getWatchUserMarkup();
   // console.log(watchMarkupArray);
-  watch(watchMarkupArray, series(devWatchCleanSeries, watchSuccessMessage));
+  watch(watchMarkupArray, series(devWatchCleanSeries));
 }
 
 exports.watch = series(
