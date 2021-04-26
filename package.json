@@ -26,12 +26,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hydrogen-design-system/utility.git"
+    "url": "git+https://github.com/hydrogen-design-system/hydrogen.css.git"
   },
   "author": "Josh Beveridge",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hydrogen-design-system/utility/issues"
+    "url": "https://github.com/hydrogen-design-system/hydrogen.css/issues"
   },
   "homepage": "https://hydrogen.design",
   "dependencies": {
