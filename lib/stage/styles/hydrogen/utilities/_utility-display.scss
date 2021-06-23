@@ -21,7 +21,7 @@ $h2-map-display: (
 ) {
   @each $displayKey, $displayValue in $h2-map-display {
     [data-h2-display*="#{$mediaKey}(#{$displayKey})"] {
-      display: $displayValue;
+      display: #{$displayValue};
     }
   }
 }

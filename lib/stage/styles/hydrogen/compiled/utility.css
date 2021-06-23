@@ -7367,55 +7367,55 @@
 }
 
 [data-h2-display*="MEDIAKEY(block)"] {
-  display: "block";
+  display: block;
 }
 
 [data-h2-display*="MEDIAKEY(inline)"] {
-  display: "inline";
+  display: inline;
 }
 
 [data-h2-display*="MEDIAKEY(inline-block)"] {
-  display: "inline-block";
+  display: inline-block;
 }
 
 [data-h2-display*="MEDIAKEY(flex)"] {
-  display: "flex";
+  display: flex;
 }
 
 [data-h2-display*="MEDIAKEY(inline-flex)"] {
-  display: "inline-flex";
+  display: inline-flex;
 }
 
 [data-h2-display*="MEDIAKEY(grid)"] {
-  display: "grid";
+  display: grid;
 }
 
 [data-h2-display*="MEDIAKEY(inline-grid)"] {
-  display: "inline-grid";
+  display: inline-grid;
 }
 
 [data-h2-display*="MEDIAKEY(flow-root)"] {
-  display: "flow-root";
+  display: flow-root;
 }
 
 [data-h2-display*="MEDIAKEY(none)"] {
-  display: "none";
+  display: none;
 }
 
 [data-h2-display*="MEDIAKEY(contents)"] {
-  display: "contents";
+  display: contents;
 }
 
 [data-h2-display*="MEDIAKEY(table)"] {
-  display: "table";
+  display: table;
 }
 
 [data-h2-display*="MEDIAKEY(table-row)"] {
-  display: "table-row";
+  display: table-row;
 }
 
 [data-h2-display*="MEDIAKEY(list-item)"] {
-  display: "list-item";
+  display: list-item;
 }
 
 [data-h2-flex-direction*="MEDIAKEY(column)"] {
