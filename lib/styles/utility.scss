@@ -35,7 +35,7 @@
 @use "utilities/utility-shadow" as shadowStyles;
 @use "utilities/utility-text-align" as textAlignStyles;
 @use "utilities/utility-visibility" as visibilityStyles;
-@use "utilities/utility-width" as widthStyles;
+// @use "utilities/utility-width" as widthStyles;
 
 // Font Variables
 $h2-font-scale: $H2FONTSCALE;
@@ -190,6 +190,6 @@ $h2-map-sides: (
   $mediaKey: "MEDIAKEY"
 );
 
-@include widthStyles.h2-utility-width(
-  $mediaKey: "MEDIAKEY"
-);
+// @include widthStyles.h2-utility-width(
+//   $mediaKey: "MEDIAKEY"
+// );
