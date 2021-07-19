@@ -1,0 +1,49 @@
+majors:
+  - version: 1
+    date: 2021/APR/25
+    author: Josh Beveridge
+    changes:
+      - "Repository: adds a basic README."
+      - "Margin, Padding: adds specificity for margin and padding attributes so that they override reset styles."
+      - "Reset: updates and adds a handful of reset styles.",
+      - "Scripts: standardizes some of the build script output."
+      - "Settings: adds support for a whitespace configuration."
+    minors:
+      - version: 0
+        date: 2021/APR/25
+        author: Josh Beveridge
+        changes:
+        patches:
+          - version: 4
+            date: 2021/APR/25
+            author: Josh Beveridge
+            changes:
+              - "Scripts: enhances build scripts with basic console output for time and descriptive messaging."
+          - version: 5
+            date: 2021/APR/25
+            author: Josh Beveridge
+            changes: 
+              - "Bugfix: fixes the display attribute not being properly escaped."
+          - version: 6
+            date: 2021/APR/26
+            author: Josh Beveridge
+            changes:
+              - "Scripts: fixes a color function bug in the init script."
+              - "Scripts: updates the init script's output to be more consistent."
+          - version: 7
+            date: 2021/JUN/23
+            author: Josh Beveridge
+            changes:
+              - "System: updates certain dependencies to fix security warnings; certain dependencies are blocked and are waiting on patches."
+      - version: 1
+        date: 2021/JUL/15
+        author: Josh Beveridge
+        changes:
+          - "Breaking, Config: changes \"name\" to \"key\" for syntax consistency."
+          - "Scripts: init now checks to see if the folders specified by the user exist before trying to run."
+          - "Scripts: refactors scripts into more reusable chunks."
+          - "Scripts: breaks the Gulpfile apart to be more manageable."
+          - "Width: adds support for default and configurable width values."
+          - "States: adds support for hover h() values."
+          - "Flex Grid: adds support for stretch."
+          - "Align Items: adds support for normal."

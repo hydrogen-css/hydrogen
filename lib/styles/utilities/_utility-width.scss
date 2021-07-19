@@ -1,0 +1,13 @@
+// Width
+// VALUE
+// e.g. data-h2-width="b(100)"
+@mixin h2-utility-width(
+  $mediaKey,
+  $widthMap
+) {
+  @each $widthKey, $widthValue in $widthMap {
+    [data-h2-width*="#{$mediaKey}(#{$widthKey})"] {
+      width: #{$widthValue};
+    }
+  }
+}

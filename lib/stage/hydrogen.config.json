@@ -11,23 +11,23 @@
   "media": [],
   "borderWeights": [
     {
-      "name": "thing",
+      "key": "thing",
       "weight": "1px"
     }
   ],
   "colors": [
     {
-      "name": "black",
+      "key": "black",
       "color": "rgba(20, 20, 30, 1)",
       "opacity": true
     },
     {
-      "name": "green",
+      "key": "green",
       "color": "rgba(0, 255, 0, 1)",
       "opacity": false
     },
     {
-      "name": "red",
+      "key": "red",
       "color": "rgba(255, 0, 0, 1)",
       "opacity": false
     }
@@ -39,7 +39,7 @@
   },
   "fonts": [
     {
-      "name": "testFont",
+      "key": "testFont",
       "loadType": "font-face",
       "value": "'testFont', sans-serif",
       "url": "google.com"
@@ -52,15 +52,15 @@
       "type": "radial",
       "colorStops": [
         {
-          "name": "green",
+          "key": "green",
           "color": "green"
         },
         {
-          "name": "red",
+          "key": "red",
           "color": "red"
         },
         {
-          "name": "blue",
+          "key": "blue",
           "color": "blue"
         }
       ]
@@ -70,20 +70,26 @@
       "angle": "135deg",
       "colorStops": [
         {
-          "name": "green",
+          "key": "green",
           "color": "green"
         },
         {
-          "name": "red",
+          "key": "red",
           "color": "red"
         },
         {
-          "name": "blue",
+          "key": "blue",
           "color": "blue"
         }
       ]
     }
   ],
   "shadows": [],
-  "whitespaceScale": "1.25"
+  "whitespaceScale": "1.25",
+  "widths": [
+    {
+      "key": "phat",
+      "value": "56%"
+    }
+  ]
 }

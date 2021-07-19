@@ -1,13 +1,15 @@
 {
   "name": "@hydrogen-design-system/hydrogen.css",
-  "version": "1.0.7",
-  "description": "A new iteration of Hydrogen's dynamic CSS utility tool.",
+  "version": "1.1.0",
+  "description": "A CSS utility framework that leverages data-attributes to provide clarity and flexibility.",
   "keywords": [
     "Hydrogen",
     "design",
     "system",
     "component",
-    "library"
+    "library",
+    "css",
+    "framework"
   ],
   "main": "./bin/index.js",
   "bin": {
@@ -35,8 +37,8 @@
   },
   "homepage": "https://hydrogen.design",
   "dependencies": {
-    "autoprefixer": "^9.8.6",
-    "browser-sync": "^2.26.14",
+    "autoprefixer": "^10.3.0",
+    "browser-sync": "^2.27.0",
     "browserslist": "^4.16.6",
     "colors": "^1.4.0",
     "cssnano": "^5.0.6",
