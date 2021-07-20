@@ -1,8 +1,8 @@
-// @use "utilities/core-flex-grid";
+@use "utilities/core-flex-grid";
 
-$h2-whitespace-scale: 1.5;
-$h2-font-base-size: 112.5%;
-$h2-font-scale: 1.25;
+$h2-whitespace-scale: 1.25;
+$h2-font-base-size: 150%;
+$h2-font-scale: 1.33;
 $h2-font-size-default: 1rem;
 $h2-font-size-caption: calc(#{$h2-font-size-default}/#{$h2-font-scale});
 $h2-font-size-h6: $h2-font-size-default;
