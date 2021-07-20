@@ -51,7 +51,7 @@ $h2GridColumns: 12;
     @for $r from 1 through $h2GridColumns {
       [data-h2-flex-grid] >[data-h2-flex-item*="#{$mediaKey}(#{$i}of#{$r})"] {
         flex: 0 0 calc(#{$i} / #{$r} * 100%);
-        max-width: ($i / $r * 100%);
+        max-width: calc(#{$i} / #{$r} * 100%);
       }
     }
   }

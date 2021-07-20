@@ -11,10 +11,10 @@ const importDevBuild = require('./lib/scripts/gulp/build');
 
 // Exports
   // Init
-  exports.devInit = series(importDevInit.init);
+  // exports.devInit = series(importDevInit.init);
   // Compile
   exports.devCompile = series(importDevCompile.compile);
   // Watch
   // exports.devWatch = series(importDevWatch.watch);
   // Build
-  // exports.devBuild = series(importDevBuild.build);
+  exports.devBuild = series(importDevBuild.build);
