@@ -23,8 +23,9 @@
     "h2-build": "./bin/build.js"
   },
   "scripts": {
-    "hydrogen-watch": "npx gulp watch",
-    "hydrogen-compile": "npx gulp compile"
+    "devInit": "node ./dev/init.js",
+    "devCompile": "node ./dev/compile.js",
+    "devBuild": "node ./dev/build.js"
   },
   "repository": {
     "type": "git",
