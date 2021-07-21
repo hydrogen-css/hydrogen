@@ -9,6 +9,7 @@
 @use "maps/map-radius" as radiusMap;
 @use "maps/map-shadow" as shadowMap;
 @use "maps/map-whitespace" as whitespaceMap;
+@use "maps/map-width" as widthMap;
 
 @use "utilities/utility-align-content" as alignContentStyles;
 @use "utilities/utility-align-items" as alignItemStyles;
@@ -35,7 +36,7 @@
 @use "utilities/utility-shadow" as shadowStyles;
 @use "utilities/utility-text-align" as textAlignStyles;
 @use "utilities/utility-visibility" as visibilityStyles;
-// @use "utilities/utility-width" as widthStyles;
+@use "utilities/utility-width" as widthStyles;
 
 // Font Variables
 $h2-font-scale: $H2FONTSCALE;
@@ -190,6 +191,7 @@ $h2-map-sides: (
   $mediaKey: "MEDIAKEY"
 );
 
-// @include widthStyles.h2-utility-width(
-//   $mediaKey: "MEDIAKEY"
-// );
+@include widthStyles.h2-utility-width(
+  $mediaKey: "MEDIAKEY",
+  $widthMap: widthMap.$h2-map-width
+);
