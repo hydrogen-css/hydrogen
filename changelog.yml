@@ -36,7 +36,7 @@ majors:
             changes:
               - "System: updates certain dependencies to fix security warnings; certain dependencies are blocked and are waiting on patches."
       - version: 1
-        date: 2021/JUL/15
+        date: 2021/JUL/23
         author: Josh Beveridge
         changes:
           - "Breaking, Config: changes \"name\" to \"key\" for syntax consistency."
