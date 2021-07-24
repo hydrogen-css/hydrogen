@@ -40,11 +40,12 @@ majors:
         author: Josh Beveridge
         changes:
           - "Breaking, Config: changes \"name\" to \"key\" for syntax consistency."
+          - "Scripts: init now asks for script folders, because state management that happens in JavaScript needs to be considered when compiling the production file."
           - "Scripts: init now checks to see if the folders specified by the user exist before trying to run."
           - "Scripts: refactors scripts into more reusable chunks."
           - "Scripts: removes the need for a Gulpfile for internal development and migrates to node execution of Gulp scripts."
           - "Sass: updates the use of \"/\" in math to resolve deprecation issues."
           - "Width: adds support for default and configurable width values."
-          - "States: adds support for hover h() values."
-          - "Flex Grid: adds support for stretch."
+          - "States: adds support for hover, active, focus, and disabled values."
+          - "Flex Grid: adds support for normal and stretch."
           - "Align Items: adds support for normal."

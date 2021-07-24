@@ -6,6 +6,21 @@ It leverages data-attributes to allow the styling of elements right in your mark
 
 [https://hydrogen.design](https://hydrogen.design)
 
+## State Support
+- bg-color
+- border
+- display
+- font-color
+- font-style
+- font-weight
+- margin
+- overflow
+- padding
+- radius
+- shadow
+- visibility
+- width
+
 ## Adding Utilities
 
 ### Styles
