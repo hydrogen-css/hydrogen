@@ -5,7 +5,7 @@ majors:
     changes:
       - "Repository: adds a basic README."
       - "Margin, Padding: adds specificity for margin and padding attributes so that they override reset styles."
-      - "Reset: updates and adds a handful of reset styles.",
+      - "Reset: updates and adds a handful of reset styles."
       - "Scripts: standardizes some of the build script output."
       - "Settings: adds support for a whitespace configuration."
     minors:
