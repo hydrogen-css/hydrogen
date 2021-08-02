@@ -1,4 +1,5 @@
 {
+  "debug": true,
   "folders": {
     "markup": "markup",
     "scripts": "scripts",

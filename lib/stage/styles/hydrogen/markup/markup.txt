@@ -1,0 +1,5394 @@
+<div data-h2-bg-color="b([dark]green)" data-h2-bg-color="b(theme-3)"></div>
+<div data-h2-bg-color="hugaboo(red)" data-h2-margin="b(all, s)" data-h2-width="b(phat)"></div>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Hydrogen | An open-source, utility-first CSS tool.</title>
+  <meta name="description" content="Hydrogen is a utility-first styling tool for creating web interfaces without writing CSS.">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicons/site.webmanifest">
+  <link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg" color="#9d5cff">
+  <link rel="shortcut icon" href="/assets/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#9d5cff">
+  <meta name="msapplication-config" content="/assets/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Typekit -->
+  <link rel="stylesheet" href="https://use.typekit.net/iep7euw.css">
+
+  <!-- Hydrogen CSS -->
+  <link rel="stylesheet" href="/assets/styles/hydrogen.css">
+
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/assets/styles/app.css">
+
+</head>
+    <body data-h2-reset data-h2-typography>
+      <div 
+        data-h2-bg-color="b(black)"
+        data-h2-font-family="b(Gibson)">
+        <div 
+          data-h2-container="b(center, full)"
+          data-h2-padding="b(top-bottom, xxl)"
+          data-h2-text-align="b(center)">
+          <img 
+            alt="Hydrogen's current release." 
+            src="https://img.shields.io/github/package-json/v/hydrogen-design-system/hydrogen.css?color=9864e8&label=release"
+            style="vertical-align: middle;">
+          <h1
+            data-h2-font-color="b(white)"
+            data-h2-font-size="b(h1)"
+            data-h2-margin="b(top-bottom, m)"
+            data-h2-font-weight="b(600)">Hydrogen</h1>
+          <p data-h2-font-color="b(white)">An <a href="https://github.com/hydrogen-design-system" title="Visit Hydrogen on Github." target="_blank">open-source</a>, utility-first styling tool.</p>
+        </div>
+      </div>
+      <div 
+        data-h2-container="b(center, full)"
+        data-h2-font-family="b(Gibson)"
+        data-h2-font-color="b(font)">
+        <div data-h2-flex-grid="b(top, expanded, flush, s) m(stretch, expanded, flush, xxl)">
+          <div data-h2-flex-item="b(1of1) m(1of4)">
+            <div style="height: 100%;">
+              <div 
+                data-h2-position="m(sticky)" 
+                data-h2-location="m(top, none)"
+                data-h2-padding="m(bottom, xxl)"
+                class="sidebar">
+                <p 
+  data-h2-font-size="b(h5)"
+  data-h2-padding="b(top, xl) b(bottom, s)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(all, none)"
+  >Navigate</p>
+<a 
+  href="#what"
+  data-h2-margin="b(left, m) b(bottom, xxs)">What is Hydrogen?</a><br>
+
+
+<div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, none)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)">How to Use Hydrogen</span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+  <a 
+    href="#install"
+    data-h2-margin="b(left, m) b(bottom, xxs)">Installation</a><br>
+  <a 
+    href="#usage"
+    data-h2-margin="b(left, m) b(bottom, xxs)">Getting Started</a><br>
+  <a 
+    href="#mediaQueries"
+    data-h2-margin="b(left, m) b(bottom, xxs)">Media Queries</a><br>
+  <a 
+    href="#colors"
+    data-h2-margin="b(left, m) b(bottom, xxs)">Color and Gradients</a><br>
+  <a 
+    href="#whitespace"
+    data-h2-margin="b(left, m) b(bottom, xxs)">Whitespace</a>
+
+  </div>
+</div>
+<a 
+  href="#commands"
+  data-h2-margin="b(left, m) b(bottom, xxs)">Commands</a><br>
+
+
+
+
+
+
+
+<div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, none)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)">Configuration and Themes</span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+  <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, none)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)">System Configuration</span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+  <a 
+    href="#configFolders"
+    data-h2-margin="b(left, m) b(bottom, xxs)">Folders</a><br>
+  <a 
+    href="#configMedia"
+    data-h2-margin="b(left, m) b(bottom, xxs)">Media Queries</a><br>
+  <a 
+    href="#configMediaWarnings"
+    data-h2-margin="b(left, m) b(bottom, xxs)">Media Query Warnings</a><br>
+  <a 
+    href="#configDebug"
+    data-h2-margin="b(left, m) b(bottom, xxs)">Debug</a><br>
+
+  </div>
+</div>
+  <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, none)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)">Theme Settings</span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+  <a 
+    href="#configThemeBorders"
+    data-h2-margin="b(left, m) b(bottom, xxs)">Border Weights</a><br>
+  <a 
+    href="#configThemeColors"
+    data-h2-margin="b(left, m) b(bottom, xxs)">Colors</a><br>
+  <a 
+    href="#configThemeContainers"
+    data-h2-margin="b(left, m) b(bottom, xxs)">Containers</a><br>
+  <a 
+    href="#configThemeFlexGrid"
+    data-h2-margin="b(left, m) b(bottom, xxs)">Flex Grid</a><br>
+  <a 
+    href="#configThemeFonts"
+    data-h2-margin="b(left, m) b(bottom, xxs)">Fonts</a><br>
+  <a 
+    href="#configThemeFontBaseSize"
+    data-h2-margin="b(left, m) b(bottom, xxs)">Font Base Size</a><br>
+  <a 
+    href="#configThemeFontScale"
+    data-h2-margin="b(left, m) b(bottom, xxs)">Font Scale</a><br>
+  <a 
+    href="#configThemeGradients"
+    data-h2-margin="b(left, m) b(bottom, xxs)">Gradients</a><br>
+  <a 
+    href="#configThemeRadius"
+    data-h2-margin="b(left, m) b(bottom, xxs)">Radius</a><br>
+  <a 
+    href="#configThemeShadows"
+    data-h2-margin="b(left, m) b(bottom, xxs)">Shadows</a><br>
+  <a 
+    href="#configThemeWhitespace"
+    data-h2-margin="b(left, m) b(bottom, xxs)">Whitespace Scale</a><br>
+
+  </div>
+</div>
+
+  </div>
+</div>
+
+
+
+<div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, none)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)">Style Attributes</span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+  
+  
+    
+    
+      
+      
+        
+          <a 
+            href="#backgroundColor"
+            data-h2-margin="b(left, m) b(bottom, xxs)">Background Colors</a><br>
+        
+      
+    
+  
+    
+    
+      
+      
+        
+          <a 
+            href="#borders"
+            data-h2-margin="b(left, m) b(bottom, xxs)">Borders</a><br>
+        
+      
+    
+  
+    
+    
+      
+      
+        
+          <a 
+            href="#containers"
+            data-h2-margin="b(left, m) b(bottom, xxs)">Containers</a><br>
+        
+      
+    
+  
+    
+    
+      
+      
+        
+          <a 
+            href="#display"
+            data-h2-margin="b(left, m) b(bottom, xxs)">Display</a><br>
+        
+      
+    
+  
+    
+    
+      
+      
+        
+          <span 
+            data-h2-display="b(block)"
+            data-h2-margin="b(left, m) b(bottom, xxs)">Flex Grid</span>
+        
+        <a 
+          href="#flexGrid"
+          data-h2-margin="b(left, l) b(bottom, xxs)">Flex Grids</a><br>
+      
+    
+      
+      
+        
+        <a 
+          href="#flexItem"
+          data-h2-margin="b(left, l) b(bottom, xxs)">Flex Items</a><br>
+      
+    
+  
+    
+    
+      
+      
+        
+          <span 
+            data-h2-display="b(block)"
+            data-h2-margin="b(left, m) b(bottom, xxs)">Flex Properties</span>
+        
+        <a 
+          href="#flexAlignContent"
+          data-h2-margin="b(left, l) b(bottom, xxs)">Align Content</a><br>
+      
+    
+      
+      
+        
+        <a 
+          href="#flexAlignItems"
+          data-h2-margin="b(left, l) b(bottom, xxs)">Align Items</a><br>
+      
+    
+      
+      
+        
+        <a 
+          href="#flexAlignSelf"
+          data-h2-margin="b(left, l) b(bottom, xxs)">Align Self</a><br>
+      
+    
+      
+      
+        
+        <a 
+          href="#flexDirection"
+          data-h2-margin="b(left, l) b(bottom, xxs)">Flex Direction</a><br>
+      
+    
+      
+      
+        
+        <a 
+          href="#flexJustifyContent"
+          data-h2-margin="b(left, l) b(bottom, xxs)">Justify Content</a><br>
+      
+    
+      
+      
+        
+        <a 
+          href="#flexWrap"
+          data-h2-margin="b(left, l) b(bottom, xxs)">Flex Wrap</a><br>
+      
+    
+  
+    
+    
+      
+      
+        
+          <span 
+            data-h2-display="b(block)"
+            data-h2-margin="b(left, m) b(bottom, xxs)">Font Properties</span>
+        
+        <a 
+          href="#fontColor"
+          data-h2-margin="b(left, l) b(bottom, xxs)">Font Color</a><br>
+      
+    
+      
+      
+        
+        <a 
+          href="#fontFamily"
+          data-h2-margin="b(left, l) b(bottom, xxs)">Font Families</a><br>
+      
+    
+      
+      
+        
+        <a 
+          href="#fontSize"
+          data-h2-margin="b(left, l) b(bottom, xxs)">Font Size</a><br>
+      
+    
+      
+      
+        
+        <a 
+          href="#fontStyle"
+          data-h2-margin="b(left, l) b(bottom, xxs)">Font Style</a><br>
+      
+    
+      
+      
+        
+        <a 
+          href="#fontWeight"
+          data-h2-margin="b(left, l) b(bottom, xxs)">Font Weight</a><br>
+      
+    
+      
+      
+        
+        <a 
+          href="#textAlign"
+          data-h2-margin="b(left, l) b(bottom, xxs)">Text Align</a><br>
+      
+    
+  
+    
+    
+      
+      
+        
+          <a 
+            href="#overflow"
+            data-h2-margin="b(left, m) b(bottom, xxs)">Overflow</a><br>
+        
+      
+    
+  
+    
+    
+      
+      
+        
+          <span 
+            data-h2-display="b(block)"
+            data-h2-margin="b(left, m) b(bottom, xxs)">Positioning</span>
+        
+        <a 
+          href="#location"
+          data-h2-margin="b(left, l) b(bottom, xxs)">Location</a><br>
+      
+    
+      
+      
+        
+        <a 
+          href="#position"
+          data-h2-margin="b(left, l) b(bottom, xxs)">Position</a><br>
+      
+    
+  
+    
+    
+      
+      
+        
+          <a 
+            href="#radius"
+            data-h2-margin="b(left, m) b(bottom, xxs)">Radius</a><br>
+        
+      
+    
+  
+    
+    
+      
+      
+        
+          <a 
+            href="#shadows"
+            data-h2-margin="b(left, m) b(bottom, xxs)">Shadows</a><br>
+        
+      
+    
+  
+    
+    
+      
+      
+        
+          <a 
+            href="#visibility"
+            data-h2-margin="b(left, m) b(bottom, xxs)">Visibility</a><br>
+        
+      
+    
+  
+    
+    
+      
+      
+        
+          <span 
+            data-h2-display="b(block)"
+            data-h2-margin="b(left, m) b(bottom, xxs)">Whitespace</span>
+        
+        <a 
+          href="#margin"
+          data-h2-margin="b(left, l) b(bottom, xxs)">Margins</a><br>
+      
+    
+      
+      
+        
+        <a 
+          href="#padding"
+          data-h2-margin="b(left, l) b(bottom, xxs)">Padding</a><br>
+      
+    
+  
+    
+    
+      
+      
+        
+          <a 
+            href="#width"
+            data-h2-margin="b(left, m) b(bottom, xxs)">Width</a><br>
+        
+      
+    
+  
+
+  </div>
+</div>
+
+<!-- <a 
+  href="#what"
+  data-h2-margin="b(left, m) b(bottom, xxs)">What is Hydrogen?</a><br> -->
+
+<a 
+  data-h2-margin="b(left, m) b(bottom, xxs)"
+  href="https://github.com/hydrogen-design-system" 
+  title="Visit Hydrogen on Github." 
+  target="_blank">Github</a>
+              </div>
+            </div>
+          </div>
+          <div data-h2-flex-item="b(1of1) m(3of4)">
+            <div data-h2-padding="b(bottom, xxl)">
+              <h2
+  id="what"
+  data-h2-text-align="b(center) m(left)"
+  data-h2-font-family="b(Gibson)"
+  data-h2-font-size="b(h2)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">
+  <span data-h2-font-size="b(h3)">💡 </span>
+  What is Hydrogen?
+</h2>
+<div
+  data-h2-bg-color="b(theme-1[.1])"
+  data-h2-font-color="b(theme-1)"
+  data-h2-border="b(theme-1, all, solid, s)"
+  data-h2-padding="b(right-left, s)"
+  data-h2-radius="b(s)"
+  data-h2-margin="b(top-bottom, m)">
+  <p 
+    data-h2-font-color="b(theme-1)"
+    data-h2-font-weight="b(600)">Hydrogen is a utility-first styling tool for creating web interfaces without writing CSS.</p>
+  <p data-h2-font-color="b(theme-1)">It leverages data-attributes to allow the styling of elements right in your markup, rather than creating your own classes. Hydrogen offers a comprehensive library of tools and configurations for easy, seamless development. When you're ready to publish your project, it then processes your markup and creates a custom CSS file that contains only the code you've used, reducing its own footprint.</p>
+</div>
+<div data-h2-flex-grid="b(middle, expanded, flush, m)">
+  <div data-h2-flex-item="b(1of1) m(1of2)">
+<pre>
+&lt;div 
+  data-h2-bg-color="b(white)"
+  data-h2-padding="b(top-bottom, m) m(all, l)"
+  data-h2-radius="b(s)"
+  data-h2-shadow="b(s) m(m)"&gt;
+  &lt;p 
+    data-h2-text-align="b(center)"&gt;
+    Welcome to &lt;span data-h2-font-color="b(purple)"&gt;Hydrogen&lt;/span&gt;!
+  &lt;/p&gt;
+&lt;/div&gt;
+</pre>
+  </div>
+  <div data-h2-flex-item="b(1of1) m(1of2)">
+    <div 
+      data-h2-bg-color="b(white)"
+      data-h2-padding="b(top-bottom, s) m(all, l)"
+      data-h2-radius="b(s)"
+      data-h2-shadow="b(s) m(m)">
+      <p 
+        data-h2-text-align="b(center)">
+        Welcome to <span data-h2-font-color="b(theme-1)">Hydrogen</span>!
+      </p>
+    </div>
+  </div>
+</div>
+<h3
+  id=""
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Data Attributes?</h3>
+<p>Why use <code>data-attributes</code> over <code>class</code>?</p>
+<p>There's been a lot of discussion around classes performing better than data attributes, and we took this into consideration when designing Hydrogen. A lot of traditional class practices like BEM are effective, but can result in some really complex, bloated class attributes, which can have impacts on our ability to consume and write code. One of Hydrogen's primary goals is to make the end-user experience AND the developer experience easier, and so we decided to use data attributes for a few reasons:</p>
+<ul>
+  <li>they provide consistent namespacing</li>
+  <li>they provide a context and a value</li>
+  <li>their values are flexible, and allow for modifiers</li>
+  <li>they allow for complex combinations</li>
+  <li>they're easy to manipulate with JavaScript</li>
+</ul>
+<p>In combination with Hydrogen's ability to generate a custom CSS file that contains only what you've used, the performance trade-offs are worth the improved experience. It was of the utmost importance that Hydrogen considered maintenance and legibility so that markup could be easily understood while retaining good performance and a small footprint.</p>
+<h3
+  id=""
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Customization?</h3>
+<p>Hydrogen offers customization of both style and syntax through a comprehensive JSON configuration file. Include as many media queries, colors, gradients, and more as your project needs to get the job done. The <a href="#configuration" title="Learn more about how to configure Hydrogen.">Configuration and Themes</a> section of the documentation offers more detail about how this file works.</p>
+<h3
+  id=""
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">File Size?</h3>
+<p>When you're ready to publish your project to the world, Hydrogen's build script will process your HTML, React, etc. and find exactly the attributes your project is using. It then compiles a CSS file that is specifically designed for your project. No bloat, no unused classes or CSS. By doing so, Hydrogen's file size drops drastically, improving both page load speeds and the performance of the data-attributes themselves.</p>
+              <h2
+  id=""
+  data-h2-text-align="b(center) m(left)"
+  data-h2-font-family="b(Gibson)"
+  data-h2-font-size="b(h2)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">
+  <span data-h2-font-size="b(h3)">💬 </span>
+  How to Use Hydrogen
+</h2>
+              <h3
+  id="install"
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Installation</h3>
+              <p>First, we'll need to install <a href="https://nodejs.org/en/" title="Learn more about installing Node and NPM." target="_blank">NPM</a> if you don't already have it on your machine. From there, in a command prompt/terminal window, navigate to the root of your project and enter:</p>
+              <pre>npm install @hydrogen-design-system/hydrogen.css --save-dev</pre>
+              <p>After the installation completes, you can run:</p>
+              <pre>npx h2-init</pre>
+              <p>The above command will prompt you to enter three folder locations: your markup folder, your scripts folder, and your styles/CSS folder. Simply enter the path from the root of your project (e.g. <code>src/my/markup</code>). Once you've submitted these paths, Hydrogen will automagically create a <code>hydrogen.config.json</code> file in the root of your project. <span data-h2-font-weight="b(600)" data-h2-font-color="b(theme-1)">This file will be where you can customize Hydrogen's settings and theme.</span></p>
+              <h3
+  id="usage"
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Getting Started</h3>
+              <p>In order to start using Hydrogen, you need to enable it on your project. <a href="#commands" title="Learn more about compiling Hydrogen.">After compiling Hydrogen</a>, a complete CSS file will appear in your specified styles folder, so include this file in your page's <code>head</code> element.</p>
+<pre>&lt;head&gt;
+  &lt;link rel="stylesheet" href="path/to/hydrogen.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div data-h2-bg-color="b(black)"&gt;
+    &lt;span data-h2-font-color="b(theme-1)"&gt;My Hydrogen styles work here!&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/body&gt;</pre>
+              <p data-h2-margin="b(bottom, s)">Hydrogen contains a handful of basic reset and typography CSS that might affect your existing styles. You can find out more about these styles below if you're trying to determine what might be altering your project's original CSS.</p>
+              
+              <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)">Hydrogen's Reset Styles</span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    <pre>
+html {
+  box-sizing: border-box;
+  font-size: $h2-font-base-size;
+  * {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  margin: 0; // Resets the default 8px value.
+  max-width: 100%;
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+}
+
+// Margin Resets
+blockquote,
+dl,
+fieldset,
+figure {
+  margin: 0;
+}
+
+// Max Image Widths
+img,
+iframe {
+  max-width: 100%;
+}
+// Headings
+h1, h2, h3, h4, h5, h6, p {
+  font-weight: normal;
+}
+h1 {
+  font-size: $h2-font-size-h1;
+  margin-top: calc((((1rem * #{$h2-whitespace-scale}) * #{$h2-whitespace-scale}) * #{$h2-whitespace-scale}) * #{$h2-whitespace-scale});
+}
+h2 {
+  font-size: $h2-font-size-h2;
+  margin-top: calc(((1rem * #{$h2-whitespace-scale}) * #{$h2-whitespace-scale}) * #{$h2-whitespace-scale});
+  margin-bottom: 1rem;
+}
+h3 {
+  font-size: $h2-font-size-h3;
+  margin-top: calc((1rem * #{$h2-whitespace-scale}) * #{$h2-whitespace-scale});
+  margin-bottom: 1rem;
+}
+h4 {
+  font-size: $h2-font-size-h4;
+  margin-top: calc(1rem * #{$h2-whitespace-scale});
+  margin-bottom: 1rem;
+}
+h5 {
+  font-size: $h2-font-size-h5;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+h6 {
+  font-size: $h2-font-size-h6;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+// Copy
+p, 
+div {
+  font-size: $h2-font-size-default
+}
+p {
+  margin-top: 1rem;
+}
+p+p {
+  margin-top: calc(1rem / #{$h2-whitespace-scale});
+}
+span {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+// Styled Typography
+em {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: italic;
+}
+strong {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+}
+// Anchors
+a {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: underline;
+  transition: color .2s ease;
+}
+// Lists
+ul,
+ol {
+  margin: 0;
+  margin-top: 1rem;
+}
+li {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  margin-top: calc(1rem / #{$h2-whitespace-scale});
+  &:last-child {
+    margin-bottom: 0;
+  }
+}</pre>
+
+  </div>
+</div>
+              <h3
+  id="syntax"
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Syntax</h3>
+              <p>To begin, let's dissect how a Hydrogen attribute works so that we can better understand how to use them.</p>
+              <pre>data-h2-PROPERTY="MEDIA:STATE(ARGUMENTS)"</pre>
+              <p>Hydrogen attributes have 5 distinct pieces to them:</p>
+              <ul>
+                <li><code>data-h2-</code>: this is how custom <code>data-attributes</code> are defined in HTML. The <code>h2</code> bit ensures that Hydrogen's attributes are namespaced and won't interfere with other frameworks.</li>
+                <li><code>PROPERTY</code>: the property portion is where we specify which CSS property we want to style. <a href="#backgroundColor" title="View a list of properties available in Hydrogen." data-h2-font-color="b:h(theme-1)">A list can be found starting with background color below.</a></li>
+                <li><code>MEDIA()</code>: this is how we define at which media query we want our styles to apply at. You can learn more about how to use media queries and which ones are installed by default below.</li>
+                <li><code>:STATE</code>: this <strong>optional</strong> value allows you to set Hydrogen styles for a particular state on a handful of Hydrogen properties. <a href="#states" title="Learn more about states in Hydrogen." data-h2-font-color="b:h(theme-1)">You can see a list of of available states and which properties they can be used with below.</a></li>
+                <li><code>ARGUMENTS</code>: each property has its own special set of arguments, outlined in the documentation below, that will define how the element is styled.</li>
+              </ul>
+              <h3
+  id="mediaQueries"
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Media Queries</h3>
+              <p>Media queries in Hydrogen are designed to allow you to granularly control each property when you need it. Rather than being forced to write unique styles for a particular element, you can directly target that element's property at the exact query you need right in your markup.</p>
+              <p>Hydrogen comes with a default set of 4 media queries out of the box:</p>
+<pre>
+b
+s (48em)
+m (64em)
+l (100em)
+</pre>
+              <p>Using a media query is simple:</p>
+              <pre>data-h2-bg-color="b(black) m(theme-1) l(theme-2)"</pre>
+              <p>Renders something like this (try resizing your screen!):</p>
+              <div data-h2-bg-color="b(black) m(theme-1) l(theme-2)" data-h2-padding="b(all, l)" data-h2-margin="b(bottom, m)"></div>
+              <p>If the built in media queries don't suit your needs, you can <a href="#configMedia" title="Learn more about setting custom media values in your configuration file." data-h2-font-color="b:h(theme-1)">customize them</a> in your <code>hydrogen.config.json</code> file.</p>
+              <!-- States -->
+              <h3
+  id="states"
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">States</h3>
+              <p>The state property allows you to modify a media query so that its arguments only apply to a particular element's state. This is handy for manipulating styles on things like <code>:hover</code> so that a link or button behaves a certain way when a user hovers over it with their cursor.</p>
+              <p>For example, if we wanted to change the color of a link from red to purple when it's hovered, we'd do the following:</p>
+
+<pre>
+&lt;a href=&quot;&quot; title=&quot;&quot; data-h2-font-color=&quot;b(red) b:h(purple)&quot;&gt;My link&lt;/a&gt;
+</pre>
+              <p>Hydrogen provides options for the following states:</p>
+              <ul>
+                <li>hover, <code>:h</code></li>
+                <li>active, <code>:a</code></li>
+                <li>focus, <code>:f</code></li>
+                <li>disabled, <code>:d</code></li>
+              </ul>
+              <p>Because states are intimately tied with the volume of CSS Hydrogen produces, it was important to thoughtfully limit their scope to properties that make sense, rather than allowing their use on every single Hydrogen property. This means that states can be used with the following:</p>
+<pre>
+bg-color
+border
+display
+font-color
+font-style
+font-weight
+margin
+overflow
+padding
+radius
+shadow
+visibility
+width
+</pre>
+              <!-- Color and Gradients -->
+              <h3
+  id="colors"
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Color and Gradients</h3>
+              <p>Hydrogen comes with a set of 5 pre-installed colors, but we know that color is almost always something you're going to want to control. In this section, we want to explain how color is used in the context of property arguments, rather than highlight the colors themselves. <a href="#configThemeColors" title="Learn more about configuring colors.">You can customize the exact palette for your application by following the instructions in the Themes section.</a></p>
+<pre>
+black
+white
+purple
+blue
+pink
+</pre>
+              <p>When colors are built in Hydrogen, a light and dark version of each colors is created, and there is the option for each one to enable automatic generation of opacity variations. Hydrogen's default colors have this opacity option disabled, but these can be extremely helpful if your application frequently uses variations in its UI.</p>
+              <p><span data-h2-font-color="b(theme-1)" data-h2-font-weight="b(600)">The simplest way to reference a color in a property argument is to simply use its name</span>: <code>data-h2-bg-color="b(purple)"</code>. Sometimes however, we want to tap into the automatically created lighter, darker, or transparent versions of a color, and to so, colors have some prefix and suffix syntax that can be optionally included:</p>
+              <ul>
+                <li><code>[dark]COLOR</code> for light/dark versions</li>
+                <li><code>COLOR[.6]</code> for referencing an opacity</li>
+              </ul>
+              <div data-h2-flex-grid="b(top, expanded, flush, m)">
+                <div data-h2-flex-item="b(1of1) m(1of2)">
+                  <p>For referencing light and dark variations of your color, you can use the following:</p>
+<pre>
+light
+dark
+
+
+
+
+
+</pre>
+                </div>
+                <div data-h2-flex-item="b(1of1) m(1of2)">
+                  <p>For referencing opacity values when you've enabled them, you can use the following increments:</p>
+<pre>
+0
+.1
+.2
+...
+.8
+.9
+1
+</pre>
+                </div>
+              </div>
+              <p>These values can even be combined to target a transparent dark variation, for example: <code>data-bg-color="b([dark]purple[.5])"</code></p>
+              <h4
+  id="gradients"
+  data-h2-font-size="b(h4)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Gradients</h4>
+              <p>Hydrogen doesn't ship with any gradients enabled by default, but you can optionally configure them in the <a href="#configThemeGradients" title="Learn more about configuring gradients.">gradients section of your configuration file</a>.</p>
+              <p data-h2-font-color="b(theme-1)" data-h2-font-weight="b(600)">Gradients are supported by the following properties:</p>
+<pre>
+bg-color
+</pre>
+              <p>When they are enabled, you can reference them in place of a color value by using the following syntax: <code>TYPE-ANGLE[COLORSTOP1][COLORSTOP2]</code>.</p>
+              <p>More specifically, radial gradients will not accept an angle value, while linear gradients require them. These angle values are assigned in your configuration file.</p>
+              <p data-h2-font-weight="b(600)">Examples:</p>
+<pre>
+linear-45[purple][blue]
+radial[pink][purple]
+linear-270[purple][blue][pink]
+</pre>
+              <h3
+  id="whitespace"
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Whitespace</h3>
+              <p>Whitespace in Hydrogen works within certain constraints. In order to help ensure the flow of whitespace is consistent in your app and you aren't worrying about arbitrary values for margins, padding, and the like, Hydrogen generates a set of whitespace values for you using the <code>whitespaceScale</code> option in your configuration file.</p>
+              <p>By default, the <code>whitespaceScale</code> value is set to 1.5, and this means that, starting with <code>1rem</code>, whitespace values are calculated like this:</p>
+<pre>
+none (0rem)
+xxs (0.4444rem)
+xs (0.6666rem)
+s (1rem)
+m (1.5rem)
+l (2.25rem)
+xl (3.375rem)
+xxl (5.0625rem)
+</pre>
+              <p>These values can be used in any property that has a <code>WHITESPACE</code> argument.</p>
+              <h2
+  id="commands"
+  data-h2-text-align="b(center) m(left)"
+  data-h2-font-family="b(Gibson)"
+  data-h2-font-size="b(h2)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">
+  <span data-h2-font-size="b(h3)">📃 </span>
+  Commands
+</h2>
+<!-- <h3
+  id=""
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Watch</h3> -->
+<!-- <p><code>npx h2-watch</code> will tell Hydrogen to continuously watch for changes to your <code>hydrogen.config.json</code> file, as well as your markup, and will automatically compile Hydrogen with your new changes. This is useful for when you need to make a lot of changes to your theme and want to see real output while you're working.</p> -->
+<h3
+  id=""
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Compile</h3>
+<p><code>npx h2-compile</code> will tell Hydrogen to compile its whole CSS file once, based on your current configuration. This will output Hydrogen in its entirety, so you'll be able to add and remove markup with little friction or waiting for a compile to finish.<span data-h2-font-weight="b(600)" data-h2-font-color="b(theme-1)">This is probably the command you'll use most</span> and is helpful if you're actively developing on your project.</p>
+<h3
+  id=""
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Build</h3>
+<p><code>npx h2-build</code> should be used when you're ready to deploy your project, as it will compile Hydrogen by searching through your markup and create a CSS file that contains only the parts of Hydrogen that you've used, rather than the whole system, thus reducing Hydrogen's file size drastically. You can learn more about this in the "<a href="#what" title="Learn about how Hydrogen creates its production file.">What is Hydrogen?</a>" section.</p>
+              <h2
+  id="configuration"
+  data-h2-text-align="b(center) m(left)"
+  data-h2-font-family="b(Gibson)"
+  data-h2-font-size="b(h2)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">
+  <span data-h2-font-size="b(h3)">🔨 </span>
+  Configuration and Themes
+</h2>
+              <p>After running <code>npx h2-init</code>, a <code>hydrogen.config.json</code> file will be located in the root of your project. In this file, you can specify a variety of options that will modify how Hydrogen works and the theme it applies to its stylesheet.</p>
+              <h3
+  id=""
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Functional Configuration</h3>
+              <h4
+  id="configFolders"
+  data-h2-font-size="b(h4)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Setting Up Project Folders</h4>
+              <p>If you have run <code>npx h2-init</code> these configuration lines are probably already set. These options indicate to Hydrogen where it should find your markup and scripts as well as where it should place its final CSS file.</p>
+<pre>"folders": {
+  "markup": "path/to/markup/folder",
+  "scripts": "path/to/scripts/folder",
+  "styles": "path/to/css/folder"
+}</pre>
+              <p>While by default the folders configuration contains only one option for markup and scripts, this configuration can also be set to an array if your project has multiple markup or script folders:</p>
+<pre>"folders": {
+  "markup": [
+    "first/path/to/markup/folder",
+    "second/path/to/markup/folder"
+  ],
+  "scripts": [
+    "first/path/to/scripts/folder",
+    "second/path/to/scripts/folder"
+  ],
+  "styles": "path/to/css/folder"
+}</pre>
+              <h4
+  id="configMedia"
+  data-h2-font-size="b(h4)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Choosing Media Queries</h4>
+              <p>By default, Hydrogen comes with 4 default media queries, one of which (<code>b</code> for "base") will always be available on your project. You can configure your own media queries by modifying the list below in your configuration file to suit your project's needs. If you're happy with the default options, you can omit this from your configuration file.</p>
+<pre>"media": [
+  {
+    "key": "s",
+    "value": "48em"
+  },
+  {
+    "key": "m",
+    "value": "64em"
+  },
+  {
+    "key": "l",
+    "value": "100em"
+  }
+]</pre>
+              <h4
+  id="configMediaWarnings"
+  data-h2-font-size="b(h4)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Media Query Warnings</h4>
+              <p>This option is set to <code>false</code> by default. Setting this to <code>true</code> will allow warning messages to appear in your console during a production build to indicate if there are media queries being used in your markup that aren't included in the <code>media</code> configuration outlined above. These messages can be helpful to find typos or queries that simply don't exist.</p>
+              <pre>"mediaWarnings": true,</pre>
+              <h4
+  id="configDebug"
+  data-h2-font-size="b(h4)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Debug Settings</h4>
+              <p>This option is set to <code>false</code> by default. Setting this to <code>true</code> will prevent Hydrogen from cleaning up its cache (found in your CSS folder). This can be helpful to inspect the various output files during Hydrogen's build to locate problems or bugs.</p>
+              <pre>"debug": true,</pre>
+              <h3
+  id=""
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Theme Settings</h3>
+              <h4
+  id="configThemeBorders"
+  data-h2-font-size="b(h4)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Border Settings</h4>
+              <p>This setting allows you to create custom, named border weights. The <code>name</code> value will be how you reference border weight in your attribute arguments, while the <code>weight</code> value will be the corresponding value in CSS. Below are the default settings.</p>
+<pre>
+"borderWeights": [
+  {
+    "key": "s",
+    "weight": "1px"
+  },
+  {
+    "key": "m",
+    "weight": ".5rem"
+  },
+  {
+    "key": "l",
+    "weight": "1rem"
+  }
+]
+</pre>
+              <h4
+  id="configThemeColors"
+  data-h2-font-size="b(h4)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Colors</h4>
+              <p>This setting allows you to theme Hydrogen's colors. The <code>name</code> value will be how you reference color in your attribute arguments, the <code>color</code> value will be the corresponding value in CSS and can accept RGB, RGBA, and HEX values, and finally, the <code>opacity</code> value can be set to true or false, which tells Hydrogen to build an opacity map for that color, so that it can be <a href="#color" title="Learn more about how opacity works.">referenced using the opacity suffixes</a>. Below are the default values.</p>
+<pre>
+"colors": [
+  {
+    "key": "white",
+    "color": "rgba(255, 255, 255, 1)",
+    "opacity": false
+  },
+  {
+    "key": "black",
+    "color": "rgba(20, 20, 30, 1)",
+    "opacity": false
+  },
+  {
+    "key": "purple",
+    "color": "#9D5CFF",
+    "opacity": false
+  },
+  {
+    "key": "blue",
+    "color": "#5CFFEE",
+    "opacity": false
+  },
+  {
+    "key": "pink",
+    "color": "#FF5C6D",
+    "opacity": false
+  }
+]
+</pre>
+              <h4
+  id="configThemeContainers"
+  data-h2-font-size="b(h4)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Containers</h4>
+              <p>This setting allows you to create custom container widths. The <code>name</code> value will be how you reference widths in your attribute arguments, while the <code>maxWidth</code> value will be the container's maximum width. Hydrogen will automatically generate alignments for all of your containers. Below are the default values.</p>
+<pre>
+"containers": [
+  {
+    "key": "s",
+    "maxWidth": "39rem"
+  },
+  {
+    "key": "m",
+    "maxWidth": "60rem"
+  },
+  {
+    "key": "l",
+    "maxWidth": "80rem"
+  }
+]
+</pre>
+              <h4
+  id="configThemeFlexGrid"
+  data-h2-font-size="b(h4)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Flex Grid Settings</h4>
+              <p>This setting allows you to enable the flex grid and set how many columns it should generate. Below are the default values.</p>
+<pre>
+"flexgrid": {
+  "enabled": false,
+  "columns": 12
+},
+</pre>
+              <h4
+  id="configThemeFonts"
+  data-h2-font-size="b(h4)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Font Families</h4>
+              <p>This setting allows you to create distinct, named font families. The <code>name</code> value will be how you reference the font family in your attribute arguments. The <code>loadType</code> value can be set to <code>system</code>, <code>webfont</code>, or <code>font-face</code> to tell Hydrogen how it should be loaded. The <code>value</code> option is the CSS you want to be used to display this font - don't forget to include a system fallback in this line! Finally, the <code>url</code> value will tell font-face style families where the font files should be loaded from. Here's an example of what loading in Open Sans from Google Fonts looks like:</p>
+<pre>
+  "fonts": [
+  {
+    "key": "open",
+    "loadType": "webfont",
+    "value": "'Open Sans', sans-serif",
+    "url": null
+  }
+]
+</pre>
+              <p>Below are the default values.</p>
+<pre>
+"fonts": [
+  {
+    "key": "sans",
+    "loadType": "system",
+    "value": "sans-serif",
+    "url": null
+  },
+  {
+    "key": "serif",
+    "loadType": "system",
+    "value": "serif",
+    "url": null
+  },{
+    "key": "script",
+    "loadType": "system",
+    "value": "script",
+    "url": null
+  },
+  {
+    "key": "mono",
+    "loadType": "system",
+    "value": "monospace",
+    "url": null
+  }
+]
+</pre>
+              <h4
+  id="configThemeFontBaseSize"
+  data-h2-font-size="b(h4)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Font Base Size</h4>
+              <p>This option will set a font size value on your project's <code>&lt;html&gt;</code> element and determines the base size of type on your page. By default, browsers set the default font size (1rem) to 16px. By using a percentage value, you can choose to make this 16px lr (over 100%) or ser (under 100%). Below is the default value.</p>
+<pre>
+"fontBaseSize": "112.5%"
+</pre>
+              <h4
+  id="configThemeFontScale"
+  data-h2-font-size="b(h4)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Font Scale</h4>
+              <p>This option determines the exponential rate at which the typography sizes are generated. Heading sizes are determined by multiplying the font base size by this value on a scale. You can learn more about choosing a value for your font scale using <a href="https://type-scale.com/" title="Learn more about choosing a type scale." target="_blank">this handy Type Scale tool</a>.</p>
+<pre>
+"fontScale": "1.25"
+</pre>
+              <h4
+  id="configThemeGradients"
+  data-h2-font-size="b(h4)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Gradients</h4>
+              <p>Hydrogen doesn't come with gradients enabled by default, but using this setting, you can create custom gradients and make them available for properties that accept them. Below are examples of both radial and linear gradients. The <code>type</code> value allows you to select the gradient type. The <code>angle</code> value is only applicable for linear gradients and determines that angle at which the gradient will travel. The <code>colorStops</code> array allows you to define as many color stops as you need, as well as their position. These gradient configurations will automatically generate a gradient option following the <a href="#colors" title="Learn more about how gradients are produced.">syntax outlined in the color section</a>.</p>
+<pre>
+"gradients": [
+  {
+    "type": "radial",
+    "colorStops": [
+      {
+        "key": "purple",
+        "color": "#9D5CFF"
+      },
+      {
+        "key": "blue",
+        "color": "#5CFFEE"
+      },
+      {
+        "key": "pink",
+        "color": "#FF5C6D"
+      }
+    ]
+  },
+  {
+    "type": "linear",
+    "angle": "135deg",
+    "colorStops": [
+      {
+        "key": "purple",
+        "color": "#9D5CFF"
+      },
+      {
+        "key": "blue",
+        "color": "#5CFFEE"
+      }
+    ]
+  }
+]
+</pre>
+              <h4
+  id="configThemeRadius"
+  data-h2-font-size="b(h4)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Radius</h4>
+              <p>This option allows you to set custom radius values. The <code>name</code> will be how you reference the radius in your attribute arguments. The <code>value</code> option is the radius CSS value you want. Below are the default options.</p>
+<pre>
+"radius": [
+  {
+    "key": "s",
+    "value": "10px"
+  },
+  {
+    "key": "m",
+    "value": "50rem"
+  },{
+    "key": "l",
+    "value": "100%"
+  }
+]
+</pre>
+              <h4
+  id="configThemeShadows"
+  data-h2-font-size="b(h4)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Shadows</h4>
+              <p>This setting allows you to create custom shadow values. The <code>name</code> will be how you reference the shadow in your attribute arguments. The <code>value</code> option is the <code>box-shadow</code> CSS you want your shadow to use. Below are the default options.</p>
+<pre>
+"shadows": [
+  {
+    "key": "xs",
+    "value": "0 0.1rem 0.2rem 0 rgba(0, 0, 0, .2)"
+  },
+  {
+    "key": "s",
+    "value": "0 0.25rem 0.5rem -0.05rem rgba(0, 0, 0, .2)"
+  },
+  {
+    "key": "m",
+    "value": "0 0.4rem 0.7rem -0.1rem rgba(0, 0, 0, .2)"
+  },
+  {
+    "key": "l",
+    "value": "0 0.55rem 1rem -0.2rem rgba(0, 0, 0, .2)"
+  },
+  {
+    "key": "xl",
+    "value": "0 0.7rem 1.5rem -0.3rem rgba(0, 0, 0, .2)"
+  }
+]
+</pre>
+              <h4
+  id="configThemeWhitespace"
+  data-h2-font-size="b(h4)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Whitespace Scale</h4>
+              <p>This setting allows you to control the exponential values of how <a href="#whitespace" title="Learn more about how whitespace works in Hydrogen.">whitespace</a> is calculated.</p>
+<pre>
+"whitespaceScale": "1.5"
+</pre>
+              <h2
+  id=""
+  data-h2-text-align="b(center) m(left)"
+  data-h2-font-family="b(Gibson)"
+  data-h2-font-size="b(h2)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">
+  <span data-h2-font-size="b(h3)">🎨 </span>
+  Style Attributes
+</h2>
+              
+              
+                
+                
+                  
+                  
+                    
+                      <h3
+  id="backgroundColor"
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Background Colors</h3>
+                    
+                    
+  <!-- 
+  
+  <h3
+  id="backgroundColor"
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Background Colors</h3> -->
+
+<p>Sets a color or gradient as the element's background color value.</p>
+<p
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, m) b(bottom, xxs)">Syntax:</p>
+
+  <pre>data-h2-bg-color="MEDIA(COLOR)"</pre>
+
+  <pre>data-h2-bg-color="MEDIA(GRADIENT)"</pre>
+
+
+
+  <p
+    data-h2-font-weight="b(600)"
+    data-h2-margin="b(top, m) b(bottom, xxs)">Default Arguments:</p>
+
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>MEDIA</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+      <p>Please see the <a href="#mediaQueries">media query section</a> for how to use media queries.</p>
+    
+  </div>
+</div>
+  
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>COLOR</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+      <p>Please see the <a href="#colors">color section</a> for how to use colors.</p>
+    
+  </div>
+</div>
+  
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>GRADIENT</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+      <p>Please see the <a href="#colors">color section</a> for how to use colors.</p>
+    
+  </div>
+</div>
+  
+
+
+  <p
+    data-h2-font-weight="b(600)"
+    data-h2-margin="b(top, m) b(bottom, xxs)">Examples:</p>
+
+
+  <div data-h2-flex-grid='b(top, expanded, flush, m)'> <div data-h2-flex-item='b(1of1) m(1of5)'> <div data-h2-bg-color='b(theme-1)' data-h2-padding='b(all, m)' data-h2-radius='b(s)'></div> </div> <div data-h2-flex-item='b(1of1) m(1of5)'> <div data-h2-bg-color='b(theme-2)' data-h2-padding='b(all, m)' data-h2-radius='b(s)'></div> </div> <div data-h2-flex-item='b(1of1) m(1of5)'> <div data-h2-bg-color='b(theme-3)' data-h2-padding='b(all, m)' data-h2-radius='b(s)'></div> </div> <div data-h2-flex-item='b(1of1) m(1of5)'> <div data-h2-bg-color='b(theme-4)' data-h2-padding='b(all, m)' data-h2-radius='b(s)'></div> </div> <div data-h2-flex-item='b(1of1) m(1of5)'> <div data-h2-bg-color='b(linear-135[1][2])' data-h2-padding='b(all, m)' data-h2-radius='b(s)'></div> </div> </div>
+
+
+
+                  
+                
+              
+                
+                
+                  
+                  
+                    
+                      <h3
+  id="borders"
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Borders</h3>
+                    
+                    
+  <!-- 
+  
+  <h3
+  id="borders"
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Borders</h3> -->
+
+<p>Sets a border on the element.</p>
+<p
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, m) b(bottom, xxs)">Syntax:</p>
+
+  <pre>data-h2-border="MEDIA(COLOR, SIDE, STYLE, WEIGHT)"</pre>
+
+
+
+  <p
+    data-h2-font-weight="b(600)"
+    data-h2-margin="b(top, m) b(bottom, xxs)">Default Arguments:</p>
+
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>MEDIA</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+      <p>Please see the <a href="#mediaQueries">media query section</a> for how to use media queries.</p>
+    
+  </div>
+</div>
+  
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>COLOR</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+      <p>Please see the <a href="#colors">color section</a> for how to use colors.</p>
+    
+  </div>
+</div>
+  
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>SIDE</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+<pre>
+all
+top
+right
+bottom
+left
+top-bottom
+top-right
+top-left
+right-left
+bottom-right
+bottom-left
+</pre>
+    
+  </div>
+</div>
+  
+
+  
+  
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>STYLE</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    <pre> solid
+ dashed </pre>
+  </div>
+</div>
+  
+
+  
+  
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>WEIGHT</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    <pre> s
+ m
+ l </pre>
+  </div>
+</div>
+  
+
+
+  <p
+    data-h2-font-weight="b(600)"
+    data-h2-margin="b(top, m) b(bottom, xxs)">Examples:</p>
+
+
+  <div data-h2-flex-grid='b(top, expanded, flush, m)'> <div data-h2-flex-item='b(1of1) m(1of5)'> <div data-h2-border='b(theme-1, all, solid, s)' data-h2-padding='b(all, m)' data-h2-radius='b(s)'></div> </div> <div data-h2-flex-item='b(1of1) m(1of5)'> <div data-h2-border='b(theme-2, top, dashed, l)' data-h2-padding='b(all, m)'></div> </div> <div data-h2-flex-item='b(1of1) m(1of5)'> <div data-h2-border='b(theme-3, top-bottom, solid, m)' data-h2-padding='b(all, m)'></div> </div> <div data-h2-flex-item='b(1of1) m(1of5)'> <div data-h2-border='b(theme-4, all, dashed, s)' data-h2-padding='b(all, m)' data-h2-radius='b(s)'></div> </div> <div data-h2-flex-item='b(1of1) m(1of5)'> <div data-h2-border='b(theme-5, all, solid, l)' data-h2-padding='b(all, m)' data-h2-radius='b(s)'></div> </div> </div>
+
+
+
+                  
+                
+              
+                
+                
+                  
+                  
+                    
+                      <h3
+  id="containers"
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Containers</h3>
+                    
+                    
+  <!-- 
+  
+  <h3
+  id="containers"
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Containers</h3> -->
+
+<p>Adds fixed margins to the element so that its content is contained within the space. No container will exceed more than 90% of the viewport.</p>
+<p
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, m) b(bottom, xxs)">Syntax:</p>
+
+  <pre>data-h2-container="MEDIA(ALIGNMENT, SIZE)"</pre>
+
+
+
+  <p
+    data-h2-font-weight="b(600)"
+    data-h2-margin="b(top, m) b(bottom, xxs)">Default Arguments:</p>
+
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>MEDIA</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+      <p>Please see the <a href="#mediaQueries">media query section</a> for how to use media queries.</p>
+    
+  </div>
+</div>
+  
+
+  
+  
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>ALIGNMENT</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    <pre> left
+ center
+ right </pre>
+  </div>
+</div>
+  
+
+  
+  
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>SIZE</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    <pre> s
+ m
+ l
+ full </pre>
+  </div>
+</div>
+  
+
+
+  <p
+    data-h2-font-weight="b(600)"
+    data-h2-margin="b(top, m) b(bottom, xxs)">Examples:</p>
+
+
+  <div data-h2-bg-color='b(linear-135[1][2])' data-h2-padding='b(top-bottom, l)'> <div data-h2-container='b(center, s)' data-h2-bg-color='b(black)' data-h2-padding='b(top-bottom, l)'></div> </div>
+
+
+
+                  
+                
+              
+                
+                
+                  
+                  
+                    
+                      <h3
+  id="display"
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Display</h3>
+                    
+                    
+  <!-- 
+  
+  <h3
+  id="display"
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Display</h3> -->
+
+<p>Sets the element's display value.</p>
+<p
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, m) b(bottom, xxs)">Syntax:</p>
+
+  <pre>data-h2-display="MEDIA(DISPLAY)"</pre>
+
+
+
+  <p
+    data-h2-font-weight="b(600)"
+    data-h2-margin="b(top, m) b(bottom, xxs)">Default Arguments:</p>
+
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>MEDIA</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+      <p>Please see the <a href="#mediaQueries">media query section</a> for how to use media queries.</p>
+    
+  </div>
+</div>
+  
+
+  
+  
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>DISPLAY</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    <pre> block
+ inline
+ inline-block
+ flex
+ inline-flex
+ grid
+ inline-grid
+ flow-root
+ none
+ contents
+ table
+ table-row
+ list-item </pre>
+  </div>
+</div>
+  
+
+
+
+
+
+                  
+                
+              
+                
+                
+                  
+                  
+                    
+                      <h3
+  id=""
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Flex Properties</h3>
+                    
+                    
+  
+  
+  <h4
+  id="flexAlignContent"
+  data-h2-font-size="b(h4)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Align Content</h4>
+
+<p>Sets the element's align-content value.</p>
+<p
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, m) b(bottom, xxs)">Syntax:</p>
+
+  <pre>data-h2-align-content="MEDIA(ALIGNMENT)"</pre>
+
+
+
+  <p
+    data-h2-font-weight="b(600)"
+    data-h2-margin="b(top, m) b(bottom, xxs)">Default Arguments:</p>
+
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>MEDIA</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+      <p>Please see the <a href="#mediaQueries">media query section</a> for how to use media queries.</p>
+    
+  </div>
+</div>
+  
+
+  
+  
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>ALIGNMENT</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    <pre> center
+ flex-end
+ flex-start
+ space-around
+ space-between
+ stretch </pre>
+  </div>
+</div>
+  
+
+
+
+
+
+                  
+                
+                  
+                  
+                    
+                    
+  
+  
+  <h4
+  id="flexAlignItems"
+  data-h2-font-size="b(h4)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Align Items</h4>
+
+<p>Sets the element's align-items value.</p>
+<p
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, m) b(bottom, xxs)">Syntax:</p>
+
+  <pre>data-h2-align-items="MEDIA(ALIGNMENT)"</pre>
+
+
+
+  <p
+    data-h2-font-weight="b(600)"
+    data-h2-margin="b(top, m) b(bottom, xxs)">Default Arguments:</p>
+
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>MEDIA</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+      <p>Please see the <a href="#mediaQueries">media query section</a> for how to use media queries.</p>
+    
+  </div>
+</div>
+  
+
+  
+  
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>ALIGNMENT</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    <pre> baseline
+ center
+ flex-end
+ flex-start
+ normal
+ stretch </pre>
+  </div>
+</div>
+  
+
+
+
+
+
+                  
+                
+                  
+                  
+                    
+                    
+  
+  
+  <h4
+  id="flexAlignSelf"
+  data-h2-font-size="b(h4)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Align Self</h4>
+
+<p>Sets the element's align-self value.</p>
+<p
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, m) b(bottom, xxs)">Syntax:</p>
+
+  <pre>data-h2-align-self="MEDIA(ALIGNMENT)"</pre>
+
+
+
+  <p
+    data-h2-font-weight="b(600)"
+    data-h2-margin="b(top, m) b(bottom, xxs)">Default Arguments:</p>
+
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>MEDIA</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+      <p>Please see the <a href="#mediaQueries">media query section</a> for how to use media queries.</p>
+    
+  </div>
+</div>
+  
+
+  
+  
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>ALIGNMENT</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    <pre> auto
+ baseline
+ center
+ inherit
+ initial
+ flex-end
+ flex-start
+ stretch </pre>
+  </div>
+</div>
+  
+
+
+
+
+
+                  
+                
+                  
+                  
+                    
+                    
+  
+  
+  <h4
+  id="flexDirection"
+  data-h2-font-size="b(h4)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Flex Direction</h4>
+
+<p>Sets the element's flex-direction value.</p>
+<p
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, m) b(bottom, xxs)">Syntax:</p>
+
+  <pre>data-h2-flex-direction="MEDIA(DIRECTION)"</pre>
+
+
+
+  <p
+    data-h2-font-weight="b(600)"
+    data-h2-margin="b(top, m) b(bottom, xxs)">Default Arguments:</p>
+
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>MEDIA</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+      <p>Please see the <a href="#mediaQueries">media query section</a> for how to use media queries.</p>
+    
+  </div>
+</div>
+  
+
+  
+  
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>DIRECTION</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    <pre> column column-reverse row row-reverse </pre>
+  </div>
+</div>
+  
+
+
+
+
+
+                  
+                
+                  
+                  
+                    
+                    
+  
+  
+  <h4
+  id="flexJustifyContent"
+  data-h2-font-size="b(h4)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Justify Content</h4>
+
+<p>Sets the element's justify-content value.</p>
+<p
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, m) b(bottom, xxs)">Syntax:</p>
+
+  <pre>data-h2-justify-content="MEDIA(JUSTIFICATION)"</pre>
+
+
+
+  <p
+    data-h2-font-weight="b(600)"
+    data-h2-margin="b(top, m) b(bottom, xxs)">Default Arguments:</p>
+
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>MEDIA</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+      <p>Please see the <a href="#mediaQueries">media query section</a> for how to use media queries.</p>
+    
+  </div>
+</div>
+  
+
+  
+  
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>JUSTIFICATION</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    <pre> center
+ flex-end flex-start
+ space-around
+ space-between </pre>
+  </div>
+</div>
+  
+
+
+
+
+
+                  
+                
+                  
+                  
+                    
+                    
+  
+  
+  <h4
+  id="flexWrap"
+  data-h2-font-size="b(h4)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Flex Wrap</h4>
+
+<p>Sets the element's flex-wrap value.</p>
+<p
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, m) b(bottom, xxs)">Syntax:</p>
+
+  <pre>data-h2-flex-wrap="MEDIA(WRAP)"</pre>
+
+
+
+  <p
+    data-h2-font-weight="b(600)"
+    data-h2-margin="b(top, m) b(bottom, xxs)">Default Arguments:</p>
+
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>MEDIA</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+      <p>Please see the <a href="#mediaQueries">media query section</a> for how to use media queries.</p>
+    
+  </div>
+</div>
+  
+
+  
+  
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>WRAP</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    <pre> nowrap
+ wrap
+ wrap-reverse </pre>
+  </div>
+</div>
+  
+
+
+
+
+
+                  
+                
+              
+                
+                
+                  
+                  
+                    
+                      <h3
+  id=""
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Flex Grid</h3>
+                    
+                    
+  
+  
+  <h4
+  id="flexGrid"
+  data-h2-font-size="b(h4)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Flex Grids</h4>
+
+<p>Flexbox grids are disabled by default, but can be enabled in your Hydrogen configuration file. Flexbox grids are generated by specifying a couple options on the wrapper (<code>data-h2-flex-grid</code>) and then defining how each child should be distributed within the column setup.</p>
+<p
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, m) b(bottom, xxs)">Syntax:</p>
+
+  <pre>data-h2-flex-grid="MEDIA(ALIGNMENT, EXPANSION, GRID-PADDING, GUTTER)"</pre>
+
+
+
+  <p
+    data-h2-font-weight="b(600)"
+    data-h2-margin="b(top, m) b(bottom, xxs)">Default Arguments:</p>
+
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>MEDIA</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+      <p>Please see the <a href="#mediaQueries">media query section</a> for how to use media queries.</p>
+    
+  </div>
+</div>
+  
+
+  
+  
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>ALIGNMENT</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    <pre> normal
+ top
+ middle
+ bottom
+ stretch </pre>
+  </div>
+</div>
+  
+
+  
+  
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>EXPANSION</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    <pre> contained
+ expanded </pre>
+  </div>
+</div>
+  
+
+  
+  
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>GRID-PADDING</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    <pre> flush
+ padded </pre>
+  </div>
+</div>
+  
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>GUTTER</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+<pre>
+xxs
+xs
+s
+m
+l
+xl
+xxl
+</pre>
+    
+  </div>
+</div>
+  
+
+
+  <p
+    data-h2-font-weight="b(600)"
+    data-h2-margin="b(top, m) b(bottom, xxs)">Examples:</p>
+
+
+  <div data-h2-flex-grid='b(top, expanded, flush, m)'> <div data-h2-flex-item='b(1of3)'> <div data-h2-bg-color='b(theme-1)' data-h2-padding='b(all, l)'></div> </div> <div data-h2-flex-item='b(1of3)'> <div data-h2-bg-color='b(theme-1)' data-h2-padding='b(all, l)'></div> </div> <div data-h2-flex-item='b(1of3)'> <div data-h2-bg-color='b(theme-1)' data-h2-padding='b(all, l)'></div> </div> <div data-h2-flex-item='b(1of2) m(1of8)'> <div data-h2-bg-color='b(theme-2)' data-h2-padding='b(all, l)'></div> </div> <div data-h2-flex-item='b(1of2) m(1of8)'> <div data-h2-bg-color='b(theme-2)' data-h2-padding='b(all, l)'></div> </div> <div data-h2-flex-item='b(1of2) m(1of8)'> <div data-h2-bg-color='b(theme-2)' data-h2-padding='b(all, l)'></div> </div> <div data-h2-flex-item='b(1of2) m(1of8)'> <div data-h2-bg-color='b(theme-2)' data-h2-padding='b(all, l)'></div> </div> <div data-h2-flex-item='b(1of2) m(1of8)'> <div data-h2-bg-color='b(theme-2)' data-h2-padding='b(all, l)'></div> </div> <div data-h2-flex-item='b(1of2) m(1of8)'> <div data-h2-bg-color='b(theme-2)' data-h2-padding='b(all, l)'></div> </div> <div data-h2-flex-item='b(1of2) m(1of8)'> <div data-h2-bg-color='b(theme-2)' data-h2-padding='b(all, l)'></div> </div> <div data-h2-flex-item='b(1of2) m(1of8)'> <div data-h2-bg-color='b(theme-2)' data-h2-padding='b(all, l)'></div> </div> </div>
+
+
+
+                  
+                
+                  
+                  
+                    
+                    
+  
+  
+  <h4
+  id="flexItem"
+  data-h2-font-size="b(h4)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Flex Items</h4>
+
+<p>By default H2 offers a 12 column grid, meaning you can specify flex items using a range of 1 to 12.<br>e.g. <code>data-h2-flex-item="b(1of1) s(1of2) m(1of6) l(1of12)"</code><br>These values are calculated as percentages, so <code>1of2</code> meaning that the item will span 1 of the columns if the grid were 2 columns wide (meaning this item would span 50% of the available space). Similarly, <code>1of3</code> would span 33% of the grid, while <code>2of5</code> would span 40% of the grid.</p>
+<p
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, m) b(bottom, xxs)">Syntax:</p>
+
+  <pre>data-h2-flex-item="MEDIA(XofY)"</pre>
+
+
+
+  <p
+    data-h2-font-weight="b(600)"
+    data-h2-margin="b(top, m) b(bottom, xxs)">Default Arguments:</p>
+
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>MEDIA</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+      <p>Please see the <a href="#mediaQueries">media query section</a> for how to use media queries.</p>
+    
+  </div>
+</div>
+  
+
+  
+  
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>X, Y</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    <pre> 1
+ 2
+ 3
+ ...
+ 12 </pre>
+  </div>
+</div>
+  
+
+
+
+
+
+                  
+                
+              
+                
+                
+                  
+                  
+                    
+                      <h3
+  id=""
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Font Properties</h3>
+                    
+                    
+  
+  
+  <h4
+  id="fontColor"
+  data-h2-font-size="b(h4)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Font Color</h4>
+
+<p>Sets a color value on the element's text.</p>
+<p
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, m) b(bottom, xxs)">Syntax:</p>
+
+  <pre>data-h2-font-color="MEDIA(COLOR)"</pre>
+
+
+
+  <p
+    data-h2-font-weight="b(600)"
+    data-h2-margin="b(top, m) b(bottom, xxs)">Default Arguments:</p>
+
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>MEDIA</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+      <p>Please see the <a href="#mediaQueries">media query section</a> for how to use media queries.</p>
+    
+  </div>
+</div>
+  
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>COLOR</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+      <p>Please see the <a href="#colors">color section</a> for how to use colors.</p>
+    
+  </div>
+</div>
+  
+
+
+
+
+
+                  
+                
+                  
+                  
+                    
+                    
+  
+  
+  <h4
+  id="fontFamily"
+  data-h2-font-size="b(h4)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Font Families</h4>
+
+<p>Sets a font family value on the element's text.</p>
+<p
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, m) b(bottom, xxs)">Syntax:</p>
+
+  <pre>data-h2-font-family="MEDIA(FAMILY)"</pre>
+
+
+
+  <p
+    data-h2-font-weight="b(600)"
+    data-h2-margin="b(top, m) b(bottom, xxs)">Default Arguments:</p>
+
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>MEDIA</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+      <p>Please see the <a href="#mediaQueries">media query section</a> for how to use media queries.</p>
+    
+  </div>
+</div>
+  
+
+  
+  
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>FAMILY</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    <pre> sans
+ serif
+ script
+ mono </pre>
+  </div>
+</div>
+  
+
+
+
+
+
+                  
+                
+                  
+                  
+                    
+                    
+  
+  
+  <h4
+  id="fontSize"
+  data-h2-font-size="b(h4)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Font Size</h4>
+
+<p>Sets a font size value on the element's text.</p>
+<p
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, m) b(bottom, xxs)">Syntax:</p>
+
+  <pre>data-h2-font-size="MEDIA(SIZE)"</pre>
+
+
+
+  <p
+    data-h2-font-weight="b(600)"
+    data-h2-margin="b(top, m) b(bottom, xxs)">Default Arguments:</p>
+
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>MEDIA</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+      <p>Please see the <a href="#mediaQueries">media query section</a> for how to use media queries.</p>
+    
+  </div>
+</div>
+  
+
+  
+  
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>SIZE</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    <pre> caption
+ normal
+ h6
+ h5
+ h4
+ h3
+ h2
+ h1 </pre>
+  </div>
+</div>
+  
+
+
+
+
+
+                  
+                
+                  
+                  
+                    
+                    
+  
+  
+  <h4
+  id="fontStyle"
+  data-h2-font-size="b(h4)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Font Style</h4>
+
+<p>Sets one of a few various style options on the element's text.</p>
+<p
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, m) b(bottom, xxs)">Syntax:</p>
+
+  <pre>data-h2-font-style="MEDIA(STYLE)"</pre>
+
+
+
+  <p
+    data-h2-font-weight="b(600)"
+    data-h2-margin="b(top, m) b(bottom, xxs)">Default Arguments:</p>
+
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>MEDIA</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+      <p>Please see the <a href="#mediaQueries">media query section</a> for how to use media queries.</p>
+    
+  </div>
+</div>
+  
+
+  
+  
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>STYLE</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    <pre> reset
+ italic
+ underline </pre>
+  </div>
+</div>
+  
+
+
+
+
+
+                  
+                
+                  
+                  
+                    
+                    
+  
+  
+  <h4
+  id="fontWeight"
+  data-h2-font-size="b(h4)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Font Weight</h4>
+
+<p>Sets a numeric font weight on the element's text.</p>
+<p
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, m) b(bottom, xxs)">Syntax:</p>
+
+  <pre>data-h2-font-weight="MEDIA(WEIGHT)"</pre>
+
+
+  <p>Please note that font weight availability will depend on the font family you're using on your project. If the font doesn't support certain weights, the value will not work as expected.</p>
+
+
+  <p
+    data-h2-font-weight="b(600)"
+    data-h2-margin="b(top, m) b(bottom, xxs)">Default Arguments:</p>
+
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>MEDIA</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+      <p>Please see the <a href="#mediaQueries">media query section</a> for how to use media queries.</p>
+    
+  </div>
+</div>
+  
+
+  
+  
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>WEIGHT</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    <pre> 100
+ 200
+ 300
+ 400
+ 500
+ 600
+ 700
+ 800
+ 900 </pre>
+  </div>
+</div>
+  
+
+
+
+
+
+                  
+                
+                  
+                  
+                    
+                    
+  
+  
+  <h4
+  id="textAlign"
+  data-h2-font-size="b(h4)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Text Align</h4>
+
+<p>Aligns the element's text.</p>
+<p
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, m) b(bottom, xxs)">Syntax:</p>
+
+  <pre>data-h2-text-align="MEDIA(ALIGNMENT)"</pre>
+
+
+
+  <p
+    data-h2-font-weight="b(600)"
+    data-h2-margin="b(top, m) b(bottom, xxs)">Default Arguments:</p>
+
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>MEDIA</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+      <p>Please see the <a href="#mediaQueries">media query section</a> for how to use media queries.</p>
+    
+  </div>
+</div>
+  
+
+  
+  
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>ALIGNMENT</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    <pre> center
+ justify
+ right
+ left </pre>
+  </div>
+</div>
+  
+
+
+
+
+
+                  
+                
+              
+                
+                
+                  
+                  
+                    
+                      <h3
+  id=""
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Positioning</h3>
+                    
+                    
+  
+  
+  <h4
+  id="location"
+  data-h2-font-size="b(h4)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Location</h4>
+
+<p>Sets an element's top, right, bottom, and left values.</p>
+<p
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, m) b(bottom, xxs)">Syntax:</p>
+
+  <pre>data-h2-location="MEDIA(SIDE, WHITESPACE)"</pre>
+
+
+
+  <p
+    data-h2-font-weight="b(600)"
+    data-h2-margin="b(top, m) b(bottom, xxs)">Default Arguments:</p>
+
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>MEDIA</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+      <p>Please see the <a href="#mediaQueries">media query section</a> for how to use media queries.</p>
+    
+  </div>
+</div>
+  
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>SIDE</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+<pre>
+all
+top
+right
+bottom
+left
+top-bottom
+top-right
+top-left
+right-left
+bottom-right
+bottom-left
+</pre>
+    
+  </div>
+</div>
+  
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>WHITESPACE</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+<pre>
+xxs
+xs
+s
+m
+l
+xl
+xxl
+</pre>
+    
+  </div>
+</div>
+  
+
+
+  <p
+    data-h2-font-weight="b(600)"
+    data-h2-margin="b(top, m) b(bottom, xxs)">Examples:</p>
+
+
+  <div data-h2-bg-color='b(theme-1)' data-h2-position='b(relative)' data-h2-padding='b(all, xxl)'> <div data-h2-location='b(top-right, m)' data-h2-position='b(absolute)' data-h2-bg-color='b(black)' data-h2-padding='b(all, l)'></div> </div>
+
+
+
+                  
+                
+                  
+                  
+                    
+                    
+  
+  
+  <h4
+  id="position"
+  data-h2-font-size="b(h4)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Position</h4>
+
+<p>Sets an element's position value.</p>
+<p
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, m) b(bottom, xxs)">Syntax:</p>
+
+  <pre>data-h2-position="MEDIA(POSITION)"</pre>
+
+
+
+  <p
+    data-h2-font-weight="b(600)"
+    data-h2-margin="b(top, m) b(bottom, xxs)">Default Arguments:</p>
+
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>MEDIA</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+      <p>Please see the <a href="#mediaQueries">media query section</a> for how to use media queries.</p>
+    
+  </div>
+</div>
+  
+
+  
+  
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>POSITION</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    <pre> static
+ relative
+ fixed
+ absolute
+ sticky </pre>
+  </div>
+</div>
+  
+
+
+
+
+
+                  
+                
+              
+                
+                
+                  
+                  
+                    
+                      <h3
+  id=""
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Whitespace</h3>
+                    
+                    
+  
+  
+  <h4
+  id="margin"
+  data-h2-font-size="b(h4)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Margins</h4>
+
+<p>Sets a margin value on the specified side(s) of the element.</p>
+<p
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, m) b(bottom, xxs)">Syntax:</p>
+
+  <pre>data-h2-margin="MEDIA(SIDE, WHITESPACE)"</pre>
+
+
+
+  <p
+    data-h2-font-weight="b(600)"
+    data-h2-margin="b(top, m) b(bottom, xxs)">Default Arguments:</p>
+
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>MEDIA</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+      <p>Please see the <a href="#mediaQueries">media query section</a> for how to use media queries.</p>
+    
+  </div>
+</div>
+  
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>SIDE</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+<pre>
+all
+top
+right
+bottom
+left
+top-bottom
+top-right
+top-left
+right-left
+bottom-right
+bottom-left
+</pre>
+    
+  </div>
+</div>
+  
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>WHITESPACE</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+<pre>
+xxs
+xs
+s
+m
+l
+xl
+xxl
+</pre>
+    
+  </div>
+</div>
+  
+
+
+
+
+
+                  
+                
+                  
+                  
+                    
+                    
+  
+  
+  <h4
+  id="padding"
+  data-h2-font-size="b(h4)"
+  data-h2-font-color="b(black)"
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Padding</h4>
+
+<p>Sets a padding value on the specified side(s) of the element.</p>
+<p
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, m) b(bottom, xxs)">Syntax:</p>
+
+  <pre>data-h2-padding="MEDIA(SIDE, WHITESPACE)"</pre>
+
+
+
+  <p
+    data-h2-font-weight="b(600)"
+    data-h2-margin="b(top, m) b(bottom, xxs)">Default Arguments:</p>
+
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>MEDIA</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+      <p>Please see the <a href="#mediaQueries">media query section</a> for how to use media queries.</p>
+    
+  </div>
+</div>
+  
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>SIDE</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+<pre>
+all
+top
+right
+bottom
+left
+top-bottom
+top-right
+top-left
+right-left
+bottom-right
+bottom-left
+</pre>
+    
+  </div>
+</div>
+  
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>WHITESPACE</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+<pre>
+xxs
+xs
+s
+m
+l
+xl
+xxl
+</pre>
+    
+  </div>
+</div>
+  
+
+
+
+
+
+                  
+                
+              
+                
+                
+                  
+                  
+                    
+                      <h3
+  id="overflow"
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Overflow</h3>
+                    
+                    
+  <!-- 
+  
+  <h3
+  id="overflow"
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Overflow</h3> -->
+
+<p>Sets an overflow value on an element to hide or show its children.</p>
+<p
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, m) b(bottom, xxs)">Syntax:</p>
+
+  <pre>data-h2-overflow="MEDIA(ORIENTATION, OVERFLOW)"</pre>
+
+
+
+  <p
+    data-h2-font-weight="b(600)"
+    data-h2-margin="b(top, m) b(bottom, xxs)">Default Arguments:</p>
+
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>MEDIA</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+      <p>Please see the <a href="#mediaQueries">media query section</a> for how to use media queries.</p>
+    
+  </div>
+</div>
+  
+
+  
+  
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>ORIENTATION</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    <pre> all
+ x
+ y </pre>
+  </div>
+</div>
+  
+
+  
+  
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>OVERFLOW</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    <pre> visible
+ hidden
+ scroll
+ auto </pre>
+  </div>
+</div>
+  
+
+
+
+
+
+                  
+                
+              
+                
+                
+                  
+                  
+                    
+                      <h3
+  id="radius"
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Radius</h3>
+                    
+                    
+  <!-- 
+  
+  <h3
+  id="radius"
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Radius</h3> -->
+
+<p>Sets the element's corner radius values.</p>
+<p
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, m) b(bottom, xxs)">Syntax:</p>
+
+  <pre>data-h2-radius="MEDIA(RADIUS)"</pre>
+
+  <pre>data-h2-radius="MEDIA(RADIUS, RADIUS, RADIUS, RADIUS)"</pre>
+
+
+  <p>When assigning different values to each corner, the order is top-left, top-right, bottom-right, bottom-left.</p>
+
+
+  <p
+    data-h2-font-weight="b(600)"
+    data-h2-margin="b(top, m) b(bottom, xxs)">Default Arguments:</p>
+
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>MEDIA</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+      <p>Please see the <a href="#mediaQueries">media query section</a> for how to use media queries.</p>
+    
+  </div>
+</div>
+  
+
+  
+  
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>RADIUS</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    <pre> none
+ s
+ m
+ l </pre>
+  </div>
+</div>
+  
+
+
+  <p
+    data-h2-font-weight="b(600)"
+    data-h2-margin="b(top, m) b(bottom, xxs)">Examples:</p>
+
+
+  <div data-h2-flex-grid='b(top, expanded, flush, m)'> <div data-h2-flex-item='b(1of1) m(1of5)'> <div data-h2-bg-color='b(theme-1)' data-h2-padding='b(all, m)' data-h2-radius='b(s)'></div> </div> <div data-h2-flex-item='b(1of1) m(1of5)'> <div data-h2-bg-color='b(theme-1)' data-h2-padding='b(all, m)' data-h2-radius='b(m)'></div> </div> <div data-h2-flex-item='b(1of1) m(1of5)'> <div data-h2-bg-color='b(theme-1)' data-h2-padding='b(all, m)' data-h2-radius='b(l)'></div> </div> <div data-h2-flex-item='b(1of1) m(1of5)'> <div data-h2-bg-color='b(theme-1)' data-h2-padding='b(all, m)' data-h2-radius='b(s, s, l, l)'></div> </div> <div data-h2-flex-item='b(1of1) m(1of5)'> <div data-h2-bg-color='b(theme-1)' data-h2-padding='b(all, m)' data-h2-radius='b(l, s, m, l)'></div> </div> </div>
+
+
+
+                  
+                
+              
+                
+                
+                  
+                  
+                    
+                      <h3
+  id="shadows"
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Shadows</h3>
+                    
+                    
+  <!-- 
+  
+  <h3
+  id="shadows"
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Shadows</h3> -->
+
+<p>Adds a drop shadow effect to the element.</p>
+<p
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, m) b(bottom, xxs)">Syntax:</p>
+
+  <pre>data-h2-shadow="MEDIA(SHADOW)"</pre>
+
+
+
+  <p
+    data-h2-font-weight="b(600)"
+    data-h2-margin="b(top, m) b(bottom, xxs)">Default Arguments:</p>
+
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>MEDIA</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+      <p>Please see the <a href="#mediaQueries">media query section</a> for how to use media queries.</p>
+    
+  </div>
+</div>
+  
+
+  
+  
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>SHADOW</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    <pre> xs
+ s
+ m
+ l
+ xl </pre>
+  </div>
+</div>
+  
+
+
+  <p
+    data-h2-font-weight="b(600)"
+    data-h2-margin="b(top, m) b(bottom, xxs)">Examples:</p>
+
+
+  <div data-h2-flex-grid='b(top, expanded, flush, m)'> <div data-h2-flex-item='b(1of1) m(1of5)'> <div data-h2-bg-color='b(white)' data-h2-padding='b(all, m)' data-h2-radius='b(s)' data-h2-shadow='b(xs)'></div> </div> <div data-h2-flex-item='b(1of1) m(1of5)'> <div data-h2-bg-color='b(white)' data-h2-padding='b(all, m)' data-h2-radius='b(s)' data-h2-shadow='b(s)'></div> </div> <div data-h2-flex-item='b(1of1) m(1of5)'> <div data-h2-bg-color='b(white)' data-h2-padding='b(all, m)' data-h2-radius='b(s)' data-h2-shadow='b(m)'></div> </div> <div data-h2-flex-item='b(1of1) m(1of5)'> <div data-h2-bg-color='b(white)' data-h2-padding='b(all, m)' data-h2-radius='b(s)' data-h2-shadow='b(l)'></div> </div> <div data-h2-flex-item='b(1of1) m(1of5)'> <div data-h2-bg-color='b(white)' data-h2-padding='b(all, m)' data-h2-radius='b(s)' data-h2-shadow='b(xl)'></div> </div> </div>
+
+
+
+                  
+                
+              
+                
+                
+                  
+                  
+                    
+                      <h3
+  id="visibility"
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Visibility</h3>
+                    
+                    
+  <!-- 
+  
+  <h3
+  id="visibility"
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Visibility</h3> -->
+
+<p>Sets a handful of CSS properties that affects the element's visibility to users and machines.</p>
+<p
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, m) b(bottom, xxs)">Syntax:</p>
+
+  <pre>data-h2-visibility="MEDIA(VISIBILITY)"</pre>
+
+
+  <p>Note that <code>invisible</code> hides the element visually, but it will still be found by assistive technologies. To hide the element entirely, use <code>hidden</code>.</p>
+
+
+  <p
+    data-h2-font-weight="b(600)"
+    data-h2-margin="b(top, m) b(bottom, xxs)">Default Arguments:</p>
+
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>MEDIA</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+      <p>Please see the <a href="#mediaQueries">media query section</a> for how to use media queries.</p>
+    
+  </div>
+</div>
+  
+
+  
+  
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>VISIBILITY</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    <pre> invisible
+ hidden
+ visible </pre>
+  </div>
+</div>
+  
+
+
+
+
+
+                  
+                
+              
+                
+                
+                  
+                  
+                    
+                      <h3
+  id="width"
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Width</h3>
+                    
+                    
+  <!-- 
+  
+  <h3
+  id="width"
+  data-h2-font-size="b(h3)"
+  data-h2-font-color="b(theme-1)"
+  data-h2-font-weight="b(200)"
+  data-h2-margin="b(top, none)"
+  data-h2-padding="b(top, xl)">Width</h3> -->
+
+<p>Sets a handful of CSS properties that affects the element's width.</p>
+<p
+  data-h2-font-weight="b(600)"
+  data-h2-margin="b(top, m) b(bottom, xxs)">Syntax:</p>
+
+  <pre>data-h2-width="MEDIA(WIDTH)"</pre>
+
+
+  <p>Configuring width will overwrite all default values except for <code>auto</code>.</p>
+
+
+  <p
+    data-h2-font-weight="b(600)"
+    data-h2-margin="b(top, m) b(bottom, xxs)">Default Arguments:</p>
+
+
+  
+  
+    
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>MEDIA</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    
+      <p>Please see the <a href="#mediaQueries">media query section</a> for how to use media queries.</p>
+    
+  </div>
+</div>
+  
+
+  
+  
+    <div class="accordion">
+  
+    <button 
+      aria-expanded="false" 
+      class="accordion-trigger" 
+      tabindex="0" 
+      type="button"
+      data-h2-padding="b(top-bottom, xxs)">
+  
+    <span class="accordion-trigger-label">Click to view...</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-add"
+      data-h2-font-color="b(theme-1)">▸</span>
+    <span 
+      aria-hidden="true" 
+      class="accordion-trigger-icon-remove"
+      data-h2-font-color="b(theme-1)">▾</span>
+    <div class="accordion-trigger-content">
+      <span data-h2-font-family="b(Gibson)"><code>WIDTH</code></span>
+      
+    </div>
+  </button>
+  <div 
+    aria-hidden="true" 
+    class="accordion-content">
+    <pre> auto
+ 0
+ 25
+ 50
+ 75
+ 100 </pre>
+  </div>
+</div>
+  
+
+
+
+
+
+                  
+                
+              
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer 
+  data-h2-bg-color="b(black)"
+  data-h2-font-family="b(Gibson)">
+  <div 
+    data-h2-container="b(center, full)"
+    data-h2-padding="b(top-bottom, l)">
+    <div data-h2-flex-grid="b(middle, expanded, flush, s)">
+      <div 
+        data-h2-flex-item="b(1of1) m(1of2)"
+        data-h2-text-align="b(center) m(left)">
+        <p data-h2-font-color="b(white)">Made with <span data-h2-font-color="b(theme-1)">❤</span> by <a href="https://github.com/hydrogen-design-system" title="Find out more about Hydrogen on Github." target="_blank">humans like you</a>.</p>
+      </div>
+      <div 
+        data-h2-flex-item="b(1of1) m(1of2)"
+        data-h2-text-align="b(center) m(right)">
+        <p data-h2-font-color="b(white)">Proudly made in Canada 🍁</p>
+      </div>
+    </div>
+  </div>
+</footer>
+      <script type="text/javascript" src="/assets/scripts/app.js"></script>
+    </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Site Title -->
+    <title>Hydrogen Design System</title>
+    <!-- Site Description -->
+    <meta name="description" content="Hydrogen is an open-source, modular component library and CSS utility.">
+    <!-- Charset -->
+    <meta charset="utf-8" />
+    <!-- Compatibility -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../styles/hydrogen.css">
+  </head>
+  <body data-hydrogen="VARVERSION">
+    <div data-h2-reset data-h2-typography>
+      <div data-h2-flex-grid="b(top, expanded, flush, m)">
+        <div data-h2-flex-item="b(1of2) m(1of4)">
+          <div 
+            data-h2-bg-color="b(green)"
+            data-h2-padding="b(all, xl)"></div>
+        </div>
+        <div data-h2-flex-item="b(1of2) m(1of4)">
+          <div 
+            data-h2-bg-color="b(red)"
+            data-h2-padding="b(all, xl)"></div>
+        </div>
+        <div data-h2-flex-item="b(1of2) m(1of4)">
+          <div 
+            data-h2-bg-color="b(green)"
+            data-h2-padding="b(all, xl)"></div>
+        </div>
+        <div data-h2-flex-item="b(1of2) m(1of4)">
+          <div 
+            data-h2-bg-color="b(red)"
+            data-h2-padding="b(all, xl)"></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h1 data-h2-font-color="b:h(red)" >Compile Test Markup</h1>
+      <div 
+        data-h2-padding="b(all, l)"
+        data-h2-bg-color="b(green) s(red) s"> 
+        <div data-h2-bg-color="l(green[.3])"> 
+          <div data-h2-bg-color="b(red[.5])"> 
+            <div data-h2-alignment="b(center)"></div> 
+            <div data-h2-bg-color="b([light]green) s([dark]red)"> 
+              <p tabindex="1" data-h2-bg-color="b(red[.5]) b:f(green)">things?</p>
+            </div>
+            <div data-h2-bg-color="BIGGERTHINGS(red[.5])">bigger things?</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div 
+        data-h2-container="b(center, m)"
+        data-h2-padding="b(top-bottom, l)">
+        <div
+          data-h2-bg-color="b(red[.9]) s(green[.1])"
+          data-h2-shadow="b(m)"
+          style="padding: 1rem;">
+          Sample Text
+        </div>
+        <div
+          data-h2-padding="b(top, m)" 
+          data-h2-flex-grid="b(top, expanded, flush, l)">
+          <div data-h2-flex-item="b(2of6) m(1of6)">
+            <div 
+              data-h2-bg-color="b(green)"
+              data-h2-padding="b(all, l)"
+              data-h2-flex-item-content></div>
+          </div>
+          <div data-h2-flex-item="b(2of6) m(1of6)">
+            <div 
+              data-h2-bg-color="b(green)"
+              data-h2-padding="b(all, l)"
+              data-h2-font-family="m(testFont)"
+              data-h2-flex-item-content></div>
+          </div>
+          <div data-h2-flex-item="b(2of6) m(1of6)">
+            <div 
+              data-h2-bg-color="b(green)"
+              data-h2-padding="b(all, l)"
+              data-h2-flex-item-content></div>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>
+{% include attribute.html 
+  type="child"
+  name="Flex Grid Item"
+  syntax="data-h2-flex-item=\"MEDIA(XofY)\"" 
+  example="<div data-h2-flex-grid='b(top, expanded, flush, medium)'>
+    <div data-h2-flex-item='b(1of1) m(1of3)'>
+      <div data-h2-bg-color='b(theme-1)' data-h2-padding='b(all, large)'></div>
+    </div>
+    <div data-h2-flex-item='b(1of1) m(1of3)'>
+      <div data-h2-bg-color='b(theme-1)' data-h2-padding='b(all, large)'></div>
+    </div>
+    <div data-h2-flex-item='b(1of1) m(1of3)'>
+      <div data-h2-bg-color='b(theme-1)' data-h2-padding='b(all, large)'></div>
+    </div>
+    <div data-h2-flex-item='b(1of1) m(1of8)'>
+      <div data-h2-bg-color='b(theme-2)' data-h2-padding='b(all, large)'></div>
+    </div>
+    <div data-h2-flex-item='b(1of1) m(1of8)'>
+      <div data-h2-bg-color='b(theme-2)' data-h2-padding='b(all, large)'></div>
+    </div>
+    <div data-h2-flex-item='b(1of1) m(1of8)'>
+      <div data-h2-bg-color='b(theme-2)' data-h2-padding='b(all, large)'></div>
+    </div>
+    <div data-h2-flex-item='b(1of1) m(1of8)'>
+      <div data-h2-bg-color='b(theme-2)' data-h2-padding='b(all, large)'></div>
+    </div>
+    <div data-h2-flex-item='b(1of1) m(1of8)'>
+      <div data-h2-bg-color='b(theme-2)' data-h2-padding='b(all, large)'></div>
+    </div>
+    <div data-h2-flex-item='b(1of1) m(1of8)'>
+      <div data-h2-bg-color='b(theme-2)' data-h2-padding='b(all, large)'></div>
+    </div>
+    <div data-h2-flex-item='b(1of1) m(1of8)'>
+      <div data-h2-bg-color='b(theme-2)' data-h2-padding='b(all, large)'></div>
+    </div>
+    <div data-h2-flex-item='b(1of1) m(1of8)'>
+      <div data-h2-bg-color='b(theme-2)' data-h2-padding='b(all, large)'></div>
+    </div>
+  </div>"
+%}
+import * as React from "react";
+import {
+  h2DialogResizeOnViewport,
+  h2DialogTrigger,
+  h2DialogEnableOpenDialogs,
+} from "@hydrogen-design-system/system/dist/import/latest/components/dialog/scripts/dialog";
+import { GeneralProps, GeneralBtnProps } from "./utils";
+
+interface DialogContext extends GeneralProps {
+  /** The dialogs id. */
+  id: string;
+}
+
+const DialogContext = React.createContext<DialogContext | undefined>(undefined);
+
+/**
+ * This Context hook allows our child components to easily reach
+ * into the Tabs context and get the pieces it needs.
+ *
+ * Bonus: it even makes sure the component is used within a
+ * Dialog component!
+ */
+const useDialogContext = (): Partial<DialogContext> => {
+  const context = React.useContext(DialogContext);
+  if (!context) {
+    throw new Error("This component must be used within a <Dialog> component.");
+  }
+  return context;
+};
+
+const Actions: React.FunctionComponent<GeneralProps> = (props) => {
+  useDialogContext(); // Ensures sub-component can only be used within the Dialog component.
+  const { className, children, ...rest } = props;
+  return (
+    <div data-h2-dialog-actions className={className} {...rest}>
+      {children}
+    </div>
+  );
+};
+
+const ActionBtn: React.FunctionComponent<GeneralBtnProps & GeneralProps> = (
+  props,
+) => {
+  const { id } = useDialogContext();
+  const { buttonStyling, type, onClick, className, children, ...rest } = props;
+  const ref = React.useRef(null);
+  React.useEffect((): void => {
+    h2DialogTrigger(ref.current);
+  });
+  return (
+    <button
+      data-h2-dialog-trigger={`${id}`}
+      data-h2-button={buttonStyling}
+      ref={ref}
+      type={type || "button"}
+      onClick={onClick}
+      className={className}
+      {...rest}
+    >
+      {children}
+    </button>
+  );
+};
+
+const Content: React.FunctionComponent<GeneralProps> = (props) => {
+  const { id } = useDialogContext();
+  const { className, children, ...rest } = props;
+  return (
+    <div
+      data-h2-dialog-content
+      id={`${id}Content`}
+      className={className}
+      {...rest}
+    >
+      {children}
+    </div>
+  );
+};
+
+const Header: React.FunctionComponent<GeneralProps> = (props) => {
+  useDialogContext(); // Ensures sub-component can only be used within the Dialog component.
+  const { className, children, ...rest } = props;
+  return (
+    <div data-h2-dialog-title className={className} {...rest}>
+      {children}
+    </div>
+  );
+};
+
+const Title: React.FunctionComponent<GeneralProps> = (props) => {
+  const { id } = useDialogContext();
+  const { className, children, ...rest } = props;
+  return (
+    <h5 data-h2-focus id={`${id}Title`} className={className} {...rest}>
+      {children}
+    </h5>
+  );
+};
+
+interface TriggerProps extends GeneralProps, GeneralBtnProps {
+  id: string;
+}
+
+/** This Trigger component opens the dialog and sits outside the main dialog component */
+const Trigger: React.FunctionComponent<TriggerProps> = (props) => {
+  const { id, buttonStyling, className, children, ...rest } = props;
+  const ref = React.useRef(null);
+  React.useEffect((): void => {
+    h2DialogTrigger(ref.current);
+  });
+  return (
+    <button
+      data-h2-button={buttonStyling}
+      ref={ref}
+      data-h2-dialog-trigger={`${id}`}
+      type="button"
+      className={className}
+      {...rest}
+    >
+      {children}
+    </button>
+  );
+};
+
+interface DialogComposition {
+  Actions: React.FunctionComponent<GeneralProps>;
+  ActionBtn: React.FunctionComponent<GeneralBtnProps>;
+  Content: React.FunctionComponent<GeneralProps>;
+  Header: React.FunctionComponent<GeneralProps>;
+  Title: React.FunctionComponent<GeneralProps>;
+  Trigger: React.FunctionComponent<TriggerProps>;
+}
+
+const Dialog: React.FunctionComponent<DialogContext> & DialogComposition = (
+  props,
+) => {
+  const { id, className, children, ...rest } = props;
+  const ref = React.useRef(null);
+  React.useEffect(() => {
+    h2DialogResizeOnViewport(ref.current);
+    h2DialogEnableOpenDialogs(ref.current);
+  });
+  return (
+    <DialogContext.Provider value={props}>
+      <div
+        ref={ref}
+        aria-hidden="true"
+        aria-describedby={`${id}Content`}
+        aria-labelledby={`${id}Title`}
+        data-h2-dialog={id}
+        tabIndex={-1}
+        role="dialog"
+      >
+        <div 
+          data-h2-padding="b(all, large)"  
+          data-h2-dialog-wrapper className={className} {...rest}>
+          {children}
+        </div>
+      </div>
+      <div data-h2-dialog-overlay="black, .9" />
+    </DialogContext.Provider>
+  );
+};
+
+// We expose the children components here, as properties.
+// Using the dot notation we explicitly set the composition relationships,
+// btw the Dialog component and its sub components.
+Dialog.Actions = Actions;
+Dialog.ActionBtn = ActionBtn;
+Dialog.Content = Content;
+Dialog.Header = Header;
+Dialog.Title = Title;
+Dialog.Trigger = Trigger;
+
+export default Dialog;
+body.querySelectorAll('[data-h2-bg-color="b:a(red)"]');
