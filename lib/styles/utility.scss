@@ -9,6 +9,7 @@
 @use "maps/map-radius" as radiusMap;
 @use "maps/map-shadow" as shadowMap;
 @use "maps/map-whitespace" as whitespaceMap;
+@use "maps/map-width" as widthMap;
 
 @use "utilities/utility-align-content" as alignContentStyles;
 @use "utilities/utility-align-items" as alignItemStyles;
@@ -35,6 +36,7 @@
 @use "utilities/utility-shadow" as shadowStyles;
 @use "utilities/utility-text-align" as textAlignStyles;
 @use "utilities/utility-visibility" as visibilityStyles;
+@use "utilities/utility-width" as widthStyles;
 
 // Font Variables
 $h2-font-scale: $H2FONTSCALE;
@@ -74,6 +76,14 @@ $h2-map-sides: (
   "right-left": ""
 );
 
+$h2-map-states: (
+  "": "",
+  ":a": ":active",
+  ":h": ":hover",
+  ":f": ":focus",
+  ":d": ":disabled"
+);
+
 @include alignContentStyles.h2-utility-align-content(
   $mediaKey: "MEDIAKEY"
 );
@@ -88,12 +98,14 @@ $h2-map-sides: (
 
 @include bgColorStyles.h2-utility-bg-color(
   $mediaKey: "MEDIAKEY",
+  $stateMap: $h2-map-states,
   $colorMap: colorMap.$h2-map-color,
   $gradientMap: gradientMap.$h2-map-gradient
 );
 
 @include borderStyles.h2-utility-border(
   $mediaKey: "MEDIAKEY",
+  $stateMap: $h2-map-states,
   $colorMap: colorMap.$h2-map-color,
   $sideMap: $h2-map-sides,
   $borderWeightMap: borderWeightMap.$h2-map-border-weight
@@ -105,7 +117,8 @@ $h2-map-sides: (
 );
 
 @include displayStyles.h2-utility-display(
-  $mediaKey: "MEDIAKEY"
+  $mediaKey: "MEDIAKEY",
+  $stateMap: $h2-map-states
 );
 
 @include flexDirectionStyles.h2-utility-flex-direction(
@@ -120,6 +133,7 @@ $h2-map-sides: (
 
 @include fontColorStyles.h2-utility-font-color(
   $mediaKey: "MEDIAKEY",
+  $stateMap: $h2-map-states,
   $colorMap: colorMap.$h2-map-color
 );
 
@@ -134,11 +148,13 @@ $h2-map-sides: (
 );
 
 @include fontStyleStyles.h2-utility-font-style(
-  $mediaKey: "MEDIAKEY"
+  $mediaKey: "MEDIAKEY",
+  $stateMap: $h2-map-states
 );
 
 @include fontWeightStyles.h2-utility-font-weight(
-  $mediaKey: "MEDIAKEY"
+  $mediaKey: "MEDIAKEY",
+  $stateMap: $h2-map-states
 );
 
 @include justifyContentStyles.h2-utility-justify-content(
@@ -153,16 +169,19 @@ $h2-map-sides: (
 
 @include marginStyles.h2-utility-margin(
   $mediaKey: "MEDIAKEY",
+  $stateMap: $h2-map-states,
   $sideMap: $h2-map-sides,
   $whitespaceMap: whitespaceMap.$h2-map-whitespace
 );
 
 @include overflowStyles.h2-utility-overflow(
-  $mediaKey: "MEDIAKEY"
+  $mediaKey: "MEDIAKEY",
+  $stateMap: $h2-map-states
 );
 
 @include paddingStyles.h2-utility-padding(
   $mediaKey: "MEDIAKEY",
+  $stateMap: $h2-map-states,
   $sideMap: $h2-map-sides,
   $whitespaceMap: whitespaceMap.$h2-map-whitespace
 );
@@ -173,11 +192,13 @@ $h2-map-sides: (
 
 @include radiusStyles.h2-utility-radius(
   $mediaKey: "MEDIAKEY",
+  $stateMap: $h2-map-states,
   $radiusMap: radiusMap.$h2-map-radius
 );
 
 @include shadowStyles.h2-utility-shadow(
   $mediaKey: "MEDIAKEY",
+  $stateMap: $h2-map-states,
   $shadowMap: shadowMap.$h2-map-shadow
 );
 
@@ -186,5 +207,12 @@ $h2-map-sides: (
 );
 
 @include visibilityStyles.h2-utility-visibility(
-  $mediaKey: "MEDIAKEY"
+  $mediaKey: "MEDIAKEY",
+  $stateMap: $h2-map-states
+);
+
+@include widthStyles.h2-utility-width(
+  $mediaKey: "MEDIAKEY",
+  $stateMap: $h2-map-states,
+  $widthMap: widthMap.$h2-map-width
 );

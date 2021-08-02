@@ -5,14 +5,17 @@
 // e.g. data-h2-font-color="b([light]green[.5])"
 @mixin h2-utility-font-color(
   $mediaKey,
+  $stateMap,
   $colorMap
 ) {
-  @each $colorKey, $colorValue in $colorMap {
-    [data-h2-font-color*="#{$mediaKey}(#{$colorKey})"] {
-      color: $colorValue;
-    }
-    [data-h2-color*="#{$mediaKey}(#{$colorKey})"] {
-      color: $colorValue;
+  @each $stateKey, $stateValue in $stateMap {
+    @each $colorKey, $colorValue in $colorMap {
+      [data-h2-font-color*="#{$mediaKey}#{$stateKey}(#{$colorKey})"]#{$stateValue} {
+        color: $colorValue;
+      }
+      [data-h2-color*="#{$mediaKey}#{$stateKey}(#{$colorKey})"]#{$stateValue} {
+        color: $colorValue;
+      }
     }
   }
 }

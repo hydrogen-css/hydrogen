@@ -3,11 +3,14 @@
 // e.g. data-h2-shadow="b(s)"
 @mixin h2-utility-shadow(
   $mediaKey,
+  $stateMap,
   $shadowMap
 ) {
-  @each $shadowKey, $shadowValue in $shadowMap {
-    [data-h2-shadow*="#{$mediaKey}(#{$shadowKey})"] {
-      box-shadow: #{$shadowValue};
+  @each $stateKey, $stateValue in $stateMap {
+    @each $shadowKey, $shadowValue in $shadowMap {
+      [data-h2-shadow*="#{$mediaKey}#{$stateKey}(#{$shadowKey})"]#{$stateValue} {
+        box-shadow: #{$shadowValue};
+      }
     }
   }
 }

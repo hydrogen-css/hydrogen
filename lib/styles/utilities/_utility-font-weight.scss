@@ -15,11 +15,14 @@ $h2-map-font-weight: (
   "900": 900
 );
 @mixin h2-utility-font-weight(
-  $mediaKey
+  $mediaKey,
+  $stateMap
 ) {
-  @each $weightKey, $weightValue in $h2-map-font-weight {
-    [data-h2-font-weight*="#{$mediaKey}(#{$weightKey})"] {
-      font-weight: $weightValue;
+  @each $stateKey, $stateValue in $stateMap {
+    @each $weightKey, $weightValue in $h2-map-font-weight {
+      [data-h2-font-weight*="#{$mediaKey}#{$stateKey}(#{$weightKey})"]#{$stateValue} {
+        font-weight: $weightValue;
+      }
     }
   }
 }

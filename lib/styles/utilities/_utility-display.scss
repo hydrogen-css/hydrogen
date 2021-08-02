@@ -17,11 +17,14 @@ $h2-map-display: (
   "list-item": "list-item"
 );
 @mixin h2-utility-display(
-  $mediaKey
+  $mediaKey,
+  $stateMap
 ) {
-  @each $displayKey, $displayValue in $h2-map-display {
-    [data-h2-display*="#{$mediaKey}(#{$displayKey})"] {
-      display: #{$displayValue};
+  @each $stateKey, $stateValue in $stateMap {
+    @each $displayKey, $displayValue in $h2-map-display {
+      [data-h2-display*="#{$mediaKey}#{$stateKey}(#{$displayKey})"]#{$stateValue} {
+        display: #{$displayValue};
+      }
     }
   }
 }

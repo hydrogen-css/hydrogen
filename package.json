@@ -1,13 +1,15 @@
 {
   "name": "@hydrogen-design-system/hydrogen.css",
-  "version": "1.0.7",
-  "description": "A new iteration of Hydrogen's dynamic CSS utility tool.",
+  "version": "1.1.0",
+  "description": "A CSS utility framework that leverages data-attributes to provide clarity and flexibility.",
   "keywords": [
     "Hydrogen",
     "design",
     "system",
     "component",
-    "library"
+    "library",
+    "css",
+    "framework"
   ],
   "main": "./bin/index.js",
   "bin": {
@@ -21,8 +23,9 @@
     "h2-build": "./bin/build.js"
   },
   "scripts": {
-    "hydrogen-watch": "npx gulp watch",
-    "hydrogen-compile": "npx gulp compile"
+    "devInit": "node ./dev/init.js",
+    "devCompile": "node ./dev/compile.js",
+    "devBuild": "node ./dev/build.js"
   },
   "repository": {
     "type": "git",
@@ -35,18 +38,19 @@
   },
   "homepage": "https://hydrogen.design",
   "dependencies": {
-    "autoprefixer": "^9.8.6",
-    "browser-sync": "^2.26.14",
+    "autoprefixer": "^10.3.0",
+    "browser-sync": "^2.27.0",
     "browserslist": "^4.16.6",
     "colors": "^1.4.0",
     "cssnano": "^5.0.6",
     "cssnano-preset-lite": "^1.0.1",
-    "del": "^3.0.0",
+    "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-footer": "^2.0.2",
     "gulp-gzip": "^1.4.2",
     "gulp-postcss": "^9.0.0",
+    "gulp-purifycss": "^0.2.0",
     "gulp-rename": "^1.4.0",
     "gulp-replace": "^1.1.3",
     "gulp-sass": "^4.1.0",
@@ -60,5 +64,12 @@
   },
   "browserslist": [
     "last 1 version and not dead"
-  ]
+  ],
+  "engines": {
+    "npm": ">=6.14.4",
+    "node": ">=12.16.2"
+  },
+  "devDependencies": {
+    "gulp-purgecss": "^4.0.3"
+  }
 }
