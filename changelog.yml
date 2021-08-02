@@ -44,6 +44,7 @@ majors:
           - "Scripts: init now checks to see if the folders specified by the user exist before trying to run."
           - "Scripts: refactors scripts into more reusable chunks."
           - "Scripts: removes the need for a Gulpfile for internal development and migrates to node execution of Gulp scripts."
+          - "Scripts: ensures debug in the config applies to compile as well as build."
           - "Sass: updates the use of \"/\" in math to resolve deprecation issues."
           - "Width: adds support for default and configurable width values."
           - "States: adds support for hover, active, focus, and disabled values."
