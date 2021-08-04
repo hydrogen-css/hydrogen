@@ -5126,7 +5126,7 @@ xxl
       </div>
     </div>
     <div>
-      <h1 data-h2-font-color="b:h(red)" >Compile Test Markup</h1>
+      <h1 data-h2-font-color="b(blue) b:h(red)" >Compile Test Markup</h1>
       <div 
         data-h2-padding="b(all, l)"
         data-h2-bg-color="b(green) s(red) s"> 
@@ -5391,4 +5391,5 @@ Dialog.Title = Title;
 Dialog.Trigger = Trigger;
 
 export default Dialog;
+<div data-h2-bg-color="something([dark]green])"></div>
 body.querySelectorAll('[data-h2-bg-color="b:a(red)"]');

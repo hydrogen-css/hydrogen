@@ -57,3 +57,9 @@ majors:
             changes:
               - "Bugfix: fixes a bug where the clean script wasn't properly accounting for complex selectors."
               - "Scripts: removes duplicates from the markup during the clean to help reduce build time."
+          - version: 2
+            date: 2021/AUG/04
+            author: Josh Beveridge
+            changes:
+              - "Scripts: attempts to optimize the the clean script by allowing it to search individual compiled utility files, rather than the library as whole."
+              - "Scripts: adds an optimized watch script that only adds what you've added to your markup by comparing the current RegEx matches with the previous call."

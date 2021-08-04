@@ -1,0 +1,8 @@
+@use "../maps/map-font-size" as fontSizeMap;
+
+@use "../utilities/utility-font-size" as fontSizeStyles;
+
+@include fontSizeStyles.h2-utility-font-size(
+  $mediaKey: "MEDIAKEY",
+  $fontSizeMap: fontSizeMap.$h2-map-font-size
+);

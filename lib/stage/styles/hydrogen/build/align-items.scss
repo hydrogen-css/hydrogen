@@ -1,0 +1,5 @@
+@use "../utilities/utility-align-items" as alignItemStyles;
+
+@include alignItemStyles.h2-utility-align-items(
+  $mediaKey: "MEDIAKEY"
+);
