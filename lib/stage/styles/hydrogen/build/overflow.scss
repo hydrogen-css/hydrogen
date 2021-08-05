@@ -1,8 +1,0 @@
-@use "../maps/map-states" as stateMap;
-
-@use "../utilities/utility-overflow" as overflowStyles;
-
-@include overflowStyles.h2-utility-overflow(
-  $mediaKey: "MEDIAKEY",
-  $stateMap: stateMap.$h2-map-states
-);

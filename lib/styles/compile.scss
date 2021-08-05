@@ -5,9 +5,12 @@
 @use "maps/map-color" as colorMap;
 @use "maps/map-containers" as containerMap;
 @use "maps/map-font-families" as fontFamilyMap;
+@use "maps/map-font-size" as fontSizeMap;
 @use "maps/map-gradient" as gradientMap;
 @use "maps/map-radius" as radiusMap;
+@use "maps/map-sides" as sideMap;
 @use "maps/map-shadow" as shadowMap;
+@use "maps/map-states" as stateMap;
 @use "maps/map-whitespace" as whitespaceMap;
 @use "maps/map-width" as widthMap;
 
@@ -38,52 +41,6 @@
 @use "utilities/utility-visibility" as visibilityStyles;
 @use "utilities/utility-width" as widthStyles;
 
-// Font Variables
-$h2-font-scale: $H2FONTSCALE;
-$h2-font-size-default: 1rem;
-$h2-font-size-caption: calc(#{$h2-font-size-default}/#{$h2-font-scale});
-$h2-font-size-h6: $h2-font-size-default;
-$h2-font-size-h5: calc(#{$h2-font-size-default}*#{$h2-font-scale});
-$h2-font-size-h4: calc(#{$h2-font-size-h5}*#{$h2-font-scale});
-$h2-font-size-h3: calc(#{$h2-font-size-h4}*#{$h2-font-scale});
-$h2-font-size-h2: calc(#{$h2-font-size-h3}*#{$h2-font-scale});
-$h2-font-size-h1: calc(#{$h2-font-size-h2}*#{$h2-font-scale});
-
-$h2-map-font-size: (
-  "h1": $h2-font-size-h1,
-  "h2": $h2-font-size-h2,
-  "h3": $h2-font-size-h3,
-  "h4": $h2-font-size-h4,
-  "h5": $h2-font-size-h5,
-  "h6": $h2-font-size-h6,
-  "normal": $h2-font-size-default,
-  "default": $h2-font-size-default,
-  "copy": $h2-font-size-default,
-  "caption": $h2-font-size-caption,
-);
-
-$h2-map-sides: (
-  "all": "",
-  "top": "-top",
-  "right": "-right",
-  "bottom": "-bottom",
-  "left": "-left",
-  "top-right": "",
-  "top-bottom": "",
-  "top-left": "",
-  "bottom-right": "",
-  "bottom-left": "",
-  "right-left": ""
-);
-
-$h2-map-states: (
-  "": "",
-  ":a": ":active",
-  ":h": ":hover",
-  ":f": ":focus",
-  ":d": ":disabled"
-);
-
 @each $mediaKey, $mediaValue in mediaMap.$h2-map-media {
   @media #{$mediaValue} {
 
@@ -101,16 +58,16 @@ $h2-map-states: (
   
     @include bgColorStyles.h2-utility-bg-color(
       $mediaKey: $mediaKey,
-      $stateMap: $h2-map-states,
+      $stateMap: stateMap.$h2-map-states,
       $colorMap: colorMap.$h2-map-color,
       $gradientMap: gradientMap.$h2-map-gradient
     );
   
     @include borderStyles.h2-utility-border(
       $mediaKey: $mediaKey,
-      $stateMap: $h2-map-states,
+      $stateMap: stateMap.$h2-map-states,
       $colorMap: colorMap.$h2-map-color,
-      $sideMap: $h2-map-sides,
+      $sideMap: sideMap.$h2-map-sides,
       $borderWeightMap: borderWeightMap.$h2-map-border-weight
     );
   
@@ -121,7 +78,7 @@ $h2-map-states: (
   
     @include displayStyles.h2-utility-display(
       $mediaKey: $mediaKey,
-      $stateMap: $h2-map-states
+      $stateMap: stateMap.$h2-map-states
     );
   
     @include flexDirectionStyles.h2-utility-flex-direction(
@@ -136,7 +93,7 @@ $h2-map-states: (
   
     @include fontColorStyles.h2-utility-font-color(
       $mediaKey: $mediaKey,
-      $stateMap: $h2-map-states,
+      $stateMap: stateMap.$h2-map-states,
       $colorMap: colorMap.$h2-map-color
     );
   
@@ -147,17 +104,17 @@ $h2-map-states: (
   
     @include fontSizeStyles.h2-utility-font-size(
       $mediaKey: $mediaKey,
-      $fontSizeMap: $h2-map-font-size
+      $fontSizeMap: fontSizeMap.$h2-map-font-size
     );
   
     @include fontStyleStyles.h2-utility-font-style(
       $mediaKey: $mediaKey,
-      $stateMap: $h2-map-states
+      $stateMap: stateMap.$h2-map-states
     );
   
     @include fontWeightStyles.h2-utility-font-weight(
       $mediaKey: $mediaKey,
-      $stateMap: $h2-map-states
+      $stateMap: stateMap.$h2-map-states
     );
   
     @include justifyContentStyles.h2-utility-justify-content(
@@ -166,26 +123,26 @@ $h2-map-states: (
   
     @include locationStyles.h2-utility-location(
       $mediaKey: $mediaKey,
-      $sideMap: $h2-map-sides,
+      $sideMap: sideMap.$h2-map-sides,
       $whitespaceMap: whitespaceMap.$h2-map-whitespace
     );
   
     @include marginStyles.h2-utility-margin(
       $mediaKey: $mediaKey,
-      $stateMap: $h2-map-states,
-      $sideMap: $h2-map-sides,
+      $stateMap: stateMap.$h2-map-states,
+      $sideMap: sideMap.$h2-map-sides,
       $whitespaceMap: whitespaceMap.$h2-map-whitespace
     );
   
     @include overflowStyles.h2-utility-overflow(
       $mediaKey: $mediaKey,
-      $stateMap: $h2-map-states
+      $stateMap: stateMap.$h2-map-states
     );
   
     @include paddingStyles.h2-utility-padding(
       $mediaKey: $mediaKey,
-      $stateMap: $h2-map-states,
-      $sideMap: $h2-map-sides,
+      $stateMap: stateMap.$h2-map-states,
+      $sideMap: sideMap.$h2-map-sides,
       $whitespaceMap: whitespaceMap.$h2-map-whitespace
     );
   
@@ -195,13 +152,13 @@ $h2-map-states: (
   
     @include radiusStyles.h2-utility-radius(
       $mediaKey: $mediaKey,
-      $stateMap: $h2-map-states,
+      $stateMap: stateMap.$h2-map-states,
       $radiusMap: radiusMap.$h2-map-radius
     );
   
     @include shadowStyles.h2-utility-shadow(
       $mediaKey: $mediaKey,
-      $stateMap: $h2-map-states,
+      $stateMap: stateMap.$h2-map-states,
       $shadowMap: shadowMap.$h2-map-shadow
     );
   
@@ -211,12 +168,12 @@ $h2-map-states: (
   
     @include visibilityStyles.h2-utility-visibility(
       $mediaKey: $mediaKey,
-      $stateMap: $h2-map-states
+      $stateMap: stateMap.$h2-map-states
     );
 
     @include widthStyles.h2-utility-width(
       $mediaKey: $mediaKey,
-      $stateMap: $h2-map-states,
+      $stateMap: stateMap.$h2-map-states,
       $widthMap: widthMap.$h2-map-width
     );
 

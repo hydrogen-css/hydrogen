@@ -61,5 +61,5 @@ majors:
             date: 2021/AUG/04
             author: Josh Beveridge
             changes:
-              - "Scripts: attempts to optimize the the clean script by allowing it to search individual compiled utility files, rather than the library as whole."
-              - "Scripts: adds an optimized watch script that only adds what you've added to your markup by comparing the current RegEx matches with the previous call."
+              - "Scripts: optimizes the the clean script by allowing it to search individual compiled utility files, rather than the library as whole."
+              - "Scripts: adds a watch script that will only rerun the build script if you modify your config, otherwise it only performs the code match and CSS file construction."
