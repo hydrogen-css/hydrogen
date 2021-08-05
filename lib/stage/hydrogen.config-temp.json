@@ -1,9 +1,0 @@
-{
-  "debug": false,
-  "mediaWarnings": false,
-  "folders": {
-    "markup": "markup",
-    "scripts": "scripts",
-    "styles": "styles"
-  }
-}

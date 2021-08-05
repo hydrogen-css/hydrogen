@@ -1,4 +1,6 @@
 {
+  "debug": true,
+  "mediaWarnings": false,
   "folders": {
     "styles": "styles",
     "markup": [
@@ -7,102 +9,93 @@
     ],
     "scripts": "scripts"
   },
+  "media": [],
+  "borderWeights": [
+    {
+      "key": "thing",
+      "weight": "1px"
+    }
+  ],
   "colors": [
     {
-      "key": "white",
-      "color": "#FFFFFF",
-      "opacity": false
-    },
-    {
       "key": "black",
-      "color": "#1E1E23",
-      "opacity": false
+      "color": "rgba(20, 20, 30, 1)",
+      "opacity": true
     },
     {
-      "key": "gray",
-      "color": "#B9B9B9",
-      "opacity": false
-    },
-    {
-      "key": "darkgray",
-      "color": "#646464",
-      "opacity": false
-    },
-    {
-      "key": "lightgray",
-      "color": "#F0F0F0",
+      "key": "green",
+      "color": "rgba(0, 255, 0, 1)",
       "opacity": false
     },
     {
       "key": "red",
-      "color": "#FF0000",
+      "color": "rgba(255, 0, 0, 1)",
       "opacity": false
     },
     {
-      "key": "gold",
-      "color": "#F9C160",
-      "opacity": false
-    },
-    {
-      "key": "darkgold",
-      "color": "#F8A812",
-      "opacity": false
-    },
-    {
-      "key": "lightgold",
-      "color": "#FBDCA5",
-      "opacity": false
-    },
-    {
-      "key": "darknavy",
-      "color": "#072131",
-      "opacity": false
-    },
-    {
-      "key": "lightnavy",
-      "color": "#1D2C4C",
-      "opacity": false
-    },
-    {
-      "key": "darkpurple",
-      "color": "#363661",
-      "opacity": false
-    },
-    {
-      "key": "lightpurple",
-      "color": "#674C90",
+      "key": "blue",
+      "color": "rgba(0, 0, 255, 1)",
       "opacity": false
     }
   ],
+  "containers": [],
+  "flexgrid": {
+    "enabled": true,
+    "columns": 8
+  },
   "fonts": [
     {
-      "key": "sans",
-      "loadType": "webfont",
-      "value": "Open Sans, sans-serif",
-      "url": "https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      "key": "testFont",
+      "loadType": "font-face",
+      "value": "'testFont', sans-serif",
+      "url": "google.com"
     }
   ],
-  "fontBaseSize": "112.5%",
-  "fontScale": "1.25",
+  "fontScale": "1.33",
+  "fontBaseSize": "150%",
   "gradients": [
     {
-      "type": "linear",
-      "angle": "70deg",
+      "type": "radial",
       "colorStops": [
         {
-          "key": "lightpurple",
-          "color": "#674C90"
+          "key": "green",
+          "color": "green"
         },
         {
-          "key": "lightnavy",
-          "color": "#1D2C4C"
+          "key": "red",
+          "color": "red"
+        },
+        {
+          "key": "blue",
+          "color": "blue"
+        }
+      ]
+    },
+    {
+      "type": "linear",
+      "angle": "135deg",
+      "colorStops": [
+        {
+          "key": "green",
+          "color": "green"
+        },
+        {
+          "key": "red",
+          "color": "red"
+        },
+        {
+          "key": "blue",
+          "color": "blue"
         }
       ]
     }
   ],
-  "whitespaceScale": "1.5",
-  "flexgrid": {
-    "enabled": true,
-    "columns": 12
-  }
+  "shadows": [],
+  "whitespaceScale": "1.25",
+  "widths": [
+    {
+      "key": "phat",
+      "value": "56%"
+    }
+  ]
 }

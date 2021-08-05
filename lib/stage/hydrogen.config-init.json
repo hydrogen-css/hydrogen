@@ -2,9 +2,9 @@
   "debug": false,
   "mediaWarnings": false,
   "folders": {
-    "markup": "path/to/markup/folder",
-    "scripts": "path/to/scripts/folder",
-    "styles": "path/to/styles/folder"
+    "markup": "markup",
+    "scripts": "scripts",
+    "styles": "styles"
   },
   "borderWeights": [
     {
@@ -77,7 +77,8 @@
       "loadType": "system",
       "value": "serif",
       "url": null
-    },{
+    },
+    {
       "key": "script",
       "loadType": "system",
       "value": "script",
@@ -115,7 +116,8 @@
     {
       "key": "m",
       "value": "50rem"
-    },{
+    },
+    {
       "key": "l",
       "value": "100%"
     }

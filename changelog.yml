@@ -63,3 +63,5 @@ majors:
             changes:
               - "Scripts: optimizes the the clean script by allowing it to search individual compiled utility files, rather than the library as whole."
               - "Scripts: adds a watch script that will only rerun the build script if you modify your config, otherwise it only performs the code match and CSS file construction."
+              - "Scripts: reworks the compile script to meet the new optimized requirements and adds compression to help alleviate large file size concerns."
+              - "Scripts: init now copies over the default settings to help new users navigate the config structure."
