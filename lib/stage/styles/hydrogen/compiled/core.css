@@ -1,6 +1,12 @@
+[data-h2-flex-grid] > [data-h2-flex-item] {
+  flex: 0 0 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
 html {
   box-sizing: border-box;
-  font-size: 112.5%;
+  font-size: 150%;
 }
 html * {
   box-sizing: border-box;
@@ -31,30 +37,30 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h1 {
-  font-size: calc(calc(calc(calc(calc(1rem*1.25)*1.25)*1.25)*1.25)*1.25);
-  margin-top: calc((((1rem * 1.5) * 1.5) * 1.5) * 1.5);
+  font-size: calc(calc(calc(calc(calc(1rem*1.33)*1.33)*1.33)*1.33)*1.33);
+  margin-top: calc((((1rem * 1.25) * 1.25) * 1.25) * 1.25);
 }
 
 h2 {
-  font-size: calc(calc(calc(calc(1rem*1.25)*1.25)*1.25)*1.25);
-  margin-top: calc(((1rem * 1.5) * 1.5) * 1.5);
+  font-size: calc(calc(calc(calc(1rem*1.33)*1.33)*1.33)*1.33);
+  margin-top: calc(((1rem * 1.25) * 1.25) * 1.25);
   margin-bottom: 1rem;
 }
 
 h3 {
-  font-size: calc(calc(calc(1rem*1.25)*1.25)*1.25);
-  margin-top: calc((1rem * 1.5) * 1.5);
+  font-size: calc(calc(calc(1rem*1.33)*1.33)*1.33);
+  margin-top: calc((1rem * 1.25) * 1.25);
   margin-bottom: 1rem;
 }
 
 h4 {
-  font-size: calc(calc(1rem*1.25)*1.25);
-  margin-top: calc(1rem * 1.5);
+  font-size: calc(calc(1rem*1.33)*1.33);
+  margin-top: calc(1rem * 1.25);
   margin-bottom: 1rem;
 }
 
 h5 {
-  font-size: calc(1rem*1.25);
+  font-size: calc(1rem*1.33);
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
@@ -75,7 +81,7 @@ p {
 }
 
 p + p {
-  margin-top: calc(1rem / 1.5);
+  margin-top: calc(1rem / 1.25);
 }
 
 span {
@@ -118,7 +124,7 @@ li {
   color: inherit;
   font-family: inherit;
   font-size: inherit;
-  margin-top: calc(1rem / 1.5);
+  margin-top: calc(1rem / 1.25);
 }
 li:last-child {
   margin-bottom: 0;

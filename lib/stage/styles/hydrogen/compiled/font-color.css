@@ -1,0 +1,1799 @@
+[data-h2-font-color*="MEDIAKEY(black)"] {
+  color: #14141e;
+}
+
+[data-h2-color*="MEDIAKEY(black)"] {
+  color: #14141e;
+}
+
+[data-h2-font-color*="MEDIAKEY([light]black)"] {
+  color: #424263;
+}
+
+[data-h2-color*="MEDIAKEY([light]black)"] {
+  color: #424263;
+}
+
+[data-h2-font-color*="MEDIAKEY([dark]black)"] {
+  color: #111119;
+}
+
+[data-h2-color*="MEDIAKEY([dark]black)"] {
+  color: #111119;
+}
+
+[data-h2-font-color*="MEDIAKEY(black[1])"] {
+  color: #14141e;
+}
+
+[data-h2-color*="MEDIAKEY(black[1])"] {
+  color: #14141e;
+}
+
+[data-h2-font-color*="MEDIAKEY([light]black[1])"] {
+  color: #424263;
+}
+
+[data-h2-color*="MEDIAKEY([light]black[1])"] {
+  color: #424263;
+}
+
+[data-h2-font-color*="MEDIAKEY([dark]black[1])"] {
+  color: #111119;
+}
+
+[data-h2-color*="MEDIAKEY([dark]black[1])"] {
+  color: #111119;
+}
+
+[data-h2-font-color*="MEDIAKEY(black[.9])"] {
+  color: rgba(20, 20, 30, 0.9);
+}
+
+[data-h2-color*="MEDIAKEY(black[.9])"] {
+  color: rgba(20, 20, 30, 0.9);
+}
+
+[data-h2-font-color*="MEDIAKEY([light]black[.9])"] {
+  color: rgba(66, 66, 99, 0.9);
+}
+
+[data-h2-color*="MEDIAKEY([light]black[.9])"] {
+  color: rgba(66, 66, 99, 0.9);
+}
+
+[data-h2-font-color*="MEDIAKEY([dark]black[.9])"] {
+  color: rgba(17, 17, 25, 0.9);
+}
+
+[data-h2-color*="MEDIAKEY([dark]black[.9])"] {
+  color: rgba(17, 17, 25, 0.9);
+}
+
+[data-h2-font-color*="MEDIAKEY(black[.8])"] {
+  color: rgba(20, 20, 30, 0.8);
+}
+
+[data-h2-color*="MEDIAKEY(black[.8])"] {
+  color: rgba(20, 20, 30, 0.8);
+}
+
+[data-h2-font-color*="MEDIAKEY([light]black[.8])"] {
+  color: rgba(66, 66, 99, 0.8);
+}
+
+[data-h2-color*="MEDIAKEY([light]black[.8])"] {
+  color: rgba(66, 66, 99, 0.8);
+}
+
+[data-h2-font-color*="MEDIAKEY([dark]black[.8])"] {
+  color: rgba(17, 17, 25, 0.8);
+}
+
+[data-h2-color*="MEDIAKEY([dark]black[.8])"] {
+  color: rgba(17, 17, 25, 0.8);
+}
+
+[data-h2-font-color*="MEDIAKEY(black[.7])"] {
+  color: rgba(20, 20, 30, 0.7);
+}
+
+[data-h2-color*="MEDIAKEY(black[.7])"] {
+  color: rgba(20, 20, 30, 0.7);
+}
+
+[data-h2-font-color*="MEDIAKEY([light]black[.7])"] {
+  color: rgba(66, 66, 99, 0.7);
+}
+
+[data-h2-color*="MEDIAKEY([light]black[.7])"] {
+  color: rgba(66, 66, 99, 0.7);
+}
+
+[data-h2-font-color*="MEDIAKEY([dark]black[.7])"] {
+  color: rgba(17, 17, 25, 0.7);
+}
+
+[data-h2-color*="MEDIAKEY([dark]black[.7])"] {
+  color: rgba(17, 17, 25, 0.7);
+}
+
+[data-h2-font-color*="MEDIAKEY(black[.6])"] {
+  color: rgba(20, 20, 30, 0.6);
+}
+
+[data-h2-color*="MEDIAKEY(black[.6])"] {
+  color: rgba(20, 20, 30, 0.6);
+}
+
+[data-h2-font-color*="MEDIAKEY([light]black[.6])"] {
+  color: rgba(66, 66, 99, 0.6);
+}
+
+[data-h2-color*="MEDIAKEY([light]black[.6])"] {
+  color: rgba(66, 66, 99, 0.6);
+}
+
+[data-h2-font-color*="MEDIAKEY([dark]black[.6])"] {
+  color: rgba(17, 17, 25, 0.6);
+}
+
+[data-h2-color*="MEDIAKEY([dark]black[.6])"] {
+  color: rgba(17, 17, 25, 0.6);
+}
+
+[data-h2-font-color*="MEDIAKEY(black[.5])"] {
+  color: rgba(20, 20, 30, 0.5);
+}
+
+[data-h2-color*="MEDIAKEY(black[.5])"] {
+  color: rgba(20, 20, 30, 0.5);
+}
+
+[data-h2-font-color*="MEDIAKEY([light]black[.5])"] {
+  color: rgba(66, 66, 99, 0.5);
+}
+
+[data-h2-color*="MEDIAKEY([light]black[.5])"] {
+  color: rgba(66, 66, 99, 0.5);
+}
+
+[data-h2-font-color*="MEDIAKEY([dark]black[.5])"] {
+  color: rgba(17, 17, 25, 0.5);
+}
+
+[data-h2-color*="MEDIAKEY([dark]black[.5])"] {
+  color: rgba(17, 17, 25, 0.5);
+}
+
+[data-h2-font-color*="MEDIAKEY(black[.4])"] {
+  color: rgba(20, 20, 30, 0.4);
+}
+
+[data-h2-color*="MEDIAKEY(black[.4])"] {
+  color: rgba(20, 20, 30, 0.4);
+}
+
+[data-h2-font-color*="MEDIAKEY([light]black[.4])"] {
+  color: rgba(66, 66, 99, 0.4);
+}
+
+[data-h2-color*="MEDIAKEY([light]black[.4])"] {
+  color: rgba(66, 66, 99, 0.4);
+}
+
+[data-h2-font-color*="MEDIAKEY([dark]black[.4])"] {
+  color: rgba(17, 17, 25, 0.4);
+}
+
+[data-h2-color*="MEDIAKEY([dark]black[.4])"] {
+  color: rgba(17, 17, 25, 0.4);
+}
+
+[data-h2-font-color*="MEDIAKEY(black[.3])"] {
+  color: rgba(20, 20, 30, 0.3);
+}
+
+[data-h2-color*="MEDIAKEY(black[.3])"] {
+  color: rgba(20, 20, 30, 0.3);
+}
+
+[data-h2-font-color*="MEDIAKEY([light]black[.3])"] {
+  color: rgba(66, 66, 99, 0.3);
+}
+
+[data-h2-color*="MEDIAKEY([light]black[.3])"] {
+  color: rgba(66, 66, 99, 0.3);
+}
+
+[data-h2-font-color*="MEDIAKEY([dark]black[.3])"] {
+  color: rgba(17, 17, 25, 0.3);
+}
+
+[data-h2-color*="MEDIAKEY([dark]black[.3])"] {
+  color: rgba(17, 17, 25, 0.3);
+}
+
+[data-h2-font-color*="MEDIAKEY(black[.2])"] {
+  color: rgba(20, 20, 30, 0.2);
+}
+
+[data-h2-color*="MEDIAKEY(black[.2])"] {
+  color: rgba(20, 20, 30, 0.2);
+}
+
+[data-h2-font-color*="MEDIAKEY([light]black[.2])"] {
+  color: rgba(66, 66, 99, 0.2);
+}
+
+[data-h2-color*="MEDIAKEY([light]black[.2])"] {
+  color: rgba(66, 66, 99, 0.2);
+}
+
+[data-h2-font-color*="MEDIAKEY([dark]black[.2])"] {
+  color: rgba(17, 17, 25, 0.2);
+}
+
+[data-h2-color*="MEDIAKEY([dark]black[.2])"] {
+  color: rgba(17, 17, 25, 0.2);
+}
+
+[data-h2-font-color*="MEDIAKEY(black[.1])"] {
+  color: rgba(20, 20, 30, 0.1);
+}
+
+[data-h2-color*="MEDIAKEY(black[.1])"] {
+  color: rgba(20, 20, 30, 0.1);
+}
+
+[data-h2-font-color*="MEDIAKEY([light]black[.1])"] {
+  color: rgba(66, 66, 99, 0.1);
+}
+
+[data-h2-color*="MEDIAKEY([light]black[.1])"] {
+  color: rgba(66, 66, 99, 0.1);
+}
+
+[data-h2-font-color*="MEDIAKEY([dark]black[.1])"] {
+  color: rgba(17, 17, 25, 0.1);
+}
+
+[data-h2-color*="MEDIAKEY([dark]black[.1])"] {
+  color: rgba(17, 17, 25, 0.1);
+}
+
+[data-h2-font-color*="MEDIAKEY(black[0])"] {
+  color: rgba(20, 20, 30, 0);
+}
+
+[data-h2-color*="MEDIAKEY(black[0])"] {
+  color: rgba(20, 20, 30, 0);
+}
+
+[data-h2-font-color*="MEDIAKEY([light]black[0])"] {
+  color: rgba(66, 66, 99, 0);
+}
+
+[data-h2-color*="MEDIAKEY([light]black[0])"] {
+  color: rgba(66, 66, 99, 0);
+}
+
+[data-h2-font-color*="MEDIAKEY([dark]black[0])"] {
+  color: rgba(17, 17, 25, 0);
+}
+
+[data-h2-color*="MEDIAKEY([dark]black[0])"] {
+  color: rgba(17, 17, 25, 0);
+}
+
+[data-h2-font-color*="MEDIAKEY(green)"] {
+  color: lime;
+}
+
+[data-h2-color*="MEDIAKEY(green)"] {
+  color: lime;
+}
+
+[data-h2-font-color*="MEDIAKEY([light]green)"] {
+  color: #40ff40;
+}
+
+[data-h2-color*="MEDIAKEY([light]green)"] {
+  color: #40ff40;
+}
+
+[data-h2-font-color*="MEDIAKEY([dark]green)"] {
+  color: #0bce0b;
+}
+
+[data-h2-color*="MEDIAKEY([dark]green)"] {
+  color: #0bce0b;
+}
+
+[data-h2-font-color*="MEDIAKEY(red)"] {
+  color: red;
+}
+
+[data-h2-color*="MEDIAKEY(red)"] {
+  color: red;
+}
+
+[data-h2-font-color*="MEDIAKEY([light]red)"] {
+  color: #ff4040;
+}
+
+[data-h2-color*="MEDIAKEY([light]red)"] {
+  color: #ff4040;
+}
+
+[data-h2-font-color*="MEDIAKEY([dark]red)"] {
+  color: #ce0b0b;
+}
+
+[data-h2-color*="MEDIAKEY([dark]red)"] {
+  color: #ce0b0b;
+}
+
+[data-h2-font-color*="MEDIAKEY(blue)"] {
+  color: blue;
+}
+
+[data-h2-color*="MEDIAKEY(blue)"] {
+  color: blue;
+}
+
+[data-h2-font-color*="MEDIAKEY([light]blue)"] {
+  color: #4040ff;
+}
+
+[data-h2-color*="MEDIAKEY([light]blue)"] {
+  color: #4040ff;
+}
+
+[data-h2-font-color*="MEDIAKEY([dark]blue)"] {
+  color: #0b0bce;
+}
+
+[data-h2-color*="MEDIAKEY([dark]blue)"] {
+  color: #0b0bce;
+}
+
+[data-h2-font-color*="MEDIAKEY:a(black)"]:active {
+  color: #14141e;
+}
+
+[data-h2-color*="MEDIAKEY:a(black)"]:active {
+  color: #14141e;
+}
+
+[data-h2-font-color*="MEDIAKEY:a([light]black)"]:active {
+  color: #424263;
+}
+
+[data-h2-color*="MEDIAKEY:a([light]black)"]:active {
+  color: #424263;
+}
+
+[data-h2-font-color*="MEDIAKEY:a([dark]black)"]:active {
+  color: #111119;
+}
+
+[data-h2-color*="MEDIAKEY:a([dark]black)"]:active {
+  color: #111119;
+}
+
+[data-h2-font-color*="MEDIAKEY:a(black[1])"]:active {
+  color: #14141e;
+}
+
+[data-h2-color*="MEDIAKEY:a(black[1])"]:active {
+  color: #14141e;
+}
+
+[data-h2-font-color*="MEDIAKEY:a([light]black[1])"]:active {
+  color: #424263;
+}
+
+[data-h2-color*="MEDIAKEY:a([light]black[1])"]:active {
+  color: #424263;
+}
+
+[data-h2-font-color*="MEDIAKEY:a([dark]black[1])"]:active {
+  color: #111119;
+}
+
+[data-h2-color*="MEDIAKEY:a([dark]black[1])"]:active {
+  color: #111119;
+}
+
+[data-h2-font-color*="MEDIAKEY:a(black[.9])"]:active {
+  color: rgba(20, 20, 30, 0.9);
+}
+
+[data-h2-color*="MEDIAKEY:a(black[.9])"]:active {
+  color: rgba(20, 20, 30, 0.9);
+}
+
+[data-h2-font-color*="MEDIAKEY:a([light]black[.9])"]:active {
+  color: rgba(66, 66, 99, 0.9);
+}
+
+[data-h2-color*="MEDIAKEY:a([light]black[.9])"]:active {
+  color: rgba(66, 66, 99, 0.9);
+}
+
+[data-h2-font-color*="MEDIAKEY:a([dark]black[.9])"]:active {
+  color: rgba(17, 17, 25, 0.9);
+}
+
+[data-h2-color*="MEDIAKEY:a([dark]black[.9])"]:active {
+  color: rgba(17, 17, 25, 0.9);
+}
+
+[data-h2-font-color*="MEDIAKEY:a(black[.8])"]:active {
+  color: rgba(20, 20, 30, 0.8);
+}
+
+[data-h2-color*="MEDIAKEY:a(black[.8])"]:active {
+  color: rgba(20, 20, 30, 0.8);
+}
+
+[data-h2-font-color*="MEDIAKEY:a([light]black[.8])"]:active {
+  color: rgba(66, 66, 99, 0.8);
+}
+
+[data-h2-color*="MEDIAKEY:a([light]black[.8])"]:active {
+  color: rgba(66, 66, 99, 0.8);
+}
+
+[data-h2-font-color*="MEDIAKEY:a([dark]black[.8])"]:active {
+  color: rgba(17, 17, 25, 0.8);
+}
+
+[data-h2-color*="MEDIAKEY:a([dark]black[.8])"]:active {
+  color: rgba(17, 17, 25, 0.8);
+}
+
+[data-h2-font-color*="MEDIAKEY:a(black[.7])"]:active {
+  color: rgba(20, 20, 30, 0.7);
+}
+
+[data-h2-color*="MEDIAKEY:a(black[.7])"]:active {
+  color: rgba(20, 20, 30, 0.7);
+}
+
+[data-h2-font-color*="MEDIAKEY:a([light]black[.7])"]:active {
+  color: rgba(66, 66, 99, 0.7);
+}
+
+[data-h2-color*="MEDIAKEY:a([light]black[.7])"]:active {
+  color: rgba(66, 66, 99, 0.7);
+}
+
+[data-h2-font-color*="MEDIAKEY:a([dark]black[.7])"]:active {
+  color: rgba(17, 17, 25, 0.7);
+}
+
+[data-h2-color*="MEDIAKEY:a([dark]black[.7])"]:active {
+  color: rgba(17, 17, 25, 0.7);
+}
+
+[data-h2-font-color*="MEDIAKEY:a(black[.6])"]:active {
+  color: rgba(20, 20, 30, 0.6);
+}
+
+[data-h2-color*="MEDIAKEY:a(black[.6])"]:active {
+  color: rgba(20, 20, 30, 0.6);
+}
+
+[data-h2-font-color*="MEDIAKEY:a([light]black[.6])"]:active {
+  color: rgba(66, 66, 99, 0.6);
+}
+
+[data-h2-color*="MEDIAKEY:a([light]black[.6])"]:active {
+  color: rgba(66, 66, 99, 0.6);
+}
+
+[data-h2-font-color*="MEDIAKEY:a([dark]black[.6])"]:active {
+  color: rgba(17, 17, 25, 0.6);
+}
+
+[data-h2-color*="MEDIAKEY:a([dark]black[.6])"]:active {
+  color: rgba(17, 17, 25, 0.6);
+}
+
+[data-h2-font-color*="MEDIAKEY:a(black[.5])"]:active {
+  color: rgba(20, 20, 30, 0.5);
+}
+
+[data-h2-color*="MEDIAKEY:a(black[.5])"]:active {
+  color: rgba(20, 20, 30, 0.5);
+}
+
+[data-h2-font-color*="MEDIAKEY:a([light]black[.5])"]:active {
+  color: rgba(66, 66, 99, 0.5);
+}
+
+[data-h2-color*="MEDIAKEY:a([light]black[.5])"]:active {
+  color: rgba(66, 66, 99, 0.5);
+}
+
+[data-h2-font-color*="MEDIAKEY:a([dark]black[.5])"]:active {
+  color: rgba(17, 17, 25, 0.5);
+}
+
+[data-h2-color*="MEDIAKEY:a([dark]black[.5])"]:active {
+  color: rgba(17, 17, 25, 0.5);
+}
+
+[data-h2-font-color*="MEDIAKEY:a(black[.4])"]:active {
+  color: rgba(20, 20, 30, 0.4);
+}
+
+[data-h2-color*="MEDIAKEY:a(black[.4])"]:active {
+  color: rgba(20, 20, 30, 0.4);
+}
+
+[data-h2-font-color*="MEDIAKEY:a([light]black[.4])"]:active {
+  color: rgba(66, 66, 99, 0.4);
+}
+
+[data-h2-color*="MEDIAKEY:a([light]black[.4])"]:active {
+  color: rgba(66, 66, 99, 0.4);
+}
+
+[data-h2-font-color*="MEDIAKEY:a([dark]black[.4])"]:active {
+  color: rgba(17, 17, 25, 0.4);
+}
+
+[data-h2-color*="MEDIAKEY:a([dark]black[.4])"]:active {
+  color: rgba(17, 17, 25, 0.4);
+}
+
+[data-h2-font-color*="MEDIAKEY:a(black[.3])"]:active {
+  color: rgba(20, 20, 30, 0.3);
+}
+
+[data-h2-color*="MEDIAKEY:a(black[.3])"]:active {
+  color: rgba(20, 20, 30, 0.3);
+}
+
+[data-h2-font-color*="MEDIAKEY:a([light]black[.3])"]:active {
+  color: rgba(66, 66, 99, 0.3);
+}
+
+[data-h2-color*="MEDIAKEY:a([light]black[.3])"]:active {
+  color: rgba(66, 66, 99, 0.3);
+}
+
+[data-h2-font-color*="MEDIAKEY:a([dark]black[.3])"]:active {
+  color: rgba(17, 17, 25, 0.3);
+}
+
+[data-h2-color*="MEDIAKEY:a([dark]black[.3])"]:active {
+  color: rgba(17, 17, 25, 0.3);
+}
+
+[data-h2-font-color*="MEDIAKEY:a(black[.2])"]:active {
+  color: rgba(20, 20, 30, 0.2);
+}
+
+[data-h2-color*="MEDIAKEY:a(black[.2])"]:active {
+  color: rgba(20, 20, 30, 0.2);
+}
+
+[data-h2-font-color*="MEDIAKEY:a([light]black[.2])"]:active {
+  color: rgba(66, 66, 99, 0.2);
+}
+
+[data-h2-color*="MEDIAKEY:a([light]black[.2])"]:active {
+  color: rgba(66, 66, 99, 0.2);
+}
+
+[data-h2-font-color*="MEDIAKEY:a([dark]black[.2])"]:active {
+  color: rgba(17, 17, 25, 0.2);
+}
+
+[data-h2-color*="MEDIAKEY:a([dark]black[.2])"]:active {
+  color: rgba(17, 17, 25, 0.2);
+}
+
+[data-h2-font-color*="MEDIAKEY:a(black[.1])"]:active {
+  color: rgba(20, 20, 30, 0.1);
+}
+
+[data-h2-color*="MEDIAKEY:a(black[.1])"]:active {
+  color: rgba(20, 20, 30, 0.1);
+}
+
+[data-h2-font-color*="MEDIAKEY:a([light]black[.1])"]:active {
+  color: rgba(66, 66, 99, 0.1);
+}
+
+[data-h2-color*="MEDIAKEY:a([light]black[.1])"]:active {
+  color: rgba(66, 66, 99, 0.1);
+}
+
+[data-h2-font-color*="MEDIAKEY:a([dark]black[.1])"]:active {
+  color: rgba(17, 17, 25, 0.1);
+}
+
+[data-h2-color*="MEDIAKEY:a([dark]black[.1])"]:active {
+  color: rgba(17, 17, 25, 0.1);
+}
+
+[data-h2-font-color*="MEDIAKEY:a(black[0])"]:active {
+  color: rgba(20, 20, 30, 0);
+}
+
+[data-h2-color*="MEDIAKEY:a(black[0])"]:active {
+  color: rgba(20, 20, 30, 0);
+}
+
+[data-h2-font-color*="MEDIAKEY:a([light]black[0])"]:active {
+  color: rgba(66, 66, 99, 0);
+}
+
+[data-h2-color*="MEDIAKEY:a([light]black[0])"]:active {
+  color: rgba(66, 66, 99, 0);
+}
+
+[data-h2-font-color*="MEDIAKEY:a([dark]black[0])"]:active {
+  color: rgba(17, 17, 25, 0);
+}
+
+[data-h2-color*="MEDIAKEY:a([dark]black[0])"]:active {
+  color: rgba(17, 17, 25, 0);
+}
+
+[data-h2-font-color*="MEDIAKEY:a(green)"]:active {
+  color: lime;
+}
+
+[data-h2-color*="MEDIAKEY:a(green)"]:active {
+  color: lime;
+}
+
+[data-h2-font-color*="MEDIAKEY:a([light]green)"]:active {
+  color: #40ff40;
+}
+
+[data-h2-color*="MEDIAKEY:a([light]green)"]:active {
+  color: #40ff40;
+}
+
+[data-h2-font-color*="MEDIAKEY:a([dark]green)"]:active {
+  color: #0bce0b;
+}
+
+[data-h2-color*="MEDIAKEY:a([dark]green)"]:active {
+  color: #0bce0b;
+}
+
+[data-h2-font-color*="MEDIAKEY:a(red)"]:active {
+  color: red;
+}
+
+[data-h2-color*="MEDIAKEY:a(red)"]:active {
+  color: red;
+}
+
+[data-h2-font-color*="MEDIAKEY:a([light]red)"]:active {
+  color: #ff4040;
+}
+
+[data-h2-color*="MEDIAKEY:a([light]red)"]:active {
+  color: #ff4040;
+}
+
+[data-h2-font-color*="MEDIAKEY:a([dark]red)"]:active {
+  color: #ce0b0b;
+}
+
+[data-h2-color*="MEDIAKEY:a([dark]red)"]:active {
+  color: #ce0b0b;
+}
+
+[data-h2-font-color*="MEDIAKEY:a(blue)"]:active {
+  color: blue;
+}
+
+[data-h2-color*="MEDIAKEY:a(blue)"]:active {
+  color: blue;
+}
+
+[data-h2-font-color*="MEDIAKEY:a([light]blue)"]:active {
+  color: #4040ff;
+}
+
+[data-h2-color*="MEDIAKEY:a([light]blue)"]:active {
+  color: #4040ff;
+}
+
+[data-h2-font-color*="MEDIAKEY:a([dark]blue)"]:active {
+  color: #0b0bce;
+}
+
+[data-h2-color*="MEDIAKEY:a([dark]blue)"]:active {
+  color: #0b0bce;
+}
+
+[data-h2-font-color*="MEDIAKEY:h(black)"]:hover {
+  color: #14141e;
+}
+
+[data-h2-color*="MEDIAKEY:h(black)"]:hover {
+  color: #14141e;
+}
+
+[data-h2-font-color*="MEDIAKEY:h([light]black)"]:hover {
+  color: #424263;
+}
+
+[data-h2-color*="MEDIAKEY:h([light]black)"]:hover {
+  color: #424263;
+}
+
+[data-h2-font-color*="MEDIAKEY:h([dark]black)"]:hover {
+  color: #111119;
+}
+
+[data-h2-color*="MEDIAKEY:h([dark]black)"]:hover {
+  color: #111119;
+}
+
+[data-h2-font-color*="MEDIAKEY:h(black[1])"]:hover {
+  color: #14141e;
+}
+
+[data-h2-color*="MEDIAKEY:h(black[1])"]:hover {
+  color: #14141e;
+}
+
+[data-h2-font-color*="MEDIAKEY:h([light]black[1])"]:hover {
+  color: #424263;
+}
+
+[data-h2-color*="MEDIAKEY:h([light]black[1])"]:hover {
+  color: #424263;
+}
+
+[data-h2-font-color*="MEDIAKEY:h([dark]black[1])"]:hover {
+  color: #111119;
+}
+
+[data-h2-color*="MEDIAKEY:h([dark]black[1])"]:hover {
+  color: #111119;
+}
+
+[data-h2-font-color*="MEDIAKEY:h(black[.9])"]:hover {
+  color: rgba(20, 20, 30, 0.9);
+}
+
+[data-h2-color*="MEDIAKEY:h(black[.9])"]:hover {
+  color: rgba(20, 20, 30, 0.9);
+}
+
+[data-h2-font-color*="MEDIAKEY:h([light]black[.9])"]:hover {
+  color: rgba(66, 66, 99, 0.9);
+}
+
+[data-h2-color*="MEDIAKEY:h([light]black[.9])"]:hover {
+  color: rgba(66, 66, 99, 0.9);
+}
+
+[data-h2-font-color*="MEDIAKEY:h([dark]black[.9])"]:hover {
+  color: rgba(17, 17, 25, 0.9);
+}
+
+[data-h2-color*="MEDIAKEY:h([dark]black[.9])"]:hover {
+  color: rgba(17, 17, 25, 0.9);
+}
+
+[data-h2-font-color*="MEDIAKEY:h(black[.8])"]:hover {
+  color: rgba(20, 20, 30, 0.8);
+}
+
+[data-h2-color*="MEDIAKEY:h(black[.8])"]:hover {
+  color: rgba(20, 20, 30, 0.8);
+}
+
+[data-h2-font-color*="MEDIAKEY:h([light]black[.8])"]:hover {
+  color: rgba(66, 66, 99, 0.8);
+}
+
+[data-h2-color*="MEDIAKEY:h([light]black[.8])"]:hover {
+  color: rgba(66, 66, 99, 0.8);
+}
+
+[data-h2-font-color*="MEDIAKEY:h([dark]black[.8])"]:hover {
+  color: rgba(17, 17, 25, 0.8);
+}
+
+[data-h2-color*="MEDIAKEY:h([dark]black[.8])"]:hover {
+  color: rgba(17, 17, 25, 0.8);
+}
+
+[data-h2-font-color*="MEDIAKEY:h(black[.7])"]:hover {
+  color: rgba(20, 20, 30, 0.7);
+}
+
+[data-h2-color*="MEDIAKEY:h(black[.7])"]:hover {
+  color: rgba(20, 20, 30, 0.7);
+}
+
+[data-h2-font-color*="MEDIAKEY:h([light]black[.7])"]:hover {
+  color: rgba(66, 66, 99, 0.7);
+}
+
+[data-h2-color*="MEDIAKEY:h([light]black[.7])"]:hover {
+  color: rgba(66, 66, 99, 0.7);
+}
+
+[data-h2-font-color*="MEDIAKEY:h([dark]black[.7])"]:hover {
+  color: rgba(17, 17, 25, 0.7);
+}
+
+[data-h2-color*="MEDIAKEY:h([dark]black[.7])"]:hover {
+  color: rgba(17, 17, 25, 0.7);
+}
+
+[data-h2-font-color*="MEDIAKEY:h(black[.6])"]:hover {
+  color: rgba(20, 20, 30, 0.6);
+}
+
+[data-h2-color*="MEDIAKEY:h(black[.6])"]:hover {
+  color: rgba(20, 20, 30, 0.6);
+}
+
+[data-h2-font-color*="MEDIAKEY:h([light]black[.6])"]:hover {
+  color: rgba(66, 66, 99, 0.6);
+}
+
+[data-h2-color*="MEDIAKEY:h([light]black[.6])"]:hover {
+  color: rgba(66, 66, 99, 0.6);
+}
+
+[data-h2-font-color*="MEDIAKEY:h([dark]black[.6])"]:hover {
+  color: rgba(17, 17, 25, 0.6);
+}
+
+[data-h2-color*="MEDIAKEY:h([dark]black[.6])"]:hover {
+  color: rgba(17, 17, 25, 0.6);
+}
+
+[data-h2-font-color*="MEDIAKEY:h(black[.5])"]:hover {
+  color: rgba(20, 20, 30, 0.5);
+}
+
+[data-h2-color*="MEDIAKEY:h(black[.5])"]:hover {
+  color: rgba(20, 20, 30, 0.5);
+}
+
+[data-h2-font-color*="MEDIAKEY:h([light]black[.5])"]:hover {
+  color: rgba(66, 66, 99, 0.5);
+}
+
+[data-h2-color*="MEDIAKEY:h([light]black[.5])"]:hover {
+  color: rgba(66, 66, 99, 0.5);
+}
+
+[data-h2-font-color*="MEDIAKEY:h([dark]black[.5])"]:hover {
+  color: rgba(17, 17, 25, 0.5);
+}
+
+[data-h2-color*="MEDIAKEY:h([dark]black[.5])"]:hover {
+  color: rgba(17, 17, 25, 0.5);
+}
+
+[data-h2-font-color*="MEDIAKEY:h(black[.4])"]:hover {
+  color: rgba(20, 20, 30, 0.4);
+}
+
+[data-h2-color*="MEDIAKEY:h(black[.4])"]:hover {
+  color: rgba(20, 20, 30, 0.4);
+}
+
+[data-h2-font-color*="MEDIAKEY:h([light]black[.4])"]:hover {
+  color: rgba(66, 66, 99, 0.4);
+}
+
+[data-h2-color*="MEDIAKEY:h([light]black[.4])"]:hover {
+  color: rgba(66, 66, 99, 0.4);
+}
+
+[data-h2-font-color*="MEDIAKEY:h([dark]black[.4])"]:hover {
+  color: rgba(17, 17, 25, 0.4);
+}
+
+[data-h2-color*="MEDIAKEY:h([dark]black[.4])"]:hover {
+  color: rgba(17, 17, 25, 0.4);
+}
+
+[data-h2-font-color*="MEDIAKEY:h(black[.3])"]:hover {
+  color: rgba(20, 20, 30, 0.3);
+}
+
+[data-h2-color*="MEDIAKEY:h(black[.3])"]:hover {
+  color: rgba(20, 20, 30, 0.3);
+}
+
+[data-h2-font-color*="MEDIAKEY:h([light]black[.3])"]:hover {
+  color: rgba(66, 66, 99, 0.3);
+}
+
+[data-h2-color*="MEDIAKEY:h([light]black[.3])"]:hover {
+  color: rgba(66, 66, 99, 0.3);
+}
+
+[data-h2-font-color*="MEDIAKEY:h([dark]black[.3])"]:hover {
+  color: rgba(17, 17, 25, 0.3);
+}
+
+[data-h2-color*="MEDIAKEY:h([dark]black[.3])"]:hover {
+  color: rgba(17, 17, 25, 0.3);
+}
+
+[data-h2-font-color*="MEDIAKEY:h(black[.2])"]:hover {
+  color: rgba(20, 20, 30, 0.2);
+}
+
+[data-h2-color*="MEDIAKEY:h(black[.2])"]:hover {
+  color: rgba(20, 20, 30, 0.2);
+}
+
+[data-h2-font-color*="MEDIAKEY:h([light]black[.2])"]:hover {
+  color: rgba(66, 66, 99, 0.2);
+}
+
+[data-h2-color*="MEDIAKEY:h([light]black[.2])"]:hover {
+  color: rgba(66, 66, 99, 0.2);
+}
+
+[data-h2-font-color*="MEDIAKEY:h([dark]black[.2])"]:hover {
+  color: rgba(17, 17, 25, 0.2);
+}
+
+[data-h2-color*="MEDIAKEY:h([dark]black[.2])"]:hover {
+  color: rgba(17, 17, 25, 0.2);
+}
+
+[data-h2-font-color*="MEDIAKEY:h(black[.1])"]:hover {
+  color: rgba(20, 20, 30, 0.1);
+}
+
+[data-h2-color*="MEDIAKEY:h(black[.1])"]:hover {
+  color: rgba(20, 20, 30, 0.1);
+}
+
+[data-h2-font-color*="MEDIAKEY:h([light]black[.1])"]:hover {
+  color: rgba(66, 66, 99, 0.1);
+}
+
+[data-h2-color*="MEDIAKEY:h([light]black[.1])"]:hover {
+  color: rgba(66, 66, 99, 0.1);
+}
+
+[data-h2-font-color*="MEDIAKEY:h([dark]black[.1])"]:hover {
+  color: rgba(17, 17, 25, 0.1);
+}
+
+[data-h2-color*="MEDIAKEY:h([dark]black[.1])"]:hover {
+  color: rgba(17, 17, 25, 0.1);
+}
+
+[data-h2-font-color*="MEDIAKEY:h(black[0])"]:hover {
+  color: rgba(20, 20, 30, 0);
+}
+
+[data-h2-color*="MEDIAKEY:h(black[0])"]:hover {
+  color: rgba(20, 20, 30, 0);
+}
+
+[data-h2-font-color*="MEDIAKEY:h([light]black[0])"]:hover {
+  color: rgba(66, 66, 99, 0);
+}
+
+[data-h2-color*="MEDIAKEY:h([light]black[0])"]:hover {
+  color: rgba(66, 66, 99, 0);
+}
+
+[data-h2-font-color*="MEDIAKEY:h([dark]black[0])"]:hover {
+  color: rgba(17, 17, 25, 0);
+}
+
+[data-h2-color*="MEDIAKEY:h([dark]black[0])"]:hover {
+  color: rgba(17, 17, 25, 0);
+}
+
+[data-h2-font-color*="MEDIAKEY:h(green)"]:hover {
+  color: lime;
+}
+
+[data-h2-color*="MEDIAKEY:h(green)"]:hover {
+  color: lime;
+}
+
+[data-h2-font-color*="MEDIAKEY:h([light]green)"]:hover {
+  color: #40ff40;
+}
+
+[data-h2-color*="MEDIAKEY:h([light]green)"]:hover {
+  color: #40ff40;
+}
+
+[data-h2-font-color*="MEDIAKEY:h([dark]green)"]:hover {
+  color: #0bce0b;
+}
+
+[data-h2-color*="MEDIAKEY:h([dark]green)"]:hover {
+  color: #0bce0b;
+}
+
+[data-h2-font-color*="MEDIAKEY:h(red)"]:hover {
+  color: red;
+}
+
+[data-h2-color*="MEDIAKEY:h(red)"]:hover {
+  color: red;
+}
+
+[data-h2-font-color*="MEDIAKEY:h([light]red)"]:hover {
+  color: #ff4040;
+}
+
+[data-h2-color*="MEDIAKEY:h([light]red)"]:hover {
+  color: #ff4040;
+}
+
+[data-h2-font-color*="MEDIAKEY:h([dark]red)"]:hover {
+  color: #ce0b0b;
+}
+
+[data-h2-color*="MEDIAKEY:h([dark]red)"]:hover {
+  color: #ce0b0b;
+}
+
+[data-h2-font-color*="MEDIAKEY:h(blue)"]:hover {
+  color: blue;
+}
+
+[data-h2-color*="MEDIAKEY:h(blue)"]:hover {
+  color: blue;
+}
+
+[data-h2-font-color*="MEDIAKEY:h([light]blue)"]:hover {
+  color: #4040ff;
+}
+
+[data-h2-color*="MEDIAKEY:h([light]blue)"]:hover {
+  color: #4040ff;
+}
+
+[data-h2-font-color*="MEDIAKEY:h([dark]blue)"]:hover {
+  color: #0b0bce;
+}
+
+[data-h2-color*="MEDIAKEY:h([dark]blue)"]:hover {
+  color: #0b0bce;
+}
+
+[data-h2-font-color*="MEDIAKEY:f(black)"]:focus {
+  color: #14141e;
+}
+
+[data-h2-color*="MEDIAKEY:f(black)"]:focus {
+  color: #14141e;
+}
+
+[data-h2-font-color*="MEDIAKEY:f([light]black)"]:focus {
+  color: #424263;
+}
+
+[data-h2-color*="MEDIAKEY:f([light]black)"]:focus {
+  color: #424263;
+}
+
+[data-h2-font-color*="MEDIAKEY:f([dark]black)"]:focus {
+  color: #111119;
+}
+
+[data-h2-color*="MEDIAKEY:f([dark]black)"]:focus {
+  color: #111119;
+}
+
+[data-h2-font-color*="MEDIAKEY:f(black[1])"]:focus {
+  color: #14141e;
+}
+
+[data-h2-color*="MEDIAKEY:f(black[1])"]:focus {
+  color: #14141e;
+}
+
+[data-h2-font-color*="MEDIAKEY:f([light]black[1])"]:focus {
+  color: #424263;
+}
+
+[data-h2-color*="MEDIAKEY:f([light]black[1])"]:focus {
+  color: #424263;
+}
+
+[data-h2-font-color*="MEDIAKEY:f([dark]black[1])"]:focus {
+  color: #111119;
+}
+
+[data-h2-color*="MEDIAKEY:f([dark]black[1])"]:focus {
+  color: #111119;
+}
+
+[data-h2-font-color*="MEDIAKEY:f(black[.9])"]:focus {
+  color: rgba(20, 20, 30, 0.9);
+}
+
+[data-h2-color*="MEDIAKEY:f(black[.9])"]:focus {
+  color: rgba(20, 20, 30, 0.9);
+}
+
+[data-h2-font-color*="MEDIAKEY:f([light]black[.9])"]:focus {
+  color: rgba(66, 66, 99, 0.9);
+}
+
+[data-h2-color*="MEDIAKEY:f([light]black[.9])"]:focus {
+  color: rgba(66, 66, 99, 0.9);
+}
+
+[data-h2-font-color*="MEDIAKEY:f([dark]black[.9])"]:focus {
+  color: rgba(17, 17, 25, 0.9);
+}
+
+[data-h2-color*="MEDIAKEY:f([dark]black[.9])"]:focus {
+  color: rgba(17, 17, 25, 0.9);
+}
+
+[data-h2-font-color*="MEDIAKEY:f(black[.8])"]:focus {
+  color: rgba(20, 20, 30, 0.8);
+}
+
+[data-h2-color*="MEDIAKEY:f(black[.8])"]:focus {
+  color: rgba(20, 20, 30, 0.8);
+}
+
+[data-h2-font-color*="MEDIAKEY:f([light]black[.8])"]:focus {
+  color: rgba(66, 66, 99, 0.8);
+}
+
+[data-h2-color*="MEDIAKEY:f([light]black[.8])"]:focus {
+  color: rgba(66, 66, 99, 0.8);
+}
+
+[data-h2-font-color*="MEDIAKEY:f([dark]black[.8])"]:focus {
+  color: rgba(17, 17, 25, 0.8);
+}
+
+[data-h2-color*="MEDIAKEY:f([dark]black[.8])"]:focus {
+  color: rgba(17, 17, 25, 0.8);
+}
+
+[data-h2-font-color*="MEDIAKEY:f(black[.7])"]:focus {
+  color: rgba(20, 20, 30, 0.7);
+}
+
+[data-h2-color*="MEDIAKEY:f(black[.7])"]:focus {
+  color: rgba(20, 20, 30, 0.7);
+}
+
+[data-h2-font-color*="MEDIAKEY:f([light]black[.7])"]:focus {
+  color: rgba(66, 66, 99, 0.7);
+}
+
+[data-h2-color*="MEDIAKEY:f([light]black[.7])"]:focus {
+  color: rgba(66, 66, 99, 0.7);
+}
+
+[data-h2-font-color*="MEDIAKEY:f([dark]black[.7])"]:focus {
+  color: rgba(17, 17, 25, 0.7);
+}
+
+[data-h2-color*="MEDIAKEY:f([dark]black[.7])"]:focus {
+  color: rgba(17, 17, 25, 0.7);
+}
+
+[data-h2-font-color*="MEDIAKEY:f(black[.6])"]:focus {
+  color: rgba(20, 20, 30, 0.6);
+}
+
+[data-h2-color*="MEDIAKEY:f(black[.6])"]:focus {
+  color: rgba(20, 20, 30, 0.6);
+}
+
+[data-h2-font-color*="MEDIAKEY:f([light]black[.6])"]:focus {
+  color: rgba(66, 66, 99, 0.6);
+}
+
+[data-h2-color*="MEDIAKEY:f([light]black[.6])"]:focus {
+  color: rgba(66, 66, 99, 0.6);
+}
+
+[data-h2-font-color*="MEDIAKEY:f([dark]black[.6])"]:focus {
+  color: rgba(17, 17, 25, 0.6);
+}
+
+[data-h2-color*="MEDIAKEY:f([dark]black[.6])"]:focus {
+  color: rgba(17, 17, 25, 0.6);
+}
+
+[data-h2-font-color*="MEDIAKEY:f(black[.5])"]:focus {
+  color: rgba(20, 20, 30, 0.5);
+}
+
+[data-h2-color*="MEDIAKEY:f(black[.5])"]:focus {
+  color: rgba(20, 20, 30, 0.5);
+}
+
+[data-h2-font-color*="MEDIAKEY:f([light]black[.5])"]:focus {
+  color: rgba(66, 66, 99, 0.5);
+}
+
+[data-h2-color*="MEDIAKEY:f([light]black[.5])"]:focus {
+  color: rgba(66, 66, 99, 0.5);
+}
+
+[data-h2-font-color*="MEDIAKEY:f([dark]black[.5])"]:focus {
+  color: rgba(17, 17, 25, 0.5);
+}
+
+[data-h2-color*="MEDIAKEY:f([dark]black[.5])"]:focus {
+  color: rgba(17, 17, 25, 0.5);
+}
+
+[data-h2-font-color*="MEDIAKEY:f(black[.4])"]:focus {
+  color: rgba(20, 20, 30, 0.4);
+}
+
+[data-h2-color*="MEDIAKEY:f(black[.4])"]:focus {
+  color: rgba(20, 20, 30, 0.4);
+}
+
+[data-h2-font-color*="MEDIAKEY:f([light]black[.4])"]:focus {
+  color: rgba(66, 66, 99, 0.4);
+}
+
+[data-h2-color*="MEDIAKEY:f([light]black[.4])"]:focus {
+  color: rgba(66, 66, 99, 0.4);
+}
+
+[data-h2-font-color*="MEDIAKEY:f([dark]black[.4])"]:focus {
+  color: rgba(17, 17, 25, 0.4);
+}
+
+[data-h2-color*="MEDIAKEY:f([dark]black[.4])"]:focus {
+  color: rgba(17, 17, 25, 0.4);
+}
+
+[data-h2-font-color*="MEDIAKEY:f(black[.3])"]:focus {
+  color: rgba(20, 20, 30, 0.3);
+}
+
+[data-h2-color*="MEDIAKEY:f(black[.3])"]:focus {
+  color: rgba(20, 20, 30, 0.3);
+}
+
+[data-h2-font-color*="MEDIAKEY:f([light]black[.3])"]:focus {
+  color: rgba(66, 66, 99, 0.3);
+}
+
+[data-h2-color*="MEDIAKEY:f([light]black[.3])"]:focus {
+  color: rgba(66, 66, 99, 0.3);
+}
+
+[data-h2-font-color*="MEDIAKEY:f([dark]black[.3])"]:focus {
+  color: rgba(17, 17, 25, 0.3);
+}
+
+[data-h2-color*="MEDIAKEY:f([dark]black[.3])"]:focus {
+  color: rgba(17, 17, 25, 0.3);
+}
+
+[data-h2-font-color*="MEDIAKEY:f(black[.2])"]:focus {
+  color: rgba(20, 20, 30, 0.2);
+}
+
+[data-h2-color*="MEDIAKEY:f(black[.2])"]:focus {
+  color: rgba(20, 20, 30, 0.2);
+}
+
+[data-h2-font-color*="MEDIAKEY:f([light]black[.2])"]:focus {
+  color: rgba(66, 66, 99, 0.2);
+}
+
+[data-h2-color*="MEDIAKEY:f([light]black[.2])"]:focus {
+  color: rgba(66, 66, 99, 0.2);
+}
+
+[data-h2-font-color*="MEDIAKEY:f([dark]black[.2])"]:focus {
+  color: rgba(17, 17, 25, 0.2);
+}
+
+[data-h2-color*="MEDIAKEY:f([dark]black[.2])"]:focus {
+  color: rgba(17, 17, 25, 0.2);
+}
+
+[data-h2-font-color*="MEDIAKEY:f(black[.1])"]:focus {
+  color: rgba(20, 20, 30, 0.1);
+}
+
+[data-h2-color*="MEDIAKEY:f(black[.1])"]:focus {
+  color: rgba(20, 20, 30, 0.1);
+}
+
+[data-h2-font-color*="MEDIAKEY:f([light]black[.1])"]:focus {
+  color: rgba(66, 66, 99, 0.1);
+}
+
+[data-h2-color*="MEDIAKEY:f([light]black[.1])"]:focus {
+  color: rgba(66, 66, 99, 0.1);
+}
+
+[data-h2-font-color*="MEDIAKEY:f([dark]black[.1])"]:focus {
+  color: rgba(17, 17, 25, 0.1);
+}
+
+[data-h2-color*="MEDIAKEY:f([dark]black[.1])"]:focus {
+  color: rgba(17, 17, 25, 0.1);
+}
+
+[data-h2-font-color*="MEDIAKEY:f(black[0])"]:focus {
+  color: rgba(20, 20, 30, 0);
+}
+
+[data-h2-color*="MEDIAKEY:f(black[0])"]:focus {
+  color: rgba(20, 20, 30, 0);
+}
+
+[data-h2-font-color*="MEDIAKEY:f([light]black[0])"]:focus {
+  color: rgba(66, 66, 99, 0);
+}
+
+[data-h2-color*="MEDIAKEY:f([light]black[0])"]:focus {
+  color: rgba(66, 66, 99, 0);
+}
+
+[data-h2-font-color*="MEDIAKEY:f([dark]black[0])"]:focus {
+  color: rgba(17, 17, 25, 0);
+}
+
+[data-h2-color*="MEDIAKEY:f([dark]black[0])"]:focus {
+  color: rgba(17, 17, 25, 0);
+}
+
+[data-h2-font-color*="MEDIAKEY:f(green)"]:focus {
+  color: lime;
+}
+
+[data-h2-color*="MEDIAKEY:f(green)"]:focus {
+  color: lime;
+}
+
+[data-h2-font-color*="MEDIAKEY:f([light]green)"]:focus {
+  color: #40ff40;
+}
+
+[data-h2-color*="MEDIAKEY:f([light]green)"]:focus {
+  color: #40ff40;
+}
+
+[data-h2-font-color*="MEDIAKEY:f([dark]green)"]:focus {
+  color: #0bce0b;
+}
+
+[data-h2-color*="MEDIAKEY:f([dark]green)"]:focus {
+  color: #0bce0b;
+}
+
+[data-h2-font-color*="MEDIAKEY:f(red)"]:focus {
+  color: red;
+}
+
+[data-h2-color*="MEDIAKEY:f(red)"]:focus {
+  color: red;
+}
+
+[data-h2-font-color*="MEDIAKEY:f([light]red)"]:focus {
+  color: #ff4040;
+}
+
+[data-h2-color*="MEDIAKEY:f([light]red)"]:focus {
+  color: #ff4040;
+}
+
+[data-h2-font-color*="MEDIAKEY:f([dark]red)"]:focus {
+  color: #ce0b0b;
+}
+
+[data-h2-color*="MEDIAKEY:f([dark]red)"]:focus {
+  color: #ce0b0b;
+}
+
+[data-h2-font-color*="MEDIAKEY:f(blue)"]:focus {
+  color: blue;
+}
+
+[data-h2-color*="MEDIAKEY:f(blue)"]:focus {
+  color: blue;
+}
+
+[data-h2-font-color*="MEDIAKEY:f([light]blue)"]:focus {
+  color: #4040ff;
+}
+
+[data-h2-color*="MEDIAKEY:f([light]blue)"]:focus {
+  color: #4040ff;
+}
+
+[data-h2-font-color*="MEDIAKEY:f([dark]blue)"]:focus {
+  color: #0b0bce;
+}
+
+[data-h2-color*="MEDIAKEY:f([dark]blue)"]:focus {
+  color: #0b0bce;
+}
+
+[data-h2-font-color*="MEDIAKEY:d(black)"]:disabled {
+  color: #14141e;
+}
+
+[data-h2-color*="MEDIAKEY:d(black)"]:disabled {
+  color: #14141e;
+}
+
+[data-h2-font-color*="MEDIAKEY:d([light]black)"]:disabled {
+  color: #424263;
+}
+
+[data-h2-color*="MEDIAKEY:d([light]black)"]:disabled {
+  color: #424263;
+}
+
+[data-h2-font-color*="MEDIAKEY:d([dark]black)"]:disabled {
+  color: #111119;
+}
+
+[data-h2-color*="MEDIAKEY:d([dark]black)"]:disabled {
+  color: #111119;
+}
+
+[data-h2-font-color*="MEDIAKEY:d(black[1])"]:disabled {
+  color: #14141e;
+}
+
+[data-h2-color*="MEDIAKEY:d(black[1])"]:disabled {
+  color: #14141e;
+}
+
+[data-h2-font-color*="MEDIAKEY:d([light]black[1])"]:disabled {
+  color: #424263;
+}
+
+[data-h2-color*="MEDIAKEY:d([light]black[1])"]:disabled {
+  color: #424263;
+}
+
+[data-h2-font-color*="MEDIAKEY:d([dark]black[1])"]:disabled {
+  color: #111119;
+}
+
+[data-h2-color*="MEDIAKEY:d([dark]black[1])"]:disabled {
+  color: #111119;
+}
+
+[data-h2-font-color*="MEDIAKEY:d(black[.9])"]:disabled {
+  color: rgba(20, 20, 30, 0.9);
+}
+
+[data-h2-color*="MEDIAKEY:d(black[.9])"]:disabled {
+  color: rgba(20, 20, 30, 0.9);
+}
+
+[data-h2-font-color*="MEDIAKEY:d([light]black[.9])"]:disabled {
+  color: rgba(66, 66, 99, 0.9);
+}
+
+[data-h2-color*="MEDIAKEY:d([light]black[.9])"]:disabled {
+  color: rgba(66, 66, 99, 0.9);
+}
+
+[data-h2-font-color*="MEDIAKEY:d([dark]black[.9])"]:disabled {
+  color: rgba(17, 17, 25, 0.9);
+}
+
+[data-h2-color*="MEDIAKEY:d([dark]black[.9])"]:disabled {
+  color: rgba(17, 17, 25, 0.9);
+}
+
+[data-h2-font-color*="MEDIAKEY:d(black[.8])"]:disabled {
+  color: rgba(20, 20, 30, 0.8);
+}
+
+[data-h2-color*="MEDIAKEY:d(black[.8])"]:disabled {
+  color: rgba(20, 20, 30, 0.8);
+}
+
+[data-h2-font-color*="MEDIAKEY:d([light]black[.8])"]:disabled {
+  color: rgba(66, 66, 99, 0.8);
+}
+
+[data-h2-color*="MEDIAKEY:d([light]black[.8])"]:disabled {
+  color: rgba(66, 66, 99, 0.8);
+}
+
+[data-h2-font-color*="MEDIAKEY:d([dark]black[.8])"]:disabled {
+  color: rgba(17, 17, 25, 0.8);
+}
+
+[data-h2-color*="MEDIAKEY:d([dark]black[.8])"]:disabled {
+  color: rgba(17, 17, 25, 0.8);
+}
+
+[data-h2-font-color*="MEDIAKEY:d(black[.7])"]:disabled {
+  color: rgba(20, 20, 30, 0.7);
+}
+
+[data-h2-color*="MEDIAKEY:d(black[.7])"]:disabled {
+  color: rgba(20, 20, 30, 0.7);
+}
+
+[data-h2-font-color*="MEDIAKEY:d([light]black[.7])"]:disabled {
+  color: rgba(66, 66, 99, 0.7);
+}
+
+[data-h2-color*="MEDIAKEY:d([light]black[.7])"]:disabled {
+  color: rgba(66, 66, 99, 0.7);
+}
+
+[data-h2-font-color*="MEDIAKEY:d([dark]black[.7])"]:disabled {
+  color: rgba(17, 17, 25, 0.7);
+}
+
+[data-h2-color*="MEDIAKEY:d([dark]black[.7])"]:disabled {
+  color: rgba(17, 17, 25, 0.7);
+}
+
+[data-h2-font-color*="MEDIAKEY:d(black[.6])"]:disabled {
+  color: rgba(20, 20, 30, 0.6);
+}
+
+[data-h2-color*="MEDIAKEY:d(black[.6])"]:disabled {
+  color: rgba(20, 20, 30, 0.6);
+}
+
+[data-h2-font-color*="MEDIAKEY:d([light]black[.6])"]:disabled {
+  color: rgba(66, 66, 99, 0.6);
+}
+
+[data-h2-color*="MEDIAKEY:d([light]black[.6])"]:disabled {
+  color: rgba(66, 66, 99, 0.6);
+}
+
+[data-h2-font-color*="MEDIAKEY:d([dark]black[.6])"]:disabled {
+  color: rgba(17, 17, 25, 0.6);
+}
+
+[data-h2-color*="MEDIAKEY:d([dark]black[.6])"]:disabled {
+  color: rgba(17, 17, 25, 0.6);
+}
+
+[data-h2-font-color*="MEDIAKEY:d(black[.5])"]:disabled {
+  color: rgba(20, 20, 30, 0.5);
+}
+
+[data-h2-color*="MEDIAKEY:d(black[.5])"]:disabled {
+  color: rgba(20, 20, 30, 0.5);
+}
+
+[data-h2-font-color*="MEDIAKEY:d([light]black[.5])"]:disabled {
+  color: rgba(66, 66, 99, 0.5);
+}
+
+[data-h2-color*="MEDIAKEY:d([light]black[.5])"]:disabled {
+  color: rgba(66, 66, 99, 0.5);
+}
+
+[data-h2-font-color*="MEDIAKEY:d([dark]black[.5])"]:disabled {
+  color: rgba(17, 17, 25, 0.5);
+}
+
+[data-h2-color*="MEDIAKEY:d([dark]black[.5])"]:disabled {
+  color: rgba(17, 17, 25, 0.5);
+}
+
+[data-h2-font-color*="MEDIAKEY:d(black[.4])"]:disabled {
+  color: rgba(20, 20, 30, 0.4);
+}
+
+[data-h2-color*="MEDIAKEY:d(black[.4])"]:disabled {
+  color: rgba(20, 20, 30, 0.4);
+}
+
+[data-h2-font-color*="MEDIAKEY:d([light]black[.4])"]:disabled {
+  color: rgba(66, 66, 99, 0.4);
+}
+
+[data-h2-color*="MEDIAKEY:d([light]black[.4])"]:disabled {
+  color: rgba(66, 66, 99, 0.4);
+}
+
+[data-h2-font-color*="MEDIAKEY:d([dark]black[.4])"]:disabled {
+  color: rgba(17, 17, 25, 0.4);
+}
+
+[data-h2-color*="MEDIAKEY:d([dark]black[.4])"]:disabled {
+  color: rgba(17, 17, 25, 0.4);
+}
+
+[data-h2-font-color*="MEDIAKEY:d(black[.3])"]:disabled {
+  color: rgba(20, 20, 30, 0.3);
+}
+
+[data-h2-color*="MEDIAKEY:d(black[.3])"]:disabled {
+  color: rgba(20, 20, 30, 0.3);
+}
+
+[data-h2-font-color*="MEDIAKEY:d([light]black[.3])"]:disabled {
+  color: rgba(66, 66, 99, 0.3);
+}
+
+[data-h2-color*="MEDIAKEY:d([light]black[.3])"]:disabled {
+  color: rgba(66, 66, 99, 0.3);
+}
+
+[data-h2-font-color*="MEDIAKEY:d([dark]black[.3])"]:disabled {
+  color: rgba(17, 17, 25, 0.3);
+}
+
+[data-h2-color*="MEDIAKEY:d([dark]black[.3])"]:disabled {
+  color: rgba(17, 17, 25, 0.3);
+}
+
+[data-h2-font-color*="MEDIAKEY:d(black[.2])"]:disabled {
+  color: rgba(20, 20, 30, 0.2);
+}
+
+[data-h2-color*="MEDIAKEY:d(black[.2])"]:disabled {
+  color: rgba(20, 20, 30, 0.2);
+}
+
+[data-h2-font-color*="MEDIAKEY:d([light]black[.2])"]:disabled {
+  color: rgba(66, 66, 99, 0.2);
+}
+
+[data-h2-color*="MEDIAKEY:d([light]black[.2])"]:disabled {
+  color: rgba(66, 66, 99, 0.2);
+}
+
+[data-h2-font-color*="MEDIAKEY:d([dark]black[.2])"]:disabled {
+  color: rgba(17, 17, 25, 0.2);
+}
+
+[data-h2-color*="MEDIAKEY:d([dark]black[.2])"]:disabled {
+  color: rgba(17, 17, 25, 0.2);
+}
+
+[data-h2-font-color*="MEDIAKEY:d(black[.1])"]:disabled {
+  color: rgba(20, 20, 30, 0.1);
+}
+
+[data-h2-color*="MEDIAKEY:d(black[.1])"]:disabled {
+  color: rgba(20, 20, 30, 0.1);
+}
+
+[data-h2-font-color*="MEDIAKEY:d([light]black[.1])"]:disabled {
+  color: rgba(66, 66, 99, 0.1);
+}
+
+[data-h2-color*="MEDIAKEY:d([light]black[.1])"]:disabled {
+  color: rgba(66, 66, 99, 0.1);
+}
+
+[data-h2-font-color*="MEDIAKEY:d([dark]black[.1])"]:disabled {
+  color: rgba(17, 17, 25, 0.1);
+}
+
+[data-h2-color*="MEDIAKEY:d([dark]black[.1])"]:disabled {
+  color: rgba(17, 17, 25, 0.1);
+}
+
+[data-h2-font-color*="MEDIAKEY:d(black[0])"]:disabled {
+  color: rgba(20, 20, 30, 0);
+}
+
+[data-h2-color*="MEDIAKEY:d(black[0])"]:disabled {
+  color: rgba(20, 20, 30, 0);
+}
+
+[data-h2-font-color*="MEDIAKEY:d([light]black[0])"]:disabled {
+  color: rgba(66, 66, 99, 0);
+}
+
+[data-h2-color*="MEDIAKEY:d([light]black[0])"]:disabled {
+  color: rgba(66, 66, 99, 0);
+}
+
+[data-h2-font-color*="MEDIAKEY:d([dark]black[0])"]:disabled {
+  color: rgba(17, 17, 25, 0);
+}
+
+[data-h2-color*="MEDIAKEY:d([dark]black[0])"]:disabled {
+  color: rgba(17, 17, 25, 0);
+}
+
+[data-h2-font-color*="MEDIAKEY:d(green)"]:disabled {
+  color: lime;
+}
+
+[data-h2-color*="MEDIAKEY:d(green)"]:disabled {
+  color: lime;
+}
+
+[data-h2-font-color*="MEDIAKEY:d([light]green)"]:disabled {
+  color: #40ff40;
+}
+
+[data-h2-color*="MEDIAKEY:d([light]green)"]:disabled {
+  color: #40ff40;
+}
+
+[data-h2-font-color*="MEDIAKEY:d([dark]green)"]:disabled {
+  color: #0bce0b;
+}
+
+[data-h2-color*="MEDIAKEY:d([dark]green)"]:disabled {
+  color: #0bce0b;
+}
+
+[data-h2-font-color*="MEDIAKEY:d(red)"]:disabled {
+  color: red;
+}
+
+[data-h2-color*="MEDIAKEY:d(red)"]:disabled {
+  color: red;
+}
+
+[data-h2-font-color*="MEDIAKEY:d([light]red)"]:disabled {
+  color: #ff4040;
+}
+
+[data-h2-color*="MEDIAKEY:d([light]red)"]:disabled {
+  color: #ff4040;
+}
+
+[data-h2-font-color*="MEDIAKEY:d([dark]red)"]:disabled {
+  color: #ce0b0b;
+}
+
+[data-h2-color*="MEDIAKEY:d([dark]red)"]:disabled {
+  color: #ce0b0b;
+}
+
+[data-h2-font-color*="MEDIAKEY:d(blue)"]:disabled {
+  color: blue;
+}
+
+[data-h2-color*="MEDIAKEY:d(blue)"]:disabled {
+  color: blue;
+}
+
+[data-h2-font-color*="MEDIAKEY:d([light]blue)"]:disabled {
+  color: #4040ff;
+}
+
+[data-h2-color*="MEDIAKEY:d([light]blue)"]:disabled {
+  color: #4040ff;
+}
+
+[data-h2-font-color*="MEDIAKEY:d([dark]blue)"]:disabled {
+  color: #0b0bce;
+}
+
+[data-h2-color*="MEDIAKEY:d([dark]blue)"]:disabled {
+  color: #0b0bce;
+}

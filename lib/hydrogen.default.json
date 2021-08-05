@@ -1,8 +1,9 @@
 {
-  "debug": true,
-  "mediaWarnings": true,
+  "debug": false,
+  "mediaWarnings": false,
   "folders": {
     "markup": "path/to/markup/folder",
+    "scripts": "path/to/scripts/folder",
     "styles": "path/to/styles/folder"
   },
   "borderWeights": [
