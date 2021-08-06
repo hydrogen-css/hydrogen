@@ -14,12 +14,36 @@
   background-color: #14141e;
 }
 
+[data-h2-bg-color*="MEDIAKEY([light]black[.5])"] {
+  background-color: #424263;
+}
+
+[data-h2-bg-color*="MEDIAKEY([dark]black[.5])"] {
+  background-color: #111119;
+}
+
 [data-h2-bg-color*="MEDIAKEY(black[40%])"] {
   background-color: #14141e;
 }
 
+[data-h2-bg-color*="MEDIAKEY([light]black[40%])"] {
+  background-color: #424263;
+}
+
+[data-h2-bg-color*="MEDIAKEY([dark]black[40%])"] {
+  background-color: #111119;
+}
+
 [data-h2-bg-color*="MEDIAKEY(black[1])"] {
   background-color: #14141e;
+}
+
+[data-h2-bg-color*="MEDIAKEY([light]black[1])"] {
+  background-color: #424263;
+}
+
+[data-h2-bg-color*="MEDIAKEY([dark]black[1])"] {
+  background-color: #111119;
 }
 
 [data-h2-bg-color*="MEDIAKEY(green)"] {
@@ -62,6 +86,14 @@
   background-color: blue;
 }
 
+[data-h2-bg-color*="MEDIAKEY([light]blue[.05])"] {
+  background-color: #4040ff;
+}
+
+[data-h2-bg-color*="MEDIAKEY([dark]blue[.05])"] {
+  background-color: #0b0bce;
+}
+
 [data-h2-bg-color*="MEDIAKEY:a(black)"]:active {
   background-color: #14141e;
 }
@@ -78,12 +110,36 @@
   background-color: #14141e;
 }
 
+[data-h2-bg-color*="MEDIAKEY:a([light]black[.5])"]:active {
+  background-color: #424263;
+}
+
+[data-h2-bg-color*="MEDIAKEY:a([dark]black[.5])"]:active {
+  background-color: #111119;
+}
+
 [data-h2-bg-color*="MEDIAKEY:a(black[40%])"]:active {
   background-color: #14141e;
 }
 
+[data-h2-bg-color*="MEDIAKEY:a([light]black[40%])"]:active {
+  background-color: #424263;
+}
+
+[data-h2-bg-color*="MEDIAKEY:a([dark]black[40%])"]:active {
+  background-color: #111119;
+}
+
 [data-h2-bg-color*="MEDIAKEY:a(black[1])"]:active {
   background-color: #14141e;
+}
+
+[data-h2-bg-color*="MEDIAKEY:a([light]black[1])"]:active {
+  background-color: #424263;
+}
+
+[data-h2-bg-color*="MEDIAKEY:a([dark]black[1])"]:active {
+  background-color: #111119;
 }
 
 [data-h2-bg-color*="MEDIAKEY:a(green)"]:active {
@@ -126,6 +182,14 @@
   background-color: blue;
 }
 
+[data-h2-bg-color*="MEDIAKEY:a([light]blue[.05])"]:active {
+  background-color: #4040ff;
+}
+
+[data-h2-bg-color*="MEDIAKEY:a([dark]blue[.05])"]:active {
+  background-color: #0b0bce;
+}
+
 [data-h2-bg-color*="MEDIAKEY:h(black)"]:hover {
   background-color: #14141e;
 }
@@ -142,12 +206,36 @@
   background-color: #14141e;
 }
 
+[data-h2-bg-color*="MEDIAKEY:h([light]black[.5])"]:hover {
+  background-color: #424263;
+}
+
+[data-h2-bg-color*="MEDIAKEY:h([dark]black[.5])"]:hover {
+  background-color: #111119;
+}
+
 [data-h2-bg-color*="MEDIAKEY:h(black[40%])"]:hover {
   background-color: #14141e;
 }
 
+[data-h2-bg-color*="MEDIAKEY:h([light]black[40%])"]:hover {
+  background-color: #424263;
+}
+
+[data-h2-bg-color*="MEDIAKEY:h([dark]black[40%])"]:hover {
+  background-color: #111119;
+}
+
 [data-h2-bg-color*="MEDIAKEY:h(black[1])"]:hover {
   background-color: #14141e;
+}
+
+[data-h2-bg-color*="MEDIAKEY:h([light]black[1])"]:hover {
+  background-color: #424263;
+}
+
+[data-h2-bg-color*="MEDIAKEY:h([dark]black[1])"]:hover {
+  background-color: #111119;
 }
 
 [data-h2-bg-color*="MEDIAKEY:h(green)"]:hover {
@@ -190,6 +278,14 @@
   background-color: blue;
 }
 
+[data-h2-bg-color*="MEDIAKEY:h([light]blue[.05])"]:hover {
+  background-color: #4040ff;
+}
+
+[data-h2-bg-color*="MEDIAKEY:h([dark]blue[.05])"]:hover {
+  background-color: #0b0bce;
+}
+
 [data-h2-bg-color*="MEDIAKEY:f(black)"]:focus {
   background-color: #14141e;
 }
@@ -206,12 +302,36 @@
   background-color: #14141e;
 }
 
+[data-h2-bg-color*="MEDIAKEY:f([light]black[.5])"]:focus {
+  background-color: #424263;
+}
+
+[data-h2-bg-color*="MEDIAKEY:f([dark]black[.5])"]:focus {
+  background-color: #111119;
+}
+
 [data-h2-bg-color*="MEDIAKEY:f(black[40%])"]:focus {
   background-color: #14141e;
 }
 
+[data-h2-bg-color*="MEDIAKEY:f([light]black[40%])"]:focus {
+  background-color: #424263;
+}
+
+[data-h2-bg-color*="MEDIAKEY:f([dark]black[40%])"]:focus {
+  background-color: #111119;
+}
+
 [data-h2-bg-color*="MEDIAKEY:f(black[1])"]:focus {
   background-color: #14141e;
+}
+
+[data-h2-bg-color*="MEDIAKEY:f([light]black[1])"]:focus {
+  background-color: #424263;
+}
+
+[data-h2-bg-color*="MEDIAKEY:f([dark]black[1])"]:focus {
+  background-color: #111119;
 }
 
 [data-h2-bg-color*="MEDIAKEY:f(green)"]:focus {
@@ -254,6 +374,14 @@
   background-color: blue;
 }
 
+[data-h2-bg-color*="MEDIAKEY:f([light]blue[.05])"]:focus {
+  background-color: #4040ff;
+}
+
+[data-h2-bg-color*="MEDIAKEY:f([dark]blue[.05])"]:focus {
+  background-color: #0b0bce;
+}
+
 [data-h2-bg-color*="MEDIAKEY:d(black)"]:disabled {
   background-color: #14141e;
 }
@@ -270,12 +398,36 @@
   background-color: #14141e;
 }
 
+[data-h2-bg-color*="MEDIAKEY:d([light]black[.5])"]:disabled {
+  background-color: #424263;
+}
+
+[data-h2-bg-color*="MEDIAKEY:d([dark]black[.5])"]:disabled {
+  background-color: #111119;
+}
+
 [data-h2-bg-color*="MEDIAKEY:d(black[40%])"]:disabled {
   background-color: #14141e;
 }
 
+[data-h2-bg-color*="MEDIAKEY:d([light]black[40%])"]:disabled {
+  background-color: #424263;
+}
+
+[data-h2-bg-color*="MEDIAKEY:d([dark]black[40%])"]:disabled {
+  background-color: #111119;
+}
+
 [data-h2-bg-color*="MEDIAKEY:d(black[1])"]:disabled {
   background-color: #14141e;
+}
+
+[data-h2-bg-color*="MEDIAKEY:d([light]black[1])"]:disabled {
+  background-color: #424263;
+}
+
+[data-h2-bg-color*="MEDIAKEY:d([dark]black[1])"]:disabled {
+  background-color: #111119;
 }
 
 [data-h2-bg-color*="MEDIAKEY:d(green)"]:disabled {
@@ -316,6 +468,14 @@
 
 [data-h2-bg-color*="MEDIAKEY:d(blue[.05])"]:disabled {
   background-color: blue;
+}
+
+[data-h2-bg-color*="MEDIAKEY:d([light]blue[.05])"]:disabled {
+  background-color: #4040ff;
+}
+
+[data-h2-bg-color*="MEDIAKEY:d([dark]blue[.05])"]:disabled {
+  background-color: #0b0bce;
 }
 
 [data-h2-bg-color*="MEDIAKEY(radial[green][red][blue])"] {

@@ -30,6 +30,22 @@
   color: #14141e;
 }
 
+[data-h2-font-color*="MEDIAKEY([light]black[.5])"] {
+  color: #424263;
+}
+
+[data-h2-color*="MEDIAKEY([light]black[.5])"] {
+  color: #424263;
+}
+
+[data-h2-font-color*="MEDIAKEY([dark]black[.5])"] {
+  color: #111119;
+}
+
+[data-h2-color*="MEDIAKEY([dark]black[.5])"] {
+  color: #111119;
+}
+
 [data-h2-font-color*="MEDIAKEY(black[40%])"] {
   color: #14141e;
 }
@@ -38,12 +54,44 @@
   color: #14141e;
 }
 
+[data-h2-font-color*="MEDIAKEY([light]black[40%])"] {
+  color: #424263;
+}
+
+[data-h2-color*="MEDIAKEY([light]black[40%])"] {
+  color: #424263;
+}
+
+[data-h2-font-color*="MEDIAKEY([dark]black[40%])"] {
+  color: #111119;
+}
+
+[data-h2-color*="MEDIAKEY([dark]black[40%])"] {
+  color: #111119;
+}
+
 [data-h2-font-color*="MEDIAKEY(black[1])"] {
   color: #14141e;
 }
 
 [data-h2-color*="MEDIAKEY(black[1])"] {
   color: #14141e;
+}
+
+[data-h2-font-color*="MEDIAKEY([light]black[1])"] {
+  color: #424263;
+}
+
+[data-h2-color*="MEDIAKEY([light]black[1])"] {
+  color: #424263;
+}
+
+[data-h2-font-color*="MEDIAKEY([dark]black[1])"] {
+  color: #111119;
+}
+
+[data-h2-color*="MEDIAKEY([dark]black[1])"] {
+  color: #111119;
 }
 
 [data-h2-font-color*="MEDIAKEY(green)"] {
@@ -126,6 +174,22 @@
   color: blue;
 }
 
+[data-h2-font-color*="MEDIAKEY([light]blue[.05])"] {
+  color: #4040ff;
+}
+
+[data-h2-color*="MEDIAKEY([light]blue[.05])"] {
+  color: #4040ff;
+}
+
+[data-h2-font-color*="MEDIAKEY([dark]blue[.05])"] {
+  color: #0b0bce;
+}
+
+[data-h2-color*="MEDIAKEY([dark]blue[.05])"] {
+  color: #0b0bce;
+}
+
 [data-h2-font-color*="MEDIAKEY:a(black)"]:active {
   color: #14141e;
 }
@@ -158,6 +222,22 @@
   color: #14141e;
 }
 
+[data-h2-font-color*="MEDIAKEY:a([light]black[.5])"]:active {
+  color: #424263;
+}
+
+[data-h2-color*="MEDIAKEY:a([light]black[.5])"]:active {
+  color: #424263;
+}
+
+[data-h2-font-color*="MEDIAKEY:a([dark]black[.5])"]:active {
+  color: #111119;
+}
+
+[data-h2-color*="MEDIAKEY:a([dark]black[.5])"]:active {
+  color: #111119;
+}
+
 [data-h2-font-color*="MEDIAKEY:a(black[40%])"]:active {
   color: #14141e;
 }
@@ -166,12 +246,44 @@
   color: #14141e;
 }
 
+[data-h2-font-color*="MEDIAKEY:a([light]black[40%])"]:active {
+  color: #424263;
+}
+
+[data-h2-color*="MEDIAKEY:a([light]black[40%])"]:active {
+  color: #424263;
+}
+
+[data-h2-font-color*="MEDIAKEY:a([dark]black[40%])"]:active {
+  color: #111119;
+}
+
+[data-h2-color*="MEDIAKEY:a([dark]black[40%])"]:active {
+  color: #111119;
+}
+
 [data-h2-font-color*="MEDIAKEY:a(black[1])"]:active {
   color: #14141e;
 }
 
 [data-h2-color*="MEDIAKEY:a(black[1])"]:active {
   color: #14141e;
+}
+
+[data-h2-font-color*="MEDIAKEY:a([light]black[1])"]:active {
+  color: #424263;
+}
+
+[data-h2-color*="MEDIAKEY:a([light]black[1])"]:active {
+  color: #424263;
+}
+
+[data-h2-font-color*="MEDIAKEY:a([dark]black[1])"]:active {
+  color: #111119;
+}
+
+[data-h2-color*="MEDIAKEY:a([dark]black[1])"]:active {
+  color: #111119;
 }
 
 [data-h2-font-color*="MEDIAKEY:a(green)"]:active {
@@ -254,6 +366,22 @@
   color: blue;
 }
 
+[data-h2-font-color*="MEDIAKEY:a([light]blue[.05])"]:active {
+  color: #4040ff;
+}
+
+[data-h2-color*="MEDIAKEY:a([light]blue[.05])"]:active {
+  color: #4040ff;
+}
+
+[data-h2-font-color*="MEDIAKEY:a([dark]blue[.05])"]:active {
+  color: #0b0bce;
+}
+
+[data-h2-color*="MEDIAKEY:a([dark]blue[.05])"]:active {
+  color: #0b0bce;
+}
+
 [data-h2-font-color*="MEDIAKEY:h(black)"]:hover {
   color: #14141e;
 }
@@ -286,6 +414,22 @@
   color: #14141e;
 }
 
+[data-h2-font-color*="MEDIAKEY:h([light]black[.5])"]:hover {
+  color: #424263;
+}
+
+[data-h2-color*="MEDIAKEY:h([light]black[.5])"]:hover {
+  color: #424263;
+}
+
+[data-h2-font-color*="MEDIAKEY:h([dark]black[.5])"]:hover {
+  color: #111119;
+}
+
+[data-h2-color*="MEDIAKEY:h([dark]black[.5])"]:hover {
+  color: #111119;
+}
+
 [data-h2-font-color*="MEDIAKEY:h(black[40%])"]:hover {
   color: #14141e;
 }
@@ -294,12 +438,44 @@
   color: #14141e;
 }
 
+[data-h2-font-color*="MEDIAKEY:h([light]black[40%])"]:hover {
+  color: #424263;
+}
+
+[data-h2-color*="MEDIAKEY:h([light]black[40%])"]:hover {
+  color: #424263;
+}
+
+[data-h2-font-color*="MEDIAKEY:h([dark]black[40%])"]:hover {
+  color: #111119;
+}
+
+[data-h2-color*="MEDIAKEY:h([dark]black[40%])"]:hover {
+  color: #111119;
+}
+
 [data-h2-font-color*="MEDIAKEY:h(black[1])"]:hover {
   color: #14141e;
 }
 
 [data-h2-color*="MEDIAKEY:h(black[1])"]:hover {
   color: #14141e;
+}
+
+[data-h2-font-color*="MEDIAKEY:h([light]black[1])"]:hover {
+  color: #424263;
+}
+
+[data-h2-color*="MEDIAKEY:h([light]black[1])"]:hover {
+  color: #424263;
+}
+
+[data-h2-font-color*="MEDIAKEY:h([dark]black[1])"]:hover {
+  color: #111119;
+}
+
+[data-h2-color*="MEDIAKEY:h([dark]black[1])"]:hover {
+  color: #111119;
 }
 
 [data-h2-font-color*="MEDIAKEY:h(green)"]:hover {
@@ -382,6 +558,22 @@
   color: blue;
 }
 
+[data-h2-font-color*="MEDIAKEY:h([light]blue[.05])"]:hover {
+  color: #4040ff;
+}
+
+[data-h2-color*="MEDIAKEY:h([light]blue[.05])"]:hover {
+  color: #4040ff;
+}
+
+[data-h2-font-color*="MEDIAKEY:h([dark]blue[.05])"]:hover {
+  color: #0b0bce;
+}
+
+[data-h2-color*="MEDIAKEY:h([dark]blue[.05])"]:hover {
+  color: #0b0bce;
+}
+
 [data-h2-font-color*="MEDIAKEY:f(black)"]:focus {
   color: #14141e;
 }
@@ -414,6 +606,22 @@
   color: #14141e;
 }
 
+[data-h2-font-color*="MEDIAKEY:f([light]black[.5])"]:focus {
+  color: #424263;
+}
+
+[data-h2-color*="MEDIAKEY:f([light]black[.5])"]:focus {
+  color: #424263;
+}
+
+[data-h2-font-color*="MEDIAKEY:f([dark]black[.5])"]:focus {
+  color: #111119;
+}
+
+[data-h2-color*="MEDIAKEY:f([dark]black[.5])"]:focus {
+  color: #111119;
+}
+
 [data-h2-font-color*="MEDIAKEY:f(black[40%])"]:focus {
   color: #14141e;
 }
@@ -422,12 +630,44 @@
   color: #14141e;
 }
 
+[data-h2-font-color*="MEDIAKEY:f([light]black[40%])"]:focus {
+  color: #424263;
+}
+
+[data-h2-color*="MEDIAKEY:f([light]black[40%])"]:focus {
+  color: #424263;
+}
+
+[data-h2-font-color*="MEDIAKEY:f([dark]black[40%])"]:focus {
+  color: #111119;
+}
+
+[data-h2-color*="MEDIAKEY:f([dark]black[40%])"]:focus {
+  color: #111119;
+}
+
 [data-h2-font-color*="MEDIAKEY:f(black[1])"]:focus {
   color: #14141e;
 }
 
 [data-h2-color*="MEDIAKEY:f(black[1])"]:focus {
   color: #14141e;
+}
+
+[data-h2-font-color*="MEDIAKEY:f([light]black[1])"]:focus {
+  color: #424263;
+}
+
+[data-h2-color*="MEDIAKEY:f([light]black[1])"]:focus {
+  color: #424263;
+}
+
+[data-h2-font-color*="MEDIAKEY:f([dark]black[1])"]:focus {
+  color: #111119;
+}
+
+[data-h2-color*="MEDIAKEY:f([dark]black[1])"]:focus {
+  color: #111119;
 }
 
 [data-h2-font-color*="MEDIAKEY:f(green)"]:focus {
@@ -510,6 +750,22 @@
   color: blue;
 }
 
+[data-h2-font-color*="MEDIAKEY:f([light]blue[.05])"]:focus {
+  color: #4040ff;
+}
+
+[data-h2-color*="MEDIAKEY:f([light]blue[.05])"]:focus {
+  color: #4040ff;
+}
+
+[data-h2-font-color*="MEDIAKEY:f([dark]blue[.05])"]:focus {
+  color: #0b0bce;
+}
+
+[data-h2-color*="MEDIAKEY:f([dark]blue[.05])"]:focus {
+  color: #0b0bce;
+}
+
 [data-h2-font-color*="MEDIAKEY:d(black)"]:disabled {
   color: #14141e;
 }
@@ -542,6 +798,22 @@
   color: #14141e;
 }
 
+[data-h2-font-color*="MEDIAKEY:d([light]black[.5])"]:disabled {
+  color: #424263;
+}
+
+[data-h2-color*="MEDIAKEY:d([light]black[.5])"]:disabled {
+  color: #424263;
+}
+
+[data-h2-font-color*="MEDIAKEY:d([dark]black[.5])"]:disabled {
+  color: #111119;
+}
+
+[data-h2-color*="MEDIAKEY:d([dark]black[.5])"]:disabled {
+  color: #111119;
+}
+
 [data-h2-font-color*="MEDIAKEY:d(black[40%])"]:disabled {
   color: #14141e;
 }
@@ -550,12 +822,44 @@
   color: #14141e;
 }
 
+[data-h2-font-color*="MEDIAKEY:d([light]black[40%])"]:disabled {
+  color: #424263;
+}
+
+[data-h2-color*="MEDIAKEY:d([light]black[40%])"]:disabled {
+  color: #424263;
+}
+
+[data-h2-font-color*="MEDIAKEY:d([dark]black[40%])"]:disabled {
+  color: #111119;
+}
+
+[data-h2-color*="MEDIAKEY:d([dark]black[40%])"]:disabled {
+  color: #111119;
+}
+
 [data-h2-font-color*="MEDIAKEY:d(black[1])"]:disabled {
   color: #14141e;
 }
 
 [data-h2-color*="MEDIAKEY:d(black[1])"]:disabled {
   color: #14141e;
+}
+
+[data-h2-font-color*="MEDIAKEY:d([light]black[1])"]:disabled {
+  color: #424263;
+}
+
+[data-h2-color*="MEDIAKEY:d([light]black[1])"]:disabled {
+  color: #424263;
+}
+
+[data-h2-font-color*="MEDIAKEY:d([dark]black[1])"]:disabled {
+  color: #111119;
+}
+
+[data-h2-color*="MEDIAKEY:d([dark]black[1])"]:disabled {
+  color: #111119;
 }
 
 [data-h2-font-color*="MEDIAKEY:d(green)"]:disabled {
@@ -636,4 +940,20 @@
 
 [data-h2-color*="MEDIAKEY:d(blue[.05])"]:disabled {
   color: blue;
+}
+
+[data-h2-font-color*="MEDIAKEY:d([light]blue[.05])"]:disabled {
+  color: #4040ff;
+}
+
+[data-h2-color*="MEDIAKEY:d([light]blue[.05])"]:disabled {
+  color: #4040ff;
+}
+
+[data-h2-font-color*="MEDIAKEY:d([dark]blue[.05])"]:disabled {
+  color: #0b0bce;
+}
+
+[data-h2-color*="MEDIAKEY:d([dark]blue[.05])"]:disabled {
+  color: #0b0bce;
 }
