@@ -118,6 +118,14 @@
   color: #0b0bce;
 }
 
+[data-h2-font-color*="MEDIAKEY(blue[.05])"] {
+  color: blue;
+}
+
+[data-h2-color*="MEDIAKEY(blue[.05])"] {
+  color: blue;
+}
+
 [data-h2-font-color*="MEDIAKEY:a(black)"]:active {
   color: #14141e;
 }
@@ -236,6 +244,14 @@
 
 [data-h2-color*="MEDIAKEY:a([dark]blue)"]:active {
   color: #0b0bce;
+}
+
+[data-h2-font-color*="MEDIAKEY:a(blue[.05])"]:active {
+  color: blue;
+}
+
+[data-h2-color*="MEDIAKEY:a(blue[.05])"]:active {
+  color: blue;
 }
 
 [data-h2-font-color*="MEDIAKEY:h(black)"]:hover {
@@ -358,6 +374,14 @@
   color: #0b0bce;
 }
 
+[data-h2-font-color*="MEDIAKEY:h(blue[.05])"]:hover {
+  color: blue;
+}
+
+[data-h2-color*="MEDIAKEY:h(blue[.05])"]:hover {
+  color: blue;
+}
+
 [data-h2-font-color*="MEDIAKEY:f(black)"]:focus {
   color: #14141e;
 }
@@ -478,6 +502,14 @@
   color: #0b0bce;
 }
 
+[data-h2-font-color*="MEDIAKEY:f(blue[.05])"]:focus {
+  color: blue;
+}
+
+[data-h2-color*="MEDIAKEY:f(blue[.05])"]:focus {
+  color: blue;
+}
+
 [data-h2-font-color*="MEDIAKEY:d(black)"]:disabled {
   color: #14141e;
 }
@@ -596,4 +628,12 @@
 
 [data-h2-color*="MEDIAKEY:d([dark]blue)"]:disabled {
   color: #0b0bce;
+}
+
+[data-h2-font-color*="MEDIAKEY:d(blue[.05])"]:disabled {
+  color: blue;
+}
+
+[data-h2-color*="MEDIAKEY:d(blue[.05])"]:disabled {
+  color: blue;
 }

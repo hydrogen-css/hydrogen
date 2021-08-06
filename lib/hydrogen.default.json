@@ -25,8 +25,7 @@
       "key": "white",
       "color": "rgba(255, 255, 255, 1)",
       "opacities": [
-        ".2",
-        ".4"
+        ".2"
       ]
     },
     {
@@ -35,7 +34,10 @@
     },
     {
       "key": "purple",
-      "color": "#9D5CFF"
+      "color": "#9D5CFF",
+      "opacities": [
+        ".1"
+      ]
     },
     {
       "key": "blue",

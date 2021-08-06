@@ -36,7 +36,11 @@
     },
     {
       "key": "blue",
-      "color": "rgba(0, 0, 255, 1)"
+      "color": "rgba(0, 0, 255, 1)",
+      "opacity": true,
+      "opacities": [
+        ".05"
+      ]
     }
   ],
   "containers": [],
