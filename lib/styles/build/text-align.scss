@@ -1,3 +1,5 @@
+@use "sass:color";
+
 @use "../utilities/utility-text-align" as textAlignStyles;
 
 @include textAlignStyles.h2-utility-text-align(

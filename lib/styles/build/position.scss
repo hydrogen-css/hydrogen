@@ -1,3 +1,5 @@
+@use "sass:color";
+
 @use "../utilities/utility-position" as positionStyles;
 
 @include positionStyles.h2-utility-position(
