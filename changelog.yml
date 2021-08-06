@@ -65,3 +65,9 @@ majors:
               - "Scripts: adds a watch script that will only rerun the build script if you modify your config, otherwise it only performs the code match and CSS file construction."
               - "Scripts: reworks the compile script to meet the new optimized requirements and adds compression to help alleviate large file size concerns."
               - "Scripts: init now copies over the default settings to help new users navigate the config structure."
+          - version: 3
+            date: 2021/AUG/06
+            author: Josh Beveridge
+            changes:
+              - "Config: enhances color opacity so that the user can specify target opacities, rather than toggling the array on/off, offering more control and less bloat.",
+              - "Scripts: the clean script now warns the user if they try to use an opacity that isn't defined in the config."
