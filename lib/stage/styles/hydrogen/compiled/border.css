@@ -670,6 +670,174 @@
   border-left-width: 1px;
 }
 
+[data-h2-border*="MEDIAKEY(black[40%], all, solid, thing)"] {
+  border-color: #14141e;
+  border-style: solid;
+  border-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY(black[40%], all, dashed, thing)"] {
+  border-color: #14141e;
+  border-style: dashed;
+  border-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY(black[40%], top, solid, thing)"] {
+  border-top-color: #14141e;
+  border-top-style: solid;
+  border-top-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY(black[40%], top, dashed, thing)"] {
+  border-top-color: #14141e;
+  border-top-style: dashed;
+  border-top-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY(black[40%], right, solid, thing)"] {
+  border-right-color: #14141e;
+  border-right-style: solid;
+  border-right-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY(black[40%], right, dashed, thing)"] {
+  border-right-color: #14141e;
+  border-right-style: dashed;
+  border-right-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY(black[40%], bottom, solid, thing)"] {
+  border-bottom-color: #14141e;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY(black[40%], bottom, dashed, thing)"] {
+  border-bottom-color: #14141e;
+  border-bottom-style: dashed;
+  border-bottom-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY(black[40%], left, solid, thing)"] {
+  border-left-color: #14141e;
+  border-left-style: solid;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY(black[40%], left, dashed, thing)"] {
+  border-left-color: #14141e;
+  border-left-style: dashed;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY(black[40%], top-right, solid, thing)"] {
+  border-right-color: #14141e;
+  border-top-color: #14141e;
+  border-right-style: solid;
+  border-top-style: solid;
+  border-right-width: 1px;
+  border-top-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY(black[40%], top-right, dashed, thing)"] {
+  border-right-color: #14141e;
+  border-top-color: #14141e;
+  border-right-style: dashed;
+  border-top-style: dashed;
+  border-right-width: 1px;
+  border-top-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY(black[40%], top-bottom, solid, thing)"] {
+  border-top-color: #14141e;
+  border-bottom-color: #14141e;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY(black[40%], top-bottom, dashed, thing)"] {
+  border-top-color: #14141e;
+  border-bottom-color: #14141e;
+  border-top-style: dashed;
+  border-bottom-style: dashed;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY(black[40%], top-left, solid, thing)"] {
+  border-top-color: #14141e;
+  border-left-color: #14141e;
+  border-top-style: solid;
+  border-left-style: solid;
+  border-top-width: 1px;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY(black[40%], top-left, dashed, thing)"] {
+  border-top-color: #14141e;
+  border-left-color: #14141e;
+  border-top-style: dashed;
+  border-left-style: dashed;
+  border-top-width: 1px;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY(black[40%], bottom-right, solid, thing)"] {
+  border-right-color: #14141e;
+  border-bottom-color: #14141e;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY(black[40%], bottom-right, dashed, thing)"] {
+  border-right-color: #14141e;
+  border-bottom-color: #14141e;
+  border-right-style: dashed;
+  border-bottom-style: dashed;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY(black[40%], bottom-left, solid, thing)"] {
+  border-bottom-color: #14141e;
+  border-left-color: #14141e;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY(black[40%], bottom-left, dashed, thing)"] {
+  border-bottom-color: #14141e;
+  border-left-color: #14141e;
+  border-bottom-style: dashed;
+  border-left-style: dashed;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY(black[40%], right-left, solid, thing)"] {
+  border-right-color: #14141e;
+  border-left-color: #14141e;
+  border-right-style: solid;
+  border-left-style: solid;
+  border-right-width: 1px;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY(black[40%], right-left, dashed, thing)"] {
+  border-right-color: #14141e;
+  border-left-color: #14141e;
+  border-right-style: dashed;
+  border-left-style: dashed;
+  border-right-width: 1px;
+  border-left-width: 1px;
+}
+
 [data-h2-border*="MEDIAKEY(black[1], all, solid, thing)"] {
   border-color: #14141e;
   border-style: solid;
@@ -3014,6 +3182,174 @@
 }
 
 [data-h2-border*="MEDIAKEY:a(black[.5], right-left, dashed, thing)"]:active {
+  border-right-color: #14141e;
+  border-left-color: #14141e;
+  border-right-style: dashed;
+  border-left-style: dashed;
+  border-right-width: 1px;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:a(black[40%], all, solid, thing)"]:active {
+  border-color: #14141e;
+  border-style: solid;
+  border-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:a(black[40%], all, dashed, thing)"]:active {
+  border-color: #14141e;
+  border-style: dashed;
+  border-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:a(black[40%], top, solid, thing)"]:active {
+  border-top-color: #14141e;
+  border-top-style: solid;
+  border-top-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:a(black[40%], top, dashed, thing)"]:active {
+  border-top-color: #14141e;
+  border-top-style: dashed;
+  border-top-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:a(black[40%], right, solid, thing)"]:active {
+  border-right-color: #14141e;
+  border-right-style: solid;
+  border-right-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:a(black[40%], right, dashed, thing)"]:active {
+  border-right-color: #14141e;
+  border-right-style: dashed;
+  border-right-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:a(black[40%], bottom, solid, thing)"]:active {
+  border-bottom-color: #14141e;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:a(black[40%], bottom, dashed, thing)"]:active {
+  border-bottom-color: #14141e;
+  border-bottom-style: dashed;
+  border-bottom-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:a(black[40%], left, solid, thing)"]:active {
+  border-left-color: #14141e;
+  border-left-style: solid;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:a(black[40%], left, dashed, thing)"]:active {
+  border-left-color: #14141e;
+  border-left-style: dashed;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:a(black[40%], top-right, solid, thing)"]:active {
+  border-right-color: #14141e;
+  border-top-color: #14141e;
+  border-right-style: solid;
+  border-top-style: solid;
+  border-right-width: 1px;
+  border-top-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:a(black[40%], top-right, dashed, thing)"]:active {
+  border-right-color: #14141e;
+  border-top-color: #14141e;
+  border-right-style: dashed;
+  border-top-style: dashed;
+  border-right-width: 1px;
+  border-top-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:a(black[40%], top-bottom, solid, thing)"]:active {
+  border-top-color: #14141e;
+  border-bottom-color: #14141e;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:a(black[40%], top-bottom, dashed, thing)"]:active {
+  border-top-color: #14141e;
+  border-bottom-color: #14141e;
+  border-top-style: dashed;
+  border-bottom-style: dashed;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:a(black[40%], top-left, solid, thing)"]:active {
+  border-top-color: #14141e;
+  border-left-color: #14141e;
+  border-top-style: solid;
+  border-left-style: solid;
+  border-top-width: 1px;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:a(black[40%], top-left, dashed, thing)"]:active {
+  border-top-color: #14141e;
+  border-left-color: #14141e;
+  border-top-style: dashed;
+  border-left-style: dashed;
+  border-top-width: 1px;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:a(black[40%], bottom-right, solid, thing)"]:active {
+  border-right-color: #14141e;
+  border-bottom-color: #14141e;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:a(black[40%], bottom-right, dashed, thing)"]:active {
+  border-right-color: #14141e;
+  border-bottom-color: #14141e;
+  border-right-style: dashed;
+  border-bottom-style: dashed;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:a(black[40%], bottom-left, solid, thing)"]:active {
+  border-bottom-color: #14141e;
+  border-left-color: #14141e;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:a(black[40%], bottom-left, dashed, thing)"]:active {
+  border-bottom-color: #14141e;
+  border-left-color: #14141e;
+  border-bottom-style: dashed;
+  border-left-style: dashed;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:a(black[40%], right-left, solid, thing)"]:active {
+  border-right-color: #14141e;
+  border-left-color: #14141e;
+  border-right-style: solid;
+  border-left-style: solid;
+  border-right-width: 1px;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:a(black[40%], right-left, dashed, thing)"]:active {
   border-right-color: #14141e;
   border-left-color: #14141e;
   border-right-style: dashed;
@@ -5374,6 +5710,174 @@
   border-left-width: 1px;
 }
 
+[data-h2-border*="MEDIAKEY:h(black[40%], all, solid, thing)"]:hover {
+  border-color: #14141e;
+  border-style: solid;
+  border-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:h(black[40%], all, dashed, thing)"]:hover {
+  border-color: #14141e;
+  border-style: dashed;
+  border-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:h(black[40%], top, solid, thing)"]:hover {
+  border-top-color: #14141e;
+  border-top-style: solid;
+  border-top-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:h(black[40%], top, dashed, thing)"]:hover {
+  border-top-color: #14141e;
+  border-top-style: dashed;
+  border-top-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:h(black[40%], right, solid, thing)"]:hover {
+  border-right-color: #14141e;
+  border-right-style: solid;
+  border-right-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:h(black[40%], right, dashed, thing)"]:hover {
+  border-right-color: #14141e;
+  border-right-style: dashed;
+  border-right-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:h(black[40%], bottom, solid, thing)"]:hover {
+  border-bottom-color: #14141e;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:h(black[40%], bottom, dashed, thing)"]:hover {
+  border-bottom-color: #14141e;
+  border-bottom-style: dashed;
+  border-bottom-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:h(black[40%], left, solid, thing)"]:hover {
+  border-left-color: #14141e;
+  border-left-style: solid;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:h(black[40%], left, dashed, thing)"]:hover {
+  border-left-color: #14141e;
+  border-left-style: dashed;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:h(black[40%], top-right, solid, thing)"]:hover {
+  border-right-color: #14141e;
+  border-top-color: #14141e;
+  border-right-style: solid;
+  border-top-style: solid;
+  border-right-width: 1px;
+  border-top-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:h(black[40%], top-right, dashed, thing)"]:hover {
+  border-right-color: #14141e;
+  border-top-color: #14141e;
+  border-right-style: dashed;
+  border-top-style: dashed;
+  border-right-width: 1px;
+  border-top-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:h(black[40%], top-bottom, solid, thing)"]:hover {
+  border-top-color: #14141e;
+  border-bottom-color: #14141e;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:h(black[40%], top-bottom, dashed, thing)"]:hover {
+  border-top-color: #14141e;
+  border-bottom-color: #14141e;
+  border-top-style: dashed;
+  border-bottom-style: dashed;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:h(black[40%], top-left, solid, thing)"]:hover {
+  border-top-color: #14141e;
+  border-left-color: #14141e;
+  border-top-style: solid;
+  border-left-style: solid;
+  border-top-width: 1px;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:h(black[40%], top-left, dashed, thing)"]:hover {
+  border-top-color: #14141e;
+  border-left-color: #14141e;
+  border-top-style: dashed;
+  border-left-style: dashed;
+  border-top-width: 1px;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:h(black[40%], bottom-right, solid, thing)"]:hover {
+  border-right-color: #14141e;
+  border-bottom-color: #14141e;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:h(black[40%], bottom-right, dashed, thing)"]:hover {
+  border-right-color: #14141e;
+  border-bottom-color: #14141e;
+  border-right-style: dashed;
+  border-bottom-style: dashed;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:h(black[40%], bottom-left, solid, thing)"]:hover {
+  border-bottom-color: #14141e;
+  border-left-color: #14141e;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:h(black[40%], bottom-left, dashed, thing)"]:hover {
+  border-bottom-color: #14141e;
+  border-left-color: #14141e;
+  border-bottom-style: dashed;
+  border-left-style: dashed;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:h(black[40%], right-left, solid, thing)"]:hover {
+  border-right-color: #14141e;
+  border-left-color: #14141e;
+  border-right-style: solid;
+  border-left-style: solid;
+  border-right-width: 1px;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:h(black[40%], right-left, dashed, thing)"]:hover {
+  border-right-color: #14141e;
+  border-left-color: #14141e;
+  border-right-style: dashed;
+  border-left-style: dashed;
+  border-right-width: 1px;
+  border-left-width: 1px;
+}
+
 [data-h2-border*="MEDIAKEY:h(black[1], all, solid, thing)"]:hover {
   border-color: #14141e;
   border-style: solid;
@@ -7726,6 +8230,174 @@
   border-left-width: 1px;
 }
 
+[data-h2-border*="MEDIAKEY:f(black[40%], all, solid, thing)"]:focus {
+  border-color: #14141e;
+  border-style: solid;
+  border-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:f(black[40%], all, dashed, thing)"]:focus {
+  border-color: #14141e;
+  border-style: dashed;
+  border-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:f(black[40%], top, solid, thing)"]:focus {
+  border-top-color: #14141e;
+  border-top-style: solid;
+  border-top-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:f(black[40%], top, dashed, thing)"]:focus {
+  border-top-color: #14141e;
+  border-top-style: dashed;
+  border-top-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:f(black[40%], right, solid, thing)"]:focus {
+  border-right-color: #14141e;
+  border-right-style: solid;
+  border-right-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:f(black[40%], right, dashed, thing)"]:focus {
+  border-right-color: #14141e;
+  border-right-style: dashed;
+  border-right-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:f(black[40%], bottom, solid, thing)"]:focus {
+  border-bottom-color: #14141e;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:f(black[40%], bottom, dashed, thing)"]:focus {
+  border-bottom-color: #14141e;
+  border-bottom-style: dashed;
+  border-bottom-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:f(black[40%], left, solid, thing)"]:focus {
+  border-left-color: #14141e;
+  border-left-style: solid;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:f(black[40%], left, dashed, thing)"]:focus {
+  border-left-color: #14141e;
+  border-left-style: dashed;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:f(black[40%], top-right, solid, thing)"]:focus {
+  border-right-color: #14141e;
+  border-top-color: #14141e;
+  border-right-style: solid;
+  border-top-style: solid;
+  border-right-width: 1px;
+  border-top-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:f(black[40%], top-right, dashed, thing)"]:focus {
+  border-right-color: #14141e;
+  border-top-color: #14141e;
+  border-right-style: dashed;
+  border-top-style: dashed;
+  border-right-width: 1px;
+  border-top-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:f(black[40%], top-bottom, solid, thing)"]:focus {
+  border-top-color: #14141e;
+  border-bottom-color: #14141e;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:f(black[40%], top-bottom, dashed, thing)"]:focus {
+  border-top-color: #14141e;
+  border-bottom-color: #14141e;
+  border-top-style: dashed;
+  border-bottom-style: dashed;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:f(black[40%], top-left, solid, thing)"]:focus {
+  border-top-color: #14141e;
+  border-left-color: #14141e;
+  border-top-style: solid;
+  border-left-style: solid;
+  border-top-width: 1px;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:f(black[40%], top-left, dashed, thing)"]:focus {
+  border-top-color: #14141e;
+  border-left-color: #14141e;
+  border-top-style: dashed;
+  border-left-style: dashed;
+  border-top-width: 1px;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:f(black[40%], bottom-right, solid, thing)"]:focus {
+  border-right-color: #14141e;
+  border-bottom-color: #14141e;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:f(black[40%], bottom-right, dashed, thing)"]:focus {
+  border-right-color: #14141e;
+  border-bottom-color: #14141e;
+  border-right-style: dashed;
+  border-bottom-style: dashed;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:f(black[40%], bottom-left, solid, thing)"]:focus {
+  border-bottom-color: #14141e;
+  border-left-color: #14141e;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:f(black[40%], bottom-left, dashed, thing)"]:focus {
+  border-bottom-color: #14141e;
+  border-left-color: #14141e;
+  border-bottom-style: dashed;
+  border-left-style: dashed;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:f(black[40%], right-left, solid, thing)"]:focus {
+  border-right-color: #14141e;
+  border-left-color: #14141e;
+  border-right-style: solid;
+  border-left-style: solid;
+  border-right-width: 1px;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:f(black[40%], right-left, dashed, thing)"]:focus {
+  border-right-color: #14141e;
+  border-left-color: #14141e;
+  border-right-style: dashed;
+  border-left-style: dashed;
+  border-right-width: 1px;
+  border-left-width: 1px;
+}
+
 [data-h2-border*="MEDIAKEY:f(black[1], all, solid, thing)"]:focus {
   border-color: #14141e;
   border-style: solid;
@@ -10070,6 +10742,174 @@
 }
 
 [data-h2-border*="MEDIAKEY:d(black[.5], right-left, dashed, thing)"]:disabled {
+  border-right-color: #14141e;
+  border-left-color: #14141e;
+  border-right-style: dashed;
+  border-left-style: dashed;
+  border-right-width: 1px;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:d(black[40%], all, solid, thing)"]:disabled {
+  border-color: #14141e;
+  border-style: solid;
+  border-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:d(black[40%], all, dashed, thing)"]:disabled {
+  border-color: #14141e;
+  border-style: dashed;
+  border-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:d(black[40%], top, solid, thing)"]:disabled {
+  border-top-color: #14141e;
+  border-top-style: solid;
+  border-top-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:d(black[40%], top, dashed, thing)"]:disabled {
+  border-top-color: #14141e;
+  border-top-style: dashed;
+  border-top-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:d(black[40%], right, solid, thing)"]:disabled {
+  border-right-color: #14141e;
+  border-right-style: solid;
+  border-right-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:d(black[40%], right, dashed, thing)"]:disabled {
+  border-right-color: #14141e;
+  border-right-style: dashed;
+  border-right-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:d(black[40%], bottom, solid, thing)"]:disabled {
+  border-bottom-color: #14141e;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:d(black[40%], bottom, dashed, thing)"]:disabled {
+  border-bottom-color: #14141e;
+  border-bottom-style: dashed;
+  border-bottom-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:d(black[40%], left, solid, thing)"]:disabled {
+  border-left-color: #14141e;
+  border-left-style: solid;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:d(black[40%], left, dashed, thing)"]:disabled {
+  border-left-color: #14141e;
+  border-left-style: dashed;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:d(black[40%], top-right, solid, thing)"]:disabled {
+  border-right-color: #14141e;
+  border-top-color: #14141e;
+  border-right-style: solid;
+  border-top-style: solid;
+  border-right-width: 1px;
+  border-top-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:d(black[40%], top-right, dashed, thing)"]:disabled {
+  border-right-color: #14141e;
+  border-top-color: #14141e;
+  border-right-style: dashed;
+  border-top-style: dashed;
+  border-right-width: 1px;
+  border-top-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:d(black[40%], top-bottom, solid, thing)"]:disabled {
+  border-top-color: #14141e;
+  border-bottom-color: #14141e;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:d(black[40%], top-bottom, dashed, thing)"]:disabled {
+  border-top-color: #14141e;
+  border-bottom-color: #14141e;
+  border-top-style: dashed;
+  border-bottom-style: dashed;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:d(black[40%], top-left, solid, thing)"]:disabled {
+  border-top-color: #14141e;
+  border-left-color: #14141e;
+  border-top-style: solid;
+  border-left-style: solid;
+  border-top-width: 1px;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:d(black[40%], top-left, dashed, thing)"]:disabled {
+  border-top-color: #14141e;
+  border-left-color: #14141e;
+  border-top-style: dashed;
+  border-left-style: dashed;
+  border-top-width: 1px;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:d(black[40%], bottom-right, solid, thing)"]:disabled {
+  border-right-color: #14141e;
+  border-bottom-color: #14141e;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:d(black[40%], bottom-right, dashed, thing)"]:disabled {
+  border-right-color: #14141e;
+  border-bottom-color: #14141e;
+  border-right-style: dashed;
+  border-bottom-style: dashed;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:d(black[40%], bottom-left, solid, thing)"]:disabled {
+  border-bottom-color: #14141e;
+  border-left-color: #14141e;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:d(black[40%], bottom-left, dashed, thing)"]:disabled {
+  border-bottom-color: #14141e;
+  border-left-color: #14141e;
+  border-bottom-style: dashed;
+  border-left-style: dashed;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:d(black[40%], right-left, solid, thing)"]:disabled {
+  border-right-color: #14141e;
+  border-left-color: #14141e;
+  border-right-style: solid;
+  border-left-style: solid;
+  border-right-width: 1px;
+  border-left-width: 1px;
+}
+
+[data-h2-border*="MEDIAKEY:d(black[40%], right-left, dashed, thing)"]:disabled {
   border-right-color: #14141e;
   border-left-color: #14141e;
   border-right-style: dashed;

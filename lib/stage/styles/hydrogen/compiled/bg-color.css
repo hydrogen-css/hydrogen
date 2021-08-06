@@ -14,6 +14,10 @@
   background-color: #14141e;
 }
 
+[data-h2-bg-color*="MEDIAKEY(black[40%])"] {
+  background-color: #14141e;
+}
+
 [data-h2-bg-color*="MEDIAKEY(black[1])"] {
   background-color: #14141e;
 }
@@ -67,6 +71,10 @@
 }
 
 [data-h2-bg-color*="MEDIAKEY:a(black[.5])"]:active {
+  background-color: #14141e;
+}
+
+[data-h2-bg-color*="MEDIAKEY:a(black[40%])"]:active {
   background-color: #14141e;
 }
 
@@ -126,6 +134,10 @@
   background-color: #14141e;
 }
 
+[data-h2-bg-color*="MEDIAKEY:h(black[40%])"]:hover {
+  background-color: #14141e;
+}
+
 [data-h2-bg-color*="MEDIAKEY:h(black[1])"]:hover {
   background-color: #14141e;
 }
@@ -182,6 +194,10 @@
   background-color: #14141e;
 }
 
+[data-h2-bg-color*="MEDIAKEY:f(black[40%])"]:focus {
+  background-color: #14141e;
+}
+
 [data-h2-bg-color*="MEDIAKEY:f(black[1])"]:focus {
   background-color: #14141e;
 }
@@ -235,6 +251,10 @@
 }
 
 [data-h2-bg-color*="MEDIAKEY:d(black[.5])"]:disabled {
+  background-color: #14141e;
+}
+
+[data-h2-bg-color*="MEDIAKEY:d(black[40%])"]:disabled {
   background-color: #14141e;
 }
 

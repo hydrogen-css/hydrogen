@@ -30,6 +30,14 @@
   color: #14141e;
 }
 
+[data-h2-font-color*="MEDIAKEY(black[40%])"] {
+  color: #14141e;
+}
+
+[data-h2-color*="MEDIAKEY(black[40%])"] {
+  color: #14141e;
+}
+
 [data-h2-font-color*="MEDIAKEY(black[1])"] {
   color: #14141e;
 }
@@ -139,6 +147,14 @@
 }
 
 [data-h2-color*="MEDIAKEY:a(black[.5])"]:active {
+  color: #14141e;
+}
+
+[data-h2-font-color*="MEDIAKEY:a(black[40%])"]:active {
+  color: #14141e;
+}
+
+[data-h2-color*="MEDIAKEY:a(black[40%])"]:active {
   color: #14141e;
 }
 
@@ -254,6 +270,14 @@
   color: #14141e;
 }
 
+[data-h2-font-color*="MEDIAKEY:h(black[40%])"]:hover {
+  color: #14141e;
+}
+
+[data-h2-color*="MEDIAKEY:h(black[40%])"]:hover {
+  color: #14141e;
+}
+
 [data-h2-font-color*="MEDIAKEY:h(black[1])"]:hover {
   color: #14141e;
 }
@@ -366,6 +390,14 @@
   color: #14141e;
 }
 
+[data-h2-font-color*="MEDIAKEY:f(black[40%])"]:focus {
+  color: #14141e;
+}
+
+[data-h2-color*="MEDIAKEY:f(black[40%])"]:focus {
+  color: #14141e;
+}
+
 [data-h2-font-color*="MEDIAKEY:f(black[1])"]:focus {
   color: #14141e;
 }
@@ -475,6 +507,14 @@
 }
 
 [data-h2-color*="MEDIAKEY:d(black[.5])"]:disabled {
+  color: #14141e;
+}
+
+[data-h2-font-color*="MEDIAKEY:d(black[40%])"]:disabled {
+  color: #14141e;
+}
+
+[data-h2-color*="MEDIAKEY:d(black[40%])"]:disabled {
   color: #14141e;
 }
 
