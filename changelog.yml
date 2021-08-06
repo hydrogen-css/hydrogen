@@ -71,3 +71,8 @@ majors:
             changes:
               - "Config: enhances color opacity so that the user can specify target opacities, rather than toggling the array on/off, offering more control and less bloat.",
               - "Scripts: the clean script now warns the user if they try to use an opacity that isn't defined in the config."
+          - version: 4
+            date: 2021/AUG/06
+            author: Josh Beveridge
+            changes:
+              - "Sass: updates the alpha functions to use rgba over color.adjust, as it seems to have stopped working."

@@ -41,6 +41,14 @@
       "opacities": [
         ".05"
       ]
+    },
+    {
+      "key": "purple",
+      "color": "#FF00FF",
+      "opacity": true,
+      "opacities": [
+        ".5"
+      ]
     }
   ],
   "containers": [],
