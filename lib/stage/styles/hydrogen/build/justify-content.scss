@@ -1,5 +1,0 @@
-@use "../utilities/utility-justify-content" as justifyContentStyles;
-
-@include justifyContentStyles.h2-utility-justify-content(
-  $mediaKey: "MEDIAKEY"
-);
