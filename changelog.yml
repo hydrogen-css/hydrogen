@@ -76,3 +76,8 @@ majors:
             author: Josh Beveridge
             changes:
               - "Sass: updates the alpha functions to use rgba over color.adjust, as it seems to have stopped working."
+          - version: 5
+            date: 2021/AUG/21
+            author: Josh Beveridge
+            changes:
+              - "Scripts: enhances the clean script to accept key-value pairs when scanning markup and scripts."
