@@ -81,3 +81,9 @@ majors:
             author: Josh Beveridge
             changes:
               - "Scripts: enhances the clean script to accept key-value pairs when scanning markup and scripts."
+          - version: 6
+            date: 2021/SEP/08
+            author: Josh Beveridge
+            changes:
+              - "Dependencies: updates and fixes warnings where possible, including to gulp-sass v5.0.0.",
+              - "Bugfix: the init script was broken in production thanks to an improperly set environment variable."
