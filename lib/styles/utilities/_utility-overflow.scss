@@ -13,13 +13,13 @@ $h2-map-overflow: (
 ) {
   @each $stateKey, $stateValue in $stateMap {
     @each $overflowKey, $overflowValue in $h2-map-overflow {
-      [data-h2-overflow*="#{$mediaKey}#{$stateKey}(all, #{overflowKey})"]#{$stateValue} {
+      [data-h2-overflow*="#{$mediaKey}#{$stateKey}(all, #{$overflowKey})"]#{$stateValue} {
         overflow: $overflowValue;
       }
-      [data-h2-overflow*="#{$mediaKey}#{$stateKey}(x, #{overflowKey})"]#{$stateValue} {
+      [data-h2-overflow*="#{$mediaKey}#{$stateKey}(x, #{$overflowKey})"]#{$stateValue} {
         overflow-x: $overflowValue;
       }
-      [data-h2-overflow*="#{$mediaKey}#{$stateKey}(y, #{overflowKey})"]#{$stateValue} {
+      [data-h2-overflow*="#{$mediaKey}#{$stateKey}(y, #{$overflowKey})"]#{$stateValue} {
         overflow-y: $overflowValue;
       }
     }

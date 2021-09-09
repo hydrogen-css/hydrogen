@@ -87,3 +87,8 @@ majors:
             changes:
               - "Dependencies: updates and fixes warnings where possible, including to gulp-sass v5.0.0.",
               - "Bugfix: the init script was broken in production thanks to an improperly set environment variable."
+          - version: 7
+            date: 2021/SEP/09
+            author: Josh Beveridge
+            changes:
+              - "Bugfix: overflow was completely broken due to a missing $ in the Sass."
