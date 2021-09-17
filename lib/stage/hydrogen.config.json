@@ -20,6 +20,9 @@
     {
       "key": "black",
       "color": "rgba(20, 20, 30, 1)",
+      "variants": {
+        "disabled": "true"
+      },
       "opacities": [
         ".5",
         "40%",
@@ -28,7 +31,12 @@
     },
     {
       "key": "green",
-      "color": "rgba(0, 255, 0, 1)"
+      "color": "rgba(0, 255, 0, 1)",
+      "variants": {
+        "disabled": "false",
+        "light": "pink",
+        "dark": "orange"
+      }
     },
     {
       "key": "red",
@@ -37,7 +45,11 @@
     {
       "key": "blue",
       "color": "rgba(0, 0, 255, 1)",
-      "opacity": true,
+      "variants": {
+        "disabled": "false",
+        "light": "purple",
+        "dark": "teal"
+      },
       "opacities": [
         ".05"
       ]
@@ -45,10 +57,7 @@
     {
       "key": "purple",
       "color": "#FF00FF",
-      "opacity": true,
-      "opacities": [
-        ".5"
-      ]
+      "opacity": true
     }
   ],
   "containers": [],

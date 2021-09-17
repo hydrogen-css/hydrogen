@@ -92,3 +92,13 @@ majors:
             author: Josh Beveridge
             changes:
               - "Bugfix: overflow was completely broken due to a missing $ in the Sass."
+          - version: 8
+            date: 2021/SEP/17
+            author: Josh Beveridge
+            changes:
+              - "Theme: updates the default theme to be more thoughtful and use standardized nomenclature."
+              - "Color: adds a default color value for transparent."
+              - "Color: renames colors to use agnostic language (e.g. purple => primary)."
+              - "Color: overhauls variants so that they can be overidden with custom values or disabled entirely."
+              - "Radius: removes assumed values from the map script to avoid duplication conflicts."
+              - "Radius: renames default radius keys to be more descriptive."
