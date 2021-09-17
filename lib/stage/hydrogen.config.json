@@ -26,8 +26,17 @@
       "opacities": [
         ".5",
         "40%",
+        ".8",
         "1"
       ]
+    },
+    {
+      "key": "white",
+      "color": "rgba(255, 255, 255, 1)",
+      "variants": {
+        "disabled": "true"
+      },
+      "opacities": []
     },
     {
       "key": "green",

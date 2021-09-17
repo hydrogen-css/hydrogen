@@ -33,6 +33,7 @@
 @use "utilities/utility-location" as locationStyles;
 @use "utilities/utility-margin" as marginStyles;
 @use "utilities/utility-overflow" as overflowStyles;
+@use "utilities/utility-overlay" as overlayStyles;
 @use "utilities/utility-padding" as paddingStyles;
 @use "utilities/utility-position" as positionStyles;
 @use "utilities/utility-radius" as radiusStyles;
@@ -137,6 +138,13 @@
     @include overflowStyles.h2-utility-overflow(
       $mediaKey: $mediaKey,
       $stateMap: stateMap.$h2-map-states
+    );
+
+    @include overlayStyles.h2-utility-overlay(
+      $mediaKey: $mediaKey,
+      $stateMap: stateMap.$h2-map-states,
+      $colorMap: colorMap.$h2-map-color,
+      $gradientMap: gradientMap.$h2-map-gradient
     );
   
     @include paddingStyles.h2-utility-padding(

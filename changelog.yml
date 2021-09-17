@@ -100,5 +100,6 @@ majors:
               - "Color: adds a default color value for transparent."
               - "Color: renames colors to use agnostic language (e.g. purple => primary)."
               - "Color: overhauls variants so that they can be overidden with custom values or disabled entirely."
+              - "Overlay: adds support for overlays!"
               - "Radius: removes assumed values from the map script to avoid duplication conflicts."
               - "Radius: renames default radius keys to be more descriptive."
