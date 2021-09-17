@@ -137,6 +137,20 @@
       "value": "100em"
     }
   ],
+  "opacities": [
+    {
+      "key": "half",
+      "value": ".5"
+    },
+    {
+      "key": "0.7",
+      "value": "0.7"
+    },
+    {
+      "key": "30%",
+      "value": "30%"
+    }
+  ],
   "radius": [
     {
       "key": "square",

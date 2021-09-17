@@ -16,6 +16,7 @@ It leverages data-attributes to allow the styling of elements right in your mark
 - font-style
 - font-weight
 - margin
+- opacity
 - overflow
 - overlay
 - padding

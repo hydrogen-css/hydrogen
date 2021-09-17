@@ -7,6 +7,7 @@
 @use "maps/map-font-families" as fontFamilyMap;
 @use "maps/map-font-size" as fontSizeMap;
 @use "maps/map-gradient" as gradientMap;
+@use "maps/map-opacity" as opacityMap;
 @use "maps/map-radius" as radiusMap;
 @use "maps/map-sides" as sideMap;
 @use "maps/map-shadow" as shadowMap;
@@ -32,6 +33,7 @@
 @use "utilities/utility-justify-content" as justifyContentStyles;
 @use "utilities/utility-location" as locationStyles;
 @use "utilities/utility-margin" as marginStyles;
+@use "utilities/utility-opacity" as opacityStyles;
 @use "utilities/utility-overflow" as overflowStyles;
 @use "utilities/utility-overlay" as overlayStyles;
 @use "utilities/utility-padding" as paddingStyles;
@@ -133,6 +135,12 @@
       $stateMap: stateMap.$h2-map-states,
       $sideMap: sideMap.$h2-map-sides,
       $whitespaceMap: whitespaceMap.$h2-map-whitespace
+    );
+
+    @include opacityStyles.h2-utility-opacity(
+      $mediaKey: $mediaKey,
+      $stateMap: stateMap.$h2-map-states,
+      $opacityMap: opacityMap.$h2-map-opacity
     );
   
     @include overflowStyles.h2-utility-overflow(
