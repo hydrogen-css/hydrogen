@@ -34,6 +34,7 @@
 @use "utilities/utility-location" as locationStyles;
 @use "utilities/utility-margin" as marginStyles;
 @use "utilities/utility-opacity" as opacityStyles;
+// @use "utilities/utility-order" as orderStyles;
 @use "utilities/utility-overflow" as overflowStyles;
 @use "utilities/utility-overlay" as overlayStyles;
 @use "utilities/utility-padding" as paddingStyles;
@@ -142,6 +143,8 @@
       $stateMap: stateMap.$h2-map-states,
       $opacityMap: opacityMap.$h2-map-opacity
     );
+
+    // @include orderStyles.h2-utility-order($mediaKey: $mediaKey);
   
     @include overflowStyles.h2-utility-overflow(
       $mediaKey: $mediaKey,
