@@ -1,6 +1,6 @@
 {
   "name": "@hydrogen-design-system/hydrogen.css",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "A CSS utility framework that leverages data-attributes to provide clarity and flexibility. MIT Licensed.",
   "keywords": [
     "Hydrogen",
@@ -68,6 +68,9 @@
   "engines": {
     "npm": ">=6.14.4",
     "node": ">=12.16.2"
+  },
+  "prettier": {
+    "singleQuote": true
   },
   "devDependencies": {
     "gulp-purgecss": "^4.0.3"

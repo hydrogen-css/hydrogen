@@ -9,6 +9,11 @@
     ],
     "scripts": "scripts"
   },
+  "variables": {
+    "sass": {
+      "enabled": "true"
+    }
+  },
   "media": [],
   "borderWeights": [
     {
@@ -20,15 +25,32 @@
     {
       "key": "black",
       "color": "rgba(20, 20, 30, 1)",
+      "variants": {
+        "enabled": "false"
+      },
       "opacities": [
         ".5",
         "40%",
+        ".8",
         "1"
       ]
     },
     {
+      "key": "white",
+      "color": "rgba(255, 255, 255, 1)",
+      "variants": {
+        "enabled": "false"
+      },
+      "opacities": []
+    },
+    {
       "key": "green",
-      "color": "rgba(0, 255, 0, 1)"
+      "color": "rgba(0, 255, 0, 1)",
+      "variants": {
+        "enabled": "true",
+        "light": "pink",
+        "dark": "orange"
+      }
     },
     {
       "key": "red",
@@ -37,7 +59,11 @@
     {
       "key": "blue",
       "color": "rgba(0, 0, 255, 1)",
-      "opacity": true,
+      "variants": {
+        "enabled": "true",
+        "light": "purple",
+        "dark": "teal"
+      },
       "opacities": [
         ".05"
       ]
@@ -45,10 +71,7 @@
     {
       "key": "purple",
       "color": "#FF00FF",
-      "opacity": true,
-      "opacities": [
-        ".5"
-      ]
+      "opacity": true
     }
   ],
   "containers": [],
@@ -103,12 +126,31 @@
       ]
     }
   ],
+  "layerCount": 3,
+  "opacities": [
+    {
+      "key": "half",
+      "value": ".5"
+    },
+    {
+      "key": "0.7",
+      "value": "0.7"
+    },
+    {
+      "key": "30%",
+      "value": "30%"
+    }
+  ],
   "shadows": [],
   "whitespaceScale": "1.25",
   "widths": [
     {
       "key": "phat",
       "value": "56%"
+    },
+    {
+      "key": "smol",
+      "value": "10%"
     }
   ]
 }

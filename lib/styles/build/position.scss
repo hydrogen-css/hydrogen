@@ -1,7 +1,5 @@
-@use "sass:color";
+@use 'sass:color';
 
-@use "../utilities/utility-position" as positionStyles;
+@use '../utilities/utility-position' as positionStyles;
 
-@include positionStyles.h2-utility-position(
-  $mediaKey: "MEDIAKEY"
-);
+@include positionStyles.h2-utility-position($mediaKey: 'MEDIAKEY');

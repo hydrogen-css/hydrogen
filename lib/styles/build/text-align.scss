@@ -1,7 +1,5 @@
-@use "sass:color";
+@use 'sass:color';
 
-@use "../utilities/utility-text-align" as textAlignStyles;
+@use '../utilities/utility-text-align' as textAlignStyles;
 
-@include textAlignStyles.h2-utility-text-align(
-  $mediaKey: "MEDIAKEY"
-);
+@include textAlignStyles.h2-utility-text-align($mediaKey: 'MEDIAKEY');

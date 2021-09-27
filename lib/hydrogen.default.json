@@ -6,6 +6,11 @@
     "scripts": "path/to/scripts/folder",
     "styles": "path/to/styles/folder"
   },
+  "variables": {
+    "sass": {
+      "enabled": "false"
+    }
+  },
   "borderWeights": [
     {
       "key": "s",
@@ -22,30 +27,60 @@
   ],
   "colors": [
     {
+      "key": "transparent",
+      "color": "rgba(255, 255, 255, 0)",
+      "variants": {
+        "enabled": "false"
+      },
+      "opacities": []
+    },
+    {
       "key": "white",
       "color": "rgba(255, 255, 255, 1)",
+      "variants": {
+        "enabled": "false"
+      },
       "opacities": [
         ".2"
       ]
     },
     {
       "key": "black",
-      "color": "rgba(20, 20, 30, 1)"
+      "color": "rgba(20, 20, 30, 1)",
+      "variants": {
+        "enabled": "false"
+      },
+      "opacities": [
+        ".8"
+      ]
     },
     {
-      "key": "purple",
+      "key": "primary",
       "color": "#9D5CFF",
+      "variants": {
+        "enabled": "true",
+        "light": "#d7bdff",
+        "dark": "#36106e"
+      },
       "opacities": [
         ".1"
       ]
     },
     {
-      "key": "blue",
-      "color": "#5CFFEE"
+      "key": "secondary",
+      "color": "#5CFFEE",
+      "variants": {
+        "enabled": "false"
+      },
+      "opacities": []
     },
     {
-      "key": "pink",
-      "color": "#FF5C6D"
+      "key": "accent",
+      "color": "#FF5C6D",
+      "variants": {
+        "enabled": "false"
+      },
+      "opacities": []
     }
   ],
   "containers": [
@@ -94,6 +129,7 @@
   "fontBaseSize": "112.5%",
   "fontScale": "1.25",
   "gradients": [],
+  "layerCount": 5,
   "media": [
     {
       "key": "s",
@@ -108,16 +144,30 @@
       "value": "100em"
     }
   ],
+  "opacities": [
+    {
+      "key": "half",
+      "value": ".5"
+    },
+    {
+      "key": "0.7",
+      "value": "0.7"
+    },
+    {
+      "key": "30%",
+      "value": "30%"
+    }
+  ],
   "radius": [
     {
-      "key": "s",
+      "key": "rounded",
       "value": "10px"
     },
     {
-      "key": "m",
+      "key": "pill",
       "value": "50rem"
     },{
-      "key": "l",
+      "key": "circle",
       "value": "100%"
     }
   ],
