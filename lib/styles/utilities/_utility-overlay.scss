@@ -1,19 +1,14 @@
 // Overlay
 // COLOR
 // e.g. data-h2-overlay="b(purple[.8])"
-@mixin h2-utility-overlay(
-  $mediaKey,
-  $stateMap,
-  $colorMap,
-  $gradientMap
-) {
+@mixin h2-utility-overlay($mediaKey, $stateMap, $colorMap, $gradientMap) {
   @each $stateKey, $stateValue in $stateMap {
     @each $colorKey, $colorValue in $colorMap {
-      [data-h2-overlay*="#{$mediaKey}#{$stateKey}(#{$colorKey})"]#{$stateValue} {
+      [data-h2-overlay*='#{$mediaKey}#{$stateKey}(#{$colorKey})']#{$stateValue} {
         position: relative;
         &::before {
           background-color: $colorValue;
-          content: " ";
+          content: ' ';
           display: block;
           height: 100%;
           position: absolute;
@@ -21,7 +16,7 @@
           left: 0;
           width: 100%;
         }
-        & >* {
+        & > * {
           position: relative;
         }
       }
@@ -29,11 +24,11 @@
   }
   @each $stateKey, $stateValue in $stateMap {
     @each $gradientKey, $gradientValue in $gradientMap {
-      [data-h2-overlay*="#{$mediaKey}#{$stateKey}(#{$gradientKey})"]#{$stateValue} {
+      [data-h2-overlay*='#{$mediaKey}#{$stateKey}(#{$gradientKey})']#{$stateValue} {
         position: relative;
         &::before {
           background-image: #{$gradientValue};
-          content: " ";
+          content: ' ';
           display: block;
           height: 100%;
           position: absolute;
@@ -41,7 +36,7 @@
           left: 0;
           width: 100%;
         }
-        & >* {
+        & > * {
           position: relative;
         }
       }

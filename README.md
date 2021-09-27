@@ -9,12 +9,14 @@ It leverages data-attributes to allow the styling of elements right in your mark
 [https://hydrogen.design](https://hydrogen.design)
 
 ## State Support
+
 - bg-color
 - border
 - display
 - font-color
 - font-style
 - font-weight
+- layer (z-index)
 - margin
 - opacity
 - overflow
@@ -26,5 +28,6 @@ It leverages data-attributes to allow the styling of elements right in your mark
 - width
 
 ## Gradient Support
+
 - bg-color
 - overlay

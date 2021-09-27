@@ -31,6 +31,7 @@
 @use 'utilities/utility-font-style' as fontStyleStyles;
 @use 'utilities/utility-font-weight' as fontWeightStyles;
 @use 'utilities/utility-justify-content' as justifyContentStyles;
+@use 'utilities/utility-layers' as layerStyles;
 @use 'utilities/utility-location' as locationStyles;
 @use 'utilities/utility-margin' as marginStyles;
 @use 'utilities/utility-opacity' as opacityStyles;
@@ -114,6 +115,11 @@
 
     @include justifyContentStyles.h2-utility-justify-content(
       $mediaKey: $mediaKey
+    );
+
+    @include layerStyles.h2-utility-layer(
+      $mediaKey: $mediaKey,
+      $stateMap: stateMap.$h2-map-states
     );
 
     @include locationStyles.h2-utility-location(

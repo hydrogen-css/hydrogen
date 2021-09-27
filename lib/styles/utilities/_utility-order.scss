@@ -4,11 +4,9 @@
 
 $h2GridColumns: 12;
 
-@mixin h2-utility-order(
-  $mediaKey
-) {
+@mixin h2-utility-order($mediaKey) {
   @for $c from 1 through $h2GridColumns {
-    [data-h2-order*="#{$mediaKey}(#{$c})"] {
+    [data-h2-order*='#{$mediaKey}(#{$c})'] {
       order: #{$c};
     }
   }

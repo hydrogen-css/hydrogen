@@ -98,6 +98,7 @@ majors:
             changes:
               - "Sass: adds a configuration option for exporting your settings as Sass variables where possible; this means you can now import things like your whitespace scale into Sass files outside of Hydrogen."
               - "Debt: removes some legacy code and cleans up some dependencies in JS files."
+              - "Debt: formatted using Prettier."
               - "Theme: updates the default theme to be more thoughtful and use standardized nomenclature."
               - "Color: adds a default color value for transparent."
               - "Color: renames colors to use agnostic language (e.g. purple => primary)."
@@ -107,3 +108,4 @@ majors:
               - "Order: adds support for flex order when flex grids are enabled."
               - "Overlay: adds support for overlays."
               - "Radius: renames default radius keys to be more descriptive."
+              - "Layering: adds support for a custom z-index scale and positioning support."
