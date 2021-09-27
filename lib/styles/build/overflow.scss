@@ -1,10 +1,10 @@
-@use "sass:color";
+@use 'sass:color';
 
-@use "../maps/map-states" as stateMap;
+@use '../maps/map-states' as stateMap;
 
-@use "../utilities/utility-overflow" as overflowStyles;
+@use '../utilities/utility-overflow' as overflowStyles;
 
 @include overflowStyles.h2-utility-overflow(
-  $mediaKey: "MEDIAKEY",
+  $mediaKey: 'MEDIAKEY',
   $stateMap: stateMap.$h2-map-states
 );

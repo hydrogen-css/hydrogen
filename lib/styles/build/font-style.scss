@@ -1,10 +1,10 @@
-@use "sass:color";
+@use 'sass:color';
 
-@use "../maps/map-states" as stateMap;
+@use '../maps/map-states' as stateMap;
 
-@use "../utilities/utility-font-style" as fontStyleStyles;
+@use '../utilities/utility-font-style' as fontStyleStyles;
 
 @include fontStyleStyles.h2-utility-font-style(
-  $mediaKey: "MEDIAKEY",
+  $mediaKey: 'MEDIAKEY',
   $stateMap: stateMap.$h2-map-states
 );

@@ -9,6 +9,11 @@
     ],
     "scripts": "scripts"
   },
+  "variables": {
+    "sass": {
+      "enabled": "true"
+    }
+  },
   "media": [],
   "borderWeights": [
     {
@@ -21,7 +26,7 @@
       "key": "black",
       "color": "rgba(20, 20, 30, 1)",
       "variants": {
-        "disabled": "true"
+        "enabled": "false"
       },
       "opacities": [
         ".5",
@@ -34,7 +39,7 @@
       "key": "white",
       "color": "rgba(255, 255, 255, 1)",
       "variants": {
-        "disabled": "true"
+        "enabled": "false"
       },
       "opacities": []
     },
@@ -42,7 +47,7 @@
       "key": "green",
       "color": "rgba(0, 255, 0, 1)",
       "variants": {
-        "disabled": "false",
+        "enabled": "true",
         "light": "pink",
         "dark": "orange"
       }
@@ -55,7 +60,7 @@
       "key": "blue",
       "color": "rgba(0, 0, 255, 1)",
       "variants": {
-        "disabled": "false",
+        "enabled": "true",
         "light": "purple",
         "dark": "teal"
       },
@@ -141,6 +146,10 @@
     {
       "key": "phat",
       "value": "56%"
+    },
+    {
+      "key": "smol",
+      "value": "10%"
     }
   ]
 }

@@ -6,6 +6,11 @@
     "scripts": "path/to/scripts/folder",
     "styles": "path/to/styles/folder"
   },
+  "variables": {
+    "sass": {
+      "enabled": "false"
+    }
+  },
   "borderWeights": [
     {
       "key": "s",
@@ -25,7 +30,7 @@
       "key": "transparent",
       "color": "rgba(255, 255, 255, 0)",
       "variants": {
-        "disabled": "true"
+        "enabled": "false"
       },
       "opacities": []
     },
@@ -33,7 +38,7 @@
       "key": "white",
       "color": "rgba(255, 255, 255, 1)",
       "variants": {
-        "disabled": "true"
+        "enabled": "false"
       },
       "opacities": [
         ".2"
@@ -43,7 +48,7 @@
       "key": "black",
       "color": "rgba(20, 20, 30, 1)",
       "variants": {
-        "disabled": "true"
+        "enabled": "false"
       },
       "opacities": [
         ".8"
@@ -53,6 +58,7 @@
       "key": "primary",
       "color": "#9D5CFF",
       "variants": {
+        "enabled": "true",
         "light": "#d7bdff",
         "dark": "#36106e"
       },
@@ -64,7 +70,7 @@
       "key": "secondary",
       "color": "#5CFFEE",
       "variants": {
-        "disabled": "true"
+        "enabled": "false"
       },
       "opacities": []
     },
@@ -72,7 +78,7 @@
       "key": "accent",
       "color": "#FF5C6D",
       "variants": {
-        "disabled": "true"
+        "enabled": "false"
       },
       "opacities": []
     }
@@ -152,10 +158,6 @@
     }
   ],
   "radius": [
-    {
-      "key": "square",
-      "value": "0px"
-    },
     {
       "key": "rounded",
       "value": "10px"

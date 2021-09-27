@@ -93,15 +93,17 @@ majors:
             changes:
               - "Bugfix: overflow was completely broken due to a missing $ in the Sass."
           - version: 8
-            date: 2021/SEP/17
+            date: 2021/SEP/27
             author: Josh Beveridge
             changes:
+              - "Sass: adds a configuration option for exporting your settings as Sass variables where possible; this means you can now import things like your whitespace scale into Sass files outside of Hydrogen."
+              - "Debt: removes some legacy code and cleans up some dependencies in JS files."
               - "Theme: updates the default theme to be more thoughtful and use standardized nomenclature."
               - "Color: adds a default color value for transparent."
               - "Color: renames colors to use agnostic language (e.g. purple => primary)."
               - "Color: overhauls variants so that they can be overidden with custom values or disabled entirely."
-              - "Opacity: adds support for element opacity!"
+              - "Margin: adds support for negative margins."
+              - "Opacity: adds support for element opacity."
               - "Order: adds support for flex order when flex grids are enabled."
-              - "Overlay: adds support for overlays!"
-              - "Radius: removes assumed values from the map script to avoid duplication conflicts."
+              - "Overlay: adds support for overlays."
               - "Radius: renames default radius keys to be more descriptive."
