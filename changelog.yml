@@ -109,3 +109,8 @@ majors:
               - "Overlay: adds support for overlays."
               - "Radius: renames default radius keys to be more descriptive."
               - "Layering: adds support for a custom z-index scale and positioning support."
+          - version: 9
+            date: 2021/SEP/28
+            author: Josh Beveridge
+            changes:
+              - "Bugfix: fixes an unexpected break with the production watch script."
