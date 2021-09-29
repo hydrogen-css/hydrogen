@@ -114,3 +114,8 @@ majors:
             author: Josh Beveridge
             changes:
               - "Bugfix: fixes an unexpected break with the production watch script."
+          - version: 10
+            date: 2021/SEP/29
+            author: Josh Beveridge
+            changes:
+              - "Scripts: prevents Hydrogen from scraping its own files if the output happens to exist within the markup folder."
