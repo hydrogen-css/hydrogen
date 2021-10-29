@@ -119,3 +119,8 @@ majors:
             author: Josh Beveridge
             changes:
               - "Scripts: prevents Hydrogen from scraping its own files if the output happens to exist within the markup folder."
+          - version: 11
+            date: 2021/OCT/29
+            author: Peter Giles
+            changes:
+              - "Scripts: fixes a bug with the fs module not running WriteFile synchronously, causing certain scripts to fail if they were slow."
