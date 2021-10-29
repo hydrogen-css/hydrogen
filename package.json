@@ -44,7 +44,7 @@
     "browserslist": "^4.16.6",
     "colors": "^1.4.0",
     "cssnano": "^5.0.6",
-    "cssnano-preset-lite": "^1.0.1",
+    "cssnano-preset-lite": "^2.0.1",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
