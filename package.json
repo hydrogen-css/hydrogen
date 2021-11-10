@@ -60,7 +60,7 @@
     "prompt": "^1.1.0",
     "sass": "^1.35.1",
     "vinyl-source-stream": "^2.0.0",
-    "yargs": "^15.4.0"
+    "yargs": "^17.2.1"
   },
   "browserslist": [
     "last 1 version and not dead"
