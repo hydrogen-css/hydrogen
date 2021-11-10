@@ -124,3 +124,15 @@ majors:
             author: Peter Giles
             changes:
               - "Scripts: fixes a bug with the fs module not running WriteFile synchronously, causing certain scripts to fail if they were slow."
+          - version: 12
+            date: 2021/NOV/09
+            author: Josh Beveridge
+            changes:
+              - "Scripts: Overhauls the way the scraper processes input files."
+              - "Scripts: Reworks the CSS matching expression to be up to 40 times more efficient."
+              - "Config: Begins deprecation of the folders config in favor of input and output values."
+              - "Background Color: updates the transition to ease."
+              - "Font Color: updates the transition to ease."
+              - "Opacity: updates the transition speed to 0.2s."
+              - "Overlay: updates the transition to ease."
+              - "Position, Location: updates sticky so that it has a default top value of 0, which can be overidden by the location attribute."
