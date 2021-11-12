@@ -130,6 +130,8 @@ majors:
             changes:
               - "Scripts: Overhauls the way the scraper processes input files."
               - "Scripts: Reworks the CSS matching expression to be up to 40 times more efficient."
+              - "Scripts: Simplifies and centralizes the scripting for basic utilities."
+              - "Bug, Scripts: Duplicate key definitions in the configuration are now handled by prioritizing the user's first definition using the duplicate key."
               - "Config: Begins deprecation of the folders config in favor of input and output values."
               - "Background Color: updates the transition to ease."
               - "Font Color: updates the transition to ease."
