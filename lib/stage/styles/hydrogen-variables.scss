@@ -12,10 +12,10 @@ $h2-color-blue-light: purple;
 $h2-color-blue-dark: teal;
 $h2-color-purple: #FF00FF;
 // Containers
-$h2-container-width-full: none;
 $h2-container-width-s: 39rem;
 $h2-container-width-m: 60rem;
 $h2-container-width-l: 80rem;
+$h2-container-width-full: none;
 // Typography Scale
 $h2-font-size-h1: 5.534900853769001rem;
 $h2-font-size-h2: 4.1615795893000005rem;
@@ -38,11 +38,11 @@ $h2-opacity-half: .5;
 $h2-opacity-07: 0.7;
 $h2-opacity-30: 30%;
 // Radius
-$h2-radius-square: 0;
 $h2-radius-none: 0;
 $h2-radius-rounded: 10px;
 $h2-radius-pill: 50rem;
 $h2-radius-circle: 100%;
+$h2-radius-square: 0;
 // Shadows
 $h2-shadow-xs: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, .2);
 $h2-shadow-s: 0 0.25rem 0.5rem -0.05rem rgba(0, 0, 0, .2);
@@ -76,3 +76,4 @@ $h2-padding-xxl: 2.44140625rem;
 // Widths
 $h2-width-phat: 56%;
 $h2-width-smol: 10%;
+$h2-width-auto: auto;

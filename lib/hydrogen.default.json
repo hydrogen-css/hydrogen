@@ -1,6 +1,12 @@
 {
   "debug": false,
   "mediaWarnings": false,
+  "input": [
+    "path/to/project/markup/folder"
+  ],
+  "output": [
+    "path/to/styles/output/folder"
+  ],
   "folders": {
     "markup": "path/to/markup/folder",
     "scripts": "path/to/scripts/folder",
@@ -95,6 +101,10 @@
     {
       "key": "l",
       "maxWidth": "80rem"
+    },
+    {
+      "key": "full",
+      "maxWidth": "none"
     }
   ],
   "flexgrid": {
@@ -146,19 +156,23 @@
   ],
   "opacities": [
     {
-      "key": "half",
+      "key": "0",
+      "value": "0"
+    },
+    {
+      "key": ".5",
       "value": ".5"
     },
     {
-      "key": "0.7",
-      "value": "0.7"
-    },
-    {
-      "key": "30%",
-      "value": "30%"
+      "key": "1",
+      "value": "1"
     }
   ],
   "radius": [
+    {
+      "key": "none",
+      "value": "0"
+    },
     {
       "key": "rounded",
       "value": "10px"

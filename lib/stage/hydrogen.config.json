@@ -14,7 +14,24 @@
       "enabled": "true"
     }
   },
-  "media": [],
+  "media": [
+    {
+      "key": "s",
+      "value": "48em"
+    },
+    {
+      "key": "s",
+      "value": "48em"
+    },
+    {
+      "key": "m",
+      "value": "64em"
+    },
+    {
+      "key": "l",
+      "value": "100em"
+    }
+  ],
   "borderWeights": [
     {
       "key": "thing",
@@ -22,6 +39,19 @@
     }
   ],
   "colors": [
+    {
+      "key": "black",
+      "color": "rgba(20, 20, 30, 1)",
+      "variants": {
+        "enabled": "false"
+      },
+      "opacities": [
+        ".5",
+        "40%",
+        ".8",
+        "1"
+      ]
+    },
     {
       "key": "black",
       "color": "rgba(20, 20, 30, 1)",
