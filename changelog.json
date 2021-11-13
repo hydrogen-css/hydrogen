@@ -1,19 +1,178 @@
 {
   "versions": [
     {
-      "number": "1.0.0",
-      "date": "2021/NOV/15",
+      "number": "1",
+      "date": "2021/APR/25",
       "author": "Josh Beveridge",
-      "changes": [],
+      "changes": [
+        {
+          "themes": [
+            "feature"
+          ],
+          "utilities": [],
+          "notes": [
+            "Adds a basic README file."
+          ]
+        },
+        {
+          "themes": [
+            "bug"
+          ],
+          "utilities": [
+            "margin",
+            "padding"
+          ],
+          "notes": [
+            "Adds specificity to margin and padding so that they override reset styles."
+          ]
+        },
+        {
+          "themes": [
+            "feature"
+          ],
+          "utilities": [],
+          "notes": [
+            "Adds a handful of basic reset styles to ensure consistency."
+          ]
+        },
+        {
+          "themes": [
+            "refactor"
+          ],
+          "utilities": [],
+          "notes": [
+            "Updates the build scripts so that output is more standardized."
+          ]
+        },
+        {
+          "themes": [
+            "feature"
+          ],
+          "utilities": [
+            "margin",
+            "padding"
+          ],
+          "notes": [
+            "Adds support for a whitespace configuration in the settings file."
+          ]
+        }
+      ],
       "versions": [
         {
-          "number": "1.1.0",
-          "date": "2021/NOV/15",
+          "number": "1",
+          "date": "2021/JUL/23",
           "author": "Josh Beveridge",
-          "changes": [],
+          "changes": [
+            {
+              "themes": [
+                "breaking",
+                "refactor"
+              ],
+              "utilities": [],
+              "notes": [
+                "Alters the configuration file to use the word key over name for syntax consistency with other tools."
+              ]
+            },
+            {
+              "themes": [
+                "feature"
+              ],
+              "utilities": [],
+              "notes": [
+                "The init script now asks for a scripts folder alongside the markup folder because state management that happens in JavaScript needs to be considered when compiling the production files."
+              ]
+            },
+            {
+              "themes": [
+                "refactor"
+              ],
+              "utilities": [],
+              "notes": [
+                "The init script will now fail if the directories entered in the prompt do not yet exist."
+              ]
+            },
+            {
+              "themes": [
+                "refactor"
+              ],
+              "utilities": [],
+              "notes": [
+                "Reworks a lot of the scripting into more centralized, reusable chunks."
+              ]
+            },
+            {
+              "themes": [
+                "refactor"
+              ],
+              "utilities": [],
+              "notes": [
+                "Removes the need for a Gulpfile for internal development and migrates to node execution of Gulp scripts."
+              ]
+            },
+            {
+              "themes": [
+                "bug"
+              ],
+              "utilities": [],
+              "notes": [
+                "Ensures that that debug configuration properly applies to the compile script, as well as the build script."
+              ]
+            },
+            {
+              "themes": [
+                "bug"
+              ],
+              "utilities": [],
+              "notes": [
+                "Updates the use of \"/\" characters in Sass math functions to resolve deprecation warnings."
+              ]
+            },
+            {
+              "themes": [
+                "feature"
+              ],
+              "utilities": [
+                "width"
+              ],
+              "notes": [
+                "Adds support for the width attribute, allowing the user to configure custom width values."
+              ]
+            },
+            {
+              "themes": [
+                "feature"
+              ],
+              "utilities": [],
+              "notes": [
+                "Adds support for state management through the use of \":x\" syntax, allowing for control over hover (:h), active (:a), focus (:f), and disabled (:d)."
+              ]
+            },
+            {
+              "themes": [
+                "feature"
+              ],
+              "utilities": [
+                "flex-grid"
+              ],
+              "notes": [
+                "Adds support for normal and stretch prop values when defining a grid."
+              ]
+            },
+            {
+              "themes": [
+                "feature"
+              ],
+              "utilities": [
+                "align-items"
+              ],
+              "notes": [
+                "Adds support for the normal prop value."
+              ]
+            }
+          ],
           "versions": [
             {
-              "number": "1.1.12",
+              "number": "12",
               "date": "2021/NOV/15",
               "author": "Josh Beveridge",
               "changes": [
@@ -98,7 +257,7 @@
               ]
             },
             {
-              "number": "1.1.11",
+              "number": "11",
               "date": "2021/OCT/29",
               "author": "Peter Giles",
               "changes": [
@@ -114,7 +273,7 @@
               ]
             },
             {
-              "number": "1.1.10",
+              "number": "10",
               "date": "2021/SEP/29",
               "author": "Josh Beveridge",
               "changes": [
@@ -130,7 +289,7 @@
               ]
             },
             {
-              "number": "1.1.9",
+              "number": "9",
               "date": "2021/SEP/28",
               "author": "Josh Beveridge",
               "changes": [
@@ -146,7 +305,7 @@
               ]
             },
             {
-              "number": "1.1.8",
+              "number": "8",
               "date": "2021/SEP/27",
               "author": "Josh Beveridge",
               "changes": [
@@ -282,7 +441,7 @@
               ]
             },
             {
-              "number": "1.1.7",
+              "number": "7",
               "date": "2021/SEP/09",
               "author": "Josh Beveridge",
               "changes": [
@@ -298,7 +457,7 @@
               ]
             },
             {
-              "number": "1.1.6",
+              "number": "6",
               "date": "2021/SEP/08",
               "author": "Josh Beveridge",
               "changes": [
@@ -323,7 +482,7 @@
               ]
             },
             {
-              "number": "1.1.5",
+              "number": "5",
               "date": "2021/AUG/06",
               "author": "Josh Beveridge",
               "changes": [
@@ -339,7 +498,7 @@
               ]
             },
             {
-              "number": "1.1.4",
+              "number": "4",
               "date": "2021/AUG/06",
               "author": "Josh Beveridge",
               "changes": [
@@ -355,7 +514,7 @@
               ]
             },
             {
-              "number": "1.1.3",
+              "number": "3",
               "date": "2021/AUG/06",
               "author": "Josh Beveridge",
               "changes": [
@@ -383,7 +542,7 @@
               ]
             },
             {
-              "number": "1.1.2",
+              "number": "2",
               "date": "2021/AUG/04",
               "author": "Josh Beveridge",
               "changes": [
@@ -391,12 +550,144 @@
                   "themes": [
                     "optimization"
                   ],
+                  "utilities": [],
+                  "notes": [
+                    "Enhances the clean script such that it now searches individually compiled utility files rather than the library in its entirety on each call, speeding things up."
+                  ]
+                },
+                {
+                  "themes": [
+                    "feature"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "Adds a new watch script that will only rerun the build script if the user modifies the configuration file, otherwise it only performs the code match and CSS file construction."
+                  ]
+                },
+                {
+                  "themes": [
+                    "refactor"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "Reworks the compile script to meet the newly optimized requirements and adds compression to help alleviate large file implications."
+                  ]
+                },
+                {
+                  "themes": [
+                    "feature"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "The init script now copies the default settings file over to the user's project to ensure that future updates don't break their configuration."
+                  ]
+                }
+              ]
+            },
+            {
+              "number": "1",
+              "date": "2021/AUG/02",
+              "author": "Josh Beveridge",
+              "changes": [
+                {
+                  "themes": [
+                    "bug"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "Fixes an issue where the clean script wasn't properly accounting for CSS rules that required multiple selectors to work."
+                  ]
+                },
+                {
+                  "themes": [
+                    "optimization"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "The clean scripts now remove duplicate entries once the markup has been scraped to help reduce build time."
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "number": "0",
+          "date": "2021/APR/25",
+          "author": "Josh Beveridge",
+          "changes": [],
+          "versions": [
+            {
+              "number": "7",
+              "date": "2021/JUN/23",
+              "author": "Josh Beveridge",
+              "changes": [
+                {
+                  "themes": [
+                    "dependencies"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "Updates dependencies to fix security warnings; certain dependencies are blocked and waiting on patches."
+                  ]
+                }
+              ]
+            },
+            {
+              "number": "6",
+              "date": "2021/APR/26",
+              "author": "Josh Beveridge",
+              "changes": [
+                {
+                  "themes": [
+                    "bug"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "Fixes a color function bug that was causing the init script to fail."
+                  ]
+                },
+                {
+                  "themes": [
+                    "refactor"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "Enhances the init script so that the output it creates is more consistent."
+                  ]
+                }
+              ]
+            },
+            {
+              "number": "5",
+              "date": "2021/APR/25",
+              "author": "Josh Beveridge",
+              "changes": [
+                {
+                  "themes": [
+                    "bug"
+                  ],
                   "utilities": [
-                    "bg-color",
-                    "font-color"
+                    "display"
                   ],
                   "notes": [
-                    "Enhances color opacity so that the user can specify target opacities, rather than toggling the array on/off, offering more control and less bloat."
+                    "Fixes the display attribute not being properly escaped, causing quotations in the CSS."
+                  ]
+                }
+              ]
+            },
+            {
+              "number": "4",
+              "date": "2021/APR/25",
+              "author": "Josh Beveridge",
+              "changes": [
+                {
+                  "themes": [
+                    "feature"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "Enhances the build scripts so that they provide helpful console output regarding processes as they run, the amount of time they take, and other descriptive messaging."
                   ]
                 }
               ]
