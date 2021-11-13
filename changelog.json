@@ -1,0 +1,409 @@
+{
+  "versions": [
+    {
+      "number": "1.0.0",
+      "date": "2021/NOV/15",
+      "author": "Josh Beveridge",
+      "changes": [],
+      "versions": [
+        {
+          "number": "1.1.0",
+          "date": "2021/NOV/15",
+          "author": "Josh Beveridge",
+          "changes": [],
+          "versions": [
+            {
+              "number": "1.1.12",
+              "date": "2021/NOV/15",
+              "author": "Josh Beveridge",
+              "changes": [
+                {
+                  "themes": [
+                    "optimization"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "When checking the user's markup, rather than compiling all files into a single text file that is then scraped, the clean script now processes each file independently."
+                  ]
+                },
+                {
+                  "themes": [
+                    "optimization"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "The clean script's scraping logic has been rewritten so that the CSS matching expression is now up to 40 times faster."
+                  ]
+                },
+                {
+                  "themes": [
+                    "refactoring"
+                  ],
+                  "utilities": [
+                    "border-weight",
+                    "container",
+                    "opacity",
+                    "radius",
+                    "shadow",
+                    "width"
+                  ],
+                  "notes": [
+                    "Basic utilities now share a centralized set of scripts, rather than each utility having its own."
+                  ]
+                },
+                {
+                  "themes": [
+                    "bug"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "Duplicate keys for most configuration options are now handled by prioritizing the user's first definition using that key, including over legacy default values."
+                  ]
+                },
+                {
+                  "themes": [
+                    "refactoring"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "Begins preliminary work on deprecating the folders configuration in favor of simplified, more consistent input and output configurations."
+                  ]
+                },
+                {
+                  "themes": [
+                    "style"
+                  ],
+                  "utilities": [
+                    "bg-color",
+                    "font-color",
+                    "opacity",
+                    "overlay"
+                  ],
+                  "notes": [
+                    "Adds a transition so that state changes now ease from one value to another."
+                  ]
+                },
+                {
+                  "themes": [
+                    "bug"
+                  ],
+                  "utilities": [
+                    "position",
+                    "location"
+                  ],
+                  "notes": [
+                    "Position's sticky value now comes with a default top value of 0 so that it works without the need for another attribute; this value can be overidden by location."
+                  ]
+                }
+              ]
+            },
+            {
+              "number": "1.1.11",
+              "date": "2021/OCT/29",
+              "author": "Peter Giles",
+              "changes": [
+                {
+                  "themes": [
+                    "bug"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "Switches to the synchronous version of fs.WriteFile to avoid failues when scripts execute slowly."
+                  ]
+                }
+              ]
+            },
+            {
+              "number": "1.1.10",
+              "date": "2021/SEP/29",
+              "author": "Josh Beveridge",
+              "changes": [
+                {
+                  "themes": [
+                    "bug"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "Adds ignore values to the markup scraper so that Hydrogen doesn't scrape its own files, causing it to crash."
+                  ]
+                }
+              ]
+            },
+            {
+              "number": "1.1.9",
+              "date": "2021/SEP/28",
+              "author": "Josh Beveridge",
+              "changes": [
+                {
+                  "themes": [
+                    "bug"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "Fixes a resulting bug from the previous version that caused the production version of the watch script to fail."
+                  ]
+                }
+              ]
+            },
+            {
+              "number": "1.1.8",
+              "date": "2021/SEP/27",
+              "author": "Josh Beveridge",
+              "changes": [
+                {
+                  "themes": [
+                    "feature"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "Adds a new configuration option for exporting your settings as Sass variables where possible; this means you can now import things like your whitespace scale into Sass files outside of Hydrogen."
+                  ]
+                },
+                {
+                  "themes": [
+                    "optimization"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "Removes some legacy code and cleans up some dependencies in the script files."
+                  ]
+                },
+                {
+                  "themes": [
+                    "optimization"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "Adds Prettier support."
+                  ]
+                },
+                {
+                  "themes": [
+                    "refactoring"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "Updates the default set of variables to be more thoughtful and use standardized nomenclature."
+                  ]
+                },
+                {
+                  "themes": [
+                    "feature"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "Adds a default configuration in the color settings for transparent."
+                  ]
+                },
+                {
+                  "themes": [
+                    "refactoring"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "Renames the default theme colors to use agnostic language (e.g. purple => primary)."
+                  ]
+                },
+                {
+                  "themes": [
+                    "refactoring"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "Overhauls color variants so that they can be overidden with custom values or disabled entirely."
+                  ]
+                },
+                {
+                  "themes": [
+                    "feature"
+                  ],
+                  "utilities": [
+                    "margin"
+                  ],
+                  "notes": [
+                    "Adds the ability to use negative whitespace values in the margin attribute."
+                  ]
+                },
+                {
+                  "themes": [
+                    "feature"
+                  ],
+                  "utilities": [
+                    "opacity"
+                  ],
+                  "notes": [
+                    "Adds the opacity attribute so that you can now control an element's opacity."
+                  ]
+                },
+                {
+                  "themes": [
+                    "feature"
+                  ],
+                  "utilities": [
+                    "order"
+                  ],
+                  "notes": [
+                    "Adds support for the order attribute when flex grids are enabled, allowing you to control the order of your grid items."
+                  ]
+                },
+                {
+                  "themes": [
+                    "feature"
+                  ],
+                  "utilities": [
+                    "overlay"
+                  ],
+                  "notes": [
+                    "Adds support for the overlay attribute, allowing you to add an overlay to an element."
+                  ]
+                },
+                {
+                  "themes": [
+                    "refactoring"
+                  ],
+                  "utilities": [
+                    "radius"
+                  ],
+                  "notes": [
+                    "Renames the default radius keys to be more descriptive."
+                  ]
+                },
+                {
+                  "themes": [
+                    "feature"
+                  ],
+                  "utilities": [
+                    "layer"
+                  ],
+                  "notes": [
+                    "Adds support for the layer attribute, allowing you to create layers and apply them to elements, along with positioning."
+                  ]
+                }
+              ]
+            },
+            {
+              "number": "1.1.7",
+              "date": "2021/SEP/09",
+              "author": "Josh Beveridge",
+              "changes": [
+                {
+                  "themes": [
+                    "bug"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "Fixes a typo (a missing $) that completely broke the overflow attribute."
+                  ]
+                }
+              ]
+            },
+            {
+              "number": "1.1.6",
+              "date": "2021/SEP/08",
+              "author": "Josh Beveridge",
+              "changes": [
+                {
+                  "themes": [
+                    "dependencies"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "Updates and fixes NPM warnings where possible, including to gulp-sass v5.0.0."
+                  ]
+                },
+                {
+                  "themes": [
+                    "bug"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "An improperly set environment variable had broken the init script."
+                  ]
+                }
+              ]
+            },
+            {
+              "number": "1.1.5",
+              "date": "2021/AUG/06",
+              "author": "Josh Beveridge",
+              "changes": [
+                {
+                  "themes": [
+                    "feature"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "Enhances the clean script to accept key-value pairs when scanning markup and scripts."
+                  ]
+                }
+              ]
+            },
+            {
+              "number": "1.1.4",
+              "date": "2021/AUG/06",
+              "author": "Josh Beveridge",
+              "changes": [
+                {
+                  "themes": [
+                    "bug"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "Updates the alpha Sass functions to use rgba over color.adjust, as it seems to have stoppped working."
+                  ]
+                }
+              ]
+            },
+            {
+              "number": "1.1.3",
+              "date": "2021/AUG/06",
+              "author": "Josh Beveridge",
+              "changes": [
+                {
+                  "themes": [
+                    "refactor"
+                  ],
+                  "utilities": [
+                    "bg-color",
+                    "font-color"
+                  ],
+                  "notes": [
+                    "Enhances color opacity so that the user can specify target opacities, rather than toggling the array on/off, offering more control and less bloat."
+                  ]
+                },
+                {
+                  "themes": [
+                    "feature"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "The clean script now warns the user if they try to use an opacity value that isn't defined in their configuration."
+                  ]
+                }
+              ]
+            },
+            {
+              "number": "1.1.2",
+              "date": "2021/AUG/04",
+              "author": "Josh Beveridge",
+              "changes": [
+                {
+                  "themes": [
+                    "optimization"
+                  ],
+                  "utilities": [
+                    "bg-color",
+                    "font-color"
+                  ],
+                  "notes": [
+                    "Enhances color opacity so that the user can specify target opacities, rather than toggling the array on/off, offering more control and less bloat."
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
