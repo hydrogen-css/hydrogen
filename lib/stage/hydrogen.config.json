@@ -16,20 +16,28 @@
   },
   "media": [
     {
-      "key": "s",
-      "value": "48em"
+      "key": "xs",
+      "value": "screen and (min-width: 48em)"
     },
     {
       "key": "s",
-      "value": "48em"
+      "value": "screen and (min-width: 55em)"
+    },
+    {
+      "key": "b",
+      "value": "screen and (min-width: 55em)"
+    },
+    {
+      "key": "db",
+      "value": "screen and (min-width: 55em)"
     },
     {
       "key": "m",
-      "value": "64em"
+      "value": "screen and (min-width: 64em)"
     },
     {
       "key": "l",
-      "value": "100em"
+      "value": "screen and (min-width: 100em)"
     }
   ],
   "borderWeights": [

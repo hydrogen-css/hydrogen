@@ -142,16 +142,20 @@
   "layerCount": 5,
   "media": [
     {
+      "key": "xs",
+      "value": "screen and (min-width: 48em)"
+    },
+    {
       "key": "s",
-      "value": "48em"
+      "value": "screen and (min-width: 55em)"
     },
     {
       "key": "m",
-      "value": "64em"
+      "value": "screen and (min-width: 64em)"
     },
     {
       "key": "l",
-      "value": "100em"
+      "value": "screen and (min-width: 100em)"
     }
   ],
   "opacities": [

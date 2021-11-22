@@ -59,6 +59,28 @@
       ],
       "versions": [
         {
+          "number": "2",
+          "date": "2021/NOV/21",
+          "author": "Josh Beveridge",
+          "changes": [
+            {
+              "themes": [
+                "breaking",
+                "refactor"
+              ],
+              "utilities": [],
+              "migrations": [
+                "Make sure your query definitions in your config now include the full min-width query (e.g. if your query value was 900px, it now needs to be \"screen and (min-width 900px)\""
+              ],
+              "notes": [
+                "Reworks the media queries configuration so that it now accepts full queries rather than numeric values.",
+                "Adds a new intermediate default query, replacing the original s key, which is now xs."
+              ]
+            }
+          ],
+          "versions": []
+        },
+        {
           "number": "1",
           "date": "2021/JUL/23",
           "author": "Josh Beveridge",
