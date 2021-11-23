@@ -8,7 +8,7 @@
     @each $colorKey, $colorValue in $colorMap {
       [data-h2-bg-color*='#{$mediaKey}#{$stateKey}(#{$colorKey})']#{$stateValue} {
         background-color: $colorValue;
-        transition: background-color 0.2s ease;
+        transition: all 0.2s ease;
       }
     }
   }
@@ -19,7 +19,7 @@
     @each $gradientKey, $gradientValue in $gradientMap {
       [data-h2-bg-color*='#{$mediaKey}#{$stateKey}(#{$gradientKey})']#{$stateValue} {
         background-image: #{$gradientValue};
-        transition: background-color 0.2s ease;
+        transition: all 0.2s ease;
       }
     }
   }

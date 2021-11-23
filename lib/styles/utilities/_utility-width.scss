@@ -6,6 +6,7 @@
     @each $widthKey, $widthValue in $widthMap {
       [data-h2-width*='#{$mediaKey}#{$stateKey}(#{$widthKey})']#{$stateValue} {
         width: #{$widthValue};
+        transition: all 0.2s ease;
       }
     }
   }
