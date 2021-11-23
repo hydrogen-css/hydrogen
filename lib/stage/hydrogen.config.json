@@ -146,6 +146,7 @@
       ]
     },
     {
+      "key": "LTEST",
       "type": "linear",
       "angle": "135deg",
       "colorStops": [
