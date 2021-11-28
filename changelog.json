@@ -60,7 +60,7 @@
       "versions": [
         {
           "number": "2",
-          "date": "2021/NOV/21",
+          "date": "2021/NOV/24",
           "author": "Josh Beveridge",
           "changes": [
             {
@@ -88,6 +88,15 @@
               "notes": [
                 "Requires gradient configurations to now have a key for easier usage and deprecates the old syntax. Rather than typing the unique combination, you'll be able to use b(gradient-KEY).",
                 "This also modifies the way SCSS variables are exported, but will only affect gradients that use the new syntax to avoid breaking existing implementations."
+              ]
+            },
+            {
+              "themes": [
+                "optimization"
+              ],
+              "utilities": [],
+              "notes": [
+                "Migrates to sass.sync() for the performance benefits."
               ]
             }
           ],
