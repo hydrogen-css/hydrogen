@@ -173,7 +173,7 @@
           "versions": [
             {
               "number": "13",
-              "date": "2021/NOV/21",
+              "date": "2021/NOV/22",
               "author": "Josh Beveridge",
               "changes": [
                 {
@@ -200,6 +200,15 @@
                   ],
                   "notes": [
                     "Sets transition all for these properties rather than dedicated values because when used in concert, the last one would always take precendence."
+                  ]
+                },
+                {
+                  "themes": [
+                    "bug"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "Fixes a bug that broke the production build script if the flex grid was disabled."
                   ]
                 }
               ]
