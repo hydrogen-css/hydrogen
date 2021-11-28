@@ -172,6 +172,48 @@
           ],
           "versions": [
             {
+              "number": "13",
+              "date": "2021/NOV/22",
+              "author": "Josh Beveridge",
+              "changes": [
+                {
+                  "themes": [
+                    "bug"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "Fixes a bug where the new utility generation script was appending defaults to the end of the configuration array, resulting in them being prioritized last."
+                  ]
+                },
+                {
+                  "themes": [
+                    "bug"
+                  ],
+                  "utilities": [
+                    "bg-color",
+                    "border",
+                    "font-color",
+                    "opacity",
+                    "overlay",
+                    "shadow",
+                    "width"
+                  ],
+                  "notes": [
+                    "Sets transition all for these properties rather than dedicated values because when used in concert, the last one would always take precendence."
+                  ]
+                },
+                {
+                  "themes": [
+                    "bug"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "Fixes a bug that broke the production build script if the flex grid was disabled."
+                  ]
+                }
+              ]
+            },
+            {
               "number": "12",
               "date": "2021/NOV/15",
               "author": "Josh Beveridge",

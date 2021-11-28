@@ -6,7 +6,7 @@
     @each $opacityKey, $opacityValue in $opacityMap {
       [data-h2-opacity*='#{$mediaKey}#{$stateKey}(#{$opacityKey})']#{$stateValue} {
         opacity: #{$opacityValue};
-        transition: opacity 0.2s ease;
+        transition: all 0.2s ease;
       }
     }
   }
