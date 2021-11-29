@@ -172,6 +172,24 @@
           ],
           "versions": [
             {
+              "number": "14",
+              "date": "2021/NOV/29",
+              "author": "Josh Beveridge",
+              "changes": [
+                {
+                  "themes": [
+                    "bug"
+                  ],
+                  "utilities": [
+                    "order"
+                  ],
+                  "notes": [
+                    "Fixes a bug where Hydrogen wouldn't compile if the flex grid was disabled because it was still trying to process the order utility."
+                  ]
+                }
+              ]
+            },
+            {
               "number": "13",
               "date": "2021/NOV/22",
               "author": "Josh Beveridge",
