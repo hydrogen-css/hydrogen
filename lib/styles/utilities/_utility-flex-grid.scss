@@ -56,4 +56,11 @@ $h2GridColumns: 12;
       }
     }
   }
+  [data-h2-flex-grid] > [data-h2-flex-item*='#{$mediaKey}(auto)'] {
+    flex: auto;
+    max-width: 100%;
+  }
+  [data-h2-flex-grid] > [data-h2-flex-item*='#{$mediaKey}(content)'] {
+    max-width: 100%;
+  }
 }

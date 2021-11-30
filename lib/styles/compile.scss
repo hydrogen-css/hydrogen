@@ -43,6 +43,7 @@
 @use 'utilities/utility-radius' as radiusStyles;
 @use 'utilities/utility-shadow' as shadowStyles;
 @use 'utilities/utility-text-align' as textAlignStyles;
+@use 'utilities/utility-text-transform' as textTransformStyles;
 @use 'utilities/utility-visibility' as visibilityStyles;
 @use 'utilities/utility-width' as widthStyles;
 
@@ -177,6 +178,10 @@
     );
 
     @include textAlignStyles.h2-utility-text-align($mediaKey: $mediaKey);
+
+    @include textTransformStyles.h2-utility-text-transform(
+      $mediaKey: $mediaKey
+    );
 
     @include visibilityStyles.h2-utility-visibility(
       $mediaKey: $mediaKey,

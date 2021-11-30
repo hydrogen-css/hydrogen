@@ -56,7 +56,7 @@
   "hydrogen-flex-item": {
     "prefix": "data-h2-flex-item",
     "body": [
-      "data-h2-flex-item=\"${1:MEDIA}(${2:X}of${3:Y})\""
+      "data-h2-flex-item=\"${1:MEDIA}(${2|auto,content,XofY|})\""
     ]
   },
   "hydrogen-flex-wrap": {
@@ -147,6 +147,12 @@
     "prefix": "data-h2-text-align",
     "body": [
       "data-h2-text-align=\"${1:MEDIA}(${2|center,justify,left,right|})\""
+    ]
+  },
+  "hydrogen-text-transform": {
+    "prefix": "data-h2-text-transform",
+    "body": [
+      "data-h2-text-transform=\"${1:MEDIA}(${2|capitalize,lowercase,uppercase|})\""
     ]
   },
   "hydrogen-visibility": {
