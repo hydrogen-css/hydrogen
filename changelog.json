@@ -186,17 +186,6 @@
                   "notes": [
                     "Fixes a bug where the content value didn't reset the flex value."
                   ]
-                },
-                {
-                  "themes": [
-                    "feature"
-                  ],
-                  "utilities": [
-                    "flex-item"
-                  ],
-                  "notes": [
-                    "Adds support for the auto and content values in the flex-item parameter. These values will allow flex grid items to grow to fill the remaining space or to assume the width of their contents respectively."
-                  ]
                 }
               ]
             },
