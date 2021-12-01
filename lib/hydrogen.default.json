@@ -7,11 +7,6 @@
   "output": [
     "path/to/styles/output/folder"
   ],
-  "folders": {
-    "markup": "path/to/markup/folder",
-    "scripts": "path/to/scripts/folder",
-    "styles": "path/to/styles/folder"
-  },
   "variables": {
     "sass": {
       "enabled": "false"
@@ -19,15 +14,15 @@
   },
   "borderWeights": [
     {
-      "key": "s",
+      "key": "1px",
       "weight": "1px"
     },
     {
-      "key": "m",
+      "key": ".5rem",
       "weight": ".5rem"
     },
     {
-      "key": "l",
+      "key": "1rem",
       "weight": "1rem"
     }
   ],
@@ -101,10 +96,6 @@
     {
       "key": "l",
       "maxWidth": "80rem"
-    },
-    {
-      "key": "full",
-      "maxWidth": "none"
     }
   ],
   "flexgrid": {
@@ -173,10 +164,6 @@
     }
   ],
   "radius": [
-    {
-      "key": "none",
-      "value": "0"
-    },
     {
       "key": "rounded",
       "value": "10px"

@@ -60,7 +60,7 @@
       "versions": [
         {
           "number": "2",
-          "date": "2021/NOV/24",
+          "date": "2021/DEC/02",
           "author": "Josh Beveridge",
           "changes": [
             {
@@ -97,6 +97,24 @@
               "utilities": [],
               "notes": [
                 "Migrates to sass.sync() for the performance benefits."
+              ]
+            },
+            {
+              "themes": [
+                "refactor"
+              ],
+              "utilities": [],
+              "notes": [
+                "Hydrogen now throws a non-failing error when it finds that your input directories have no files in them."
+              ]
+            },
+            {
+              "themes": [
+                "refactor"
+              ],
+              "utilities": [],
+              "notes": [
+                "Most of the utility scripts have been simplified so that central handler scripts now handle environment detection and path generation."
               ]
             }
           ],
