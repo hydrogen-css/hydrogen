@@ -8,9 +8,9 @@ It leverages data-attributes to allow the styling of elements right in your mark
 
 [Visit the documentation website for details.](https://hydrogen.design)
 
-# 🛠️ Basic Usage
+## 🛠️ Basic Usage
 
-## Installation
+### Installation
 
 - run `npm install @hydrogen-design-system/hydrogen.css` to install Hydrogen
 - run `npx h2-init` to setup your input/output directories
@@ -18,7 +18,7 @@ It leverages data-attributes to allow the styling of elements right in your mark
 - run `npx h2-watch` to watch your files for changes and compile when a change is detected
 - run `npx h2-build` when you're ready to deploy to production
 
-## Syntax
+### Syntax
 
 Hydrogen uses a custom `data-attribute` syntax for complex styling.
 
@@ -30,7 +30,7 @@ An example of a Hydrogen attribute in use would be something like:
 
 This repository also contains a handy `hydrogen.snippets.json` file that contains snippet automation for VS Code, enabling auto completion and tab stops.
 
-# 🏗️ Configuration
+## 🏗️ Configuration
 
 You can learn more about Hydrogen's configuration file on the [documentation website](https://hydrogen.design/#configuration).
 
@@ -38,9 +38,9 @@ Hydrogen is configured using a `hydrogen.config.json` file located at the root o
 
 Within this configuration file, you can modify many of Hydrogen's utilities to include values that suit your project's needs and theme, including custom media queries, colors, whitespace, and shadows.
 
-# 🤖 Features
+## 🤖 Features
 
-## Utilities
+### Utilities
 
 You can learn about [utility usage in the documentation](https://hydrogen.design/#backgroundColor), but Hydrogen offers the following utilities:
 
@@ -76,7 +76,7 @@ You can learn about [utility usage in the documentation](https://hydrogen.design
 - `visibility`
 - `width`
 
-## States
+### States
 
 Along with media queries, Hydrogen offers the ability to modify attributes using the following [state](https://hydrogen.design/#states) keys:
 
