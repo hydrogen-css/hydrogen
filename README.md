@@ -40,6 +40,10 @@ Within this configuration file, you can modify many of Hydrogen's utilities to i
 
 ## 🤖 Features
 
+### Compression
+
+Hydrogen uses custom scripting to scan your code for `data-h2` attributes and then custom builds a CSS stylesheet that contains only Hydrogen's base and the attributes you've used. No bloat. No duplication. This means that the library in production is extremely small while allowing it to provide a robust set of features and support complex customization.
+
 ### Utilities
 
 You can learn about [utility usage in the documentation](https://hydrogen.design/#backgroundColor), but Hydrogen offers the following utilities:
