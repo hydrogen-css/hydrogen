@@ -10,11 +10,23 @@ It leverages data-attributes to allow the styling of elements right in your mark
 
 # 🛠️ Basic Usage
 
+## Installation
+
 - run `npm install @hydrogen-design-system/hydrogen.css` to install Hydrogen
 - run `npx h2-init` to setup your input/output directories
 - modify your `hydrogen.config.json` file to match your theme
 - run `npx h2-watch` to watch your files for changes and compile when a change is detected
 - run `npx h2-build` when you're ready to deploy to production
+
+## Syntax
+
+Hydrogen uses a custom `data-attribute` syntax for complex styling.
+
+`data-h2-UTILITY="MEDIA:STATE(PARAMETERS)"`
+
+An example of a Hydrogen attribute in use would be something like:
+
+`data-h2-bg-color="b(primary) b:h(accent)"`
 
 This repository also contains a handy `hydrogen.snippets.json` file that contains snippet automation for VS Code, enabling auto completion and tab stops.
 
