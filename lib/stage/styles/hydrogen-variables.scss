@@ -31,11 +31,17 @@ $h2-gradient-LTEST: linear-gradient(135deg,green,red,blue);
 $h2-gradient-mygradientarray: linear-gradient(135deg,green,pink,rgba(255, 255, 255, 1));
 // Media Queries (e.g. #{$query})
 $h2-media-query-b: "screen";
+$h2-media-query-b-dark: "screen and (prefers-color-scheme: dark)";
 $h2-media-query-xs: "screen and (min-width: 48em)";
+$h2-media-query-xs-dark: "screen and (min-width: 48em) and (prefers-color-scheme: dark)";
 $h2-media-query-s: "screen and (min-width: 55em)";
+$h2-media-query-s-dark: "screen and (min-width: 55em) and (prefers-color-scheme: dark)";
 $h2-media-query-db: "screen and (min-width: 55em)";
+$h2-media-query-db-dark: "screen and (min-width: 55em) and (prefers-color-scheme: dark)";
 $h2-media-query-m: "screen and (min-width: 64em)";
+$h2-media-query-m-dark: "screen and (min-width: 64em) and (prefers-color-scheme: dark)";
 $h2-media-query-l: "screen and (min-width: 100em)";
+$h2-media-query-l-dark: "screen and (min-width: 100em) and (prefers-color-scheme: dark)";
 // Opacities
 $h2-opacity-half: .5;
 $h2-opacity-07: 0.7;
