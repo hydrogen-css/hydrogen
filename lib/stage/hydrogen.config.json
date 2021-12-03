@@ -146,6 +146,23 @@
       ]
     },
     {
+      "type": "radial",
+      "colorStops": [
+        {
+          "key": "green",
+          "color": "red"
+        },
+        {
+          "key": "red",
+          "color": "red"
+        },
+        {
+          "key": "blue",
+          "color": "blue"
+        }
+      ]
+    },
+    {
       "key": "LTEST",
       "type": "linear",
       "angle": "135deg",
@@ -160,6 +177,25 @@
         },
         {
           "key": "blue",
+          "color": "blue"
+        }
+      ]
+    },
+    {
+      "key": "LTEST",
+      "type": "linear",
+      "angle": "135deg",
+      "colorStops": [
+        {
+          "key": "pink",
+          "color": "green"
+        },
+        {
+          "key": "blue",
+          "color": "red"
+        },
+        {
+          "key": "pink",
           "color": "blue"
         }
       ]
