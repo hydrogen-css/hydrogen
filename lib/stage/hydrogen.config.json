@@ -199,6 +199,16 @@
           "color": "blue"
         }
       ]
+    },
+    {
+      "key": "mygradientarray",
+      "type": "linear",
+      "angle": "135deg",
+      "colorStops": [
+        "green",
+        "pink",
+        "rgba(255, 255, 255, 1)"
+      ]
     }
   ],
   "layerCount": 3,

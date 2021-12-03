@@ -27,7 +27,8 @@ $h2-font-size-base: 1rem;
 $h2-font-size-caption: 0.7518796992481203rem;
 // Gradients
 $h2-radial-gradient-green-red-blue: radial-gradient(green,red,blue);
-$h2-linear-gradient-LTEST: linear-gradient(135deg,green,red,blue);
+$h2-gradient-LTEST: linear-gradient(135deg,green,red,blue);
+$h2-gradient-mygradientarray: linear-gradient(135deg,green,pink,rgba(255, 255, 255, 1));
 // Media Queries (e.g. #{$query})
 $h2-media-query-b: "screen";
 $h2-media-query-xs: "screen and (min-width: 48em)";
