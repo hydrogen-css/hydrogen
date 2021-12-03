@@ -26,7 +26,7 @@
   "hydrogen-border": {
     "prefix": "data-h2-border",
     "body": [
-      "data-h2-container=\"${1:MEDIA}(${2:COLOR}, ${3|all,top,right,bottom,left,top-bottom,top-right,top-left,right-left,bottom-right,bottom-left|}, ${4|solid,dashed|}, ${5:WEIGHT})\""
+      "data-h2-border=\"${1:MEDIA}(${2:COLOR}, ${3|all,top,right,bottom,left,top-bottom,top-right,top-left,right-left,bottom-right,bottom-left|}, ${4|solid,dashed|}, ${5:WEIGHT})\""
     ]
   },
   "hydrogen-container": {
@@ -117,6 +117,12 @@
     "prefix": "data-h2-overflow",
     "body": [
       "data-h2-overflow=\"${1:MEDIA}(${2|all,x,y|}, ${3|auto,hidden,scroll,visible|})\""
+    ]
+  },
+  "hydrogen-overlay": {
+    "prefix": "data-h2-overlay",
+    "body": [
+      "data-h2-overlay=\"${1:MEDIA}(${2:COLOR})\""
     ]
   },
   "hydrogen-padding": {
