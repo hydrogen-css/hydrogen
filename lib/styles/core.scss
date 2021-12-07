@@ -145,4 +145,7 @@ li {
 [data-h2-container] {
   margin: 0 auto;
   width: 90%;
+  @media screen and (orientation: landscape) {
+    width: 95%;
+  }
 }

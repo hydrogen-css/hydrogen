@@ -113,6 +113,12 @@
       "data-h2-margin=\"${1:MEDIA}(${2|all,top,right,bottom,left,top-bottom,top-right,top-left,right-left,bottom-right,bottom-left|}, ${3:WHITESPACE})\""
     ]
   },
+  "hydrogen-order": {
+    "prefix": "data-h2-order",
+    "body": [
+      "data-h2-order=\"${1:MEDIA}(${2:NUMBER})\""
+    ]
+  },
   "hydrogen-overflow": {
     "prefix": "data-h2-overflow",
     "body": [

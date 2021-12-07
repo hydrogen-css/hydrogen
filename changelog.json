@@ -146,6 +146,17 @@
               "notes": [
                 "Console output has been slightly reformatted to make it clearer."
               ]
+            },
+            {
+              "themes": [
+                "refactor"
+              ],
+              "utilities": [
+                "container"
+              ],
+              "notes": [
+                "Containers on landscape viewports now take up 95% rather than 90%."
+              ]
             }
           ],
           "versions": []
