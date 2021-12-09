@@ -284,6 +284,113 @@
           ],
           "versions": [
             {
+              "number": "16",
+              "date": "2021/NOV/29",
+              "author": "Josh Beveridge",
+              "changes": [
+                {
+                  "themes": [
+                    "bug"
+                  ],
+                  "utilities": [
+                    "flex-item"
+                  ],
+                  "notes": [
+                    "Fixes a bug where the content value didn't reset the flex value."
+                  ]
+                }
+              ]
+            },
+            {
+              "number": "15",
+              "date": "2021/NOV/29",
+              "author": "Josh Beveridge",
+              "changes": [
+                {
+                  "themes": [
+                    "feature"
+                  ],
+                  "utilities": [
+                    "text-transform"
+                  ],
+                  "notes": [
+                    "Adds support for the text-transform utility, allowing users to customize text to be capitalized, lowercase, or uppercase."
+                  ]
+                },
+                {
+                  "themes": [
+                    "feature"
+                  ],
+                  "utilities": [
+                    "flex-item"
+                  ],
+                  "notes": [
+                    "Adds support for the auto and content values in the flex-item parameter. These values will allow flex grid items to grow to fill the remaining space or to assume the width of their contents respectively."
+                  ]
+                }
+              ]
+            },
+            {
+              "number": "14",
+              "date": "2021/NOV/29",
+              "author": "Josh Beveridge",
+              "changes": [
+                {
+                  "themes": [
+                    "bug"
+                  ],
+                  "utilities": [
+                    "order"
+                  ],
+                  "notes": [
+                    "Fixes a bug where Hydrogen wouldn't compile if the flex grid was disabled because it was still trying to process the order utility."
+                  ]
+                }
+              ]
+            },
+            {
+              "number": "13",
+              "date": "2021/NOV/22",
+              "author": "Josh Beveridge",
+              "changes": [
+                {
+                  "themes": [
+                    "bug"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "Fixes a bug where the new utility generation script was appending defaults to the end of the configuration array, resulting in them being prioritized last."
+                  ]
+                },
+                {
+                  "themes": [
+                    "bug"
+                  ],
+                  "utilities": [
+                    "bg-color",
+                    "border",
+                    "font-color",
+                    "opacity",
+                    "overlay",
+                    "shadow",
+                    "width"
+                  ],
+                  "notes": [
+                    "Sets transition all for these properties rather than dedicated values because when used in concert, the last one would always take precendence."
+                  ]
+                },
+                {
+                  "themes": [
+                    "bug"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "Fixes a bug that broke the production build script if the flex grid was disabled."
+                  ]
+                }
+              ]
+            },
+            {
               "number": "12",
               "date": "2021/NOV/15",
               "author": "Josh Beveridge",

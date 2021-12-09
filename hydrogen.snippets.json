@@ -26,7 +26,7 @@
   "hydrogen-border": {
     "prefix": "data-h2-border",
     "body": [
-      "data-h2-container=\"${1:MEDIA}(${2:COLOR}, ${3|all,top,right,bottom,left,top-bottom,top-right,top-left,right-left,bottom-right,bottom-left|}, ${4|solid,dashed|}, ${5:WEIGHT})\""
+      "data-h2-border=\"${1:MEDIA}(${2:COLOR}, ${3|all,top,right,bottom,left,top-bottom,top-right,top-left,right-left,bottom-right,bottom-left|}, ${4|solid,dashed|}, ${5:WEIGHT})\""
     ]
   },
   "hydrogen-container": {
@@ -56,7 +56,7 @@
   "hydrogen-flex-item": {
     "prefix": "data-h2-flex-item",
     "body": [
-      "data-h2-flex-item=\"${1:MEDIA}(${2:X}of${3:Y})\""
+      "data-h2-flex-item=\"${1:MEDIA}(${2|auto,content,XofY|})\""
     ]
   },
   "hydrogen-flex-wrap": {
@@ -125,6 +125,12 @@
       "data-h2-overflow=\"${1:MEDIA}(${2|all,x,y|}, ${3|auto,hidden,scroll,visible|})\""
     ]
   },
+  "hydrogen-overlay": {
+    "prefix": "data-h2-overlay",
+    "body": [
+      "data-h2-overlay=\"${1:MEDIA}(${2:COLOR})\""
+    ]
+  },
   "hydrogen-padding": {
     "prefix": "data-h2-padding",
     "body": [
@@ -153,6 +159,12 @@
     "prefix": "data-h2-text-align",
     "body": [
       "data-h2-text-align=\"${1:MEDIA}(${2|center,justify,left,right|})\""
+    ]
+  },
+  "hydrogen-text-transform": {
+    "prefix": "data-h2-text-transform",
+    "body": [
+      "data-h2-text-transform=\"${1:MEDIA}(${2|capitalize,lowercase,uppercase|})\""
     ]
   },
   "hydrogen-visibility": {
