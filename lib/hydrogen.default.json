@@ -8,6 +8,9 @@
     "path/to/styles/output/folder"
   ],
   "variables": {
+    "css": {
+      "enabled": "false"
+    },
     "sass": {
       "enabled": "false"
     }

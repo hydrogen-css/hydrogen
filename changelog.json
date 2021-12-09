@@ -89,6 +89,15 @@
             },
             {
               "themes": [
+                "feature"
+              ],
+              "utilities": [],
+              "notes": [
+                "CSS variables can now be generated from Hydrogen's configuration file by enabling them under the variables object."
+              ]
+            },
+            {
+              "themes": [
                 "refactor"
               ],
               "utilities": [

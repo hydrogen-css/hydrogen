@@ -1,0 +1,78 @@
+:root {
+/* Border Weights */
+--h2-border-weight-thing: 1px;
+/* Colors */
+--h2-color-black: rgba(20, 20, 30, 1);
+--h2-color-white: rgba(255, 255, 255, 1);
+--h2-color-green: rgba(0, 255, 0, 1);
+--h2-color-green-light: pink;
+--h2-color-green-dark: orange;
+--h2-color-red: rgba(255, 0, 0, 1);
+--h2-color-blue: rgba(0, 0, 255, 1);
+--h2-color-blue-light: purple;
+--h2-color-blue-dark: teal;
+--h2-color-purple: #FF00FF;
+/* Containers */
+--h2-container-width-full: none;
+--h2-container-width-s: 39rem;
+--h2-container-width-m: 60rem;
+--h2-container-width-l: 80rem;
+/* Typography Scale */
+--h2-font-size-h1: 5.534900853769001rem;
+--h2-font-size-h2: 4.1615795893000005rem;
+--h2-font-size-h3: 3.12900721rem;
+--h2-font-size-h4: 2.352637rem;
+--h2-font-size-h5: 1.7689000000000001rem;
+--h2-font-size-h6: 1.33rem;
+--h2-font-size-base: 1rem;
+--h2-font-size-caption: 0.7518796992481203rem;
+/* Gradients */
+--h2-radial-gradient-green-red-blue: radial-gradient(green,red,blue);
+--h2-gradient-LTEST: linear-gradient(135deg,green,red,blue);
+--h2-gradient-mygradientarray: linear-gradient(135deg,green,pink,rgba(255, 255, 255, 1));
+/* Opacities */
+--h2-opacity-half: .5;
+--h2-opacity-07: 0.7;
+--h2-opacity-30: 30%;
+/* Radius */
+--h2-radius-square: 0;
+--h2-radius-none: 0;
+--h2-radius-rounded: 10px;
+--h2-radius-pill: 50rem;
+--h2-radius-circle: 100%;
+/* Shadows */
+--h2-shadow-xs: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, .2);
+--h2-shadow-s: 0 0.25rem 0.5rem -0.05rem rgba(0, 0, 0, .2);
+--h2-shadow-m: 0 0.4rem 0.7rem -0.1rem rgba(0, 0, 0, .2);
+--h2-shadow-l: 0 0.55rem 1rem -0.2rem rgba(0, 0, 0, .2);
+--h2-shadow-xl: 0 0.7rem 1.5rem -0.3rem rgba(0, 0, 0, .2);
+/* Whitespace */
+--h2-margin-none: 0;
+--h2-margin-auto: auto;
+--h2-margin-xxs: 0.64rem;
+--h2-margin-xs: 0.8rem;
+--h2-margin-s: 1rem;
+--h2-margin-m: 1.25rem;
+--h2-margin-l: 1.5625rem;
+--h2-margin-xl: 1.953125rem;
+--h2-margin-xxl: 2.44140625rem;
+--h2-negative-margin-xxs: -0.64rem;
+--h2-negative-margin-xs: -0.8rem;
+--h2-negative-margin-s: -1rem;
+--h2-negative-margin-m: -1.25rem;
+--h2-negative-margin-l: -1.5625rem;
+--h2-negative-margin-xl: -1.953125rem;
+--h2-negative-margin-xxl: -2.44140625rem;
+--h2-padding-none: 0;
+--h2-padding-xxs: 0.64rem;
+--h2-padding-xs: 0.8rem;
+--h2-padding-s: 1rem;
+--h2-padding-m: 1.25rem;
+--h2-padding-l: 1.5625rem;
+--h2-padding-xl: 1.953125rem;
+--h2-padding-xxl: 2.44140625rem;
+/* Widths */
+--h2-width-auto: auto;
+--h2-width-phat: 56%;
+--h2-width-smol: 10%;
+}
