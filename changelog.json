@@ -60,7 +60,7 @@
       "versions": [
         {
           "number": "2",
-          "date": "2021/DEC/05",
+          "date": "2021/DEC/08",
           "author": "Josh Beveridge",
           "changes": [
             {
@@ -105,10 +105,10 @@
                 "overlay"
               ],
               "notes": [
-                "Requires gradient configurations to now have a key for easier usage and deprecates the old syntax. Rather than typing the unique combination, you'll be able to use b(gradient-KEY).",
+                "Requires gradient configurations to now have a key for easier usage and deprecates the old syntax. Rather than typing the unique combination, you'll be able to use b(KEY).",
                 "Gradient configuration syntax has been simplified so that color stops can now be an array of strings that contain each color value, rather than requiring a key and color value.",
                 "This also modifies the way SCSS variables are exported, but will only affect gradients that use the new syntax to avoid breaking existing implementations.",
-                "Gradients are now checked for duplicates. The old syntax, while deprecated, will still work."
+                "Colors and gradients are now checked for duplicates. The old syntax, while deprecated, will still work. If a gradient is using the same key as a color, the color will be prefered and a warning will be passed to the console."
               ]
             },
             {
@@ -144,7 +144,7 @@
               ],
               "utilities": [],
               "notes": [
-                "Hydrogen now prefers input/output configuration folders, rather than the now deprecated folders configuration. The init script has been updated to reflect this change and will now also create the directories passed to it if they don't already exist."
+                "Hydrogen now prefers input/output configuration folders, rather than the now deprecated folders configuration. The h2-init script has been updated to reflect this change and will now also create the directories passed to it if they don't already exist."
               ]
             },
             {

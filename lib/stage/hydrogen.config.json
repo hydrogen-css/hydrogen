@@ -204,6 +204,25 @@
       ]
     },
     {
+      "key": "purple",
+      "type": "linear",
+      "angle": "135deg",
+      "colorStops": [
+        {
+          "key": "pink",
+          "color": "green"
+        },
+        {
+          "key": "blue",
+          "color": "red"
+        },
+        {
+          "key": "pink",
+          "color": "blue"
+        }
+      ]
+    },
+    {
       "key": "mygradientarray",
       "type": "linear",
       "angle": "135deg",
