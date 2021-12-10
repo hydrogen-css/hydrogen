@@ -4,9 +4,7 @@
   "input": [
     "path/to/project/markup/folder"
   ],
-  "output": [
-    "path/to/styles/output/folder"
-  ],
+  "output": "path/to/styles/output/folder",
   "variables": {
     "css": {
       "enabled": "false"

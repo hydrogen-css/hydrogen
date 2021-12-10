@@ -23,10 +23,12 @@
     "h2-build": "./bin/build.js"
   },
   "scripts": {
-    "devInit": "node ./dev/init.js",
-    "devCompile": "node ./dev/compile.js",
-    "devBuild": "node ./dev/build.js",
-    "devWatch": "node ./dev/watch.js"
+    "start": "npm-run-all --parallel h2-watch-dev browsersync",
+    "h2-init-dev": "node ./dev/init.js",
+    "h2-compile-dev": "node ./dev/compile.js",
+    "h2-build-dev": "node ./dev/build.js",
+    "h2-watch-dev": "node ./dev/watch.js",
+    "browsersync": "browser-sync start --server './lib/stage/' --startPath 'markup/index.html' --files 'lib/stage' --port 8080 --no-notify"
   },
   "repository": {
     "type": "git",
@@ -40,7 +42,6 @@
   "homepage": "https://hydrogen.design",
   "dependencies": {
     "autoprefixer": "^10.3.0",
-    "browser-sync": "^2.27.0",
     "browserslist": "^4.16.6",
     "colors": "^1.4.0",
     "cssnano": "^5.0.6",
@@ -76,6 +77,8 @@
     "singleQuote": true
   },
   "devDependencies": {
-    "gulp-purgecss": "^4.0.3"
+    "browser-sync": "^2.27.7",
+    "gulp-purgecss": "^4.0.3",
+    "npm-run-all": "^4.1.5"
   }
 }

@@ -1,14 +1,11 @@
 {
   "debug": true,
   "mediaWarnings": false,
-  "folders": {
-    "styles": "styles",
-    "markup": [
-      "markup",
-      "multimarkup"
-    ],
-    "scripts": "scripts"
-  },
+  "input": [
+    "markup",
+    "markup-array-test"
+  ],
+  "output": "styles",
   "variables": {
     "css": {
       "enabled": "true"

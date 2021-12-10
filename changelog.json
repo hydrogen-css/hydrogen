@@ -98,6 +98,15 @@
             },
             {
               "themes": [
+                "feature"
+              ],
+              "utilities": [],
+              "notes": [
+                "When developing Hydrogen, npm start now initializes the development watch script and opens the test page in the browser."
+              ]
+            },
+            {
+              "themes": [
                 "refactor"
               ],
               "utilities": [
