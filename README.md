@@ -63,6 +63,7 @@ You can learn about [utility usage in the documentation](https://hydrogen.design
 - `font-size`
 - `font-style`
 - `font-weight`
+- `height`
 - `justify-content`
 - `layer` for `z-index` control
 - `location` for positioning control
@@ -90,3 +91,12 @@ Along with media queries, Hydrogen offers the ability to modify attributes using
 - `:a` for `active`
 
 While media queries work with all attributes, states are restricted to the utilities listed in the state section of the documentation.
+
+### Dark Mode
+
+You can specify unique styles for users who have their browsers/OS set to prefer dark mode. This can be done by adding `:dark` to your media query calls:
+
+- `data-h2-bg-color="b(primary)"` will set the default background color to `primary`;
+- `data-h2-bg-color="b(primary) b:dark(secondary)"` will set the default background color to `primary`, and if the user prefers dark mode, will set the background to `secondary`
+
+Please note that class-based dark mode isn't available yet, but is in the works.

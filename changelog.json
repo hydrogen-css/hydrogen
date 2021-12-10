@@ -124,6 +124,29 @@
             },
             {
               "themes": [
+                "feature"
+              ],
+              "utilities": [
+                "height"
+              ],
+              "notes": [
+                "Height is now available as an attribute and can be set with custom configurations."
+              ]
+            },
+            {
+              "themes": [
+                "feature"
+              ],
+              "utilities": [
+                "height",
+                "width"
+              ],
+              "notes": [
+                "Both the new height attribute and width attributes now automatically generate t-shirt size values based on the whitespace scale (e.g. you can now use data-h2-width='b(xl)' to access the xl value previously locked to margin and padding)."
+              ]
+            },
+            {
+              "themes": [
                 "refactor"
               ],
               "utilities": [

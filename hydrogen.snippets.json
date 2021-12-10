@@ -95,6 +95,12 @@
       "data-h2-font-weight=\"${1:MEDIA}(${2|100,200,300,400,500,600,700,800,900|})\""
     ]
   },
+  "hydrogen-height": {
+    "prefix": "data-h2-height",
+    "body": [
+      "data-h2-height=\"${1:MEDIA}(${2|none,auto,xxs,xs,s,m,l,xl,xxl,CUSTOM|})\""
+    ]
+  },
   "hydrogen-justify-content": {
     "prefix": "data-h2-justify-content",
     "body": [
@@ -110,7 +116,7 @@
   "hydrogen-margin": {
     "prefix": "data-h2-margin",
     "body": [
-      "data-h2-margin=\"${1:MEDIA}(${2|all,top,right,bottom,left,top-bottom,top-right,top-left,right-left,bottom-right,bottom-left|}, ${3:WHITESPACE})\""
+      "data-h2-margin=\"${1:MEDIA}(${2|all,top,right,bottom,left,top-bottom,top-right,top-left,right-left,bottom-right,bottom-left|}, ${2|none,auto,xxs,xs,s,m,l,xl,xxl|})\""
     ]
   },
   "hydrogen-order": {
@@ -134,7 +140,7 @@
   "hydrogen-padding": {
     "prefix": "data-h2-padding",
     "body": [
-      "data-h2-padding=\"${1:MEDIA}(${2|all,top,right,bottom,left,top-bottom,top-right,top-left,right-left,bottom-right,bottom-left|}, ${3:WHITESPACE})\""
+      "data-h2-padding=\"${1:MEDIA}(${2|all,top,right,bottom,left,top-bottom,top-right,top-left,right-left,bottom-right,bottom-left|}, ${2|none,xxs,xs,s,m,l,xl,xxl|})\""
     ]
   },
   "hydrogen-position": {
@@ -176,7 +182,7 @@
   "hydrogen-width": {
     "prefix": "data-h2-width",
     "body": [
-      "data-h2-width=\"${1:MEDIA}(${2:WIDTH})\""
+      "data-h2-width=\"${1:MEDIA}(${2|none,auto,xxs,xs,s,m,l,xl,xxl,CUSTOM|})\""
     ]
   }
 }

@@ -1,0 +1,19 @@
+// Height
+// VALUE
+// e.g. data-h2-height="b(100)"
+@mixin h2-utility-height($mediaKey, $stateMap, $whitespaceMap, $heightMap) {
+  @each $stateKey, $stateValue in $stateMap {
+    @each $whitespaceKey, $whitespaceValue in $whitespaceMap {
+      [data-h2-height*='#{$mediaKey}#{$stateKey}(#{$whitespaceKey})']#{$stateValue} {
+        height: #{$whitespaceValue};
+        transition: all 0.2s ease;
+      }
+    }
+    @each $heightKey, $heightValue in $heightMap {
+      [data-h2-height*='#{$mediaKey}#{$stateKey}(#{$heightKey})']#{$stateValue} {
+        height: #{$heightValue};
+        transition: all 0.2s ease;
+      }
+    }
+  }
+}
