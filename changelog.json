@@ -79,6 +79,23 @@
             },
             {
               "themes": [
+                "breaking",
+                "refactor"
+              ],
+              "utilities": [
+                "container"
+              ],
+              "migrations": [
+                "If you'd like a container to retain 90% width on mobile devices, you can add a data-h2-width value of 90 to your configuration file and use that attribute."
+              ],
+              "notes": [
+                "Containers no longer have a fixed width of 90% and will now span 100% of their parent until they reach their maximum width.",
+                "This change was decided on because it's counterintuitive that a container doesn't span the full width of its parent, particularly when you have multiple containers inside of each other.",
+                "The original fixed width of 90% was a convenience to avoid needing to add padding to containers on mobile devices, which isn't a good enough reason to prevent the expected behaviour."
+              ]
+            },
+            {
+              "themes": [
                 "feature"
               ],
               "utilities": [],
@@ -163,17 +180,6 @@
               "utilities": [],
               "notes": [
                 "Console output has been slightly reformatted to make it clearer."
-              ]
-            },
-            {
-              "themes": [
-                "refactor"
-              ],
-              "utilities": [
-                "container"
-              ],
-              "notes": [
-                "Containers on landscape viewports now take up 95% rather than 90%."
               ]
             }
           ],

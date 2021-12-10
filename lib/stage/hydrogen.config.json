@@ -48,6 +48,18 @@
   ],
   "colors": [
     {
+      "key": "primary",
+      "color": "purple",
+      "variants": {
+        "enabled": "true"
+      },
+      "opacities": [
+        ".25",
+        "50%",
+        "0.75"
+      ]
+    },
+    {
       "key": "black",
       "color": "rgba(20, 20, 30, 1)",
       "variants": {
@@ -112,7 +124,20 @@
       "opacity": true
     }
   ],
-  "containers": [],
+  "containers": [
+    {
+      "key": "s",
+      "maxWidth": "39rem"
+    },
+    {
+      "key": "m",
+      "maxWidth": "60rem"
+    },
+    {
+      "key": "l",
+      "maxWidth": "80rem"
+    }
+  ],
   "flexgrid": {
     "enabled": true,
     "columns": 8
@@ -251,6 +276,10 @@
     {
       "key": "phat",
       "value": "56%"
+    },
+    {
+      "key": "95",
+      "value": "95%"
     },
     {
       "key": "smol",

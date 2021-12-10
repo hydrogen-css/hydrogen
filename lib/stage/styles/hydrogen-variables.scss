@@ -1,6 +1,9 @@
 /* Border Weights */
 $h2-border-weight-thing: 1px;
 /* Colors */
+$h2-color-primary: purple;
+$h2-color-primary-light: color.scale(purple, $lightness: 25%);
+$h2-color-primary-dark: color.scale(purple, $lightness: -15%, $saturation: -10%);
 $h2-color-black: rgba(20, 20, 30, 1);
 $h2-color-white: rgba(255, 255, 255, 1);
 $h2-color-green: rgba(0, 255, 0, 1);
@@ -86,4 +89,5 @@ $h2-padding-xxl: 2.44140625rem;
 /* Widths */
 $h2-width-auto: auto;
 $h2-width-phat: 56%;
+$h2-width-95: 95%;
 $h2-width-smol: 10%;
