@@ -71,6 +71,12 @@
       "data-h2-font-color=\"${1:MEDIA}(${2:COLOR})\""
     ]
   },
+  "hydrogen-color": {
+    "prefix": "data-h2-color",
+    "body": [
+      "data-h2-color=\"${1:MEDIA}(${2:COLOR})\""
+    ]
+  },
   "hydrogen-font-family": {
     "prefix": "data-h2-font-family",
     "body": [

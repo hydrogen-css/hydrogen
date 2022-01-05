@@ -10,7 +10,14 @@
           @if $sideKey == 'top-bottom' or $sideKey == 'tb' {
             padding-top: #{$whitespaceValue};
             padding-bottom: #{$whitespaceValue};
-          } @else if $sideKey == 'right-left' or $sideKey == 'rl' {
+          } @else if
+            $sideKey ==
+            'right-left' or
+            $sideKey ==
+            'rl' or
+            $sideKey ==
+            'left-right'
+          {
             padding-right: #{$whitespaceValue};
             padding-left: #{$whitespaceValue};
           } @else if $sideKey == 'top-right' {

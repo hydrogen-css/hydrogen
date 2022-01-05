@@ -231,6 +231,20 @@
               "notes": [
                 "Console output has been slightly reformatted to make it clearer."
               ]
+            },
+            {
+              "themes": [
+                "refactor"
+              ],
+              "utilities": [
+                "border",
+                "location",
+                "margin",
+                "padding"
+              ],
+              "notes": [
+                "You can now use left-right in place of right-left when referring to an element's sides."
+              ]
             }
           ],
           "versions": []

@@ -31,7 +31,14 @@ $h2-map-border-style: (
                 border-top-width: #{$weightValue};
                 border-bottom-width: #{$weightValue};
                 transition: all 0.2s ease;
-              } @else if $sideKey == 'right-left' or $sideKey == 'rl' {
+              } @else if
+                $sideKey ==
+                'right-left' or
+                $sideKey ==
+                'rl' or
+                $sideKey ==
+                'left-right'
+              {
                 border-right-color: $colorValue;
                 border-left-color: $colorValue;
                 border-right-style: $styleValue;

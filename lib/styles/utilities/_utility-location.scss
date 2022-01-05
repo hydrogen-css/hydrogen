@@ -11,7 +11,14 @@
         @if $sideKey == 'top-bottom' or $sideKey == 'tb' {
           top: #{$whitespaceValue};
           bottom: #{$whitespaceValue};
-        } @else if $sideKey == 'right-left' or $sideKey == 'rl' {
+        } @else if
+          $sideKey ==
+          'right-left' or
+          $sideKey ==
+          'rl' or
+          $sideKey ==
+          'left-right'
+        {
           right: #{$whitespaceValue};
           left: #{$whitespaceValue};
         } @else if $sideKey == 'top-right' {

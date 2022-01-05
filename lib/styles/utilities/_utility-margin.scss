@@ -21,7 +21,14 @@
           @if $sideKey == 'top-bottom' or $sideKey == 'tb' {
             margin-top: #{$whitespaceValue};
             margin-bottom: #{$whitespaceValue};
-          } @else if $sideKey == 'right-left' or $sideKey == 'rl' {
+          } @else if
+            $sideKey ==
+            'right-left' or
+            $sideKey ==
+            'rl' or
+            $sideKey ==
+            'left-right'
+          {
             margin-right: #{$whitespaceValue};
             margin-left: #{$whitespaceValue};
           } @else if $sideKey == 'top-right' {
@@ -55,7 +62,14 @@
           @if $sideKey == 'top-bottom' or $sideKey == 'tb' {
             margin-top: -#{$whitespaceValue};
             margin-bottom: -#{$whitespaceValue};
-          } @else if $sideKey == 'right-left' or $sideKey == 'rl' {
+          } @else if
+            $sideKey ==
+            'right-left' or
+            $sideKey ==
+            'rl' or
+            $sideKey ==
+            'left-right'
+          {
             margin-right: -#{$whitespaceValue};
             margin-left: -#{$whitespaceValue};
           } @else if $sideKey == 'top-right' {
@@ -90,7 +104,14 @@
         @if $sideKey == 'top-bottom' or $sideKey == 'tb' {
           margin-top: auto;
           margin-bottom: auto;
-        } @else if $sideKey == 'right-left' or $sideKey == 'rl' {
+        } @else if
+          $sideKey ==
+          'right-left' or
+          $sideKey ==
+          'rl' or
+          $sideKey ==
+          'left-right'
+        {
           margin-right: auto;
           margin-left: auto;
         } @else if $sideKey == 'top-right' {
