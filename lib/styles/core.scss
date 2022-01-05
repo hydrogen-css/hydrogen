@@ -20,6 +20,18 @@ html {
   }
 }
 
+@media screen and (max-width: 50em) {
+  html {
+    font-size: calc($h2-font-base-size / $h2-font-scale);
+  }
+}
+
+@media screen and (min-width: 130em) {
+  html {
+    font-size: calc($h2-font-base-size * $h2-font-scale);
+  }
+}
+
 body {
   margin: 0; // Resets the default 8px value.
   max-width: 100%;

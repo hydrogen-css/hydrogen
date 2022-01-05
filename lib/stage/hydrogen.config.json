@@ -24,10 +24,6 @@
       "value": "screen and (min-width: 55em)"
     },
     {
-      "key": "b",
-      "value": "screen and (min-width: 55em)"
-    },
-    {
       "key": "db",
       "value": "screen and (min-width: 55em)"
     },
@@ -48,42 +44,12 @@
   ],
   "colors": [
     {
-      "key": "primary",
-      "color": "purple",
-      "variants": {
-        "enabled": "true"
-      },
-      "opacities": [
-        ".25",
-        "50%",
-        "0.75"
-      ]
-    },
-    {
-      "key": "black",
-      "color": "rgba(20, 20, 30, 1)",
+      "key": "transparent",
+      "color": "rgba(255, 255, 255, 0)",
       "variants": {
         "enabled": "false"
       },
-      "opacities": [
-        ".5",
-        "40%",
-        ".8",
-        "1"
-      ]
-    },
-    {
-      "key": "black",
-      "color": "rgba(20, 20, 30, 1)",
-      "variants": {
-        "enabled": "false"
-      },
-      "opacities": [
-        ".5",
-        "40%",
-        ".8",
-        "1"
-      ]
+      "opacities": []
     },
     {
       "key": "white",
@@ -91,37 +57,47 @@
       "variants": {
         "enabled": "false"
       },
-      "opacities": []
-    },
-    {
-      "key": "green",
-      "color": "rgba(0, 255, 0, 1)",
-      "variants": {
-        "enabled": "true",
-        "light": "pink",
-        "dark": "orange"
-      }
-    },
-    {
-      "key": "red",
-      "color": "rgba(255, 0, 0, 1)"
-    },
-    {
-      "key": "blue",
-      "color": "rgba(0, 0, 255, 1)",
-      "variants": {
-        "enabled": "true",
-        "light": "purple",
-        "dark": "teal"
-      },
       "opacities": [
-        ".05"
+        ".2"
       ]
     },
     {
-      "key": "purple",
-      "color": "#FF00FF",
-      "opacity": true
+      "key": "black",
+      "color": "rgba(20, 20, 30, 1)",
+      "variants": {
+        "enabled": "false"
+      },
+      "opacities": [
+        ".8"
+      ]
+    },
+    {
+      "key": "primary",
+      "color": "#9D5CFF",
+      "variants": {
+        "enabled": "true",
+        "light": "#d7bdff",
+        "dark": "#36106e"
+      },
+      "opacities": [
+        ".1"
+      ]
+    },
+    {
+      "key": "secondary",
+      "color": "#5CFFEE",
+      "variants": {
+        "enabled": "false"
+      },
+      "opacities": []
+    },
+    {
+      "key": "accent",
+      "color": "#FF5C6D",
+      "variants": {
+        "enabled": "false"
+      },
+      "opacities": []
     }
   ],
   "containers": [
@@ -140,18 +116,35 @@
   ],
   "flexgrid": {
     "enabled": true,
-    "columns": 8
+    "columns": 12
   },
   "fonts": [
     {
-      "key": "testFont",
-      "loadType": "font-face",
-      "value": "'testFont', sans-serif",
-      "url": "google.com"
+      "key": "sans",
+      "loadType": "system",
+      "value": "sans-serif",
+      "url": null
+    },
+    {
+      "key": "serif",
+      "loadType": "system",
+      "value": "serif",
+      "url": null
+    },{
+      "key": "script",
+      "loadType": "system",
+      "value": "script",
+      "url": null
+    },
+    {
+      "key": "mono",
+      "loadType": "system",
+      "value": "monospace",
+      "url": null
     }
   ],
-  "fontScale": "1.33",
-  "fontBaseSize": "150%",
+  "fontScale": "1.25",
+  "fontBaseSize": "112.5%",
   "gradients": [
     {
       "type": "radial",

@@ -7,10 +7,10 @@
   "output": "path/to/styles/output/folder",
   "variables": {
     "css": {
-      "enabled": "false"
+      "enabled": false
     },
     "sass": {
-      "enabled": "false"
+      "enabled": false
     }
   },
   "borderWeights": [
@@ -32,7 +32,7 @@
       "key": "transparent",
       "color": "rgba(255, 255, 255, 0)",
       "variants": {
-        "enabled": "false"
+        "enabled": false
       },
       "opacities": []
     },
@@ -40,7 +40,7 @@
       "key": "white",
       "color": "rgba(255, 255, 255, 1)",
       "variants": {
-        "enabled": "false"
+        "enabled": false
       },
       "opacities": [
         ".2"
@@ -50,7 +50,7 @@
       "key": "black",
       "color": "rgba(20, 20, 30, 1)",
       "variants": {
-        "enabled": "false"
+        "enabled": false
       },
       "opacities": [
         ".8"
@@ -60,7 +60,7 @@
       "key": "primary",
       "color": "#9D5CFF",
       "variants": {
-        "enabled": "true",
+        "enabled": true,
         "light": "#d7bdff",
         "dark": "#36106e"
       },
@@ -72,7 +72,7 @@
       "key": "secondary",
       "color": "#5CFFEE",
       "variants": {
-        "enabled": "false"
+        "enabled": false
       },
       "opacities": []
     },
@@ -80,7 +80,7 @@
       "key": "accent",
       "color": "#FF5C6D",
       "variants": {
-        "enabled": "false"
+        "enabled": false
       },
       "opacities": []
     }

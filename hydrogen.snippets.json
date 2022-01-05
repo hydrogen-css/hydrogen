@@ -107,6 +107,12 @@
       "data-h2-justify-content=\"${1:MEDIA}(${2|center,flex-end,flex-start,space-around,space-between|})\""
     ]
   },
+  "hydrogen-layer": {
+    "prefix": "data-h2-layer",
+    "body": [
+      "data-h2-layer=\"${1:MEDIA}(${2:NUMBER}, ${3|static,relative,fixed,absolute,sticky|})\""
+    ]
+  },
   "hydrogen-location": {
     "prefix": "data-h2-location",
     "body": [
@@ -116,7 +122,7 @@
   "hydrogen-margin": {
     "prefix": "data-h2-margin",
     "body": [
-      "data-h2-margin=\"${1:MEDIA}(${2|all,top,right,bottom,left,top-bottom,top-right,top-left,right-left,bottom-right,bottom-left|}, ${2|none,auto,xxs,xs,s,m,l,xl,xxl|})\""
+      "data-h2-margin=\"${1:MEDIA}(${2|all,top,right,bottom,left,top-bottom,top-right,top-left,right-left,bottom-right,bottom-left|}, ${3|none,auto,xxs,xs,s,m,l,xl,xxl|})\""
     ]
   },
   "hydrogen-order": {
@@ -140,7 +146,7 @@
   "hydrogen-padding": {
     "prefix": "data-h2-padding",
     "body": [
-      "data-h2-padding=\"${1:MEDIA}(${2|all,top,right,bottom,left,top-bottom,top-right,top-left,right-left,bottom-right,bottom-left|}, ${2|none,xxs,xs,s,m,l,xl,xxl|})\""
+      "data-h2-padding=\"${1:MEDIA}(${2|all,top,right,bottom,left,top-bottom,top-right,top-left,right-left,bottom-right,bottom-left|}, ${3|none,xxs,xs,s,m,l,xl,xxl|})\""
     ]
   },
   "hydrogen-position": {

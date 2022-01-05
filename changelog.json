@@ -86,7 +86,8 @@
                 "container"
               ],
               "migrations": [
-                "If you'd like a container to retain 90% width on mobile devices, you can add a data-h2-width value of 90 to your configuration file and use that attribute."
+                "If you'd like a container to retain 90% width on mobile devices, you can set a custom container for 90% width.",
+                "Altneratively, you can add a data-h2-width value of 90 to your configuration file and combine the two attributes to recreate the original effect."
               ],
               "notes": [
                 "Containers no longer have a fixed width of 90% and will now span 100% of their parent until they reach their maximum width.",
@@ -143,6 +144,21 @@
               ],
               "notes": [
                 "Both the new height attribute and width attributes now automatically generate t-shirt size values based on the whitespace scale (e.g. you can now use data-h2-width='b(xl)' to access the xl value previously locked to margin and padding)."
+              ]
+            },
+            {
+              "themes": [
+                "feature"
+              ],
+              "utilities": [
+                "font-size",
+                "height",
+                "margin",
+                "padding",
+                "width"
+              ],
+              "notes": [
+                "Font size will now scale at two pre-determined breakpoints using the font scale value set in the configuration. This is to ensure that type hierarchy makes sense for smaller and larger devices."
               ]
             },
             {

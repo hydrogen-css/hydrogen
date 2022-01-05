@@ -28,7 +28,7 @@
     "h2-compile-dev": "node ./dev/compile.js",
     "h2-build-dev": "node ./dev/build.js",
     "h2-watch-dev": "node ./dev/watch.js",
-    "browsersync": "browser-sync start --server './lib/stage/' --startPath 'markup/index.html' --files 'lib/stage' --port 8080 --no-notify"
+    "browsersync": "browser-sync start --server './lib/stage/' --startPath 'markup/index.html' --files 'lib/stage' --port 8080 --no-notify --no-inject-changes"
   },
   "repository": {
     "type": "git",

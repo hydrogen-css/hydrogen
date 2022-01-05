@@ -17,9 +17,13 @@
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="../styles/hydrogen.css" />
   </head>
-  <body>
+  <body data-h2-font-family="b(sans)" data-h2-padding="b(right-left, xxl)">
     <section data-h2-container="b(center, full)">
       <h1>Hydrogen</h1>
+      <p>
+        Welcome to Hydrogen's test page. Below you'll find visual examples of
+        each utility to help with debugging.
+      </p>
     </section>
     <section data-h2-container="b(center, full)">
       <h2>Align Content</h2>
@@ -32,6 +36,27 @@
     </section>
     <section data-h2-container="b(center, full)">
       <h2>Background Color</h2>
+      <div
+        data-h2-height="b(xxl)"
+        data-h2-display="b(inline-block)"
+        data-h2-width="b(xxl)"
+        data-h2-margin="b(right-left, m)"
+        data-h2-bg-color="b(primary)"
+      ></div>
+      <div
+        data-h2-height="b(xxl)"
+        data-h2-display="b(inline-block)"
+        data-h2-width="b(xxl)"
+        data-h2-margin="b(right-left, m)"
+        data-h2-bg-color="b(secondary)"
+      ></div>
+      <div
+        data-h2-height="b(xxl)"
+        data-h2-display="b(inline-block)"
+        data-h2-width="b(xxl)"
+        data-h2-margin="b(right-left, m)"
+        data-h2-bg-color="b(accent)"
+      ></div>
     </section>
     <section data-h2-container="b(center, full)">
       <h2>Border</h2>
@@ -118,6 +143,101 @@
     </section>
     <section data-h2-container="b(center, full)">
       <h2>Flex Grid &amp; Flex Items</h2>
+      <div data-h2-flex-grid="b(normal, expanded, flush, m)">
+        <div data-h2-flex-item="b(content)">
+          <img
+            src="https://images.unsplash.com/photo-1639080921695-2e7ff9931aa7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80"
+            style="display: block; width: 20rem"
+          />
+        </div>
+        <div data-h2-flex-item="b(auto)">
+          <div
+            data-h2-height="b(100)"
+            data-h2-width="b(100)"
+            data-h2-bg-color="b(primary)"
+          ></div>
+        </div>
+      </div>
+      <br />
+      <div data-h2-flex-grid="b(normal, expanded, flush, m)">
+        <div data-h2-flex-item="b(1of6)">
+          <div
+            data-h2-height="b(xxl)"
+            data-h2-width="b(100)"
+            data-h2-bg-color="b(primary)"
+          ></div>
+        </div>
+        <div data-h2-flex-item="b(1of6)">
+          <div
+            data-h2-height="b(xxl)"
+            data-h2-width="b(100)"
+            data-h2-bg-color="b(primary)"
+          ></div>
+        </div>
+        <div data-h2-flex-item="b(1of6)">
+          <div
+            data-h2-height="b(xxl)"
+            data-h2-width="b(100)"
+            data-h2-bg-color="b(primary)"
+          ></div>
+        </div>
+        <div data-h2-flex-item="b(1of2)">
+          <div
+            data-h2-height="b(xxl)"
+            data-h2-width="b(100)"
+            data-h2-bg-color="b(primary)"
+          ></div>
+        </div>
+        <div data-h2-flex-item="b(1of2)">
+          <div
+            data-h2-height="b(xxl)"
+            data-h2-width="b(100)"
+            data-h2-bg-color="b(primary)"
+          ></div>
+        </div>
+        <div data-h2-flex-item="b(1of12)">
+          <div
+            data-h2-height="b(xxl)"
+            data-h2-width="b(100)"
+            data-h2-bg-color="b(primary)"
+          ></div>
+        </div>
+        <div data-h2-flex-item="b(1of12)">
+          <div
+            data-h2-height="b(xxl)"
+            data-h2-width="b(100)"
+            data-h2-bg-color="b(primary)"
+          ></div>
+        </div>
+        <div data-h2-flex-item="b(1of12)">
+          <div
+            data-h2-height="b(xxl)"
+            data-h2-width="b(100)"
+            data-h2-bg-color="b(primary)"
+          ></div>
+        </div>
+        <div data-h2-flex-item="b(1of12)">
+          <div
+            data-h2-height="b(xxl)"
+            data-h2-width="b(100)"
+            data-h2-bg-color="b(primary)"
+          ></div>
+        </div>
+        <div data-h2-flex-item="b(1of12)">
+          <div
+            data-h2-height="b(xxl)"
+            data-h2-width="b(100)"
+            data-h2-bg-color="b(primary)"
+          ></div>
+        </div>
+        <div data-h2-flex-item="b(1of12)">
+          <div
+            data-h2-height="b(xxl)"
+            data-h2-width="b(100)"
+            data-h2-bg-color="b(primary)"
+          ></div>
+        </div>
+      </div>
     </section>
     <section data-h2-container="b(center, full)">
       <h2>Flex Wrap</h2>
@@ -141,46 +261,90 @@
       <h2>Height &amp; Width</h2>
       <div
         data-h2-bg-color="b(primary)"
+        data-h2-display="b(inline-block)"
         data-h2-height="b(xxs)"
+        data-h2-margin="b(right-left, m)"
         data-h2-width="b(xxs)"
       ></div>
-      <br />
       <div
         data-h2-bg-color="b(primary)"
+        data-h2-display="b(inline-block)"
         data-h2-height="b(xs)"
+        data-h2-margin="b(right-left, m)"
         data-h2-width="b(xs)"
       ></div>
-      <br />
       <div
         data-h2-bg-color="b(primary)"
+        data-h2-display="b(inline-block)"
         data-h2-height="b(s)"
+        data-h2-margin="b(right-left, m)"
         data-h2-width="b(s)"
       ></div>
-      <br />
       <div
         data-h2-bg-color="b(primary)"
+        data-h2-display="b(inline-block)"
         data-h2-height="b(m)"
+        data-h2-margin="b(right-left, m)"
         data-h2-width="b(m)"
       ></div>
-      <br />
       <div
         data-h2-bg-color="b(primary)"
+        data-h2-display="b(inline-block)"
         data-h2-height="b(l)"
+        data-h2-margin="b(right-left, m)"
         data-h2-width="b(l)"
       ></div>
+      <div
+        data-h2-bg-color="b(primary)"
+        data-h2-display="b(inline-block)"
+        data-h2-height="b(xl)"
+        data-h2-margin="b(right-left, m)"
+        data-h2-width="b(xl)"
+      ></div>
+      <div
+        data-h2-bg-color="b(primary)"
+        data-h2-display="b(inline-block)"
+        data-h2-height="b(xxl)"
+        data-h2-margin="b(right-left, m)"
+        data-h2-width="b(xxl)"
+      ></div>
+      <br />
       <br />
       <div
         data-h2-bg-color="b(primary)"
-        data-h2-height="b(xl)"
-        data-h2-width="b(xl)"
+        data-h2-height="b(xxl)"
+        data-h2-width="b(auto)"
       ></div>
       <br />
       <div
         data-h2-bg-color="b(primary)"
         data-h2-height="b(xxl)"
-        data-h2-width="b(xxl)"
+        data-h2-width="b(none)"
       ></div>
       <br />
+      <div
+        data-h2-bg-color="b(primary)"
+        data-h2-height="b(xxl)"
+        data-h2-width="b(25)"
+      ></div>
+      <br />
+      <div
+        data-h2-bg-color="b(primary)"
+        data-h2-height="b(xxl)"
+        data-h2-width="b(50)"
+      ></div>
+      <br />
+      <div
+        data-h2-bg-color="b(primary)"
+        data-h2-height="b(xxl)"
+        data-h2-width="b(75)"
+      ></div>
+      <br />
+      <div
+        data-h2-bg-color="b(primary)"
+        data-h2-height="b(xxl)"
+        data-h2-width="b(100)"
+      ></div>
     </section>
     <section data-h2-container="b(center, full)">
       <h2>Justify Content</h2>
