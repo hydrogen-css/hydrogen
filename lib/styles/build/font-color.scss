@@ -1,6 +1,7 @@
 @use 'sass:color';
 
 @use '../maps/map-color' as colorMap;
+@use '../maps/map-gradient' as gradientMap;
 @use '../maps/map-states' as stateMap;
 
 @use '../utilities/utility-font-color' as fontColorStyles;
@@ -8,5 +9,6 @@
 @include fontColorStyles.h2-utility-font-color(
   $mediaKey: 'MEDIAKEY',
   $stateMap: stateMap.$h2-map-states,
-  $colorMap: colorMap.$h2-map-color
+  $colorMap: colorMap.$h2-map-color,
+  $gradientMap: gradientMap.$h2-map-gradient
 );

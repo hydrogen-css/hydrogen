@@ -2,13 +2,23 @@
 $h2-border-weight-thing: 1px;
 /* Colors */
 $h2-color-transparent: rgba(255, 255, 255, 0);
+$h2-color-transparent-light: color.scale(rgba(255, 255, 255, 0), $lightness: 25%);
+$h2-color-transparent-dark: color.scale(rgba(255, 255, 255, 0), $lightness: -15%, $saturation: -10%);
 $h2-color-white: rgba(255, 255, 255, 1);
+$h2-color-white-light: color.scale(rgba(255, 255, 255, 1), $lightness: 25%);
+$h2-color-white-dark: color.scale(rgba(255, 255, 255, 1), $lightness: -15%, $saturation: -10%);
 $h2-color-black: rgba(20, 20, 30, 1);
+$h2-color-black-light: color.scale(rgba(20, 20, 30, 1), $lightness: 25%);
+$h2-color-black-dark: color.scale(rgba(20, 20, 30, 1), $lightness: -15%, $saturation: -10%);
 $h2-color-primary: #9D5CFF;
 $h2-color-primary-light: #d7bdff;
 $h2-color-primary-dark: #36106e;
 $h2-color-secondary: #5CFFEE;
+$h2-color-secondary-light: color.scale(#5CFFEE, $lightness: 25%);
+$h2-color-secondary-dark: color.scale(#5CFFEE, $lightness: -15%, $saturation: -10%);
 $h2-color-accent: #FF5C6D;
+$h2-color-accent-light: color.scale(#FF5C6D, $lightness: 25%);
+$h2-color-accent-dark: color.scale(#FF5C6D, $lightness: -15%, $saturation: -10%);
 /* Containers */
 $h2-container-width-full: none;
 $h2-container-width-s: 39rem;

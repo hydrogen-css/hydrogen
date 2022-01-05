@@ -1,9 +1,9 @@
 // Font Color
-// [MODIFIER]COLOR[OPACITY]
-// e.g. data-h2-font-color="b(green)"
-// e.g. data-h2-font-color="b(green[.9])"
-// e.g. data-h2-font-color="b([light]green[.5])"
-@mixin h2-utility-font-color($mediaKey, $stateMap, $colorMap) {
+@mixin h2-utility-font-color($mediaKey, $stateMap, $colorMap, $gradientMap) {
+  // [VARIANT]COLOR[OPACITY]
+  // e.g. data-h2-font-color="b(green)"
+  // e.g. data-h2-font-color="b(green[.9])"
+  // e.g. data-h2-font-color="b([light]green[.5])"
   @each $stateKey, $stateValue in $stateMap {
     @each $colorKey, $colorValue in $colorMap {
       [data-h2-font-color*='#{$mediaKey}#{$stateKey}(#{$colorKey})']#{$stateValue} {
@@ -12,6 +12,24 @@
       }
       [data-h2-color*='#{$mediaKey}#{$stateKey}(#{$colorKey})']#{$stateValue} {
         color: $colorValue;
+        transition: all 0.2s ease;
+      }
+    }
+  }
+  // GRADIENTKEY
+  // e.g. data-h2-bg-color="b(myGradient)"
+  @each $stateKey, $stateValue in $stateMap {
+    @each $gradientKey, $gradientValue in $gradientMap {
+      [data-h2-font-color*='#{$mediaKey}#{$stateKey}(#{$gradientKey})']#{$stateValue} {
+        background-image: #{$gradientValue};
+        background-clip: text;
+        color: rgba(0, 0, 0, 0);
+        transition: all 0.2s ease;
+      }
+      [data-h2-color*='#{$mediaKey}#{$stateKey}(#{$gradientKey})']#{$stateValue} {
+        background-image: #{$gradientValue};
+        background-clip: text;
+        color: rgba(0, 0, 0, 0);
         transition: all 0.2s ease;
       }
     }

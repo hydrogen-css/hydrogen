@@ -163,6 +163,17 @@
             },
             {
               "themes": [
+                "feature"
+              ],
+              "utilities": [
+                "font-color"
+              ],
+              "notes": [
+                "Gradients are now supported as font color options using the background-clip property."
+              ]
+            },
+            {
+              "themes": [
                 "refactor"
               ],
               "utilities": [

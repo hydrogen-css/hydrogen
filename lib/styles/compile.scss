@@ -93,7 +93,8 @@
     @include fontColorStyles.h2-utility-font-color(
       $mediaKey: $mediaKey,
       $stateMap: stateMap.$h2-map-states,
-      $colorMap: colorMap.$h2-map-color
+      $colorMap: colorMap.$h2-map-color,
+      $gradientMap: gradientMap.$h2-map-gradient
     );
 
     @include fontFamilyStyles.h2-utility-font-family(

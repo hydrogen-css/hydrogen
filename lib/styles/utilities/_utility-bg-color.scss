@@ -12,9 +12,8 @@
       }
     }
   }
-  // TYPE-DEGREE[STOP][STOP]
-  // e.g. data-h2-bg-color="b(linear-45[green][blue])"
-  // e.g. data-h2-bg-color="b(radial[blue][green])"
+  // GRADIENTKEY
+  // e.g. data-h2-bg-color="b(myGradient)"
   @each $stateKey, $stateValue in $stateMap {
     @each $gradientKey, $gradientValue in $gradientMap {
       [data-h2-bg-color*='#{$mediaKey}#{$stateKey}(#{$gradientKey})']#{$stateValue} {
