@@ -87,7 +87,7 @@
       "key": "secondary",
       "color": "#5CFFEE",
       "variants": {
-        "enabled": "false"
+        "enabled": "true"
       },
       "opacities": []
     },
@@ -95,9 +95,9 @@
       "key": "accent",
       "color": "#FF5C6D",
       "variants": {
-        "enabled": "false"
+        "enabled": "true"
       },
-      "opacities": []
+      "opacity": true
     }
   ],
   "containers": [

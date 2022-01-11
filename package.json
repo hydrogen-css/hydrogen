@@ -43,6 +43,7 @@
   "dependencies": {
     "autoprefixer": "^10.3.0",
     "browserslist": "^4.16.6",
+    "color": "^4.1.0",
     "colors": "^1.4.0",
     "cssnano": "^5.0.6",
     "cssnano-preset-lite": "^2.0.1",

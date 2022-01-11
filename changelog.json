@@ -245,6 +245,15 @@
               "notes": [
                 "You can now use left-right in place of right-left when referring to an element's sides."
               ]
+            },
+            {
+              "themes": [
+                "refactor"
+              ],
+              "utilities": [],
+              "notes": [
+                "Refactors the way automatic color variant generation works to use a Node library, rather than Sass, because the colors needed to be computed for variable output."
+              ]
             }
           ],
           "versions": []
