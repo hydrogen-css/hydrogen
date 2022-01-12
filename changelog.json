@@ -101,8 +101,8 @@
               ],
               "utilities": [],
               "notes": [
-                "Adds support for preference-based dark mode! If you have your browser set to a dark theme, Hydrogen now offers a :dark variant of all media queries that can also be combined with state (e.g. b:dark or b:dark:h).",
-                "Class-based dark mode is in the works, but is more complicated to execute."
+                "Adds support for dark mode! If you have your browser set to a dark theme, Hydrogen now offers a :dark variant of all media queries that can also be combined with state (e.g. b:dark or b:dark:h).",
+                "Dark mode also supports a class toggle using the h2-dark and h2-light classes. A toggle script will be provided in the documentation."
               ]
             },
             {
