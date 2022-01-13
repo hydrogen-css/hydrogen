@@ -1,6 +1,8 @@
 {
   "debug": false,
+  "keyWarnings": true,
   "mediaWarnings": false,
+  "opacityWarnings": false,
   "input": [
     "path/to/project/markup/folder"
   ],
