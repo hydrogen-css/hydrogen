@@ -1,9 +1,15 @@
 /* Border Weights */
+$h2-border-weight-none: 0;
 $h2-border-weight-thing: 1px;
 /* Colors */
 $h2-color-transparent: rgba(255, 255, 255, 0);
 $h2-color-white: rgba(255, 255, 255, 1);
+$h2-color-gray: #787987;
+$h2-color-gray-light: rgb(201, 201, 207);
+$h2-color-gray-dark: rgb(96, 97, 108);
 $h2-color-black: rgba(20, 20, 30, 1);
+$h2-color-black-light: rgb(194, 194, 214);
+$h2-color-black-dark: rgb(82, 82, 122);
 $h2-color-primary: #9D5CFF;
 $h2-color-primary-light: #d7bdff;
 $h2-color-primary-dark: #36106e;

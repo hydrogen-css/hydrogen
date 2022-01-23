@@ -1,6 +1,6 @@
 {
   "debug": true,
-  "keyWarnings": false,
+  "keyWarnings": true,
   "mediaWarnings": false,
   "opacityWarnings": false,
   "input": [
@@ -40,6 +40,10 @@
   ],
   "borderWeights": [
     {
+      "key": "none",
+      "weight": "0"
+    },
+    {
       "key": "thing",
       "weight": "1px"
     }
@@ -64,10 +68,17 @@
       ]
     },
     {
+      "key": "gray",
+      "color": "#787987",
+      "variants": {
+        "enabled": "true"
+      }
+    },
+    {
       "key": "black",
       "color": "rgba(20, 20, 30, 1)",
       "variants": {
-        "enabled": "false"
+        "enabled": "true"
       },
       "opacities": [
         ".8"
