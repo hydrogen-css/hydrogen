@@ -15,17 +15,14 @@
   "bin": {
     "hydrogen-init": "./bin/init.js",
     "hydrogen-watch": "./bin/watch.js",
-    "hydrogen-compile": "./bin/compile.js",
     "hydrogen-build": "./bin/build.js",
     "h2-init": "./bin/init.js",
     "h2-watch": "./bin/watch.js",
-    "h2-compile": "./bin/compile.js",
     "h2-build": "./bin/build.js"
   },
   "scripts": {
     "start": "npm-run-all --parallel h2-watch-dev browsersync",
     "h2-init-dev": "node ./dev/init.js",
-    "h2-compile-dev": "node ./dev/compile.js",
     "h2-build-dev": "node ./dev/build.js",
     "h2-watch-dev": "node ./dev/watch.js",
     "browsersync": "browser-sync start --server './lib/stage/' --startPath 'markup/index.html' --files 'lib/stage' --port 8080 --no-notify --no-inject-changes"

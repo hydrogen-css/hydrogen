@@ -60,9 +60,22 @@
       "versions": [
         {
           "number": "2",
-          "date": "2021/DEC/08",
+          "date": "2021/JAN25",
           "author": "Josh Beveridge",
           "changes": [
+            {
+              "themes": [
+                "breaking",
+                "refactor"
+              ],
+              "utilities": [],
+              "migrations": [
+                "Migrate any automations to use the build or watch script."
+              ],
+              "notes": [
+                "Removes the compile script as its output had become unreasonably large, rendering it difficult to work with, as well as extremely long compile times."
+              ]
+            },
             {
               "themes": [
                 "breaking",
@@ -73,7 +86,23 @@
                 "Make sure your query definitions in your config now include the full min-width query (e.g. if your query value was 900px, it now needs to be \"screen and (min-width 900px)\""
               ],
               "notes": [
-                "Reworks the media queries configuration so that it now accepts full queries rather than numeric values.",
+                "Reworks the media queries configuration so that it now accepts full queries rather than numeric values."
+              ]
+            },
+            {
+              "themes": [
+                "breaking",
+                "refactor"
+              ],
+              "utilities": [],
+              "migrations": [
+                "You will only have to worry about this if you haven't set media queries in your config.",
+                "If you haven't, you can either accept the new definition and make no change, or set custom definitions to match the default keys:",
+                "s: screen and (min-width: 48em)",
+                "m: screen and (min-width: 64em)",
+                "l: screen and (min-width: 100em)"
+              ],
+              "notes": [
                 "Adds a new intermediate default query, replacing the original s key, which is now xs."
               ]
             },
