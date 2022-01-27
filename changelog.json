@@ -401,6 +401,22 @@
           ],
           "versions": [
             {
+              "number": "17",
+              "date": "2022/JAN/26",
+              "author": "Josh Beveridge",
+              "changes": [
+                {
+                  "themes": [
+                    "bug"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "Updates all instances of the project referring to itself to use path.resolve to ensure that the routing always works."
+                  ]
+                }
+              ]
+            },
+            {
               "number": "16",
               "date": "2021/NOV/29",
               "author": "Josh Beveridge",
