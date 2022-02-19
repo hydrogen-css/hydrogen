@@ -172,6 +172,38 @@
           ],
           "versions": [
             {
+              "number": "19",
+              "date": "2022/FEB/19",
+              "author": "Josh Beveridge",
+              "changes": [
+                {
+                  "themes": [
+                    "feature"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "Adds package publishing support to Github actions and runs a publishing test."
+                  ]
+                }
+              ]
+            },
+            {
+              "number": "18",
+              "date": "2022/FEB/18",
+              "author": "Josh Beveridge",
+              "changes": [
+                {
+                  "themes": [
+                    "bug"
+                  ],
+                  "utilities": [],
+                  "notes": [
+                    "Attempts to update the permissions on the package executables."
+                  ]
+                }
+              ]
+            },
+            {
               "number": "17",
               "date": "2022/JAN/26",
               "author": "Josh Beveridge",
