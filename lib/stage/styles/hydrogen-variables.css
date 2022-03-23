@@ -6,19 +6,19 @@
 --h2-color-transparent: rgba(255, 255, 255, 0);
 --h2-color-white: rgba(255, 255, 255, 1);
 --h2-color-gray: #787987;
---h2-color-gray-light: hsl(236, 5.9%, 80%);
+--h2-color-gray-light: hsl(236, 5.9%, 75%);
 --h2-color-gray-dark: rgb(60, 61, 68);
 --h2-color-black: rgba(20, 20, 30, 1);
---h2-color-black-light: hsl(240, 20%, 63.9%);
+--h2-color-black-light: hsl(240, 20%, 54.9%);
 --h2-color-black-dark: rgb(10, 10, 15);
 --h2-color-primary: #9D5CFF;
 --h2-color-primary-light: #d7bdff;
 --h2-color-primary-dark: #36106e;
 --h2-color-secondary: #5CFFEE;
---h2-color-secondary-light: hsl(173.70000000000005, 100%, 87.2%);
+--h2-color-secondary-light: hsl(173.70000000000005, 100%, 84%);
 --h2-color-secondary-dark: rgb(0, 174, 155);
 --h2-color-accent: #FF5C6D;
---h2-color-accent-light: hsl(353.70000000000005, 100%, 87.2%);
+--h2-color-accent-light: hsl(353.70000000000005, 100%, 84%);
 --h2-color-accent-dark: rgb(174, 0, 18);
 /* Containers */
 --h2-container-width-full: none;
