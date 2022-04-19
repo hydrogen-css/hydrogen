@@ -1,6 +1,11 @@
 // @use "utilities/core-flex-grid";
 
 $h2-line-height-setting: $H2WHITESPACESCALE;
+// When updating this calculation, be sure to do so in the following places:
+// - set-fonts.js (setFontScaleVariables)
+// - set-fonts.js (setHeadingLineHeights)
+// - core.scss (variables)
+// - _map-font-size.scss (variables)
 $h2-font-base-size: $H2FONTBASESIZE;
 $h2-font-scale: $H2FONTSCALE;
 $h2-font-size-default: 1rem;

@@ -1,4 +1,9 @@
 // Font Variables
+// When updating this calculation, be sure to do so in the following places:
+// - set-fonts.js (setFontScaleVariables)
+// - set-fonts.js (setHeadingLineHeights)
+// - core.scss (variables)
+// - _map-font-size.scss (variables)
 $h2-font-scale: $H2FONTSCALE;
 $h2-font-size-default: 1rem;
 $h2-font-size-caption: calc(#{$h2-font-size-default}/#{$h2-font-scale});
