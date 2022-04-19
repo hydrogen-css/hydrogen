@@ -131,6 +131,7 @@
     }
   ],
   "fontBaseSize": "112.5%",
+  "fontBaseLineHeight": "1.3",
   "fontScale": "1.25",
   "gradients": [],
   "heights": [
@@ -223,7 +224,6 @@
       "value": "0 0.7rem 1.5rem -0.3rem rgba(0, 0, 0, .2)"
     }
   ],
-  "whitespaceScale": "1.5",
   "widths": [
     {
       "key": "100",

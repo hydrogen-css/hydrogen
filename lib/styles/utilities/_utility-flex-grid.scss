@@ -64,4 +64,8 @@ $h2GridColumns: 12;
     flex: initial;
     max-width: 100%;
   }
+  [data-h2-flex-grid] > [data-h2-flex-item*='#{$mediaKey}(fill)'] {
+    flex: 1;
+    max-width: 100%;
+  }
 }

@@ -2,7 +2,7 @@
 
 @use '../maps/map-sides' as sideMap;
 @use '../maps/map-states' as stateMap;
-@use '../maps/map-whitespace' as whitespaceMap;
+@use '../maps/map-margin' as marginSpaceMap;
 
 @use '../utilities/utility-margin' as marginStyles;
 
@@ -10,5 +10,5 @@
   $mediaKey: 'MEDIAKEY',
   $stateMap: stateMap.$h2-map-states,
   $sideMap: sideMap.$h2-map-sides,
-  $whitespaceMap: whitespaceMap.$h2-map-whitespace
+  $marginSpaceMap: marginSpaceMap.$h2-map-margin
 );

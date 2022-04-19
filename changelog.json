@@ -59,235 +59,6 @@
       ],
       "versions": [
         {
-          "number": "2",
-          "date": "2021/JAN25",
-          "author": "Josh Beveridge",
-          "changes": [
-            {
-              "themes": [
-                "breaking",
-                "refactor"
-              ],
-              "utilities": [],
-              "migrations": [
-                "Migrate any automations to use the build or watch script."
-              ],
-              "notes": [
-                "Removes the compile script as its output had become unreasonably large, rendering it difficult to work with, as well as extremely long compile times."
-              ]
-            },
-            {
-              "themes": [
-                "breaking",
-                "refactor"
-              ],
-              "utilities": [],
-              "migrations": [
-                "Make sure your query definitions in your config now include the full min-width query (e.g. if your query value was 900px, it now needs to be \"screen and (min-width 900px)\""
-              ],
-              "notes": [
-                "Reworks the media queries configuration so that it now accepts full queries rather than numeric values."
-              ]
-            },
-            {
-              "themes": [
-                "breaking",
-                "refactor"
-              ],
-              "utilities": [],
-              "migrations": [
-                "You will only have to worry about this if you haven't set media queries in your config.",
-                "If you haven't, you can either accept the new definition and make no change, or set custom definitions to match the default keys:",
-                "s: screen and (min-width: 48em)",
-                "m: screen and (min-width: 64em)",
-                "l: screen and (min-width: 100em)"
-              ],
-              "notes": [
-                "Adds a new intermediate default query, replacing the original s key, which is now xs."
-              ]
-            },
-            {
-              "themes": [
-                "breaking",
-                "refactor"
-              ],
-              "utilities": [
-                "container"
-              ],
-              "migrations": [
-                "If you'd like a container to retain 90% width on mobile devices, you can set a custom container for 90% width.",
-                "Altneratively, you can add a data-h2-width value of 90 to your configuration file and combine the two attributes to recreate the original effect."
-              ],
-              "notes": [
-                "Containers no longer have a fixed width of 90% and will now span 100% of their parent until they reach their maximum width.",
-                "This change was decided on because it's counterintuitive that a container doesn't span the full width of its parent, particularly when you have multiple containers inside of each other.",
-                "The original fixed width of 90% was a convenience to avoid needing to add padding to containers on mobile devices, which isn't a good enough reason to prevent the expected behaviour."
-              ]
-            },
-            {
-              "themes": [
-                "feature"
-              ],
-              "utilities": [],
-              "notes": [
-                "Adds support for dark mode! If you have your browser set to a dark theme, Hydrogen now offers a :dark variant of all media queries that can also be combined with state (e.g. b:dark or b:dark:h).",
-                "Dark mode also supports a class toggle using the h2-dark and h2-light classes. A toggle script will be provided in the documentation."
-              ]
-            },
-            {
-              "themes": [
-                "feature"
-              ],
-              "utilities": [],
-              "notes": [
-                "CSS variables can now be generated from Hydrogen's configuration file by enabling them under the variables object."
-              ]
-            },
-            {
-              "themes": [
-                "feature"
-              ],
-              "utilities": [],
-              "notes": [
-                "When developing Hydrogen, npm start now initializes the development watch script and opens the test page in the browser."
-              ]
-            },
-            {
-              "themes": [
-                "feature"
-              ],
-              "utilities": [
-                "height"
-              ],
-              "notes": [
-                "Height is now available as an attribute and can be set with custom configurations."
-              ]
-            },
-            {
-              "themes": [
-                "feature"
-              ],
-              "utilities": [
-                "height",
-                "width"
-              ],
-              "notes": [
-                "Both the new height attribute and width attributes now automatically generate t-shirt size values based on the whitespace scale (e.g. you can now use data-h2-width='b(xl)' to access the xl value previously locked to margin and padding)."
-              ]
-            },
-            {
-              "themes": [
-                "feature"
-              ],
-              "utilities": [
-                "font-size",
-                "height",
-                "margin",
-                "padding",
-                "width"
-              ],
-              "notes": [
-                "Font size will now scale at two pre-determined breakpoints using the font scale value set in the configuration. This is to ensure that type hierarchy makes sense for smaller and larger devices."
-              ]
-            },
-            {
-              "themes": [
-                "feature"
-              ],
-              "utilities": [
-                "font-color"
-              ],
-              "notes": [
-                "Gradients are now supported as font color options using the background-clip property."
-              ]
-            },
-            {
-              "themes": [
-                "refactor"
-              ],
-              "utilities": [
-                "bg-color",
-                "overlay"
-              ],
-              "notes": [
-                "Requires gradient configurations to now have a key for easier usage and deprecates the old syntax. Rather than typing the unique combination, you'll be able to use b(KEY).",
-                "Gradient configuration syntax has been simplified so that color stops can now be an array of strings that contain each color value, rather than requiring a key and color value.",
-                "This also modifies the way SCSS variables are exported, but will only affect gradients that use the new syntax to avoid breaking existing implementations.",
-                "Colors and gradients are now checked for duplicates. The old syntax, while deprecated, will still work. If a gradient is using the same key as a color, the color will be prefered and a warning will be passed to the console."
-              ]
-            },
-            {
-              "themes": [
-                "optimization"
-              ],
-              "utilities": [],
-              "notes": [
-                "Migrates to sass.sync() for the performance benefits."
-              ]
-            },
-            {
-              "themes": [
-                "refactor"
-              ],
-              "utilities": [],
-              "notes": [
-                "Hydrogen now throws a non-failing error when it finds that your input directories have no files in them."
-              ]
-            },
-            {
-              "themes": [
-                "refactor"
-              ],
-              "utilities": [],
-              "notes": [
-                "Most of the utility scripts have been simplified so that central handler scripts now handle environment detection and path generation."
-              ]
-            },
-            {
-              "themes": [
-                "refactor"
-              ],
-              "utilities": [],
-              "notes": [
-                "Hydrogen now prefers input/output configuration folders, rather than the now deprecated folders configuration. The h2-init script has been updated to reflect this change and will now also create the directories passed to it if they don't already exist."
-              ]
-            },
-            {
-              "themes": [
-                "refactor"
-              ],
-              "utilities": [],
-              "notes": [
-                "Console output has been slightly reformatted to make it clearer."
-              ]
-            },
-            {
-              "themes": [
-                "refactor"
-              ],
-              "utilities": [
-                "border",
-                "location",
-                "margin",
-                "padding"
-              ],
-              "notes": [
-                "You can now use left-right in place of right-left when referring to an element's sides."
-              ]
-            },
-            {
-              "themes": [
-                "refactor"
-              ],
-              "utilities": [],
-              "notes": [
-                "Refactors the way automatic color variant generation works to use a Node library, rather than Sass, because the colors needed to be computed for variable output."
-              ]
-            }
-          ],
-          "versions": []
-        },
-        {
           "number": "1",
           "date": "2021/JUL/23",
           "author": "Josh Beveridge",
@@ -1047,6 +818,325 @@
           ]
         }
       ]
+    },
+    {
+      "number": "2",
+      "date": "2022/APR/15",
+      "author": "Josh Beveridge",
+      "changes": [
+        {
+          "themes": [
+            "breaking",
+            "refactor"
+          ],
+          "utilities": [],
+          "migrations": [
+            "Migrate any automations to use the build or watch script."
+          ],
+          "notes": [
+            "Removes the compile script as its output had become unreasonably large, rendering it difficult to work with, as well as extremely long compile times."
+          ]
+        },
+        {
+          "themes": [
+            "breaking",
+            "refactor"
+          ],
+          "utilities": [],
+          "migrations": [
+            "Make sure your query definitions in your config now include the full min-width query (e.g. if your query value was 900px, it now needs to be \"screen and (min-width 900px)\""
+          ],
+          "notes": [
+            "Reworks the media queries configuration so that it now accepts full queries rather than numeric values."
+          ]
+        },
+        {
+          "themes": [
+            "breaking",
+            "refactor"
+          ],
+          "utilities": [],
+          "migrations": [
+            "You will only have to worry about this if you haven't set media queries in your config.",
+            "If you haven't, you can either accept the new definition and make no change, or set custom definitions to match the default keys:",
+            "s: screen and (min-width: 48em)",
+            "m: screen and (min-width: 64em)",
+            "l: screen and (min-width: 100em)"
+          ],
+          "notes": [
+            "Adds a new intermediate default query, replacing the original s key, which is now xs."
+          ]
+        },
+        {
+          "themes": [
+            "breaking",
+            "refactor"
+          ],
+          "utilities": [
+            "container"
+          ],
+          "migrations": [
+            "If you'd like a container to retain 90% width on mobile devices, you can set a custom container for 90% width.",
+            "Altneratively, you can add a data-h2-width value of 90 to your configuration file and combine the two attributes to recreate the original effect."
+          ],
+          "notes": [
+            "Containers no longer have a fixed width of 90% and will now span 100% of their parent until they reach their maximum width.",
+            "This change was decided on because it's counterintuitive that a container doesn't span the full width of its parent, particularly when you have multiple containers inside of each other.",
+            "The original fixed width of 90% was a convenience to avoid needing to add padding to containers on mobile devices, which isn't a good enough reason to prevent the expected behaviour."
+          ]
+        },
+        {
+          "themes": [
+            "breaking",
+            "refactor"
+          ],
+          "utilities": [
+            "flex-grid",
+            "height",
+            "location",
+            "margin",
+            "padding",
+            "width"
+          ],
+          "migrations": [
+            "Add the new line-height value to your config and set it (note that all typography will now adjust to multiples of this line height value.",
+            "Find replace all instances of height, location, margin, padding, and width so that t-shirt sizes are replaced with the new multiplier syntax (e.g. xl => x4)"
+          ],
+          "notes": [
+            "Whitespace syntax has been completely reworked to follow a consistent multiplier, rather than t-shirt sizes.",
+            "Rather than calculating whitespace increments based off of a multiplier, whitespace is now additively generated based on a base line height value in the config to better align with the typography system."
+          ]
+        },
+        {
+          "themes": [
+            "breaking",
+            "refactor"
+          ],
+          "utilities": [
+            "border",
+            "location",
+            "margin",
+            "padding"
+          ],
+          "migrations": [
+            "Find any instances where you've used old syntax such as top-right and replace it with single instances of b(top, x) and b(right, x)."
+          ],
+          "notes": [
+            "Side values have been simplified to only accept all, top-bottom, right-left, top, bottom, right, and left."
+          ]
+        },
+        {
+          "themes": [
+            "breaking",
+            "refactor"
+          ],
+          "utilities": [],
+          "migrations": [
+            "Find replace all states to use the full word, rather than the first letter (e.g. b:h => b:hover)."
+          ],
+          "notes": [
+            "Changes the way states are written to be more verbose, using the full word rather than the initial, to better align with Hydrogen's overall approach to legibility."
+          ]
+        },
+        {
+          "themes": [
+            "breaking",
+            "refactor"
+          ],
+          "utilities": [
+            "core"
+          ],
+          "migrations": [
+            "Find instances of heading elements and manually apply margins/padding."
+          ],
+          "notes": [
+            "The reset styles have removed any assumption about margin/padding on heading elements, and has also applied calculated line height based on the new line height setting that accounts for the type scale settings."
+          ]
+        },
+        {
+          "themes": [
+            "feature"
+          ],
+          "utilities": [],
+          "notes": [
+            "Adds support for dark mode! If you have your browser set to a dark theme, Hydrogen now offers a :dark variant of all media queries that can also be combined with state (e.g. b:dark or b:dark:hover).",
+            "Dark mode also supports a class toggle using the h2-dark and h2-light classes. A toggle script will be provided in the documentation."
+          ]
+        },
+        {
+          "themes": [
+            "feature"
+          ],
+          "utilities": [],
+          "notes": [
+            "CSS variables can now be generated from Hydrogen's configuration file by enabling them under the variables object."
+          ]
+        },
+        {
+          "themes": [
+            "feature"
+          ],
+          "utilities": [],
+          "notes": [
+            "When developing Hydrogen, npm start now initializes the development watch script and opens the test page in the browser."
+          ]
+        },
+        {
+          "themes": [
+            "feature"
+          ],
+          "utilities": [
+            "height"
+          ],
+          "notes": [
+            "Height is now available as an attribute and can be set with custom configurations."
+          ]
+        },
+        {
+          "themes": [
+            "feature"
+          ],
+          "utilities": [
+            "height",
+            "width"
+          ],
+          "notes": [
+            "Both the new height attribute and width attributes now automatically generate t-shirt size values based on the whitespace scale (e.g. you can now use data-h2-width='b(xl)' to access the xl value previously locked to margin and padding)."
+          ]
+        },
+        {
+          "themes": [
+            "feature"
+          ],
+          "utilities": [
+            "font-size",
+            "height",
+            "margin",
+            "padding",
+            "width"
+          ],
+          "notes": [
+            "Font size will now scale at two pre-determined breakpoints using the font scale value set in the configuration. This is to ensure that type hierarchy makes sense for smaller and larger devices."
+          ]
+        },
+        {
+          "themes": [
+            "feature"
+          ],
+          "utilities": [
+            "font-color"
+          ],
+          "notes": [
+            "Gradients are now supported as font color options using the background-clip property."
+          ]
+        },
+        {
+          "themes": [
+            "feature"
+          ],
+          "utilities": [
+            "flex-item"
+          ],
+          "notes": [
+            "Flex items can now be set to fill to tell them to span remaining space."
+          ]
+        },
+        {
+          "themes": [
+            "refactor"
+          ],
+          "utilities": [
+            "bg-color",
+            "overlay"
+          ],
+          "notes": [
+            "Requires gradient configurations to now have a key for easier usage and deprecates the old syntax. Rather than typing the unique combination, you'll be able to use b(KEY).",
+            "Gradient configuration syntax has been simplified so that color stops can now be an array of strings that contain each color value, rather than requiring a key and color value.",
+            "This also modifies the way SCSS variables are exported, but will only affect gradients that use the new syntax to avoid breaking existing implementations.",
+            "Colors and gradients are now checked for duplicates. The old syntax, while deprecated, will still work. If a gradient is using the same key as a color, the color will be prefered and a warning will be passed to the console."
+          ]
+        },
+        {
+          "themes": [
+            "optimization"
+          ],
+          "utilities": [],
+          "notes": [
+            "Migrates to sass.sync() for the performance benefits."
+          ]
+        },
+        {
+          "themes": [
+            "refactor"
+          ],
+          "utilities": [],
+          "notes": [
+            "Hydrogen now throws a non-failing error when it finds that your input directories have no files in them."
+          ]
+        },
+        {
+          "themes": [
+            "refactor"
+          ],
+          "utilities": [],
+          "notes": [
+            "Most of the utility scripts have been simplified so that central handler scripts now handle environment detection and path generation."
+          ]
+        },
+        {
+          "themes": [
+            "refactor"
+          ],
+          "utilities": [],
+          "notes": [
+            "Hydrogen now prefers input/output configuration folders, rather than the now deprecated folders configuration. The h2-init script has been updated to reflect this change and will now also create the directories passed to it if they don't already exist."
+          ]
+        },
+        {
+          "themes": [
+            "refactor"
+          ],
+          "utilities": [],
+          "notes": [
+            "Console output has been slightly reformatted to make it clearer."
+          ]
+        },
+        {
+          "themes": [
+            "refactor"
+          ],
+          "utilities": [
+            "border",
+            "location",
+            "margin",
+            "padding"
+          ],
+          "notes": [
+            "You can now use left-right in place of right-left when referring to an element's sides."
+          ]
+        },
+        {
+          "themes": [
+            "refactor"
+          ],
+          "utilities": [],
+          "notes": [
+            "Refactors the way automatic color variant generation works to use a Node library, rather than Sass, because the colors needed to be computed for variable output."
+          ]
+        },
+        {
+          "themes": [
+            "bug"
+          ],
+          "utilities": [
+            "container"
+          ],
+          "notes": [
+            "Fixes a bug where container combined with margin was ignoring top and bottom values due to margin specificity."
+          ]
+        }
+      ],
+      "versions": []
     }
   ]
 }

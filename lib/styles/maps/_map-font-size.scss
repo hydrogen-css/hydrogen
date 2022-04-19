@@ -2,8 +2,8 @@
 $h2-font-scale: $H2FONTSCALE;
 $h2-font-size-default: 1rem;
 $h2-font-size-caption: calc(#{$h2-font-size-default}/#{$h2-font-scale});
-$h2-font-size-h6: $h2-font-size-default;
-$h2-font-size-h5: calc(#{$h2-font-size-default}*#{$h2-font-scale});
+$h2-font-size-h6: calc(#{$h2-font-size-default}*#{$h2-font-scale});
+$h2-font-size-h5: calc(#{$h2-font-size-h6}*#{$h2-font-scale});
 $h2-font-size-h4: calc(#{$h2-font-size-h5}*#{$h2-font-scale});
 $h2-font-size-h3: calc(#{$h2-font-size-h4}*#{$h2-font-scale});
 $h2-font-size-h2: calc(#{$h2-font-size-h3}*#{$h2-font-scale});
