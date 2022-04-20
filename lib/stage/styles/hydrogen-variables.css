@@ -47,13 +47,13 @@
 --h2-gradient-purple: linear-gradient(135deg,green,red,blue);
 --h2-gradient-mygradientarray: linear-gradient(135deg,green,pink,rgba(255, 255, 255, 1));
 /* Heights */
---h2-height-xxs: NaNrem;
---h2-height-xs: NaNrem;
---h2-height-s: 1rem;
---h2-height-m: NaNrem;
---h2-height-l: NaNrem;
---h2-height-xl: NaNrem;
---h2-height-xxl: NaNrem;
+--h2-height-xquarter: 0.325rem;
+--h2-height-xhalf: 0.65rem;
+--h2-height-x1: 1.3rem;
+--h2-height-x2: 2.6rem;
+--h2-height-x3: 3.9000000000000004rem;
+--h2-height-x4: 5.2rem;
+--h2-height-x5: 6.5rem;
 --h2-height-none: 0px;
 --h2-height-auto: auto;
 --h2-height-100: 100%;
@@ -104,13 +104,13 @@
 --h2-shadow-l: 0 0.55rem 1rem -0.2rem rgba(0, 0, 0, .2);
 --h2-shadow-xl: 0 0.7rem 1.5rem -0.3rem rgba(0, 0, 0, .2);
 /* Widths */
---h2-width-xxs: NaNrem;
---h2-width-xs: NaNrem;
---h2-width-s: 1rem;
---h2-width-m: NaNrem;
---h2-width-l: NaNrem;
---h2-width-xl: NaNrem;
---h2-width-xxl: NaNrem;
+--h2-width-xquarter: 0.325rem;
+--h2-width-xhalf: 0.65rem;
+--h2-width-x1: 1.3rem;
+--h2-width-x2: 2.6rem;
+--h2-width-x3: 3.9000000000000004rem;
+--h2-width-x4: 5.2rem;
+--h2-width-x5: 6.5rem;
 --h2-width-none: 0px;
 --h2-width-auto: auto;
 --h2-width-100: 100%;
