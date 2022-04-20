@@ -1001,7 +1001,7 @@
             "width"
           ],
           "notes": [
-            "Both the new height attribute and width attributes now automatically generate t-shirt size values based on the whitespace scale (e.g. you can now use data-h2-width='b(xl)' to access the xl value previously locked to margin and padding)."
+            "Both the new height attribute and width attributes now automatically generate multiple size values based on the whitespace scale (e.g. you can now use data-h2-width='b(x3)' to access the x3 value previously locked to margin and padding)."
           ]
         },
         {
@@ -1039,6 +1039,17 @@
           ],
           "notes": [
             "Flex items can now be set to fill to tell them to span remaining space."
+          ]
+        },
+        {
+          "themes": [
+            "feature"
+          ],
+          "utilities": [
+            "gap"
+          ],
+          "notes": [
+            "A new attribute has been added for the gap property, that allows you to specify all, row, or column, and then use the same values found in other whitespace properties (e.g. x4)."
           ]
         },
         {
