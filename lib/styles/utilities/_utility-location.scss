@@ -8,30 +8,13 @@
       [data-h2-location*='#{$mediaKey}(#{$sideKey}, #{$whitespaceKey})'],
       [data-h2-location*='#{$mediaKey}(#{$sideKey}, #{$whitespaceKey})'][data-h2-visibility],
       [data-h2-location*='#{$mediaKey}(#{$sideKey}, #{$whitespaceKey})'][data-h2-position] {
-        @if $sideKey == 'top-bottom' or $sideKey == 'tb' {
+        @if $sideKey == 'top-bottom' or $sideKey == 'bottom-top' {
           top: #{$whitespaceValue};
           bottom: #{$whitespaceValue};
         } @else if
-          $sideKey ==
-          'right-left' or
-          $sideKey ==
-          'rl' or
-          $sideKey ==
-          'left-right'
+          $sideKey == 'right-left' or $sideKey == 'left-right'
         {
           right: #{$whitespaceValue};
-          left: #{$whitespaceValue};
-        } @else if $sideKey == 'top-right' {
-          top: #{$whitespaceValue};
-          right: #{$whitespaceValue};
-        } @else if $sideKey == 'top-left' {
-          top: #{$whitespaceValue};
-          left: #{$whitespaceValue};
-        } @else if $sideKey == 'bottom-right' {
-          bottom: #{$whitespaceValue};
-          right: #{$whitespaceValue};
-        } @else if $sideKey == 'bottom-left' {
-          bottom: #{$whitespaceValue};
           left: #{$whitespaceValue};
         } @else if $sideKey == 'top' {
           top: #{$whitespaceValue};
