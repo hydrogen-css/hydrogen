@@ -21,6 +21,7 @@
     "h2-build": "./bin/build.js"
   },
   "scripts": {
+    "h2-test": "node ./lib/scripts/test.js",
     "start": "npm-run-all --parallel h2-watch-dev browsersync",
     "h2-init-dev": "node ./dev/init.js",
     "h2-build-dev": "node ./dev/build.js",

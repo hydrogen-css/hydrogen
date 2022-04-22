@@ -1,0 +1,29 @@
+{
+  "input": [
+    "markup"
+  ],
+  "output": [
+    "styles"
+  ],
+  "colors": [
+    {
+      "key": "primary",
+      "color": "purple",
+      "variants": {
+        "light": false,
+        "dark": false
+      },
+      "opacities": []
+    }
+  ],
+  "media": [
+    {
+      "key": "b",
+      "query": "screen"
+    },
+    {
+      "key": "m",
+      "query": "screen and (min-width: 64em)"
+    }
+  ]
+}
