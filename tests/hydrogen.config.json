@@ -33,6 +33,27 @@
   "fontBaseSize": "112.5%",
   "fontBaseLineHeight": "1.3",
   "fontScale": "1.25",
+  "gradients": [
+    {
+      "key": "myLinearGradient",
+      "type": "linear",
+      "angle": "135deg",
+      "colorStops": [
+        "green",
+        "pink",
+        "rgba(255, 255, 255, 1)"
+      ]
+    },
+    {
+      "key": "myRadialGradient",
+      "type": "radial",
+      "colorStops": [
+        "green",
+        "pink",
+        "rgba(255, 255, 255, 1)"
+      ]
+    }
+  ],
   "media": [
     {
       "key": "b",
