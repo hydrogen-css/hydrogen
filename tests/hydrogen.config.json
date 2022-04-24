@@ -50,7 +50,13 @@
   "radius": [
     {
       "key": "rounded",
-      "value": "10px"
+      "radius": "10px"
+    }
+  ],
+  "shadows": [
+    {
+      "key": "xs",
+      "shadow": "0 0.1rem 0.2rem 0 rgba(0, 0, 0, .2)"
     }
   ]
 }
