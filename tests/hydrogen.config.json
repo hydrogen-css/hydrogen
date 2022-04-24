@@ -16,6 +16,23 @@
       "opacities": []
     }
   ],
+  "containers": [
+    {
+      "key": "s",
+      "maxWidth": "39rem"
+    },
+    {
+      "key": "m",
+      "maxWidth": "60rem"
+    },
+    {
+      "key": "l",
+      "maxWidth": "80rem"
+    }
+  ],
+  "fontBaseSize": "112.5%",
+  "fontBaseLineHeight": "1.3",
+  "fontScale": "1.25",
   "media": [
     {
       "key": "b",
@@ -24,6 +41,10 @@
     {
       "key": "m",
       "query": "screen and (min-width: 64em)"
+    },
+    {
+      "key": "l",
+      "query": "screen and (min-width: 100em)"
     }
   ]
 }
