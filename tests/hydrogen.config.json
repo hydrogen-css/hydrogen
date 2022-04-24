@@ -46,5 +46,11 @@
       "key": "l",
       "query": "screen and (min-width: 100em)"
     }
+  ],
+  "radius": [
+    {
+      "key": "rounded",
+      "value": "10px"
+    }
   ]
 }
