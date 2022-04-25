@@ -30,6 +30,12 @@
       "maxWidth": "80rem"
     }
   ],
+  "fonts": [
+    {
+      "key": "sans",
+      "family": "sans-serif"
+    }
+  ],
   "fontBaseSize": "112.5%",
   "fontBaseLineHeight": "1.3",
   "fontScale": "1.25",
