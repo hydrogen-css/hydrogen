@@ -66,12 +66,20 @@
       "query": "screen"
     },
     {
+      "key": "xs",
+      "value": "screen and (min-width: 48em)"
+    },
+    {
+      "key": "s",
+      "value": "screen and (min-width: 55em)"
+    },
+    {
       "key": "m",
-      "query": "screen and (min-width: 64em)"
+      "value": "screen and (min-width: 64em)"
     },
     {
       "key": "l",
-      "query": "screen and (min-width: 100em)"
+      "value": "screen and (min-width: 100em)"
     }
   ],
   "radius": [
