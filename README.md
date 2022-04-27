@@ -4,7 +4,7 @@
 
 Hydrogen is a utility-first styling tool for creating web interfaces without writing CSS.
 
-It leverages data-attributes to allow the styling of elements right in your markup, rather than creating your own classes. Hydrogen offers a comprehensive library of tools and configurations for easy, seamless development. When you're ready to publish your project, it then processes your markup and creates a custom CSS file that contains only the code you've used, reducing its own footprint.
+It leverages data-attributes to allow the styling of elements, media queries, states, and dark mode right in your markup. Hydrogen offers a comprehensive library of tools and configurations for easy, seamless development. Hydrogen processes your markup and creates a custom CSS file that contains only the code you've used, reducing its own footprint.
 
 [Visit the documentation website for details.](https://hydrogen.design)
 
@@ -22,11 +22,11 @@ It leverages data-attributes to allow the styling of elements right in your mark
 
 Hydrogen uses a custom `data-attribute` syntax for complex styling.
 
-`data-h2-UTILITY="MEDIA:STATE(PARAMETERS)"`
+`data-h2-UTILITY="MEDIA:DARK:STATE(PARAMETERS)"`
 
 An example of a Hydrogen attribute in use would be something like:
 
-`data-h2-bg-color="b(primary) b:h(accent)"`
+`data-h2-bg-color="b(primary) b:hover(accent)"`
 
 This repository also contains a handy `hydrogen.snippets.json` file that contains snippet automation for VS Code, enabling auto completion and tab stops.
 
@@ -42,7 +42,7 @@ Within this configuration file, you can modify many of Hydrogen's utilities to i
 
 ### Compression
 
-Hydrogen uses custom scripting to scan your code for `data-h2` attributes and then custom builds a CSS stylesheet that contains only Hydrogen's base and the attributes you've used. No bloat. No duplication. This means that the library in production is extremely small while allowing it to provide a robust set of features and support complex customization.
+Hydrogen uses custom scripting to scan your code for `data-h2` attributes and then builds a CSS stylesheet that contains only Hydrogen's base and the attributes you've used. No bloat. No duplication. This means that the library in production is extremely small while allowing it to provide a robust set of features and support complex customization.
 
 ### Utilities
 
@@ -63,6 +63,9 @@ You can learn about [utility usage in the documentation](https://hydrogen.design
 - `font-size`
 - `font-style`
 - `font-weight`
+- `gap`
+- `grid-template-columns`
+- `grid-template-rows`
 - `height`
 - `justify-content`
 - `layer` for `z-index` control
@@ -77,6 +80,7 @@ You can learn about [utility usage in the documentation](https://hydrogen.design
 - `radius`
 - `shadow`
 - `text-align`
+- `text-decoration`
 - `text-transform`
 - `visibility`
 - `width`
@@ -85,18 +89,14 @@ You can learn about [utility usage in the documentation](https://hydrogen.design
 
 Along with media queries, Hydrogen offers the ability to modify attributes using the following [state](https://hydrogen.design/#states) keys:
 
-- `:d` for `disabled`
-- `:f` for `focus`
-- `:h` for `hover`
-- `:a` for `active`
-
-While media queries work with all attributes, states are restricted to the utilities listed in the state section of the documentation.
+- `:disabled` for `disabled`
+- `:focus` for `focus`
+- `:hover` for `hover`
+- `:active` for `active`
 
 ### Dark Mode
 
-You can specify unique styles for users who have their browsers/OS set to prefer dark mode. This can be done by adding `:dark` to your media query calls:
+You can specify unique styles for users who have their browsers/OS set to prefer dark mode or simply want to toggle it on using a class. This can be done by adding `:dark` to your media query calls:
 
 - `data-h2-bg-color="b(primary)"` will set the default background color to `primary`;
 - `data-h2-bg-color="b(primary) b:dark(secondary)"` will set the default background color to `primary`, and if the user prefers dark mode, will set the background to `secondary`
-
-Please note that class-based dark mode isn't available yet, but is in the works.
