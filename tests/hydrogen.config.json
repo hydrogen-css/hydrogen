@@ -36,9 +36,21 @@
       "family": "sans-serif"
     }
   ],
-  "fontBaseSize": "112.5%",
-  "fontBaseLineHeight": "1.3",
-  "fontScale": "1.25",
+  "baseFontSizes": [
+    {
+      "size": "100%",
+      "query": "screen"
+    },
+    {
+      "size": "112.5%",
+      "query": "screen and (min-width: 64em)"
+    },{
+      "size": "118%",
+      "query": "screen and (min-width: 100em)"
+    }
+  ],
+  "baseLineHeight": "1.3",
+  "typeScale": "1.25",
   "gradients": [
     {
       "key": "myLinearGradient",
@@ -63,23 +75,27 @@
   "media": [
     {
       "key": "b",
-      "query": "screen"
+      "query": null
+    },
+    {
+      "key": "p",
+      "query": "print"
     },
     {
       "key": "xs",
-      "value": "screen and (min-width: 48em)"
+      "query": "screen and (min-width: 48em)"
     },
     {
       "key": "s",
-      "value": "screen and (min-width: 55em)"
+      "query": "screen and (min-width: 55em)"
     },
     {
       "key": "m",
-      "value": "screen and (min-width: 64em)"
+      "query": "screen and (min-width: 64em)"
     },
     {
       "key": "l",
-      "value": "screen and (min-width: 100em)"
+      "query": "screen and (min-width: 100em)"
     }
   ],
   "radius": [
