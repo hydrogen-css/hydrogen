@@ -8,12 +8,27 @@
   "colors": [
     {
       "key": "primary",
-      "color": "purple",
-      "variants": {
-        "light": false,
-        "dark": false
-      },
-      "opacities": []
+      "color": "#9D5CFF",
+      "scale": {
+        "light": "auto",
+        "lighter": "auto",
+        "lightest": "auto",
+        "dark": "magenta",
+        "darker": "auto",
+        "darkest": "auto"
+      }
+    },
+    {
+      "key": "secondary",
+      "color": "#5CFFEE",
+      "scale": {
+        "light": "auto",
+        "lighter": "auto",
+        "lightest": "rgba(255, 0, 0, 1)",
+        "dark": "auto",
+        "darker": "auto",
+        "darkest": "auto"
+      }
     }
   ],
   "containers": [
