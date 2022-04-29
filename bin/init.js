@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-const init = require('../lib/scripts/node/init');
+const init = require('../lib/init');
 
 init.init();

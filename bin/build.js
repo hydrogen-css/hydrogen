@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-const build = require('../lib/scripts/node/build');
+const build = require('../lib/build');
 
 build.build();

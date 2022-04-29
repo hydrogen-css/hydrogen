@@ -21,11 +21,11 @@
     "h2-build": "./bin/build.js"
   },
   "scripts": {
-    "h2-test": "node ./lib/scripts/test.js",
-    "start": "npm-run-all --parallel h2-watch-dev browsersync",
-    "h2-init-dev": "node ./dev/init.js",
-    "h2-build-dev": "node ./dev/build.js",
-    "h2-watch-dev": "node ./dev/watch.js",
+    "h2-test": "node ./lib/build.js",
+    "start": "npm-run-all --parallel h2-dev-watch browsersync",
+    "h2-dev-init": "node ./lib/init.js dev",
+    "h2-dev-build": "node ./lib/build.js dev",
+    "h2-dev-watch": "node ./lib/watch.js dev",
     "browsersync": "browser-sync start --server './lib/stage/' --startPath 'markup/index.html' --files 'lib/stage' --port 8080 --no-notify --no-inject-changes"
   },
   "repository": {
@@ -47,6 +47,7 @@
     "cssnano-preset-lite": "^2.1.2",
     "del": "^6.0.0",
     "glob": "^8.0.1",
+    "node-watch": "^0.7.3",
     "postcss": "^8.4.12",
     "prompt": "^1.3.0"
   },

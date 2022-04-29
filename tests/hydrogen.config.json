@@ -2,9 +2,11 @@
   "input": [
     "markup"
   ],
-  "output": [
-    "styles"
-  ],
+  "output": "styles",
+  "variables": {
+    "css": true,
+    "sass": true
+  },
   "colors": [
     {
       "key": "primary",
@@ -24,7 +26,43 @@
       "scale": {
         "light": "auto",
         "lighter": "auto",
-        "lightest": "rgba(255, 0, 0, 1)",
+        "lightest": "auto",
+        "dark": "auto",
+        "darker": "auto",
+        "darkest": "auto"
+      }
+    },
+    {
+      "key": "accent",
+      "color": "#FF5C6D",
+      "scale": {
+        "light": "auto",
+        "lighter": "auto",
+        "lightest": "auto",
+        "dark": "auto",
+        "darker": "auto",
+        "darkest": "auto"
+      }
+    },
+    {
+      "key": "black",
+      "color": "rgba(20, 20, 30, 1)",
+      "scale": {
+        "light": "auto",
+        "lighter": "auto",
+        "lightest": "auto",
+        "dark": "auto",
+        "darker": "auto",
+        "darkest": "auto"
+      }
+    },
+    {
+      "key": "white",
+      "color": "rgba(255, 255, 255, 1)",
+      "scale": {
+        "light": "auto",
+        "lighter": "auto",
+        "lightest": "auto",
         "dark": "auto",
         "darker": "auto",
         "darkest": "auto"
@@ -49,6 +87,18 @@
     {
       "key": "sans",
       "family": "sans-serif"
+    },
+    {
+      "key": "serif",
+      "family": "serif"
+    },
+    {
+      "key": "script",
+      "family": "script"
+    },
+    {
+      "key": "mono",
+      "family": "monospace"
     }
   ],
   "baseFontSizes": [
@@ -97,19 +147,19 @@
       "query": "print"
     },
     {
-      "key": "xs",
+      "key": "s",
       "query": "screen and (min-width: 48em)"
     },
     {
-      "key": "s",
+      "key": "m",
       "query": "screen and (min-width: 55em)"
     },
     {
-      "key": "m",
+      "key": "l",
       "query": "screen and (min-width: 64em)"
     },
     {
-      "key": "l",
+      "key": "xl",
       "query": "screen and (min-width: 100em)"
     }
   ],
@@ -121,8 +171,24 @@
   ],
   "shadows": [
     {
-      "key": "xs",
-      "shadow": "0 0.1rem 0.2rem 0 rgba(0, 0, 0, .2)"
+      "key": "s",
+      "value": "0 0.1rem 0.2rem 0 rgba(0, 0, 0, .2)"
+    },
+    {
+      "key": "m",
+      "value": "0 0.25rem 0.5rem -0.05rem rgba(0, 0, 0, .2)"
+    },
+    {
+      "key": "l",
+      "value": "0 0.4rem 0.7rem -0.1rem rgba(0, 0, 0, .2)"
+    },
+    {
+      "key": "xl",
+      "value": "0 0.55rem 1rem -0.2rem rgba(0, 0, 0, .2)"
+    },
+    {
+      "key": "xxl",
+      "value": "0 0.7rem 1.5rem -0.3rem rgba(0, 0, 0, .2)"
     }
   ]
 }
