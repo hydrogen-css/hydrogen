@@ -1,90 +1,72 @@
 {
-  "debug": false,
-  "keyWarnings": true,
-  "mediaWarnings": false,
-  "opacityWarnings": false,
   "input": [
-    "path/to/project/markup/folder"
+    "array/of/input/folders"
   ],
-  "output": "path/to/styles/output/folder",
+  "output": "path/to/output/folder",
   "variables": {
-    "css": {
-      "enabled": false
-    },
-    "sass": {
-      "enabled": false
-    }
+    "css": false,
+    "sass": false
   },
-  "borderWeights": [
-    {
-      "key": "1px",
-      "weight": "1px"
-    },
-    {
-      "key": ".5rem",
-      "weight": ".5rem"
-    },
-    {
-      "key": "1rem",
-      "weight": "1rem"
-    }
-  ],
   "colors": [
-    {
-      "key": "transparent",
-      "color": "rgba(255, 255, 255, 0)",
-      "variants": {
-        "enabled": false
-      },
-      "opacities": []
-    },
-    {
-      "key": "white",
-      "color": "rgba(255, 255, 255, 1)",
-      "variants": {
-        "enabled": false
-      },
-      "opacities": [
-        ".2"
-      ]
-    },
-    {
-      "key": "black",
-      "color": "rgba(20, 20, 30, 1)",
-      "variants": {
-        "enabled": false
-      },
-      "opacities": [
-        ".8"
-      ]
-    },
     {
       "key": "primary",
       "color": "#9D5CFF",
-      "variants": {
-        "enabled": true,
-        "light": "#d7bdff",
-        "dark": "#36106e"
-      },
-      "opacities": [
-        ".1"
-      ]
+      "scale": {
+        "light": "auto",
+        "lighter": "auto",
+        "lightest": "auto",
+        "dark": "magenta",
+        "darker": "auto",
+        "darkest": "auto"
+      }
     },
     {
       "key": "secondary",
       "color": "#5CFFEE",
-      "variants": {
-        "enabled": false
-      },
-      "opacities": []
+      "scale": {
+        "light": "auto",
+        "lighter": "auto",
+        "lightest": "auto",
+        "dark": "auto",
+        "darker": "auto",
+        "darkest": "auto"
+      }
     },
     {
       "key": "accent",
       "color": "#FF5C6D",
-      "variants": {
-        "enabled": false
-      },
-      "opacities": []
+      "scale": {
+        "light": "auto",
+        "lighter": "auto",
+        "lightest": "auto",
+        "dark": "auto",
+        "darker": "auto",
+        "darkest": "auto"
+      }
+    },
+    {
+      "key": "black",
+      "color": "rgba(20, 20, 30, 1)",
+      "scale": {
+        "light": "auto",
+        "lighter": "auto",
+        "lightest": "auto",
+        "dark": "auto",
+        "darker": "auto",
+        "darkest": "auto"
+      }
+    },
+    {
+      "key": "white",
+      "color": "rgba(255, 255, 255, 1)",
+      "scale": {
+        "light": "auto",
+        "lighter": "auto",
+        "lightest": "auto",
+        "dark": "auto",
+        "darker": "auto",
+        "darkest": "auto"
+      }
     }
   ],
   "containers": [
@@ -101,149 +83,112 @@
       "maxWidth": "80rem"
     }
   ],
-  "flexgrid": {
-    "enabled": false,
-    "columns": 12
-  },
   "fonts": [
     {
       "key": "sans",
-      "loadType": "system",
-      "value": "sans-serif",
-      "url": null
+      "family": "sans-serif"
     },
     {
       "key": "serif",
-      "loadType": "system",
-      "value": "serif",
-      "url": null
-    },{
+      "family": "serif"
+    },
+    {
       "key": "script",
-      "loadType": "system",
-      "value": "script",
-      "url": null
+      "family": "script"
     },
     {
       "key": "mono",
-      "loadType": "system",
-      "value": "monospace",
-      "url": null
+      "family": "monospace"
     }
   ],
-  "fontBaseSize": "112.5%",
-  "fontBaseLineHeight": "1.3",
-  "fontScale": "1.25",
-  "gradients": [],
-  "heights": [
+  "baseFontSizes": [
     {
-      "key": "100",
-      "value": "100%"
+      "size": "100%",
+      "query": "screen"
     },
     {
-      "key": "75",
-      "value": "75%"
-    },
-    {
-      "key": "50",
-      "value": "50%"
-    },
-    {
-      "key": "25",
-      "value": "25%"
-    },
-    {
-      "key": "0",
-      "value": "0"
+      "size": "112.5%",
+      "query": "screen and (min-width: 64em)"
+    },{
+      "size": "118%",
+      "query": "screen and (min-width: 100em)"
     }
   ],
-  "layerCount": 5,
+  "baseLineHeight": "1.3",
+  "typeScale": "1.25",
+  "gradients": [
+    {
+      "key": "myLinearGradient",
+      "type": "linear",
+      "angle": "135deg",
+      "colorStops": [
+        "green",
+        "pink",
+        "rgba(255, 255, 255, 1)"
+      ]
+    },
+    {
+      "key": "myRadialGradient",
+      "type": "radial",
+      "colorStops": [
+        "green",
+        "pink",
+        "rgba(255, 255, 255, 1)"
+      ]
+    }
+  ],
   "media": [
     {
-      "key": "xs",
-      "value": "screen and (min-width: 48em)"
+      "key": "b",
+      "query": null
+    },
+    {
+      "key": "p",
+      "query": "print"
     },
     {
       "key": "s",
-      "value": "screen and (min-width: 55em)"
+      "query": "screen and (min-width: 48em)"
     },
     {
       "key": "m",
-      "value": "screen and (min-width: 64em)"
+      "query": "screen and (min-width: 55em)"
     },
     {
       "key": "l",
-      "value": "screen and (min-width: 100em)"
-    }
-  ],
-  "opacities": [
-    {
-      "key": "0",
-      "value": "0"
+      "query": "screen and (min-width: 64em)"
     },
     {
-      "key": ".5",
-      "value": ".5"
-    },
-    {
-      "key": "1",
-      "value": "1"
+      "key": "xl",
+      "query": "screen and (min-width: 100em)"
     }
   ],
   "radius": [
     {
       "key": "rounded",
-      "value": "10px"
-    },
-    {
-      "key": "pill",
-      "value": "50rem"
-    },{
-      "key": "circle",
-      "value": "100%"
+      "radius": "10px"
     }
   ],
   "shadows": [
     {
-      "key": "xs",
+      "key": "s",
       "value": "0 0.1rem 0.2rem 0 rgba(0, 0, 0, .2)"
     },
     {
-      "key": "s",
+      "key": "m",
       "value": "0 0.25rem 0.5rem -0.05rem rgba(0, 0, 0, .2)"
     },
     {
-      "key": "m",
+      "key": "l",
       "value": "0 0.4rem 0.7rem -0.1rem rgba(0, 0, 0, .2)"
     },
     {
-      "key": "l",
+      "key": "xl",
       "value": "0 0.55rem 1rem -0.2rem rgba(0, 0, 0, .2)"
     },
     {
-      "key": "xl",
+      "key": "xxl",
       "value": "0 0.7rem 1.5rem -0.3rem rgba(0, 0, 0, .2)"
-    }
-  ],
-  "widths": [
-    {
-      "key": "100",
-      "value": "100%"
-    },
-    {
-      "key": "75",
-      "value": "75%"
-    },
-    {
-      "key": "50",
-      "value": "50%"
-    },
-    {
-      "key": "25",
-      "value": "25%"
-    },
-    {
-      "key": "0",
-      "value": "0"
     }
   ]
 }
