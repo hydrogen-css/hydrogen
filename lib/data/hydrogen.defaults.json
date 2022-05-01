@@ -71,15 +71,15 @@
   ],
   "containers": [
     {
-      "key": "s",
+      "key": "small",
       "maxWidth": "39rem"
     },
     {
-      "key": "m",
+      "key": "medium",
       "maxWidth": "60rem"
     },
     {
-      "key": "l",
+      "key": "large",
       "maxWidth": "80rem"
     }
   ],

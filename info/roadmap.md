@@ -23,6 +23,8 @@
 
 ## Breaking
 - state is now :d -> :disabled
+- b must now be included in the config, with a null query value
+- config options have been renamed in all cases to be more specific to their expected value (e.g. value => query for media queries)
 - margin/padding is now b(top, right, bottom, left)
 - separates text deco from font style
 - removes border widths from config
@@ -30,7 +32,6 @@
 - removed opacity from the config
 - ditches the compile script
 - reworks media query configs so that they can be null or full queries, rather than values
-- reworks the media query keys (xl -> xxl)
 - removes the fixed 90% width on containers (this was to add padding on mobile, you can just do this yourself now)
 - whitespace keys are now multipliers instead of tshirts
 - side values have been simplified to just all, t-b, r-l, top, right, bottom, left, and they only apply to borders now
@@ -48,6 +49,7 @@
 - height has been added
 - gradients work as font colors
 - flex-items can now be set to fill
+- most attributes now accept CSS values for things
 
 ## Optimizations
 - removed layer count from config because layer accepts any value
@@ -57,5 +59,6 @@
 - console output is much cleaner and more consistent
 - moved internal tests to the root under /tests
 - moved the default settings to /lib/data
+- reworks the default media query keys (xl -> xxl)
 
 ## Bugfixes
