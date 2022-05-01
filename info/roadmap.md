@@ -3,7 +3,6 @@
 ## Urgent
 - Add CSS and Sass variable exports for configurable options
 - Add `flex-grid`, `flex-item` support back in
-- Check to see if opacities work with a % value
 
 ## Breaking
 
@@ -18,7 +17,6 @@
 - When Hydrogen finds an error in one of the queries passed to an attribute, the whole attribute is ignored and an error is presented - it would be better if correct queries were still passed so that only the wrong query is ignored
 
 ## Bugfixes
-- Check to see if an empty directory will cause a failing error
 - Attributes that accept gradients as an option should provide a color fallback generated from the first color value in the gradient - this will require a more complex gradient map that provides access to the fallback color
 
 # This release so far
