@@ -1,0 +1,16 @@
+{
+  "version": "1.1.17",
+  "date": "2022/JAN/26",
+  "author": "Josh Beveridge",
+  "breaking": null,
+  "features": null,
+  "optimizations": null,
+  "bugfixes": [
+    {
+      "changes": [
+        "Updates all instances of the project referring to itself to use path.resolve to ensure that the routing always works."
+      ],
+      "attributes": null
+    }
+  ]
+}

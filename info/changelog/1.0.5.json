@@ -1,0 +1,18 @@
+{
+  "version": "1.0.5",
+  "date": "2021/APR/25",
+  "author": "Josh Beveridge",
+  "breaking": null,
+  "features": null,
+  "optimizations": null,
+  "bugfixes": [
+    {
+      "changes": [
+        "Fixes the display attribute not being properly escaped, causing quotations in the CSS."
+      ],
+      "attributes": [
+        "display"
+      ]
+    }
+  ]
+}

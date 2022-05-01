@@ -1,0 +1,16 @@
+{
+  "version": "1.1.10",
+  "date": "2021/SEP/29",
+  "author": "Josh Beveridge",
+  "breaking": null,
+  "features": null,
+  "optimizations": null,
+  "bugfixes": [
+    {
+      "changes": [
+        "Adds ignore values to the markup scraper so that Hydrogen doesn't scrape its own files, causing it to crash."
+      ],
+      "attributes": null
+    }
+  ]
+}

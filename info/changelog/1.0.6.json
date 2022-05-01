@@ -1,0 +1,23 @@
+{
+  "version": "1.0.6",
+  "date": "2021/APR/26",
+  "author": "Josh Beveridge",
+  "breaking": null,
+  "features": null,
+  "optimizations": [
+    {
+      "changes": [
+        "Enhances the init script so that the output it creates is more consistent."
+      ],
+      "attributes": null
+    }
+  ],
+  "bugfixes": [
+    {
+      "changes": [
+        "Fixes a color function bug that was causing the init script to fail."
+      ],
+      "attributes": null
+    }
+  ]
+}

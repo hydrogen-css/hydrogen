@@ -1,0 +1,16 @@
+{
+  "version": "1.1.11",
+  "date": "2021/OCT/29",
+  "author": "Peter Giles",
+  "breaking": null,
+  "features": null,
+  "optimizations": null,
+  "bugfixes": [
+    {
+      "changes": [
+        "Switches to the synchronous version of fs.WriteFile to avoid failues when scripts execute slowly."
+      ],
+      "attributes": null
+    }
+  ]
+}

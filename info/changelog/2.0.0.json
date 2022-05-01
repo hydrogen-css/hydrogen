@@ -1,0 +1,25 @@
+{
+  "version": "2.0.0",
+  "date": "2022/MAY/01",
+  "author": "Josh Beveridge",
+  "breaking": [
+    {
+
+    }
+  ],
+  "features": [
+    {
+
+    }
+  ],
+  "optimizations": [
+    {
+
+    }
+  ],
+  "bugfixes": [
+    {
+
+    }
+  ]
+}

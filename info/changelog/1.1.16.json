@@ -1,0 +1,18 @@
+{
+  "version": "1.1.16",
+  "date": "2021/NOV/29",
+  "author": "Josh Beveridge",
+  "breaking": null,
+  "features": null,
+  "optimizations": null,
+  "bugfixes": [
+    {
+      "changes": [
+        "Fixes a bug where the content value didn't reset the flex value."
+      ],
+      "attributes": [
+        "flex-item"
+      ]
+    }
+  ]
+}

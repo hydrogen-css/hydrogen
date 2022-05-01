@@ -1,0 +1,26 @@
+{
+  "version": "1.1.15",
+  "date": "2021/NOV/29",
+  "author": "Josh Beveridge",
+  "breaking": null,
+  "features": [
+    {
+      "changes": [
+        "Adds support for the text-transform utility, allowing users to customize text to be capitalized, lowercase, or uppercase."
+      ],
+      "attributes": [
+        "text-transform"
+      ]
+    },
+    {
+      "changes": [
+        "Adds support for the auto and content values in the flex-item parameter. These values will allow flex grid items to grow to fill the remaining space or to assume the width of their contents respectively."
+      ],
+      "attributes": [
+        "flex-item"
+      ]
+    }
+  ],
+  "optimizations": null,
+  "bugfixes": null
+}
