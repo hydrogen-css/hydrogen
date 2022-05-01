@@ -4,8 +4,8 @@
   ],
   "output": "styles",
   "variables": {
-    "css": true,
-    "sass": true
+    "css": false,
+    "sass": false
   },
   "colors": [
     {
@@ -109,7 +109,8 @@
     {
       "size": "112.5%",
       "query": "screen and (min-width: 64em)"
-    },{
+    },
+    {
       "size": "118%",
       "query": "screen and (min-width: 100em)"
     }
