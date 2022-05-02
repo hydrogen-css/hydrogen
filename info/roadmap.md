@@ -2,6 +2,9 @@
 
 ## Urgent
 - Update the snippets file for 2.0.0
+- Add the ability to lock CSS values out of attributes to force users into using keys
+- col and row gap support for flex-grid
+- modify multiplier code so that rather than an array, the script parses for "x" or "-x" and then grabs the number behind it and dynamically does the math
 
 ## Breaking
 
@@ -9,6 +12,7 @@
 - Add support for `data-h2-custom`, which should allow you to define a key and associated array containing commonly used Hydrogen attributes - this will allow multiple attributes to be reused and condensed, saving space in the HTML
 - Research handling font family options so that they can accept enough information in the configuration to dynamically generate `@font-face` rules
 - Enhance radial gradients to accept keyword additives before the color stops
+- Give Hydrogen some personality
 
 ## Optimizations
 - To speed things up, when checking for duplicates, check the query instead of the whole attribute's options (this is currently letting duplicate queries in if it finds ="b(red)" and ="b(red) m(green)" - where b(red) is included twice
@@ -18,6 +22,7 @@
 ## Bugfixes
 - Attributes that accept gradients as an option should provide a color fallback generated from the first color value in the gradient - this will require a more complex gradient map that provides access to the fallback color
 - The build fails if optional configurations are left blank or are set to null or are set to an empty array
+- optimize the darken function to better reflect dark color generation
 
 # This release so far
 
