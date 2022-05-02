@@ -1,7 +1,6 @@
 # Work to be done
 
 ## Urgent
-- Add `flex-grid`, `flex-item` support back in
 
 ## Breaking
 
@@ -22,6 +21,7 @@
 # This release so far
 
 ## Breaking
+- flex grid only takes 3 values now and relies on gap and math!
 - state is now :d -> :disabled
 - b must now be included in the config, with a null query value
 - config options have been renamed in all cases to be more specific to their expected value (e.g. value => query for media queries)
