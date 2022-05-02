@@ -1,7 +1,6 @@
 # Work to be done
 
 ## Urgent
-- Add CSS and Sass variable exports for configurable options
 - Add `flex-grid`, `flex-item` support back in
 
 ## Breaking
@@ -18,6 +17,7 @@
 
 ## Bugfixes
 - Attributes that accept gradients as an option should provide a color fallback generated from the first color value in the gradient - this will require a more complex gradient map that provides access to the fallback color
+- The build fails if optional configurations are left blank or are set to null or are set to an empty array
 
 # This release so far
 
