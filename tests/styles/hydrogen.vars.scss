@@ -75,29 +75,6 @@ $h2-shadow-l: 0 0.4rem 0.7rem -0.1rem rgba(0, 0, 0, .2);
 $h2-shadow-xl: 0 0.55rem 1rem -0.2rem rgba(0, 0, 0, .2);
 $h2-shadow-xxl: 0 0.7rem 1.5rem -0.3rem rgba(0, 0, 0, .2);
 /* Whitespace */
-$h2-whitespace-none: 0;
-$h2-whitespace-auto: auto;
-$h2-whitespace-xquarter: 0.325rem;
-$h2-whitespace-xhalf: 0.65rem;
-$h2-whitespace-x1: 1.3rem;
-$h2-whitespace-x2: 2.6rem;
-$h2-whitespace-x3: 3.9000000000000004rem;
-$h2-whitespace-x4: 5.2rem;
-$h2-whitespace-x5: 6.5rem;
-$h2-whitespace-x6: 7.800000000000001rem;
-$h2-whitespace-x7: 9.1rem;
-$h2-whitespace-x8: 10.4rem;
-$h2-whitespace-x9: 11.700000000000001rem;
-$h2-whitespace-x10: 13rem;
-$h2-whitespace--xquarter: -0.325rem;
-$h2-whitespace--xhalf: -0.65rem;
-$h2-whitespace--x1: -1.3rem;
-$h2-whitespace--x2: -2.6rem;
-$h2-whitespace--x3: -3.9000000000000004rem;
-$h2-whitespace--x4: -5.2rem;
-$h2-whitespace--x5: -6.5rem;
-$h2-whitespace--x6: -7.800000000000001rem;
-$h2-whitespace--x7: -9.1rem;
-$h2-whitespace--x8: -10.4rem;
-$h2-whitespace--x9: -11.700000000000001rem;
-$h2-whitespace--x10: -13rem;
+/* You can use this whitespace unit and calc functions to match any multiplier used in Hydrogen attributes. */
+/* e.g. if you want the x2 multipler, simply write calc(#{$h2-whitespace-unit} * 2) */
+$h2-whitespace-unit: 1.3rem;

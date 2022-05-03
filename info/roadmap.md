@@ -3,7 +3,7 @@
 ## Urgent
 - Update the snippets file for 2.0.0
 - Add the ability to lock CSS values out of attributes to force users into using keys
-- modify multiplier code so that rather than an array, the script parses for "x" or "-x" and then grabs the number behind it and dynamically does the math
+- move console logging to custom functions
 
 ## Breaking
 
@@ -25,7 +25,7 @@
 # This release so far
 
 ## Breaking
-- flex grid only takes 3 values now and relies on gap and math!
+- flex grid only takes 3 (4th optional) values now and relies on gap and math!
 - state is now :d -> :disabled
 - b must now be included in the config, with a null query value
 - config options have been renamed in all cases to be more specific to their expected value (e.g. value => query for media queries)
@@ -37,7 +37,7 @@
 - ditches the compile script
 - reworks media query configs so that they can be null or full queries, rather than values
 - removes the fixed 90% width on containers (this was to add padding on mobile, you can just do this yourself now)
-- whitespace keys are now multipliers instead of tshirts
+- whitespace keys are now multipliers instead of tshirts - this also has been expanded so any multiplier works, there's no limit on the number
 - side values have been simplified to just all, t-b, r-l, top, right, bottom, left, and they only apply to borders now
 - reset no longer assumes you want margins on headings/paragraphs
 - font size can now be configured to change at any breakpoint you want
@@ -46,7 +46,7 @@
 - colors have been reworked to include a 3 point scale each for lightness and darkness that can be set to auto or a custom color
 
 ## Features
-- adds gap
+- adds gap (value, placement)
 - adds template columns/rows
 - dark mode woop woop
 - adds CSS variable file
@@ -54,6 +54,7 @@
 - gradients work as font colors
 - flex-items can now be set to fill
 - most attributes now accept CSS values for things
+- adds "offset" as an alt for location
 
 ## Optimizations
 - removed layer count from config because layer accepts any value
