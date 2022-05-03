@@ -26,7 +26,7 @@
     "h2-dev-init": "node ./lib/init.js dev",
     "h2-dev-build": "node ./lib/build.js dev",
     "h2-dev-watch": "node ./lib/watch.js dev",
-    "browsersync": "browser-sync start --server './tests/' --startPath 'markup/index.html' --files 'tests' --port 8080 --no-notify --no-inject-changes"
+    "browsersync": "browser-sync start --server=\"tests\" --port=\"8080\" --files=\"tests/**/*\" --startPath=\"markup/index.html\" --no-notify"
   },
   "repository": {
     "type": "git",

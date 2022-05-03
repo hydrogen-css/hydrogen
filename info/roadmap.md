@@ -12,7 +12,6 @@
 - Add support for `data-h2-custom`, which should allow you to define a key and associated array containing commonly used Hydrogen attributes - this will allow multiple attributes to be reused and condensed, saving space in the HTML
 - Research handling font family options so that they can accept enough information in the configuration to dynamically generate `@font-face` rules
 - Enhance radial gradients to accept keyword additives before the color stops
-- Give Hydrogen some personality
 
 ## Optimizations
 - To speed things up, when checking for duplicates, check the query instead of the whole attribute's options (this is currently letting duplicate queries in if it finds ="b(red)" and ="b(red) m(green)" - where b(red) is included twice

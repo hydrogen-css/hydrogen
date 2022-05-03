@@ -57,7 +57,7 @@
         data-h2-width="b(x3)"
         data-h2-display="b(inline-block)"></div>
       <div 
-        data-h2-bg-color="b([darkest]primary)"
+        data-h2-bg-color="b([darkest]primary[.7])"
         data-h2-height="b(x3)"
         data-h2-width="b(x3)"
         data-h2-display="b(inline-block)"></div>
@@ -133,12 +133,23 @@
         data-h2-height="b(x3)"
         data-h2-width="b(x3)"
         data-h2-display="b(inline-block)"></div>
+      <br>
+      <div 
+        data-h2-bg-color="b(#FF0000[.8])"
+        data-h2-height="b(x3)"
+        data-h2-width="b(x3)"
+        data-h2-display="b(inline-block)"></div>
     <!-- Borders -->
-    <div data-h2-border="b(all, 1px solid black)"></div>
-    <div data-h2-border="b(right-left, 1px dashed cyan) b(left, 3px solid black)"></div>
-    <div data-h2-border="b(all, x3, solid, primary)"></div>
-    <div data-h2-border="b(all, x3, solid, primary) b(right, 34px, dashed, blue)"></div>
-    <div data-h2-border="b(all, 1rem, solid, #FF0000)"></div>
+    <div
+      data-h2-display="b(grid)"
+      data-h2-grid-template-columns="b(1fr 1fr 1fr 1fr 1fr)"
+      data-h2-gap="b(x2)">
+      <div data-h2-border="b(all, 1px solid black)"></div>
+      <div data-h2-border="b(right-left, 1px dashed cyan) b(left, 3px solid black)"></div>
+      <div data-h2-border="b(all, x1, solid, [darkest]primary[.7])"></div>
+      <div data-h2-border="b(all, x2, solid, primary) b(right, 34px, dashed, blue)"></div>
+      <div data-h2-border="b(all, 1rem, solid, #FF0000)"></div>
+    </div>
     <!-- Containers -->
     <div data-h2-container="b(center, small)">
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur mollitia totam tempore beatae iusto sed, alias amet nisi quod soluta quam ipsam reiciendis eveniet reprehenderit magnam, rem quis? Aliquid, ullam!</p>
@@ -203,10 +214,10 @@
     <!-- Font style -->
     <!-- Font weight -->
     <!-- Gap -->
-    <div data-h2-gap="b(all, x3)"></div>
-    <div data-h2-gap="b(row, 45px)"></div>
-    <div data-h2-gap="b(column, none)"></div>
-    <div data-h2-gap="b(fun, x9)"></div>
+    <div data-h2-gap="b(x3)"></div>
+    <div data-h2-gap="b(45px, row)"></div>
+    <div data-h2-gap="b(none, column)"></div>
+    <div data-h2-gap="b(x9, fun)"></div>
     <!-- Grid template columns -->
     <div data-h2-grid-template-columns="b(1fr 1fr)"></div>
     <div data-h2-grid-template-columns="b(20px 1fr) m(1fr 1fr 1fr)"></div>
