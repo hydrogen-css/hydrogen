@@ -3,7 +3,6 @@
 ## Urgent
 - Update the snippets file for 2.0.0
 - Add the ability to lock CSS values out of attributes to force users into using keys
-- col and row gap support for flex-grid
 - modify multiplier code so that rather than an array, the script parses for "x" or "-x" and then grabs the number behind it and dynamically does the math
 
 ## Breaking
