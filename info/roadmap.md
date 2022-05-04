@@ -3,7 +3,6 @@
 ## Urgent
 - Update the snippets file for 2.0.0
 - Add the ability to lock CSS values out of attributes to force users into using keys
-- move console logging to custom functions
 
 ## Breaking
 
