@@ -1,30 +1,7 @@
-# Work to be done
-
-## Urgent
-- Update the snippets file for 2.0.0
-- Add the ability to lock CSS values out of attributes to force users into using keys
-
-## Breaking
-
-## Features
-- Add support for `data-h2-custom`, which should allow you to define a key and associated array containing commonly used Hydrogen attributes - this will allow multiple attributes to be reused and condensed, saving space in the HTML
-- Research handling font family options so that they can accept enough information in the configuration to dynamically generate `@font-face` rules
-- Enhance radial gradients to accept keyword additives before the color stops
-- performance idea: optional mode where attributes are converted to classes and CSS is built to reference those instead?
-
-## Optimizations
-- To speed things up, when checking for duplicates, check the query instead of the whole attribute's options (this is currently letting duplicate queries in if it finds ="b(red)" and ="b(red) m(green)" - where b(red) is included twice
-- Add checks to ensure the correct number of options are passed to each attribute, and throw an appropriate error
-- When Hydrogen finds an error in one of the queries passed to an attribute, the whole attribute is ignored and an error is presented - it would be better if correct queries were still passed so that only the wrong query is ignored
-
-## Bugfixes
-- Attributes that accept gradients as an option should provide a color fallback generated from the first color value in the gradient - this will require a more complex gradient map that provides access to the fallback color
-- The build fails if optional configurations are left blank or are set to null or are set to an empty array
-- optimize the darken function to better reflect dark color generation
-
 # This release so far
 
 ## Breaking
+
 - flex grid only takes 3 (4th optional) values now and relies on gap and math!
 - state is now :d -> :disabled
 - b must now be included in the config, with a null query value
@@ -46,6 +23,7 @@
 - colors have been reworked to include a 3 point scale each for lightness and darkness that can be set to auto or a custom color
 
 ## Features
+
 - adds gap (value, placement)
 - adds template columns/rows
 - dark mode woop woop
@@ -57,6 +35,7 @@
 - adds "offset" as an alt for location
 
 ## Optimizations
+
 - removed layer count from config because layer accepts any value
 - removed order's dependency on flex-grid
 - adds npm start for dev purposes
