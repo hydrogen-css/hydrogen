@@ -6,7 +6,8 @@
 - state is now :d -> :disabled
 - b must now be included in the config, with a null query value
 - config options have been renamed in all cases to be more specific to their expected value (e.g. value => query for media queries)
-- margin/padding is now b(top, right, bottom, left)
+- location is now offset
+- margin/padding/offset is now b(all), b(top-bottom, right-left), b(top, right, bottom, left)
 - separates text deco from font style
 - removes border widths from config
 - removed width and height from config
@@ -21,6 +22,8 @@
 - reworks gradient configs so that they must have a key to simplify their usage
 - folders have been removed from the config in favor of an input array and an output string
 - colors have been reworked to include a 3 point scale each for lightness and darkness that can be set to auto or a custom color
+- overflow values have been swapped so that axis can be optional
+- overlay takes two options now, the second being an optional opacity
 
 ## Features
 
