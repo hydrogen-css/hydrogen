@@ -44,6 +44,8 @@ Within this configuration file, you can modify many of Hydrogen's utilities to i
 
 Hydrogen uses custom scripting to scan your code for `data-h2` attributes and then builds a CSS stylesheet that contains only Hydrogen's base and the attributes you've used. No bloat. No duplication. This means that the library in production is extremely small while allowing it to provide a robust set of features and support complex customization.
 
+It also runs Autoprefixer and CSSNano on itself to provide a complete, production ready file.
+
 ### Utilities
 
 You can learn about [utility usage in the documentation](https://hydrogen.design/#backgroundColor), but Hydrogen offers the following utilities:
@@ -69,8 +71,8 @@ You can learn about [utility usage in the documentation](https://hydrogen.design
 - `height`
 - `justify-content`
 - `layer` for `z-index` control
-- `location` for positioning control
 - `margin`
+- `offset` for positioning control
 - `opacity`
 - `order` for flex item order control
 - `overflow`
