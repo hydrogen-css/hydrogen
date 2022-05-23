@@ -15,7 +15,7 @@
         "light": "auto",
         "lighter": "auto",
         "lightest": "auto",
-        "dark": "magenta",
+        "dark": "auto",
         "darker": "auto",
         "darkest": "auto"
       }
