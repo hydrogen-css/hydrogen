@@ -36,8 +36,8 @@
 --h2-color-darker-white: rgb(128, 128, 128);
 --h2-color-darkest-white: rgb(64, 64, 64);
 /* Gradients */
---h2-gradient-myLinearGradient: linear-gradient(135deg,green,pink,rgba(255, 255, 255, 1));
---h2-gradient-myRadialGradient: radial-gradient(green,pink,rgba(255, 255, 255, 1));
+--h2-gradient-myLinearGradient: linear-gradient(135deg, green, pink, rgba(255, 255, 255, 1));
+--h2-gradient-myRadialGradient: radial-gradient(circle at left, green, pink, rgba(255, 255, 255, 1));
 /* Containers */
 --h2-container-small: 39rem;
 --h2-container-medium: 60rem;

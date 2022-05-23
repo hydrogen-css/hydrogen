@@ -19,7 +19,7 @@
 - side values have been simplified to just all, t-b, r-l, top, right, bottom, left, and they only apply to borders now
 - reset no longer assumes you want margins on headings/paragraphs
 - font size can now be configured to change at any breakpoint you want
-- reworks gradient configs so that they must have a key to simplify their usage
+- reworks gradient configs so that they take a key, type, and CSS string
 - folders have been removed from the config in favor of an input array and an output string
 - colors have been reworked to include a 3 point scale each for lightness and darkness that can be set to auto or a custom color
 - overflow values have been swapped so that axis can be optional
