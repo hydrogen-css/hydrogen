@@ -1,6 +1,6 @@
 {
   "name": "@hydrogen-design-system/hydrogen.css",
-  "version": "2.0.0-beta.0",
+  "version": "2.0.0-beta.1",
   "description": "A CSS utility framework that leverages data-attributes to provide clarity and flexibility. MIT Licensed.",
   "keywords": [
     "Hydrogen",
@@ -21,11 +21,10 @@
     "h2-build": "./bin/build.js"
   },
   "scripts": {
-    "h2-test": "node ./lib/build.js",
     "start": "npm-run-all --parallel h2-dev-watch browsersync",
-    "h2-dev-init": "node ./lib/init.js dev",
-    "h2-dev-build": "node ./lib/build.js dev",
-    "h2-dev-watch": "node ./lib/watch.js dev",
+    "h2-dev-init": "node ./bin/init.js dev",
+    "h2-dev-build": "node ./bin/build.js dev",
+    "h2-dev-watch": "node ./bin/watch.js dev",
     "browsersync": "browser-sync start --server=\"tests\" --port=\"8080\" --files=\"tests/**/*\" --startPath=\"markup/index.html\" --no-notify"
   },
   "repository": {

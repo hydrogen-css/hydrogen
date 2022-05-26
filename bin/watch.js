@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-const watch = require('../lib/watch');
+const { watchFiles } = require('../lib/watch');
 
-watch.watch();
+watchFiles();
