@@ -2,7 +2,7 @@
 
 ## Breaking
 
-- flex grid only takes 3 (4th optional) values now and relies on gap and math!
+- flex grid only takes 3 (4th optional) values now and has been reworked to avoid horizontal overflows
 - state is now :d -> :disabled
 - b must now be included in the config, with a null query value
 - config options have been renamed in all cases to be more specific to their expected value (e.g. value => query for media queries)
