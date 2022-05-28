@@ -36,6 +36,7 @@
 - flex-items can now be set to fill
 - most attributes now accept CSS values for things
 - adds "offset" as an alt for location
+- adds vertical align
 
 ## Optimizations
 

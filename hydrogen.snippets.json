@@ -209,6 +209,12 @@
       "data-h2-text-transform=\"${1:query}${2::mode}${3::state}(${4:transformation})\""
     ]
   },
+  "hydrogen-vertical-align": {
+    "prefix": "data-h2-vertical-align",
+    "body": [
+      "data-h2-vertical-align=\"${1:query}${2::mode}${3::state}(${4:alignment})\""
+    ]
+  },
   "hydrogen-visibility": {
     "prefix": "data-h2-visibility",
     "body": [
