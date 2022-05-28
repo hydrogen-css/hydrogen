@@ -74,6 +74,10 @@ $h2-shadow-m: 0 0.25rem 0.5rem -0.05rem rgba(0, 0, 0, .2);
 $h2-shadow-l: 0 0.4rem 0.7rem -0.1rem rgba(0, 0, 0, .2);
 $h2-shadow-xl: 0 0.55rem 1rem -0.2rem rgba(0, 0, 0, .2);
 $h2-shadow-xxl: 0 0.7rem 1.5rem -0.3rem rgba(0, 0, 0, .2);
+/* Transition values */
+$h2-transition-duration-default: .2s;
+$h2-transition-function-ease: ease;
+$h2-transition-delay-none: 0s;
 /* Whitespace */
 /* You can use this whitespace unit and calc functions to match any multiplier used in Hydrogen attributes. */
 /* e.g. if you want the x2 multipler, simply write calc(#{$h2-whitespace-unit} * 2) */

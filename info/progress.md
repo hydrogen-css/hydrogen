@@ -6,7 +6,6 @@
 - state is now :d -> :disabled
 - b must now be included in the config, with a null query value
 - config options have been renamed in all cases to be more specific to their expected value (e.g. value => query for media queries)
-- location is now offset
 - margin/padding/offset is now b(all), b(top-bottom, right-left), b(top, right, bottom, left)
 - separates text deco from font style
 - removes border widths from config
@@ -24,6 +23,7 @@
 - colors have been reworked to include a 3 point scale each for lightness and darkness that can be set to auto or a custom color
 - overflow values have been swapped so that axis can be optional
 - overlay takes two options now, the second being an optional opacity
+- adds transition as an attribute, but removes it from all others - this was bugging toggling of styles because it was causing the styles to transition REALLY slowly
 
 ## Features
 
@@ -37,6 +37,8 @@
 - most attributes now accept CSS values for things
 - adds "offset" as an alt for location
 - adds vertical align
+- adds max height and width
+- adds flex basis - flex-item fill needs flex basis: 100% for line breaks
 
 ## Optimizations
 
