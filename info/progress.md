@@ -17,13 +17,14 @@
 - whitespace keys are now multipliers instead of tshirts - this also has been expanded so any multiplier works, there's no limit on the number
 - side values have been simplified to just all, t-b, r-l, top, right, bottom, left, and they only apply to borders now
 - reset no longer assumes you want margins on headings/paragraphs
-- font size can now be configured to change at any breakpoint you want
+- font size can now be configured to change at any breakpoint you want, and these breakpoints can contain their own typeScale and line height settings
 - reworks gradient configs so that they take a key, CSS string, and fallback color, enabling repeating and conic gradients
 - folders have been removed from the config in favor of an input array and an output string
 - colors have been reworked to include a 3 point scale each for lightness and darkness that can be set to auto or a custom color
 - overflow values have been swapped so that axis can be optional
 - overlay takes two options now, the second being an optional opacity
 - adds transition as an attribute, but removes it from all others - this was bugging toggling of styles because it was causing the styles to transition REALLY slowly
+- adds the ability to configure whether reset styles are included in the build or not
 
 ## Features
 

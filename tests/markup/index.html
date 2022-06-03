@@ -28,6 +28,7 @@
     <div data-h2-bg-color="b([darkest]primary[0.9])"></div>
     <div data-h2-bg-color="l(myLinearGradient)"></div>
     <div data-h2-bg-color="b(myRadialGradient)"></div>
+    <div data-h2-bg-color="b(rgba(45, 35, 200, 1))"></div>
     <!-- Color scaling -->
     <div data-h2-bg-color="b([lightest]primary)" data-h2-height="b(x3)" data-h2-width="b(x3)" data-h2-display="b(inline-block)"></div>
     <div data-h2-bg-color="b([lighter]primary)" data-h2-height="b(x3)" data-h2-width="b(x3)" data-h2-display="b(inline-block)"></div>
@@ -129,13 +130,26 @@
     <div data-h2-font-size="b(h2) m(24px) l(54px, 3rem)"></div>
     <div data-h2-font-size="b(30rem, 1.5)"></div>
     <div data-h2-font-size="b(normal, 2.0)"></div>
-    <h1 data-h2-font-size="b(h1)">Heading 1</h1>
-    <h2 data-h2-font-size="b(h2)">Heading 2</h2>
-    <h3 data-h2-font-size="b(h3)">Heading 3</h3>
-    <h4 data-h2-font-size="b(h4)">Heading 4</h4>
-    <h5 data-h2-font-size="b(h5)">Heading 5</h5>
-    <h6 data-h2-font-size="b(h6)">Heading 6</h6>
-    <p data-h2-font-size="b(copy)">Body copy</p>
+    <div data-h2-flex-grid="b(flex-start, 0, x3)">
+      <div data-h2-flex-item="b(1of2)">
+        <h1 data-h2-font-size="b(h1)">Heading 1</h1>
+        <h2 data-h2-font-size="b(h2)">Heading 2</h2>
+        <h3 data-h2-font-size="b(h3, 2)">Heading 3</h3>
+        <h4 data-h2-font-size="b(h4)">Heading 4</h4>
+        <h5 data-h2-font-size="b(h5)">Heading 5</h5>
+        <h6 data-h2-font-size="b(h6)">Heading 6</h6>
+        <p data-h2-font-size="b(copy)">Body copy</p>
+      </div>
+      <div data-h2-flex-item="b(1of2)">
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+        <p>Body copy</p>
+      </div>
+    </div>
     <!-- Font style -->
     <!-- Font weight -->
     <div data-h2-font-weight="b(200) m(700)"></div>
