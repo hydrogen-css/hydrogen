@@ -21,6 +21,7 @@
 - reworks gradient configs so that they take a key, CSS string, and fallback color, enabling repeating and conic gradients
 - folders have been removed from the config in favor of an input array and an output string
 - colors have been reworked to include a 3 point scale each for lightness and darkness that can be set to auto or a custom color
+- color modifiers have been overhauled to use a dot notation instead of brackets
 - overflow values have been swapped so that axis can be optional
 - overlay takes two options now, the second being an optional opacity
 - adds transition as an attribute, but removes it from all others - this was bugging toggling of styles because it was causing the styles to transition REALLY slowly
