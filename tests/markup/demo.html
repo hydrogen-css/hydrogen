@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Site Title -->
+    <title>Hydrogen demo</title>
+    <!-- Site Description -->
+    <meta name="description" content="" />
+    <!-- Charset -->
+    <meta charset="utf-8" />
+    <!-- Compatibility -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../styles/hydrogen.css" />
+  </head>
+  <body data-h2-font-color="b(black)" data-h2-font-family="b(sans)">
+    <div data-h2-flex-grid="b(stretch, 0, 0)">
+      <div data-h2-flex-item="b(1of5)">
+        <ul data-h2-padding="b(x4, x3)" data-h2-position="b(sticky)" data-h2-offset="b(0, auto, auto, auto)">
+          <li data-h2-margin="b(x.5, 0)"><a href="#basics">The basics</a></li>
+          <li data-h2-margin="b(x.5, 0)"><a href="#settings">Configuration</a></li>
+          <li data-h2-margin="b(x.5, 0)"><a href="#color">Working with color</a></li>
+          <li data-h2-margin="b(x.5, 0)"><a href="#grids">Working with grids</a></li>
+          <li data-h2-margin="b(x.5, 0)"><a href="#type">Space and type</a></li>
+          <li data-h2-margin="b(x.5, 0)"><a href="#new">What's new</a></li>
+        </ul>
+      </div>
+      <div data-h2-flex-item="b(4of5)" data-h2-border="b(left, 1px, solid, gray)" data-h2-bg-color="b(#f3f3f9)">
+        <div data-h2-padding="b(x4, 0)" data-h2-container="b(center, small)">
+          <h1 data-h2-margin="b(0, 0, x3, 0)">Hydrogen demo</h1>
+          <h2 data-h2-margin="b(x3, 0, x2, 0)" id="basics">🏠 The basics</h2>
+          <p data-h2-margin="b(x1, 0)">Hydrogen is a utility type CSS framework.</p>
+          <p data-h2-margin="b(x1, 0)">Okay, but what does that mean?</p>
+          <p data-h2-margin="b(x1, 0)">CSS is normally written by applying a class to an element and assigning styles to that class. That class then becomes reusable, so you can make other elements have the same look and feel. This is great, but it becomes a bit unruly once you start having to work out naming conventions for classes, keeping track of which class does what, ensuring consistency between things like color, and trying to ensure that old/unused classes are removed from your code. Not to mention you have to worry about writing code in two places and making sure it aligns.</p>
+          <p data-h2-margin="b(x1, 0)">Utility frameworks in general try to solve these problems by providing you with premade classes that do very specific, predictable things. As a result, once you've learned the syntax for the framework, you almost never find yourself writing CSS - all of the effort goes into applying these pre-existing classes to your HTML. One place, consistent naming, consistent output.</p>
+          <p data-h2-margin="b(x1, 0)">Hydrogen's approach to this is slightly different.</p>
+          <p data-h2-margin="b(x1, 0)">Rather than using classes, Hydrogen uses HTML custom attributes to generate its own language, inspired by CSS. So what does this look like in comparison?</p>
+          <p data-h2-margin="b(x2, 0, x1, 0)" data-h2-font-weight="b(700)">Normal class definition</p>
+          <pre data-h2-bg-color="b(rgba(225, 225, 225, 1))" data-h2-padding="b(x.25, x.5)" data-h2-width="b(100%)" data-h2-radius="b(3px)"><code>In HTML:  
+&lt;div class="myPrimaryBackground"&gt;&lt;/div&gt;
+
+In CSS:
+.myPrimaryBackground {
+  background-color: blue;
+}</code></pre>
+          <p data-h2-margin="b(x2, 0, x1, 0)" data-h2-font-weight="b(700)">Hydrogen definition</p>
+          <pre data-h2-bg-color="b(rgba(225, 225, 225, 1))" data-h2-padding="b(x.25, x.5)" data-h2-width="b(100%)" data-h2-radius="b(3px)"><code>In HTML:  
+&lt;div data-h2-bg-color="b(primary)"&gt;&lt;/div&gt;</code></pre>
+          <p data-h2-margin="b(x2, 0, x1, 0)">By watching for changes and scraping your HTML, Hydrogen understands that you want to apply the color you've set as "primary" to this element's background color, and it does so on the fly. If you decide to change the color to your brand's accent, or even a plain old HEX value, Hydrogen will immediately rebuild your CSS file appropriately.</p>
+          <p data-h2-margin="b(x1, 0)">If you reuse this same declaration, Hydrogen understands that it's already been used and won't duplicate the code, meaning that your final CSS file only ever contains exactly what you've used on your project in the most minimal format possible.</p>
+          <p data-h2-margin="b(x1, 0)">Things get really fun when we start to look at how Hydrogen enables inline manipulation of things that normally wouldn't be available, like media queries, dark mode, and interaction states. This means that you can actually control an element's styles at different viewports right in your HTML, as well as specify styles for dark mode, and even for when an element is hovered or focused.</p>
+          <h2 data-h2-margin="b(x3, 0, x2, 0)" id="settings">⚙️ Configuration</h2>
+          <p data-h2-margin="b(x1, 0)">Following the same theory behind design tokens, Hydrogen offers robust configuration options that allow you to standardize design decisions platform wide. This makes changing those decisions almost instantaneous, as Hydrogen will understand and apply the change automatically the next time it builds your file.</p>
+          <p data-h2-margin="b(x1, 0)">Hydrogen allows you to configure:</p>
+          <ul data-h2-padding="b(0, 0, 0, x1.5)">
+            <li>Media queries</li>
+            <li>Typography settings</li>
+            <li>Colors</li>
+            <li>Gradients</li>
+            <li>Container sizes</li>
+            <li>Font families</li>
+            <li>Radii</li>
+            <li>Shadow</li>
+            <li>Transition settings</li>
+            <li>Whether to include reset styles</li>
+            <li>Variable output</li>
+          </ul>
+          <h2 data-h2-margin="b(x3, 0, x2, 0)" id="color">🎨 Working with color</h2>
+          <p data-h2-margin="b(x2, 0)">Hydrogen allows you to define as many colors as you need and abstract them behind an agnostic term making updating colors extremely easy. The system will automatically generate 3 light and 3 dark color variants for you to use, but you also have the freedom to overwrite these variants if you want something more custom.</p>
+          <div data-h2-flex-grid="b(flex-start, 0, x1)">
+            <div data-h2-flex-item="b(1of7)">
+              <div data-h2-bg-color="b(lightest.primary)" data-h2-height="b(x3)" data-h2-width="b(100%)"></div>
+            </div>
+            <div data-h2-flex-item="b(1of7)">
+              <div data-h2-bg-color="b(lighter.primary)" data-h2-height="b(x3)" data-h2-width="b(100%)"></div>
+            </div>
+            <div data-h2-flex-item="b(1of7)">
+              <div data-h2-bg-color="b(light.primary)" data-h2-height="b(x3)" data-h2-width="b(100%)"></div>
+            </div>
+            <div data-h2-flex-item="b(1of7)">
+              <div data-h2-bg-color="b(primary)" data-h2-height="b(x3)" data-h2-width="b(100%)"></div>
+            </div>
+            <div data-h2-flex-item="b(1of7)">
+              <div data-h2-bg-color="b(dark.primary)" data-h2-height="b(x3)" data-h2-width="b(100%)"></div>
+            </div>
+            <div data-h2-flex-item="b(1of7)">
+              <div data-h2-bg-color="b(darker.primary)" data-h2-height="b(x3)" data-h2-width="b(100%)"></div>
+            </div>
+            <div data-h2-flex-item="b(1of7)">
+              <div data-h2-bg-color="b(darkest.primary)" data-h2-height="b(x3)" data-h2-width="b(100%)"></div>
+            </div>
+            <div data-h2-flex-item="b(1of7)">
+              <div data-h2-bg-color="b(lightest.secondary)" data-h2-height="b(x3)" data-h2-width="b(100%)"></div>
+            </div>
+            <div data-h2-flex-item="b(1of7)">
+              <div data-h2-bg-color="b(lighter.secondary)" data-h2-height="b(x3)" data-h2-width="b(100%)"></div>
+            </div>
+            <div data-h2-flex-item="b(1of7)">
+              <div data-h2-bg-color="b(light.secondary)" data-h2-height="b(x3)" data-h2-width="b(100%)"></div>
+            </div>
+            <div data-h2-flex-item="b(1of7)">
+              <div data-h2-bg-color="b(secondary)" data-h2-height="b(x3)" data-h2-width="b(100%)"></div>
+            </div>
+            <div data-h2-flex-item="b(1of7)">
+              <div data-h2-bg-color="b(dark.secondary)" data-h2-height="b(x3)" data-h2-width="b(100%)"></div>
+            </div>
+            <div data-h2-flex-item="b(1of7)">
+              <div data-h2-bg-color="b(darker.secondary)" data-h2-height="b(x3)" data-h2-width="b(100%)"></div>
+            </div>
+            <div data-h2-flex-item="b(1of7)">
+              <div data-h2-bg-color="b(darkest.secondary)" data-h2-height="b(x3)" data-h2-width="b(100%)"></div>
+            </div>
+            <div data-h2-flex-item="b(1of7)">
+              <div data-h2-bg-color="b(lightest.accent)" data-h2-height="b(x3)" data-h2-width="b(100%)"></div>
+            </div>
+            <div data-h2-flex-item="b(1of7)">
+              <div data-h2-bg-color="b(lighter.accent)" data-h2-height="b(x3)" data-h2-width="b(100%)"></div>
+            </div>
+            <div data-h2-flex-item="b(1of7)">
+              <div data-h2-bg-color="b(light.accent)" data-h2-height="b(x3)" data-h2-width="b(100%)"></div>
+            </div>
+            <div data-h2-flex-item="b(1of7)">
+              <div data-h2-bg-color="b(accent)" data-h2-height="b(x3)" data-h2-width="b(100%)"></div>
+            </div>
+            <div data-h2-flex-item="b(1of7)">
+              <div data-h2-bg-color="b(dark.accent)" data-h2-height="b(x3)" data-h2-width="b(100%)"></div>
+            </div>
+            <div data-h2-flex-item="b(1of7)">
+              <div data-h2-bg-color="b(darker.accent)" data-h2-height="b(x3)" data-h2-width="b(100%)"></div>
+            </div>
+            <div data-h2-flex-item="b(1of7)">
+              <div data-h2-bg-color="b(darkest.accent)" data-h2-height="b(x3)" data-h2-width="b(100%)"></div>
+            </div>
+            <div data-h2-flex-item="b(1of1)">
+              <h3 data-h2-margin="b(x2, 0, x1, 0)">Usage examples</h3>
+            </div>
+            <div data-h2-align-self="b(center)" data-h2-flex-item="b(1of2)">
+              <code data-h2-bg-color="b(rgba(225, 225, 225, 1))" data-h2-padding="b(x.25, x.5)" data-h2-width="b(100%)" data-h2-radius="b(3px)">data-h2-bg-color="b(primary)"</code>
+            </div>
+            <div data-h2-flex-item="b(1of2)">
+              <div data-h2-bg-color="b(primary)" data-h2-height="b(x3)" data-h2-width="b(100%)"></div>
+            </div>
+            <div data-h2-align-self="b(center)" data-h2-flex-item="b(1of2)">
+              <code data-h2-bg-color="b(rgba(225, 225, 225, 1))" data-h2-padding="b(x.25, x.5)" data-h2-width="b(100%)" data-h2-radius="b(3px)">data-h2-bg-color="b(darker.primary)"</code>
+            </div>
+            <div data-h2-flex-item="b(1of2)">
+              <div data-h2-bg-color="b(darker.primary)" data-h2-height="b(x3)" data-h2-width="b(100%)"></div>
+            </div>
+            <div data-h2-align-self="b(center)" data-h2-flex-item="b(1of2)">
+              <code data-h2-bg-color="b(rgba(225, 225, 225, 1))" data-h2-padding="b(x.25, x.5)" data-h2-width="b(100%)" data-h2-radius="b(3px)">data-h2-bg-color="b(accent.5)"</code>
+            </div>
+            <div data-h2-flex-item="b(1of2)">
+              <div data-h2-bg-color="b(accent.5)" data-h2-height="b(x3)" data-h2-width="b(100%)"></div>
+            </div>
+            <div data-h2-align-self="b(center)" data-h2-flex-item="b(1of2)">
+              <code data-h2-bg-color="b(rgba(225, 225, 225, 1))" data-h2-padding="b(x.25, x.5)" data-h2-width="b(100%)" data-h2-radius="b(3px)">data-h2-bg-color="b(#FFCC33)"</code>
+            </div>
+            <div data-h2-flex-item="b(1of2)">
+              <div data-h2-bg-color="b(#FFCC33)" data-h2-height="b(x3)" data-h2-width="b(100%)"></div>
+            </div>
+          </div>
+          <h2 data-h2-margin="b(x3, 0, x2, 0)" id="grids">⏹️ Working with grids</h2>
+          <p>Hydrogen supports both native CSS grid properties and also comes with a custom flexbox-based grid system for broader support. Because styles are inline, you can control exactly how layouts respond to viewport sizes extremely easily.</p>
+          <h3 data-h2-margin="b(x3, 0, x1, 0)">CSS grid</h3>
+          <pre data-h2-bg-color="b(rgba(225, 225, 225, 1))" data-h2-padding="b(x.25, x.5)" data-h2-width="b(100%)" data-h2-radius="b(3px)" data-h2-margin="b(x2, 0)"><code>&lt;div 
+  data-h2-display="b(grid)" 
+  data-h2-grid-template-columns="b(1fr) m(1fr 1fr 1fr)" 
+  data-h2-gap="b(x1)"&gt;
+    &lt;p&gt;Item 1&lt;/p&gt;
+    &lt;p&gt;Item 2&lt;/p&gt;
+    &lt;p&gt;Item 3&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+          <div data-h2-display="b(grid)" data-h2-grid-template-columns="b(1fr) m(1fr 1fr 1fr)" data-h2-gap="b(x1)" data-h2-margin="b(x2, 0, 0, 0)">
+            <p data-h2-bg-color="b(primary)" data-h2-padding="b(x.5)" data-h2-font-color="b(white)">Item 1</p>
+            <p data-h2-bg-color="b(primary)" data-h2-padding="b(x.5)" data-h2-font-color="b(white)">Item 2</p>
+            <p data-h2-bg-color="b(primary)" data-h2-padding="b(x.5)" data-h2-font-color="b(white)">Item 3</p>
+          </div>
+          <div data-h2-display="b(grid)" data-h2-grid-template-columns="b(1fr) m(200px 1fr 1fr)" data-h2-margin="b(x2, 0, 0, 0)">
+            <p data-h2-bg-color="b(primary)" data-h2-padding="b(x.5)" data-h2-font-color="b(white)">Item 1</p>
+            <p data-h2-bg-color="b(dark.primary)" data-h2-padding="b(x.5)" data-h2-font-color="b(white)">Item 2</p>
+            <p data-h2-bg-color="b(primary)" data-h2-padding="b(x.5)" data-h2-font-color="b(white)">Item 3</p>
+          </div>
+          <h3 data-h2-margin="b(x3, 0, x1, 0)">Flex grid</h3>
+          <pre data-h2-bg-color="b(rgba(225, 225, 225, 1))" data-h2-padding="b(x.25, x.5)" data-h2-width="b(100%)" data-h2-radius="b(3px)" data-h2-margin="b(x2, 0)"><code>&lt;div data-h2-flex-grid="b(flex-start, 0, x1, x.5)"&gt;
+    &lt;div data-h2-flex-item="b(1of4)"&gt;Item 1&lt;/div&gt;
+    &lt;div data-h2-flex-item="b(1of4)"&gt;Item 2&lt;/div&gt;
+    &lt;div data-h2-flex-item="b(1of4)"&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          <div data-h2-flex-grid="b(flex-start, 0, x1, x.5)">
+            <div data-h2-flex-item="b(1of1) m(1of2) l(1of4)">
+              <p data-h2-bg-color="b(primary)" data-h2-padding="b(x.5)" data-h2-font-color="b(white)">Item 1</p>
+            </div>
+            <div data-h2-flex-item="b(1of1) m(1of2) l(1of4)">
+              <p data-h2-bg-color="b(primary)" data-h2-padding="b(x.5)" data-h2-font-color="b(white)">Item 2</p>
+            </div>
+            <div data-h2-flex-item="b(1of1) m(1of2) l(1of4)">
+              <p data-h2-bg-color="b(primary)" data-h2-padding="b(x.5)" data-h2-font-color="b(white)">Item 3</p>
+            </div>
+            <div data-h2-flex-item="b(1of1) m(1of2) l(1of4)">
+              <p data-h2-bg-color="b(primary)" data-h2-padding="b(x.5)" data-h2-font-color="b(white)">Item 4</p>
+            </div>
+            <div data-h2-flex-item="b(1of1) m(1of2) l(1of4)">
+              <p data-h2-bg-color="b(primary)" data-h2-padding="b(x.5)" data-h2-font-color="b(white)">Item 5</p>
+            </div>
+            <div data-h2-flex-item="b(1of1) m(1of2) l(1of4)">
+              <p data-h2-bg-color="b(primary)" data-h2-padding="b(x.5)" data-h2-font-color="b(white)">Item 6</p>
+            </div>
+            <div data-h2-flex-item="b(1of1) m(1of2) l(1of4)">
+              <p data-h2-bg-color="b(primary)" data-h2-padding="b(x.5)" data-h2-font-color="b(white)">Item 7</p>
+            </div>
+            <div data-h2-flex-item="b(1of1) m(1of2) l(1of4)">
+              <p data-h2-bg-color="b(primary)" data-h2-padding="b(x.5)" data-h2-font-color="b(white)">Item 8</p>
+            </div>
+          </div>
+          <h2 data-h2-margin="b(x3, 0, x2, 0)" id="type">🔠 Space and type</h2>
+          <p data-h2-margin="b(x2, 0)">Space values for margin, padding, height, and width are all calculated based on the current line height setting. This helps maintain a consistent vertical rhythm and ensures that you have additive control over how much space you're applying.</p>
+          <div data-h2-flex-grid="b(flex-start, 0, x1)">
+            <div data-h2-align-self="b(center)" data-h2-flex-item="b(1of2)">
+              <code data-h2-bg-color="b(rgba(225, 225, 225, 1))" data-h2-padding="b(x.25, x.5)" data-h2-width="b(100%)" data-h2-radius="b(3px)">data-h2-height="b(x1)"</code>
+            </div>
+            <div data-h2-flex-item="b(1of2)">
+              <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(primary)"></div>
+            </div>
+            <div data-h2-align-self="b(center)" data-h2-flex-item="b(1of2)">
+              <code data-h2-bg-color="b(rgba(225, 225, 225, 1))" data-h2-padding="b(x.25, x.5)" data-h2-width="b(100%)" data-h2-radius="b(3px)">data-h2-height="b(x2)"</code>
+            </div>
+            <div data-h2-flex-item="b(1of2)">
+              <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(primary)"></div>
+              <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(dark.primary)"></div>
+            </div>
+            <div data-h2-align-self="b(center)" data-h2-flex-item="b(1of2)">
+              <code data-h2-bg-color="b(rgba(225, 225, 225, 1))" data-h2-padding="b(x.25, x.5)" data-h2-width="b(100%)" data-h2-radius="b(3px)">data-h2-height="b(x5)"</code>
+            </div>
+            <div data-h2-flex-item="b(1of2)">
+              <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(primary)"></div>
+              <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(dark.primary)"></div>
+              <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(primary)"></div>
+              <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(dark.primary)"></div>
+              <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(primary)"></div>
+            </div>
+          </div>
+          <p data-h2-margin="b(x2, 0)">Typography values are automatically generated for you based on your specific settings. This means that heading sizes and their line heights are calculated on the fly, and will adapt with whatever media queries you've set.</p>
+          <div data-h2-shadow="b(l)" data-h2-bg-color="b(white)" data-h2-radius="b(rounded)" data-h2-padding="b(x1)">
+            <div data-h2-flex-grid="b(flex-start, 0, x1)">
+              <div data-h2-flex-item="b(1of2)">
+                <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(primary)"></div>
+                <h1>Heading 1</h1>
+                <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(primary)"></div>
+                <h2>Heading 2</h2>
+                <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(primary)"></div>
+                <h3>Heading 3</h3>
+                <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(dark.primary)"></div>
+                <h4>Heading 4</h4>
+                <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(primary)"></div>
+                <h5>Heading 5</h5>
+                <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(dark.primary)"></div>
+                <h6>Heading 6</h6>
+                <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(dark.primary)"></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, rem obcaecati, natus cumque ea necessitatibus nam ratione nemo inventore reprehenderit exercitationem labore quibusdam voluptate soluta vitae libero placeat ad deserunt?</p>
+              </div>
+              <div data-h2-flex-item="b(1of2)">
+                <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(primary)"></div>
+                <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(dark.primary)"></div>
+                <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(primary)"></div>
+                <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(dark.primary)"></div>
+                <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(primary)"></div>
+                <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(dark.primary)"></div>
+                <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(primary)"></div>
+                <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(dark.primary)"></div>
+                <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(primary)"></div>
+                <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(dark.primary)"></div>
+                <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(primary)"></div>
+                <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(dark.primary)"></div>
+                <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(primary)"></div>
+                <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(dark.primary)"></div>
+                <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(primary)"></div>
+                <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(dark.primary)"></div>
+                <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(primary)"></div>
+                <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(dark.primary)"></div>
+                <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(primary)"></div>
+                <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(dark.primary)"></div>
+                <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(primary)"></div>
+                <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(dark.primary)"></div>
+                <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(primary)"></div>
+                <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(dark.primary)"></div>
+                <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(primary)"></div>
+                <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(dark.primary)"></div>
+                <div data-h2-height="b(x1)" data-h2-width="b(100%)" data-h2-bg-color="b(primary)"></div>
+              </div>
+            </div>
+          </div>
+          <p data-h2-margin="b(x2, 0)">Alternatively, the font size attribute also accepts an optional line height value if you need to overwrite the calculated value.</p>
+          <div data-h2-flex-grid="b(flex-start, 0, x1)">
+            <div data-h2-align-self="b(center)" data-h2-flex-item="b(1of2)">
+              <code data-h2-bg-color="b(rgba(225, 225, 225, 1))" data-h2-padding="b(x.25, x.5)" data-h2-width="b(100%)" data-h2-radius="b(3px)">data-h2-font-size="b(h3, 1)"</code>
+            </div>
+            <div data-h2-flex-item="b(1of2)">
+              <h1 data-h2-font-size="b(h3, 1)">A heading 1, overwritten.</h1>
+            </div>
+          </div>
+          <h2 data-h2-margin="b(x3, 0, x2, 0)" id="new">⚡ What's new</h2>
+          <div data-h2-flex-grid="b(stretch, 0, x1)">
+            <div data-h2-flex-item="b(1of2)">
+              <div data-h2-shadow="b(l)" data-h2-bg-color="b(white)" data-h2-radius="b(rounded)" data-h2-padding="b(x1)" data-h2-height="b(100%)">
+                <p data-h2-text-transform="b(uppercase)" data-h2-font-color="b(red)" data-h2-font-weight="b(700)" data-h2-margin="b(0, 0, x.5, 0)">1.1.19</p>
+                <p>Hydrogen used to compile a library of CSS and then match that CSS to the attributes you used. This was pretty slow and extremely limiting, as you could only use the specific settings in your configuration file.</p>
+              </div>
+            </div>
+            <div data-h2-flex-item="b(1of2)">
+              <div data-h2-shadow="b(l)" data-h2-bg-color="b(white)" data-h2-radius="b(rounded)" data-h2-padding="b(x1)" data-h2-height="b(100%)">
+                <p data-h2-text-transform="b(uppercase)" data-h2-font-color="b(green)" data-h2-font-weight="b(700)" data-h2-margin="b(0, 0, x.5, 0)">2.0.0</p>
+                <p>Rather than matching to a library, it now rapidly writes CSS on the fly based on the attribute you give it, meaning it can now accept real CSS values in a lot of cases on top of your settings.</p>
+              </div>
+            </div>
+            <div data-h2-flex-item="b(1of2)">
+              <div data-h2-shadow="b(l)" data-h2-bg-color="b(white)" data-h2-radius="b(rounded)" data-h2-padding="b(x1)" data-h2-height="b(100%)">
+                <p data-h2-text-transform="b(uppercase)" data-h2-font-color="b(red)" data-h2-font-weight="b(700)" data-h2-margin="b(0, 0, x.5, 0)">1.1.19</p>
+                <p>Hydrogen used to only support state management (e.g. adding :h to apply styles to an element's hover effect) at a very basic level.</p>
+              </div>
+            </div>
+            <div data-h2-flex-item="b(1of2)">
+              <div data-h2-shadow="b(l)" data-h2-bg-color="b(white)" data-h2-radius="b(rounded)" data-h2-padding="b(x1)" data-h2-height="b(100%)">
+                <p data-h2-text-transform="b(uppercase)" data-h2-font-color="b(green)" data-h2-font-weight="b(700)" data-h2-margin="b(0, 0, x.5, 0)">2.0.0</p>
+                <p>This has been expanded to include almost all available states and a dark mode modifier so that you can specify dark mode styles right in the attribute as well.</p>
+              </div>
+            </div>
+            <div data-h2-flex-item="b(1of2)">
+              <div data-h2-shadow="b(l)" data-h2-bg-color="b(white)" data-h2-radius="b(rounded)" data-h2-padding="b(x1)" data-h2-height="b(100%)">
+                <p data-h2-text-transform="b(uppercase)" data-h2-font-color="b(red)" data-h2-font-weight="b(700)" data-h2-margin="b(0, 0, x.5, 0)">1.1.19</p>
+                <p>Hydrogen's goal is to make repetitive CSS centralized and easy to write, but for complex CSS like animations and transformations, there was a disconnect, because all of the helpful settings were locked into the system.</p>
+              </div>
+            </div>
+            <div data-h2-flex-item="b(1of2)">
+              <div data-h2-shadow="b(l)" data-h2-bg-color="b(white)" data-h2-radius="b(rounded)" data-h2-padding="b(x1)" data-h2-height="b(100%)">
+                <p data-h2-text-transform="b(uppercase)" data-h2-font-color="b(green)" data-h2-font-weight="b(700)" data-h2-margin="b(0, 0, x.5, 0)">2.0.0</p>
+                <p>You can now enable variable exports in the settings which tells Hydrogen to generate CSS variable, Sass variable, or both files. This means you can use your Hydrogen settings outside of Hydrogen, and they'll always stay in sync.</p>
+              </div>
+            </div>
+            <div data-h2-flex-item="b(1of2)">
+              <div data-h2-shadow="b(l)" data-h2-bg-color="b(white)" data-h2-radius="b(rounded)" data-h2-padding="b(x1)" data-h2-height="b(100%)">
+                <p data-h2-text-transform="b(uppercase)" data-h2-font-color="b(red)" data-h2-font-weight="b(700)" data-h2-margin="b(0, 0, x.5, 0)">1.1.19</p>
+                <p>Typography and whitespace used to be entirely separated and controlled using different settings. Base font size for your project could only be set once, you could only have a single typography scale for headings, and whitespace values were automatically generated from a user-set multiplier value.</p>
+              </div>
+            </div>
+            <div data-h2-flex-item="b(1of2)">
+              <div data-h2-shadow="b(l)" data-h2-bg-color="b(white)" data-h2-radius="b(rounded)" data-h2-padding="b(x1)" data-h2-height="b(100%)">
+                <p data-h2-text-transform="b(uppercase)" data-h2-font-color="b(green)" data-h2-font-weight="b(700)" data-h2-margin="b(0, 0, x.5, 0)">2.0.0</p>
+                <p>Hydrogen now leverages CSS variables to enable a vertical rhythm ecosystem that allows you to set different typography settings and link them to individual media queries. This means you can change your base font size, typography scale, and line height values to better suit different viewports. Whitespace has been completely overhauled to follow the vertical rhythm as well, meaning it creates values for you based on the line height you set for consistent vertical spacing.</p>
+              </div>
+            </div>
+            <div data-h2-flex-item="b(1of2)">
+              <div data-h2-shadow="b(l)" data-h2-bg-color="b(white)" data-h2-radius="b(rounded)" data-h2-padding="b(x1)" data-h2-height="b(100%)">
+                <p data-h2-text-transform="b(uppercase)" data-h2-font-color="b(red)" data-h2-font-weight="b(700)" data-h2-margin="b(0, 0, x.5, 0)">1.1.19</p>
+                <p>Media query settings used too be locked to a specific numeric value and its unit (e.g. 400px) and were limited to screens.</p>
+              </div>
+            </div>
+            <div data-h2-flex-item="b(1of2)">
+              <div data-h2-shadow="b(l)" data-h2-bg-color="b(white)" data-h2-radius="b(rounded)" data-h2-padding="b(x1)" data-h2-height="b(100%)">
+                <p data-h2-text-transform="b(uppercase)" data-h2-font-color="b(green)" data-h2-font-weight="b(700)" data-h2-margin="b(0, 0, x.5, 0)">2.0.0</p>
+                <p>Media queries are now completely customizable, meaning you can create queries for not only certain screen sizes, but ranges of screen sizes and other media like print.</p>
+              </div>
+            </div>
+            <div data-h2-flex-item="b(1of2)">
+              <div data-h2-shadow="b(l)" data-h2-bg-color="b(white)" data-h2-radius="b(rounded)" data-h2-padding="b(x1)" data-h2-height="b(100%)">
+                <p data-h2-text-transform="b(uppercase)" data-h2-font-color="b(red)" data-h2-font-weight="b(700)" data-h2-margin="b(0, 0, x.5, 0)">1.1.19</p>
+                <p>Color modifiers used to be really clunky due to a bracket syntax required for parsing, and only provided you with a single light and dark variant of your color setting. These variants were automated and you couldn't control them.</p>
+              </div>
+            </div>
+            <div data-h2-flex-item="b(1of2)">
+              <div data-h2-shadow="b(l)" data-h2-bg-color="b(white)" data-h2-radius="b(rounded)" data-h2-padding="b(x1)" data-h2-height="b(100%)">
+                <p data-h2-text-transform="b(uppercase)" data-h2-font-color="b(green)" data-h2-font-weight="b(700)" data-h2-margin="b(0, 0, x.5, 0)">2.0.0</p>
+                <p>Colors now use a dot syntax, order of the modifiers is irrelevant, and you now have access to three automated light variations and three automated dark variations of your color settings, all of which can be overwritten if you need them to be.</p>
+              </div>
+            </div>
+            <div data-h2-flex-item="b(1of2)">
+              <div data-h2-shadow="b(l)" data-h2-bg-color="b(white)" data-h2-radius="b(rounded)" data-h2-padding="b(x1)" data-h2-height="b(100%)">
+                <p data-h2-text-transform="b(uppercase)" data-h2-font-color="b(red)" data-h2-font-weight="b(700)" data-h2-margin="b(0, 0, x.5, 0)">1.1.19</p>
+                <p>Despite having 27 different attributes, a lot of commonly used CSS properties were unavailable.</p>
+              </div>
+            </div>
+            <div data-h2-flex-item="b(1of2)">
+              <div data-h2-shadow="b(l)" data-h2-bg-color="b(white)" data-h2-radius="b(rounded)" data-h2-padding="b(x1)" data-h2-height="b(100%)">
+                <p data-h2-text-transform="b(uppercase)" data-h2-font-color="b(green)" data-h2-font-weight="b(700)" data-h2-margin="b(0, 0, x.5, 0)">2.0.0</p>
+                <p>This version adds support for another 14+ attributes, including things like transition and CSS grid support.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

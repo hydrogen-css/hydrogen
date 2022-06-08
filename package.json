@@ -1,13 +1,11 @@
 {
   "name": "@hydrogen-design-system/hydrogen.css",
-  "version": "2.0.0-beta.5",
+  "version": "2.0.0-beta.6",
   "description": "A CSS utility framework that leverages data-attributes to provide clarity and flexibility. MIT Licensed.",
   "keywords": [
     "Hydrogen",
     "design",
     "system",
-    "component",
-    "library",
     "css",
     "framework"
   ],
