@@ -54,5 +54,6 @@
 - moved the default settings to /lib/data
 - reworks the default media query keys (xl -> xxl)
 - beta-6: a delay has been added to the watch script to prevent it from running if you save consecutively really quickly
+- beta-7: reworks console time logging to be rely on process.hrtime rather than console.time
 
 ## Bugfixes
