@@ -6,7 +6,7 @@
     "roadmap": "https://github.com/orgs/hydrogen-design-system/projects/1"
   },
   "input": [
-    "markup"
+    "/markup/"
   ],
   "output": "styles",
   "variables": {

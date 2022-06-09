@@ -230,7 +230,7 @@
   "hydrogen-transition": {
     "prefix": "data-h2-transition",
     "body": [
-      "data-h2-transition=\"${1:query}${2::mode}${3::state}(${4:transition})\""
+      "data-h2-transition=\"${1:query}${2::mode}${3::state}(${4:property}, ${5:duration}, ${6:function}, ${7:delay})\""
     ]
   },
   "hydrogen-vertical-align": {
