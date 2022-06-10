@@ -42,6 +42,7 @@
 - adds max height and width
 - adds flex basis - flex-item fill needs flex basis: 100% for line breaks
 - beta-6: input and output config values are now sanitized for prefixed/trailing '/'
+- beta-7: adds basic validation for the config file
 
 ## Optimizations
 

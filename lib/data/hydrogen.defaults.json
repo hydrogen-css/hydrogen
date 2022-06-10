@@ -108,26 +108,6 @@
       "family": "monospace"
     }
   ],
-  "typography": [
-    {
-      "size": "100%",
-      "lineHeight": "1.3",
-      "queryKey": "b",
-      "typeScale": "1.25"
-    },
-    {
-      "size": "112.5%",
-      "lineHeight": "1.2",
-      "queryKey": "l",
-      "typeScale": "1.33"
-    },
-    {
-      "size": "118%",
-      "lineHeight": "1.4",
-      "queryKey": "xl",
-      "typeScale": "1.25"
-    }
-  ],
   "gradients": [
     {
       "key": "myLinearGradient",
@@ -213,5 +193,25 @@
         "delay": "0s"
       }
     ]
-  }
+  },
+  "typography": [
+    {
+      "size": "100%",
+      "lineHeight": "1.3",
+      "queryKey": "b",
+      "typeScale": "1.25"
+    },
+    {
+      "size": "112.5%",
+      "lineHeight": "1.2",
+      "queryKey": "l",
+      "typeScale": "1.33"
+    },
+    {
+      "size": "118%",
+      "lineHeight": "1.4",
+      "queryKey": "xl",
+      "typeScale": "1.25"
+    }
+  ]
 }
