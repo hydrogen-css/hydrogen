@@ -58,3 +58,5 @@
 - beta-7: reworks console time logging to be rely on process.hrtime rather than console.time
 
 ## Bugfixes
+
+- beta-8: fixes a bug where reset styles for font-family were only applied to specific elements
