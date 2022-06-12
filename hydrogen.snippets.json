@@ -18,9 +18,12 @@
     ]
   },
   "hydrogen-background-color": {
-    "prefix": "data-h2-bg-color",
+    "prefix": [
+      "data-h2-background-color",
+      "data-h2-bg-color"
+    ],
     "body": [
-      "data-h2-bg-color=\"${1:query}${2::mode}${3::state}(${4:color/gradient})\""
+      "data-h2-background-color=\"${1:query}${2::mode}${3::state}(${4:color/gradient})\""
     ]
   },
   "hydrogen-border": {
@@ -84,9 +87,12 @@
     ]
   },
   "hydrogen-font-color": {
-    "prefix": "data-h2-font-color",
+    "prefix": [
+      "data-h2-color",
+      "data-h2-font-color"
+    ],
     "body": [
-      "data-h2-font-color=\"${1:query}${2::mode}${3::state}(${4:color/gradient})\""
+      "data-h2-color=\"${1:query}${2::mode}${3::state}(${4:color/gradient})\""
     ]
   },
   "hydrogen-font-family": {
