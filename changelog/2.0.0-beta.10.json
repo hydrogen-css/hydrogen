@@ -1,0 +1,45 @@
+{
+  "version": "2.0.0-beta.10",
+  "date": "2022/JUN/12",
+  "author": "Josh Beveridge",
+  "beta": true,
+  "breaking": null,
+  "features": [
+    {
+      "changes": [
+        "Adds support for the cursor property."
+      ],
+      "attributes": [
+        "cursor"
+      ]
+    },
+    {
+      "changes": [
+        "Adds support for the list-style property."
+      ],
+      "attributes": [
+        "list-style"
+      ]
+    },
+    {
+      "changes": [
+        "Adds support for both grid-column and grid-row so that you can specify a grid item's placement and size."
+      ],
+      "attributes": [
+        "grid-column",
+        "grid-row"
+      ]
+    },
+    {
+      "changes": [
+        "Adds support for both min-height and min-width."
+      ],
+      "attributes": [
+        "min-height",
+        "min-width"
+      ]
+    }
+  ],
+  "optimizations": [],
+  "bugfixes": []
+}

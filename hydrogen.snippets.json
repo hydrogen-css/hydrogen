@@ -38,22 +38,16 @@
       "data-h2-container=\"${1:query}${2::mode}${3::state}(${4:alignment}, ${5:width})\""
     ]
   },
+  "hydrogen-cursor": {
+    "prefix": "data-h2-cursor",
+    "body": [
+      "data-h2-cursor=\"${1:query}${2::mode}${3::state}(${4:cursor})\""
+    ]
+  },
   "hydrogen-display": {
     "prefix": "data-h2-display",
     "body": [
       "data-h2-display=\"${1:query}${2::mode}${3::state}(${4:display})\""
-    ]
-  },
-  "hydrogen-grid-template-columns": {
-    "prefix": "data-h2-grid-template-columns",
-    "body": [
-      "data-h2-grid-template-columns=\"${1:query}${2::mode}${3::state}(${4:template})\""
-    ]
-  },
-  "hydrogen-grid-template-rows": {
-    "prefix": "data-h2-grid-template-rows",
-    "body": [
-      "data-h2-grid-template-rows=\"${1:query}${2::mode}${3::state}(${4:template})\""
     ]
   },
   "hydrogen-flex-basis": {
@@ -131,6 +125,30 @@
       "data-h2-gap=\"${1:query}${2::mode}${3::state}(${4:size}, ${5:axis})\""
     ]
   },
+  "hydrogen-grid-column": {
+    "prefix": "data-h2-grid-column",
+    "body": [
+      "data-h2-grid-column=\"${1:query}${2::mode}${3::state}(${4:span})\""
+    ]
+  },
+  "hydrogen-grid-row": {
+    "prefix": "data-h2-grid-row",
+    "body": [
+      "data-h2-grid-row=\"${1:query}${2::mode}${3::state}(${4:span})\""
+    ]
+  },
+  "hydrogen-grid-template-columns": {
+    "prefix": "data-h2-grid-template-columns",
+    "body": [
+      "data-h2-grid-template-columns=\"${1:query}${2::mode}${3::state}(${4:template})\""
+    ]
+  },
+  "hydrogen-grid-template-rows": {
+    "prefix": "data-h2-grid-template-rows",
+    "body": [
+      "data-h2-grid-template-rows=\"${1:query}${2::mode}${3::state}(${4:template})\""
+    ]
+  },
   "hydrogen-justify-content": {
     "prefix": "data-h2-justify-content",
     "body": [
@@ -141,6 +159,12 @@
     "prefix": "data-h2-layer",
     "body": [
       "data-h2-layer=\"${1:query}${2::mode}${3::state}(${4:z-index}, ${5:position})\""
+    ]
+  },
+  "hydrogen-list-style": {
+    "prefix": "data-h2-list-style",
+    "body": [
+      "data-h2-list-style=\"${1:query}${2::mode}${3::state}(${4:style})\""
     ]
   },
   "hydrogen-margin": {
@@ -159,6 +183,18 @@
     "prefix": "data-h2-max-width",
     "body": [
       "data-h2-max-width=\"${1:query}${2::mode}${3::state}(${4:size})\""
+    ]
+  },
+  "hydrogen-min-height": {
+    "prefix": "data-h2-min-height",
+    "body": [
+      "data-h2-min-height=\"${1:query}${2::mode}${3::state}(${4:size})\""
+    ]
+  },
+  "hydrogen-min-width": {
+    "prefix": "data-h2-min-width",
+    "body": [
+      "data-h2-min-width=\"${1:query}${2::mode}${3::state}(${4:size})\""
     ]
   },
   "hydrogen-offset": {
