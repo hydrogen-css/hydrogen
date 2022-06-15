@@ -1,0 +1,36 @@
+{
+  "version": "2.0.0-beta.11",
+  "date": "2022/JUN/15",
+  "author": "Josh Beveridge",
+  "beta": true,
+  "breaking": null,
+  "features": [],
+  "optimizations": [
+    {
+      "changes": [
+        "Adds a debug configuration option that generates a series of log files for Hydrogen's media array, attribute parsing, and value generation processes."
+      ],
+      "attributes": null
+    },
+    {
+      "changes": [
+        "The configuration validation script now checks to see if color keys are reserved keywords or numbers that would conflict with opacity modifiers."
+      ],
+      "attributes": null
+    }
+  ],
+  "bugfixes": [
+    {
+      "changes": [
+        "Fixes a bug where Hydrogen's own files were being scraped and processed for attributes."
+      ],
+      "attributes": null
+    },
+    {
+      "changes": [
+        "Fixes a bug where empty media queries (e.g. b()) would result in undefined CSS, breaking the parse script."
+      ],
+      "attributes": null
+    }
+  ]
+}
