@@ -1,6 +1,6 @@
 {
   "name": "@hydrogen-design-system/hydrogen.css",
-  "version": "2.0.0-beta.12",
+  "version": "2.0.0-beta.13",
   "description": "A CSS utility framework that leverages data-attributes to provide clarity and flexibility. MIT Licensed.",
   "keywords": [
     "Hydrogen",
@@ -41,7 +41,7 @@
     "color": "^4.2.3",
     "colors": "^1.4.0",
     "cssnano": "^5.1.8",
-    "cssnano-preset-lite": "^2.1.2",
+    "cssnano-preset-lite": "^2.1.3",
     "del": "^6.1.0",
     "glob": "^8.0.3",
     "node-watch": "^0.7.3",

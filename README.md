@@ -53,25 +53,34 @@ You can learn about [utility usage in the documentation](https://hydrogen.design
 - `align-content`
 - `align-items`
 - `align-self`
-- `bg-color`
+- `background-color`
 - `border`
+- `color`
 - `container`
+- `cursor`
 - `display`
+- `flex-basis`
 - `flex-direction`
 - `flex-grid` and `flex-item`
 - `flex-wrap`
-- `font-color`
 - `font-family`
 - `font-size`
 - `font-style`
 - `font-weight`
 - `gap`
+- `grid-column`
+- `grid-row`
 - `grid-template-columns`
 - `grid-template-rows`
 - `height`
 - `justify-content`
 - `layer` for `z-index` control
+- `list-style`
 - `margin`
+- `max-height`
+- `max-width`
+- `min-height`
+- `min-width`
 - `offset` for positioning control
 - `opacity`
 - `order` for flex item order control
@@ -84,6 +93,7 @@ You can learn about [utility usage in the documentation](https://hydrogen.design
 - `text-align`
 - `text-decoration`
 - `text-transform`
+- `transition`
 - `visibility`
 - `width`
 
@@ -91,10 +101,17 @@ You can learn about [utility usage in the documentation](https://hydrogen.design
 
 Along with media queries, Hydrogen offers the ability to modify attributes using the following [state](https://hydrogen.design/#states) keys:
 
-- `:disabled` for `disabled`
-- `:focus` for `focus`
-- `:hover` for `hover`
-- `:active` for `active`
+- `:active`
+- `:checked`
+- `:disabled`
+- `:enabled`
+- `:focus`
+- `:hover`
+- `:link`
+- `:optional`
+- `:required`
+- `:valid`
+- `:visited`
 
 ### Dark Mode
 
