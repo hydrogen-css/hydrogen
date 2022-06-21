@@ -1,6 +1,6 @@
 {
   "name": "@hydrogen-design-system/hydrogen.css",
-  "version": "2.0.0-beta.13",
+  "version": "2.0.0-beta.14",
   "description": "A CSS utility framework that leverages data-attributes to provide clarity and flexibility. MIT Licensed.",
   "keywords": [
     "Hydrogen",
@@ -18,13 +18,7 @@
     "h2-watch": "./bin/watch.js",
     "h2-build": "./bin/build.js"
   },
-  "scripts": {
-    "start": "npm-run-all --parallel h2-dev-watch browsersync",
-    "h2-dev-init": "node ./bin/init.js dev",
-    "h2-dev-build": "node ./bin/build.js dev",
-    "h2-dev-watch": "node ./bin/watch.js dev",
-    "browsersync": "browser-sync start --server=\"tests\" --port=\"8080\" --files=\"tests/**/*\" --startPath=\"markup/index.html\" --no-notify"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hydrogen-design-system/hydrogen.git"
@@ -38,13 +32,12 @@
   "dependencies": {
     "autoprefixer": "^10.4.7",
     "browserlist": "^1.0.1",
+    "chokidar": "^3.5.3",
     "color": "^4.2.3",
     "colors": "^1.4.0",
     "cssnano": "^5.1.8",
     "cssnano-preset-lite": "^2.1.3",
-    "del": "^6.1.0",
     "glob": "^8.0.3",
-    "node-watch": "^0.7.3",
     "postcss": "^8.4.14",
     "prompt": "^1.3.0"
   },
@@ -60,9 +53,5 @@
     "printWidth": 1000,
     "proseWrap": "preserve",
     "singleAttributePerLine": true
-  },
-  "devDependencies": {
-    "browser-sync": "^1.9.2",
-    "npm-run-all": "^4.1.5"
   }
 }

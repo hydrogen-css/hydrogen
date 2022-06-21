@@ -27,7 +27,42 @@
       href="../styles/hydrogen.css"
     />
   </head>
-  <body>
+  <body data-h2-font-family="b(sans)">
+    <!-- Reset style tests -->
+    <section data-h2-container="b(center, medium)">
+      <h1>Reset style tests</h1>
+      <div data-h2-display="b(block)">
+        <button>Test button</button>
+      </div>
+      <div data-h2-display="b(block)">
+        <button 
+          data-h2-font-size="b(h6)"
+          data-h2-font-family="b(serif)">Test button</button>
+      </div>
+      <div data-h2-display="b(block)">
+        <input></input>
+      </div>
+      <div data-h2-display="b(block)">
+        <input data-h2-font-size="b(h5)"></input>
+      </div>
+      <div data-h2-display="b(block)">
+        <select>
+          <option>Thing</option>
+        </select>
+      </div>
+      <div data-h2-display="b(block)">
+        <select data-h2-font-size="b(h3)">
+          <option>Thing</option>
+        </select>
+      </div>
+      <div data-h2-display="b(block)">
+        <textarea></textarea>
+      </div>
+      <div data-h2-display="b(block)">
+        <textarea data-h2-font-size="b(h6)"></textarea>
+      </div>
+      <hr data-h2-margin="b(x3, 0)" />
+    </section>
     <!-- Align content -->
     <div data-h2-align-content="b(flex-start) m:hover(flex-end)"></div>
     <!-- Align items -->
@@ -680,7 +715,7 @@
     <div>
       <span>Line item</span>
       <div
-        data-h2-bg-color="b(primary)"
+        data-h2-bg-color="b(magenta)"
         data-h2-display="b(inline-block)"
         data-h2-height="b(30px)"
         data-h2-width="b(30px)"

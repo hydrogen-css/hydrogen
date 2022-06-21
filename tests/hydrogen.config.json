@@ -7,7 +7,7 @@
   },
   "debug": true,
   "input": [
-    "/markup/"
+    "markup/"
   ],
   "output": "styles",
   "variables": {
