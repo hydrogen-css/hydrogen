@@ -1,6 +1,6 @@
 {
   "name": "@hydrogen-design-system/hydrogen.css",
-  "version": "2.0.0-beta.14",
+  "version": "2.0.0-beta.15",
   "description": "A CSS utility framework that leverages data-attributes to provide clarity and flexibility. MIT Licensed.",
   "keywords": [
     "Hydrogen",
@@ -50,7 +50,6 @@
   },
   "prettier": {
     "singleQuote": true,
-    "printWidth": 1000,
     "proseWrap": "preserve",
     "singleAttributePerLine": true
   }

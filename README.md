@@ -26,7 +26,7 @@ Hydrogen uses a custom `data-attribute` syntax for complex styling.
 
 An example of a Hydrogen attribute in use would be something like:
 
-`data-h2-bg-color="b(primary) b:hover(accent)"`
+`data-h2-bg-color="base(primary) base:hover(accent)"`
 
 This repository also contains a handy `hydrogen.snippets.json` file that contains snippet automation for VS Code, enabling auto completion and tab stops.
 
@@ -117,5 +117,5 @@ Along with media queries, Hydrogen offers the ability to modify attributes using
 
 You can specify unique styles for users who have their browsers/OS set to prefer dark mode or simply want to toggle it on using a class. This can be done by adding `:dark` to your media query calls:
 
-- `data-h2-bg-color="b(primary)"` will set the default background color to `primary`;
-- `data-h2-bg-color="b(primary) b:dark(secondary)"` will set the default background color to `primary`, and if the user prefers dark mode, will set the background to `secondary`
+- `data-h2-bg-color="base(primary)"` will set the default background color to `primary`;
+- `data-h2-bg-color="base(primary) base:dark(secondary)"` will set the default background color to `primary`, and if the user prefers dark mode, will set the background to `secondary`
