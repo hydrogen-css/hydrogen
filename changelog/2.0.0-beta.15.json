@@ -7,8 +7,8 @@
     {
       "changes": [
         "Reworks media queries and requires that they do not contain repeating values at the end of their key.",
-        "This is the result of a complex bug that occurs due to the wildcard selector used with the data-attributes. The wildcard causes queries like xl() to trigger matching queries such as l().",
-        "There were two options to solve this problem floated, moving away from the wildcard selector in favor of the more concrete ~ selector or adding more robust validation to media queries to avoid repetition.",
+        "This is the result of a complex bug that occurs due to the wildcard selector used with the data-attributes. The wildcard causes queries like xl(green) to trigger matching queries such as l(green).",
+        "There were two options discussed to solve this problem: moving away from the wildcard selector in favor of the more concrete ~ selector, or adding more robust validation to media queries to avoid repetition.",
         "While moving to the ~ selector was preferred, it required that whitespace be stripped out of attribute values entirely; something that isn't possible due to whitespace requirements by certain CSS values."
       ],
       "attributes": null
