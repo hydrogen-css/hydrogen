@@ -12,6 +12,7 @@
   "output": "styles",
   "variables": true,
   "resetStyles": true,
+  "darkMode": "toggle",
   "colors": [
     {
       "key": "primary",

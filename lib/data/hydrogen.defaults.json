@@ -12,6 +12,7 @@
   "output": "path/to/output/folder",
   "variables": false,
   "resetStyles": true,
+  "darkMode": "preference",
   "colors": [
     {
       "key": "primary",

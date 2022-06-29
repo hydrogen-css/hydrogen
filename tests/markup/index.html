@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-h2>
   <head>
     <!-- Site Title -->
     <title>Hydrogen CSS framework</title>
@@ -26,11 +26,297 @@
       type="text/css"
       href="../styles/hydrogen.css"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../styles/app.css"
+    />
   </head>
   <body data-h2-font-family="base(sans)">
     <!-- Reset style tests -->
-    <section data-h2-container="base(center, medium)">
-      <h1>Reset style tests</h1>
+    <section data-h2-container="base(center, medium, x2)">
+      <h1 data-h2-margin="base(x5, 0, 0, 0)">Hydrogen internal tests</h1>
+      <h2 data-h2-margin="base(x3, 0, 0, 0)">Dark mode tests</h2>
+      <button type="button" onclick="enablePref()">Pref</button>
+      <button type="button" onclick="enableLight()">Light</button>
+      <button type="button" onclick="enableDark()">Dark</button>
+      <div
+        data-h2-display="base(grid)"
+        data-h2-grid-template-columns="base(1fr 1fr 1fr)"
+        data-h2-gap="base(x1, all)"
+        data-h2-font-size="base(10px)">
+        <div>
+          <p data-h2-margin="base(x1, 0, x.5, 0)">Preference</p>
+          <div
+            data-h2-padding="base(x.5)" 
+            data-h2-margin="base(0, 0, x.5, 0)"
+            data-h2-background-color="base(green)">
+            Base: Green<br><br>
+            Should be green
+          </div>
+          <div
+            data-h2-padding="base(x.5)" 
+            data-h2-margin="base(0, 0, x.5, 0)"
+            data-h2-background-color="base(green) p-tablet(pink)">
+            Base: Green<br>
+            P-tablet: Pink<br><br>
+            Should be pink
+          </div>
+          <div
+            data-h2-padding="base(x.5)" 
+            data-h2-margin="base(0, 0, x.5, 0)"
+            data-h2-background-color="base(green) base:hover(red) p-tablet(pink)">
+            Base: Green<br>
+            Base:hover: Red<br>
+            P-tablet: Pink<br><br>
+            Should be pink<br>
+            Should be red on hover
+          </div>
+          <div
+            data-h2-padding="base(x.5)" 
+            data-h2-margin="base(0, 0, x.5, 0)"
+            data-h2-background-color="base(green) base:hover(red) base:dark(yellow) p-tablet:dark(cyan)">
+            Base: Green<br>
+            Base:hover: Red<br>
+            Base:dark: Yellow<br>
+            P-tablet:dark: Cyan<br><br>
+            <span data-h2-display="base(block) base:dark(none)">Should be green</span>
+            <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
+            Should be red on hover
+          </div>
+          <div
+            data-h2-padding="base(x.5)" 
+            data-h2-margin="base(0, 0, x.5, 0)"
+            data-h2-background-color="base(green) base:hover(red) p-tablet:dark(cyan) p-tablet:dark:hover(blue)">
+            Base: Green<br>
+            Base:hover: Red<br>
+            P-tablet:dark: Cyan<br>
+            P-tablet:dark:hover: Blue<br><br>
+            <span data-h2-display="base(block) base:dark(none)">Should be green</span>
+            <span data-h2-display="base(block) base:dark(none)">Should be red on hover</span>
+            <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
+            <span data-h2-display="base(none) base:dark(block)">Should be blue on hover</span>
+          </div>
+          <div
+            data-h2-padding="base(x.5)" 
+            data-h2-margin="base(0, 0, x.5, 0)"
+            data-h2-background-color="base(green) base:hover(red) p-tablet:hover(orange) p-tablet:dark(cyan) p-tablet:dark:hover(blue)">
+            Base: Green<br>
+            Base:hover: Red<br>
+            P-tablet:hover: Orange<br>
+            P-tablet:dark: Cyan<br>
+            P-tablet:dark:hover: Blue<br><br>
+            <span data-h2-display="base(block) base:dark(none)">Should be green</span>
+            <span data-h2-display="base(block) base:dark(none)">Should be orange on hover</span>
+            <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
+            <span data-h2-display="base(none) base:dark(block)">Should be blue on hover</span>
+          </div>
+          <div
+            data-h2-padding="base(x.5)" 
+            data-h2-margin="base(0, 0, x.5, 0)"
+            data-h2-background-color="base(green) base:hover(red) base:dark(yellow) base:dark:hover(gray) p-tablet(pink) p-tablet:hover(orange) p-tablet:dark(cyan) p-tablet:dark:hover(blue)">
+            Base: Green<br>
+            Base:hover: Red<br>
+            Base:dark: Yellow<br>
+            Base:dark:hover: Gray<br>
+            P-tablet: Pink<br>
+            P-tablet:hover: Orange<br>
+            P-tablet:dark: Cyan<br>
+            P-tablet:dark:hover: Blue<br><br>
+            <span data-h2-display="base(block) base:dark(none)">Should be pink</span>
+            <span data-h2-display="base(block) base:dark(none)">Should be orange on hover</span>
+            <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
+            <span data-h2-display="base(none) base:dark(block)">Should be blue on hover</span>
+          </div>
+        </div>
+        <div data-h2="dark">
+          <p data-h2-margin="base(x1, 0, x.5, 0)">Class dark</p>
+          <div
+            data-h2-padding="base(x.5)" 
+            data-h2-margin="base(0, 0, x.5, 0)"
+            data-h2-background-color="base(green)">
+            Base: Green<br><br>
+            Should be green
+          </div>
+          <div
+            data-h2-padding="base(x.5)" 
+            data-h2-margin="base(0, 0, x.5, 0)"
+            data-h2-background-color="base(green) p-tablet(pink)">
+            Base: Green<br>
+            P-tablet: Pink<br><br>
+            Should be pink
+          </div>
+          <div
+            data-h2-padding="base(x.5)" 
+            data-h2-margin="base(0, 0, x.5, 0)"
+            data-h2-background-color="base(green) base:hover(red) p-tablet(pink)">
+            Base: Green<br>
+            Base:hover: Red<br>
+            P-tablet: Pink<br><br>
+            Should be pink<br>
+            Should be red on hover
+          </div>
+          <div
+            data-h2-padding="base(x.5)" 
+            data-h2-margin="base(0, 0, x.5, 0)"
+            data-h2-background-color="base(green) base:hover(red) base:dark(yellow) p-tablet:dark(cyan)">
+            Base: Green<br>
+            Base:hover: Red<br>
+            Base:dark: Yellow<br>
+            P-tablet:dark: Cyan<br><br>
+            <span data-h2-display="base(block) base:dark(none)">Should be green</span>
+            <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
+            Should be red on hover
+          </div>
+          <div
+            data-h2-padding="base(x.5)" 
+            data-h2-margin="base(0, 0, x.5, 0)"
+            data-h2-background-color="base(green) base:hover(red) p-tablet:dark(cyan) p-tablet:dark:hover(blue)">
+            Base: Green<br>
+            Base:hover: Red<br>
+            P-tablet:dark: Cyan<br>
+            P-tablet:dark:hover: Blue<br><br>
+            <span data-h2-display="base(block) base:dark(none)">Should be green</span>
+            <span data-h2-display="base(block) base:dark(none)">Should be red on hover</span>
+            <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
+            <span data-h2-display="base(none) base:dark(block)">Should be blue on hover</span>
+          </div>
+          <div
+            data-h2-padding="base(x.5)" 
+            data-h2-margin="base(0, 0, x.5, 0)"
+            data-h2-background-color="base(green) base:hover(red) p-tablet:hover(orange) p-tablet:dark(cyan) p-tablet:dark:hover(blue)">
+            Base: Green<br>
+            Base:hover: Red<br>
+            P-tablet:hover: Orange<br>
+            P-tablet:dark: Cyan<br>
+            P-tablet:dark:hover: Blue<br><br>
+            <span data-h2-display="base(block) base:dark(none)">Should be green</span>
+            <span data-h2-display="base(block) base:dark(none)">Should be orange on hover</span>
+            <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
+            <span data-h2-display="base(none) base:dark(block)">Should be blue on hover</span>
+          </div>
+          <div
+            data-h2-padding="base(x.5)" 
+            data-h2-margin="base(0, 0, x.5, 0)"
+            data-h2-background-color="base(green) base:hover(red) base:dark(yellow) base:dark:hover(gray) p-tablet(pink) p-tablet:hover(orange) p-tablet:dark(cyan) p-tablet:dark:hover(blue)">
+            Base: Green<br>
+            Base:hover: Red<br>
+            Base:dark: Yellow<br>
+            Base:dark:hover: Gray<br>
+            P-tablet: Pink<br>
+            P-tablet:hover: Orange<br>
+            P-tablet:dark: Cyan<br>
+            P-tablet:dark:hover: Blue<br><br>
+            <span data-h2-display="base(block) base:dark(none)">Should be pink</span>
+            <span data-h2-display="base(block) base:dark(none)">Should be orange on hover</span>
+            <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
+            <span data-h2-display="base(none) base:dark(block)">Should be blue on hover</span>
+          </div>
+        </div>
+        <div data-h2="">
+          <p data-h2-margin="base(x1, 0, x.5, 0)">Class light</p>
+          <div
+            data-h2-padding="base(x.5)" 
+            data-h2-margin="base(0, 0, x.5, 0)"
+            data-h2-background-color="base(green)">
+            Base: Green<br><br>
+            Should be green
+          </div>
+          <div
+            data-h2-padding="base(x.5)" 
+            data-h2-margin="base(0, 0, x.5, 0)"
+            data-h2-background-color="base(green) p-tablet(pink)">
+            Base: Green<br>
+            P-tablet: Pink<br><br>
+            Should be pink
+          </div>
+          <div
+            data-h2-padding="base(x.5)" 
+            data-h2-margin="base(0, 0, x.5, 0)"
+            data-h2-background-color="base(green) base:hover(red) p-tablet(pink)">
+            Base: Green<br>
+            Base:hover: Red<br>
+            P-tablet: Pink<br><br>
+            Should be pink<br>
+            Should be red on hover
+          </div>
+          <div
+            data-h2-padding="base(x.5)" 
+            data-h2-margin="base(0, 0, x.5, 0)"
+            data-h2-background-color="base(green) base:hover(red) base:dark(yellow) p-tablet:dark(cyan)">
+            Base: Green<br>
+            Base:hover: Red<br>
+            Base:dark: Yellow<br>
+            P-tablet:dark: Cyan<br><br>
+            <span data-h2-display="base(block) base:dark(none)">Should be green</span>
+            <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
+            Should be red on hover
+          </div>
+          <div
+            data-h2-padding="base(x.5)" 
+            data-h2-margin="base(0, 0, x.5, 0)"
+            data-h2-background-color="base(green) base:hover(red) p-tablet:dark(cyan) p-tablet:dark:hover(blue)">
+            Base: Green<br>
+            Base:hover: Red<br>
+            P-tablet:dark: Cyan<br>
+            P-tablet:dark:hover: Blue<br><br>
+            <span data-h2-display="base(block) base:dark(none)">Should be green</span>
+            <span data-h2-display="base(block) base:dark(none)">Should be red on hover</span>
+            <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
+            <span data-h2-display="base(none) base:dark(block)">Should be blue on hover</span>
+          </div>
+          <div
+            data-h2-padding="base(x.5)" 
+            data-h2-margin="base(0, 0, x.5, 0)"
+            data-h2-background-color="base(green) base:hover(red) p-tablet:hover(orange) p-tablet:dark(cyan) p-tablet:dark:hover(blue)">
+            Base: Green<br>
+            Base:hover: Red<br>
+            P-tablet:hover: Orange<br>
+            P-tablet:dark: Cyan<br>
+            P-tablet:dark:hover: Blue<br><br>
+            <span data-h2-display="base(block) base:dark(none)">Should be green</span>
+            <span data-h2-display="base(block) base:dark(none)">Should be orange on hover</span>
+            <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
+            <span data-h2-display="base(none) base:dark(block)">Should be blue on hover</span>
+          </div>
+          <div
+            data-h2-padding="base(x.5)" 
+            data-h2-margin="base(0, 0, x.5, 0)"
+            data-h2-background-color="base(green) base:hover(red) base:dark(yellow) base:dark:hover(gray) p-tablet(pink) p-tablet:hover(orange) p-tablet:dark(cyan) p-tablet:dark:hover(blue)">
+            Base: Green<br>
+            Base:hover: Red<br>
+            Base:dark: Yellow<br>
+            Base:dark:hover: Gray<br>
+            P-tablet: Pink<br>
+            P-tablet:hover: Orange<br>
+            P-tablet:dark: Cyan<br>
+            P-tablet:dark:hover: Blue<br><br>
+            <span data-h2-display="base(block) base:dark(none)">Should be pink</span>
+            <span data-h2-display="base(block) base:dark(none)">Should be orange on hover</span>
+            <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
+            <span data-h2-display="base(none) base:dark(block)">Should be blue on hover</span>
+          </div>
+        </div>
+        <div>
+          <p data-h2-margin="base(0, 0, x.5, 0)">Preference</p>
+          <p data-h2-display="base:dark(none)">This is the light toggle</p>
+          <p data-h2-display="base(none) base:dark(block)">This is the dark toggle</p>
+          <p data-h2-display="base(none) l-tablet(block)">This is the menu.</p>
+        </div>
+        <div data-h2="dark">
+          <p data-h2-margin="base(0, 0, x.5, 0)">Class dark</p>
+          <p data-h2-display="base:dark(none)">This is the light toggle</p>
+          <p data-h2-display="base(none) base:dark(block)">This is the dark toggle</p>
+          <p data-h2-display="base(none) l-tablet(block)">This is the menu.</p>
+        </div>
+        <div data-h2="">
+          <p data-h2-margin="base(0, 0, x.5, 0)">Class light</p>
+          <p data-h2-display="base:dark(none)">This is the light toggle</p>
+          <p data-h2-display="base(none) base:dark(block)">This is the dark toggle</p>
+          <p data-h2-display="base(none) l-tablet(block)">This is the menu.</p>
+        </div>
+      </div>
+      <h2 data-h2-margin="base(x3, 0, 0, 0)">Reset style tests</h2>
       <div data-h2-display="base(block)">
         <button>Test button</button>
       </div>
@@ -760,5 +1046,6 @@
       ">
       Things
     </div>
+    <script src="../scripts/app.js"></script>
   </body>
 </html>

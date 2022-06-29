@@ -15,6 +15,7 @@ It leverages data-attributes to allow the styling of elements, media queries, st
 - run `npm install @hydrogen-design-system/hydrogen.css` to install Hydrogen
 - run `npx h2-init` to setup your input/output directories
 - modify your `hydrogen.config.json` file to match your theme
+- add `data-h2` to your `<html>` element or parent wrapper
 - run `npx h2-watch` to watch your files for changes and compile when a change is detected
 - run `npx h2-build` when you're ready to deploy to production
 
