@@ -1,0 +1,24 @@
+{
+  "version": "2.0.0-beta.17",
+  "date": "2022/JUN/30",
+  "author": "Josh Beveridge",
+  "beta": true,
+  "breaking": [
+    {
+      "changes": [
+        "Migrates all config keys away from camelCase in favor of underscores for legibility and accessibility."
+      ],
+      "attributes": null
+    }
+  ],
+  "features": [],
+  "optimizations": [],
+  "bugfixes": [
+    {
+      "changes": [
+        "Fixes a bug where automated dark color scale values were incorrect in the variable export file when compared to the actual Hydrogen output."
+      ],
+      "attributes": null
+    }
+  ]
+}

@@ -35,7 +35,7 @@
   "hydrogen-container": {
     "prefix": "data-h2-container",
     "body": [
-      "data-h2-container=\"${1:query}${2::mode}${3::state}(${4:alignment}, ${5:width})\""
+      "data-h2-container=\"${1:query}${2::mode}${3::state}(${4:alignment}, ${5:width}, ${6:padding})\""
     ]
   },
   "hydrogen-cursor": {
@@ -198,13 +198,18 @@
     ]
   },
   "hydrogen-offset": {
-    "prefix": ["data-h2-offset","data-h2-location"],
+    "prefix": [
+      "data-h2-offset",
+      "data-h2-location"
+    ],
     "body": [
       "data-h2-offset=\"${1:query}${2::mode}${3::state}(${4:top}, ${5:right}, ${6:bottom}, ${7:left})\""
     ]
   },
   "hydrogen-opacity": {
-    "prefix": ["data-h2-opacity"],
+    "prefix": [
+      "data-h2-opacity"
+    ],
     "body": [
       "data-h2-opacity=\"${1:query}${2::mode}${3::state}(${4:opacity})\""
     ]

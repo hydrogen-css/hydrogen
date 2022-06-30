@@ -11,8 +11,8 @@
   ],
   "output": "path/to/output/folder",
   "variables": false,
-  "resetStyles": true,
-  "darkMode": "preference",
+  "reset_styles": true,
+  "dark_mode": "preference",
   "colors": [
     {
       "key": "primary",
@@ -78,15 +78,15 @@
   "containers": [
     {
       "key": "small",
-      "maxWidth": "39rem"
+      "max_width": "39rem"
     },
     {
       "key": "medium",
-      "maxWidth": "60rem"
+      "max_width": "60rem"
     },
     {
       "key": "large",
-      "maxWidth": "80rem"
+      "max_width": "80rem"
     }
   ],
   "fonts": [
@@ -196,15 +196,15 @@
   "typography": [
     {
       "size": "100%",
-      "lineHeight": "1.4",
-      "queryKey": "base",
-      "typeScale": "1.2"
+      "line_height": "1.4",
+      "query_key": "base",
+      "type_scale": "1.2"
     },
     {
       "size": "112.5%",
-      "lineHeight": "1.4",
-      "queryKey": "l-tablet",
-      "typeScale": "1.2"
+      "line_height": "1.4",
+      "query_key": "l-tablet",
+      "type_scale": "1.2"
     }
   ]
 }

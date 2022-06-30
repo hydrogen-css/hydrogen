@@ -11,8 +11,8 @@
   ],
   "output": "styles",
   "variables": true,
-  "resetStyles": true,
-  "darkMode": "toggle",
+  "reset_styles": true,
+  "dark_mode": "toggle",
   "colors": [
     {
       "key": "primary",
@@ -78,15 +78,15 @@
   "containers": [
     {
       "key": "small",
-      "maxWidth": "39rem"
+      "max_width": "39rem"
     },
     {
       "key": "medium",
-      "maxWidth": "60rem"
+      "max_width": "60rem"
     },
     {
       "key": "large",
-      "maxWidth": "80rem"
+      "max_width": "80rem"
     }
   ],
   "fonts": [
@@ -115,7 +115,7 @@
     },
     {
       "key": "myRadialGradient",
-      "gradient": "radial-gradient(circle at left, green, pink, rgba(255, 255, 255, 1))",
+      "gradient": "radial-gradient(circle at center, blue, purple, rgba(255, 255, 255, 1))",
       "fallback": "green"
     }
   ],
@@ -196,21 +196,21 @@
   "typography": [
     {
       "size": "100%",
-      "lineHeight": "1.4",
-      "queryKey": "base",
-      "typeScale": "1.2"
+      "line_height": "1.4",
+      "query_key": "base",
+      "type_scale": "1.2"
     },
     {
       "size": "112.5%",
-      "lineHeight": "2",
-      "queryKey": "l-tablet",
-      "typeScale": "1.3"
+      "line_height": "2",
+      "query_key": "l-tablet",
+      "type_scale": "1.3"
     },
     {
       "size": "125%",
-      "lineHeight": "1.1",
-      "queryKey": "desktop",
-      "typeScale": "1.235"
+      "line_height": "1.1",
+      "query_key": "desktop",
+      "type_scale": "1.235"
     }
   ]
 }

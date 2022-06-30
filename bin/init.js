@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-const { configureHydrogen } = require('../lib/init');
+const { h2_configure_hydrogen } = require('../lib/init');
 
-configureHydrogen();
+h2_configure_hydrogen();

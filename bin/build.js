@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-const { build } = require('../lib/build');
+const { h2_build_hydrogen } = require('../lib/build');
 
-build();
+h2_build_hydrogen();

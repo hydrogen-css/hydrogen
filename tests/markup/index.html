@@ -29,13 +29,20 @@
     <link
       rel="stylesheet"
       type="text/css"
+      href="../styles/hydrogen.vars.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
       href="../styles/app.css"
     />
   </head>
   <body data-h2-font-family="base(sans)">
-    <!-- Reset style tests -->
-    <section data-h2-container="base(center, medium, x2)">
+    <section 
+      data-h2-container="base(center, medium, x2)"
+      data-h2-margin="base(0, auto, x10, auto)">
       <h1 data-h2-margin="base(x5, 0, 0, 0)">Hydrogen internal tests</h1>
+      <!-- Dark mode -->
       <h2 data-h2-margin="base(x3, 0, 0, 0)">Dark mode tests</h2>
       <button type="button" onclick="enablePref()">Pref</button>
       <button type="button" onclick="enableLight()">Light</button>
@@ -46,7 +53,7 @@
         data-h2-gap="base(x1, all)"
         data-h2-font-size="base(10px)">
         <div>
-          <p data-h2-margin="base(x1, 0, x.5, 0)">Preference</p>
+          <h3>Preference</h3>
           <div
             data-h2-padding="base(x.5)" 
             data-h2-margin="base(0, 0, x.5, 0)"
@@ -130,7 +137,7 @@
           </div>
         </div>
         <div data-h2="dark">
-          <p data-h2-margin="base(x1, 0, x.5, 0)">Class dark</p>
+          <h3>Class dark</h3>
           <div
             data-h2-padding="base(x.5)" 
             data-h2-margin="base(0, 0, x.5, 0)"
@@ -316,38 +323,165 @@
           <p data-h2-display="base(none) l-tablet(block)">This is the menu.</p>
         </div>
       </div>
+      <hr data-h2-margin="base(x3, 0)" />
+      <!-- Reset styles -->
       <h2 data-h2-margin="base(x3, 0, 0, 0)">Reset style tests</h2>
-      <div data-h2-display="base(block)">
-        <button>Test button</button>
-      </div>
-      <div data-h2-display="base(block)">
-        <button 
-          data-h2-font-size="base(h6)"
-          data-h2-font-family="base(serif)">Test button</button>
-      </div>
-      <div data-h2-display="base(block)">
-        <input></input>
-      </div>
-      <div data-h2-display="base(block)">
-        <input data-h2-font-size="base(h5)"></input>
-      </div>
-      <div data-h2-display="base(block)">
-        <select>
-          <option>Thing</option>
-        </select>
-      </div>
-      <div data-h2-display="base(block)">
-        <select data-h2-font-size="base(h3)">
-          <option>Thing</option>
-        </select>
-      </div>
-      <div data-h2-display="base(block)">
-        <textarea></textarea>
-      </div>
-      <div data-h2-display="base(block)">
-        <textarea data-h2-font-size="base(h6)"></textarea>
+      <div>
+        <div data-h2-display="base(block)">
+          <button>Test button</button>
+        </div>
+        <div data-h2-display="base(block)">
+          <button 
+            data-h2-font-size="base(h6)"
+            data-h2-font-family="base(serif)">Test button</button>
+        </div>
+        <div data-h2-display="base(block)">
+          <input></input>
+        </div>
+        <div data-h2-display="base(block)">
+          <input data-h2-font-size="base(h5)"></input>
+        </div>
+        <div data-h2-display="base(block)">
+          <select>
+            <option>Thing</option>
+          </select>
+        </div>
+        <div data-h2-display="base(block)">
+          <select data-h2-font-size="base(h3)">
+            <option>Thing</option>
+          </select>
+        </div>
+        <div data-h2-display="base(block)">
+          <textarea></textarea>
+        </div>
+        <div data-h2-display="base(block)">
+          <textarea data-h2-font-size="base(h6)"></textarea>
+        </div>
       </div>
       <hr data-h2-margin="base(x3, 0)" />
+      <!-- Background colors -->
+      <h2 data-h2-margin="base(x3, 0, 0, 0)">Background color tests</h2>
+      <div
+        data-h2-display="base(grid)"
+        data-h2-grid-template-columns="base(1fr 1fr)"
+        data-h2-gap="base(x2, all)">
+        <div>
+          <h3>Hydrogen.css</h3>
+          <div
+            data-h2-display="base(grid)"
+            data-h2-grid-template-columns="base(1fr 1fr 1fr 1fr 1fr 1fr 1fr)"
+            data-h2-gap="base(x.5, all)">
+            <div data-h2-grid-column="base(1 / 8)">
+              <h4>Configured color</h4>
+              <p>Hover should be yellow, dark mode should be the accent scale.</p>
+            </div>
+            <div
+              data-h2-height="base(x3)"
+              data-h2-background-color="base(lightest.primary) base:dark(lightest.accent) base:hover(yellow)"></div>
+            <div
+              data-h2-height="base(x3)"
+              data-h2-background-color="base(lighter.primary) base:dark(lighter.accent) base:hover(yellow)"></div>
+            <div
+              data-h2-height="base(x3)"
+              data-h2-background-color="base(light.primary) base:dark(light.accent) base:hover(yellow)"></div>
+            <div
+              data-h2-height="base(x3)"
+              data-h2-background-color="base(primary) base:dark(accent) base:hover(yellow)"></div>
+            <div
+              data-h2-height="base(x3)"
+              data-h2-background-color="base(dark.primary) base:dark(dark.accent) base:hover(yellow)"></div>
+            <div
+              data-h2-height="base(x3)"
+              data-h2-background-color="base(darker.primary) base:dark(darker.accent) base:hover(yellow)"></div>
+            <div
+              data-h2-height="base(x3)"
+              data-h2-background-color="base(darker.primary) base:dark(darkest.accent) base:hover(yellow)"></div>
+            <div data-h2-grid-column="base(1 / 8)">
+              <h4>Gradients</h4>
+            </div>
+            <div
+              data-h2-grid-column="base(1 / 8)"
+              data-h2-height="base(x3)"
+              data-h2-width="base(100%)"
+              data-h2-background-color="base(myLinearGradient)"></div>
+            <div
+              data-h2-grid-column="base(1 / 8)"
+              data-h2-height="base(x3)"
+              data-h2-width="base(100%)"
+              data-h2-background-color="base(myRadialGradient)"></div>
+            <div data-h2-grid-column="base(1 / 8)">
+              <h4>Configured color with opacity</h4>
+            </div>
+            <div
+              data-h2-height="base(x3)"
+              data-h2-background-color="base(black)"></div>
+            <div
+              data-h2-height="base(x3)"
+              data-h2-background-color="base(black.9)"></div>
+            <div
+              data-h2-height="base(x3)"
+              data-h2-background-color="base(black.8)"></div>
+            <div
+              data-h2-height="base(x3)"
+              data-h2-background-color="base(black.7)"></div>
+            <div
+              data-h2-height="base(x3)"
+              data-h2-background-color="base(black.6)"></div>
+            <div
+              data-h2-height="base(x3)"
+              data-h2-background-color="base(black.5)"></div>
+            <div
+              data-h2-height="base(x3)"
+              data-h2-background-color="base(black.4)"></div>
+          </div>
+        </div>
+        <div>
+          <h3>Hydrogen variable export</h3>
+          <div
+            data-h2-display="base(grid)"
+            data-h2-grid-template-columns="base(1fr 1fr 1fr 1fr 1fr 1fr 1fr)"
+            data-h2-gap="base(x.5, all)">
+            <div data-h2-grid-column="base(1 / 8)">
+              <h4>Configured color</h4>
+              <p>Hover should be the accent scale in reverse.</p>
+            </div>
+            <div
+              data-h2-height="base(x3)"
+              data-h2-background-color="base(var(--h2-color-lightest-primary)) base:hover(var(--h2-color-darkest-accent))"></div>
+            <div
+              data-h2-height="base(x3)"
+              data-h2-background-color="base(var(--h2-color-lighter-primary)) base:hover(var(--h2-color-darker-accent))"></div>
+            <div
+              data-h2-height="base(x3)"
+              data-h2-background-color="base(var(--h2-color-light-primary)) base:hover(var(--h2-color-dark-accent))"></div>
+            <div
+              data-h2-height="base(x3)"
+              data-h2-background-color="base(var(--h2-color-primary)) base:hover(var(--h2-color-accent))"></div>
+            <div
+              data-h2-height="base(x3)"
+              data-h2-background-color="base(var(--h2-color-dark-primary)) base:hover(var(--h2-color-light-accent))"></div>
+            <div
+              data-h2-height="base(x3)"
+              data-h2-background-color="base(var(--h2-color-darker-primary)) base:hover(var(--h2-color-lighter-accent))"></div>
+            <div
+              data-h2-height="base(x3)"
+              data-h2-background-color="base(var(--h2-color-darkest-primary)) base:hover(var(--h2-color-lightest-accent))"></div>
+            <div data-h2-grid-column="base(1 / 8)">
+              <h4>Gradients</h4>
+            </div>
+            <div
+              data-h2-grid-column="base(1 / 8)"
+              data-h2-height="base(x3)"
+              data-h2-width="base(100%)"
+              style="background-image: var(--h2-gradient-myLinearGradient)"></div>
+            <div
+              data-h2-grid-column="base(1 / 8)"
+              data-h2-height="base(x3)"
+              data-h2-width="base(100%)"
+              style="background-image: var(--h2-gradient-myRadialGradient)"></div>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- Align content -->
     <div data-h2-align-content="base(flex-start) l-tablet:hover(flex-end)"></div>
@@ -355,179 +489,6 @@
     <div data-h2-align-items="base(flex-start) l-tablet:hover(flex-end)"></div>
     <!-- Align self -->
     <div data-h2-align-self="base(flex-start) l-tablet:hover(flex-end)"></div>
-    <!-- Background color -->
-    <div
-      data-h2-bg-color="base(primary) base:dark(yellow)"
-      data-h2-height="base(x3)"
-      data-h2-width="base(x3)"
-      data-h2-display="base(inline-block)"
-    ></div>
-    <div
-      data-h2-bg-color="l-tablet(dark.primary)"
-      data-h2-height="base(x3)"
-      data-h2-width="base(x3)"
-      data-h2-display="base(inline-block)"
-    ></div>
-    <div
-      data-h2-bg-color="base(primary.5)"
-      data-h2-height="base(x3)"
-      data-h2-width="base(x3)"
-      data-h2-display="base(inline-block)"
-    ></div>
-    <div
-      data-h2-bg-color="base(darkest.primary.9)"
-      data-h2-height="base(x3)"
-      data-h2-width="base(x3)"
-      data-h2-display="base(inline-block)"
-    ></div>
-    <div
-      data-h2-bg-color="desktop(myLinearGradient)"
-      data-h2-height="base(x3)"
-      data-h2-width="base(x3)"
-      data-h2-display="base(inline-block)"
-    ></div>
-    <div
-      data-h2-bg-color="base(myRadialGradient)"
-      data-h2-height="base(x3)"
-      data-h2-width="base(x3)"
-      data-h2-display="base(inline-block)"
-    ></div>
-    <div
-      data-h2-bg-color="base(rgba(45, 35, 200, 1))"
-      data-h2-height="base(x3)"
-      data-h2-width="base(x3)"
-      data-h2-display="base(inline-block)"
-    ></div>
-    <br />
-    <!-- Color scaling -->
-    <div
-      data-h2-bg-color="base(lightest.primary)"
-      data-h2-height="base(x3)"
-      data-h2-width="base(x3)"
-      data-h2-display="base(inline-block)"
-    ></div>
-    <div
-      data-h2-bg-color="base(lighter.primary)"
-      data-h2-height="base(x3)"
-      data-h2-width="base(x3)"
-      data-h2-display="base(inline-block)"
-    ></div>
-    <div
-      data-h2-bg-color="base(light.primary)"
-      data-h2-height="base(x3)"
-      data-h2-width="base(x3)"
-      data-h2-display="base(inline-block)"
-    ></div>
-    <div
-      data-h2-bg-color="base(primary)"
-      data-h2-height="base(x3)"
-      data-h2-width="base(x3)"
-      data-h2-display="base(inline-block)"
-    ></div>
-    <div
-      data-h2-bg-color="base(dark.primary) base:hover(#6721d1)"
-      data-h2-height="base(x3)"
-      data-h2-width="base(x3)"
-      data-h2-display="base(inline-block)"
-    ></div>
-    <div
-      data-h2-bg-color="base(darker.primary)"
-      data-h2-height="base(x3)"
-      data-h2-width="base(x3)"
-      data-h2-display="base(inline-block)"
-    ></div>
-    <div
-      data-h2-bg-color="base(darkest.primary.7) l-tablet(darkest.primary)"
-      data-h2-height="base(x3)"
-      data-h2-width="base(x3)"
-      data-h2-display="base(inline-block)"
-    ></div>
-    <br />
-    <div
-      data-h2-bg-color="base(lightest.secondary)"
-      data-h2-height="base(x3)"
-      data-h2-width="base(x3)"
-      data-h2-display="base(inline-block)"
-    ></div>
-    <div
-      data-h2-bg-color="base(lighter.secondary)"
-      data-h2-height="base(x3)"
-      data-h2-width="base(x3)"
-      data-h2-display="base(inline-block)"
-    ></div>
-    <div
-      data-h2-bg-color="base(light.secondary)"
-      data-h2-height="base(x3)"
-      data-h2-width="base(x3)"
-      data-h2-display="base(inline-block)"
-    ></div>
-    <div
-      data-h2-bg-color="base(secondary)"
-      data-h2-height="base(x3)"
-      data-h2-width="base(x3)"
-      data-h2-display="base(inline-block)"
-    ></div>
-    <div
-      data-h2-bg-color="base(dark.secondary)"
-      data-h2-height="base(x3)"
-      data-h2-width="base(x3)"
-      data-h2-display="base(inline-block)"
-    ></div>
-    <div
-      data-h2-bg-color="base(darker.secondary)"
-      data-h2-height="base(x3)"
-      data-h2-width="base(x3)"
-      data-h2-display="base(inline-block)"
-    ></div>
-    <div
-      data-h2-bg-color="base(darkest.secondary)"
-      data-h2-height="base(x3)"
-      data-h2-width="base(x3)"
-      data-h2-display="base(inline-block)"
-    ></div>
-    <br />
-    <div
-      data-h2-bg-color="base(lightest.accent)"
-      data-h2-height="base(x3)"
-      data-h2-width="base(x3)"
-      data-h2-display="base(inline-block)"
-    ></div>
-    <div
-      data-h2-bg-color="base(accent.lighter)"
-      data-h2-height="base(x3)"
-      data-h2-width="base(x3)"
-      data-h2-display="base(inline-block)"
-    ></div>
-    <div
-      data-h2-bg-color="base(light.accent)"
-      data-h2-height="base(x3)"
-      data-h2-width="base(x3)"
-      data-h2-display="base(inline-block)"
-    ></div>
-    <div
-      data-h2-bg-color="base(accent)"
-      data-h2-height="base(x3)"
-      data-h2-width="base(x3)"
-      data-h2-display="base(inline-block)"
-    ></div>
-    <div
-      data-h2-bg-color="base(dark.accent)"
-      data-h2-height="base(x3)"
-      data-h2-width="base(x3)"
-      data-h2-display="base(inline-block)"
-    ></div>
-    <div
-      data-h2-bg-color="base(darker.accent)"
-      data-h2-height="base(x3)"
-      data-h2-width="base(x3)"
-      data-h2-display="base(inline-block)"
-    ></div>
-    <div
-      data-h2-bg-color="base(darkest.accent)"
-      data-h2-height="base(x3)"
-      data-h2-width="base(x3)"
-      data-h2-display="base(inline-block)"
-    ></div>
     <!-- Borders -->
     <div
       data-h2-display="base(grid)"
