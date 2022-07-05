@@ -75,6 +75,52 @@
       }
     }
   ],
+  "media": [
+    {
+      "key": "base",
+      "query": null
+    },
+    {
+      "key": "print",
+      "query": "print"
+    },
+    {
+      "key": "p-tablet",
+      "query": "screen and (min-width: 48em)"
+    },
+    {
+      "key": "l-tablet",
+      "query": "screen and (min-width: 73em)"
+    },
+    {
+      "key": "laptop",
+      "query": "screen and (min-width: 80em)"
+    },
+    {
+      "key": "desktop",
+      "query": "screen and (min-width: 100em)"
+    }
+  ],
+  "typography": [
+    {
+      "query_key": "base",
+      "size": "100%",
+      "line_height": "1.4",
+      "type_scale": "1.2"
+    },
+    {
+      "query_key": "l-tablet",
+      "size": "112.5%",
+      "line_height": "2",
+      "type_scale": "1.3"
+    },
+    {
+      "query_key": "desktop",
+      "size": "125%",
+      "line_height": "1.1",
+      "type_scale": "1.235"
+    }
+  ],
   "containers": [
     {
       "key": "small",
@@ -117,32 +163,6 @@
       "key": "myRadialGradient",
       "gradient": "radial-gradient(circle at center, blue, purple, rgba(255, 255, 255, 1))",
       "fallback": "green"
-    }
-  ],
-  "media": [
-    {
-      "key": "base",
-      "query": null
-    },
-    {
-      "key": "print",
-      "query": "print"
-    },
-    {
-      "key": "p-tablet",
-      "query": "screen and (min-width: 48em)"
-    },
-    {
-      "key": "l-tablet",
-      "query": "screen and (min-width: 73em)"
-    },
-    {
-      "key": "laptop",
-      "query": "screen and (min-width: 80em)"
-    },
-    {
-      "key": "desktop",
-      "query": "screen and (min-width: 100em)"
     }
   ],
   "radius": [
@@ -192,25 +212,5 @@
         "delay": "0s"
       }
     ]
-  },
-  "typography": [
-    {
-      "size": "100%",
-      "line_height": "1.4",
-      "query_key": "base",
-      "type_scale": "1.2"
-    },
-    {
-      "size": "112.5%",
-      "line_height": "2",
-      "query_key": "l-tablet",
-      "type_scale": "1.3"
-    },
-    {
-      "size": "125%",
-      "line_height": "1.1",
-      "query_key": "desktop",
-      "type_scale": "1.235"
-    }
-  ]
+  }
 }
