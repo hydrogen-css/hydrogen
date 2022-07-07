@@ -17,62 +17,41 @@
     {
       "key": "primary",
       "color": "#9D5CFF",
-      "scale": {
-        "light": "auto",
-        "lighter": "auto",
-        "lightest": "auto",
-        "dark": "auto",
-        "darker": "auto",
-        "darkest": "auto"
-      }
+      "modifiers": [
+        {
+          "key": "other",
+          "color": "yellow"
+        },
+        {
+          "key": "customModifier",
+          "color": "pink"
+        }
+      ]
     },
     {
       "key": "secondary",
       "color": "#5CFFEE",
-      "scale": {
-        "light": "auto",
-        "lighter": "auto",
-        "lightest": "auto",
-        "dark": "auto",
-        "darker": "auto",
-        "darkest": "auto"
-      }
+      "modifiers": [
+        {
+          "key": "lighter",
+          "color": "green"
+        }
+      ]
     },
     {
       "key": "accent",
       "color": "#FF5C6D",
-      "scale": {
-        "light": "auto",
-        "lighter": "auto",
-        "lightest": "auto",
-        "dark": "auto",
-        "darker": "auto",
-        "darkest": "auto"
-      }
+      "modifiers": []
     },
     {
       "key": "black",
       "color": "rgba(20, 20, 30, 1)",
-      "scale": {
-        "light": "auto",
-        "lighter": "auto",
-        "lightest": "auto",
-        "dark": "auto",
-        "darker": "auto",
-        "darkest": "auto"
-      }
+      "modifiers": []
     },
     {
       "key": "white",
       "color": "rgba(255, 255, 255, 1)",
-      "scale": {
-        "light": "auto",
-        "lighter": "auto",
-        "lightest": "auto",
-        "dark": "auto",
-        "darker": "auto",
-        "darkest": "auto"
-      }
+      "modifiers": []
     }
   ],
   "media": [

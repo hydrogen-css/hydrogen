@@ -4,7 +4,19 @@
   "author": "Josh Beveridge",
   "beta": false,
   "en": {
-    "breaking": [],
+    "breaking": [
+      {
+        "changes": [
+          "Reworks the color scale configuration into a custom modifier setting.",
+          "The modifier configuration no longer has to be set - tints and shades will automatically generate for you regardless, unless you choose to overwrite them using their key.",
+          "This also means you can create custom modifiers, as long as their key isn't set to the name of the color"
+        ],
+        "migrations": [],
+        "attributes": [
+          "color"
+        ]
+      }
+    ],
     "features": [
       {
         "changes": [
