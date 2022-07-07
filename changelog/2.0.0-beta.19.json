@@ -1,0 +1,28 @@
+{
+  "version": "2.0.0-beta.19",
+  "date": "2022/JUL/07",
+  "author": "Josh Beveridge",
+  "beta": false,
+  "en": {
+    "breaking": [],
+    "features": [
+      {
+        "changes": [
+          "Adds a third syntax for borders that allows a single 'none' value to be used to remove borders entirely."
+        ],
+        "migrations": [],
+        "attributes": [
+          "border"
+        ]
+      }
+    ],
+    "optimizations": [],
+    "bugfixes": []
+  },
+  "fr": {
+    "breaking": [],
+    "features": [],
+    "optimizations": [],
+    "bugfixes": []
+  }
+}

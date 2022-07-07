@@ -482,6 +482,54 @@
           </div>
         </div>
       </div>
+      <!-- Borders -->
+      <h2 data-h2-margin="base(x3, 0, 0, 0)">Border tests</h2>
+      <h3 data-h2-margin="base(x2, 0, 0, 0)">1 value</h3>
+      <div
+        data-h2-display="base(grid)"
+        data-h2-grid-template-columns="base(1fr 1fr)"
+        data-h2-gap="base(x2, all)">
+        <button data-h2-border="base(none)">
+          My button
+        </button>
+        <div
+          data-h2-padding="base(x1)"
+          data-h2-background-color="base(primary)"
+          data-h2-border="base(all, 3px, solid, black) l-tablet(none)">
+        </div>
+      </div>
+      <h3 data-h2-margin="base(x2, 0, 0, 0)">2 values</h3>
+      <div
+        data-h2-display="base(grid)"
+        data-h2-grid-template-columns="base(1fr 1fr)"
+        data-h2-gap="base(x2, all)">
+        <div
+          data-h2-padding="base(x1)"
+          data-h2-background-color="base(primary)"
+          data-h2-border="base(all, 5px solid rgba(255, 0, 0, 1))">
+        </div>
+        <div
+          data-h2-padding="base(x1)"
+          data-h2-background-color="base(primary)"
+          data-h2-border="base(left, 1rem dashed blue)">
+        </div>
+      </div>
+      <h3 data-h2-margin="base(x2, 0, 0, 0)">4 values</h3>
+      <div
+        data-h2-display="base(grid)"
+        data-h2-grid-template-columns="base(1fr 1fr)"
+        data-h2-gap="base(x2, all)">
+        <div
+          data-h2-padding="base(x1)"
+          data-h2-background-color="base(primary)"
+          data-h2-border="base(all, 3px, solid, black)">
+        </div>
+        <div
+          data-h2-padding="base(x1)"
+          data-h2-background-color="base(primary)"
+          data-h2-border="base(all, x1, solid, accent)">
+        </div>
+      </div>
     </section>
     <!-- Align content -->
     <div data-h2-align-content="base(flex-start) l-tablet:hover(flex-end)"></div>

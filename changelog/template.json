@@ -1,0 +1,26 @@
+{
+  "version": "X.X.X",
+  "date": "YYYY/MMM/DD",
+  "author": "My full name",
+  "beta": false,
+  "en": {
+    "breaking": [
+      {
+        "changes": [
+          "My change text."
+        ],
+        "migrations": [],
+        "attributes": []
+      }
+    ],
+    "features": [],
+    "optimizations": [],
+    "bugfixes": []
+  },
+  "fr": {
+    "breaking": [],
+    "features": [],
+    "optimizations": [],
+    "bugfixes": []
+  }
+}
