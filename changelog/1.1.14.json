@@ -2,17 +2,26 @@
   "version": "1.1.14",
   "date": "2021/NOV/29",
   "author": "Josh Beveridge",
-  "breaking": null,
-  "features": null,
-  "optimizations": null,
-  "bugfixes": [
-    {
-      "changes": [
-        "Fixes a bug where Hydrogen wouldn't compile if the flex grid was disabled because it was still trying to process the order utility."
-      ],
-      "attributes": [
-        "order"
-      ]
-    }
-  ]
+  "beta": false,
+  "en": {
+    "breaking": null,
+    "features": null,
+    "optimizations": null,
+    "bugfixes": [
+      {
+        "changes": [
+          "Fixes a bug where Hydrogen wouldn't compile if the flex grid was disabled because it was still trying to process the order utility."
+        ],
+        "attributes": [
+          "order"
+        ]
+      }
+    ]
+  },
+  "fr": {
+    "breaking": [],
+    "features": [],
+    "optimizations": [],
+    "bugfixes": []
+  }
 }

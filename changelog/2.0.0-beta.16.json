@@ -3,15 +3,23 @@
   "date": "2022/JUN/27",
   "author": "Josh Beveridge",
   "beta": true,
-  "breaking": [],
-  "features": [],
-  "optimizations": [],
-  "bugfixes": [
-    {
-      "changes": [
-        "Fixes a bug introduced in beta.16 where the variable file was calculating rem values for the whitespace unit by default, causing calc functions to break."
-      ],
-      "attributes": null
-    }
-  ]
+  "en": {
+    "breaking": [],
+    "features": [],
+    "optimizations": [],
+    "bugfixes": [
+      {
+        "changes": [
+          "Fixes a bug introduced in beta.16 where the variable file was calculating rem values for the whitespace unit by default, causing calc functions to break."
+        ],
+        "attributes": null
+      }
+    ]
+  },
+  "fr": {
+    "breaking": [],
+    "features": [],
+    "optimizations": [],
+    "bugfixes": []
+  }
 }

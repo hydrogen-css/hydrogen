@@ -3,82 +3,90 @@
   "date": "2022/JUN/27",
   "author": "Josh Beveridge",
   "beta": true,
-  "breaking": [
-    {
-      "changes": [
-        "Reworks media queries and requires that they do not contain repeating values at the end of their key.",
-        "This is the result of a complex bug that occurs due to the wildcard selector used with the data-attributes. The wildcard causes queries like xl(green) to trigger matching queries such as l(green).",
-        "There were two options discussed to solve this problem: moving away from the wildcard selector in favor of the more concrete ~ selector, or adding more robust validation to media queries to avoid repetition.",
-        "While moving to the ~ selector was preferred, it required that whitespace be stripped out of attribute values entirely; something that isn't possible due to whitespace requirements by certain CSS values."
-      ],
-      "attributes": null
-    },
-    {
-      "changes": [
-        "Removes support for the Sass variable export given that Sass supports CSS variables, making the output more uniform and consistent."
-      ],
-      "attributes": null
-    }
-  ],
-  "features": [
-    {
-      "changes": [
-        "Adds support for a third container value that will apply padding to the left or right."
-      ],
-      "attributes": [
-        "container"
-      ]
-    }
-  ],
-  "optimizations": [
-    {
-      "changes": [
-        "Updates the default values for media and typography to reflect the new syntax and validation."
-      ],
-      "attributes": null
-    },
-    {
-      "changes": [
-        "Updates the whitespace parser to swap 0 to 0px for consistency across all attributes in the same way it swaps out 'none'."
-      ],
-      "attributes": [
-        "border",
-        "container",
-        "flex-grid",
-        "gap",
-        "grid-template-columns",
-        "grid-template-rows",
-        "height",
-        "margin",
-        "max-height",
-        "max-width",
-        "min-height",
-        "min-width",
-        "padding",
-        "offset",
-        "radius",
-        "width"
-      ]
-    }
-  ],
-  "bugfixes": [
-    {
-      "changes": [
-        "Fixes a whitespace variable bug caused by the variable scripts not being updated to work with the new typography configuration."
-      ],
-      "attributes": null
-    },
-    {
-      "changes": [
-        "Adds validation to prevent bad query values from causing an error."
-      ],
-      "attributes": null
-    },
-    {
-      "changes": [
-        "Adds validation to prevent empty query matches from making it into the parser."
-      ],
-      "attributes": null
-    }
-  ]
+  "en": {
+    "breaking": [
+      {
+        "changes": [
+          "Reworks media queries and requires that they do not contain repeating values at the end of their key.",
+          "This is the result of a complex bug that occurs due to the wildcard selector used with the data-attributes. The wildcard causes queries like xl(green) to trigger matching queries such as l(green).",
+          "There were two options discussed to solve this problem: moving away from the wildcard selector in favor of the more concrete ~ selector, or adding more robust validation to media queries to avoid repetition.",
+          "While moving to the ~ selector was preferred, it required that whitespace be stripped out of attribute values entirely; something that isn't possible due to whitespace requirements by certain CSS values."
+        ],
+        "attributes": null
+      },
+      {
+        "changes": [
+          "Removes support for the Sass variable export given that Sass supports CSS variables, making the output more uniform and consistent."
+        ],
+        "attributes": null
+      }
+    ],
+    "features": [
+      {
+        "changes": [
+          "Adds support for a third container value that will apply padding to the left or right."
+        ],
+        "attributes": [
+          "container"
+        ]
+      }
+    ],
+    "optimizations": [
+      {
+        "changes": [
+          "Updates the default values for media and typography to reflect the new syntax and validation."
+        ],
+        "attributes": null
+      },
+      {
+        "changes": [
+          "Updates the whitespace parser to swap 0 to 0px for consistency across all attributes in the same way it swaps out 'none'."
+        ],
+        "attributes": [
+          "border",
+          "container",
+          "flex-grid",
+          "gap",
+          "grid-template-columns",
+          "grid-template-rows",
+          "height",
+          "margin",
+          "max-height",
+          "max-width",
+          "min-height",
+          "min-width",
+          "padding",
+          "offset",
+          "radius",
+          "width"
+        ]
+      }
+    ],
+    "bugfixes": [
+      {
+        "changes": [
+          "Fixes a whitespace variable bug caused by the variable scripts not being updated to work with the new typography configuration."
+        ],
+        "attributes": null
+      },
+      {
+        "changes": [
+          "Adds validation to prevent bad query values from causing an error."
+        ],
+        "attributes": null
+      },
+      {
+        "changes": [
+          "Adds validation to prevent empty query matches from making it into the parser."
+        ],
+        "attributes": null
+      }
+    ]
+  },
+  "fr": {
+    "breaking": [],
+    "features": [],
+    "optimizations": [],
+    "bugfixes": []
+  }
 }

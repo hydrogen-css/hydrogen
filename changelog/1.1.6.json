@@ -2,22 +2,31 @@
   "version": "1.1.6",
   "date": "2021/SEP/08",
   "author": "Josh Beveridge",
-  "breaking": null,
-  "features": null,
-  "optimizations": [
-    {
-      "changes": [
-        "Updates and fixes NPM warnings where possible, including to gulp-sass v5.0.0."
-      ],
-      "attributes": null
-    }
-  ],
-  "bugfixes": [
-    {
-      "changes": [
-        "An improperly set environment variable had broken the init script."
-      ],
-      "attributes": null
-    }
-  ]
+  "beta": false,
+  "en": {
+    "breaking": null,
+    "features": null,
+    "optimizations": [
+      {
+        "changes": [
+          "Updates and fixes NPM warnings where possible, including to gulp-sass v5.0.0."
+        ],
+        "attributes": null
+      }
+    ],
+    "bugfixes": [
+      {
+        "changes": [
+          "An improperly set environment variable had broken the init script."
+        ],
+        "attributes": null
+      }
+    ]
+  },
+  "fr": {
+    "breaking": [],
+    "features": [],
+    "optimizations": [],
+    "bugfixes": []
+  }
 }

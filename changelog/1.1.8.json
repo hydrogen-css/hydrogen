@@ -2,100 +2,109 @@
   "version": "1.1.8",
   "date": "2021/SEP/27",
   "author": "Josh Beveridge",
-  "breaking": null,
-  "features": [
-    {
-      "changes": [
-        "Adds a new configuration option for exporting your settings as Sass variables where possible; this means you can now import things like your whitespace scale into Sass files outside of Hydrogen."
-      ],
-      "attributes": null
-    },
-    {
-      "changes": [
-        "Adds a default configuration in the color settings for transparent."
-      ],
-      "attributes": null
-    },
-    {
-      "changes": [
-        "Adds the ability to use negative whitespace values in the margin attribute."
-      ],
-      "attributes": [
-        "margin"
-      ]
-    },
-    {
-      "changes": [
-        "Adds the opacity attribute so that you can now control an element's opacity."
-      ],
-      "attributes": [
-        "opacity"
-      ]
-    },
-    {
-      "changes": [
-        "Adds support for the order attribute when flex grids are enabled, allowing you to control the order of your grid items."
-      ],
-      "attributes": [
-        "order"
-      ]
-    },
-    {
-      "changes": [
-        "Adds support for the overlay attribute, allowing you to add an overlay to an element."
-      ],
-      "attributes": [
-        "overlay"
-      ]
-    },
-    {
-      "changes": [
-        "Adds support for the layer attribute, allowing you to create layers and apply them to elements, along with positioning."
-      ],
-      "attributes": [
-        "layer"
-      ]
-    }
-  ],
-  "optimizations": [
-    {
-      "changes": [
-        "Removes some legacy code and cleans up some dependencies in the script files."
-      ],
-      "attributes": null
-    },
-    {
-      "changes": [
-        "Adds Prettier support."
-      ],
-      "attributes": null
-    },
-    {
-      "changes": [
-        "Updates the default set of variables to be more thoughtful and use standardized nomenclature."
-      ],
-      "attributes": null
-    },
-    {
-      "changes": [
-        "Renames the default theme colors to use agnostic language (e.g. purple => primary)."
-      ],
-      "attributes": null
-    },
-    {
-      "changes": [
-        "Overhauls color variants so that they can be overidden with custom values or disabled entirely."
-      ],
-      "attributes": null
-    },
-    {
-      "changes": [
-        "Renames the default radius keys to be more descriptive."
-      ],
-      "attributes": [
-        "radius"
-      ]
-    }
-  ],
-  "bugfixes": null
+  "beta": false,
+  "en": {
+    "breaking": null,
+    "features": [
+      {
+        "changes": [
+          "Adds a new configuration option for exporting your settings as Sass variables where possible; this means you can now import things like your whitespace scale into Sass files outside of Hydrogen."
+        ],
+        "attributes": null
+      },
+      {
+        "changes": [
+          "Adds a default configuration in the color settings for transparent."
+        ],
+        "attributes": null
+      },
+      {
+        "changes": [
+          "Adds the ability to use negative whitespace values in the margin attribute."
+        ],
+        "attributes": [
+          "margin"
+        ]
+      },
+      {
+        "changes": [
+          "Adds the opacity attribute so that you can now control an element's opacity."
+        ],
+        "attributes": [
+          "opacity"
+        ]
+      },
+      {
+        "changes": [
+          "Adds support for the order attribute when flex grids are enabled, allowing you to control the order of your grid items."
+        ],
+        "attributes": [
+          "order"
+        ]
+      },
+      {
+        "changes": [
+          "Adds support for the overlay attribute, allowing you to add an overlay to an element."
+        ],
+        "attributes": [
+          "overlay"
+        ]
+      },
+      {
+        "changes": [
+          "Adds support for the layer attribute, allowing you to create layers and apply them to elements, along with positioning."
+        ],
+        "attributes": [
+          "layer"
+        ]
+      }
+    ],
+    "optimizations": [
+      {
+        "changes": [
+          "Removes some legacy code and cleans up some dependencies in the script files."
+        ],
+        "attributes": null
+      },
+      {
+        "changes": [
+          "Adds Prettier support."
+        ],
+        "attributes": null
+      },
+      {
+        "changes": [
+          "Updates the default set of variables to be more thoughtful and use standardized nomenclature."
+        ],
+        "attributes": null
+      },
+      {
+        "changes": [
+          "Renames the default theme colors to use agnostic language (e.g. purple => primary)."
+        ],
+        "attributes": null
+      },
+      {
+        "changes": [
+          "Overhauls color variants so that they can be overidden with custom values or disabled entirely."
+        ],
+        "attributes": null
+      },
+      {
+        "changes": [
+          "Renames the default radius keys to be more descriptive."
+        ],
+        "attributes": [
+          "radius"
+        ]
+      }
+    ],
+    "bugfixes": null
+  },
+  "fr": {
+    "breaking": [],
+    "features": [],
+    "optimizations": [],
+    "bugfixes": []
+  }
 }

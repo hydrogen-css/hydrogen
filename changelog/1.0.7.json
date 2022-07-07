@@ -2,15 +2,24 @@
   "version": "1.0.7",
   "date": "2021/JUN/23",
   "author": "Josh Beveridge",
-  "breaking": null,
-  "features": null,
-  "optimizations": [
-    {
-      "changes": [
-        "Updates dependencies to fix security warnings; certain dependencies are blocked and waiting on patches."
-      ],
-      "attributes": null
-    }
-  ],
-  "bugfixes": null
+  "beta": false,
+  "en": {
+    "breaking": null,
+    "features": null,
+    "optimizations": [
+      {
+        "changes": [
+          "Updates dependencies to fix security warnings; certain dependencies are blocked and waiting on patches."
+        ],
+        "attributes": null
+      }
+    ],
+    "bugfixes": null
+  },
+  "fr": {
+    "breaking": [],
+    "features": [],
+    "optimizations": [],
+    "bugfixes": []
+  }
 }

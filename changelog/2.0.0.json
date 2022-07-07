@@ -3,8 +3,16 @@
   "date": "2022/JUN/27",
   "author": "Josh Beveridge",
   "beta": false,
-  "breaking": [],
-  "features": [],
-  "optimizations": [],
-  "bugfixes": []
+  "en": {
+    "breaking": [],
+    "features": [],
+    "optimizations": [],
+    "bugfixes": []
+  },
+  "fr": {
+    "breaking": [],
+    "features": [],
+    "optimizations": [],
+    "bugfixes": []
+  }
 }

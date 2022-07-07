@@ -3,29 +3,37 @@
   "date": "2022/JUN/17",
   "author": "Josh Beveridge",
   "beta": true,
-  "breaking": null,
-  "features": [],
-  "optimizations": [
-    {
-      "changes": [
-        "The process script has been reworked so that Autoprefixer is now run through CSSnano, and CSSnano's preset has been set to lite for improved speed.",
-        "This is also meant to prevent Hydrogen from being overly prescriptive about how its file is minimized, so by using lite, the changes are restricted to autoprefixing, removing empty selectors/queries, removing comments, and whitespace normalization."
-      ],
-      "attributes": null
-    }
-  ],
-  "bugfixes": [
-    {
-      "changes": [
-        "All query values are now checked for extra opening and closing parentheses to prevent unexpected PostCSS syntax errors."
-      ],
-      "attributes": null
-    },
-    {
-      "changes": [
-        "CSS colors are now parsed for dot characters to prevent unexpected PostCSS syntax errors."
-      ],
-      "attributes": null
-    }
-  ]
+  "en": {
+    "breaking": null,
+    "features": [],
+    "optimizations": [
+      {
+        "changes": [
+          "The process script has been reworked so that Autoprefixer is now run through CSSnano, and CSSnano's preset has been set to lite for improved speed.",
+          "This is also meant to prevent Hydrogen from being overly prescriptive about how its file is minimized, so by using lite, the changes are restricted to autoprefixing, removing empty selectors/queries, removing comments, and whitespace normalization."
+        ],
+        "attributes": null
+      }
+    ],
+    "bugfixes": [
+      {
+        "changes": [
+          "All query values are now checked for extra opening and closing parentheses to prevent unexpected PostCSS syntax errors."
+        ],
+        "attributes": null
+      },
+      {
+        "changes": [
+          "CSS colors are now parsed for dot characters to prevent unexpected PostCSS syntax errors."
+        ],
+        "attributes": null
+      }
+    ]
+  },
+  "fr": {
+    "breaking": [],
+    "features": [],
+    "optimizations": [],
+    "bugfixes": []
+  }
 }

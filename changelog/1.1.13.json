@@ -2,35 +2,44 @@
   "version": "1.1.13",
   "date": "2021/NOV/22",
   "author": "Josh Beveridge",
-  "breaking": null,
-  "features": null,
-  "optimizations": null,
-  "bugfixes": [
-    {
-      "changes": [
-        "Fixes a bug where the new utility generation script was appending defaults to the end of the configuration array, resulting in them being prioritized last."
-      ],
-      "attributes": null
-    },
-    {
-      "changes": [
-        "Sets transition all for these properties rather than dedicated values because when used in concert, the last one would always take precendence."
-      ],
-      "attributes": [
-        "bg-color",
-        "border",
-        "font-color",
-        "opacity",
-        "overlay",
-        "shadow",
-        "width"
-      ]
-    },
-    {
-      "changes": [
-        "Fixes a bug that broke the production build script if the flex grid was disabled."
-      ],
-      "attributes": null
-    }
-  ]
+  "beta": false,
+  "en": {
+    "breaking": null,
+    "features": null,
+    "optimizations": null,
+    "bugfixes": [
+      {
+        "changes": [
+          "Fixes a bug where the new utility generation script was appending defaults to the end of the configuration array, resulting in them being prioritized last."
+        ],
+        "attributes": null
+      },
+      {
+        "changes": [
+          "Sets transition all for these properties rather than dedicated values because when used in concert, the last one would always take precendence."
+        ],
+        "attributes": [
+          "bg-color",
+          "border",
+          "font-color",
+          "opacity",
+          "overlay",
+          "shadow",
+          "width"
+        ]
+      },
+      {
+        "changes": [
+          "Fixes a bug that broke the production build script if the flex grid was disabled."
+        ],
+        "attributes": null
+      }
+    ]
+  },
+  "fr": {
+    "breaking": [],
+    "features": [],
+    "optimizations": [],
+    "bugfixes": []
+  }
 }

@@ -3,16 +3,24 @@
   "date": "2022/JUN/15",
   "author": "Josh Beveridge",
   "beta": true,
-  "breaking": null,
-  "features": [],
-  "optimizations": [],
-  "bugfixes": [
-    {
-      "changes": [
-        "Introduces a temporary while loop to check for the existence of the raw CSS file before running PostCSS.",
-        "Forces the read of the raw CSS output to be synchronous to avoid it trying to process PostCSS on an empty file."
-      ],
-      "attributes": null
-    }
-  ]
+  "en": {
+    "breaking": null,
+    "features": [],
+    "optimizations": [],
+    "bugfixes": [
+      {
+        "changes": [
+          "Introduces a temporary while loop to check for the existence of the raw CSS file before running PostCSS.",
+          "Forces the read of the raw CSS output to be synchronous to avoid it trying to process PostCSS on an empty file."
+        ],
+        "attributes": null
+      }
+    ]
+  },
+  "fr": {
+    "breaking": [],
+    "features": [],
+    "optimizations": [],
+    "bugfixes": []
+  }
 }
