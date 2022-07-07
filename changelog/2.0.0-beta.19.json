@@ -14,6 +14,15 @@
         "attributes": [
           "border"
         ]
+      },
+      {
+        "changes": [
+          "Adds a new key option for position called 'center' that applies not only a CSS position, but a top, left, and transform value to mathematically center an object inside of a relative element."
+        ],
+        "migrations": [],
+        "attributes": [
+          "position"
+        ]
       }
     ],
     "optimizations": [],

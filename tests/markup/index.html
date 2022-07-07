@@ -530,6 +530,59 @@
           data-h2-border="base(all, x1, solid, accent)">
         </div>
       </div>
+      <!-- Position -->
+      <h2 data-h2-margin="base(x3, 0, 0, 0)">Position tests</h2>
+      <div
+        data-h2-display="base(grid)"
+        data-h2-grid-template-columns="base(1fr 1fr)"
+        data-h2-gap="base(x2, all)">
+        <div>
+          <h3 data-h2-margin="base(x2, 0, 0, 0)">Center key value</h3>
+          <div
+            data-h2-background-color="base(black.4)"
+            data-h2-height="base(x10)"
+            data-h2-width="base(100%)"
+            data-h2-position="base(relative)">
+            <div
+              data-h2-height="base(x1)"
+              data-h2-width="base(x1)"
+              data-h2-background-color="base(secondary)"
+              data-h2-position="base(center)">
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3 data-h2-margin="base(x2, 0, 0, 0)">CSS values</h3>
+          <div
+            data-h2-background-color="base(black.4)"
+            data-h2-height="base(x10)"
+            data-h2-width="base(100%)"
+            data-h2-position="base(relative)"
+            data-h2-padding="base(x2)"
+            data-h2-margin="base(0, 0, x1, 0)">
+            <div
+              data-h2-height="base(x1)"
+              data-h2-width="base(x1)"
+              data-h2-background-color="base(secondary)"
+              data-h2-position="base(relative)">
+            </div>
+          </div>
+          <div
+            data-h2-background-color="base(black.4)"
+            data-h2-height="base(x10)"
+            data-h2-width="base(100%)"
+            data-h2-position="base(relative)"
+            data-h2-padding="base(x2)">
+            <div
+              data-h2-height="base(x1)"
+              data-h2-width="base(x1)"
+              data-h2-background-color="base(secondary)"
+              data-h2-position="base(absolute)"
+              data-h2-offset="base(0, 0, auto, auto)">
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- Align content -->
     <div data-h2-align-content="base(flex-start) l-tablet:hover(flex-end)"></div>
