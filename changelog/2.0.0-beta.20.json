@@ -1,0 +1,52 @@
+{
+  "version": "2.0.0-beta.20",
+  "date": "2022/JUL/10",
+  "author": "Josh Beveridge",
+  "beta": false,
+  "en": {
+    "breaking": [],
+    "features": [
+      {
+        "changes": [
+          "Hydrogen will now properly error with instructions if you try to run it in a directory that doesn't contain a configuration file."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Adds a warning if Hydrogen can't find at least 1 instance of the data-h2 attribute in your code."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      }
+    ],
+    "optimizations": [],
+    "bugfixes": []
+  },
+  "fr": {
+    "breaking": [],
+    "features": [
+      {
+        "changes": [
+          "Hydrogen affichera désormais correctement des instructions si vous essayez de l'exécuter dans un répertoire qui ne contient pas de fichier de configuration."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Ajoute un avertissement si Hydrogen ne trouve pas au moins une instance de l'attribut data-h2 dans votre code."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      }
+    ],
+    "optimizations": [],
+    "bugfixes": []
+  }
+}
