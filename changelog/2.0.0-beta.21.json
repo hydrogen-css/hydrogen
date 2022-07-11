@@ -1,0 +1,36 @@
+{
+  "version": "2.0.0-beta.21",
+  "date": "2022/JUL/11",
+  "author": "Josh Beveridge",
+  "beta": true,
+  "en": {
+    "breaking": [],
+    "features": [
+      {
+        "changes": [
+          "Adds state support for :focus-visible."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      }
+    ],
+    "optimizations": [
+      {
+        "changes": [
+          "Reorganizes the cascade order of states to better reflect expected control."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      }
+    ],
+    "bugfixes": []
+  },
+  "fr": {
+    "breaking": [],
+    "features": [],
+    "optimizations": [],
+    "bugfixes": []
+  }
+}

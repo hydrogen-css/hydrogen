@@ -9,7 +9,8 @@
         "changes": [
           "Reworks the color scale configuration into a custom modifier setting.",
           "The modifier configuration no longer has to be set - tints and shades will automatically generate for you regardless, unless you choose to overwrite them using their key.",
-          "This also means you can create custom modifiers, as long as their key isn't set to the name of the color"
+          "This also means you can create custom modifiers, as long as their key isn't set to the name of the color",
+          "This also breaks the current iteration of exported color variables, which have new name syntax."
         ],
         "migrations": [],
         "attributes": [

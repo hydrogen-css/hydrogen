@@ -10,7 +10,8 @@
           "My change text."
         ],
         "migrations": [],
-        "attributes": []
+        "attributes": [],
+        "log": []
       }
     ],
     "features": [],
