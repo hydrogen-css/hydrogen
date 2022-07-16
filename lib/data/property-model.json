@@ -1,0 +1,2376 @@
+[
+  {
+    "id": "align_content",
+    "property": "Align content",
+    "syntax": [
+      {
+        "attribute": "data-h2-align-content=\"query:mode:state(alignment)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "alignment",
+            "types": {
+              "key": false,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "css align-content value"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "align-content",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "align_items",
+    "property": "Align items",
+    "syntax": [
+      {
+        "attribute": "data-h2-align-items=\"query:mode:state(alignment)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "alignment",
+            "types": {
+              "key": false,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "css align-items value"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "align-items",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "align_self",
+    "property": "Align self",
+    "syntax": [
+      {
+        "attribute": "data-h2-align-self=\"query:mode:state(alignment)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "alignment",
+            "types": {
+              "key": false,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "css align-self value"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "align-self",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "background_color",
+    "property": "Background color",
+    "syntax": [
+      {
+        "attribute": "data-h2-background-color=\"query:mode:state(color | gradient)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "color | gradient",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "configured color key",
+              "configured gradient key",
+              "css color"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "background-color",
+        "instances": []
+      },
+      {
+        "key": "bg-color",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "border",
+    "property": "Border",
+    "syntax": [
+      {
+        "attribute": "data-h2-border=\"query:mode:state(none)\"",
+        "default": false,
+        "options": [
+          {
+            "key": "none",
+            "types": {
+              "key": true,
+              "css": false
+            },
+            "required": true,
+            "values": [
+              "none"
+            ]
+          }
+        ]
+      },
+      {
+        "attribute": "data-h2-border=\"query:mode:state(sides, css)\"",
+        "default": false,
+        "options": [
+          {
+            "key": "sides",
+            "types": {
+              "key": true,
+              "css": false
+            },
+            "required": true,
+            "values": [
+              "all",
+              "top-bottom",
+              "right-left",
+              "top",
+              "right",
+              "bottom",
+              "left"
+            ]
+          },
+          {
+            "key": "css",
+            "types": {
+              "key": false,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "css border shorthand value"
+            ]
+          }
+        ]
+      },
+      {
+        "attribute": "data-h2-border=\"query:mode:state(sides, width, style, color)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "sides",
+            "types": {
+              "key": true,
+              "css": false
+            },
+            "required": true,
+            "values": [
+              "all",
+              "top-bottom",
+              "right-left",
+              "top",
+              "right",
+              "bottom",
+              "left"
+            ]
+          },
+          {
+            "key": "width",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          },
+          {
+            "key": "style",
+            "types": {
+              "key": false,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "css border-style value"
+            ]
+          },
+          {
+            "key": "color",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "configured color key",
+              "css color"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "border",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "container",
+    "property": "Container",
+    "syntax": [
+      {
+        "attribute": "data-h2-container=\"query:mode:state(alignment, max_width, padding)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "alignment",
+            "types": {
+              "key": true,
+              "css": false
+            },
+            "required": true,
+            "values": [
+              "left",
+              "center",
+              "right"
+            ]
+          },
+          {
+            "key": "max_width",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "configured container key",
+              "css unit"
+            ]
+          },
+          {
+            "key": "padding",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": false,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "container",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "cursor",
+    "property": "Cursor",
+    "syntax": [
+      {
+        "attribute": "data-h2-cursor=\"query:mode:state(cursor)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "cursor",
+            "types": {
+              "key": false,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "css cursor value"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "cursor",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "display",
+    "property": "Display",
+    "syntax": [
+      {
+        "attribute": "data-h2-display=\"query:mode:state(display)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "display",
+            "types": {
+              "key": false,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "css display value"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "display",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "flex_basis",
+    "property": "Flex basis",
+    "syntax": [
+      {
+        "attribute": "data-h2-flex-basis=\"query:mode:state(basis_value)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "basis_value",
+            "types": {
+              "key": false,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "css flex-basis value"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "flex-basis",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "flex_direction",
+    "property": "Flex direction",
+    "syntax": [
+      {
+        "attribute": "data-h2-flex-direction=\"query:mode:state(direction)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "direction",
+            "types": {
+              "key": false,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "css flex-direction value"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "flex-direction",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "flex_grid",
+    "property": "Flex grid",
+    "syntax": [
+      {
+        "attribute": "data-h2-flex-grid=\"query:mode:state(alignment, padding, gutter)\"",
+        "default": false,
+        "options": [
+          {
+            "key": "alignment",
+            "types": {
+              "key": false,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "css align-items value"
+            ]
+          },
+          {
+            "key": "padding",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          },
+          {
+            "key": "gutter",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          }
+        ]
+      },
+      {
+        "attribute": "data-h2-flex-grid=\"query:mode:state(alignment, padding, column_gutter, row_gutter)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "alignment",
+            "types": {
+              "key": false,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "css align-items value"
+            ]
+          },
+          {
+            "key": "padding",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          },
+          {
+            "key": "column_gutter",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          },
+          {
+            "key": "row_gutter",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "flex-grid",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "flex_item",
+    "property": "Flex item",
+    "syntax": [
+      {
+        "attribute": "data-h2-flex-item=\"query:mode:state(span)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "span",
+            "types": {
+              "key": true,
+              "css": false
+            },
+            "required": true,
+            "values": [
+              "XofY",
+              "auto",
+              "content",
+              "fill"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "flex_item",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "flex_wrap",
+    "property": "Flex wrap",
+    "syntax": [
+      {
+        "attribute": "data-h2-flex-wrap=\"query:mode:state(wrap)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "wrap",
+            "types": {
+              "key": false,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "css flex-wrap value"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "flex-wrap",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "color",
+    "property": "Font color",
+    "syntax": [
+      {
+        "attribute": "data-h2-color=\"query:mode:state(color | gradient)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "color | gradient",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "configured color key",
+              "configured gradient key",
+              "css color"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "color",
+        "instances": []
+      },
+      {
+        "key": "font-color",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "font_family",
+    "property": "Font family",
+    "syntax": [
+      {
+        "attribute": "data-h2-font-family=\"query:mode:state(family)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "family",
+            "types": {
+              "key": true,
+              "css": false
+            },
+            "required": true,
+            "values": [
+              "configured font key"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "font-family",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "font_size",
+    "property": "Font size",
+    "syntax": [
+      {
+        "attribute": "data-h2-size=\"query:mode:state(size, line_height)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "h1",
+              "h2",
+              "h3",
+              "h4",
+              "h5",
+              "h6",
+              "copy",
+              "caption",
+              "css unit"
+            ]
+          },
+          {
+            "key": "line_height",
+            "types": {
+              "key": false,
+              "css": true
+            },
+            "required": false,
+            "values": [
+              "number",
+              "css unit"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "font-size",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "font_style",
+    "property": "Font style",
+    "syntax": [
+      {
+        "attribute": "data-h2-style=\"query:mode:state(style)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "style",
+            "types": {
+              "key": false,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "css font-style value"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "font-style",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "font_weight",
+    "property": "Font weight",
+    "syntax": [
+      {
+        "attribute": "data-h2-weight=\"query:mode:state(weight)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "weight",
+            "types": {
+              "key": false,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "css font-weight value"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "font-weight",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "gap",
+    "property": "Gap",
+    "syntax": [
+      {
+        "attribute": "data-h2-gap=\"query:mode:state(size, axis)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          },
+          {
+            "key": "axis",
+            "types": {
+              "key": true,
+              "css": false
+            },
+            "required": false,
+            "values": [
+              "all",
+              "column",
+              "row"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "gap",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "grid_column",
+    "property": "Grid column",
+    "syntax": [
+      {
+        "attribute": "data-h2-grid-column=\"query:mode:state(span)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "span",
+            "types": {
+              "key": false,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "css grid span value"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "grid-column",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "grid_row",
+    "property": "Grid row",
+    "syntax": [
+      {
+        "attribute": "data-h2-grid-row=\"query:mode:state(span)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "span",
+            "types": {
+              "key": false,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "css grid span value"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "grid-row",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "grid_template_columns",
+    "property": "Grid template columns",
+    "syntax": [
+      {
+        "attribute": "data-h2-grid-template-columns=\"query:mode:state(template)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "template",
+            "types": {
+              "key": false,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "css grid template value"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "grid-template-columns",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "grid_template_rows",
+    "property": "Grid template rows",
+    "syntax": [
+      {
+        "attribute": "data-h2-grid-template-rows=\"query:mode:state(template)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "template",
+            "types": {
+              "key": false,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "css grid template value"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "grid-template-rows",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "height",
+    "property": "Height",
+    "syntax": [
+      {
+        "attribute": "data-h2-height=\"query:mode:state(size)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "height",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "justify_content",
+    "property": "Justify content",
+    "syntax": [
+      {
+        "attribute": "data-h2-justify-content=\"query:mode:state(justification)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "justification",
+            "types": {
+              "key": false,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "css justify-content value"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "justify-content",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "layer",
+    "property": "Layer",
+    "syntax": [
+      {
+        "attribute": "data-h2-layer=\"query:mode:state(z_index, position)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "z_index",
+            "types": {
+              "key": false,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "number"
+            ]
+          },
+          {
+            "key": "position",
+            "types": {
+              "key": false,
+              "css": true
+            },
+            "required": false,
+            "values": [
+              "css position value"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "layer",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "list_style",
+    "property": "List style",
+    "syntax": [
+      {
+        "attribute": "data-h2-list-style=\"query:mode:state(style)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "style",
+            "types": {
+              "key": false,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "css list-style value"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "list-style",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "offset",
+    "property": "Offset",
+    "syntax": [
+      {
+        "attribute": "data-h2-offset=\"query:mode:state(size)\"",
+        "default": false,
+        "options": [
+          {
+            "key": "size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          }
+        ]
+      },
+      {
+        "attribute": "data-h2-offset=\"query:mode:state(top_bottom_size, right_left_size)\"",
+        "default": false,
+        "options": [
+          {
+            "key": "top_bottom_size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          },
+          {
+            "key": "right_left_size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          }
+        ]
+      },
+      {
+        "attribute": "data-h2-offset=\"query:mode:state(top_size, right_size, bottom_size, left_size)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "top_size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          },
+          {
+            "key": "right_size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          },
+          {
+            "key": "bottom_size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          },
+          {
+            "key": "left_size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "offset",
+        "instances": []
+      },
+      {
+        "key": "location",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "margin",
+    "property": "Margin",
+    "syntax": [
+      {
+        "attribute": "data-h2-margin=\"query:mode:state(size)\"",
+        "default": false,
+        "options": [
+          {
+            "key": "size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          }
+        ]
+      },
+      {
+        "attribute": "data-h2-margin=\"query:mode:state(top_bottom_size, right_left_size)\"",
+        "default": false,
+        "options": [
+          {
+            "key": "top_bottom_size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          },
+          {
+            "key": "right_left_size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          }
+        ]
+      },
+      {
+        "attribute": "data-h2-margin=\"query:mode:state(top_size, right_size, bottom_size, left_size)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "top_size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          },
+          {
+            "key": "right_size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          },
+          {
+            "key": "bottom_size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          },
+          {
+            "key": "left_size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "margin",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "margin_top",
+    "property": "Margin top",
+    "syntax": [
+      {
+        "attribute": "data-h2-margin-top=\"query:mode:state(size)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "margin-top",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "margin_right",
+    "property": "Margin right",
+    "syntax": [
+      {
+        "attribute": "data-h2-margin-right=\"query:mode:state(size)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "margin-right",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "margin_bottom",
+    "property": "Margin bottom",
+    "syntax": [
+      {
+        "attribute": "data-h2-margin-bottom=\"query:mode:state(size)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "margin-bottom",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "margin_left",
+    "property": "Margin left",
+    "syntax": [
+      {
+        "attribute": "data-h2-margin-left=\"query:mode:state(size)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "margin-left",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "max_height",
+    "property": "Max height",
+    "syntax": [
+      {
+        "attribute": "data-h2-max-height=\"query:mode:state(size)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "max-height",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "max_width",
+    "property": "Max width",
+    "syntax": [
+      {
+        "attribute": "data-h2-max-width=\"query:mode:state(size)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "max-width",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "min_height",
+    "property": "Min height",
+    "syntax": [
+      {
+        "attribute": "data-h2-min-height=\"query:mode:state(size)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "min-height",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "min_width",
+    "property": "Min width",
+    "syntax": [
+      {
+        "attribute": "data-h2-min-width=\"query:mode:state(size)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "min-width",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "opacity",
+    "property": "Opacity",
+    "syntax": [
+      {
+        "attribute": "data-h2-opacity=\"query:mode:state(opacity)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "opacity",
+            "types": {
+              "key": false,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "decimal"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "opacity",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "order",
+    "property": "Order",
+    "syntax": [
+      {
+        "attribute": "data-h2-order=\"query:mode:state(order)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "order",
+            "types": {
+              "key": false,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "number"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "order",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "overflow",
+    "property": "Overflow",
+    "syntax": [
+      {
+        "attribute": "data-h2-overflow=\"query:mode:state(overflow, axis)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "overflow",
+            "types": {
+              "key": false,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "css overflow value"
+            ]
+          },
+          {
+            "key": "axis",
+            "types": {
+              "key": true,
+              "css": false
+            },
+            "required": false,
+            "values": [
+              "all",
+              "x",
+              "y"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "overflow",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "overlay",
+    "property": "Overlay",
+    "syntax": [
+      {
+        "attribute": "data-h2-overlay=\"query:mode:state(color | gradient, opacity)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "color | gradient",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "configured color key",
+              "configured gradient key",
+              "css color"
+            ]
+          },
+          {
+            "key": "opacity",
+            "types": {
+              "key": false,
+              "css": true
+            },
+            "required": false,
+            "values": [
+              "decimal"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "overlay",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "padding",
+    "property": "Padding",
+    "syntax": [
+      {
+        "attribute": "data-h2-padding=\"query:mode:state(size)\"",
+        "default": false,
+        "options": [
+          {
+            "key": "size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          }
+        ]
+      },
+      {
+        "attribute": "data-h2-padding=\"query:mode:state(top_bottom_size, right_left_size)\"",
+        "default": false,
+        "options": [
+          {
+            "key": "top_bottom_size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          },
+          {
+            "key": "right_left_size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          }
+        ]
+      },
+      {
+        "attribute": "data-h2-padding=\"query:mode:state(top_size, right_size, bottom_size, left_size)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "top_size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          },
+          {
+            "key": "right_size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          },
+          {
+            "key": "bottom_size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          },
+          {
+            "key": "left_size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "padding",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "padding_top",
+    "property": "Padding top",
+    "syntax": [
+      {
+        "attribute": "data-h2-padding-top=\"query:mode:state(size)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "padding-top",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "padding_right",
+    "property": "Padding right",
+    "syntax": [
+      {
+        "attribute": "data-h2-padding-right=\"query:mode:state(size)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "padding-right",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "padding_bottom",
+    "property": "Padding bottom",
+    "syntax": [
+      {
+        "attribute": "data-h2-padding-bottom=\"query:mode:state(size)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "padding-bottom",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "padding_left",
+    "property": "Padding left",
+    "syntax": [
+      {
+        "attribute": "data-h2-padding-left=\"query:mode:state(size)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "padding-left",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "position",
+    "property": "Position",
+    "syntax": [
+      {
+        "attribute": "data-h2-position=\"query:mode:state(position)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "position",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "center",
+              "css position value"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "position",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "radius",
+    "property": "Radius",
+    "syntax": [
+      {
+        "attribute": "data-h2-radius=\"query:mode:state(radius)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "radius",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "configured radius key",
+              "css unit"
+            ]
+          }
+        ]
+      },
+      {
+        "attribute": "data-h2-radius=\"query:mode:state(top_left_bottom_right_radius, top_right_bottom_left_radius)\"",
+        "default": false,
+        "options": [
+          {
+            "key": "top_left_bottom_right_radius",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "configured border-radius key",
+              "css unit"
+            ]
+          },
+          {
+            "key": "top_right_bottom_left_radius",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "configured border-radius key",
+              "css unit"
+            ]
+          }
+        ]
+      },
+      {
+        "attribute": "data-h2-radius=\"query:mode:state(top_left_radius, top_right_bottom_left_radius, bottom_right_radius)\"",
+        "default": false,
+        "options": [
+          {
+            "key": "top_left_radius",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "configured border-radius key",
+              "css unit"
+            ]
+          },
+          {
+            "key": "top_right_bottom_left_radius",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "configured border-radius key",
+              "css unit"
+            ]
+          },
+          {
+            "key": "bottom_right_radius",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "configured border-radius key",
+              "css unit"
+            ]
+          }
+        ]
+      },
+      {
+        "attribute": "data-h2-radius=\"query:mode:state(top_left_radius, top_right_radius, bottom_right_radius, bottom_left_radius)\"",
+        "default": false,
+        "options": [
+          {
+            "key": "top_left_radius",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "configured border-radius key",
+              "css unit"
+            ]
+          },
+          {
+            "key": "top_right_radius",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "configured border-radius key",
+              "css unit"
+            ]
+          },
+          {
+            "key": "bottom_right_radius",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "configured border-radius key",
+              "css unit"
+            ]
+          },
+          {
+            "key": "bottom_left_radius",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "configured border-radius key",
+              "css unit"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "radius",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "shadow",
+    "property": "Shadow",
+    "syntax": [
+      {
+        "attribute": "data-h2-shadow=\"query:mode:state(shadow)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "shadow",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "configured shadow key",
+              "css box-shadow value"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "shadow",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "text-align",
+    "property": "Text align",
+    "syntax": [
+      {
+        "attribute": "data-h2-text-align=\"query:mode:state(alignment)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "alignment",
+            "types": {
+              "key": false,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "css text-align value"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "text-align",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "text-decoration",
+    "property": "Text decoration",
+    "syntax": [
+      {
+        "attribute": "data-h2-text-decoration=\"query:mode:state(decoration)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "decoration",
+            "types": {
+              "key": false,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "css text-decoration value"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "text-decoration",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "text-transform",
+    "property": "Text transform",
+    "syntax": [
+      {
+        "attribute": "data-h2-text-transform=\"query:mode:state(transformation)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "transformation",
+            "types": {
+              "key": false,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "css text-transform value"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "text-transform",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "text-decoration",
+    "property": "Text decoration",
+    "syntax": [
+      {
+        "attribute": "data-h2-text-decoration=\"query:mode:state(decoration)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "decoration",
+            "types": {
+              "key": false,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "css text-decoration value"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "text-decoration",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "transition",
+    "property": "Transition",
+    "syntax": [
+      {
+        "attribute": "data-h2-transition=\"query:mode:state(property, duration, function, delay)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "property",
+            "types": {
+              "key": false,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "css property"
+            ]
+          },
+          {
+            "key": "duration",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "configured duration key",
+              "css time unit"
+            ]
+          },
+          {
+            "key": "function",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": false,
+            "values": [
+              "configured function key",
+              "css transition function"
+            ]
+          },
+          {
+            "key": "delay",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": false,
+            "values": [
+              "configured delay key",
+              "css time unit"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "transition",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "vertical-align",
+    "property": "Vertical align",
+    "syntax": [
+      {
+        "attribute": "data-h2-vertical-align=\"query:mode:state(alignment)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "alignment",
+            "types": {
+              "key": false,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "css vertical-align value"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "vertical-align",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "visibility",
+    "property": "Visibility",
+    "syntax": [
+      {
+        "attribute": "data-h2-visibility=\"query:mode:state(visibility)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "visibility",
+            "types": {
+              "key": true,
+              "css": false
+            },
+            "required": true,
+            "values": [
+              "visible",
+              "invisible",
+              "hidden"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "visibility",
+        "instances": []
+      }
+    ]
+  },
+  {
+    "id": "width",
+    "property": "Width",
+    "syntax": [
+      {
+        "attribute": "data-h2-width=\"query:mode:state(size)\"",
+        "default": true,
+        "options": [
+          {
+            "key": "size",
+            "types": {
+              "key": true,
+              "css": true
+            },
+            "required": true,
+            "values": [
+              "multiplier",
+              "css unit"
+            ]
+          }
+        ]
+      }
+    ],
+    "keys": [
+      {
+        "key": "width",
+        "instances": []
+      }
+    ]
+  }
+]

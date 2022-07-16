@@ -120,3 +120,11 @@ You can specify unique styles for users who have their browsers/OS set to prefer
 
 - `data-h2-bg-color="base(primary)"` will set the default background color to `primary`;
 - `data-h2-bg-color="base(primary) base:dark(secondary)"` will set the default background color to `primary`, and if the user prefers dark mode, will set the background to `secondary`
+
+# Development and contribution
+- Pull the repository down
+- run `npm install`
+- run `npm link`
+- navigate to `cd tests`
+- run `npm link @hydrogen-design-system/hydrogen.css`
+- run `npm start`

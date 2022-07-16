@@ -1,0 +1,85 @@
+{
+  "version": "2.0.0-beta.22",
+  "date": "2022/JUL/15",
+  "author": "Josh Beveridge",
+  "beta": true,
+  "en": {
+    "breaking": [],
+    "features": [
+      {
+        "changes": [
+          "Reworks the way attributes are parsed by the system using a data model file that will help enforce consistency and access to more robust metadata over time."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Log files now have a timestamp in their slug, and will be placed in the /hydrogen-logs directory moving forward."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      }
+    ],
+    "optimizations": [
+      {
+        "changes": [
+          "Updates Node and NPM version requirements."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Updates Node and NPM version requirements."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Adds basic VS Code extension recommendations, settings, and forces basic Prettier-specific styling."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Log files now include line breaks for legibility."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      }
+    ],
+    "bugfixes": [
+      {
+        "changes": [
+          "Fixes a bug where options inside of an attribute that were missing a media query stopped the compiler completely."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Fixes a bug where key/value pair attributes weren't parsed if the value started on a new line."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      }
+    ]
+  },
+  "fr": {
+    "breaking": [],
+    "features": [],
+    "optimizations": [],
+    "bugfixes": []
+  }
+}

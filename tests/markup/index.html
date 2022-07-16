@@ -492,7 +492,9 @@
               data-h2-background-color="base(var(--h2-color-primary)) base:hover(var(--h2-color-accent))"></div>
             <div
               data-h2-height="base(x3)"
-              data-h2-background-color="base(var(--h2-color-primary-dark)) base:hover(var(--h2-color-accent-light))"></div>
+              data-h2-background-color="
+                base(var(--h2-color-primary-dark)) 
+                base:hover(var(--h2-color-accent-light))"></div>
             <div
               data-h2-height="base(x3)"
               data-h2-background-color="base(var(--h2-color-primary-darker)) base:hover(var(--h2-color-accent-lighter))"></div>
@@ -757,6 +759,7 @@
           data-h2-bg-color="base(primary)"
           data-h2-height="base(x3)"
           data-h2-width="base(100%)"
+          data-h2-cursor="base(pointer)"
         ></div>
       </div>
       <div data-h2-flex-item="base(1of6)">
@@ -1147,7 +1150,8 @@
     <p>data-h2-bg-color="base()"</p>
     <p>"data-h2-bg-color": "base(blue)"</p>
     <p>"data-h2-bg-color":"base(black) base:dark(white)"</p>
-    <p>'data-h2-bg-color': 'base(black)'</p>
+    <p>'data-h2-bg-color': 
+      'base(black) base:hover(blue)'</p>
     <p>'data-h2-bg-color': 'green'</p>
     <p>'data-h2-font-color': 'base()'</p>
     <p>'data-h2-font-color': 'base(blue.yellow))'</p>
@@ -1160,6 +1164,8 @@
       ">
       Things
     </div>
+    <p>data-h2-background-color="(test)"</p>
+    <p>data-h2-background-color="base(test, things)"</p>
     <script src="../scripts/app.js"></script>
   </body>
 </html>
