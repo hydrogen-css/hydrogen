@@ -1,6 +1,6 @@
 {
   "name": "@hydrogen-design-system/hydrogen.css",
-  "version": "2.0.0-beta.21",
+  "version": "2.0.0-beta.22",
   "description": "A CSS utility framework that leverages data-attributes to provide clarity and flexibility. MIT Licensed.",
   "keywords": [
     "Hydrogen",
@@ -14,9 +14,11 @@
     "hydrogen-init": "./bin/init.js",
     "hydrogen-watch": "./bin/watch.js",
     "hydrogen-build": "./bin/build.js",
+    "hydrogen-clean": "./bin/clean.js",
     "h2-init": "./bin/init.js",
     "h2-watch": "./bin/watch.js",
-    "h2-build": "./bin/build.js"
+    "h2-build": "./bin/build.js",
+    "h2-clean": "./bin/clean.js"
   },
   "scripts": {},
   "repository": {
@@ -45,12 +47,15 @@
     "last 1 version and not dead"
   ],
   "engines": {
-    "npm": ">=6.14.4",
-    "node": ">=12.16.2"
+    "npm": ">=8.12.1",
+    "node": ">=14.18.1"
   },
   "prettier": {
     "singleQuote": true,
     "proseWrap": "preserve",
+    "bracketSpacing": true,
+    "tabWidth": 2,
+    "useTabs": false,
     "singleAttributePerLine": true
   }
 }

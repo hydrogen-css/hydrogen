@@ -6,7 +6,7 @@
     "h2-build": "npx h2-build",
     "h2-init": "npx h2-init",
     "h2-watch": "npx h2-watch",
-    "browsersync": "browser-sync start --server --watch --startPath markup/index.html --reload-delay 500ms --no-open"
+    "browsersync": "browser-sync start --server --watch --startPath markup/site/index.html --reload-delay 500ms --no-open"
   },
   "devDependencies": {
     "browser-sync": "^2.27.10",

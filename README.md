@@ -63,6 +63,7 @@ You can learn about [utility usage in the documentation](https://hydrogen.design
 - `flex-basis`
 - `flex-direction`
 - `flex-grid` and `flex-item`
+- `flex-grow`
 - `flex-wrap`
 - `font-family`
 - `font-size`
@@ -75,6 +76,7 @@ You can learn about [utility usage in the documentation](https://hydrogen.design
 - `grid-template-rows`
 - `height`
 - `justify-content`
+- `justify-items`
 - `layer` for `z-index` control
 - `list-style`
 - `margin`
@@ -85,6 +87,7 @@ You can learn about [utility usage in the documentation](https://hydrogen.design
 - `offset` for positioning control
 - `opacity`
 - `order` for flex item order control
+- `outline`
 - `overflow`
 - `overlay`
 - `padding`
@@ -120,3 +123,24 @@ You can specify unique styles for users who have their browsers/OS set to prefer
 
 - `data-h2-bg-color="base(primary)"` will set the default background color to `primary`;
 - `data-h2-bg-color="base(primary) base:dark(secondary)"` will set the default background color to `primary`, and if the user prefers dark mode, will set the background to `secondary`
+
+# Development and contribution
+
+- Pull the repository down
+- run `npm install`
+- run `npm link`
+- navigate to `cd tests`
+- run `npm link @hydrogen-design-system/hydrogen.css`
+- run `npm start`
+
+## Adding CSS properties
+
+- create the property script (generic or custom) in `lib/scripts/properties`
+- add imports to the build script in `lib/scripts/build-hydrogen.js`
+- add the property's scripts to the build in `lib/scripts/build-hydrogen.js`
+- add the new property to the property data model in `lib/data/property-model.json`
+- test the property by adding it to the testing UI markup in `tests/markup/site`
+- if it's a custom property, add tests to the error testing markup in `tests/markup/errors`
+- add the new property's syntax to the snippets file in `hydrogen.snippets.json`
+- update the project's own local .vscode snippets file in `.vscode/hydrogen.code-snippets`
+- add release notes for the property in the changelog
