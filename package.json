@@ -14,9 +14,11 @@
     "hydrogen-init": "./bin/init.js",
     "hydrogen-watch": "./bin/watch.js",
     "hydrogen-build": "./bin/build.js",
+    "hydrogen-clean": "./bin/clean.js",
     "h2-init": "./bin/init.js",
     "h2-watch": "./bin/watch.js",
-    "h2-build": "./bin/build.js"
+    "h2-build": "./bin/build.js",
+    "h2-clean": "./bin/clean.js"
   },
   "scripts": {},
   "repository": {

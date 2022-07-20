@@ -1,0 +1,141 @@
+{
+  "version": "2.0.0-beta.22",
+  "date": "2022/JUL/19",
+  "author": "Josh Beveridge",
+  "beta": true,
+  "en": {
+    "breaking": [],
+    "features": [
+      {
+        "changes": [
+          "Adds support for data-h2-flex-grow."
+        ],
+        "migrations": [],
+        "attributes": [
+          "flex-grow"
+        ],
+        "log": []
+      },
+      {
+        "changes": [
+          "Adds support for data-h2-justify-items."
+        ],
+        "migrations": [],
+        "attributes": [
+          "justify-items"
+        ],
+        "log": []
+      },
+      {
+        "changes": [
+          "Adds support for data-h2-outline."
+        ],
+        "migrations": [],
+        "attributes": [
+          "outline"
+        ],
+        "log": []
+      },
+      {
+        "changes": [
+          "Reworks the way attributes are parsed by the system using a data model file that will help enforce consistency and access to more robust metadata over time."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Adds a new npx h2-clean script that will remove any log files Hydrogen has created."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Log files and the debug CSS file are now placed in the /hydrogen-logs directory, nested inside of a timestamp directory."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Radius now supports a 3 value syntax that matches its CSS counterpart."
+        ],
+        "migrations": [],
+        "attributes": [
+          "radius"
+        ],
+        "log": []
+      }
+    ],
+    "optimizations": [
+      {
+        "changes": [
+          "Updates Node and NPM version requirements."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Reworks property scripts and reorganizes them, along with better code documentation."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Adds basic VS Code extension recommendations, settings, and forces basic Prettier-specific styling."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Log files now include line breaks for legibility."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Changelog data is now organized by major and minor releases."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      }
+    ],
+    "bugfixes": [
+      {
+        "changes": [
+          "Fixes a bug where options inside of an attribute that were missing a media query stopped the compiler completely."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Fixes a bug where key/value pair attributes weren't parsed if the value started on a new line."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      }
+    ]
+  },
+  "fr": {
+    "breaking": [],
+    "features": [],
+    "optimizations": [],
+    "bugfixes": []
+  }
+}

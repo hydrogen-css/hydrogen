@@ -6,8 +6,14 @@
     "roadmap": "https://github.com/orgs/hydrogen-design-system/projects/1"
   },
   "debug": true,
+  "temp_inputs": [
+    "markup/demo",
+    "markup/errors",
+    "markup/functional",
+    "markup/site"
+  ],
   "input": [
-    "markup/"
+    "markup/functional"
   ],
   "output": "styles",
   "variables": true,
