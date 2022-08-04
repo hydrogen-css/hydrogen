@@ -127,11 +127,9 @@ You can specify unique styles for users who have their browsers/OS set to prefer
 # Development and contribution
 
 - Pull the repository down
-- run `npm install`
-- run `npm link`
-- navigate to `cd tests`
-- run `npm link @hydrogen-design-system/hydrogen.css`
-- run `npm start`
+- run `npm run setup`
+- to start Hydrogen's test server, run `npm start`
+- to run a single test compile, run `npm run build`
 
 ## Adding CSS properties
 

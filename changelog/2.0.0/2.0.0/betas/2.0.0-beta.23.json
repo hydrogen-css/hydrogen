@@ -1,0 +1,36 @@
+{
+  "version": "2.0.0-beta.23",
+  "date": "2022/AUG/04",
+  "author": "Josh Beveridge",
+  "beta": true,
+  "en": {
+    "breaking": [],
+    "features": [
+      {
+        "changes": [
+          "Adds development scripts in the root package.json for quick test setup and compiling without the need to navigate to the tests folder."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      }
+    ],
+    "optimizations": [],
+    "bugfixes": [
+      {
+        "changes": [
+          "Updated the cssnano configuration to use the default preset with a series of exclusions, rather than the lite preset to ensure that duplicate rules are removed from Hydrogen's final output."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      }
+    ]
+  },
+  "fr": {
+    "breaking": [],
+    "features": [],
+    "optimizations": [],
+    "bugfixes": []
+  }
+}
