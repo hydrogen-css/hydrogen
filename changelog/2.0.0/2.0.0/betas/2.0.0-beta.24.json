@@ -38,7 +38,7 @@
       },
       {
         "changes": [
-          "Adds the ability to store your configuration file in the parent directory of the node process to help support NPM workspaces."
+          "Adds the ability to store your configuration file in the parent directory of the Node process to help support NPM workspaces."
         ],
         "migrations": [],
         "attributes": [],
@@ -84,8 +84,81 @@
   },
   "fr": {
     "breaking": [],
-    "features": [],
-    "optimizations": [],
-    "bugfixes": []
+    "features": [
+      {
+        "changes": [
+          "Ajoute un nouveau modificateur :class[] qui vous permet de cibler l'élément uniquement si une ou plusieurs classes lui ont été appliquées.",
+          "Les classes sont spécifiées entre crochets, sous forme de liste séparée par des virgules et sans '.'",
+          "Ceci est particulièrement utile lorsque les styles doivent changer en fonction de l'état - vous pouvez appliquer une classe lorsque l'état change et les styles seront activés."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Ajoute un nouveau modificateur :children[] qui vous permet de cibler les enfants d'un élément avec des styles.",
+          "Les enfants peuvent être ciblés à l'aide de tout sélecteur CSS valide, y compris les balises, les classes, les ids et les attributs de données.",
+          "Cela permet de styliser en vrac les éléments enfants et de réduire considérablement le nombre de balises.",
+          "Le modificateur :children[] peut être remplacé par l'application de la même propriété à un enfant au cas où vous auriez besoin d'un seul (ou de plusieurs) enfant(s) pour déroger à la norme."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Le contenu du fichier variable CSS est désormais inclus dans le fichier hydrogen.css, de sorte que vous ne devez plus charger un fichier distinct.",
+          "L'option permettant de générer un fichier demeure, mais la moitié des variables étaient déjà chargées par hydrogen.css et il était plus logique d'éviter la duplication des variables lors du chargement des deux fichiers en éliminant la nécessité de charger entièrement le fichier de variables si vous chargez déjà Hydrogen."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Ajoute la possibilité de stocker votre fichier de configuration dans le répertoire parent du processus Node pour aider à supporter les espaces de travail NPM."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Ajoute un nouveau lien de retour d'information à l'objet info dans le fichier de configuration."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      }
+    ],
+    "optimizations": [
+      {
+        "changes": [
+          "Optimise la manière dont certaines propriétés se substituent les unes aux autres afin qu'elles n'affectent que les valeurs CSS qu'elles sont censées modifier."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Ajoute un nouveau fichier README de développement dans le répertoire lib qui décrit le flux de construction de base."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      }
+    ],
+    "bugfixes": [
+      {
+        "changes": [
+          "Corrige le lien brisé des paramètres dans l'objet info du fichier de configuration."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      }
+    ]
   }
 }

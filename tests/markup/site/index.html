@@ -42,24 +42,122 @@
       data-h2-container="base(center, medium, x2)"
       data-h2-margin="base(0, auto, x10, auto) base:children[h2](x4, 0, x1, 0) base:children[h3](x3, 0, x1, 0)">
       <h1 data-h2-margin="base(x5, 0, 0, 0)">Hydrogen internal tests</h1>
+      <!-- ID selector support -->
+      <h2>ID targeting tests</h2>
+      <div
+        data-h2-display="base(grid)"
+        data-h2-grid-template-columns="base(1fr 1fr 1fr)"
+        data-h2-gap="base(x1, all)"
+        data-h2-font-size="base(10px)"
+        data-h2-padding="
+          base:children[>div](x1)
+          l-tablet:children[>div](x2)
+        "
+        data-h2-font-weight="base:children[p:first-child](700)"
+        data-h2-margin="base:children[p:first-child](0, 0, x.5, 0)">
+        <!-- Base query -->
+        <div data-h2-background-color="base(blue) base:id[testID](green)">
+          <p>Base query</p>
+          <p>Should be blue, because it's missing the ID, which would turn it green</p>
+        </div>
+        <div id="otherID" data-h2-background-color="base(blue) base:id[testID](green)">
+          <p>Base query</p>
+          <p>Should be blue, because it has an ID, but not the correct one, which would turn it green</p>
+        </div>
+        <div id="testID" data-h2-background-color="base(blue) base:id[testID](green)">
+          <p>Base query</p>
+          <p>Should be green, not blue, because it has the correct ID.</p>
+        </div>
+        <!-- Custom queries, same ID override -->
+        <div data-h2-background-color="base(blue) base:id[testID](green) l-tablet(pink) l-tablet:id[testID](red)">
+          <p>Custom query (l-tablet)</p>
+          <p>Should be pink, because it's missing the ID, which would turn it red</p>
+        </div>
+        <div id="otherID" data-h2-background-color="base(blue) base:id[testID](green) l-tablet(pink) l-tablet:id[testID](red)">
+          <p>Custom query (l-tablet)</p>
+          <p>Should be pink, because it has an ID, but not the correct one, which would turn it red</p>
+        </div>
+        <div id="testID" data-h2-background-color="base(blue) base:id[testID](green) l-tablet(pink) l-tablet:id[testID](red)">
+          <p>Custom query (l-tablet)</p>
+          <p>Should be red, not pink, because it has the correct ID.</p>
+        </div>
+        <!-- Custom queries, different ID override -->
+        <div data-h2-background-color="base(blue) base:id[testID](green) l-tablet(pink) l-tablet:id[newID](red)">
+          <p>Custom query (l-tablet)</p>
+          <p>Should be pink, because it's missing the ID, which would turn it red</p>
+        </div>
+        <div id="testID" data-h2-background-color="base(blue) base:id[testID](green) l-tablet(pink) l-tablet:id[newID](red)">
+          <p>Custom query (l-tablet)</p>
+          <p>Should be green, because it has the base query ID, but not the l-tablet ID, which would turn it red</p>
+        </div>
+        <div id="newID" data-h2-background-color="base(blue) base:id[testID](green) l-tablet(pink) l-tablet:id[newID](red)">
+          <p>Custom query (l-tablet)</p>
+          <p>Should be red, not pink or green, because it has the correct ID for l-tablet.</p>
+        </div>
+      </div>
       <!-- Class selector support -->
       <h2>Class targeting tests</h2>
       <div
         data-h2-display="base(grid)"
-        data-h2-grid-template-columns="base(1fr 1fr)"
+        data-h2-grid-template-columns="base(1fr 1fr 1fr)"
         data-h2-gap="base(x1, all)"
-        data-h2-font-size="base(10px)">
-        <div data-h2-padding="base(x3)" data-h2-background-color="base(blue) base:class[active](yellow) desktop(red) desktop:class[active](orange)">
+        data-h2-padding="
+          base:children[>div](x1)
+          l-tablet:children[>div](x2)
+        "
+        data-h2-font-weight="base:children[p:first-child](700)"
+        data-h2-margin="base:children[p:first-child](0, 0, x.5, 0)">
+        <!-- Base query -->
+        <div data-h2-background-color="base(blue) base:class[active](yellow)">
+          <p>Base query</p>
+          <p>Should be blue, not yellow, because it has no matching classes.</p>
         </div>
-        <div class="active" data-h2-padding="base(x3)" data-h2-background-color="base(blue) base:class[active](yellow) desktop(red) desktop:class[active](orange)">
+        <div class="other_class" data-h2-background-color="base(blue) base:class[active](yellow)">
+          <p>Base query</p>
+          <p>Should be blue, not yellow, because it has a class, but not the correct class.</p>
         </div>
-        <div class="" data-h2-padding="base(x3)" data-h2-background-color="base(blue) base:class[active](yellow) desktop(red) desktop:class[active](orange) desktop:class[active]:hover(green)">
+        <div class="active" data-h2-background-color="base(blue) base:class[active](yellow)">
+          <p>Base query</p>
+          <p>Should be yellow, not blue, because it has the correct class.</p>
         </div>
-        <div class="active" data-h2-padding="base(x3)" data-h2-background-color="base(blue) base:class[active](yellow) desktop(red) desktop:class[active](orange) desktop:class[active]:hover(green)">
+        <!-- Custom query -->
+        <div data-h2-background-color="base(blue) base:class[active](yellow) l-tablet:class[active](pink)">
+          <p>Custom query (l-tablet)</p>
+          <p>Should be blue, not yellow, because it has no matching classes.</p>
         </div>
-        <div class="active" data-h2-padding="base(x3)" data-h2-background-color="base(blue) base:class[active](yellow) desktop(red) desktop:class[active](orange)">
+        <div class="other_class" data-h2-background-color="base(blue) base:class[active](yellow) l-tablet:class[active](pink)">
+          <p>Custom query (l-tablet)</p>
+          <p>Should be blue, not yellow, because it has a class, but not the correct class.</p>
         </div>
-        <div class="active extra" data-h2-padding="base(x3)" data-h2-background-color="base(blue) base:class[active](yellow) desktop(red) desktop:class[active](orange) desktop:class[active, extra]:hover(green)">
+        <div class="active" data-h2-background-color="base(blue) base:class[active](yellow) l-tablet:class[active](pink)">
+          <p>Custom query (l-tablet)</p>
+          <p>Should be pink, not blue or yellow, because it has the correct class at the l-tablet query.</p>
+        </div>
+        <!-- Multi class -->
+        <div data-h2-background-color="base(blue) base:class[active, extra](yellow)">
+          <p>Multi class</p>
+          <p>Should be blue, not yellow, because it has no classes.</p>
+        </div>
+        <div class="active" data-h2-background-color="base(blue) base:class[active, extra](yellow)">
+          <p>Multi class</p>
+          <p>Should be blue, not yellow, because it has a class, but not all the required classes.</p>
+        </div>
+        <div class="active extra" data-h2-background-color="base(blue) base:class[active, extra](yellow)">
+          <p>Multi class</p>
+          <p>Should be yellow, not blue, because it has the correct classes.</p>
+        </div>
+        <!-- Multi class and state -->
+        <div data-h2-background-color="base(blue) base:class[active, extra]:hover(yellow)">
+          <p>Multi class and state</p>
+          <p>Should be blue and not change on hover because it has no matching classes.</p>
+        </div>
+        <div class="active" data-h2-background-color="base(blue) base:class[active, extra]:hover(yellow)">
+          <p>Multi class and state</p>
+          <p>Should be blue and not change on hover because it has a class, but not all the required classes.</p>
+        </div>
+        <div class="active extra" data-h2-background-color="base(blue) base:class[active, extra]:hover(yellow)">
+          <p>Multi class and state</p>
+          <p>Should be blue and turn yellow on hover because it has the correct classes.</p>
         </div>
       </div>
       <!-- Child selector support -->
@@ -96,6 +194,22 @@
           <div class="child_test" data-h2-background-color="base(yellow) base:hover(green)"></div>
           <div class="child_test"></div>
         </div>
+      </div>
+      <div data-h2-margin="base:children[h5](x3, 0, x1, 0) base:children[p](x1, 0)">
+        <h5>The first section</h5>
+        <p>I'm a paragraph!</p>
+        <p>I'm another paragraph!</p>
+        <h5>I'm a new section</h5>
+        <p>Even more paragraphs!</p>
+      </div>
+      <h3>Pseudo element targeting tests</h3>
+      <div data-h2-font-weight="base:children[>p:first-child](700)">
+        <p>This child paragraph should be bold.</p>
+        <p>This child paragraph should NOT be bold.</p>
+      </div>
+      <div data-h2-font-weight="base:children[>p:not(.not_bold)](700)">
+        <p>This child paragraph should be bold.</p>
+        <p class="not_bold">This child paragraph should NOT be bold.</p>
       </div>
       <h3>Class and children combination tests</h3>
       <div
