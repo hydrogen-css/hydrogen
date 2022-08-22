@@ -1,6 +1,6 @@
 {
   "name": "@hydrogen-design-system/hydrogen.css",
-  "version": "2.0.0-beta.23",
+  "version": "2.0.0-beta.24",
   "description": "A CSS utility framework that leverages data-attributes to provide clarity and flexibility. MIT Licensed.",
   "keywords": [
     "Hydrogen",
@@ -21,9 +21,9 @@
     "h2-clean": "./bin/clean.js"
   },
   "scripts": {
-    "start": "(cd tests;npm start)",
-    "build": "(cd tests;npx h2-build)",
-    "setup": "npm install && npm link && (cd tests;npm link @hydrogen-design-system/hydrogen.css)"
+    "start": "cd tests;npm start",
+    "build": "cd tests;npx h2-build",
+    "setup": "npm install && npm link && cd tests;npm link @hydrogen-design-system/hydrogen.css"
   },
   "repository": {
     "type": "git",

@@ -1,5 +1,6 @@
-:root {
+:root{
 /* Core units */
+--h2-base-font-size: 100%;
 --h2-base-line-height: 1.4;
 --h2-base-whitespace: 1.4;
 /* Colors */
@@ -40,7 +41,7 @@
 --h2-color-white-dark: rgb(191, 191, 191);
 --h2-color-white-darker: rgb(128, 128, 128);
 --h2-color-white-darkest: rgb(64, 64, 64);
-/* Containers */
+/* Container max widths */
 --h2-container-small: 39rem;
 --h2-container-medium: 60rem;
 --h2-container-large: 80rem;
@@ -49,36 +50,35 @@
 --h2-font-family-serif: serif;
 --h2-font-family-script: script;
 --h2-font-family-mono: monospace;
-/* Font sizes */
+/* Font sizes and line heights */
 --h2-font-size-caption: calc((1 / 1.2 ) * 1rem);
---h2-font-size-copy: calc(1 * 1rem);
---h2-font-size-h6: calc((1 * 1.2 ) * 1rem);
---h2-font-size-h5: calc(var(--h2-font-size-h6) * 1.2 );
---h2-font-size-h4: calc(var(--h2-font-size-h5) * 1.2 );
---h2-font-size-h3: calc(var(--h2-font-size-h4) * 1.2 );
---h2-font-size-h2: calc(var(--h2-font-size-h3) * 1.2 );
---h2-font-size-h1: calc(var(--h2-font-size-h2) * 1.2 );
-/* Line heights */
 --h2-line-height-caption: var(--h2-base-line-height);
+--h2-font-size-copy: calc(1 * 1rem);
 --h2-line-height-copy: var(--h2-base-line-height);
+--h2-font-size-h6: calc((1 * 1.2 ) * 1rem);
 --h2-line-height-h6: 1.1666666666666667;
+--h2-font-size-h5: calc(var(--h2-font-size-h6) * 1.2 );
 --h2-line-height-h5: 1.9444444444444444;
+--h2-font-size-h4: calc(var(--h2-font-size-h5) * 1.2 );
 --h2-line-height-h4: 1.6203703703703702;
+--h2-font-size-h3: calc(var(--h2-font-size-h4) * 1.2 );
 --h2-line-height-h3: 1.3503086419753085;
+--h2-font-size-h2: calc(var(--h2-font-size-h3) * 1.2 );
 --h2-line-height-h2: 1.1252572016460904;
+--h2-font-size-h1: calc(var(--h2-font-size-h2) * 1.2 );
 --h2-line-height-h1: 1.406571502057613;
 /* Gradients */
 --h2-gradient-myLinearGradient: linear-gradient(135deg, green, pink, rgba(255, 255, 255, 1));
 --h2-gradient-myRadialGradient: radial-gradient(circle at center, blue, purple, rgba(255, 255, 255, 1));
-/* Radius */
+/* Radii */
 --h2-radius-rounded: 10px;
-/* Shadows */
+/* Radii */
 --h2-shadow-s: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, .2);
 --h2-shadow-m: 0 0.25rem 0.5rem -0.05rem rgba(0, 0, 0, .2);
 --h2-shadow-l: 0 0.4rem 0.7rem -0.1rem rgba(0, 0, 0, .2);
 --h2-shadow-xl: 0 0.55rem 1rem -0.2rem rgba(0, 0, 0, .2);
 --h2-shadow-xxl: 0 0.7rem 1.5rem -0.3rem rgba(0, 0, 0, .2);
-/* Transition values */
+/* Transitions */
 --h2-transition-duration-default: .2s;
 --h2-transition-function-ease: ease;
 --h2-transition-delay-none: 0s;
@@ -95,53 +95,53 @@
 --h2-whitespace-9: calc(var(--h2-base-whitespace) * 9);
 --h2-whitespace-10: calc(var(--h2-base-whitespace) * 10);
 }
-@media screen and (min-width: 73em) {
-:root {
+@media screen and (min-width: 73em){
+:root{
 /* Core units */
+--h2-base-font-size: 112.5%;
 --h2-base-line-height: 2;
 --h2-base-whitespace: 2;
-/* Font sizes */
+/* Font sizes and line heights */
 --h2-font-size-caption: calc((1 / 1.3 ) * 1rem);
---h2-font-size-copy: calc(1 * 1rem);
---h2-font-size-h6: calc((1 * 1.3 ) * 1rem);
---h2-font-size-h5: calc(var(--h2-font-size-h6) * 1.3 );
---h2-font-size-h4: calc(var(--h2-font-size-h5) * 1.3 );
---h2-font-size-h3: calc(var(--h2-font-size-h4) * 1.3 );
---h2-font-size-h2: calc(var(--h2-font-size-h3) * 1.3 );
---h2-font-size-h1: calc(var(--h2-font-size-h2) * 1.3 );
-/* Line heights */
 --h2-line-height-caption: var(--h2-base-line-height);
+--h2-font-size-copy: calc(1 * 1rem);
 --h2-line-height-copy: var(--h2-base-line-height);
+--h2-font-size-h6: calc((1 * 1.3 ) * 1rem);
 --h2-line-height-h6: 1.5384615384615383;
+--h2-font-size-h5: calc(var(--h2-font-size-h6) * 1.3 );
 --h2-line-height-h5: 1.1834319526627217;
+--h2-font-size-h4: calc(var(--h2-font-size-h5) * 1.3 );
 --h2-line-height-h4: 1.8206645425580332;
+--h2-font-size-h3: calc(var(--h2-font-size-h4) * 1.3 );
 --h2-line-height-h3: 1.4005111865831024;
+--h2-font-size-h2: calc(var(--h2-font-size-h3) * 1.3 );
 --h2-line-height-h2: 1.077316297371617;
+--h2-font-size-h1: calc(var(--h2-font-size-h2) * 1.3 );
 --h2-line-height-h1: 1.24305726619802;
 }
 }
-@media screen and (min-width: 100em) {
-:root {
+@media screen and (min-width: 100em){
+:root{
 /* Core units */
+--h2-base-font-size: 125%;
 --h2-base-line-height: 1.1;
 --h2-base-whitespace: 1.1;
-/* Font sizes */
+/* Font sizes and line heights */
 --h2-font-size-caption: calc((1 / 1.235 ) * 1rem);
---h2-font-size-copy: calc(1 * 1rem);
---h2-font-size-h6: calc((1 * 1.235 ) * 1rem);
---h2-font-size-h5: calc(var(--h2-font-size-h6) * 1.235 );
---h2-font-size-h4: calc(var(--h2-font-size-h5) * 1.235 );
---h2-font-size-h3: calc(var(--h2-font-size-h4) * 1.235 );
---h2-font-size-h2: calc(var(--h2-font-size-h3) * 1.235 );
---h2-font-size-h1: calc(var(--h2-font-size-h2) * 1.235 );
-/* Line heights */
 --h2-line-height-caption: var(--h2-base-line-height);
+--h2-font-size-copy: calc(1 * 1rem);
 --h2-line-height-copy: var(--h2-base-line-height);
+--h2-font-size-h6: calc((1 * 1.235 ) * 1rem);
 --h2-line-height-h6: 1.7813765182186234;
+--h2-font-size-h5: calc(var(--h2-font-size-h6) * 1.235 );
 --h2-line-height-h5: 1.4424101362094115;
+--h2-font-size-h4: calc(var(--h2-font-size-h5) * 1.235 );
 --h2-line-height-h4: 1.167943430129078;
+--h2-font-size-h3: calc(var(--h2-font-size-h4) * 1.235 );
 --h2-line-height-h3: 1.418554773436127;
+--h2-font-size-h2: calc(var(--h2-font-size-h3) * 1.235 );
 --h2-line-height-h2: 1.1486273469118435;
+--h2-font-size-h1: calc(var(--h2-font-size-h2) * 1.235 );
 --h2-line-height-h1: 1.2400835054378876;
 }
 }

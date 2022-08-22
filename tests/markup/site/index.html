@@ -24,26 +24,106 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="../styles/hydrogen.css"
+      href="../../styles/hydrogen.css"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="../styles/hydrogen.vars.css"
+      href="../../styles/hydrogen.vars.css"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="../styles/app.css"
+      href="../../styles/app.css"
     />
   </head>
   <body data-h2-font-family="base(sans)">
     <section 
       data-h2-container="base(center, medium, x2)"
-      data-h2-margin="base(0, auto, x10, auto)">
+      data-h2-margin="base(0, auto, x10, auto) base:children[h2](x4, 0, x1, 0) base:children[h3](x3, 0, x1, 0)">
       <h1 data-h2-margin="base(x5, 0, 0, 0)">Hydrogen internal tests</h1>
+      <!-- Class selector support -->
+      <h2>Class targeting tests</h2>
+      <div
+        data-h2-display="base(grid)"
+        data-h2-grid-template-columns="base(1fr 1fr)"
+        data-h2-gap="base(x1, all)"
+        data-h2-font-size="base(10px)">
+        <div data-h2-padding="base(x3)" data-h2-background-color="base(blue) base:class[active](yellow) desktop(red) desktop:class[active](orange)">
+        </div>
+        <div class="active" data-h2-padding="base(x3)" data-h2-background-color="base(blue) base:class[active](yellow) desktop(red) desktop:class[active](orange)">
+        </div>
+        <div class="" data-h2-padding="base(x3)" data-h2-background-color="base(blue) base:class[active](yellow) desktop(red) desktop:class[active](orange) desktop:class[active]:hover(green)">
+        </div>
+        <div class="active" data-h2-padding="base(x3)" data-h2-background-color="base(blue) base:class[active](yellow) desktop(red) desktop:class[active](orange) desktop:class[active]:hover(green)">
+        </div>
+        <div class="active" data-h2-padding="base(x3)" data-h2-background-color="base(blue) base:class[active](yellow) desktop(red) desktop:class[active](orange)">
+        </div>
+        <div class="active extra" data-h2-padding="base(x3)" data-h2-background-color="base(blue) base:class[active](yellow) desktop(red) desktop:class[active](orange) desktop:class[active, extra]:hover(green)">
+        </div>
+      </div>
+      <!-- Child selector support -->
+      <h2>Children targeting tests</h2>
+      <div
+        data-h2-display="base(grid)"
+        data-h2-grid-template-columns="base(1fr 1fr 1fr)"
+        data-h2-gap="base(x1, all)"
+        data-h2-font-size="base(10px)">
+        <div data-h2-background-color="base:children[div](blue) base:children[div]:dark(cyan)" data-h2-padding="base:children[div](x1)" data-h2-width="base:children[div](100%)" data-h2-margin="base:children[div](0, 0, x.5, 0)">
+          <p>All child divs should be blue and padded and turn cyan in dark mode<br><br><br><br></p>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div data-h2-background-color="base:children[div](pink)" data-h2-padding="base:children[div](x1)" data-h2-width="base:children[>div](100%)" data-h2-margin="base:children[div](0, 0, x.5, 0)">
+          <p>All child >divs should be pink and padded except 1 which should be blue<br><br><br><br></p>
+          <div></div>
+          <div></div>
+          <div data-h2-background-color="base(blue)"></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div data-h2-background-color="base:children[.child_test](pink) base:children[.child_test]:hover(orange)" data-h2-padding="base:children[.child_test](x1)" data-h2-width="base:children[.child_test](100%)" data-h2-margin="base:children[.child_test](0, 0, x.5, 0)">
+          <p>All child .child_test should be pink and padded and change to orange on hover except for 1 which should be yellow and change to green on hover<br><br></p>
+          <div class="child_test"></div>
+          <div class="child_test"></div>
+          <div class="child_test"></div>
+          <div class="child_test"></div>
+          <div class="child_test" data-h2-background-color="base(yellow) base:hover(green)"></div>
+          <div class="child_test"></div>
+        </div>
+      </div>
+      <h3>Class and children combination tests</h3>
+      <div
+        data-h2-display="base(grid)"
+        data-h2-grid-template-columns="base(1fr 1fr)"
+        data-h2-gap="base(x1, all)"
+        data-h2-font-size="base(10px)">
+        <div data-h2-background-color="base:children[div](pink) base:children[div]:class[class_child_test](blue)" data-h2-padding="base:children[div](x1)" data-h2-width="base:children[div](100%)" data-h2-margin="base:children[div](0, 0, x.5, 0)">
+          <p>All child divs should be pink and padded, because the parent is missing the correct class<br><br></p>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="class_child_test" data-h2-background-color="base:children[div](pink) base:children[div]:class[class_child_test](blue)" data-h2-padding="base:children[div](x1)" data-h2-width="base:children[div](100%)" data-h2-margin="base:children[div](0, 0, x.5, 0)">
+          <p>All child divs should be blue and padded, because the parent has the correct class<br><br></p>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
       <!-- Dark mode -->
-      <h2 data-h2-margin="base(x3, 0, 0, 0)">Dark mode tests</h2>
+      <h2>Dark mode tests</h2>
       <button type="button" onclick="enablePref()">Pref</button>
       <button type="button" onclick="enableLight()">Light</button>
       <button type="button" onclick="enableDark()">Dark</button>
@@ -227,7 +307,7 @@
           </div>
         </div>
         <div data-h2="">
-          <p data-h2-margin="base(x1, 0, x.5, 0)">Class light</p>
+          <h3>Class light</h3>
           <div
             data-h2-padding="base(x.5)" 
             data-h2-margin="base(0, 0, x.5, 0)"
@@ -331,7 +411,7 @@
       </div>
       <hr data-h2-margin="base(x3, 0)" />
       <!-- Reset styles -->
-      <h2 data-h2-margin="base(x3, 0, 0, 0)">Reset style tests</h2>
+      <h2>Reset style tests</h2>
       <div>
         <div data-h2-display="base(block)">
           <button>Test button</button>
@@ -366,7 +446,7 @@
       </div>
       <hr data-h2-margin="base(x3, 0)" />
       <!-- Background colors -->
-      <h2 data-h2-margin="base(x3, 0, 0, 0)">Background color tests</h2>
+      <h2>Background color tests</h2>
       <div
         data-h2-display="base(grid)"
         data-h2-grid-template-columns="base(1fr 1fr)"
@@ -518,7 +598,7 @@
         </div>
       </div>
       <!-- Borders -->
-      <h2 data-h2-margin="base(x3, 0, 0, 0)">Border tests</h2>
+      <h2>Border tests</h2>
       <h3 data-h2-margin="base(x2, 0, 0, 0)">1 value</h3>
       <div
         data-h2-display="base(grid)"
@@ -566,7 +646,7 @@
         </div>
       </div>
       <!-- Grid and flex grid -->
-      <h2 data-h2-margin="base(x3, 0, 0, 0)">Flex grid</h2>
+      <h2>Flex grid</h2>
       <div>
         <div data-h2-flex-grid="base(top, 0, x5)">
           <div data-h2-flex-item="base(content)">
@@ -742,7 +822,7 @@
         </div>
       </div>
       <!-- Position -->
-      <h2 data-h2-margin="base(x3, 0, 0, 0)">Position tests</h2>
+      <h2>Position tests</h2>
       <div
         data-h2-display="base(grid)"
         data-h2-grid-template-columns="base(1fr 1fr)"
@@ -814,7 +894,7 @@
         </div>
       </div>
       <!-- Shadow -->
-      <h2 data-h2-margin="base(x3, 0, 0, 0)">Shadow tests</h2>
+      <h2>Shadow tests</h2>
       <h3 data-h2-margin="base(x2, 0, 0, 0)">Configured values</h3>
       <div
         data-h2-display="base(grid)"
@@ -856,356 +936,6 @@
         </div>
       </div>
     </section>
-    <!-- Align content -->
-    <div data-h2-align-content="base(flex-start) l-tablet:hover(flex-end)"></div>
-    <!-- Align items -->
-    <div data-h2-align-items="base(flex-start) l-tablet:hover(flex-end)"></div>
-    <!-- Align self -->
-    <div data-h2-align-self="base(flex-start) l-tablet:hover(flex-end)"></div>
-    <!-- Borders -->
-    <div
-      data-h2-display="base(grid)"
-      data-h2-grid-template-columns="base(1fr 1fr 1fr 1fr 1fr)"
-      data-h2-gap="base(x2)"
-    >
-      <div data-h2-border="base(all, 1px solid black)"></div>
-      <div data-h2-border="base(right-left, 1px dashed cyan) base(left, 3px solid black)"></div>
-      <div data-h2-border="base(all, x1, solid, primary.7.darkest)"></div>
-      <div data-h2-border="base(all, x2, solid, primary) base(right, 34px, dashed, blue)"></div>
-      <div data-h2-border="base(all, 1rem, solid, #FF0000)"></div>
-      <div data-h2-border="base(blooh, x9, solid, primary)"></div>
-    </div>
-    <!-- Containers -->
-    <div data-h2-container="base(center, small)">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur mollitia totam tempore beatae iusto sed, alias amet nisi quod soluta quam ipsam reiciendis eveniet reprehenderit magnam, rem quis? Aliquid, ullam!</p>
-    </div>
-    <div data-h2-container="base(left, small)">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur mollitia totam tempore beatae iusto sed, alias amet nisi quod soluta quam ipsam reiciendis eveniet reprehenderit magnam, rem quis? Aliquid, ullam!</p>
-    </div>
-    <div data-h2-container="base(right, small) desktop(left, medium)">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur mollitia totam tempore beatae iusto sed, alias amet nisi quod soluta quam ipsam reiciendis eveniet reprehenderit magnam, rem quis? Aliquid, ullam!</p>
-    </div>
-    <div data-h2-container="base(right, 20rem)">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur mollitia totam tempore beatae iusto sed, alias amet nisi quod soluta quam ipsam reiciendis eveniet reprehenderit magnam, rem quis? Aliquid, ullam!</p>
-    </div>
-    <div data-h2-container="base(center, medium, 0)">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur mollitia totam tempore beatae iusto sed, alias amet nisi quod soluta quam ipsam reiciendis eveniet reprehenderit magnam, rem quis? Aliquid, ullam!</p>
-    </div>
-    <div data-h2-container="base(center, medium, x3)">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur mollitia totam tempore beatae iusto sed, alias amet nisi quod soluta quam ipsam reiciendis eveniet reprehenderit magnam, rem quis? Aliquid, ullam!</p>
-    </div>
-    <div data-h2-container="base(center, x10, x3)">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur mollitia totam tempore beatae iusto sed, alias amet nisi quod soluta quam ipsam reiciendis eveniet reprehenderit magnam, rem quis? Aliquid, ullam!</p>
-    </div>
-    <h2>Cursor</h2>
-    <div
-      data-h2-width="base(5rem)"
-      data-h2-height="base(5rem)"
-      data-h2-bg-color="base(primary)"
-      data-h2-cursor="base(pointer)"
-    ></div>
-    <!-- Display -->
-    <div data-h2-display="base(none) l-tablet(block)"></div>
-    <!-- Flex basis -->
-    <h2>Flex basis</h2>
-    <div data-h2-flex-basis="base(100%)"></div>
-    <!-- Flex direction -->
-    <!-- Flex grid -->
-    
-    <!-- Flex wrap -->
-    <!-- Font color -->
-    <span data-h2-font-color="base(primary) base:dark(yellow)">TEST FONT</span>
-    <span data-h2-font-color="desktop(myLinearGradient)">TEST FONT</span>
-    <span data-h2-font-color="base(myRadialGradient)">TEST FONT</span>
-    <!-- Font family -->
-    <p data-h2-font-family="base(sans)">This is a font family test.</p>
-    <p
-      font
-      data-h2-font-family="base(serif)"
-    >
-      This is a font family test.
-    </p>
-    <!-- Font size -->
-    <div data-h2-font-size="base(h2) l-tablet(24px) desktop(54px, 3rem)"></div>
-    <div data-h2-font-size="base(30rem, 1.5)"></div>
-    <div data-h2-font-size="base(normal, 2.0)"></div>
-    <div data-h2-flex-grid="base(flex-start, 0, x3)">
-      <div data-h2-flex-item="base(1of2)">
-        <h1 data-h2-font-size="base(h1)">Heading 1</h1>
-        <h2 data-h2-font-size="base(h2)">Heading 2</h2>
-        <h3 data-h2-font-size="base(h3, 2)">Heading 3</h3>
-        <h4 data-h2-font-size="base(h4)">Heading 4</h4>
-        <h5 data-h2-font-size="base(h5)">Heading 5</h5>
-        <h6 data-h2-font-size="base(h6)">Heading 6</h6>
-        <p data-h2-font-size="base(copy)">Body copy</p>
-      </div>
-      <div data-h2-flex-item="base(1of2)">
-        <h1>Heading 1</h1>
-        <h2>Heading 2</h2>
-        <h3>Heading 3</h3>
-        <h4>Heading 4</h4>
-        <h5>Heading 5</h5>
-        <h6>Heading 6</h6>
-        <p>Body copy</p>
-      </div>
-    </div>
-    <!-- Font style -->
-    <!-- Font weight -->
-    <div data-h2-font-weight="base(200) l-tablet(700)"></div>
-    <!-- Gap -->
-    <div data-h2-gap="base(x3)"></div>
-    <div data-h2-gap="base(45px, row)"></div>
-    <div data-h2-gap="base(none, column)"></div>
-    <div data-h2-gap="base(x9, fun)"></div>
-    <div data-h2-gap="base(none, all)"></div>
-    <div data-h2-gap="base(-x5)"></div>
-    <div data-h2-gap="base(x56, all)"></div>
-    <div data-h2-gap="base(x56, all, YOOOO)"></div>
-    <!-- Grid column -->
-    <h2>Grid column</h2>
-    <div
-      data-h2-display="base(grid)"
-      data-h2-grid-template-columns="base(1fr 1fr 1fr)"
-    >
-      <div data-h2-grid-column="base(1 / 3)">Item 1</div>
-      <div>Item 2</div>
-      <div>Item 3</div>
-    </div>
-    <!-- Grid row -->
-    <h2>Grid row</h2>
-    <div
-      data-h2-display="base(grid)"
-      data-h2-grid-template-rows="base(1fr 1fr 1fr)"
-    >
-      <div data-h2-grid-row="base(1 / 3)">Item 1</div>
-      <div>Item 2</div>
-      <div>Item 3</div>
-    </div>
-    <!-- Grid template columns -->
-    <div data-h2-grid-template-columns="base(1fr 1fr)"></div>
-    <div data-h2-grid-template-columns="base(20px   1fr) l-tablet(1fr 1fr 1fr)"></div>
-    <div data-h2-grid-template-columns="base:dark(50px 50px)"></div>
-    <div data-h2-grid-template-columns="base(x4 50px)"></div>
-    <!-- Grid template rows -->
-    <div data-h2-grid-template-rows="base(1fr 1fr)"></div>
-    <div data-h2-grid-template-rows="base(20px 1fr) l-tablet(1fr 1fr 1fr)"></div>
-    <div data-h2-grid-template-rows="base:dark(50px 50px)"></div>
-    <div data-h2-grid-template-rows="base(x5 x6)"></div>
-    <!-- Height -->
-    <div data-h2-height="base(auto)"></div>
-    <div data-h2-height="base(50px) base:dark(100px) l-tablet(x1)"></div>
-    <!-- Justify content -->
-    <!-- Layer -->
-    <div data-h2-layer="base(3)"></div>
-    <div data-h2-layer="base(2, relative)"></div>
-    <h2>List style</h2>
-    <ul data-h2-list-style="base(none)">
-      <li>Item 1</li>
-      <li>Item 2</li>
-      <li>Item 3</li>
-    </ul>
-    <!-- Margin -->
-    <h2>Margins</h2>
-    <div data-h2-margin="base(auto, x3)"></div>
-    <div data-h2-margin="base(x1, x3)"></div>
-    <div data-h2-margin="base(12px, 12px, 12px, 12px)"></div>
-    <div data-h2-margin="base(x5)"></div>
-    <div data-h2-margin="base(x8, x8, x8, x4)"></div>
-    <div data-h2-margin="base(auto, -x3)"></div>
-    <div data-h2-margin="base(-x1, -x3)"></div>
-    <div data-h2-margin="base(-12px, -12px, -12px, -12px)"></div>
-    <div data-h2-margin="base(-x5)"></div>
-    <div data-h2-margin="base(-x8, -x8, -x8, -x4)"></div>
-    <div data-h2-margin="base(-x8, things, -x8)"></div>
-    <div data-h2-margin="base(-x8, things, -x8, -x4)"></div>
-    <div data-h2-margin-top="base(x3)"></div>
-    <div data-h2-margin-right="base(x3)"></div>
-    <div data-h2-margin-bottom="base(x3)"></div>
-    <div data-h2-margin-left="base(x3)"></div>
-    <!-- Max height -->
-    <h2>Max height</h2>
-    <div
-      data-h2-height="base(40rem)"
-      data-h2-width="base(5rem)"
-      data-h2-bg-color="base(primary)"
-      data-h2-max-height="base(5rem)"
-    ></div>
-    <!-- Max width -->
-    <h2>Max width</h2>
-    <div
-      data-h2-width="base(40rem)"
-      data-h2-height="base(5rem)"
-      data-h2-bg-color="base(primary)"
-      data-h2-max-width="base(5rem)"
-    ></div>
-    <!-- Min height -->
-    <h2>Min height</h2>
-    <div
-      data-h2-height="base(2rem)"
-      data-h2-width="base(5rem)"
-      data-h2-bg-color="base(primary)"
-      data-h2-min-height="base(5rem)"
-    ></div>
-    <!-- Min width -->
-    <h2>Min width</h2>
-    <div
-      data-h2-width="base(2rem)"
-      data-h2-height="base(5rem)"
-      data-h2-bg-color="base(primary)"
-      data-h2-min-width="base(5rem)"
-    ></div>
-    <!-- Offset -->
-    <div data-h2-location="base(x4, auto, x5, auto)"></div>
-    <div data-h2-location="base(none, auto, auto, auto)"></div>
-    <div data-h2-location="base(0, 5rem, 3rem, 3rem)"></div>
-    <div data-h2-offset="base(3rem, x10, auto, 4px)"></div>
-    <div data-h2-offset="base(x1)"></div>
-    <div data-h2-offset="base(x5, 40px)"></div>
-    <!-- Opacity -->
-    <div data-h2-opacity=""></div>
-    <div data-h2-opacioty="base(50%)"></div>
-    <div data-h2-opacity="base(.5) l-tablet:dark(40%)"></div>
-    <div data-h2-opacity="base(10%) desktop(55%)"></div>
-    <div data-h2-opacity="base(.4) base:disabled(.6)"></div>
-    <!-- Order -->
-    <!-- Overflow -->
-    <div data-h2-overflow="desktop(all, hidden)"></div>
-    <div data-h2-overflow="base(hidden)"></div>
-    <div data-h2-overflow="base(hidden, x)"></div>
-    <div data-h2-overflow="base(scroll, y)"></div>
-    <!-- Overlays -->
-    <div
-      data-h2-height="base(x5)"
-      data-h2-width="base(x5)"
-      data-h2-position="base(relative)"
-    >
-      <div data-h2-overlay="base(primary)"></div>
-    </div>
-    <div
-      data-h2-height="base(x5)"
-      data-h2-width="base(x5)"
-      data-h2-position="base(relative)"
-    >
-      <div data-h2-overlay="base(#00FF00) l-tablet(yellow)"></div>
-    </div>
-    <div
-      data-h2-height="base(x5)"
-      data-h2-width="base(x5)"
-      data-h2-position="base(relative)"
-    >
-      <div data-h2-overlay="base(blue) base:dark(green) base:hover(black)"></div>
-    </div>
-    <div
-      data-h2-height="base(x5)"
-      data-h2-width="base(x5)"
-      data-h2-position="base(relative)"
-    >
-      <div data-h2-overlay="base(myLinearGradient)"></div>
-    </div>
-    <div
-      data-h2-height="base(x5)"
-      data-h2-width="base(x5)"
-      data-h2-position="base(relative)"
-    >
-      <div data-h2-overlay="base(primary, 50%)"></div>
-    </div>
-    <!-- Padding -->
-    <h2>Padding</h2>
-    <div data-h2-padding="base(x1, x3)"></div>
-    <div data-h2-padding="base(12px, 12px, 12px, 12px)"></div>
-    <div data-h2-padding="base(x5)"></div>
-    <div data-h2-padding="base(x8, x8, x8, x4)"></div>
-    <div data-h2-padding="base(x8, x8, x8, x4, x7)"></div>
-    <div data-h2-padding-top="base(x3)"></div>
-    <div data-h2-padding-right="base(x3)"></div>
-    <div data-h2-padding-bottom="base(x3)"></div>
-    <div data-h2-padding-left="base(x3)"></div>
-    <!-- Position -->
-    <div data-h2-position="base(static)"></div>
-    <div data-h2-position="base(absolute)"></div>
-    <div data-h2-position="base(nonsense)"></div>
-    <!-- Radius -->
-    <div data-h2-radius="base(rounded)"></div>
-    <div data-h2-radius="base(1px, 2px, 3px, 4px)"></div>
-    <div data-h2-radius="base(10px, 20px)"></div>
-    <div data-h2-radius="base(4px, rounded)"></div>
-    <!-- Shadow -->
-    <h2>Shadows</h2>
-    <div
-      data-h2-padding="base(3rem)"
-      data-h2-shadow="base(s)"
-    ></div>
-    <div
-      data-h2-padding="base(3rem)"
-      data-h2-shadow="base(1px 1px 1px 1px #FF0000) l-tablet(m)"
-    ></div>
-    <!-- Text align -->
-    <!-- Text decoration -->
-    <!-- Text transform -->
-    <!-- Transition -->
-    <h2>Transition</h2>
-    <div
-      data-h2-bg-color="base(primary) base:hover(accent)"
-      data-h2-height="base(3rem)"
-      data-h2-width="base(3rem)"
-      data-h2-transition="base(background-color, .2s, ease) base:hover(background-color, .5s, ease)"
-    ></div>
-    <div
-      data-h2-bg-color="base(primary) base:hover(accent)"
-      data-h2-height="base(3rem)"
-      data-h2-width="base(3rem)"
-      data-h2-transition="base(background-color, 1s, ease, 3s) base:hover(background-color, .3s, ease)"
-    ></div>
-    <div
-      data-h2-bg-color="base(primary) base:hover(accent)"
-      data-h2-height="base(3rem)"
-      data-h2-width="base(3rem)"
-      data-h2-transition="base(background-color, default, default, default) base:hover(background-color, default, ease-in)"
-    ></div>
-    <!-- Vertical align -->
-    <h2>Vertical align</h2>
-    <div>
-      <span>Line item</span>
-      <div
-        data-h2-bg-color="base(magenta)"
-        data-h2-display="base(inline-block)"
-        data-h2-height="base(30px)"
-        data-h2-width="base(30px)"
-        data-h2-vertical-align="base(middle)"
-      ></div>
-      <span>Other line item</span>
-    </div>
-    <!-- Visibility -->
-    <div data-h2-visibility="base(hidden)"></div>
-    <div data-h2-visibility="base(invisible)"></div>
-    <div data-h2-visibility="base(visible)"></div>
-    <div data-h2-visibility="base(booyah)"></div>
-    <!-- Width -->
-    <div data-h2-width="base(auto)"></div>
-    <div data-h2-width="base(50px) base:dark(100px) l-tablet(x1)"></div>
-    <div data-h2-grid-template-columns="base(repeat(6, 1fr))"></div>
-    <p>This is text data-h2-bg-color other text</p>
-    <p>data-h2-bg-color</p>
-    <p>data-h2-bg-color=""</p>
-    <p>data-h2-bg-color="base()"</p>
-    <p>"data-h2-bg-color": "base(blue)"</p>
-    <p>"data-h2-bg-color":"base(black) base:dark(white)"</p>
-    <p>'data-h2-bg-color': 
-      'base(black) base:hover(blue)'</p>
-    <p>'data-h2-bg-color': 'green'</p>
-    <p>'data-h2-font-color': 'base()'</p>
-    <p>'data-h2-font-color': 'base(blue.yellow))'</p>
-    <p>'data-h2-bg-color': 'base(blue.yellow))'</p>
-    <div 
-      data-h2-margin="
-        base(0, auto, x1, auto) 
-        p-tablet:dark(.75rem, auto, 0, auto) 
-        l-tablet(.9rem, auto, 0, auto)
-      ">
-      Things
-    </div>
-    <p>data-h2-background-color="(test)"</p>
-    <p>data-h2-background-color="base(test, things)"</p>
-    <script src="../scripts/app.js"></script>
+    <script src="../../scripts/app.js"></script>
   </body>
 </html>

@@ -1,8 +1,9 @@
 {
   "info": {
     "docs": "https://beta.hydrogen.design",
-    "settings": "https://beta.hydrogen.design/settings",
+    "settings": "https://beta.hydrogen.design/en/docs/setup/configuration/",
     "code": "https://github.com/hydrogen-design-system/hydrogen",
+    "feedback": "https://forms.office.com/r/vz80dsUabZ",
     "roadmap": "https://github.com/orgs/hydrogen-design-system/projects/1"
   },
   "debug": false,
