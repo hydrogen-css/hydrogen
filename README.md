@@ -6,7 +6,7 @@ Hydrogen is an open-source design and CSS utility framework powered by data-attr
 
 It leverages data-attributes to allow the styling of elements right in your markup, rather than creating your own classes. Hydrogen offers a comprehensive library of tools and configurations for easy, seamless development. When you're ready to publish your project, it then processes your markup and creates a custom CSS file that contains only the code you've used, reducing its own footprint.
 
-[Visit the documentation website for details.](https://hydrogen.design)
+[Website](https://hydrogen.design) | [Roadmap](https://github.com/orgs/hydrogen-css/projects/1) | [Feedback](https://forms.office.com/r/vz80dsUabZ)
 
 ## 🥳 Upcoming 2.0.0 release
 
@@ -32,7 +32,7 @@ You can install the latest `2.0.0` beta release by running `npm install @hydroge
 
 Hydrogen uses a custom `data-attribute` syntax for complex styling.
 
-`data-h2-UTILITY="MEDIA:STATE(PARAMETERS)"`
+`data-h2-property="query:modifiers(options)"`
 
 An example of a Hydrogen attribute in use would be something like:
 
