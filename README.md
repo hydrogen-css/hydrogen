@@ -1,18 +1,28 @@
 # ☀️ Hydrogen
 
-<img alt="npm" src="https://img.shields.io/npm/v/@hydrogen-design-system/hydrogen.css?color=%239d5cff&label=latest">
+<img alt="npm latest" src="https://img.shields.io/npm/v/@hydrogen-css/hydrogen/latest?color=%239D5CFF&label=latest&style=for-the-badge"> <img alt="npm beta" src="https://img.shields.io/npm/v/@hydrogen-css/hydrogen/beta?color=%239D5CFF&label=beta&style=for-the-badge">
 
-Hydrogen is a utility-first styling tool for creating web interfaces without writing CSS.
+Hydrogen is an open-source design and CSS utility framework powered by data-attributes.
 
 It leverages data-attributes to allow the styling of elements right in your markup, rather than creating your own classes. Hydrogen offers a comprehensive library of tools and configurations for easy, seamless development. When you're ready to publish your project, it then processes your markup and creates a custom CSS file that contains only the code you've used, reducing its own footprint.
 
 [Visit the documentation website for details.](https://hydrogen.design)
 
+## 🥳 Upcoming 2.0.0 release
+
+Hydrogen is about to undergo some significant improvements, including a drastic speed reduction and a massive feature drop. This release does come with some breaking changes, and an upgrade guide will be provided when the time comes.
+
+You can read more about what's included by viewing the `release/2.0.0` branch [here on Github](https://github.com/hydrogen-css/hydrogen/tree/release/2.0.0).
+
+`2.0.0` is almost ready to go, but the [documentation site](https://beta.hydrogen.design) needs to be wrapped up first. In the meantime, if you plan to use Hydrogen on a new project, we recommend installing `2.0.0` now to make it a seamless transition.
+
+You can install the latest `2.0.0` beta release by running `npm install @hydrogen-css/hydrogen@beta --save-dev`
+
 ## 🛠️ Basic Usage
 
 ### Installation
 
-- run `npm install @hydrogen-design-system/hydrogen.css` to install Hydrogen
+- run `npm install @hydrogen-css/hydrogen` to install Hydrogen
 - run `npx h2-init` to setup your input/output directories
 - modify your `hydrogen.config.json` file to match your theme
 - run `npx h2-watch` to watch your files for changes and compile when a change is detected
