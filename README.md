@@ -1,19 +1,34 @@
 # ☀️ Hydrogen
 
-<img alt="npm" src="https://img.shields.io/npm/v/@hydrogen-design-system/hydrogen.css?color=%239d5cff&label=latest">
+<img alt="npm latest" src="https://img.shields.io/npm/v/@hydrogen-css/hydrogen/latest?color=%239D5CFF&label=latest&style=for-the-badge">
+<img alt="npm beta" src="https://img.shields.io/npm/v/@hydrogen-css/hydrogen/beta?color=%239D5CFF&label=latest&style=for-the-badge">
+<br><br>
+Hydrogen is an open-source design and CSS utility framework powered by data-attributes.
 
-Hydrogen is a utility-first styling tool for creating web interfaces without writing CSS.
+By parsing the contents of custom `data-h2-` attributes, Hydrogen allows you to style elements completely from your markup. It comes equipped with a comprehensive library of tools and configurations for easy, seamless development. At runtime, it processes your markup and builds a CSS file that contains only the code you've used, preventing duplication and bloat.
 
-It leverages data-attributes to allow the styling of elements, media queries, states, and dark mode right in your markup. Hydrogen offers a comprehensive library of tools and configurations for easy, seamless development. Hydrogen processes your markup and creates a custom CSS file that contains only the code you've used, reducing its own footprint.
+[Website](https://beta.hydrogen.design) | [Feedback](https://forms.office.com/r/vz80dsUabZ)
 
-[Visit the documentation website for details.](https://hydrogen.design)
+## 📝 Quick guides
 
-## 🛠️ Basic Usage
+- [Syntax](https://beta.hydrogen.design/en/docs/basics/syntax)
+- [Queries](https://beta.hydrogen.design/en/docs/basics/media)
+- Modifiers
+  - [:id[]](https://beta.hydrogen.design/en/docs/basics/modifiers/id)
+  - [:class[]](https://beta.hydrogen.design/en/docs/basics/modifiers/class)
+  - [:children[]](https://beta.hydrogen.design/en/docs/basics/modifiers/children)
+  - [:state](https://beta.hydrogen.design/en/docs/basics/modifiers/state)
+  - [:dark](https://beta.hydrogen.design/en/docs/basics/modifiers/dark)
+- [Layouts](https://beta.hydrogen.design/en/docs/basics/layout)
+- [Typography](https://beta.hydrogen.design/en/docs/basics/typography)
+
+## 🛠️ Basic usage
 
 ### Installation
 
-- run `npm install @hydrogen-design-system/hydrogen.css` to install Hydrogen
-- run `npx h2-init` to setup your input/output directories
+- navigate to your project
+- run `npm install @hydrogen-css/hydrogen` to install Hydrogen
+- run `npx h2-init` to create a configuration file and set up your input/output directories
 - modify your `hydrogen.config.json` file to match your theme
 - add `data-h2` to your `<html>` element or parent wrapper
 - run `npx h2-watch` to watch your files for changes and compile when a change is detected
@@ -21,108 +36,43 @@ It leverages data-attributes to allow the styling of elements, media queries, st
 
 ### Syntax
 
-Hydrogen uses a custom `data-attribute` syntax for complex styling.
+Hydrogen uses a custom `data-attribute` syntax:
 
-`data-h2-UTILITY="MEDIA:DARK:STATE(PARAMETERS)"`
+`data-h2-property="query:modifiers(options)"`
 
-An example of a Hydrogen attribute in use would be something like:
+An example of a Hydrogen attribute in use looks something like this:
 
-`data-h2-bg-color="base(primary) base:hover(accent)"`
+`data-h2-color="base(primary) base:hover(accent)"`
 
-This repository also contains a handy `hydrogen.snippets.json` file that contains snippet automation for VS Code, enabling auto completion and tab stops.
+This repository also contains a handy `hydrogen.snippets.json` file that offers snippet automation for VS Code, enabling auto completion and tab stops so that you don't have to memorize options for every property.
 
 ## 🏗️ Configuration
 
-You can learn more about Hydrogen's configuration file on the [documentation website](https://hydrogen.design/#configuration).
+Hydrogen is configured using a `hydrogen.config.json` file located at the root of your project. The `npx h2-init` script is designed to create this file for you and prompts for some required information to get things working.
 
-Hydrogen is configured using a `hydrogen.config.json` file located at the root of your project. The `npx h2-init` script is designed to create this file for you and prompts for some required information before you can proceed.
+Within this configuration file, you can modify many of Hydrogen's options to include values that suit your project's needs and theme, including custom media queries, colors, typography, and shadows.
 
-Within this configuration file, you can modify many of Hydrogen's utilities to include values that suit your project's needs and theme, including custom media queries, colors, whitespace, and shadows.
+You can learn more about [configuring Hydrogen in the documentation](https://beta.hydrogen.design/en/docs/setup/configuration).
 
 ## 🤖 Features
 
-### Compression
+### Speed and compression
 
-Hydrogen uses custom scripting to scan your code for `data-h2` attributes and then builds a CSS stylesheet that contains only Hydrogen's base and the attributes you've used. No bloat. No duplication. This means that the library in production is extremely small while allowing it to provide a robust set of features and support complex customization.
+Hydrogen uses custom scripting to scan your code for `data-h2-` attributes and then builds a CSS stylesheet that contains only Hydrogen's core and the attributes you've used. No bloat. No duplication. This means that the library in production is concise while allowing it to provide a robust set of features and support complex customization.
 
 It also runs Autoprefixer and CSSNano on itself to provide a complete, production ready file.
 
 ### Utilities
 
-You can learn about [utility usage in the documentation](https://hydrogen.design/#backgroundColor), but Hydrogen offers the following utilities:
+Hydrogen offers over 40 utility attributes and counting. Many replicate standard utility behaviour, while others offer convenient shortcuts that simplify what is normally complex CSS.
 
-- `align-content`
-- `align-items`
-- `align-self`
-- `background-color`
-- `border`
-- `color`
-- `container`
-- `cursor`
-- `display`
-- `flex-basis`
-- `flex-direction`
-- `flex-grid` and `flex-item`
-- `flex-grow`
-- `flex-wrap`
-- `font-family`
-- `font-size`
-- `font-style`
-- `font-weight`
-- `gap`
-- `grid-column`
-- `grid-row`
-- `grid-template-columns`
-- `grid-template-rows`
-- `height`
-- `justify-content`
-- `justify-items`
-- `layer` for `z-index` control
-- `list-style`
-- `margin`
-- `max-height`
-- `max-width`
-- `min-height`
-- `min-width`
-- `offset` for positioning control
-- `opacity`
-- `order` for flex item order control
-- `outline`
-- `overflow`
-- `overlay`
-- `padding`
-- `position`
-- `radius`
-- `shadow`
-- `text-align`
-- `text-decoration`
-- `text-transform`
-- `transition`
-- `visibility`
-- `width`
+You can learn about [all available utility attributes in the documentation](https://beta.hydrogen.design/attributes).
 
-### States
+### Queries and modifiers
 
-Along with media queries, Hydrogen offers the ability to modify attributes using the following [state](https://hydrogen.design/#states) keys:
+The biggest advantage to Hydrogen's `data-attribute` syntax is that it enables the use of inline media queries, selectors, states, targeting of nested elements, and dark mode. By chaining modifiers onto your query, you can target complex combinations of elements, manage styles based on the presence of classes or ids, bulk style an element's children, and more.
 
-- `:active`
-- `:checked`
-- `:disabled`
-- `:enabled`
-- `:focus`
-- `:hover`
-- `:link`
-- `:optional`
-- `:required`
-- `:valid`
-- `:visited`
-
-### Dark Mode
-
-You can specify unique styles for users who have their browsers/OS set to prefer dark mode or simply want to toggle it on using a class. This can be done by adding `:dark` to your media query calls:
-
-- `data-h2-bg-color="base(primary)"` will set the default background color to `primary`;
-- `data-h2-bg-color="base(primary) base:dark(secondary)"` will set the default background color to `primary`, and if the user prefers dark mode, will set the background to `secondary`
+[Learn more about modifiers in the documentation.](https://beta.hydrogen.design/basics/modifiers)
 
 # Development and contribution
 
@@ -131,14 +81,4 @@ You can specify unique styles for users who have their browsers/OS set to prefer
 - to start Hydrogen's test server, run `npm start`
 - to run a single test compile, run `npm run build`
 
-## Adding CSS properties
-
-- create the property script (generic or custom) in `lib/scripts/properties`
-- add imports to the build script in `lib/scripts/build-hydrogen.js`
-- add the property's scripts to the build in `lib/scripts/build-hydrogen.js`
-- add the new property to the property data model in `lib/data/property-model.json`
-- test the property by adding it to the testing UI markup in `tests/markup/site`
-- if it's a custom property, add tests to the error testing markup in `tests/markup/errors`
-- add the new property's syntax to the snippets file in `hydrogen.snippets.json`
-- update the project's own local .vscode snippets file in `.vscode/hydrogen.code-snippets`
-- add release notes for the property in the changelog
+You can read up on specifics about [how Hydrogen works on a technical level in the development README](https://github.com/hydrogen-css/hydrogen/blob/release/2.0.0/lib/README.md).

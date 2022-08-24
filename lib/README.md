@@ -26,3 +26,15 @@ Hydrogen takes the following steps to build its CSS file:
 - Hydrogen then loops through all the completed media array entries, appending them to a single string and closing query brackets where necessary
 - the CSS file is then written as a "raw" file so that it can be processed
 - AutoPrefixer and CSSnano are both run on the file with custom settings to produce the final CSS
+
+# Adding CSS properties
+
+- create the property script (generic or custom) in `lib/scripts/properties`
+- add imports to the build script in `lib/scripts/build-hydrogen.js`
+- add the property's scripts to the build in `lib/scripts/build-hydrogen.js`
+- add the new property to the property data model in `lib/data/property-model.json`
+- test the property by adding it to the testing UI markup in `tests/markup/site`
+- if it's a custom property, add tests to the error testing markup in `tests/markup/errors`
+- add the new property's syntax to the snippets file in `hydrogen.snippets.json`
+- update the project's own local .vscode snippets file in `.vscode/hydrogen.code-snippets`
+- add release notes for the property in the changelog

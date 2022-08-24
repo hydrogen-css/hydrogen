@@ -1,12 +1,12 @@
 {
-  "name": "@hydrogen-design-system/hydrogen.css",
+  "name": "@hydrogen-css/hydrogen",
   "version": "2.0.0-beta.25",
-  "description": "A CSS utility framework that leverages data-attributes to provide clarity and flexibility. MIT Licensed.",
+  "description": "An open-source design and CSS utility framework powered by data-attributes. MIT Licensed.",
   "keywords": [
     "Hydrogen",
-    "design",
-    "system",
     "css",
+    "design",
+    "utility",
     "framework"
   ],
   "main": "./bin/index.js",
@@ -23,16 +23,16 @@
   "scripts": {
     "start": "cd tests;npm start",
     "build": "cd tests;npx h2-build",
-    "setup": "npm install && npm link && cd tests;npm link @hydrogen-design-system/hydrogen.css"
+    "setup": "npm install && npm link && cd tests;npm link @hydrogen-css/hydrogen"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hydrogen-design-system/hydrogen.git"
+    "url": "git+https://github.com/hydrogen-css/hydrogen.git"
   },
   "author": "Josh Beveridge",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hydrogen-design-system/hydrogen/issues"
+    "url": "https://github.com/hydrogen-css/hydrogen/issues"
   },
   "homepage": "https://hydrogen.design",
   "dependencies": {
