@@ -43,7 +43,7 @@
     "colors": "^1.4.0",
     "cssnano": "^5.0.6",
     "cssnano-preset-lite": "^2.0.1",
-    "del": "^6.0.0",
+    "del": "^7.0.0",
     "glob": "^8.0.1",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
