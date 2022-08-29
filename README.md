@@ -10,7 +10,7 @@ It leverages data-attributes to allow the styling of elements right in your mark
 
 ## 🥳 Upcoming 2.0.0 release
 
-Hydrogen is about to undergo some significant improvements, including a drastic speed reduction and a massive feature drop. This release does come with some breaking changes, and an upgrade guide will be provided when the time comes.
+Hydrogen is about to undergo some significant improvements, including a drastic speed increase and a massive feature drop. This release does come with some breaking changes, and an upgrade guide will be provided when the time comes.
 
 You can read more about what's included by viewing the `release/2.0.0` branch [here on Github](https://github.com/hydrogen-css/hydrogen/tree/release/2.0.0).
 
