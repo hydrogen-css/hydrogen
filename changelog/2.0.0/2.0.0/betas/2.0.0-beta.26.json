@@ -1,0 +1,140 @@
+{
+  "version": "2.0.0-beta.26",
+  "date": "2022/AUG/30",
+  "author": "Josh Beveridge",
+  "beta": true,
+  "en": {
+    "breaking": [
+      {
+        "changes": [
+          "Reworks gap so that it better aligns with other syntax choices around columns/rows/axes. Passing 1 option now sets a gap value on both, while 2 options applies to column and row respectively."
+        ],
+        "migrations": [
+          "Find instances of gap in your code and review the axes chosen, and replace the second value with a space unit where necessary.",
+          "For example: data-h2-gap='base(x3, both)' => data-h2-gap='base(x3)'",
+          "Another example: data-h2-gap='base(x2, row)' => data-h2-gap='base(0, x2)'"
+        ],
+        "attributes": [
+          "gap"
+        ],
+        "log": []
+      },
+      {
+        "changes": [
+          "Reworks overflow so that it better aligns with other syntax choices around columns/rows/axes. Passing 1 option now sets an overflow value on both axes, while 2 options applies to x and y respectively."
+        ],
+        "migrations": [
+          "Find instances of overflow in your code and review the axes chosen, and replace the second value with an overflow value where necessary.",
+          "For example: data-h2-overflow='base(hidden, y)' => data-h2-overflow='base(visible, hidden)'",
+          "Another example: data-h2-overflow='base(hidden, both)' => data-h2-overflow='base(hidden)'"
+        ],
+        "attributes": [
+          "overflow"
+        ],
+        "log": []
+      },
+      {
+        "changes": [
+          "Simplifies the flex-grid syntax even further to accept 2 (alignment, gutter) or 3 (alignment, column_gutter, row_gutter) values."
+        ],
+        "migrations": [
+          "Find instances of flex-grid in your code and remove the second option entirely.",
+          "For example: data-h2-flex-grid='base(center, x2, x3)' => data-h2-flex-grid='base(center, x3)'",
+          "Another example: data-h2-flex-grid='base(center, x2, 40px, 20px)' => data-h2-flex-grid='base(center, 40px, 20px)'"
+        ],
+        "attributes": [
+          "flex-grid"
+        ],
+        "log": [
+          "The flex-grid is now a deprecated back-up for browser support purposes. CSS grid is fully supported in 2.0.0, and flexbox was never meant to be a grid replacement. It has small implementation bugs regardless of the approach taken to generate a grid, so it's been simplified for ease-of-use.",
+          "Because flexbox's support of gap is implemented differently than grid, the flex-grid relies on a negative margin hack to allow for gap/gutter support. This approach has its downsides though, specifically that applying backgrounds, padding, or borders directly to the grid element doesn't behave as expected and that the negative margin overlaps previous elements if it's large.",
+          "These changes were implemented as the result of a bug with the current implementation relying on inline-flex over flex as the default grid display value. This gave the grid extra height if the grid items were smaller than the default line height of the tag used.",
+          "It's now recommended that applying styles to a grid be done on a wrapper element instead, which avoids a significant number of implementation bugs. Thus, grid-padding has been removed as an option from the flex-grid attribute."
+        ]
+      }
+    ],
+    "features": [
+      {
+        "changes": [
+          "Adds support for the transform property, including parsing of whitespace multipliers contained within the CSS declaration."
+        ],
+        "migrations": [],
+        "attributes": [
+          "transform"
+        ],
+        "log": [
+          "Transform is the first property that checks a CSS value for Hydrogen specific syntax and replaces it on the fly with the correct values."
+        ]
+      },
+      {
+        "changes": [
+          "Adds support for the line-height property, along with its alias, leading."
+        ],
+        "migrations": [],
+        "attributes": [
+          "line-height"
+        ],
+        "log": []
+      },
+      {
+        "changes": [
+          "Adds support for a new fraction-based column syntax for flex-item elements inside of a flex-grid.",
+          "The new syntax looks like this: data-h2-flex-item='base(1/2)'"
+        ],
+        "migrations": [],
+        "attributes": [
+          "flex-item"
+        ],
+        "log": []
+      }
+    ],
+    "optimizations": [
+      {
+        "changes": [
+          "Completely rewrites the query parsing script for cleaner and more reliable output, particularly when it comes to complex brackets nested inside of modifiers.",
+          "This also removed the parser's dependency on spaces as a delimiter for queries."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": [
+          "There's a complex parentheses bug where the parser will error out if there are is a non-equal number of opening and closing parentheses, but when the parentheses do in fact line up, the system doesn't have a way of identifying the problem.",
+          "There is no optimal solution for this situation - one option is to warn the user if a media key is found inside of an options list, but this causes a performance hit on all attributes, so it's been omitted for now."
+        ]
+      },
+      {
+        "changes": [
+          "Adds 'z-index' as an alias for 'layer'."
+        ],
+        "migrations": [],
+        "attributes": [
+          "layer"
+        ],
+        "log": []
+      }
+    ],
+    "bugfixes": [
+      {
+        "changes": [
+          "Fixes a bug where CSS colors using a . character were inadvertently resulting in an error."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Fixes a bug where queries that weren't separated by a space were parsed as a single query, resulting in an error."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      }
+    ]
+  },
+  "fr": {
+    "breaking": [],
+    "features": [],
+    "optimizations": [],
+    "bugfixes": []
+  }
+}

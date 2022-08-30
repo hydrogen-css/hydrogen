@@ -38,1018 +38,2662 @@
     />
   </head>
   <body data-h2-font-family="base(sans)">
-    <section 
-      data-h2-container="base(center, medium, x2)"
-      data-h2-margin="base(0, auto, x10, auto) base:children[h2](x4, 0, x1, 0) base:children[h3](x3, 0, x1, 0)">
-      <h1 data-h2-margin="base(x5, 0, 0, 0)">Hydrogen internal tests</h1>
-      <!-- ID selector support -->
-      <h2>ID targeting tests</h2>
-      <div
-        data-h2-display="base(grid)"
-        data-h2-grid-template-columns="base(1fr 1fr 1fr)"
-        data-h2-gap="base(x1, all)"
-        data-h2-font-size="base(10px)"
-        data-h2-padding="
-          base:children[>div](x1)
-          l-tablet:children[>div](x2)
-        "
-        data-h2-font-weight="base:children[p:first-child](700)"
-        data-h2-margin="base:children[p:first-child](0, 0, x.5, 0)">
-        <!-- Base query -->
-        <div data-h2-background-color="base(blue) base:id[testID](green)">
-          <p>Base query</p>
-          <p>Should be blue, because it's missing the ID, which would turn it green</p>
-        </div>
-        <div id="otherID" data-h2-background-color="base(blue) base:id[testID](green)">
-          <p>Base query</p>
-          <p>Should be blue, because it has an ID, but not the correct one, which would turn it green</p>
-        </div>
-        <div id="testID" data-h2-background-color="base(blue) base:id[testID](green)">
-          <p>Base query</p>
-          <p>Should be green, not blue, because it has the correct ID.</p>
-        </div>
-        <!-- Custom queries, same ID override -->
-        <div data-h2-background-color="base(blue) base:id[testID](green) l-tablet(pink) l-tablet:id[testID](red)">
-          <p>Custom query (l-tablet)</p>
-          <p>Should be pink, because it's missing the ID, which would turn it red</p>
-        </div>
-        <div id="otherID" data-h2-background-color="base(blue) base:id[testID](green) l-tablet(pink) l-tablet:id[testID](red)">
-          <p>Custom query (l-tablet)</p>
-          <p>Should be pink, because it has an ID, but not the correct one, which would turn it red</p>
-        </div>
-        <div id="testID" data-h2-background-color="base(blue) base:id[testID](green) l-tablet(pink) l-tablet:id[testID](red)">
-          <p>Custom query (l-tablet)</p>
-          <p>Should be red, not pink, because it has the correct ID.</p>
-        </div>
-        <!-- Custom queries, different ID override -->
-        <div data-h2-background-color="base(blue) base:id[testID](green) l-tablet(pink) l-tablet:id[newID](red)">
-          <p>Custom query (l-tablet)</p>
-          <p>Should be pink, because it's missing the ID, which would turn it red</p>
-        </div>
-        <div id="testID" data-h2-background-color="base(blue) base:id[testID](green) l-tablet(pink) l-tablet:id[newID](red)">
-          <p>Custom query (l-tablet)</p>
-          <p>Should be green, because it has the base query ID, but not the l-tablet ID, which would turn it red</p>
-        </div>
-        <div id="newID" data-h2-background-color="base(blue) base:id[testID](green) l-tablet(pink) l-tablet:id[newID](red)">
-          <p>Custom query (l-tablet)</p>
-          <p>Should be red, not pink or green, because it has the correct ID for l-tablet.</p>
-        </div>
-      </div>
-      <!-- Class selector support -->
-      <h2>Class targeting tests</h2>
-      <div
-        data-h2-display="base(grid)"
-        data-h2-grid-template-columns="base(1fr 1fr 1fr)"
-        data-h2-gap="base(x1, all)"
-        data-h2-padding="
-          base:children[>div](x1)
-          l-tablet:children[>div](x2)
-        "
-        data-h2-font-weight="base:children[p:first-child](700)"
-        data-h2-margin="base:children[p:first-child](0, 0, x.5, 0)">
-        <!-- Base query -->
-        <div data-h2-background-color="base(blue) base:class[active](yellow)">
-          <p>Base query</p>
-          <p>Should be blue, not yellow, because it has no matching classes.</p>
-        </div>
-        <div class="other_class" data-h2-background-color="base(blue) base:class[active](yellow)">
-          <p>Base query</p>
-          <p>Should be blue, not yellow, because it has a class, but not the correct class.</p>
-        </div>
-        <div class="active" data-h2-background-color="base(blue) base:class[active](yellow)">
-          <p>Base query</p>
-          <p>Should be yellow, not blue, because it has the correct class.</p>
-        </div>
-        <!-- Custom query -->
-        <div data-h2-background-color="base(blue) base:class[active](yellow) l-tablet:class[active](pink)">
-          <p>Custom query (l-tablet)</p>
-          <p>Should be blue, not yellow, because it has no matching classes.</p>
-        </div>
-        <div class="other_class" data-h2-background-color="base(blue) base:class[active](yellow) l-tablet:class[active](pink)">
-          <p>Custom query (l-tablet)</p>
-          <p>Should be blue, not yellow, because it has a class, but not the correct class.</p>
-        </div>
-        <div class="active" data-h2-background-color="base(blue) base:class[active](yellow) l-tablet:class[active](pink)">
-          <p>Custom query (l-tablet)</p>
-          <p>Should be pink, not blue or yellow, because it has the correct class at the l-tablet query.</p>
-        </div>
-        <!-- Multi class -->
-        <div data-h2-background-color="base(blue) base:class[active, extra](yellow)">
-          <p>Multi class</p>
-          <p>Should be blue, not yellow, because it has no classes.</p>
-        </div>
-        <div class="active" data-h2-background-color="base(blue) base:class[active, extra](yellow)">
-          <p>Multi class</p>
-          <p>Should be blue, not yellow, because it has a class, but not all the required classes.</p>
-        </div>
-        <div class="active extra" data-h2-background-color="base(blue) base:class[active, extra](yellow)">
-          <p>Multi class</p>
-          <p>Should be yellow, not blue, because it has the correct classes.</p>
-        </div>
-        <!-- Multi class and state -->
-        <div data-h2-background-color="base(blue) base:class[active, extra]:hover(yellow)">
-          <p>Multi class and state</p>
-          <p>Should be blue and not change on hover because it has no matching classes.</p>
-        </div>
-        <div class="active" data-h2-background-color="base(blue) base:class[active, extra]:hover(yellow)">
-          <p>Multi class and state</p>
-          <p>Should be blue and not change on hover because it has a class, but not all the required classes.</p>
-        </div>
-        <div class="active extra" data-h2-background-color="base(blue) base:class[active, extra]:hover(yellow)">
-          <p>Multi class and state</p>
-          <p>Should be blue and turn yellow on hover because it has the correct classes.</p>
-        </div>
-      </div>
-      <!-- Child selector support -->
-      <h2>Children targeting tests</h2>
-      <div
-        data-h2-display="base(grid)"
-        data-h2-grid-template-columns="base(1fr 1fr 1fr)"
-        data-h2-gap="base(x1, all)"
-        data-h2-font-size="base(10px)">
-        <div data-h2-background-color="base:children[div](blue) base:children[div]:dark(cyan)" data-h2-padding="base:children[div](x1)" data-h2-width="base:children[div](100%)" data-h2-margin="base:children[div](0, 0, x.5, 0)">
-          <p>All child divs should be blue and padded and turn cyan in dark mode<br><br><br><br></p>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <div data-h2-background-color="base:children[div](pink)" data-h2-padding="base:children[div](x1)" data-h2-width="base:children[>div](100%)" data-h2-margin="base:children[div](0, 0, x.5, 0)">
-          <p>All child >divs should be pink and padded except 1 which should be blue<br><br><br><br></p>
-          <div></div>
-          <div></div>
-          <div data-h2-background-color="base(blue)"></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <div data-h2-background-color="base:children[.child_test](pink) base:children[.child_test]:hover(orange)" data-h2-padding="base:children[.child_test](x1)" data-h2-width="base:children[.child_test](100%)" data-h2-margin="base:children[.child_test](0, 0, x.5, 0)">
-          <p>All child .child_test should be pink and padded and change to orange on hover except for 1 which should be yellow and change to green on hover<br><br></p>
-          <div class="child_test"></div>
-          <div class="child_test"></div>
-          <div class="child_test"></div>
-          <div class="child_test"></div>
-          <div class="child_test" data-h2-background-color="base(yellow) base:hover(green)"></div>
-          <div class="child_test"></div>
-        </div>
-      </div>
-      <div data-h2-margin="base:children[h5](x3, 0, x1, 0) base:children[p](x1, 0)">
-        <h5>The first section</h5>
-        <p>I'm a paragraph!</p>
-        <p>I'm another paragraph!</p>
-        <h5>I'm a new section</h5>
-        <p>Even more paragraphs!</p>
-      </div>
-      <h3>Pseudo element targeting tests</h3>
-      <div data-h2-font-weight="base:children[>p:first-child](700)">
-        <p>This child paragraph should be bold.</p>
-        <p>This child paragraph should NOT be bold.</p>
-      </div>
-      <div data-h2-font-weight="base:children[>p:not(.not_bold)](700)">
-        <p>This child paragraph should be bold.</p>
-        <p class="not_bold">This child paragraph should NOT be bold.</p>
-      </div>
-      <h3>Class and children combination tests</h3>
-      <div
-        data-h2-display="base(grid)"
-        data-h2-grid-template-columns="base(1fr 1fr)"
-        data-h2-gap="base(x1, all)"
-        data-h2-font-size="base(10px)">
-        <div data-h2-background-color="base:children[div](pink) base:children[div]:class[class_child_test](blue)" data-h2-padding="base:children[div](x1)" data-h2-width="base:children[div](100%)" data-h2-margin="base:children[div](0, 0, x.5, 0)">
-          <p>All child divs should be pink and padded, because the parent is missing the correct class<br><br></p>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <div class="class_child_test" data-h2-background-color="base:children[div](pink) base:children[div]:class[class_child_test](blue)" data-h2-padding="base:children[div](x1)" data-h2-width="base:children[div](100%)" data-h2-margin="base:children[div](0, 0, x.5, 0)">
-          <p>All child divs should be blue and padded, because the parent has the correct class<br><br></p>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </div>
-      <!-- Dark mode -->
-      <h2>Dark mode tests</h2>
-      <button type="button" onclick="enablePref()">Pref</button>
-      <button type="button" onclick="enableLight()">Light</button>
-      <button type="button" onclick="enableDark()">Dark</button>
-      <div
-        data-h2-display="base(grid)"
-        data-h2-grid-template-columns="base(1fr 1fr 1fr)"
-        data-h2-gap="base(x1, all)"
-        data-h2-font-size="base(10px)">
-        <div>
-          <h3>Preference</h3>
-          <div
-            data-h2-padding="base(x.5)" 
-            data-h2-margin="base(0, 0, x.5, 0)"
-            data-h2-background-color="base(green)">
-            Base: Green<br><br>
-            Should be green
-          </div>
-          <div
-            data-h2-padding="base(x.5)" 
-            data-h2-margin="base(0, 0, x.5, 0)"
-            data-h2-background-color="base(green) p-tablet(pink)">
-            Base: Green<br>
-            P-tablet: Pink<br><br>
-            Should be pink
-          </div>
-          <div
-            data-h2-padding="base(x.5)" 
-            data-h2-margin="base(0, 0, x.5, 0)"
-            data-h2-background-color="base(green) base:hover(red) p-tablet(pink)">
-            Base: Green<br>
-            Base:hover: Red<br>
-            P-tablet: Pink<br><br>
-            Should be pink<br>
-            Should be red on hover
-          </div>
-          <div
-            data-h2-padding="base(x.5)" 
-            data-h2-margin="base(0, 0, x.5, 0)"
-            data-h2-background-color="base(green) base:hover(red) base:dark(yellow) p-tablet:dark(cyan)">
-            Base: Green<br>
-            Base:hover: Red<br>
-            Base:dark: Yellow<br>
-            P-tablet:dark: Cyan<br><br>
-            <span data-h2-display="base(block) base:dark(none)">Should be green</span>
-            <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
-            Should be red on hover
-          </div>
-          <div
-            data-h2-padding="base(x.5)" 
-            data-h2-margin="base(0, 0, x.5, 0)"
-            data-h2-background-color="base(green) base:hover(red) p-tablet:dark(cyan) p-tablet:dark:hover(blue)">
-            Base: Green<br>
-            Base:hover: Red<br>
-            P-tablet:dark: Cyan<br>
-            P-tablet:dark:hover: Blue<br><br>
-            <span data-h2-display="base(block) base:dark(none)">Should be green</span>
-            <span data-h2-display="base(block) base:dark(none)">Should be red on hover</span>
-            <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
-            <span data-h2-display="base(none) base:dark(block)">Should be blue on hover</span>
-          </div>
-          <div
-            data-h2-padding="base(x.5)" 
-            data-h2-margin="base(0, 0, x.5, 0)"
-            data-h2-background-color="base(green) base:hover(red) p-tablet:hover(orange) p-tablet:dark(cyan) p-tablet:dark:hover(blue)">
-            Base: Green<br>
-            Base:hover: Red<br>
-            P-tablet:hover: Orange<br>
-            P-tablet:dark: Cyan<br>
-            P-tablet:dark:hover: Blue<br><br>
-            <span data-h2-display="base(block) base:dark(none)">Should be green</span>
-            <span data-h2-display="base(block) base:dark(none)">Should be orange on hover</span>
-            <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
-            <span data-h2-display="base(none) base:dark(block)">Should be blue on hover</span>
-          </div>
-          <div
-            data-h2-padding="base(x.5)" 
-            data-h2-margin="base(0, 0, x.5, 0)"
-            data-h2-background-color="base(green) base:hover(red) base:dark(yellow) base:dark:hover(gray) p-tablet(pink) p-tablet:hover(orange) p-tablet:dark(cyan) p-tablet:dark:hover(blue)">
-            Base: Green<br>
-            Base:hover: Red<br>
-            Base:dark: Yellow<br>
-            Base:dark:hover: Gray<br>
-            P-tablet: Pink<br>
-            P-tablet:hover: Orange<br>
-            P-tablet:dark: Cyan<br>
-            P-tablet:dark:hover: Blue<br><br>
-            <span data-h2-display="base(block) base:dark(none)">Should be pink</span>
-            <span data-h2-display="base(block) base:dark(none)">Should be orange on hover</span>
-            <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
-            <span data-h2-display="base(none) base:dark(block)">Should be blue on hover</span>
-          </div>
-        </div>
-        <div data-h2="dark">
-          <h3>Class dark</h3>
-          <div
-            data-h2-padding="base(x.5)" 
-            data-h2-margin="base(0, 0, x.5, 0)"
-            data-h2-background-color="base(green) base:dark(cyan) desktop(red)">
-            Should base:dark overwrite desktop?
-          </div>
-          <div
-            data-h2-padding="base(x.5)" 
-            data-h2-margin="base(0, 0, x.5, 0)"
-            data-h2-background-color="base(green)">
-            Base: Green<br><br>
-            Should be green
-          </div>
-          <div
-            data-h2-padding="base(x.5)" 
-            data-h2-margin="base(0, 0, x.5, 0)"
-            data-h2-background-color="base(green) p-tablet(pink)">
-            Base: Green<br>
-            P-tablet: Pink<br><br>
-            Should be pink
-          </div>
-          <div
-            data-h2-padding="base(x.5)" 
-            data-h2-margin="base(0, 0, x.5, 0)"
-            data-h2-background-color="base(green) base:hover(red) p-tablet(pink)">
-            Base: Green<br>
-            Base:hover: Red<br>
-            P-tablet: Pink<br><br>
-            Should be pink<br>
-            Should be red on hover
-          </div>
-          <div
-            data-h2-padding="base(x.5)" 
-            data-h2-margin="base(0, 0, x.5, 0)"
-            data-h2-background-color="base(green) base:hover(red) base:dark(yellow) p-tablet:dark(cyan)">
-            Base: Green<br>
-            Base:hover: Red<br>
-            Base:dark: Yellow<br>
-            P-tablet:dark: Cyan<br><br>
-            <span data-h2-display="base(block) base:dark(none)">Should be green</span>
-            <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
-            Should be red on hover
-          </div>
-          <div
-            data-h2-padding="base(x.5)" 
-            data-h2-margin="base(0, 0, x.5, 0)"
-            data-h2-background-color="base(green) base:hover(red) p-tablet:dark(cyan) p-tablet:dark:hover(blue)">
-            Base: Green<br>
-            Base:hover: Red<br>
-            P-tablet:dark: Cyan<br>
-            P-tablet:dark:hover: Blue<br><br>
-            <span data-h2-display="base(block) base:dark(none)">Should be green</span>
-            <span data-h2-display="base(block) base:dark(none)">Should be red on hover</span>
-            <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
-            <span data-h2-display="base(none) base:dark(block)">Should be blue on hover</span>
-          </div>
-          <div
-            data-h2-padding="base(x.5)" 
-            data-h2-margin="base(0, 0, x.5, 0)"
-            data-h2-background-color="base(green) base:hover(red) p-tablet:hover(orange) p-tablet:dark(cyan) p-tablet:dark:hover(blue)">
-            Base: Green<br>
-            Base:hover: Red<br>
-            P-tablet:hover: Orange<br>
-            P-tablet:dark: Cyan<br>
-            P-tablet:dark:hover: Blue<br><br>
-            <span data-h2-display="base(block) base:dark(none)">Should be green</span>
-            <span data-h2-display="base(block) base:dark(none)">Should be orange on hover</span>
-            <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
-            <span data-h2-display="base(none) base:dark(block)">Should be blue on hover</span>
-          </div>
-          <div
-            data-h2-padding="base(x.5)" 
-            data-h2-margin="base(0, 0, x.5, 0)"
-            data-h2-background-color="base(green) base:hover(red) base:dark(yellow) base:dark:hover(gray) p-tablet(pink) p-tablet:hover(orange) p-tablet:dark(cyan) p-tablet:dark:hover(blue)">
-            Base: Green<br>
-            Base:hover: Red<br>
-            Base:dark: Yellow<br>
-            Base:dark:hover: Gray<br>
-            P-tablet: Pink<br>
-            P-tablet:hover: Orange<br>
-            P-tablet:dark: Cyan<br>
-            P-tablet:dark:hover: Blue<br><br>
-            <span data-h2-display="base(block) base:dark(none)">Should be pink</span>
-            <span data-h2-display="base(block) base:dark(none)">Should be orange on hover</span>
-            <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
-            <span data-h2-display="base(none) base:dark(block)">Should be blue on hover</span>
-          </div>
-        </div>
-        <div data-h2="">
-          <h3>Class light</h3>
-          <div
-            data-h2-padding="base(x.5)" 
-            data-h2-margin="base(0, 0, x.5, 0)"
-            data-h2-background-color="base(green)">
-            Base: Green<br><br>
-            Should be green
-          </div>
-          <div
-            data-h2-padding="base(x.5)" 
-            data-h2-margin="base(0, 0, x.5, 0)"
-            data-h2-background-color="base(green) p-tablet(pink)">
-            Base: Green<br>
-            P-tablet: Pink<br><br>
-            Should be pink
-          </div>
-          <div
-            data-h2-padding="base(x.5)" 
-            data-h2-margin="base(0, 0, x.5, 0)"
-            data-h2-background-color="base(green) base:hover(red) p-tablet(pink)">
-            Base: Green<br>
-            Base:hover: Red<br>
-            P-tablet: Pink<br><br>
-            Should be pink<br>
-            Should be red on hover
-          </div>
-          <div
-            data-h2-padding="base(x.5)" 
-            data-h2-margin="base(0, 0, x.5, 0)"
-            data-h2-background-color="base(green) base:hover(red) base:dark(yellow) p-tablet:dark(cyan)">
-            Base: Green<br>
-            Base:hover: Red<br>
-            Base:dark: Yellow<br>
-            P-tablet:dark: Cyan<br><br>
-            <span data-h2-display="base(block) base:dark(none)">Should be green</span>
-            <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
-            Should be red on hover
-          </div>
-          <div
-            data-h2-padding="base(x.5)" 
-            data-h2-margin="base(0, 0, x.5, 0)"
-            data-h2-background-color="base(green) base:hover(red) p-tablet:dark(cyan) p-tablet:dark:hover(blue)">
-            Base: Green<br>
-            Base:hover: Red<br>
-            P-tablet:dark: Cyan<br>
-            P-tablet:dark:hover: Blue<br><br>
-            <span data-h2-display="base(block) base:dark(none)">Should be green</span>
-            <span data-h2-display="base(block) base:dark(none)">Should be red on hover</span>
-            <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
-            <span data-h2-display="base(none) base:dark(block)">Should be blue on hover</span>
-          </div>
-          <div
-            data-h2-padding="base(x.5)" 
-            data-h2-margin="base(0, 0, x.5, 0)"
-            data-h2-background-color="base(green) base:hover(red) p-tablet:hover(orange) p-tablet:dark(cyan) p-tablet:dark:hover(blue)">
-            Base: Green<br>
-            Base:hover: Red<br>
-            P-tablet:hover: Orange<br>
-            P-tablet:dark: Cyan<br>
-            P-tablet:dark:hover: Blue<br><br>
-            <span data-h2-display="base(block) base:dark(none)">Should be green</span>
-            <span data-h2-display="base(block) base:dark(none)">Should be orange on hover</span>
-            <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
-            <span data-h2-display="base(none) base:dark(block)">Should be blue on hover</span>
-          </div>
-          <div
-            data-h2-padding="base(x.5)" 
-            data-h2-margin="base(0, 0, x.5, 0)"
-            data-h2-background-color="base(green) base:hover(red) base:dark(yellow) base:dark:hover(gray) p-tablet(pink) p-tablet:hover(orange) p-tablet:dark(cyan) p-tablet:dark:hover(blue)">
-            Base: Green<br>
-            Base:hover: Red<br>
-            Base:dark: Yellow<br>
-            Base:dark:hover: Gray<br>
-            P-tablet: Pink<br>
-            P-tablet:hover: Orange<br>
-            P-tablet:dark: Cyan<br>
-            P-tablet:dark:hover: Blue<br><br>
-            <span data-h2-display="base(block) base:dark(none)">Should be pink</span>
-            <span data-h2-display="base(block) base:dark(none)">Should be orange on hover</span>
-            <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
-            <span data-h2-display="base(none) base:dark(block)">Should be blue on hover</span>
-          </div>
-        </div>
-        <div>
-          <p data-h2-margin="base(0, 0, x.5, 0)">Preference</p>
-          <p data-h2-display="base:dark(none)">This is the light toggle</p>
-          <p data-h2-display="base(none) base:dark(block)">This is the dark toggle</p>
-          <p data-h2-display="base(none) l-tablet(block)">This is the menu.</p>
-        </div>
-        <div data-h2="dark">
-          <p data-h2-margin="base(0, 0, x.5, 0)">Class dark</p>
-          <p data-h2-display="base:dark(none)">This is the light toggle</p>
-          <p data-h2-display="base(none) base:dark(block)">This is the dark toggle</p>
-          <p data-h2-display="base(none) l-tablet(block)">This is the menu.</p>
-        </div>
-        <div data-h2="">
-          <p data-h2-margin="base(0, 0, x.5, 0)">Class light</p>
-          <p data-h2-display="base:dark(none)">This is the light toggle</p>
-          <p data-h2-display="base(none) base:dark(block)">This is the dark toggle</p>
-          <p data-h2-display="base(none) l-tablet(block)">This is the menu.</p>
-        </div>
-      </div>
-      <hr data-h2-margin="base(x3, 0)" />
-      <!-- Reset styles -->
-      <h2>Reset style tests</h2>
+    <div 
+      data-h2-display="base(grid)"
+      data-h2-grid-template-columns="base(100%) l-tablet(25% 75%)">
       <div>
-        <div data-h2-display="base(block)">
-          <button>Test button</button>
-        </div>
-        <div data-h2-display="base(block)">
-          <button 
-            data-h2-font-size="base(h6)"
-            data-h2-font-family="base(serif)">Test button</button>
-        </div>
-        <div data-h2-display="base(block)">
-          <input></input>
-        </div>
-        <div data-h2-display="base(block)">
-          <input data-h2-font-size="base(h5)"></input>
-        </div>
-        <div data-h2-display="base(block)">
-          <select>
-            <option>Thing</option>
-          </select>
-        </div>
-        <div data-h2-display="base(block)">
-          <select data-h2-font-size="base(h3)">
-            <option>Thing</option>
-          </select>
-        </div>
-        <div data-h2-display="base(block)">
-          <textarea></textarea>
-        </div>
-        <div data-h2-display="base(block)">
-          <textarea data-h2-font-size="base(h6)"></textarea>
+        <div data-h2-height="base(100%)" data-h2-background-color="base(rgba(0, 0, 0, .1))">
+          <div 
+            data-h2-padding="base(x5, x2, x2, x2)"
+            data-h2-position="base(sticky)" 
+            data-h2-offset="base(0, auto, auto, auto)">
+            <p data-h2-font-weight="base(700)" data-h2-margin="base(0, 0, x1, 0)">Skip to section</p>
+            <ul data-h2-padding="base(0, 0, 0, x1)">
+              <li><a href="#id-targeting" title="">ID targeting tests</a></li>
+              <li><a href="#class-targeting" title="">Class targeting tests</a></li>
+              <li><a href="#nested-targeting" title="">Nested selector targeting tests</a></li>
+              <li><a href="#dark-mode" title="">Dark mode tests</a></li>
+              <li><a href="#reset-styles" title="">Reset styles tests</a></li>
+              <li><a href="#background-color" title="">Background color tests</a></li>
+              <li><a href="#border" title="">Border tests</a></li>
+              <li><a href="#gap" title="">Gap tests</a></li>
+              <li><a href="#css-grid" title="">CSS grid tests</a></li>
+              <li><a href="#flex-grid" title="">Flex grid tests</a></li>
+              <li><a href="#line-height" title="">Line height tests</a></li>
+              <li><a href="#overflow" title="">Overflow tests</a></li>
+              <li><a href="#position" title="">Position tests</a></li>
+              <li><a href="#shadow" title="">Shadow tests</a></li>
+              <li><a href="#transform" title="">Transformation tests</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-      <hr data-h2-margin="base(x3, 0)" />
-      <!-- Background colors -->
-      <h2>Background color tests</h2>
-      <div
-        data-h2-display="base(grid)"
-        data-h2-grid-template-columns="base(1fr 1fr)"
-        data-h2-gap="base(x2, all)">
-        <div>
-          <h3>Hydrogen.css</h3>
+      <div data-h2-padding="base(0, 0, x10, 0)">
+        <main 
+          data-h2-container="base(left, medium, x2)"
+          data-h2-margin="base:children[h2](x4, 0, x1, 0) base:children[h3](x3, 0, x1, 0) base:children[h4](x2, 0, x1, 0)">
+          <h1 data-h2-margin="base(x5, 0, 0, 0)">Hydrogen internal tests</h1>
+          <!-- ID selector support -->
+          <h2 id="id-targeting">ID targeting tests</h2>
           <div
             data-h2-display="base(grid)"
-            data-h2-grid-template-columns="base(1fr 1fr 1fr 1fr 1fr 1fr 1fr)"
-            data-h2-gap="base(x.5, all)">
-            <div data-h2-grid-column="base(1 / 8)">
-              <h4>Configured color</h4>
-              <p>Hover should be yellow, dark mode should be the accent scale.</p>
+            data-h2-grid-template-columns="base(1fr 1fr 1fr)"
+            data-h2-gap="base(x1, all)"
+            data-h2-font-size="base(10px)"
+            data-h2-padding="
+              base:children[>div](x1)
+              l-tablet:children[>div](x2)
+            "
+            data-h2-font-weight="base:children[p:first-child](700)"
+            data-h2-margin="base:children[p:first-child](0, 0, x.5, 0)">
+            <!-- Base query -->
+            <div data-h2-background-color="base(blue) base:id[testID](green)">
+              <p>Base query</p>
+              <p>Should be blue, because it's missing the ID, which would turn it green</p>
             </div>
-            <div
-              data-h2-height="base(x3)"
-              data-h2-background-color="base(lightest.primary) base:dark(lightest.accent) base:hover(yellow)"></div>
-            <div
-              data-h2-height="base(x3)"
-              data-h2-background-color="base(lighter.primary) base:dark(lighter.accent) base:hover(yellow)"></div>
-            <div
-              data-h2-height="base(x3)"
-              data-h2-background-color="base(light.primary) base:dark(light.accent) base:hover(yellow)"></div>
-            <div
-              data-h2-height="base(x3)"
-              data-h2-background-color="base(primary) base:dark(accent) base:hover(yellow)"></div>
-            <div
-              data-h2-height="base(x3)"
-              data-h2-background-color="base(dark.primary) base:dark(dark.accent) base:hover(yellow)"></div>
-            <div
-              data-h2-height="base(x3)"
-              data-h2-background-color="base(darker.primary) base:dark(darker.accent) base:hover(yellow)"></div>
-            <div
-              data-h2-height="base(x3)"
-              data-h2-background-color="base(darker.primary) base:dark(darkest.accent) base:hover(yellow)"></div>
-            <div data-h2-grid-column="base(1 / 8)">
-              <h4>Custom modifiers</h4>
+            <div id="otherID" data-h2-background-color="base(blue) base:id[testID](green)">
+              <p>Base query</p>
+              <p>Should be blue, because it has an ID, but not the correct one, which would turn it green</p>
             </div>
-            <div
-              data-h2-height="base(x3)"
-              data-h2-background-color="base(primary.other)">
+            <div id="testID" data-h2-background-color="base(blue) base:id[testID](green)">
+              <p>Base query</p>
+              <p>Should be green, not blue, because it has the correct ID.</p>
             </div>
-            <div
-              data-h2-height="base(x3)"
-              data-h2-background-color="base(primary.customModifier)">
+            <!-- Custom queries, same ID override -->
+            <div data-h2-background-color="base(blue) base:id[testID](green) l-tablet(pink) l-tablet:id[testID](red)">
+              <p>Custom query (l-tablet)</p>
+              <p>Should be pink, because it's missing the ID, which would turn it red</p>
             </div>
-            <div
-              data-h2-height="base(x3)"
-              data-h2-background-color="base(secondary.lighter)">
+            <div id="otherID" data-h2-background-color="base(blue) base:id[testID](green) l-tablet(pink) l-tablet:id[testID](red)">
+              <p>Custom query (l-tablet)</p>
+              <p>Should be pink, because it has an ID, but not the correct one, which would turn it red</p>
             </div>
-            <div
-              data-h2-height="base(x3)"
-              data-h2-background-color="base(primary.other.2)">
+            <div id="testID" data-h2-background-color="base(blue) base:id[testID](green) l-tablet(pink) l-tablet:id[testID](red)">
+              <p>Custom query (l-tablet)</p>
+              <p>Should be red, not pink, because it has the correct ID.</p>
             </div>
-            <div
-              data-h2-height="base(x3)"
-              data-h2-background-color="base(primary.customModifier) base:hover(blue) base:dark(primary)">
+            <!-- Custom queries, different ID override -->
+            <div data-h2-background-color="base(blue) base:id[testID](green) l-tablet(pink) l-tablet:id[newID](red)">
+              <p>Custom query (l-tablet)</p>
+              <p>Should be pink, because it's missing the ID, which would turn it red</p>
             </div>
-            <div
-              data-h2-height="base(x3)"
-              data-h2-background-color="base(secondary.lighter.1)">
+            <div id="testID" data-h2-background-color="base(blue) base:id[testID](green) l-tablet(pink) l-tablet:id[newID](red)">
+              <p>Custom query (l-tablet)</p>
+              <p>Should be green, because it has the base query ID, but not the l-tablet ID, which would turn it red</p>
             </div>
-            <div data-h2-grid-column="base(1 / 8)">
-              <h4>Gradients</h4>
+            <div id="newID" data-h2-background-color="base(blue) base:id[testID](green) l-tablet(pink) l-tablet:id[newID](red)">
+              <p>Custom query (l-tablet)</p>
+              <p>Should be red, not pink or green, because it has the correct ID for l-tablet.</p>
             </div>
-            <div
-              data-h2-grid-column="base(1 / 8)"
-              data-h2-height="base(x3)"
-              data-h2-width="base(100%)"
-              data-h2-background-color="base(myLinearGradient)"></div>
-            <div
-              data-h2-grid-column="base(1 / 8)"
-              data-h2-height="base(x3)"
-              data-h2-width="base(100%)"
-              data-h2-background-color="base(myRadialGradient)"></div>
-            <div data-h2-grid-column="base(1 / 8)">
-              <h4>Configured color with opacity</h4>
-            </div>
-            <div
-              data-h2-height="base(x3)"
-              data-h2-background-color="base(black)"></div>
-            <div
-              data-h2-height="base(x3)"
-              data-h2-background-color="base(black.9)"></div>
-            <div
-              data-h2-height="base(x3)"
-              data-h2-background-color="base(black.8)"></div>
-            <div
-              data-h2-height="base(x3)"
-              data-h2-background-color="base(black.7)"></div>
-            <div
-              data-h2-height="base(x3)"
-              data-h2-background-color="base(black.6)"></div>
-            <div
-              data-h2-height="base(x3)"
-              data-h2-background-color="base(black.5)"></div>
-            <div
-              data-h2-height="base(x3)"
-              data-h2-background-color="base(black.4)"></div>
           </div>
-        </div>
-        <div>
-          <h3>Hydrogen variable export</h3>
+          <!-- Class selector support -->
+          <h2 id="class-targeting">Class targeting tests</h2>
           <div
             data-h2-display="base(grid)"
-            data-h2-grid-template-columns="base(1fr 1fr 1fr 1fr 1fr 1fr 1fr)"
-            data-h2-gap="base(x.5, all)">
-            <div data-h2-grid-column="base(1 / 8)">
-              <h4>Configured color</h4>
-              <p>Hover should be the accent scale in reverse.</p>
+            data-h2-grid-template-columns="base(1fr 1fr 1fr)"
+            data-h2-gap="base(x1, all)"
+            data-h2-padding="
+              base:children[>div](x1)
+              l-tablet:children[>div](x2)
+            "
+            data-h2-font-weight="base:children[p:first-child](700)"
+            data-h2-margin="base:children[p:first-child](0, 0, x.5, 0)">
+            <!-- Base query -->
+            <div data-h2-background-color="base(blue) base:class[active](yellow)">
+              <p>Base query</p>
+              <p>Should be blue, not yellow, because it has no matching classes.</p>
             </div>
-            <div
-              data-h2-height="base(x3)"
-              data-h2-background-color="base(var(--h2-color-primary-lightest)) base:hover(var(--h2-color-accent-darkest))"></div>
-            <div
-              data-h2-height="base(x3)"
-              data-h2-background-color="base(var(--h2-color-primary-lighter)) base:hover(var(--h2-color-accent-darker))"></div>
-            <div
-              data-h2-height="base(x3)"
-              data-h2-background-color="base(var(--h2-color-primary-light)) base:hover(var(--h2-color-accent-dark))"></div>
-            <div
-              data-h2-height="base(x3)"
-              data-h2-background-color="base(var(--h2-color-primary)) base:hover(var(--h2-color-accent))"></div>
-            <div
-              data-h2-height="base(x3)"
-              data-h2-background-color="
-                base(var(--h2-color-primary-dark)) 
-                base:hover(var(--h2-color-accent-light))"></div>
-            <div
-              data-h2-height="base(x3)"
-              data-h2-background-color="base(var(--h2-color-primary-darker)) base:hover(var(--h2-color-accent-lighter))"></div>
-            <div
-              data-h2-height="base(x3)"
-              data-h2-background-color="base(var(--h2-color-primary-darkest)) base:hover(var(--h2-color-accent-lightest))"></div>
-            <div data-h2-grid-column="base(1 / 8)">
-              <h4>Gradients</h4>
+            <div class="other_class" data-h2-background-color="base(blue) base:class[active](yellow)">
+              <p>Base query</p>
+              <p>Should be blue, not yellow, because it has a class, but not the correct class.</p>
             </div>
-            <div
-              data-h2-grid-column="base(1 / 8)"
-              data-h2-height="base(x3)"
-              data-h2-width="base(100%)"
-              style="background-image: var(--h2-gradient-myLinearGradient)"></div>
-            <div
-              data-h2-grid-column="base(1 / 8)"
-              data-h2-height="base(x3)"
-              data-h2-width="base(100%)"
-              style="background-image: var(--h2-gradient-myRadialGradient)"></div>
+            <div class="active" data-h2-background-color="base(blue) base:class[active](yellow)">
+              <p>Base query</p>
+              <p>Should be yellow, not blue, because it has the correct class.</p>
+            </div>
+            <!-- Custom query -->
+            <div data-h2-background-color="base(blue) base:class[active](yellow) l-tablet:class[active](pink)">
+              <p>Custom query (l-tablet)</p>
+              <p>Should be blue, not yellow, because it has no matching classes.</p>
+            </div>
+            <div class="other_class" data-h2-background-color="base(blue) base:class[active](yellow) l-tablet:class[active](pink)">
+              <p>Custom query (l-tablet)</p>
+              <p>Should be blue, not yellow, because it has a class, but not the correct class.</p>
+            </div>
+            <div class="active" data-h2-background-color="base(blue) base:class[active](yellow) l-tablet:class[active](pink)">
+              <p>Custom query (l-tablet)</p>
+              <p>Should be pink, not blue or yellow, because it has the correct class at the l-tablet query.</p>
+            </div>
+            <!-- Multi class -->
+            <div data-h2-background-color="base(blue) base:class[active, extra](yellow)">
+              <p>Multi class</p>
+              <p>Should be blue, not yellow, because it has no classes.</p>
+            </div>
+            <div class="active" data-h2-background-color="base(blue) base:class[active, extra](yellow)">
+              <p>Multi class</p>
+              <p>Should be blue, not yellow, because it has a class, but not all the required classes.</p>
+            </div>
+            <div class="active extra" data-h2-background-color="base(blue) base:class[active, extra](yellow)">
+              <p>Multi class</p>
+              <p>Should be yellow, not blue, because it has the correct classes.</p>
+            </div>
+            <!-- Multi class and state -->
+            <div data-h2-background-color="base(blue) base:class[active, extra]:hover(yellow)">
+              <p>Multi class and state</p>
+              <p>Should be blue and not change on hover because it has no matching classes.</p>
+            </div>
+            <div class="active" data-h2-background-color="base(blue) base:class[active, extra]:hover(yellow)">
+              <p>Multi class and state</p>
+              <p>Should be blue and not change on hover because it has a class, but not all the required classes.</p>
+            </div>
+            <div class="active extra" data-h2-background-color="base(blue) base:class[active, extra]:hover(yellow)">
+              <p>Multi class and state</p>
+              <p>Should be blue and turn yellow on hover because it has the correct classes.</p>
+            </div>
           </div>
-        </div>
-      </div>
-      <!-- Borders -->
-      <h2>Border tests</h2>
-      <h3 data-h2-margin="base(x2, 0, 0, 0)">1 value</h3>
-      <div
-        data-h2-display="base(grid)"
-        data-h2-grid-template-columns="base(1fr 1fr)"
-        data-h2-gap="base(x2, all)">
-        <button data-h2-border="base(none)">
-          My button
-        </button>
-        <div
-          data-h2-padding="base(x1)"
-          data-h2-background-color="base(primary)"
-          data-h2-border="base(all, 3px, solid, black) l-tablet(none)">
-        </div>
-      </div>
-      <h3 data-h2-margin="base(x2, 0, 0, 0)">2 values</h3>
-      <div
-        data-h2-display="base(grid)"
-        data-h2-grid-template-columns="base(1fr 1fr)"
-        data-h2-gap="base(x2, all)">
-        <div
-          data-h2-padding="base(x1)"
-          data-h2-background-color="base(primary)"
-          data-h2-border="base(all, 5px solid rgba(255, 0, 0, 1))">
-        </div>
-        <div
-          data-h2-padding="base(x1)"
-          data-h2-background-color="base(primary)"
-          data-h2-border="base(left, 1rem dashed blue)">
-        </div>
-      </div>
-      <h3 data-h2-margin="base(x2, 0, 0, 0)">4 values</h3>
-      <div
-        data-h2-display="base(grid)"
-        data-h2-grid-template-columns="base(1fr 1fr)"
-        data-h2-gap="base(x2, all)">
-        <div
-          data-h2-padding="base(x1)"
-          data-h2-background-color="base(primary)"
-          data-h2-border="base(all, 3px, solid, black)">
-        </div>
-        <div
-          data-h2-padding="base(x1)"
-          data-h2-background-color="base(primary)"
-          data-h2-border="base(all, x1, solid, accent)">
-        </div>
-      </div>
-      <!-- Grid and flex grid -->
-      <h2>Flex grid</h2>
-      <div>
-        <div data-h2-flex-grid="base(top, 0, x5)">
-          <div data-h2-flex-item="base(content)">
-            <div
-              data-h2-bg-color="base(primary)"
-              data-h2-height="base(x3)"
-              data-h2-width="base(5rem)"
-            ></div>
-          </div>
-          <div data-h2-flex-item="base(auto)">
-            <div
-              data-h2-bg-color="base(primary)"
-              data-h2-height="base(x3)"
-              data-h2-width="base(100%)"
-            ></div>
-          </div>
-        </div>
-        <div data-h2-flex-grid="base(top, 0, 0)">
-          <div data-h2-flex-item="base(1of3)">
-            <div
-              data-h2-bg-color="base(primary)"
-              data-h2-height="base(x3)"
-              data-h2-width="base(100%)"
-            ></div>
-          </div>
-          <div data-h2-flex-item="base(1of3)">
-            <div
-              data-h2-bg-color="base(dark.primary)"
-              data-h2-height="base(x3)"
-              data-h2-width="base(100%)"
-            ></div>
-          </div>
-          <div data-h2-flex-item="base(1of3)">
-            <div
-              data-h2-bg-color="base(darker.primary)"
-              data-h2-height="base(x3)"
-              data-h2-width="base(100%)"
-            ></div>
-          </div>
-        </div>
-        <div data-h2-flex-grid="base(top, x2, x2)">
-          <div data-h2-flex-item="base(1of6)">
-            <div
-              data-h2-bg-color="base(primary)"
-              data-h2-height="base(x3)"
-              data-h2-width="base(100%)"
-            ></div>
-          </div>
-          <div data-h2-flex-item="base(1of6)">
-            <div
-              data-h2-bg-color="base(primary)"
-              data-h2-height="base(x3)"
-              data-h2-width="base(100%)"
-            ></div>
-          </div>
-          <div data-h2-flex-item="base(1of6)">
-            <div
-              data-h2-bg-color="base(primary)"
-              data-h2-height="base(x3)"
-              data-h2-width="base(100%)"
-              data-h2-cursor="base(pointer)"
-            ></div>
-          </div>
-          <div data-h2-flex-item="base(1of6)">
-            <div
-              data-h2-bg-color="base(primary)"
-              data-h2-height="base(x3)"
-              data-h2-width="base(100%)"
-            ></div>
-          </div>
-          <div data-h2-flex-item="base(1of6)">
-            <div
-              data-h2-bg-color="base(primary)"
-              data-h2-height="base(x3)"
-              data-h2-width="base(100%)"
-            ></div>
-          </div>
-          <div data-h2-flex-item="base(1of6)">
-            <div
-              data-h2-bg-color="base(primary)"
-              data-h2-height="base(x3)"
-              data-h2-width="base(100%)"
-            ></div>
-          </div>
-        </div>
-        <div data-h2-flex-grid="base(top, 3rem, 50px)">
-          <div data-h2-flex-item="base(1of6)">
-            <div
-              data-h2-bg-color="base(primary)"
-              data-h2-height="base(x3)"
-              data-h2-width="base(100%)"
-            ></div>
-          </div>
-          <div data-h2-flex-item="base(1of6)">
-            <div
-              data-h2-bg-color="base(primary)"
-              data-h2-height="base(x3)"
-              data-h2-width="base(100%)"
-            ></div>
-          </div>
-          <div data-h2-flex-item="base(1of6)">
-            <div
-              data-h2-bg-color="base(primary)"
-              data-h2-height="base(x3)"
-              data-h2-width="base(100%)"
-            ></div>
-          </div>
-          <div data-h2-flex-item="base(1of6)">
-            <div
-              data-h2-bg-color="base(primary)"
-              data-h2-height="base(x3)"
-              data-h2-width="base(100%)"
-            ></div>
-          </div>
-          <div data-h2-flex-item="base(1of6)">
-            <div
-              data-h2-bg-color="base(primary)"
-              data-h2-height="base(x3)"
-              data-h2-width="base(100%)"
-            ></div>
-          </div>
-          <div data-h2-flex-item="base(1of6)">
-            <div
-              data-h2-bg-color="base(primary)"
-              data-h2-height="base(x3)"
-              data-h2-width="base(100%)"
-            ></div>
-          </div>
-        </div>
-        <div data-h2-flex-grid="base(top, 0, 50px, 5px)">
-          <div data-h2-flex-item="base(1of3)">
-            <div
-              data-h2-bg-color="base(primary)"
-              data-h2-height="base(x3)"
-              data-h2-width="base(100%)"
-            ></div>
-          </div>
-          <div data-h2-flex-item="base(1of3)">
-            <div
-              data-h2-bg-color="base(primary)"
-              data-h2-height="base(x3)"
-              data-h2-width="base(100%)"
-            ></div>
-          </div>
-          <div data-h2-flex-item="base(1of3)">
-            <div
-              data-h2-bg-color="base(primary)"
-              data-h2-height="base(x3)"
-              data-h2-width="base(100%)"
-            ></div>
-          </div>
-          <div data-h2-flex-item="base(1of3)">
-            <div
-              data-h2-bg-color="base(primary)"
-              data-h2-height="base(x3)"
-              data-h2-width="base(100%)"
-            ></div>
-          </div>
-          <div data-h2-flex-item="base(1of3)">
-            <div
-              data-h2-bg-color="base(primary)"
-              data-h2-height="base(x3)"
-              data-h2-width="base(100%)"
-            ></div>
-          </div>
-          <div data-h2-flex-item="base(1of3)">
-            <div
-              data-h2-bg-color="base(primary)"
-              data-h2-height="base(x3)"
-              data-h2-width="base(100%)"
-            ></div>
-          </div>
-        </div>
-      </div>
-      <!-- Position -->
-      <h2>Position tests</h2>
-      <div
-        data-h2-display="base(grid)"
-        data-h2-grid-template-columns="base(1fr 1fr)"
-        data-h2-gap="base(x2, all)">
-        <div>
-          <h3 data-h2-margin="base(x2, 0, 0, 0)">Center key value</h3>
+          <!-- Child selector support -->
+          <h2 id="nested-targeting">Nested selector targeting tests</h2>
           <div
-            data-h2-background-color="base(black.4)"
-            data-h2-height="base(x10)"
-            data-h2-width="base(100%)"
-            data-h2-position="base(relative)"
-            data-h2-margin="base(0, 0, x1, 0)">
-            <div
-              data-h2-height="base(x1)"
-              data-h2-width="base(x1)"
-              data-h2-background-color="base(secondary)"
-              data-h2-position="base(center)">
+            data-h2-display="base(grid)"
+            data-h2-grid-template-columns="base(1fr 1fr 1fr)"
+            data-h2-gap="base(x1, all)"
+            data-h2-font-size="base(10px)">
+            <div data-h2-background-color="base:children[div](blue) base:children[div]:dark(cyan)" data-h2-padding="base:children[div](x1)" data-h2-width="base:children[div](100%)" data-h2-margin="base:children[div](0, 0, x.5, 0)">
+              <p>All child divs should be blue and padded and turn cyan in dark mode<br><br><br><br></p>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div data-h2-background-color="base:children[div](pink)" data-h2-padding="base:children[div](x1)" data-h2-width="base:children[>div](100%)" data-h2-margin="base:children[div](0, 0, x.5, 0)">
+              <p>All child >divs should be pink and padded except 1 which should be blue<br><br><br><br></p>
+              <div></div>
+              <div></div>
+              <div data-h2-background-color="base(blue)"></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div data-h2-background-color="base:children[.child_test](pink) base:children[.child_test]:hover(orange)" data-h2-padding="base:children[.child_test](x1)" data-h2-width="base:children[.child_test](100%)" data-h2-margin="base:children[.child_test](0, 0, x.5, 0)">
+              <p>All child .child_test should be pink and padded and change to orange on hover except for 1 which should be yellow and change to green on hover<br><br></p>
+              <div class="child_test"></div>
+              <div class="child_test"></div>
+              <div class="child_test"></div>
+              <div class="child_test"></div>
+              <div class="child_test" data-h2-background-color="base(yellow) base:hover(green)"></div>
+              <div class="child_test"></div>
             </div>
           </div>
+          <div data-h2-margin="base:children[h5](x3, 0, x1, 0) base:children[p](x1, 0)">
+            <h5>The first section</h5>
+            <p>I'm a paragraph!</p>
+            <p>I'm another paragraph!</p>
+            <h5>I'm a new section</h5>
+            <p>Even more paragraphs!</p>
+          </div>
+          <h3>Pseudo element targeting tests</h3>
+          <div data-h2-font-weight="base:children[>p:first-child](700)">
+            <p>This child paragraph should be bold.</p>
+            <p>This child paragraph should NOT be bold.</p>
+          </div>
+          <div data-h2-font-weight="base:children[>p:not(.not_bold)](700)">
+            <p>This child paragraph should be bold.</p>
+            <p class="not_bold">This child paragraph should NOT be bold.</p>
+          </div>
+          <h3>Class and children combination tests</h3>
           <div
-            data-h2-background-color="base(black.4)"
-            data-h2-height="base(x10)"
-            data-h2-width="base(100%)"
-            data-h2-position="base(relative)">
-            <div
-              data-h2-height="base(x5)"
-              data-h2-width="base(x5)"
-              data-h2-background-color="base(secondary)"
-              data-h2-position="base(center)">
+            data-h2-display="base(grid)"
+            data-h2-grid-template-columns="base(1fr 1fr)"
+            data-h2-gap="base(x1, all)"
+            data-h2-font-size="base(10px)">
+            <div data-h2-background-color="base:children[div](pink) base:children[div]:class[class_child_test](blue)" data-h2-padding="base:children[div](x1)" data-h2-width="base:children[div](100%)" data-h2-margin="base:children[div](0, 0, x.5, 0)">
+              <p>All child divs should be pink and padded, because the parent is missing the correct class<br><br></p>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div class="class_child_test" data-h2-background-color="base:children[div](pink) base:children[div]:class[class_child_test](blue)" data-h2-padding="base:children[div](x1)" data-h2-width="base:children[div](100%)" data-h2-margin="base:children[div](0, 0, x.5, 0)">
+              <p>All child divs should be blue and padded, because the parent has the correct class<br><br></p>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <!-- Dark mode -->
+          <h2 id="dark-mode">Dark mode tests</h2>
+          <button type="button" onclick="enablePref()">Pref</button>
+          <button type="button" onclick="enableLight()">Light</button>
+          <button type="button" onclick="enableDark()">Dark</button>
+          <div
+            data-h2-display="base(grid)"
+            data-h2-grid-template-columns="base(1fr 1fr 1fr)"
+            data-h2-gap="base(x1, all)"
+            data-h2-font-size="base(10px)">
+            <div>
+              <h3>Preference</h3>
               <div
-                data-h2-height="base(x1)"
-                data-h2-width="base(x1)"
-                data-h2-background-color="base(primary)"
-                data-h2-position="base(center)">
+                data-h2-padding="base(x.5)" 
+                data-h2-margin="base(0, 0, x.5, 0)"
+                data-h2-background-color="base(green)">
+                Base: Green<br><br>
+                Should be green
+              </div>
+              <div
+                data-h2-padding="base(x.5)" 
+                data-h2-margin="base(0, 0, x.5, 0)"
+                data-h2-background-color="base(green) p-tablet(pink)">
+                Base: Green<br>
+                P-tablet: Pink<br><br>
+                Should be pink
+              </div>
+              <div
+                data-h2-padding="base(x.5)" 
+                data-h2-margin="base(0, 0, x.5, 0)"
+                data-h2-background-color="base(green) base:hover(red) p-tablet(pink)">
+                Base: Green<br>
+                Base:hover: Red<br>
+                P-tablet: Pink<br><br>
+                Should be pink<br>
+                Should be red on hover
+              </div>
+              <div
+                data-h2-padding="base(x.5)" 
+                data-h2-margin="base(0, 0, x.5, 0)"
+                data-h2-background-color="base(green) base:hover(red) base:dark(yellow) p-tablet:dark(cyan)">
+                Base: Green<br>
+                Base:hover: Red<br>
+                Base:dark: Yellow<br>
+                P-tablet:dark: Cyan<br><br>
+                <span data-h2-display="base(block) base:dark(none)">Should be green</span>
+                <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
+                Should be red on hover
+              </div>
+              <div
+                data-h2-padding="base(x.5)" 
+                data-h2-margin="base(0, 0, x.5, 0)"
+                data-h2-background-color="base(green) base:hover(red) p-tablet:dark(cyan) p-tablet:dark:hover(blue)">
+                Base: Green<br>
+                Base:hover: Red<br>
+                P-tablet:dark: Cyan<br>
+                P-tablet:dark:hover: Blue<br><br>
+                <span data-h2-display="base(block) base:dark(none)">Should be green</span>
+                <span data-h2-display="base(block) base:dark(none)">Should be red on hover</span>
+                <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
+                <span data-h2-display="base(none) base:dark(block)">Should be blue on hover</span>
+              </div>
+              <div
+                data-h2-padding="base(x.5)" 
+                data-h2-margin="base(0, 0, x.5, 0)"
+                data-h2-background-color="base(green) base:hover(red) p-tablet:hover(orange) p-tablet:dark(cyan) p-tablet:dark:hover(blue)">
+                Base: Green<br>
+                Base:hover: Red<br>
+                P-tablet:hover: Orange<br>
+                P-tablet:dark: Cyan<br>
+                P-tablet:dark:hover: Blue<br><br>
+                <span data-h2-display="base(block) base:dark(none)">Should be green</span>
+                <span data-h2-display="base(block) base:dark(none)">Should be orange on hover</span>
+                <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
+                <span data-h2-display="base(none) base:dark(block)">Should be blue on hover</span>
+              </div>
+              <div
+                data-h2-padding="base(x.5)" 
+                data-h2-margin="base(0, 0, x.5, 0)"
+                data-h2-background-color="base(green) base:hover(red) base:dark(yellow) base:dark:hover(gray) p-tablet(pink) p-tablet:hover(orange) p-tablet:dark(cyan) p-tablet:dark:hover(blue)">
+                Base: Green<br>
+                Base:hover: Red<br>
+                Base:dark: Yellow<br>
+                Base:dark:hover: Gray<br>
+                P-tablet: Pink<br>
+                P-tablet:hover: Orange<br>
+                P-tablet:dark: Cyan<br>
+                P-tablet:dark:hover: Blue<br><br>
+                <span data-h2-display="base(block) base:dark(none)">Should be pink</span>
+                <span data-h2-display="base(block) base:dark(none)">Should be orange on hover</span>
+                <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
+                <span data-h2-display="base(none) base:dark(block)">Should be blue on hover</span>
+              </div>
+            </div>
+            <div data-h2="dark">
+              <h3>Class dark</h3>
+              <div
+                data-h2-padding="base(x.5)" 
+                data-h2-margin="base(0, 0, x.5, 0)"
+                data-h2-background-color="base(green) base:dark(cyan) desktop(red)">
+                Should base:dark overwrite desktop?
+              </div>
+              <div
+                data-h2-padding="base(x.5)" 
+                data-h2-margin="base(0, 0, x.5, 0)"
+                data-h2-background-color="base(green)">
+                Base: Green<br><br>
+                Should be green
+              </div>
+              <div
+                data-h2-padding="base(x.5)" 
+                data-h2-margin="base(0, 0, x.5, 0)"
+                data-h2-background-color="base(green) p-tablet(pink)">
+                Base: Green<br>
+                P-tablet: Pink<br><br>
+                Should be pink
+              </div>
+              <div
+                data-h2-padding="base(x.5)" 
+                data-h2-margin="base(0, 0, x.5, 0)"
+                data-h2-background-color="base(green) base:hover(red) p-tablet(pink)">
+                Base: Green<br>
+                Base:hover: Red<br>
+                P-tablet: Pink<br><br>
+                Should be pink<br>
+                Should be red on hover
+              </div>
+              <div
+                data-h2-padding="base(x.5)" 
+                data-h2-margin="base(0, 0, x.5, 0)"
+                data-h2-background-color="base(green) base:hover(red) base:dark(yellow) p-tablet:dark(cyan)">
+                Base: Green<br>
+                Base:hover: Red<br>
+                Base:dark: Yellow<br>
+                P-tablet:dark: Cyan<br><br>
+                <span data-h2-display="base(block) base:dark(none)">Should be green</span>
+                <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
+                Should be red on hover
+              </div>
+              <div
+                data-h2-padding="base(x.5)" 
+                data-h2-margin="base(0, 0, x.5, 0)"
+                data-h2-background-color="base(green) base:hover(red) p-tablet:dark(cyan) p-tablet:dark:hover(blue)">
+                Base: Green<br>
+                Base:hover: Red<br>
+                P-tablet:dark: Cyan<br>
+                P-tablet:dark:hover: Blue<br><br>
+                <span data-h2-display="base(block) base:dark(none)">Should be green</span>
+                <span data-h2-display="base(block) base:dark(none)">Should be red on hover</span>
+                <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
+                <span data-h2-display="base(none) base:dark(block)">Should be blue on hover</span>
+              </div>
+              <div
+                data-h2-padding="base(x.5)" 
+                data-h2-margin="base(0, 0, x.5, 0)"
+                data-h2-background-color="base(green) base:hover(red) p-tablet:hover(orange) p-tablet:dark(cyan) p-tablet:dark:hover(blue)">
+                Base: Green<br>
+                Base:hover: Red<br>
+                P-tablet:hover: Orange<br>
+                P-tablet:dark: Cyan<br>
+                P-tablet:dark:hover: Blue<br><br>
+                <span data-h2-display="base(block) base:dark(none)">Should be green</span>
+                <span data-h2-display="base(block) base:dark(none)">Should be orange on hover</span>
+                <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
+                <span data-h2-display="base(none) base:dark(block)">Should be blue on hover</span>
+              </div>
+              <div
+                data-h2-padding="base(x.5)" 
+                data-h2-margin="base(0, 0, x.5, 0)"
+                data-h2-background-color="base(green) base:hover(red) base:dark(yellow) base:dark:hover(gray) p-tablet(pink) p-tablet:hover(orange) p-tablet:dark(cyan) p-tablet:dark:hover(blue)">
+                Base: Green<br>
+                Base:hover: Red<br>
+                Base:dark: Yellow<br>
+                Base:dark:hover: Gray<br>
+                P-tablet: Pink<br>
+                P-tablet:hover: Orange<br>
+                P-tablet:dark: Cyan<br>
+                P-tablet:dark:hover: Blue<br><br>
+                <span data-h2-display="base(block) base:dark(none)">Should be pink</span>
+                <span data-h2-display="base(block) base:dark(none)">Should be orange on hover</span>
+                <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
+                <span data-h2-display="base(none) base:dark(block)">Should be blue on hover</span>
+              </div>
+            </div>
+            <div data-h2="">
+              <h3>Class light</h3>
+              <div
+                data-h2-padding="base(x.5)" 
+                data-h2-margin="base(0, 0, x.5, 0)"
+                data-h2-background-color="base(green)">
+                Base: Green<br><br>
+                Should be green
+              </div>
+              <div
+                data-h2-padding="base(x.5)" 
+                data-h2-margin="base(0, 0, x.5, 0)"
+                data-h2-background-color="base(green) p-tablet(pink)">
+                Base: Green<br>
+                P-tablet: Pink<br><br>
+                Should be pink
+              </div>
+              <div
+                data-h2-padding="base(x.5)" 
+                data-h2-margin="base(0, 0, x.5, 0)"
+                data-h2-background-color="base(green) base:hover(red) p-tablet(pink)">
+                Base: Green<br>
+                Base:hover: Red<br>
+                P-tablet: Pink<br><br>
+                Should be pink<br>
+                Should be red on hover
+              </div>
+              <div
+                data-h2-padding="base(x.5)" 
+                data-h2-margin="base(0, 0, x.5, 0)"
+                data-h2-background-color="base(green) base:hover(red) base:dark(yellow) p-tablet:dark(cyan)">
+                Base: Green<br>
+                Base:hover: Red<br>
+                Base:dark: Yellow<br>
+                P-tablet:dark: Cyan<br><br>
+                <span data-h2-display="base(block) base:dark(none)">Should be green</span>
+                <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
+                Should be red on hover
+              </div>
+              <div
+                data-h2-padding="base(x.5)" 
+                data-h2-margin="base(0, 0, x.5, 0)"
+                data-h2-background-color="base(green) base:hover(red) p-tablet:dark(cyan) p-tablet:dark:hover(blue)">
+                Base: Green<br>
+                Base:hover: Red<br>
+                P-tablet:dark: Cyan<br>
+                P-tablet:dark:hover: Blue<br><br>
+                <span data-h2-display="base(block) base:dark(none)">Should be green</span>
+                <span data-h2-display="base(block) base:dark(none)">Should be red on hover</span>
+                <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
+                <span data-h2-display="base(none) base:dark(block)">Should be blue on hover</span>
+              </div>
+              <div
+                data-h2-padding="base(x.5)" 
+                data-h2-margin="base(0, 0, x.5, 0)"
+                data-h2-background-color="base(green) base:hover(red) p-tablet:hover(orange) p-tablet:dark(cyan) p-tablet:dark:hover(blue)">
+                Base: Green<br>
+                Base:hover: Red<br>
+                P-tablet:hover: Orange<br>
+                P-tablet:dark: Cyan<br>
+                P-tablet:dark:hover: Blue<br><br>
+                <span data-h2-display="base(block) base:dark(none)">Should be green</span>
+                <span data-h2-display="base(block) base:dark(none)">Should be orange on hover</span>
+                <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
+                <span data-h2-display="base(none) base:dark(block)">Should be blue on hover</span>
+              </div>
+              <div
+                data-h2-padding="base(x.5)" 
+                data-h2-margin="base(0, 0, x.5, 0)"
+                data-h2-background-color="base(green) base:hover(red) base:dark(yellow) base:dark:hover(gray) p-tablet(pink) p-tablet:hover(orange) p-tablet:dark(cyan) p-tablet:dark:hover(blue)">
+                Base: Green<br>
+                Base:hover: Red<br>
+                Base:dark: Yellow<br>
+                Base:dark:hover: Gray<br>
+                P-tablet: Pink<br>
+                P-tablet:hover: Orange<br>
+                P-tablet:dark: Cyan<br>
+                P-tablet:dark:hover: Blue<br><br>
+                <span data-h2-display="base(block) base:dark(none)">Should be pink</span>
+                <span data-h2-display="base(block) base:dark(none)">Should be orange on hover</span>
+                <span data-h2-display="base(none) base:dark(block)">Should be cyan</span>
+                <span data-h2-display="base(none) base:dark(block)">Should be blue on hover</span>
+              </div>
+            </div>
+            <div>
+              <p data-h2-margin="base(0, 0, x.5, 0)">Preference</p>
+              <p data-h2-display="base:dark(none)">This is the light toggle</p>
+              <p data-h2-display="base(none) base:dark(block)">This is the dark toggle</p>
+              <p data-h2-display="base(none) l-tablet(block)">This is the menu.</p>
+            </div>
+            <div data-h2="dark">
+              <p data-h2-margin="base(0, 0, x.5, 0)">Class dark</p>
+              <p data-h2-display="base:dark(none)">This is the light toggle</p>
+              <p data-h2-display="base(none) base:dark(block)">This is the dark toggle</p>
+              <p data-h2-display="base(none) l-tablet(block)">This is the menu.</p>
+            </div>
+            <div data-h2="">
+              <p data-h2-margin="base(0, 0, x.5, 0)">Class light</p>
+              <p data-h2-display="base:dark(none)">This is the light toggle</p>
+              <p data-h2-display="base(none) base:dark(block)">This is the dark toggle</p>
+              <p data-h2-display="base(none) l-tablet(block)">This is the menu.</p>
+            </div>
+          </div>
+          <hr data-h2-margin="base(x4, 0)" />
+          <!-- Reset styles -->
+          <h2 id="reset-styles">Reset style tests</h2>
+          <div>
+            <div data-h2-display="base(block)">
+              <button>Test button</button>
+            </div>
+            <div data-h2-display="base(block)">
+              <button 
+                data-h2-font-size="base(h6)"
+                data-h2-font-family="base(serif)">Test button</button>
+            </div>
+            <div data-h2-display="base(block)">
+              <input></input>
+            </div>
+            <div data-h2-display="base(block)">
+              <input data-h2-font-size="base(h5)"></input>
+            </div>
+            <div data-h2-display="base(block)">
+              <select>
+                <option>Thing</option>
+              </select>
+            </div>
+            <div data-h2-display="base(block)">
+              <select data-h2-font-size="base(h3)">
+                <option>Thing</option>
+              </select>
+            </div>
+            <div data-h2-display="base(block)">
+              <textarea></textarea>
+            </div>
+            <div data-h2-display="base(block)">
+              <textarea data-h2-font-size="base(h6)"></textarea>
+            </div>
+          </div>
+          <hr data-h2-margin="base(x4, 0)" />
+          <!-- Background colors -->
+          <h2 id="background-color">Background color tests</h2>
+          <div
+            data-h2-display="base(grid)"
+            data-h2-grid-template-columns="base(1fr 1fr)"
+            data-h2-gap="base(x2, all)">
+            <div>
+              <h3>Hydrogen.css</h3>
+              <div
+                data-h2-display="base(grid)"
+                data-h2-grid-template-columns="base(1fr 1fr 1fr 1fr 1fr 1fr 1fr)"
+                data-h2-gap="base(x.5, all)">
+                <div data-h2-grid-column="base(1 / 8)">
+                  <h4>Configured color</h4>
+                  <p>Hover should be yellow, dark mode should be the accent scale.</p>
+                </div>
+                <div
+                  data-h2-height="base(x3)"
+                  data-h2-background-color="base(lightest.primary) base:dark(lightest.accent) base:hover(yellow)"></div>
+                <div
+                  data-h2-height="base(x3)"
+                  data-h2-background-color="base(lighter.primary) base:dark(lighter.accent) base:hover(yellow)"></div>
+                <div
+                  data-h2-height="base(x3)"
+                  data-h2-background-color="base(light.primary) base:dark(light.accent) base:hover(yellow)"></div>
+                <div
+                  data-h2-height="base(x3)"
+                  data-h2-background-color="base(primary) base:dark(accent) base:hover(yellow)"></div>
+                <div
+                  data-h2-height="base(x3)"
+                  data-h2-background-color="base(dark.primary) base:dark(dark.accent) base:hover(yellow)"></div>
+                <div
+                  data-h2-height="base(x3)"
+                  data-h2-background-color="base(darker.primary) base:dark(darker.accent) base:hover(yellow)"></div>
+                <div
+                  data-h2-height="base(x3)"
+                  data-h2-background-color="base(darker.primary) base:dark(darkest.accent) base:hover(yellow)"></div>
+                <div data-h2-grid-column="base(1 / 8)">
+                  <h4>Custom modifiers</h4>
+                </div>
+                <div
+                  data-h2-height="base(x3)"
+                  data-h2-background-color="base(primary.other)">
+                </div>
+                <div
+                  data-h2-height="base(x3)"
+                  data-h2-background-color="base(primary.customModifier)">
+                </div>
+                <div
+                  data-h2-height="base(x3)"
+                  data-h2-background-color="base(secondary.lighter)">
+                </div>
+                <div
+                  data-h2-height="base(x3)"
+                  data-h2-background-color="base(primary.other.2)">
+                </div>
+                <div
+                  data-h2-height="base(x3)"
+                  data-h2-background-color="base(primary.customModifier) base:hover(blue) base:dark(primary)">
+                </div>
+                <div
+                  data-h2-height="base(x3)"
+                  data-h2-background-color="base(secondary.lighter.1)">
+                </div>
+                <div data-h2-grid-column="base(1 / 8)">
+                  <h4>Gradients</h4>
+                </div>
+                <div
+                  data-h2-grid-column="base(1 / 8)"
+                  data-h2-height="base(x3)"
+                  data-h2-width="base(100%)"
+                  data-h2-background-color="base(myLinearGradient)"></div>
+                <div
+                  data-h2-grid-column="base(1 / 8)"
+                  data-h2-height="base(x3)"
+                  data-h2-width="base(100%)"
+                  data-h2-background-color="base(myRadialGradient)"></div>
+                <div data-h2-grid-column="base(1 / 8)">
+                  <h4>Configured color with opacity</h4>
+                </div>
+                <div
+                  data-h2-height="base(x3)"
+                  data-h2-background-color="base(black)"></div>
+                <div
+                  data-h2-height="base(x3)"
+                  data-h2-background-color="base(black.9)"></div>
+                <div
+                  data-h2-height="base(x3)"
+                  data-h2-background-color="base(black.8)"></div>
+                <div
+                  data-h2-height="base(x3)"
+                  data-h2-background-color="base(black.7)"></div>
+                <div
+                  data-h2-height="base(x3)"
+                  data-h2-background-color="base(black.6)"></div>
+                <div
+                  data-h2-height="base(x3)"
+                  data-h2-background-color="base(black.5)"></div>
+                <div
+                  data-h2-height="base(x3)"
+                  data-h2-background-color="base(black.4)"></div>
+              </div>
+            </div>
+            <div>
+              <h3>Hydrogen variable export</h3>
+              <div
+                data-h2-display="base(grid)"
+                data-h2-grid-template-columns="base(1fr 1fr 1fr 1fr 1fr 1fr 1fr)"
+                data-h2-gap="base(x.5, all)">
+                <div data-h2-grid-column="base(1 / 8)">
+                  <h4>Configured color</h4>
+                  <p>Hover should be the accent scale in reverse.</p>
+                </div>
+                <div
+                  data-h2-height="base(x3)"
+                  data-h2-background-color="base(var(--h2-color-primary-lightest)) base:hover(var(--h2-color-accent-darkest))"></div>
+                <div
+                  data-h2-height="base(x3)"
+                  data-h2-background-color="base(var(--h2-color-primary-lighter)) base:hover(var(--h2-color-accent-darker))"></div>
+                <div
+                  data-h2-height="base(x3)"
+                  data-h2-background-color="base(var(--h2-color-primary-light)) base:hover(var(--h2-color-accent-dark))"></div>
+                <div
+                  data-h2-height="base(x3)"
+                  data-h2-background-color="base(var(--h2-color-primary)) base:hover(var(--h2-color-accent))"></div>
+                <div
+                  data-h2-height="base(x3)"
+                  data-h2-background-color="
+                    base(var(--h2-color-primary-dark)) 
+                    base:hover(var(--h2-color-accent-light))"></div>
+                <div
+                  data-h2-height="base(x3)"
+                  data-h2-background-color="base(var(--h2-color-primary-darker)) base:hover(var(--h2-color-accent-lighter))"></div>
+                <div
+                  data-h2-height="base(x3)"
+                  data-h2-background-color="base(var(--h2-color-primary-darkest)) base:hover(var(--h2-color-accent-lightest))"></div>
+                <div data-h2-grid-column="base(1 / 8)">
+                  <h4>Gradients</h4>
+                </div>
+                <div
+                  data-h2-grid-column="base(1 / 8)"
+                  data-h2-height="base(x3)"
+                  data-h2-width="base(100%)"
+                  style="background-image: var(--h2-gradient-myLinearGradient)"></div>
+                <div
+                  data-h2-grid-column="base(1 / 8)"
+                  data-h2-height="base(x3)"
+                  data-h2-width="base(100%)"
+                  style="background-image: var(--h2-gradient-myRadialGradient)"></div>
               </div>
             </div>
           </div>
-        </div>
-        <div>
-          <h3 data-h2-margin="base(x2, 0, 0, 0)">CSS values</h3>
+          <!-- Borders -->
+          <h2 id="border">Border tests</h2>
+          <h3>1 value</h3>
           <div
-            data-h2-background-color="base(black.4)"
-            data-h2-height="base(x10)"
-            data-h2-width="base(100%)"
-            data-h2-position="base(relative)"
-            data-h2-padding="base(x2)"
-            data-h2-margin="base(0, 0, x1, 0)">
+            data-h2-display="base(grid)"
+            data-h2-grid-template-columns="base(1fr 1fr)"
+            data-h2-gap="base(x2, all)">
+            <button data-h2-border="base(none)">
+              My button
+            </button>
             <div
-              data-h2-height="base(x1)"
-              data-h2-width="base(x1)"
-              data-h2-background-color="base(secondary)"
-              data-h2-position="base(relative)">
+              data-h2-padding="base(x1)"
+              data-h2-background-color="base(primary)"
+              data-h2-border="base(all, 3px, solid, black) l-tablet(none)">
             </div>
           </div>
+          <h3>2 values</h3>
           <div
-            data-h2-background-color="base(black.4)"
-            data-h2-height="base(x10)"
-            data-h2-width="base(100%)"
-            data-h2-position="base(relative)"
-            data-h2-padding="base(x2)">
+            data-h2-display="base(grid)"
+            data-h2-grid-template-columns="base(1fr 1fr)"
+            data-h2-gap="base(x2, all)">
             <div
-              data-h2-height="base(x1)"
-              data-h2-width="base(x1)"
-              data-h2-background-color="base(secondary)"
-              data-h2-position="base(absolute)"
-              data-h2-offset="base(0, 0, auto, auto)">
+              data-h2-padding="base(x1)"
+              data-h2-background-color="base(primary)"
+              data-h2-border="base(all, 5px solid rgba(255, 0, 0, 1))">
+            </div>
+            <div
+              data-h2-padding="base(x1)"
+              data-h2-background-color="base(primary)"
+              data-h2-border="base(left, 1rem dashed blue)">
             </div>
           </div>
-        </div>
+          <h3>4 values</h3>
+          <div
+            data-h2-display="base(grid)"
+            data-h2-grid-template-columns="base(1fr 1fr)"
+            data-h2-gap="base(x2, all)">
+            <div
+              data-h2-padding="base(x1)"
+              data-h2-background-color="base(primary)"
+              data-h2-border="base(all, 3px, solid, black)">
+            </div>
+            <div
+              data-h2-padding="base(x1)"
+              data-h2-background-color="base(primary)"
+              data-h2-border="base(all, x1, solid, accent)">
+            </div>
+          </div>
+          <!-- Gap tests -->
+          <h2 id="gap">Gap tests</h2>
+          <div>
+            <div data-h2-display="base(grid)" data-h2-grid-template-columns="base(1fr 1fr 1fr)" data-h2-gap="base(x2)">
+              <div data-h2-height="base(x5)" data-h2-background-color="base(primary)" data-h2-width="base(100%)"></div>
+              <div data-h2-height="base(x5)" data-h2-background-color="base(primary)" data-h2-width="base(100%)"></div>
+              <div data-h2-height="base(x5)" data-h2-background-color="base(primary)" data-h2-width="base(100%)"></div>
+              <div data-h2-height="base(x5)" data-h2-background-color="base(primary)" data-h2-width="base(100%)"></div>
+              <div data-h2-height="base(x5)" data-h2-background-color="base(primary)" data-h2-width="base(100%)"></div>
+              <div data-h2-height="base(x5)" data-h2-background-color="base(primary)" data-h2-width="base(100%)"></div>
+            </div>
+            <br>
+            <div data-h2-display="base(grid)" data-h2-grid-template-columns="base(1fr 1fr 1fr)" data-h2-gap="base(x2, x.5)">
+              <div data-h2-height="base(x5)" data-h2-background-color="base(primary)" data-h2-width="base(100%)"></div>
+              <div data-h2-height="base(x5)" data-h2-background-color="base(primary)" data-h2-width="base(100%)"></div>
+              <div data-h2-height="base(x5)" data-h2-background-color="base(primary)" data-h2-width="base(100%)"></div>
+              <div data-h2-height="base(x5)" data-h2-background-color="base(primary)" data-h2-width="base(100%)"></div>
+              <div data-h2-height="base(x5)" data-h2-background-color="base(primary)" data-h2-width="base(100%)"></div>
+              <div data-h2-height="base(x5)" data-h2-background-color="base(primary)" data-h2-width="base(100%)"></div>
+            </div>
+          </div>
+          <!-- Grid and flex grid -->
+          <h2 id="css-grid">CSS grid tests</h2>
+          <div>
+          </div>
+          <h2 id="flex-grid">Flex grid tests</h2>
+          <div>
+            <h3>Flex grid as grid substitute</h3>
+            <div
+              data-h2-height="
+                base:children[.grid-sibling](x2) 
+                base:children[.grid-parent>div>div>div](x1)"
+              data-h2-width="base:children[.grid-parent>div>div>div](100%)"
+              data-h2-background-color="
+                base:children[.grid-sibling](secondary.dark)
+                base:children[.grid-parent>div>div](primary.5)
+                base:children[.grid-parent>div>div>div](accent)"
+              data-h2-padding="
+                base:children[.grid-test](x2)
+                base:children[.grid-test-list](0, 0, 0, x1)" 
+              data-h2-display="base:children[.grid-test](grid)" 
+              data-h2-grid-template-columns="base:children[.grid-test](1fr 1fr 1fr 1fr)" 
+              data-h2-gap="base:children[.grid-test](x2)" 
+              data-h2-margin="
+                base:children[.grid-test](0, 0, x1, 0)
+                base:children[.grid-test-list](0, 0, x1, 0)"
+              
+              data-h2-font-weight="base:children[.grid-test-list span](700)"  >
+              <h4>Direct siblings, grid colored</h4>
+              <div 
+                class="grid-test"
+                data-h2-background-color="base:children[.grid](primary.5)"
+                data-h2-border="
+                  base:children(all, 1px, solid, gray)
+                  base:children[.grid](all, 1px, solid, primary.dark)">
+
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> flex</li>
+                    <li><span>Rows:</span> 1</li>
+                    <li><span>Row gutter:</span> inactive</li>
+                    <li><span>Siblings:</span> direct</li>
+                    <li><span>Background:</span> grid</li>
+                    <li><span>Children:</span> block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div class="grid-sibling"></div>
+                        <div
+                          class="grid"
+                          data-h2-display="base(flex) base:children[>div>div](block)" 
+                          data-h2-flex-grid="base(flex-start, x1, 0)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                        <div class="grid-sibling"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> flex</li>
+                    <li><span>Rows:</span> 1</li>
+                    <li><span>Row gutter:</span> inactive</li>
+                    <li><span>Siblings:</span> direct</li>
+                    <li><span>Background:</span> grid</li>
+                    <li><span>Children:</span> inline-block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div class="grid-sibling"></div>
+                        <div 
+                          class="grid"
+                          data-h2-display="base(flex) base:children[>div>div](inline-block)" 
+                          data-h2-flex-grid="base(flex-start, x1, 0)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                        <div class="grid-sibling"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> inline-flex</li>
+                    <li><span>Rows:</span> 1</li>
+                    <li><span>Row gutter:</span> inactive</li>
+                    <li><span>Siblings:</span> direct</li>
+                    <li><span>Background:</span> grid</li>
+                    <li><span>Children:</span> block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div class="grid-sibling"></div>
+                        <div
+                          class="grid"
+                          data-h2-display="base(inline-flex) base:children[>div>div](block)" 
+                          data-h2-flex-grid="base(flex-start, x1, 0)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                        <div class="grid-sibling"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> inline-flex</li>
+                    <li><span>Rows:</span> 1</li>
+                    <li><span>Row gutter:</span> inactive</li>
+                    <li><span>Siblings:</span> direct</li>
+                    <li><span>Background:</span> grid</li>
+                    <li><span>Children:</span> inline-block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div class="grid-sibling"></div>
+                        <div 
+                          class="grid"
+                          data-h2-display="base(inline-flex) base:children[>div>div](inline-block)" 
+                          data-h2-flex-grid="base(flex-start, x1, 0)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                        <div class="grid-sibling"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> flex</li>
+                    <li><span>Rows:</span> 1</li>
+                    <li><span>Row gutter:</span> active</li>
+                    <li><span>Siblings:</span> direct</li>
+                    <li><span>Background:</span> grid</li>
+                    <li><span>Children:</span> block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div class="grid-sibling"></div>
+                        <div 
+                          class="grid"
+                          data-h2-display="base(flex) base:children[>div>div](block)" 
+                          data-h2-flex-grid="base(flex-start, x1)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                        <div class="grid-sibling"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> flex</li>
+                    <li><span>Rows:</span> 1</li>
+                    <li><span>Row gutter:</span> active</li>
+                    <li><span>Siblings:</span> direct</li>
+                    <li><span>Background:</span> grid</li>
+                    <li><span>Children:</span> inline-block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div class="grid-sibling"></div>
+                        <div 
+                          class="grid"
+                          data-h2-display="base(flex) base:children[>div>div](inline-block)" 
+                          data-h2-flex-grid="base(flex-start, x1)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                        <div class="grid-sibling"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> inline-flex</li>
+                    <li><span>Rows:</span> 1</li>
+                    <li><span>Row gutter:</span> active</li>
+                    <li><span>Siblings:</span> direct</li>
+                    <li><span>Background:</span> grid</li>
+                    <li><span>Children:</span> block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div class="grid-sibling"></div>
+                        <div 
+                          class="grid"
+                          data-h2-display="base(inline-flex) base:children[>div>div](block)" 
+                          data-h2-flex-grid="base(flex-start, x1)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                        <div class="grid-sibling"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> inline-flex</li>
+                    <li><span>Rows:</span> 1</li>
+                    <li><span>Row gutter:</span> active</li>
+                    <li><span>Siblings:</span> direct</li>
+                    <li><span>Background:</span> grid</li>
+                    <li><span>Children:</span> inline-block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div class="grid-sibling"></div>
+                        <div 
+                          class="grid"
+                          data-h2-display="base(inline-flex) base:children[>div>div](inline-block)" 
+                          data-h2-flex-grid="base(flex-start, x1)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                        <div class="grid-sibling"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> flex</li>
+                    <li><span>Rows:</span> 2</li>
+                    <li><span>Row gutter:</span> active</li>
+                    <li><span>Siblings:</span> direct</li>
+                    <li><span>Background:</span> grid</li>
+                    <li><span>Children:</span> block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div class="grid-sibling"></div>
+                        <div 
+                          class="grid"
+                          data-h2-display="base(flex) base:children[>div>div](block)" 
+                          data-h2-flex-grid="base(flex-start, x1)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                        <div class="grid-sibling"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> flex</li>
+                    <li><span>Rows:</span> 2</li>
+                    <li><span>Row gutter:</span> active</li>
+                    <li><span>Siblings:</span> direct</li>
+                    <li><span>Background:</span> grid</li>
+                    <li><span>Children:</span> inline-block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div class="grid-sibling"></div>
+                        <div 
+                          class="grid"
+                          data-h2-display="base(flex) base:children[>div>div](inline-block)" 
+                          data-h2-flex-grid="base(flex-start, x1)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                        <div class="grid-sibling"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> inline-flex</li>
+                    <li><span>Rows:</span> 2</li>
+                    <li><span>Row gutter:</span> active</li>
+                    <li><span>Siblings:</span> direct</li>
+                    <li><span>Background:</span> grid</li>
+                    <li><span>Children:</span> block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div class="grid-sibling"></div>
+                        <div 
+                          class="grid"
+                          data-h2-display="base(inline-flex) base:children[>div>div](block)" 
+                          data-h2-flex-grid="base(flex-start, x1)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                        <div class="grid-sibling"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> inline-flex</li>
+                    <li><span>Rows:</span> 2</li>
+                    <li><span>Row gutter:</span> active</li>
+                    <li><span>Siblings:</span> direct</li>
+                    <li><span>Background:</span> grid</li>
+                    <li><span>Children:</span> inline-block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div class="grid-sibling"></div>
+                        <div 
+                          class="grid"
+                          data-h2-display="base(inline-flex) base:children[>div>div](inline-block)" 
+                          data-h2-flex-grid="base(flex-start, x1)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                        <div class="grid-sibling"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <h4>Direct siblings, parent colored</h4>
+              <div 
+                class="grid-test"
+                data-h2-background-color="base:children[.grid-parent](primary.5)"
+                data-h2-border="
+                  base:children(all, 1px, solid, gray)
+                  base:children[.grid-parent](all, 1px, solid, primary.dark)">
+
+                <div>
+                  <h5 data-h2-color="base(green)">Useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> flex</li>
+                    <li><span>Rows:</span> 1</li>
+                    <li><span>Row gutter:</span> inactive</li>
+                    <li><span>Siblings:</span> direct</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div class="grid-sibling"></div>
+                        <div
+                          class="grid"
+                          data-h2-display="base(flex) base:children[>div>div](block)" 
+                          data-h2-flex-grid="base(flex-start, x1, 0)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                        <div class="grid-sibling"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> flex</li>
+                    <li><span>Rows:</span> 1</li>
+                    <li><span>Row gutter:</span> inactive</li>
+                    <li><span>Siblings:</span> direct</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> inline-block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div class="grid-sibling"></div>
+                        <div 
+                          class="grid"
+                          data-h2-display="base(flex) base:children[>div>div](inline-block)" 
+                          data-h2-flex-grid="base(flex-start, x1, 0)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                        <div class="grid-sibling"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> inline-flex</li>
+                    <li><span>Rows:</span> 1</li>
+                    <li><span>Row gutter:</span> inactive</li>
+                    <li><span>Siblings:</span> direct</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div class="grid-sibling"></div>
+                        <div
+                          class="grid"
+                          data-h2-display="base(inline-flex) base:children[>div>div](block)" 
+                          data-h2-flex-grid="base(flex-start, x1, 0)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                        <div class="grid-sibling"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> inline-flex</li>
+                    <li><span>Rows:</span> 1</li>
+                    <li><span>Row gutter:</span> inactive</li>
+                    <li><span>Siblings:</span> direct</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> inline-block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div class="grid-sibling"></div>
+                        <div 
+                          class="grid"
+                          data-h2-display="base(inline-flex) base:children[>div>div](inline-block)" 
+                          data-h2-flex-grid="base(flex-start, x1, 0)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                        <div class="grid-sibling"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h5 data-h2-color="base(green)">Useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> flex</li>
+                    <li><span>Rows:</span> 1</li>
+                    <li><span>Row gutter:</span> active</li>
+                    <li><span>Siblings:</span> direct</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div class="grid-sibling"></div>
+                        <div 
+                          class="grid"
+                          data-h2-display="base(flex) base:children[>div>div](block)" 
+                          data-h2-flex-grid="base(flex-start, x1)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                        <div class="grid-sibling"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> flex</li>
+                    <li><span>Rows:</span> 1</li>
+                    <li><span>Row gutter:</span> active</li>
+                    <li><span>Siblings:</span> direct</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> inline-block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div class="grid-sibling"></div>
+                        <div 
+                          class="grid"
+                          data-h2-display="base(flex) base:children[>div>div](inline-block)" 
+                          data-h2-flex-grid="base(flex-start, x1)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                        <div class="grid-sibling"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> inline-flex</li>
+                    <li><span>Rows:</span> 1</li>
+                    <li><span>Row gutter:</span> active</li>
+                    <li><span>Siblings:</span> direct</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div class="grid-sibling"></div>
+                        <div 
+                          class="grid"
+                          data-h2-display="base(inline-flex) base:children[>div>div](block)" 
+                          data-h2-flex-grid="base(flex-start, x1)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                        <div class="grid-sibling"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> inline-flex</li>
+                    <li><span>Rows:</span> 1</li>
+                    <li><span>Row gutter:</span> active</li>
+                    <li><span>Siblings:</span> direct</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> inline-block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div class="grid-sibling"></div>
+                        <div 
+                          class="grid"
+                          data-h2-display="base(inline-flex) base:children[>div>div](inline-block)" 
+                          data-h2-flex-grid="base(flex-start, x1)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                        <div class="grid-sibling"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h5 data-h2-color="base(green)">Useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> flex</li>
+                    <li><span>Rows:</span> 2</li>
+                    <li><span>Row gutter:</span> active</li>
+                    <li><span>Siblings:</span> direct</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div class="grid-sibling"></div>
+                        <div 
+                          class="grid"
+                          data-h2-display="base(flex) base:children[>div>div](block)" 
+                          data-h2-flex-grid="base(flex-start, x1)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                        <div class="grid-sibling"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> flex</li>
+                    <li><span>Rows:</span> 2</li>
+                    <li><span>Row gutter:</span> active</li>
+                    <li><span>Siblings:</span> direct</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> inline-block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div class="grid-sibling"></div>
+                        <div 
+                          class="grid"
+                          data-h2-display="base(flex) base:children[>div>div](inline-block)" 
+                          data-h2-flex-grid="base(flex-start, x1)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                        <div class="grid-sibling"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(green)">Useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> inline-flex</li>
+                    <li><span>Rows:</span> 2</li>
+                    <li><span>Row gutter:</span> active</li>
+                    <li><span>Siblings:</span> direct</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div class="grid-sibling"></div>
+                        <div 
+                          class="grid"
+                          data-h2-display="base(inline-flex) base:children[>div>div](block)" 
+                          data-h2-flex-grid="base(flex-start, x1)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                        <div class="grid-sibling"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> inline-flex</li>
+                    <li><span>Rows:</span> 2</li>
+                    <li><span>Row gutter:</span> active</li>
+                    <li><span>Siblings:</span> direct</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> inline-block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div class="grid-sibling"></div>
+                        <div 
+                          class="grid"
+                          data-h2-display="base(inline-flex) base:children[>div>div](inline-block)" 
+                          data-h2-flex-grid="base(flex-start, x1)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                        <div class="grid-sibling"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <h4>Indirect siblings, grid colored</h4>
+              <div 
+                class="grid-test"
+                data-h2-background-color="base:children[.grid](primary.5)"
+                data-h2-border="
+                  base:children(all, 1px, solid, gray)
+                  base:children[.grid](all, 1px, solid, primary.dark)">
+
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> flex</li>
+                    <li><span>Rows:</span> 1</li>
+                    <li><span>Row gutter:</span> inactive</li>
+                    <li><span>Siblings:</span> indirect</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-sibling"></div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div
+                        class="grid"
+                          data-h2-display="base(flex) base:children[>div>div](block)" 
+                          data-h2-flex-grid="base(flex-start, x1, 0)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="grid-sibling"></div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> flex</li>
+                    <li><span>Rows:</span> 1</li>
+                    <li><span>Row gutter:</span> inactive</li>
+                    <li><span>Siblings:</span> indirect</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> inline-block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-sibling"></div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div 
+                        class="grid"
+                          data-h2-display="base(flex) base:children[>div>div](inline-block)" 
+                          data-h2-flex-grid="base(flex-start, x1, 0)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="grid-sibling"></div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> inline-flex</li>
+                    <li><span>Rows:</span> 1</li>
+                    <li><span>Row gutter:</span> inactive</li>
+                    <li><span>Siblings:</span> indirect</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-sibling"></div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div
+                        class="grid"
+                          data-h2-display="base(inline-flex) base:children[>div>div](block)" 
+                          data-h2-flex-grid="base(flex-start, x1, 0)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="grid-sibling"></div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> inline-flex</li>
+                    <li><span>Rows:</span> 1</li>
+                    <li><span>Row gutter:</span> inactive</li>
+                    <li><span>Siblings:</span> indirect</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> inline-block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-sibling"></div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div 
+                        class="grid"
+                          data-h2-display="base(inline-flex) base:children[>div>div](inline-block)" 
+                          data-h2-flex-grid="base(flex-start, x1, 0)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="grid-sibling"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> flex</li>
+                    <li><span>Rows:</span> 1</li>
+                    <li><span>Row gutter:</span> active</li>
+                    <li><span>Siblings:</span> indirect</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-sibling"></div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div 
+                        class="grid"
+                          data-h2-display="base(flex) base:children[>div>div](block)" 
+                          data-h2-flex-grid="base(flex-start, x1)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="grid-sibling"></div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> flex</li>
+                    <li><span>Rows:</span> 1</li>
+                    <li><span>Row gutter:</span> active</li>
+                    <li><span>Siblings:</span> indirect</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> inline-block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-sibling"></div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div 
+                        class="grid"
+                          data-h2-display="base(flex) base:children[>div>div](inline-block)" 
+                          data-h2-flex-grid="base(flex-start, x1)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="grid-sibling"></div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> inline-flex</li>
+                    <li><span>Rows:</span> 1</li>
+                    <li><span>Row gutter:</span> active</li>
+                    <li><span>Siblings:</span> indirect</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-sibling"></div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div 
+                        class="grid"
+                          data-h2-display="base(inline-flex) base:children[>div>div](block)" 
+                          data-h2-flex-grid="base(flex-start, x1)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="grid-sibling"></div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> inline-flex</li>
+                    <li><span>Rows:</span> 1</li>
+                    <li><span>Row gutter:</span> active</li>
+                    <li><span>Siblings:</span> indirect</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> inline-block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-sibling"></div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div 
+                        class="grid"
+                          data-h2-display="base(inline-flex) base:children[>div>div](inline-block)" 
+                          data-h2-flex-grid="base(flex-start, x1)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="grid-sibling"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> flex</li>
+                    <li><span>Rows:</span> 2</li>
+                    <li><span>Row gutter:</span> active</li>
+                    <li><span>Siblings:</span> indirect</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-sibling"></div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div 
+                        class="grid"
+                          data-h2-display="base(flex) base:children[>div>div](block)" 
+                          data-h2-flex-grid="base(flex-start, x1)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="grid-sibling"></div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> flex</li>
+                    <li><span>Rows:</span> 2</li>
+                    <li><span>Row gutter:</span> active</li>
+                    <li><span>Siblings:</span> indirect</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> inline-block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-sibling"></div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div 
+                        class="grid"
+                          data-h2-display="base(flex) base:children[>div>div](inline-block)" 
+                          data-h2-flex-grid="base(flex-start, x1)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="grid-sibling"></div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> inline-flex</li>
+                    <li><span>Rows:</span> 2</li>
+                    <li><span>Row gutter:</span> active</li>
+                    <li><span>Siblings:</span> indirect</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-sibling"></div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div 
+                        class="grid"
+                          data-h2-display="base(inline-flex) base:children[>div>div](block)" 
+                          data-h2-flex-grid="base(flex-start, x1)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="grid-sibling"></div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> inline-flex</li>
+                    <li><span>Rows:</span> 2</li>
+                    <li><span>Row gutter:</span> active</li>
+                    <li><span>Siblings:</span> indirect</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> inline-block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-sibling"></div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div 
+                          class="grid"
+                          data-h2-display="base(inline-flex) base:children[>div>div](inline-block)" 
+                          data-h2-flex-grid="base(flex-start, x1)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="grid-sibling"></div>
+                  </div>
+                </div>
+
+              </div>
+              <h4>Indirect siblings, parent colored</h4>
+              <div 
+                class="grid-test"
+                data-h2-background-color="base:children[.grid-parent](primary.5)"
+                data-h2-border="
+                  base:children(all, 1px, solid, gray)
+                  base:children[.grid-parent](all, 1px, solid, primary.dark)">
+
+                <div>
+                  <h5 data-h2-color="base(green)">Useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> flex</li>
+                    <li><span>Rows:</span> 1</li>
+                    <li><span>Row gutter:</span> inactive</li>
+                    <li><span>Siblings:</span> indirect</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-sibling"></div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div
+                          class="grid"
+                          data-h2-display="base(flex) base:children[>div>div](block)" 
+                          data-h2-flex-grid="base(flex-start, x1, 0)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="grid-sibling"></div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> flex</li>
+                    <li><span>Rows:</span> 1</li>
+                    <li><span>Row gutter:</span> inactive</li>
+                    <li><span>Siblings:</span> indirect</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> inline-block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-sibling"></div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div 
+                          class="grid"
+                          data-h2-display="base(flex) base:children[>div>div](inline-block)" 
+                          data-h2-flex-grid="base(flex-start, x1, 0)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="grid-sibling"></div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> inline-flex</li>
+                    <li><span>Rows:</span> 1</li>
+                    <li><span>Row gutter:</span> inactive</li>
+                    <li><span>Siblings:</span> indirect</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-sibling"></div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div
+                          class="grid"
+                          data-h2-display="base(inline-flex) base:children[>div>div](block)" 
+                          data-h2-flex-grid="base(flex-start, x1, 0)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="grid-sibling"></div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> inline-flex</li>
+                    <li><span>Rows:</span> 1</li>
+                    <li><span>Row gutter:</span> inactive</li>
+                    <li><span>Siblings:</span> indirect</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> inline-block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-sibling"></div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div 
+                          class="grid"
+                          data-h2-display="base(inline-flex) base:children[>div>div](inline-block)" 
+                          data-h2-flex-grid="base(flex-start, x1, 0)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="grid-sibling"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> flex</li>
+                    <li><span>Rows:</span> 1</li>
+                    <li><span>Row gutter:</span> active</li>
+                    <li><span>Siblings:</span> indirect</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-sibling"></div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div 
+                          class="grid"
+                          data-h2-display="base(flex) base:children[>div>div](block)" 
+                          data-h2-flex-grid="base(flex-start, x1)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="grid-sibling"></div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> flex</li>
+                    <li><span>Rows:</span> 1</li>
+                    <li><span>Row gutter:</span> active</li>
+                    <li><span>Siblings:</span> indirect</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> inline-block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-sibling"></div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div 
+                          class="grid"
+                          data-h2-display="base(flex) base:children[>div>div](inline-block)" 
+                          data-h2-flex-grid="base(flex-start, x1)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="grid-sibling"></div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> inline-flex</li>
+                    <li><span>Rows:</span> 1</li>
+                    <li><span>Row gutter:</span> active</li>
+                    <li><span>Siblings:</span> indirect</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-sibling"></div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div 
+                          class="grid"
+                          data-h2-display="base(inline-flex) base:children[>div>div](block)" 
+                          data-h2-flex-grid="base(flex-start, x1)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="grid-sibling"></div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> inline-flex</li>
+                    <li><span>Rows:</span> 1</li>
+                    <li><span>Row gutter:</span> active</li>
+                    <li><span>Siblings:</span> indirect</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> inline-block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-sibling"></div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div 
+                          class="grid"
+                          data-h2-display="base(inline-flex) base:children[>div>div](inline-block)" 
+                          data-h2-flex-grid="base(flex-start, x1)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="grid-sibling"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> flex</li>
+                    <li><span>Rows:</span> 2</li>
+                    <li><span>Row gutter:</span> active</li>
+                    <li><span>Siblings:</span> indirect</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-sibling"></div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div 
+                          class="grid"
+                          data-h2-display="base(flex) base:children[>div>div](block)" 
+                          data-h2-flex-grid="base(flex-start, x1)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="grid-sibling"></div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> flex</li>
+                    <li><span>Rows:</span> 2</li>
+                    <li><span>Row gutter:</span> active</li>
+                    <li><span>Siblings:</span> indirect</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> inline-block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-sibling"></div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div 
+                          class="grid"
+                          data-h2-display="base(flex) base:children[>div>div](inline-block)" 
+                          data-h2-flex-grid="base(flex-start, x1)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="grid-sibling"></div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(green)">Useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> inline-flex</li>
+                    <li><span>Rows:</span> 2</li>
+                    <li><span>Row gutter:</span> active</li>
+                    <li><span>Siblings:</span> indirect</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-sibling"></div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div 
+                          class="grid"
+                          data-h2-display="base(inline-flex) base:children[>div>div](block)" 
+                          data-h2-flex-grid="base(flex-start, x1)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="grid-sibling"></div>
+                  </div>
+                </div>
+                <div>
+                  <h5 data-h2-color="base(red)">Not useful</h5>
+                  <ul class="grid-test-list">
+                    <li><span>Display:</span> inline-flex</li>
+                    <li><span>Rows:</span> 2</li>
+                    <li><span>Row gutter:</span> active</li>
+                    <li><span>Siblings:</span> indirect</li>
+                    <li><span>Background:</span> parent</li>
+                    <li><span>Children:</span> inline-block</li>
+                  </ul>
+                  <div>
+                    <div class="grid-sibling"></div>
+                    <div class="grid-wrapper">
+                      <div class="grid-parent">
+                        <div 
+                          class="grid"
+                          data-h2-display="base(inline-flex) base:children[>div>div](inline-block)" 
+                          data-h2-flex-grid="base(flex-start, x1)">
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                          <div data-h2-flex-item="base(1/3)"><div></div></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="grid-sibling"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div>
+              <h3>Flex grid as inline layout</h3>
+              <div data-h2-display="base(grid)" data-h2-grid-template-columns="base(1fr 1fr)" data-h2-gap="base(x2, all)">
+                <div data-h2-grid-column="base(1 / 3)">
+                  <h4><span data-h2-color="base(green)">Useful:</span> Larger than line height</h4>
+                  <div data-h2-background-color="base:children[>div>div](primary.5)">
+                    <div data-h2-height="base(x2)" data-h2-background-color="base(secondary.dark)"></div>
+                    <div
+                      data-h2-flex-grid="base(center, x.5, 0)"
+                      data-h2-padding="base:children[button](0)"
+                      data-h2-border="base:children[button](none)"
+                      data-h2-background-color="base(primary.5) base:children[button, p](accent)">
+                      <div data-h2-flex-item="base(content)">
+                        <button>Button</button>
+                      </div>
+                      <div data-h2-flex-item="base(content)">
+                        <button>Button</button>
+                      </div>
+                      <div data-h2-flex-item="base(content)">
+                        <button>Button</button>
+                      </div>
+                      <div data-h2-flex-item="base(fill)">
+                        <p>This is text</p>
+                      </div>
+                    </div>
+                    <div data-h2-height="base(x2)" data-h2-background-color="base(secondary.dark)"></div>
+                  </div>
+                </div>
+                <div>
+                  <h4><span data-h2-color="base(red)">Not useful:</span> Smaller than line height with inline/inline-block children</h4>
+                  <div data-h2-background-color="base:children[>div>div](primary.5)">
+                    <div data-h2-height="base(x2)" data-h2-background-color="base(secondary.dark)"></div>
+                    <div
+                      data-h2-flex-grid="base(center, x.5, 0)"
+                      data-h2-padding="base:children[button](0)"
+                      data-h2-border="base:children[button](none)"
+                      data-h2-background-color="base(primary.5) base:children[button, p](accent)"
+                      data-h2-height="base:children[button, p](x1)"
+                      data-h2-width="base:children[button](x1) base:children[p](100%)">
+                      <div data-h2-flex-item="base(content)">
+                        <button data-h2-display="base(inline-block)"></button>
+                      </div>
+                      <div data-h2-flex-item="base(content)">
+                        <button data-h2-display="base(inline-block)"></button>
+                      </div>
+                      <div data-h2-flex-item="base(content)">
+                        <button data-h2-display="base(inline-block)"></button>
+                      </div>
+                      <div data-h2-flex-item="base(fill)">
+                        <p data-h2-display="base(inline-block)"></p>
+                      </div>
+                    </div>
+                    <div data-h2-height="base(x2)" data-h2-background-color="base(secondary.dark)"></div>
+                  </div>
+                </div>
+                <div>
+                  <h4><span data-h2-color="base(green)">Useful:</span> Smaller than line height with block children</h4>
+                  <div data-h2-background-color="base:children[>div>div](primary.5)">
+                    <div data-h2-height="base(x2)" data-h2-background-color="base(secondary.dark)"></div>
+                    <div
+                      data-h2-flex-grid="base(center, x.5, 0)"
+                      data-h2-padding="base:children[button](0)"
+                      data-h2-border="base:children[button](none)"
+                      data-h2-background-color="base(primary.5) base:children[button, p](accent)"
+                      data-h2-height="base:children[button, p](x1)"
+                      data-h2-width="base:children[button](x1) base:children[p](100%)">
+                      <div data-h2-flex-item="base(content)">
+                        <button data-h2-display="base(block)"></button>
+                      </div>
+                      <div data-h2-flex-item="base(content)">
+                        <button data-h2-display="base(block)"></button>
+                      </div>
+                      <div data-h2-flex-item="base(content)">
+                        <button data-h2-display="base(block)"></button>
+                      </div>
+                      <div data-h2-flex-item="base(fill)">
+                        <p data-h2-display="base(block)"></p>
+                      </div>
+                    </div>
+                    <div data-h2-height="base(x2)" data-h2-background-color="base(secondary.dark)"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h3>Basic fraction grids</h3>
+            <div
+              data-h2-bg-color="base:children[>div>div](primary)"
+              data-h2-padding="base:children[>div>div](x1)">
+              <div data-h2-flex-grid="base(stretch, x1)">
+                <div data-h2-flex-item="base(1/1)">
+                  I am a full width item
+                </div>
+                <div data-h2-flex-item="base(1/2)">
+                  I am a 1/2 width item
+                </div>
+                <div data-h2-flex-item="base(1/2)">
+                  I am a 1/2 width item<br>that stretches my sibling
+                </div>
+              </div>
+              <br>
+              <div data-h2-flex-grid="base(stretch, x1)">
+                <div data-h2-flex-item="base(content)">
+                  I span my content
+                </div>
+                <div data-h2-flex-item="base(fill)">
+                  I fill remaining space
+                </div>
+              </div>
+            </div>
+            <h3>Basic XofY grids</h3>
+            <div
+              data-h2-bg-color="base:children[>div>div](primary)"
+              data-h2-padding="base:children[>div>div](x1)">
+              <div data-h2-flex-grid="base(stretch, x1)">
+                <div data-h2-flex-item="base(1of1)">
+                  I am a full width item
+                </div>
+                <div data-h2-flex-item="base(1of2)">
+                  I am a 1/2 width item
+                </div>
+                <div data-h2-flex-item="base(1of2)">
+                  I am a 1/2 width item<br>that stretches my sibling
+                </div>
+              </div>
+              <br>
+              <div data-h2-flex-grid="base(stretch, x1)">
+                <div data-h2-flex-item="base(content)">
+                  I span my content
+                </div>
+                <div data-h2-flex-item="base(fill)">
+                  I fill remaining space
+                </div>
+              </div>
+            </div>
+            <h3>Padded grids</h3>
+            <div
+              data-h2-bg-color="base:children[>div>div>div](primary)"
+              data-h2-padding="base:children[>div>div>div](x1)">
+              <div data-h2-padding="base(x2)" data-h2-background-color="base(accent)"></div>
+              <div data-h2-background-color="base(accent.dark)" data-h2-padding="base(x2)">
+                <div data-h2-flex-grid="base(stretch, x2)">
+                  <div data-h2-flex-item="base(1of1)">
+                    I am a full width item
+                  </div>
+                  <div data-h2-flex-item="base(1of2)">
+                    I am a 1/2 width item
+                  </div>
+                  <div data-h2-flex-item="base(1of2)">
+                    I am a 1/2 width item<br>that stretches my sibling
+                  </div>
+                </div>
+              </div>
+              <div data-h2-padding="base(x2)" data-h2-background-color="base(accent)"></div>
+              <div data-h2-background-color="base(accent.dark)" data-h2-padding="base(x2)">
+                <div data-h2-flex-grid="base(stretch, x1)">
+                  <div data-h2-flex-item="base(content)">
+                    I span my content
+                  </div>
+                  <div data-h2-flex-item="base(fill)">
+                    I fill remaining space
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h3>Gutterless grids</h3>
+            <div data-h2-padding="base:children[>div>div](x1)">
+              <div data-h2-flex-grid="base(stretch, 0)">
+                <div data-h2-flex-item="base(1of1)" data-h2-background-color="base(primary)">
+                  I am a full width item
+                </div>
+                <div data-h2-flex-item="base(1of2)" data-h2-background-color="base(primary.dark)">
+                  I am a 1/2 width item
+                </div>
+                <div data-h2-flex-item="base(1of2)" data-h2-background-color="base(primary.darker)">
+                  I am a 1/2 width item<br>that stretches my sibling
+                </div>
+              </div>
+              <br>
+              <div data-h2-flex-grid="base(stretch, 0)">
+                <div data-h2-flex-item="base(content)" data-h2-background-color="base(primary)">
+                  I span my content
+                </div>
+                <div data-h2-flex-item="base(fill)" data-h2-background-color="base(primary.dark)">
+                  I fill remaining space
+                </div>
+              </div>
+            </div>
+            <h3>Variable gutter grids</h3>
+            <div
+              data-h2-bg-color="base:children[>div>div](primary)"
+              data-h2-padding="base:children[>div>div](x1)">
+              <div data-h2-flex-grid="base(stretch, 50px, x1)">
+                <div data-h2-flex-item="base(1of1)">
+                  I am a full width item
+                </div>
+                <div data-h2-flex-item="base(1of2)">
+                  I am a 1/2 width item
+                </div>
+                <div data-h2-flex-item="base(1of2)">
+                  I am a 1/2 width item<br>that stretches my sibling
+                </div>
+              </div>
+              <br>
+              <div data-h2-flex-grid="base(stretch, 50px, x1)">
+                <div data-h2-flex-item="base(content)">
+                  I span my content
+                </div>
+                <div data-h2-flex-item="base(fill)">
+                  I fill remaining space
+                </div>
+              </div>
+            </div>
+            <h3>Nested grids</h3>
+            <div
+              data-h2-bg-color="base:children[>div>div](primary)"
+              data-h2-padding="base:children[>div>div](x1)">
+              <div data-h2-flex-grid="base(stretch, x1)">
+                <div data-h2-flex-item="base(1of1)">
+                  I am a full width item with a grid
+                  <div 
+                    data-h2-flex-grid="base(flex-start, x1)" 
+                    data-h2-background-color="base:children[>div](primary.dark)"
+                    data-h2-padding="base:children[>div](x1)">
+                    <div data-h2-flex-item="base(1of3)">
+                      I am a 1/3 width item
+                    </div>
+                    <div data-h2-flex-item="base(1of3)">
+                      I am a 1/3 width item
+                    </div>
+                    <div data-h2-flex-item="base(1of3)">
+                      I am a 1/3 width item
+                    </div>
+                  </div>
+                </div>
+                <div data-h2-flex-item="base(1of2)">
+                  I am a 1/2 width item
+                </div>
+                <div data-h2-flex-item="base(1of2)">
+                  I am a 1/2 width item<br>that stretches my sibling
+                  <div 
+                    data-h2-flex-grid="base(flex-start, 0)" 
+                    data-h2-padding="base:children[>div](x1)">
+                    <div data-h2-flex-item="base(1of1)" data-h2-background-color="base(primary.dark)">
+                      I am a full width item
+                    </div>
+                    <div data-h2-flex-item="base(1of2)" data-h2-background-color="base(primary.darker)">
+                      I am a 1/2 width item
+                    </div>
+                    <div data-h2-flex-item="base(1of2)" data-h2-background-color="base(primary.darkest)">
+                      I am a 1/2 width item
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div data-h2-flex-grid="base(stretch, x1)">
+                <div data-h2-flex-item="base(content)">
+                  I span my content
+                </div>
+                <div data-h2-flex-item="base(fill)">
+                  I fill remaining space
+                  <div 
+                    data-h2-flex-grid="base(flex-start, x1, 5px)" 
+                    data-h2-background-color="base:children[>div](primary.dark)"
+                    data-h2-padding="base:children[>div](x1)">
+                    <div data-h2-flex-item="base(1of3)">
+                      I am a 1/3 width item
+                    </div>
+                    <div data-h2-flex-item="base(1of3)">
+                      I am a 1/3 width item
+                    </div>
+                    <div data-h2-flex-item="base(1of3)">
+                      I am a 1/3 width item
+                    </div>
+                    <div data-h2-flex-item="base(1of3)">
+                      I am a 1/3 width item
+                    </div>
+                    <div data-h2-flex-item="base(1of3)">
+                      I am a 1/3 width item
+                    </div>
+                    <div data-h2-flex-item="base(1of3)">
+                      I am a 1/3 width item
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Line height -->
+          <h2 id="line-height">Line height tests</h2>
+          <h3>Default line height</h3>
+          <div data-h2-height="base(x2)" data-h2-background-color="base(gray)"></div>
+          <p>This is the default leading.</p>
+          <div data-h2-height="base(x2)" data-h2-background-color="base(gray)"></div>
+          <h3>Line height applied</h3>
+          <div data-h2-height="base(x2)" data-h2-background-color="base(gray)"></div>
+          <p data-h2-line-height="base(3)">This is manually set leading using a decimal value.</p>
+          <div data-h2-height="base(x2)" data-h2-background-color="base(gray)"></div>
+          <p data-h2-line-height="base(2rem)">This is manually set leading using a rem value.</p>
+          <div data-h2-height="base(x2)" data-h2-background-color="base(gray)"></div>
+          <p data-h2-line-height="base(x5)">This is manually set leading using a Hydrogen multiplier.</p>
+          <div data-h2-height="base(x2)" data-h2-background-color="base(gray)"></div>
+          <h3>Font size override</h3>
+          <div data-h2-height="base(x2)" data-h2-background-color="base(gray)"></div>
+          <p data-h2-line-height="base(3)" data-h2-font-size="base(copy, 5)">This leading with the line height attribute but is overwritten by the font size attribute.</p>
+          <div data-h2-height="base(x2)" data-h2-background-color="base(gray)"></div>
+          <!-- Overflow tests -->
+          <h2 id="overflow">Overflow tests</h2>
+          <div data-h2-display="base(grid)" data-h2-grid-template-columns="base(1fr 1fr)" data-h2-gap="base(x2)">
+            <div>
+              <div data-h2-height="base(x10)" data-h2-width="base(x10)" data-h2-background-color="base(primary)" data-h2-overflow="base(hidden)">
+                <div data-h2-height="base(x20)" data-h2-width="base(x20)" data-h2-background-color="base(accent)"></div>
+              </div>
+            </div>
+            <div>
+              <div data-h2-height="base(x10)" data-h2-width="base(x10)" data-h2-background-color="base(primary)" data-h2-overflow="base(hidden, visible)">
+                <div data-h2-height="base(x20)" data-h2-width="base(x20)" data-h2-background-color="base(accent)"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Position -->
+          <h2 id="position">Position tests</h2>
+          <div
+            data-h2-display="base(grid)"
+            data-h2-grid-template-columns="base(1fr 1fr)"
+            data-h2-gap="base(x2, all)">
+            <div>
+              <h3>Center key value</h3>
+              <div
+                data-h2-background-color="base(black.4)"
+                data-h2-height="base(x10)"
+                data-h2-width="base(100%)"
+                data-h2-position="base(relative)"
+                data-h2-margin="base(0, 0, x1, 0)">
+                <div
+                  data-h2-height="base(x1)"
+                  data-h2-width="base(x1)"
+                  data-h2-background-color="base(secondary)"
+                  data-h2-position="base(center)">
+                </div>
+              </div>
+              <div
+                data-h2-background-color="base(black.4)"
+                data-h2-height="base(x10)"
+                data-h2-width="base(100%)"
+                data-h2-position="base(relative)">
+                <div
+                  data-h2-height="base(x5)"
+                  data-h2-width="base(x5)"
+                  data-h2-background-color="base(secondary)"
+                  data-h2-position="base(center)">
+                  <div
+                    data-h2-height="base(x1)"
+                    data-h2-width="base(x1)"
+                    data-h2-background-color="base(primary)"
+                    data-h2-position="base(center)">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3>CSS values</h3>
+              <div
+                data-h2-background-color="base(black.4)"
+                data-h2-height="base(x10)"
+                data-h2-width="base(100%)"
+                data-h2-position="base(relative)"
+                data-h2-padding="base(x2)"
+                data-h2-margin="base(0, 0, x1, 0)">
+                <div
+                  data-h2-height="base(x1)"
+                  data-h2-width="base(x1)"
+                  data-h2-background-color="base(secondary)"
+                  data-h2-position="base(relative)">
+                </div>
+              </div>
+              <div
+                data-h2-background-color="base(black.4)"
+                data-h2-height="base(x10)"
+                data-h2-width="base(100%)"
+                data-h2-position="base(relative)"
+                data-h2-padding="base(x2)">
+                <div
+                  data-h2-height="base(x1)"
+                  data-h2-width="base(x1)"
+                  data-h2-background-color="base(secondary)"
+                  data-h2-position="base(absolute)"
+                  data-h2-offset="base(0, 0, auto, auto)">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Shadow -->
+          <h2 id="shadow">Shadow tests</h2>
+          <h3>Configured values</h3>
+          <div
+            data-h2-display="base(grid)"
+            data-h2-grid-template-columns="base(1fr 1fr 1fr 1fr 1fr)"
+            data-h2-gap="base(x2, all)">
+            <div 
+              data-h2-padding="base(x2)"
+              data-h2-shadow="base(s)">
+            </div>
+            <div 
+              data-h2-padding="base(x2)"
+              data-h2-shadow="base(m)">
+            </div>
+            <div 
+              data-h2-padding="base(x2)"
+              data-h2-shadow="base(l)">
+            </div>
+            <div 
+              data-h2-padding="base(x2)"
+              data-h2-shadow="base(xl)">
+            </div>
+            <div 
+              data-h2-padding="base(x2)"
+              data-h2-shadow="base(xxl)">
+            </div>
+          </div>
+          <h3>CSS shadow values</h3>
+          <div
+            data-h2-display="base(grid)"
+            data-h2-grid-template-columns="base(1fr 1fr 1fr 1fr 1fr)"
+            data-h2-gap="base(x2, all)">
+            <div 
+              data-h2-padding="base(x2)"
+              data-h2-shadow="base(5px 4px 10px blue)">
+            </div>
+            <div 
+              data-h2-padding="base(x2)"
+              data-h2-shadow="base(1rem 50px 5px red)">
+            </div>
+          </div>
+          <!-- Transforms -->
+          <h2 id="transform">Transformation tests</h2>
+          <h3>Single transform</h3>
+          <div data-h2-border="base(all, 5rem, solid, black)">
+            <div data-h2-height="base(x5)" data-h2-width="base(10rem)" data-h2-background-color="base(primary)" data-h2-transform="base(translate(-5rem, 0))">
+              I should be transformed left of my default position inside the box.
+            </div>
+          </div>
+          <h3>Transforms with multiplier support</h3>
+          <div data-h2-border="base(all, x10, solid, black)">
+            <div data-h2-height="base(x5)" data-h2-width="base(10rem)" data-h2-background-color="base(primary)" data-h2-transform="base(translate(-x10, 0))">
+              I should be transformed left of my default position inside the box.
+            </div>
+          </div>
+          <h3>Multiple transforms at once</h3>
+          <div data-h2-border="base(all, 5rem, solid, black)">
+            <div data-h2-height="base(x5)" data-h2-width="base(10rem)" data-h2-background-color="base(rgba(255, 0, 0, .5))" data-h2-transform="base(translate(-5rem, 0) rotate(90deg))">
+              I should be transformed left of my default position inside the box and rotated 90deg.
+            </div>
+          </div>
+          <h3>Nested targeting and transform on hover</h3>
+          <div data-h2-border="base(all, 5rem, solid, black)" data-h2-transform="base:children[>div](translate(-5rem, 0)) base:children[>div]:hover(translate(-5rem, 0) scale(1.1))">
+            <div data-h2-height="base(x5)" data-h2-width="base(10rem)" data-h2-background-color="base(blue)">
+              I should be transformed left of my default position inside the box and scale on hover.
+            </div>
+          </div>
+        </main>
       </div>
-      <!-- Shadow -->
-      <h2>Shadow tests</h2>
-      <h3 data-h2-margin="base(x2, 0, 0, 0)">Configured values</h3>
-      <div
-        data-h2-display="base(grid)"
-        data-h2-grid-template-columns="base(1fr 1fr 1fr 1fr 1fr)"
-        data-h2-gap="base(x2, all)">
-        <div 
-          data-h2-padding="base(x2)"
-          data-h2-shadow="base(s)">
-        </div>
-        <div 
-          data-h2-padding="base(x2)"
-          data-h2-shadow="base(m)">
-        </div>
-        <div 
-          data-h2-padding="base(x2)"
-          data-h2-shadow="base(l)">
-        </div>
-        <div 
-          data-h2-padding="base(x2)"
-          data-h2-shadow="base(xl)">
-        </div>
-        <div 
-          data-h2-padding="base(x2)"
-          data-h2-shadow="base(xxl)">
-        </div>
-      </div>
-      <h3 data-h2-margin="base(x2, 0, 0, 0)">CSS shadow values</h3>
-      <div
-        data-h2-display="base(grid)"
-        data-h2-grid-template-columns="base(1fr 1fr 1fr 1fr 1fr)"
-        data-h2-gap="base(x2, all)">
-        <div 
-          data-h2-padding="base(x2)"
-          data-h2-shadow="base(5px 4px 10px blue)">
-        </div>
-        <div 
-          data-h2-padding="base(x2)"
-          data-h2-shadow="base(1rem 50px 5px red)">
-        </div>
-      </div>
-    </section>
+    </div>
     <script src="../../scripts/app.js"></script>
   </body>
 </html>

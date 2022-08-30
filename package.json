@@ -1,6 +1,6 @@
 {
   "name": "@hydrogen-css/hydrogen",
-  "version": "2.0.0-beta.25",
+  "version": "2.0.0-beta.26",
   "description": "An open-source design and CSS utility framework powered by data-attributes. MIT Licensed.",
   "keywords": [
     "Hydrogen",
@@ -23,7 +23,7 @@
   "scripts": {
     "start": "cd tests;npm start",
     "build": "cd tests;npx h2-build",
-    "setup": "npm install && npm link && cd tests;npm link @hydrogen-css/hydrogen"
+    "setup": "npm install && npm link && cd tests;npm install && npm link @hydrogen-css/hydrogen"
   },
   "repository": {
     "type": "git",

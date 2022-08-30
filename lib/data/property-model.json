@@ -6,7 +6,7 @@
       "property": "Align content",
       "syntax": [
         {
-          "attribute": "data-h2-align-content=\"query:mode:state(alignment)\"",
+          "attribute": "data-h2-align-content=\"query:modifiers(alignment)\"",
           "default": true,
           "options": [
             {
@@ -35,7 +35,7 @@
       "property": "Align items",
       "syntax": [
         {
-          "attribute": "data-h2-align-items=\"query:mode:state(alignment)\"",
+          "attribute": "data-h2-align-items=\"query:modifiers(alignment)\"",
           "default": true,
           "options": [
             {
@@ -64,7 +64,7 @@
       "property": "Align self",
       "syntax": [
         {
-          "attribute": "data-h2-align-self=\"query:mode:state(alignment)\"",
+          "attribute": "data-h2-align-self=\"query:modifiers(alignment)\"",
           "default": true,
           "options": [
             {
@@ -93,7 +93,7 @@
       "property": "Background color",
       "syntax": [
         {
-          "attribute": "data-h2-background-color=\"query:mode:state(color | gradient)\"",
+          "attribute": "data-h2-background-color=\"query:modifiers(color | gradient)\"",
           "default": true,
           "options": [
             {
@@ -128,7 +128,7 @@
       "property": "Border",
       "syntax": [
         {
-          "attribute": "data-h2-border=\"query:mode:state(none)\"",
+          "attribute": "data-h2-border=\"query:modifiers(none)\"",
           "default": false,
           "options": [
             {
@@ -145,7 +145,7 @@
           ]
         },
         {
-          "attribute": "data-h2-border=\"query:mode:state(sides, css)\"",
+          "attribute": "data-h2-border=\"query:modifiers(sides, css)\"",
           "default": false,
           "options": [
             {
@@ -179,7 +179,7 @@
           ]
         },
         {
-          "attribute": "data-h2-border=\"query:mode:state(sides, width, style, color)\"",
+          "attribute": "data-h2-border=\"query:modifiers(sides, width, style, color)\"",
           "default": true,
           "options": [
             {
@@ -249,7 +249,7 @@
       "property": "Font color",
       "syntax": [
         {
-          "attribute": "data-h2-color=\"query:mode:state(color | gradient)\"",
+          "attribute": "data-h2-color=\"query:modifiers(color | gradient)\"",
           "default": true,
           "options": [
             {
@@ -284,7 +284,7 @@
       "property": "Container",
       "syntax": [
         {
-          "attribute": "data-h2-container=\"query:mode:state(alignment, max_width, padding)\"",
+          "attribute": "data-h2-container=\"query:modifiers(alignment, max-width, padding)\"",
           "default": true,
           "options": [
             {
@@ -301,7 +301,7 @@
               ]
             },
             {
-              "key": "max_width",
+              "key": "max-width",
               "types": {
                 "key": true,
                 "css": true
@@ -332,6 +332,10 @@
           "key": "container",
           "instances": []
         }
+      ],
+      "incompatibilities": [
+        "margin",
+        "padding"
       ]
     },
     {
@@ -339,7 +343,7 @@
       "property": "Cursor",
       "syntax": [
         {
-          "attribute": "data-h2-cursor=\"query:mode:state(cursor)\"",
+          "attribute": "data-h2-cursor=\"query:modifiers(cursor)\"",
           "default": true,
           "options": [
             {
@@ -368,7 +372,7 @@
       "property": "Display",
       "syntax": [
         {
-          "attribute": "data-h2-display=\"query:mode:state(display)\"",
+          "attribute": "data-h2-display=\"query:modifiers(display)\"",
           "default": true,
           "options": [
             {
@@ -397,11 +401,11 @@
       "property": "Flex basis",
       "syntax": [
         {
-          "attribute": "data-h2-flex-basis=\"query:mode:state(basis_value)\"",
+          "attribute": "data-h2-flex-basis=\"query:modifiers(basis-value)\"",
           "default": true,
           "options": [
             {
-              "key": "basis_value",
+              "key": "basis-value",
               "types": {
                 "key": false,
                 "css": true
@@ -426,7 +430,7 @@
       "property": "Flex direction",
       "syntax": [
         {
-          "attribute": "data-h2-flex-direction=\"query:mode:state(direction)\"",
+          "attribute": "data-h2-flex-direction=\"query:modifiers(direction)\"",
           "default": true,
           "options": [
             {
@@ -455,7 +459,7 @@
       "property": "Flex grid",
       "syntax": [
         {
-          "attribute": "data-h2-flex-grid=\"query:mode:state(alignment, padding, gutter)\"",
+          "attribute": "data-h2-flex-grid=\"query:modifiers(alignment, gutter)\"",
           "default": false,
           "options": [
             {
@@ -467,18 +471,6 @@
               "required": true,
               "values": [
                 "css align-items value"
-              ]
-            },
-            {
-              "key": "padding",
-              "types": {
-                "key": true,
-                "css": true
-              },
-              "required": true,
-              "values": [
-                "multiplier",
-                "css unit"
               ]
             },
             {
@@ -496,7 +488,7 @@
           ]
         },
         {
-          "attribute": "data-h2-flex-grid=\"query:mode:state(alignment, padding, column_gutter, row_gutter)\"",
+          "attribute": "data-h2-flex-grid=\"query:modifiers(alignment, column-gutter, row-gutter)\"",
           "default": true,
           "options": [
             {
@@ -511,7 +503,7 @@
               ]
             },
             {
-              "key": "padding",
+              "key": "column-gutter",
               "types": {
                 "key": true,
                 "css": true
@@ -523,19 +515,7 @@
               ]
             },
             {
-              "key": "column_gutter",
-              "types": {
-                "key": true,
-                "css": true
-              },
-              "required": true,
-              "values": [
-                "multiplier",
-                "css unit"
-              ]
-            },
-            {
-              "key": "row_gutter",
+              "key": "row-gutter",
               "types": {
                 "key": true,
                 "css": true
@@ -561,7 +541,7 @@
       "property": "Flex grow",
       "syntax": [
         {
-          "attribute": "data-h2-flex-grow=\"query:mode:state(grow)\"",
+          "attribute": "data-h2-flex-grow=\"query:modifiers(grow)\"",
           "default": true,
           "options": [
             {
@@ -590,7 +570,7 @@
       "property": "Flex item",
       "syntax": [
         {
-          "attribute": "data-h2-flex-item=\"query:mode:state(span)\"",
+          "attribute": "data-h2-flex-item=\"query:modifiers(span)\"",
           "default": true,
           "options": [
             {
@@ -622,7 +602,7 @@
       "property": "Flex wrap",
       "syntax": [
         {
-          "attribute": "data-h2-flex-wrap=\"query:mode:state(wrap)\"",
+          "attribute": "data-h2-flex-wrap=\"query:modifiers(wrap)\"",
           "default": true,
           "options": [
             {
@@ -651,7 +631,7 @@
       "property": "Font family",
       "syntax": [
         {
-          "attribute": "data-h2-font-family=\"query:mode:state(family)\"",
+          "attribute": "data-h2-font-family=\"query:modifiers(family)\"",
           "default": true,
           "options": [
             {
@@ -680,7 +660,7 @@
       "property": "Font size",
       "syntax": [
         {
-          "attribute": "data-h2-size=\"query:mode:state(size, line_height)\"",
+          "attribute": "data-h2-size=\"query:modifiers(size, line-height)\"",
           "default": true,
           "options": [
             {
@@ -703,7 +683,7 @@
               ]
             },
             {
-              "key": "line_height",
+              "key": "line-height",
               "types": {
                 "key": false,
                 "css": true
@@ -729,7 +709,7 @@
       "property": "Font style",
       "syntax": [
         {
-          "attribute": "data-h2-style=\"query:mode:state(style)\"",
+          "attribute": "data-h2-style=\"query:modifiers(style)\"",
           "default": true,
           "options": [
             {
@@ -758,7 +738,7 @@
       "property": "Font weight",
       "syntax": [
         {
-          "attribute": "data-h2-weight=\"query:mode:state(weight)\"",
+          "attribute": "data-h2-weight=\"query:modifiers(weight)\"",
           "default": true,
           "options": [
             {
@@ -787,11 +767,29 @@
       "property": "Gap",
       "syntax": [
         {
-          "attribute": "data-h2-gap=\"query:mode:state(size, axis)\"",
+          "attribute": "data-h2-gap=\"query:modifiers(gap-unit)\"",
           "default": true,
           "options": [
             {
-              "key": "size",
+              "key": "gap-unit",
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "required": true,
+              "values": [
+                "multiplier",
+                "css unit"
+              ]
+            }
+          ]
+        },
+        {
+          "attribute": "data-h2-gap=\"query:modifiers(column-gap-unit, row-gap-unit)\"",
+          "default": false,
+          "options": [
+            {
+              "key": "column-gap-unit",
               "types": {
                 "key": true,
                 "css": true
@@ -803,16 +801,15 @@
               ]
             },
             {
-              "key": "axis",
+              "key": "column-gap-unit",
               "types": {
                 "key": true,
-                "css": false
+                "css": true
               },
-              "required": false,
+              "required": true,
               "values": [
-                "all",
-                "column",
-                "row"
+                "multiplier",
+                "css unit"
               ]
             }
           ]
@@ -830,7 +827,7 @@
       "property": "Grid column",
       "syntax": [
         {
-          "attribute": "data-h2-grid-column=\"query:mode:state(span)\"",
+          "attribute": "data-h2-grid-column=\"query:modifiers(span)\"",
           "default": true,
           "options": [
             {
@@ -859,7 +856,7 @@
       "property": "Grid row",
       "syntax": [
         {
-          "attribute": "data-h2-grid-row=\"query:mode:state(span)\"",
+          "attribute": "data-h2-grid-row=\"query:modifiers(span)\"",
           "default": true,
           "options": [
             {
@@ -888,7 +885,7 @@
       "property": "Grid template columns",
       "syntax": [
         {
-          "attribute": "data-h2-grid-template-columns=\"query:mode:state(template)\"",
+          "attribute": "data-h2-grid-template-columns=\"query:modifiers(template)\"",
           "default": true,
           "options": [
             {
@@ -917,7 +914,7 @@
       "property": "Grid template rows",
       "syntax": [
         {
-          "attribute": "data-h2-grid-template-rows=\"query:mode:state(template)\"",
+          "attribute": "data-h2-grid-template-rows=\"query:modifiers(template)\"",
           "default": true,
           "options": [
             {
@@ -946,7 +943,7 @@
       "property": "Height",
       "syntax": [
         {
-          "attribute": "data-h2-height=\"query:mode:state(size)\"",
+          "attribute": "data-h2-height=\"query:modifiers(size)\"",
           "default": true,
           "options": [
             {
@@ -976,7 +973,7 @@
       "property": "Justify content",
       "syntax": [
         {
-          "attribute": "data-h2-justify-content=\"query:mode:state(justification)\"",
+          "attribute": "data-h2-justify-content=\"query:modifiers(justification)\"",
           "default": true,
           "options": [
             {
@@ -1005,7 +1002,7 @@
       "property": "Justify items",
       "syntax": [
         {
-          "attribute": "data-h2-justify-items=\"query:mode:state(justification)\"",
+          "attribute": "data-h2-justify-items=\"query:modifiers(justification)\"",
           "default": true,
           "options": [
             {
@@ -1034,11 +1031,11 @@
       "property": "Layer",
       "syntax": [
         {
-          "attribute": "data-h2-layer=\"query:mode:state(z_index, position)\"",
+          "attribute": "data-h2-layer=\"query:modifiers(z-index, position)\"",
           "default": true,
           "options": [
             {
-              "key": "z_index",
+              "key": "z-index",
               "types": {
                 "key": false,
                 "css": true
@@ -1066,6 +1063,44 @@
         {
           "key": "layer",
           "instances": []
+        },
+        {
+          "key": "z-index",
+          "instances": []
+        }
+      ]
+    },
+    {
+      "id": "line_height",
+      "property": "Line height",
+      "syntax": [
+        {
+          "attribute": "data-h2-line-height=\"query:modifiers(line-height)\"",
+          "default": true,
+          "options": [
+            {
+              "key": "line-height",
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "required": true,
+              "values": [
+                "multiplier",
+                "css line-height value"
+              ]
+            }
+          ]
+        }
+      ],
+      "keys": [
+        {
+          "key": "line-height",
+          "instances": []
+        },
+        {
+          "key": "leading",
+          "instances": []
         }
       ]
     },
@@ -1074,7 +1109,7 @@
       "property": "List style",
       "syntax": [
         {
-          "attribute": "data-h2-list-style=\"query:mode:state(style)\"",
+          "attribute": "data-h2-list-style=\"query:modifiers(style)\"",
           "default": true,
           "options": [
             {
@@ -1103,7 +1138,7 @@
       "property": "Margin",
       "syntax": [
         {
-          "attribute": "data-h2-margin=\"query:mode:state(size)\"",
+          "attribute": "data-h2-margin=\"query:modifiers(size)\"",
           "default": false,
           "options": [
             {
@@ -1121,11 +1156,11 @@
           ]
         },
         {
-          "attribute": "data-h2-margin=\"query:mode:state(top_bottom_size, right_left_size)\"",
+          "attribute": "data-h2-margin=\"query:modifiers(top-bottom-size, right-left-size)\"",
           "default": false,
           "options": [
             {
-              "key": "top_bottom_size",
+              "key": "top-bottom-size",
               "types": {
                 "key": true,
                 "css": true
@@ -1137,7 +1172,7 @@
               ]
             },
             {
-              "key": "right_left_size",
+              "key": "right-left-size",
               "types": {
                 "key": true,
                 "css": true
@@ -1151,11 +1186,11 @@
           ]
         },
         {
-          "attribute": "data-h2-margin=\"query:mode:state(top_size, right_size, bottom_size, left_size)\"",
+          "attribute": "data-h2-margin=\"query:modifiers(top-size, right-size, bottom-size, left-size)\"",
           "default": true,
           "options": [
             {
-              "key": "top_size",
+              "key": "top-size",
               "types": {
                 "key": true,
                 "css": true
@@ -1167,7 +1202,7 @@
               ]
             },
             {
-              "key": "right_size",
+              "key": "right-size",
               "types": {
                 "key": true,
                 "css": true
@@ -1179,7 +1214,7 @@
               ]
             },
             {
-              "key": "bottom_size",
+              "key": "bottom-size",
               "types": {
                 "key": true,
                 "css": true
@@ -1191,7 +1226,7 @@
               ]
             },
             {
-              "key": "left_size",
+              "key": "left-size",
               "types": {
                 "key": true,
                 "css": true
@@ -1210,6 +1245,9 @@
           "key": "margin",
           "instances": []
         }
+      ],
+      "incompatibilities": [
+        "container"
       ]
     },
     {
@@ -1217,7 +1255,7 @@
       "property": "Margin top",
       "syntax": [
         {
-          "attribute": "data-h2-margin-top=\"query:mode:state(size)\"",
+          "attribute": "data-h2-margin-top=\"query:modifiers(size)\"",
           "default": true,
           "options": [
             {
@@ -1247,7 +1285,7 @@
       "property": "Margin right",
       "syntax": [
         {
-          "attribute": "data-h2-margin-right=\"query:mode:state(size)\"",
+          "attribute": "data-h2-margin-right=\"query:modifiers(size)\"",
           "default": true,
           "options": [
             {
@@ -1277,7 +1315,7 @@
       "property": "Margin bottom",
       "syntax": [
         {
-          "attribute": "data-h2-margin-bottom=\"query:mode:state(size)\"",
+          "attribute": "data-h2-margin-bottom=\"query:modifiers(size)\"",
           "default": true,
           "options": [
             {
@@ -1307,7 +1345,7 @@
       "property": "Margin left",
       "syntax": [
         {
-          "attribute": "data-h2-margin-left=\"query:mode:state(size)\"",
+          "attribute": "data-h2-margin-left=\"query:modifiers(size)\"",
           "default": true,
           "options": [
             {
@@ -1337,7 +1375,7 @@
       "property": "Max height",
       "syntax": [
         {
-          "attribute": "data-h2-max-height=\"query:mode:state(size)\"",
+          "attribute": "data-h2-max-height=\"query:modifiers(size)\"",
           "default": true,
           "options": [
             {
@@ -1367,7 +1405,7 @@
       "property": "Max width",
       "syntax": [
         {
-          "attribute": "data-h2-max-width=\"query:mode:state(size)\"",
+          "attribute": "data-h2-max-width=\"query:modifiers(size)\"",
           "default": true,
           "options": [
             {
@@ -1397,7 +1435,7 @@
       "property": "Min height",
       "syntax": [
         {
-          "attribute": "data-h2-min-height=\"query:mode:state(size)\"",
+          "attribute": "data-h2-min-height=\"query:modifiers(size)\"",
           "default": true,
           "options": [
             {
@@ -1427,7 +1465,7 @@
       "property": "Min width",
       "syntax": [
         {
-          "attribute": "data-h2-min-width=\"query:mode:state(size)\"",
+          "attribute": "data-h2-min-width=\"query:modifiers(size)\"",
           "default": true,
           "options": [
             {
@@ -1457,7 +1495,7 @@
       "property": "Offset",
       "syntax": [
         {
-          "attribute": "data-h2-offset=\"query:mode:state(size)\"",
+          "attribute": "data-h2-offset=\"query:modifiers(size)\"",
           "default": false,
           "options": [
             {
@@ -1475,11 +1513,11 @@
           ]
         },
         {
-          "attribute": "data-h2-offset=\"query:mode:state(top_bottom_size, right_left_size)\"",
+          "attribute": "data-h2-offset=\"query:modifiers(top-bottom-size, right-left-size)\"",
           "default": false,
           "options": [
             {
-              "key": "top_bottom_size",
+              "key": "top-bottom-size",
               "types": {
                 "key": true,
                 "css": true
@@ -1491,7 +1529,7 @@
               ]
             },
             {
-              "key": "right_left_size",
+              "key": "right-left-size",
               "types": {
                 "key": true,
                 "css": true
@@ -1505,11 +1543,11 @@
           ]
         },
         {
-          "attribute": "data-h2-offset=\"query:mode:state(top_size, right_size, bottom_size, left_size)\"",
+          "attribute": "data-h2-offset=\"query:modifiers(top-size, right-size, bottom-size, left-size)\"",
           "default": true,
           "options": [
             {
-              "key": "top_size",
+              "key": "top-size",
               "types": {
                 "key": true,
                 "css": true
@@ -1521,7 +1559,7 @@
               ]
             },
             {
-              "key": "right_size",
+              "key": "right-size",
               "types": {
                 "key": true,
                 "css": true
@@ -1533,7 +1571,7 @@
               ]
             },
             {
-              "key": "bottom_size",
+              "key": "bottom-size",
               "types": {
                 "key": true,
                 "css": true
@@ -1545,7 +1583,7 @@
               ]
             },
             {
-              "key": "left_size",
+              "key": "left-size",
               "types": {
                 "key": true,
                 "css": true
@@ -1575,7 +1613,7 @@
       "property": "Opacity",
       "syntax": [
         {
-          "attribute": "data-h2-opacity=\"query:mode:state(opacity)\"",
+          "attribute": "data-h2-opacity=\"query:modifiers(opacity)\"",
           "default": true,
           "options": [
             {
@@ -1604,7 +1642,7 @@
       "property": "Order",
       "syntax": [
         {
-          "attribute": "data-h2-order=\"query:mode:state(order)\"",
+          "attribute": "data-h2-order=\"query:modifiers(order)\"",
           "default": true,
           "options": [
             {
@@ -1633,7 +1671,7 @@
       "property": "Outline",
       "syntax": [
         {
-          "attribute": "data-h2-outline=\"query:mode:state(outline)\"",
+          "attribute": "data-h2-outline=\"query:modifiers(outline)\"",
           "default": true,
           "options": [
             {
@@ -1662,7 +1700,7 @@
       "property": "Overflow",
       "syntax": [
         {
-          "attribute": "data-h2-overflow=\"query:mode:state(overflow, axis)\"",
+          "attribute": "data-h2-overflow=\"query:modifiers(overflow)\"",
           "default": true,
           "options": [
             {
@@ -1675,18 +1713,33 @@
               "values": [
                 "css overflow value"
               ]
+            }
+          ]
+        },
+        {
+          "attribute": "data-h2-overflow=\"query:modifiers(x-overflow, y-overflow)\"",
+          "default": true,
+          "options": [
+            {
+              "key": "x-overflow",
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "required": true,
+              "values": [
+                "css overflow value"
+              ]
             },
             {
-              "key": "axis",
+              "key": "y-overflow",
               "types": {
-                "key": true,
-                "css": false
+                "key": false,
+                "css": true
               },
-              "required": false,
+              "required": true,
               "values": [
-                "all",
-                "x",
-                "y"
+                "css overflow value"
               ]
             }
           ]
@@ -1704,7 +1757,7 @@
       "property": "Overlay",
       "syntax": [
         {
-          "attribute": "data-h2-overlay=\"query:mode:state(color | gradient, opacity)\"",
+          "attribute": "data-h2-overlay=\"query:modifiers(color | gradient, opacity)\"",
           "default": true,
           "options": [
             {
@@ -1746,7 +1799,7 @@
       "property": "Padding",
       "syntax": [
         {
-          "attribute": "data-h2-padding=\"query:mode:state(size)\"",
+          "attribute": "data-h2-padding=\"query:modifiers(size)\"",
           "default": false,
           "options": [
             {
@@ -1764,11 +1817,11 @@
           ]
         },
         {
-          "attribute": "data-h2-padding=\"query:mode:state(top_bottom_size, right_left_size)\"",
+          "attribute": "data-h2-padding=\"query:modifiers(top-bottom-size, right-left-size)\"",
           "default": false,
           "options": [
             {
-              "key": "top_bottom_size",
+              "key": "top-bottom-size",
               "types": {
                 "key": true,
                 "css": true
@@ -1780,7 +1833,7 @@
               ]
             },
             {
-              "key": "right_left_size",
+              "key": "right-left-size",
               "types": {
                 "key": true,
                 "css": true
@@ -1794,11 +1847,11 @@
           ]
         },
         {
-          "attribute": "data-h2-padding=\"query:mode:state(top_size, right_size, bottom_size, left_size)\"",
+          "attribute": "data-h2-padding=\"query:modifiers(top-size, right-size, bottom-size, left-size)\"",
           "default": true,
           "options": [
             {
-              "key": "top_size",
+              "key": "top-size",
               "types": {
                 "key": true,
                 "css": true
@@ -1810,7 +1863,7 @@
               ]
             },
             {
-              "key": "right_size",
+              "key": "right-size",
               "types": {
                 "key": true,
                 "css": true
@@ -1822,7 +1875,7 @@
               ]
             },
             {
-              "key": "bottom_size",
+              "key": "bottom-size",
               "types": {
                 "key": true,
                 "css": true
@@ -1834,7 +1887,7 @@
               ]
             },
             {
-              "key": "left_size",
+              "key": "left-size",
               "types": {
                 "key": true,
                 "css": true
@@ -1853,6 +1906,9 @@
           "key": "padding",
           "instances": []
         }
+      ],
+      "incompatibilities": [
+        "container"
       ]
     },
     {
@@ -1860,7 +1916,7 @@
       "property": "Padding top",
       "syntax": [
         {
-          "attribute": "data-h2-padding-top=\"query:mode:state(size)\"",
+          "attribute": "data-h2-padding-top=\"query:modifiers(size)\"",
           "default": true,
           "options": [
             {
@@ -1890,7 +1946,7 @@
       "property": "Padding right",
       "syntax": [
         {
-          "attribute": "data-h2-padding-right=\"query:mode:state(size)\"",
+          "attribute": "data-h2-padding-right=\"query:modifiers(size)\"",
           "default": true,
           "options": [
             {
@@ -1920,7 +1976,7 @@
       "property": "Padding bottom",
       "syntax": [
         {
-          "attribute": "data-h2-padding-bottom=\"query:mode:state(size)\"",
+          "attribute": "data-h2-padding-bottom=\"query:modifiers(size)\"",
           "default": true,
           "options": [
             {
@@ -1950,7 +2006,7 @@
       "property": "Padding left",
       "syntax": [
         {
-          "attribute": "data-h2-padding-left=\"query:mode:state(size)\"",
+          "attribute": "data-h2-padding-left=\"query:modifiers(size)\"",
           "default": true,
           "options": [
             {
@@ -1980,7 +2036,7 @@
       "property": "Position",
       "syntax": [
         {
-          "attribute": "data-h2-position=\"query:mode:state(position)\"",
+          "attribute": "data-h2-position=\"query:modifiers(position)\"",
           "default": true,
           "options": [
             {
@@ -2010,7 +2066,7 @@
       "property": "Radius",
       "syntax": [
         {
-          "attribute": "data-h2-radius=\"query:mode:state(radius)\"",
+          "attribute": "data-h2-radius=\"query:modifiers(radius)\"",
           "default": true,
           "options": [
             {
@@ -2028,11 +2084,11 @@
           ]
         },
         {
-          "attribute": "data-h2-radius=\"query:mode:state(top_left_bottom_right_radius, top_right_bottom_left_radius)\"",
+          "attribute": "data-h2-radius=\"query:modifiers(top-left-bottom-right-radius, top-right-bottom-left-radius)\"",
           "default": false,
           "options": [
             {
-              "key": "top_left_bottom_right_radius",
+              "key": "top-left-bottom-right-radius",
               "types": {
                 "key": true,
                 "css": true
@@ -2044,7 +2100,7 @@
               ]
             },
             {
-              "key": "top_right_bottom_left_radius",
+              "key": "top-right-bottom-left-radius",
               "types": {
                 "key": true,
                 "css": true
@@ -2058,11 +2114,11 @@
           ]
         },
         {
-          "attribute": "data-h2-radius=\"query:mode:state(top_left_radius, top_right_bottom_left_radius, bottom_right_radius)\"",
+          "attribute": "data-h2-radius=\"query:modifiers(top-left-radius, top-right-bottom-left-radius, bottom-right-radius)\"",
           "default": false,
           "options": [
             {
-              "key": "top_left_radius",
+              "key": "top-left-radius",
               "types": {
                 "key": true,
                 "css": true
@@ -2074,7 +2130,7 @@
               ]
             },
             {
-              "key": "top_right_bottom_left_radius",
+              "key": "top-right-bottom-left-radius",
               "types": {
                 "key": true,
                 "css": true
@@ -2086,7 +2142,7 @@
               ]
             },
             {
-              "key": "bottom_right_radius",
+              "key": "bottom-right-radius",
               "types": {
                 "key": true,
                 "css": true
@@ -2100,11 +2156,11 @@
           ]
         },
         {
-          "attribute": "data-h2-radius=\"query:mode:state(top_left_radius, top_right_radius, bottom_right_radius, bottom_left_radius)\"",
+          "attribute": "data-h2-radius=\"query:modifiers(top-left-radius, top-right-radius, bottom-right-radius, bottom-left-radius)\"",
           "default": false,
           "options": [
             {
-              "key": "top_left_radius",
+              "key": "top-left-radius",
               "types": {
                 "key": true,
                 "css": true
@@ -2116,7 +2172,7 @@
               ]
             },
             {
-              "key": "top_right_radius",
+              "key": "top-right-radius",
               "types": {
                 "key": true,
                 "css": true
@@ -2128,7 +2184,7 @@
               ]
             },
             {
-              "key": "bottom_right_radius",
+              "key": "bottom-right-radius",
               "types": {
                 "key": true,
                 "css": true
@@ -2140,7 +2196,7 @@
               ]
             },
             {
-              "key": "bottom_left_radius",
+              "key": "bottom-left-radius",
               "types": {
                 "key": true,
                 "css": true
@@ -2166,7 +2222,7 @@
       "property": "Shadow",
       "syntax": [
         {
-          "attribute": "data-h2-shadow=\"query:mode:state(shadow)\"",
+          "attribute": "data-h2-shadow=\"query:modifiers(shadow)\"",
           "default": true,
           "options": [
             {
@@ -2196,7 +2252,7 @@
       "property": "Text align",
       "syntax": [
         {
-          "attribute": "data-h2-text-align=\"query:mode:state(alignment)\"",
+          "attribute": "data-h2-text-align=\"query:modifiers(alignment)\"",
           "default": true,
           "options": [
             {
@@ -2225,7 +2281,7 @@
       "property": "Text decoration",
       "syntax": [
         {
-          "attribute": "data-h2-text-decoration=\"query:mode:state(decoration)\"",
+          "attribute": "data-h2-text-decoration=\"query:modifiers(decoration)\"",
           "default": true,
           "options": [
             {
@@ -2254,7 +2310,7 @@
       "property": "Text transform",
       "syntax": [
         {
-          "attribute": "data-h2-text-transform=\"query:mode:state(transformation)\"",
+          "attribute": "data-h2-text-transform=\"query:modifiers(transformation)\"",
           "default": true,
           "options": [
             {
@@ -2279,11 +2335,40 @@
       ]
     },
     {
+      "id": "transform",
+      "property": "Transform",
+      "syntax": [
+        {
+          "attribute": "data-h2-transform=\"query:modifiers(transformation)\"",
+          "default": true,
+          "options": [
+            {
+              "key": "transformation",
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "required": true,
+              "values": [
+                "css transform value"
+              ]
+            }
+          ]
+        }
+      ],
+      "keys": [
+        {
+          "key": "transform",
+          "instances": []
+        }
+      ]
+    },
+    {
       "id": "transition",
       "property": "Transition",
       "syntax": [
         {
-          "attribute": "data-h2-transition=\"query:mode:state(property, duration, function, delay)\"",
+          "attribute": "data-h2-transition=\"query:modifiers(property, duration, function, delay)\"",
           "default": true,
           "options": [
             {
@@ -2348,7 +2433,7 @@
       "property": "Vertical align",
       "syntax": [
         {
-          "attribute": "data-h2-vertical-align=\"query:mode:state(alignment)\"",
+          "attribute": "data-h2-vertical-align=\"query:modifiers(alignment)\"",
           "default": true,
           "options": [
             {
@@ -2377,7 +2462,7 @@
       "property": "Visibility",
       "syntax": [
         {
-          "attribute": "data-h2-visibility=\"query:mode:state(visibility)\"",
+          "attribute": "data-h2-visibility=\"query:modifiers(visibility)\"",
           "default": true,
           "options": [
             {
@@ -2408,7 +2493,7 @@
       "property": "Width",
       "syntax": [
         {
-          "attribute": "data-h2-width=\"query:mode:state(size)\"",
+          "attribute": "data-h2-width=\"query:modifiers(size)\"",
           "default": true,
           "options": [
             {
