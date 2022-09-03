@@ -21,9 +21,16 @@
     "h2-clean": "./bin/clean.js"
   },
   "scripts": {
-    "start": "cd tests;npm start",
-    "build": "cd tests;npx h2-build",
-    "setup": "npm install && npm link && cd tests;npm install && npm link @hydrogen-css/hydrogen"
+    "setup": "tests/setup.sh",
+    "refresh": "tests/refresh.sh",
+    "test-properties": "tests/test-properties/env/serve.sh",
+    "test-properties-logs": "tests/test-properties/env/serve-logs.sh",
+    "test-properties-clean": "tests/test-properties/env/serve-clean.sh",
+    "test-parsing": "tests/test-parsing/env/build.sh",
+    "test-parsing-logs": "tests/test-parsing/env/build-logs.sh",
+    "test-parsing-clean": "tests/test-parsing/env/build-clean.sh",
+    "test-init-fresh": "tests/test-initialization/env/fresh.sh",
+    "test-init-blocked": "tests/test-initialization/env/blocked.sh"
   },
   "repository": {
     "type": "git",
@@ -42,9 +49,11 @@
     "color": "^4.2.3",
     "colors": "^1.4.0",
     "cssnano": "^5.1.8",
+    "csstree-validator": "^3.0.0",
     "glob": "^8.0.3",
     "postcss": "^8.4.14",
-    "prompt": "^1.3.0"
+    "prompt": "^1.3.0",
+    "yargs": "^17.5.1"
   },
   "browserslist": [
     "last 1 version and not dead"

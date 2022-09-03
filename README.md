@@ -77,7 +77,14 @@ The biggest advantage to Hydrogen's `data-attribute` syntax is that it enables t
 
 - Pull the repository down
 - run `npm run setup`
-- to start Hydrogen's test server, run `npm start`
-- to run a single test compile, run `npm run build`
+- do some development work in `lib`
+- write new tests in `tests`
+- run tests using the commands found in the root `package.json`
 
 You can read up on specifics about [how Hydrogen works on a technical level in the development README](https://github.com/hydrogen-css/hydrogen/blob/release/2.0.0/lib/README.md).
+
+## Currently available tests
+
+- Visual property tests
+- File and attribute parsing tests
+- Initialization tests

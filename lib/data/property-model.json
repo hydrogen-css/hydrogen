@@ -2,7 +2,7 @@
   "hydrogen": false,
   "properties": [
     {
-      "id": "align_content",
+      "id": "align-content",
       "property": "Align content",
       "syntax": [
         {
@@ -17,7 +17,7 @@
               },
               "required": true,
               "values": [
-                "css align-content value"
+                "CSS align-content"
               ]
             }
           ]
@@ -31,7 +31,7 @@
       ]
     },
     {
-      "id": "align_items",
+      "id": "align-items",
       "property": "Align items",
       "syntax": [
         {
@@ -46,7 +46,7 @@
               },
               "required": true,
               "values": [
-                "css align-items value"
+                "CSS align-items"
               ]
             }
           ]
@@ -60,7 +60,7 @@
       ]
     },
     {
-      "id": "align_self",
+      "id": "align-self",
       "property": "Align self",
       "syntax": [
         {
@@ -75,7 +75,7 @@
               },
               "required": true,
               "values": [
-                "css align-self value"
+                "CSS align-self"
               ]
             }
           ]
@@ -89,7 +89,7 @@
       ]
     },
     {
-      "id": "background_color",
+      "id": "background-color",
       "property": "Background color",
       "syntax": [
         {
@@ -106,7 +106,7 @@
               "values": [
                 "configured color key",
                 "configured gradient key",
-                "css color"
+                "CSS color"
               ]
             }
           ]
@@ -145,7 +145,7 @@
           ]
         },
         {
-          "attribute": "data-h2-border=\"query:modifiers(sides, css)\"",
+          "attribute": "data-h2-border=\"query:modifiers(sides, border)\"",
           "default": false,
           "options": [
             {
@@ -166,14 +166,14 @@
               ]
             },
             {
-              "key": "css",
+              "key": "border",
               "types": {
                 "key": false,
                 "css": true
               },
               "required": true,
               "values": [
-                "css border shorthand value"
+                "CSS border shorthand"
               ]
             }
           ]
@@ -207,8 +207,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             },
             {
@@ -219,7 +219,7 @@
               },
               "required": true,
               "values": [
-                "css border-style value"
+                "CSS border-style"
               ]
             },
             {
@@ -231,7 +231,7 @@
               "required": true,
               "values": [
                 "configured color key",
-                "css color"
+                "CSS color"
               ]
             }
           ]
@@ -262,7 +262,7 @@
               "values": [
                 "configured color key",
                 "configured gradient key",
-                "css color"
+                "CSS color"
               ]
             }
           ]
@@ -284,7 +284,7 @@
       "property": "Container",
       "syntax": [
         {
-          "attribute": "data-h2-container=\"query:modifiers(alignment, max-width, padding)\"",
+          "attribute": "data-h2-container=\"query:modifiers(alignment, max-width, side-padding)\"",
           "default": true,
           "options": [
             {
@@ -309,19 +309,20 @@
               "required": true,
               "values": [
                 "configured container key",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             },
             {
-              "key": "padding",
+              "key": "side-padding",
               "types": {
                 "key": true,
                 "css": true
               },
               "required": false,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             }
           ]
@@ -354,7 +355,7 @@
               },
               "required": true,
               "values": [
-                "css cursor value"
+                "CSS cursor"
               ]
             }
           ]
@@ -383,7 +384,7 @@
               },
               "required": true,
               "values": [
-                "css display value"
+                "CSS display"
               ]
             }
           ]
@@ -397,22 +398,22 @@
       ]
     },
     {
-      "id": "flex_basis",
+      "id": "flex-basis",
       "property": "Flex basis",
       "syntax": [
         {
-          "attribute": "data-h2-flex-basis=\"query:modifiers(basis-value)\"",
+          "attribute": "data-h2-flex-basis=\"query:modifiers(basis)\"",
           "default": true,
           "options": [
             {
-              "key": "basis-value",
+              "key": "basis",
               "types": {
                 "key": false,
                 "css": true
               },
               "required": true,
               "values": [
-                "css flex-basis value"
+                "CSS flex-basis"
               ]
             }
           ]
@@ -426,7 +427,7 @@
       ]
     },
     {
-      "id": "flex_direction",
+      "id": "flex-direction",
       "property": "Flex direction",
       "syntax": [
         {
@@ -441,7 +442,7 @@
               },
               "required": true,
               "values": [
-                "css flex-direction value"
+                "CSS flex-direction"
               ]
             }
           ]
@@ -455,7 +456,7 @@
       ]
     },
     {
-      "id": "flex_grid",
+      "id": "flex-grid",
       "property": "Flex grid",
       "syntax": [
         {
@@ -470,7 +471,7 @@
               },
               "required": true,
               "values": [
-                "css align-items value"
+                "CSS align-items"
               ]
             },
             {
@@ -481,8 +482,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             }
           ]
@@ -499,7 +500,7 @@
               },
               "required": true,
               "values": [
-                "css align-items value"
+                "CSS align-items"
               ]
             },
             {
@@ -510,8 +511,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             },
             {
@@ -522,8 +523,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             }
           ]
@@ -537,7 +538,7 @@
       ]
     },
     {
-      "id": "flex_grow",
+      "id": "flex-grow",
       "property": "Flex grow",
       "syntax": [
         {
@@ -566,7 +567,7 @@
       ]
     },
     {
-      "id": "flex_item",
+      "id": "flex-item",
       "property": "Flex item",
       "syntax": [
         {
@@ -582,6 +583,7 @@
               "required": true,
               "values": [
                 "XofY",
+                "X/Y",
                 "auto",
                 "content",
                 "fill"
@@ -598,7 +600,7 @@
       ]
     },
     {
-      "id": "flex_wrap",
+      "id": "flex-wrap",
       "property": "Flex wrap",
       "syntax": [
         {
@@ -613,7 +615,7 @@
               },
               "required": true,
               "values": [
-                "css flex-wrap value"
+                "CSS flex-wrap"
               ]
             }
           ]
@@ -627,7 +629,7 @@
       ]
     },
     {
-      "id": "font_family",
+      "id": "font-family",
       "property": "Font family",
       "syntax": [
         {
@@ -656,7 +658,7 @@
       ]
     },
     {
-      "id": "font_size",
+      "id": "font-size",
       "property": "Font size",
       "syntax": [
         {
@@ -679,7 +681,7 @@
                 "h6",
                 "copy",
                 "caption",
-                "css unit"
+                "CSS unit"
               ]
             },
             {
@@ -691,7 +693,7 @@
               "required": false,
               "values": [
                 "number",
-                "css unit"
+                "CSS unit"
               ]
             }
           ]
@@ -705,7 +707,7 @@
       ]
     },
     {
-      "id": "font_style",
+      "id": "font-style",
       "property": "Font style",
       "syntax": [
         {
@@ -720,7 +722,7 @@
               },
               "required": true,
               "values": [
-                "css font-style value"
+                "CSS font-style"
               ]
             }
           ]
@@ -734,7 +736,7 @@
       ]
     },
     {
-      "id": "font_weight",
+      "id": "font-weight",
       "property": "Font weight",
       "syntax": [
         {
@@ -749,7 +751,7 @@
               },
               "required": true,
               "values": [
-                "css font-weight value"
+                "CSS font-weight"
               ]
             }
           ]
@@ -767,49 +769,49 @@
       "property": "Gap",
       "syntax": [
         {
-          "attribute": "data-h2-gap=\"query:modifiers(gap-unit)\"",
+          "attribute": "data-h2-gap=\"query:modifiers(size)\"",
           "default": true,
           "options": [
             {
-              "key": "gap-unit",
+              "key": "size",
               "types": {
                 "key": true,
                 "css": true
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             }
           ]
         },
         {
-          "attribute": "data-h2-gap=\"query:modifiers(column-gap-unit, row-gap-unit)\"",
+          "attribute": "data-h2-gap=\"query:modifiers(column-size, row-size)\"",
           "default": false,
           "options": [
             {
-              "key": "column-gap-unit",
+              "key": "column-size",
               "types": {
                 "key": true,
                 "css": true
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             },
             {
-              "key": "column-gap-unit",
+              "key": "column-size",
               "types": {
                 "key": true,
                 "css": true
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             }
           ]
@@ -823,7 +825,7 @@
       ]
     },
     {
-      "id": "grid_column",
+      "id": "grid-column",
       "property": "Grid column",
       "syntax": [
         {
@@ -838,7 +840,7 @@
               },
               "required": true,
               "values": [
-                "css grid span value"
+                "CSS grid span"
               ]
             }
           ]
@@ -852,7 +854,7 @@
       ]
     },
     {
-      "id": "grid_row",
+      "id": "grid-row",
       "property": "Grid row",
       "syntax": [
         {
@@ -867,7 +869,7 @@
               },
               "required": true,
               "values": [
-                "css grid span value"
+                "CSS grid span"
               ]
             }
           ]
@@ -881,7 +883,7 @@
       ]
     },
     {
-      "id": "grid_template_columns",
+      "id": "grid-template-columns",
       "property": "Grid template columns",
       "syntax": [
         {
@@ -896,7 +898,7 @@
               },
               "required": true,
               "values": [
-                "css grid template value"
+                "CSS grid template"
               ]
             }
           ]
@@ -910,7 +912,7 @@
       ]
     },
     {
-      "id": "grid_template_rows",
+      "id": "grid-template-rows",
       "property": "Grid template rows",
       "syntax": [
         {
@@ -925,7 +927,7 @@
               },
               "required": true,
               "values": [
-                "css grid template value"
+                "CSS grid template"
               ]
             }
           ]
@@ -954,8 +956,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             }
           ]
@@ -969,7 +971,7 @@
       ]
     },
     {
-      "id": "justify_content",
+      "id": "justify-content",
       "property": "Justify content",
       "syntax": [
         {
@@ -984,7 +986,7 @@
               },
               "required": true,
               "values": [
-                "css justify-content value"
+                "CSS justify-content"
               ]
             }
           ]
@@ -998,7 +1000,7 @@
       ]
     },
     {
-      "id": "justify_items",
+      "id": "justify-items",
       "property": "Justify items",
       "syntax": [
         {
@@ -1013,7 +1015,7 @@
               },
               "required": true,
               "values": [
-                "css justify-items value"
+                "CSS justify-items"
               ]
             }
           ]
@@ -1053,7 +1055,7 @@
               },
               "required": false,
               "values": [
-                "css position value"
+                "CSS position"
               ]
             }
           ]
@@ -1071,7 +1073,7 @@
       ]
     },
     {
-      "id": "line_height",
+      "id": "line-height",
       "property": "Line height",
       "syntax": [
         {
@@ -1086,8 +1088,9 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css line-height value"
+                "number",
+                "whitespace multiplier",
+                "CSS unit"
               ]
             }
           ]
@@ -1105,7 +1108,7 @@
       ]
     },
     {
-      "id": "list_style",
+      "id": "list-style",
       "property": "List style",
       "syntax": [
         {
@@ -1120,7 +1123,7 @@
               },
               "required": true,
               "values": [
-                "css list-style value"
+                "CSS list-style"
               ]
             }
           ]
@@ -1149,8 +1152,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             }
           ]
@@ -1167,8 +1170,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             },
             {
@@ -1179,8 +1182,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             }
           ]
@@ -1197,8 +1200,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             },
             {
@@ -1209,8 +1212,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             },
             {
@@ -1221,8 +1224,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             },
             {
@@ -1233,8 +1236,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             }
           ]
@@ -1251,7 +1254,7 @@
       ]
     },
     {
-      "id": "margin_top",
+      "id": "margin-top",
       "property": "Margin top",
       "syntax": [
         {
@@ -1266,8 +1269,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             }
           ]
@@ -1281,7 +1284,7 @@
       ]
     },
     {
-      "id": "margin_right",
+      "id": "margin-right",
       "property": "Margin right",
       "syntax": [
         {
@@ -1296,8 +1299,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             }
           ]
@@ -1311,7 +1314,7 @@
       ]
     },
     {
-      "id": "margin_bottom",
+      "id": "margin-bottom",
       "property": "Margin bottom",
       "syntax": [
         {
@@ -1326,8 +1329,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             }
           ]
@@ -1341,7 +1344,7 @@
       ]
     },
     {
-      "id": "margin_left",
+      "id": "margin-left",
       "property": "Margin left",
       "syntax": [
         {
@@ -1356,8 +1359,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             }
           ]
@@ -1371,7 +1374,7 @@
       ]
     },
     {
-      "id": "max_height",
+      "id": "max-height",
       "property": "Max height",
       "syntax": [
         {
@@ -1386,8 +1389,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             }
           ]
@@ -1401,7 +1404,7 @@
       ]
     },
     {
-      "id": "max_width",
+      "id": "max-width",
       "property": "Max width",
       "syntax": [
         {
@@ -1416,8 +1419,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             }
           ]
@@ -1431,7 +1434,7 @@
       ]
     },
     {
-      "id": "min_height",
+      "id": "min-height",
       "property": "Min height",
       "syntax": [
         {
@@ -1446,8 +1449,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             }
           ]
@@ -1461,7 +1464,7 @@
       ]
     },
     {
-      "id": "min_width",
+      "id": "min-width",
       "property": "Min width",
       "syntax": [
         {
@@ -1476,8 +1479,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             }
           ]
@@ -1506,8 +1509,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             }
           ]
@@ -1524,8 +1527,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             },
             {
@@ -1536,8 +1539,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             }
           ]
@@ -1554,8 +1557,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             },
             {
@@ -1566,8 +1569,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             },
             {
@@ -1578,8 +1581,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             },
             {
@@ -1590,8 +1593,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             }
           ]
@@ -1624,7 +1627,7 @@
               },
               "required": true,
               "values": [
-                "decimal"
+                "number"
               ]
             }
           ]
@@ -1682,7 +1685,7 @@
               },
               "required": true,
               "values": [
-                "css outline value"
+                "CSS outline"
               ]
             }
           ]
@@ -1711,7 +1714,7 @@
               },
               "required": true,
               "values": [
-                "css overflow value"
+                "CSS overflow"
               ]
             }
           ]
@@ -1728,7 +1731,7 @@
               },
               "required": true,
               "values": [
-                "css overflow value"
+                "CSS overflow"
               ]
             },
             {
@@ -1739,7 +1742,7 @@
               },
               "required": true,
               "values": [
-                "css overflow value"
+                "CSS overflow"
               ]
             }
           ]
@@ -1770,7 +1773,7 @@
               "values": [
                 "configured color key",
                 "configured gradient key",
-                "css color"
+                "CSS color"
               ]
             },
             {
@@ -1781,7 +1784,7 @@
               },
               "required": false,
               "values": [
-                "decimal"
+                "number"
               ]
             }
           ]
@@ -1810,8 +1813,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             }
           ]
@@ -1828,8 +1831,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             },
             {
@@ -1840,8 +1843,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             }
           ]
@@ -1858,8 +1861,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             },
             {
@@ -1870,8 +1873,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             },
             {
@@ -1882,8 +1885,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             },
             {
@@ -1894,8 +1897,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             }
           ]
@@ -1912,7 +1915,7 @@
       ]
     },
     {
-      "id": "padding_top",
+      "id": "padding-top",
       "property": "Padding top",
       "syntax": [
         {
@@ -1927,8 +1930,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             }
           ]
@@ -1942,7 +1945,7 @@
       ]
     },
     {
-      "id": "padding_right",
+      "id": "padding-right",
       "property": "Padding right",
       "syntax": [
         {
@@ -1957,8 +1960,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             }
           ]
@@ -1972,7 +1975,7 @@
       ]
     },
     {
-      "id": "padding_bottom",
+      "id": "padding-bottom",
       "property": "Padding bottom",
       "syntax": [
         {
@@ -1987,8 +1990,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             }
           ]
@@ -2002,7 +2005,7 @@
       ]
     },
     {
-      "id": "padding_left",
+      "id": "padding-left",
       "property": "Padding left",
       "syntax": [
         {
@@ -2017,8 +2020,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             }
           ]
@@ -2048,7 +2051,7 @@
               "required": true,
               "values": [
                 "center",
-                "css position value"
+                "CSS position"
               ]
             }
           ]
@@ -2078,7 +2081,7 @@
               "required": true,
               "values": [
                 "configured radius key",
-                "css unit"
+                "CSS unit"
               ]
             }
           ]
@@ -2096,7 +2099,7 @@
               "required": true,
               "values": [
                 "configured border-radius key",
-                "css unit"
+                "CSS unit"
               ]
             },
             {
@@ -2108,7 +2111,7 @@
               "required": true,
               "values": [
                 "configured border-radius key",
-                "css unit"
+                "CSS unit"
               ]
             }
           ]
@@ -2126,7 +2129,7 @@
               "required": true,
               "values": [
                 "configured border-radius key",
-                "css unit"
+                "CSS unit"
               ]
             },
             {
@@ -2138,7 +2141,7 @@
               "required": true,
               "values": [
                 "configured border-radius key",
-                "css unit"
+                "CSS unit"
               ]
             },
             {
@@ -2150,7 +2153,7 @@
               "required": true,
               "values": [
                 "configured border-radius key",
-                "css unit"
+                "CSS unit"
               ]
             }
           ]
@@ -2168,7 +2171,7 @@
               "required": true,
               "values": [
                 "configured border-radius key",
-                "css unit"
+                "CSS unit"
               ]
             },
             {
@@ -2180,7 +2183,7 @@
               "required": true,
               "values": [
                 "configured border-radius key",
-                "css unit"
+                "CSS unit"
               ]
             },
             {
@@ -2192,7 +2195,7 @@
               "required": true,
               "values": [
                 "configured border-radius key",
-                "css unit"
+                "CSS unit"
               ]
             },
             {
@@ -2204,7 +2207,7 @@
               "required": true,
               "values": [
                 "configured border-radius key",
-                "css unit"
+                "CSS unit"
               ]
             }
           ]
@@ -2234,7 +2237,7 @@
               "required": true,
               "values": [
                 "configured shadow key",
-                "css box-shadow value"
+                "CSS box-shadow"
               ]
             }
           ]
@@ -2248,7 +2251,7 @@
       ]
     },
     {
-      "id": "text_align",
+      "id": "text-align",
       "property": "Text align",
       "syntax": [
         {
@@ -2263,7 +2266,7 @@
               },
               "required": true,
               "values": [
-                "css text-align value"
+                "CSS text-align"
               ]
             }
           ]
@@ -2292,7 +2295,7 @@
               },
               "required": true,
               "values": [
-                "css text-decoration value"
+                "CSS text-decoration"
               ]
             }
           ]
@@ -2306,7 +2309,7 @@
       ]
     },
     {
-      "id": "text_transform",
+      "id": "text-transform",
       "property": "Text transform",
       "syntax": [
         {
@@ -2321,7 +2324,7 @@
               },
               "required": true,
               "values": [
-                "css text-transform value"
+                "CSS text-transform"
               ]
             }
           ]
@@ -2350,7 +2353,7 @@
               },
               "required": true,
               "values": [
-                "css transform value"
+                "CSS transform"
               ]
             }
           ]
@@ -2379,7 +2382,7 @@
               },
               "required": true,
               "values": [
-                "css property"
+                "CSS property"
               ]
             },
             {
@@ -2391,7 +2394,7 @@
               "required": true,
               "values": [
                 "configured duration key",
-                "css time unit"
+                "CSS time unit"
               ]
             },
             {
@@ -2403,7 +2406,7 @@
               "required": false,
               "values": [
                 "configured function key",
-                "css transition function"
+                "CSS transition function"
               ]
             },
             {
@@ -2415,7 +2418,7 @@
               "required": false,
               "values": [
                 "configured delay key",
-                "css time unit"
+                "CSS time unit"
               ]
             }
           ]
@@ -2429,7 +2432,7 @@
       ]
     },
     {
-      "id": "vertical_align",
+      "id": "vertical-align",
       "property": "Vertical align",
       "syntax": [
         {
@@ -2444,7 +2447,7 @@
               },
               "required": true,
               "values": [
-                "css vertical-align value"
+                "CSS vertical-align"
               ]
             }
           ]
@@ -2504,8 +2507,8 @@
               },
               "required": true,
               "values": [
-                "multiplier",
-                "css unit"
+                "whitespace multiplier",
+                "CSS unit"
               ]
             }
           ]

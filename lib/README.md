@@ -29,8 +29,8 @@ Hydrogen takes the following steps to build its CSS file:
 
 # Adding CSS properties
 
-- create the property script (generic or custom) in `lib/scripts/properties`
-- add imports to the build script in `lib/scripts/build-hydrogen.js`
+- if the property needs custom scripting, create a script in `lib/scripts/properties`
+- if necessary, add imports to the build script in `lib/scripts/build-hydrogen.js`
 - add the property's scripts to the build in `lib/scripts/build-hydrogen.js`
 - add the new property to the property data model in `lib/data/property-model.json`
 - test the property by adding it to the testing UI markup in `tests/markup/site`

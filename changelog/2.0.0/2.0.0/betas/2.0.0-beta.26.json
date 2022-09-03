@@ -128,6 +128,26 @@
         "migrations": [],
         "attributes": [],
         "log": []
+      },
+      {
+        "changes": [
+          "Fixes a bug where non-unit values passed to the container attribute would result in a string inside of a calc function."
+        ],
+        "migrations": [],
+        "attributes": [
+          "container"
+        ],
+        "log": []
+      },
+      {
+        "changes": [
+          "Fixes a bug where visibility was setting overflow to auto rather than visible, causing unexpected scroll bars."
+        ],
+        "migrations": [],
+        "attributes": [
+          "visibility"
+        ],
+        "log": []
       }
     ]
   },
