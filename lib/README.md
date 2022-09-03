@@ -38,3 +38,13 @@ Hydrogen takes the following steps to build its CSS file:
 - add the new property's syntax to the snippets file in `hydrogen.snippets.json`
 - update the project's own local .vscode snippets file in `.vscode/hydrogen.code-snippets`
 - add release notes for the property in the changelog
+
+# Adding new tests
+
+- create a `test-[NAME]` directory
+- add an `env` directory with test command shell scripts
+- enable permissions on the test shell scripts using `chmod +x ./tests/test-[NAME]/env/[SCRIPT].sh`
+- add a `modify-settings.js` file to copy over and modify the default Hydrogen settings based on the needs of the test
+- write the success criteria for the test in `test-[NAME]/README.md`
+- add the test to `tests/build.sh` and `tests/refresh.sh`
+- add test commands to `./package.json`

@@ -30,7 +30,17 @@
     "test-parsing-logs": "tests/test-parsing/env/build-logs.sh",
     "test-parsing-clean": "tests/test-parsing/env/build-clean.sh",
     "test-init-fresh": "tests/test-initialization/env/fresh.sh",
-    "test-init-blocked": "tests/test-initialization/env/blocked.sh"
+    "test-init-blocked": "tests/test-initialization/env/blocked.sh",
+    "test-commands-build": "tests/test-commands/env/build.sh",
+    "test-commands-build-dev": "tests/test-commands/env/build-dev.sh",
+    "test-commands-build-prod": "tests/test-commands/env/build-prod.sh",
+    "test-commands-build-logs": "tests/test-commands/env/build-logs.sh",
+    "test-commands-build-clean": "tests/test-commands/env/build-clean.sh",
+    "test-commands-watch": "tests/test-commands/env/watch.sh",
+    "test-commands-watch-dev": "tests/test-commands/env/watch-dev.sh",
+    "test-commands-watch-prod": "tests/test-commands/env/watch-prod.sh",
+    "test-commands-watch-logs": "tests/test-commands/env/watch-logs.sh",
+    "test-commands-watch-clean": "tests/test-commands/env/watch-clean.sh"
   },
   "repository": {
     "type": "git",

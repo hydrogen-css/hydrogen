@@ -1,4 +1,6 @@
 .DS_Store
-node_modules
-tests
 .vscode
+tests
+changes
+docs
+node_modules

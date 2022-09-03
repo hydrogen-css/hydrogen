@@ -41,6 +41,7 @@ function build_test_settings(test_name, modification) {
             test_name,
             "Successfully created this test's unique configuration file."
           );
+          return true;
         }
       }
     );

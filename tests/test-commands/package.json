@@ -1,15 +1,5 @@
 {
   "name": "@hydrogen-css/hydrogen-tests-commands",
   "version": "1.0.0",
-  "scripts": {
-    "start": "npm-run-all --parallel h2-watch browsersync",
-    "h2-build": "npx h2-build",
-    "h2-init": "npx h2-init",
-    "h2-watch": "npx h2-watch --validate --minify --prefix",
-    "browsersync": "browser-sync start --server --watch --startPath markup/site/index.html --reload-delay 500ms --no-open"
-  },
-  "devDependencies": {
-    "browser-sync": "^2.27.10",
-    "npm-run-all": "^4.1.5"
-  }
+  "scripts": {}
 }
