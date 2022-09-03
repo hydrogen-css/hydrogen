@@ -5,10 +5,7 @@
 var colors = require('colors');
 
 // Hydrogen dependencies
-
-// Log headers
-var console_flourish = '> '.dim;
-var tests_header = '☼ Hydrogen'.magenta + ' - ' + ' Tests '.black.bgMagenta;
+var { console_flourish, tests_header } = require('../lib/scripts/log-labels');
 
 function log_setup(message) {
   try {

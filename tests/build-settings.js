@@ -6,7 +6,7 @@ var fs = require('fs');
 var path = require('path');
 
 // Hydrogen dependencies
-var { log_test } = require('../lib/scripts/log-tests');
+var { log_test } = require('./log-tests');
 
 function build_test_settings(test_name, modification) {
   try {

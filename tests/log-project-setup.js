@@ -4,7 +4,7 @@
 // Vendor dependencies
 
 // Hydrogen dependencies
-var { log_setup } = require('../lib/scripts/log-tests');
+var { log_setup } = require('./log-tests');
 
 try {
   log_setup(

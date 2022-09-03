@@ -4,7 +4,7 @@
 // Vendor dependencies
 
 // Hydrogen dependencies
-var { log_test } = require('../lib/scripts/log-tests');
+var { log_test } = require('./log-tests');
 
 const argv = require('yargs/yargs')(process.argv.slice(2)).argv;
 
