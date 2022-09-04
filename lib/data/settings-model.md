@@ -12,6 +12,7 @@
 - output:            | string  | required | 
 
 - build:             | object  | required | 
+  - base_query_key:  | string  |          | optional
   - dark_mode:       | string  | required | 
   - logs:            | boolean | required | 
   - minification:    | boolean | required | 

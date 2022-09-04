@@ -2,6 +2,8 @@
 
 - test settings validation and omission
 
+- test base query key
+
 - test optional colors
 - test optional color modifiers
 - test optional containers
