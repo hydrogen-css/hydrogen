@@ -11,6 +11,7 @@ npm link @hydrogen-css/hydrogen
 cd ../test-initialization
 node ../log-test-setup.js --test="Initialization test"
 npm install
+npm link @hydrogen-css/hydrogen
 cd ../test-commands
 node ../log-test-setup.js --test="Commands test"
 npm install

@@ -2,4 +2,4 @@
 
 cd tests/test-properties
 node env/modify-settings.js
-npm run serve
+npm run serve-logs

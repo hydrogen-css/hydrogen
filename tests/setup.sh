@@ -5,4 +5,4 @@ rm -rf node_modules
 rm -rf package-lock.json
 npm install
 npm link
-tests/build.sh
+tests/refresh.sh

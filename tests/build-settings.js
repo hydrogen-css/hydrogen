@@ -13,7 +13,7 @@ function build_test_settings(test_name, modification) {
     // Load the default configuration ============================================
     var settings = JSON.parse(
       fs.readFileSync(
-        path.resolve(process.cwd(), '../../lib/data/', 'hydrogen.defaults.json')
+        path.resolve(process.cwd(), '../../lib/data/', 'settings.json')
       )
     );
     // Manipulate the settings for this test =====================================

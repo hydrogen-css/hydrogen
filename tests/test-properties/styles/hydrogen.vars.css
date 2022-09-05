@@ -71,17 +71,13 @@
 --h2-gradient-myLinearGradient: linear-gradient(135deg, green, pink, rgba(255, 255, 255, 1));
 --h2-gradient-myRadialGradient: radial-gradient(circle at left, green, pink, rgba(255, 255, 255, 1));
 /* Radii */
---h2-radius-rounded: 10px;
 /* Radii */
---h2-shadow-s: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, .2);
---h2-shadow-m: 0 0.25rem 0.5rem -0.05rem rgba(0, 0, 0, .2);
---h2-shadow-l: 0 0.4rem 0.7rem -0.1rem rgba(0, 0, 0, .2);
---h2-shadow-xl: 0 0.55rem 1rem -0.2rem rgba(0, 0, 0, .2);
---h2-shadow-xxl: 0 0.7rem 1.5rem -0.3rem rgba(0, 0, 0, .2);
+--h2-shadow-small: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, .2);
+--h2-shadow-medium: 0 0.25rem 0.5rem -0.05rem rgba(0, 0, 0, .2);
+--h2-shadow-large: 0 0.4rem 0.7rem -0.1rem rgba(0, 0, 0, .2);
+--h2-shadow-larger: 0 0.55rem 1rem -0.2rem rgba(0, 0, 0, .2);
+--h2-shadow-largest: 0 0.7rem 1.5rem -0.3rem rgba(0, 0, 0, .2);
 /* Transitions */
---h2-transition-duration-default: .2s;
---h2-transition-function-ease: ease;
---h2-transition-delay-none: 0s;
 /* Whitespace shortcuts */
 /* Note that these are merely for convenience. You can create any calc function you need using the --h2-base-whitespace variable */
 --h2-whitespace-1: calc(var(--h2-base-whitespace) * 1);

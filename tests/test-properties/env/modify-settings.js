@@ -34,6 +34,19 @@ function modify_settings(settings) {
       ];
     }
   });
+  settings.styles.tokens.gradients = [
+    {
+      key: 'myLinearGradient',
+      gradient: 'linear-gradient(135deg, green, pink, rgba(255, 255, 255, 1))',
+      fallback: 'green',
+    },
+    {
+      key: 'myRadialGradient',
+      gradient:
+        'radial-gradient(circle at left, green, pink, rgba(255, 255, 255, 1))',
+      fallback: 'green',
+    },
+  ];
   return settings;
 }
 
