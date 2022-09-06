@@ -20,5 +20,10 @@ node ../log-test-refresh.js --test="Commands test"
 rm -rf package-lock.json
 rm -rf node_modules
 rm -rf hydrogen.config.json
+cd ../test-settings
+node ../log-test-refresh.js --test="Settings test"
+rm -rf package-lock.json
+rm -rf node_modules
+rm -rf hydrogen.config.json
 cd ../../
 tests/build.sh

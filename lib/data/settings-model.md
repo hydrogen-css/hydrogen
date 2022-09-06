@@ -11,7 +11,7 @@
 - output:                  | string  | required |          |
 - build:                   | object  |          | optional |
   - base_query_key:        | string  |          | optional |
-  - dark_mode:             | string  |          | optional |
+  - dark_mode:             | string  |          | optional | Note: preference | toggle
   - logs:                  | boolean |          | optional |
   - minification:          | boolean |          | optional |
   - prefixing:             | boolean |          | optional |
@@ -31,7 +31,7 @@
         - line_height:     | string  | required |          |
         - size:            | string  | required |          |
         - type_scale:      | string  | required |          |
-  - tokens:                | object  | required |          |
+  - tokens:                | object  |          | optional |
     - colors:              | array   |          | optional |
       - child:             | object  |          | optional |
         - key:             | string  | required |          |
