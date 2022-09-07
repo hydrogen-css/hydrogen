@@ -8,22 +8,18 @@ var { build_test_settings } = require('../../build-settings');
 
 function modify_settings(settings) {
   // Manipulate the settings for this test =====================================
-  settings.input = 'string';
-  settings.output = [];
-  settings.build.dark_mode = true;
-  settings.build.var_export = 'string';
-  settings.styles.foundations.media = [
+  settings.input = ['markup'];
+  settings.output = 'styles';
+  settings.styles.tokens.colors = [
     {
-      key: 65,
-      query: 45,
-    },
-    {
-      key: 'invalid',
-      query: 'my_string',
-    },
-    {
-      key: 'base',
-      query: 'my_string',
+      key: 'primary',
+      color: '#9D5CFF',
+      modifiers: [
+        {
+          key: 'primary',
+          color: 'red',
+        },
+      ],
     },
   ];
   return settings;

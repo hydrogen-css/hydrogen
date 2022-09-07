@@ -41,10 +41,19 @@
     "test-commands-watch-prod": "tests/test-commands/env/watch-prod.sh",
     "test-commands-watch-logs": "tests/test-commands/env/watch-logs.sh",
     "test-commands-watch-clean": "tests/test-commands/env/watch-clean.sh",
-    "test-settings-fail": "tests/test-settings/env/build-fail.sh",
-    "test-settings-succeed": "tests/test-settings/env/build-succeed.sh",
-    "test-settings-full": "tests/test-settings/env/build-full.sh",
-    "test-settings-bare": "tests/test-settings/env/build-bare.sh"
+    "test-settings-build": "tests/test-settings/env/run-build.sh",
+    "test-settings-complete": "tests/test-settings/env/run-complete.sh",
+    "test-settings-duplicate-color-gradient-keys": "tests/test-settings/env/run-duplicate-color-gradient-keys.sh",
+    "test-settings-duplicate-color-keys": "tests/test-settings/env/run-duplicate-color-keys.sh",
+    "test-settings-duplicate-color-modifier-keys": "tests/test-settings/env/run-duplicate-color-modifier-keys.sh",
+    "test-settings-duplicate-gradient-modifier-keys": "tests/test-settings/env/run-duplicate-gradient-modifier-keys.sh",
+    "test-settings-duplicate-media-keys": "tests/test-settings/env/run-duplicate-media-keys.sh",
+    "test-settings-input": "tests/test-settings/env/run-input.sh",
+    "test-settings-key-periods": "tests/test-settings/env/run-key-periods.sh",
+    "test-settings-key-spaces": "tests/test-settings/env/run-key-spaces.sh",
+    "test-settings-minimum": "tests/test-settings/env/run-minimum.sh",
+    "test-settings-output": "tests/test-settings/env/run-output.sh",
+    "test-settings-unmatched-typography-key": "tests/test-settings/env/run-unmatched-typography-key.sh"
   },
   "repository": {
     "type": "git",
