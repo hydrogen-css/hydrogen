@@ -4,6 +4,9 @@
 
 - test base query key
 
+- test spaces in keys
+- test dots in keys
+
 - test optional colors
 - test optional color modifiers
 - test optional containers
