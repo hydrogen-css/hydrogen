@@ -41,10 +41,10 @@
     "test-commands-watch-prod": "tests/test-commands/env/watch-prod.sh",
     "test-commands-watch-logs": "tests/test-commands/env/watch-logs.sh",
     "test-commands-watch-clean": "tests/test-commands/env/watch-clean.sh",
-    "test-settings-build-fail": "tests/test-settings/env/build-fail.sh",
-    "test-settings-build-succeed": "tests/test-settings/env/build-succeed.sh",
-    "test-settings-build-full": "tests/test-settings/env/build-full.sh",
-    "test-settings-build-bare": "tests/test-settings/env/build-bare.sh"
+    "test-settings-fail": "tests/test-settings/env/build-fail.sh",
+    "test-settings-succeed": "tests/test-settings/env/build-succeed.sh",
+    "test-settings-full": "tests/test-settings/env/build-full.sh",
+    "test-settings-bare": "tests/test-settings/env/build-bare.sh"
   },
   "repository": {
     "type": "git",
