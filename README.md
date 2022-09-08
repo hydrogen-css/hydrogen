@@ -1,6 +1,4 @@
-# ☀️ Hydrogen
-
-<img alt="npm latest" src="https://img.shields.io/npm/v/@hydrogen-css/hydrogen/latest?color=%239D5CFF&label=latest&style=for-the-badge"> <img alt="npm beta" src="https://img.shields.io/npm/v/@hydrogen-css/hydrogen/beta?color=%239D5CFF&label=beta&style=for-the-badge">
+# 🌞 Welcome to Hydrogen
 
 Hydrogen is an open-source design and CSS utility framework powered by data-attributes.
 
@@ -81,7 +79,7 @@ The biggest advantage to Hydrogen's `data-attribute` syntax is that it enables t
 - write new tests in `tests`
 - run tests using the commands found in the root `package.json`
 
-You can read up on specifics about how Hydrogen works on a technical level in the development README found in `lib/README.md`.
+You can read up on specifics about how Hydrogen works on a technical level in the development README found in `CONTRIBUTING.md`.
 
 ## Currently available tests
 

@@ -1,4 +1,35 @@
-# Build process
+# 🌞 Welcome to Hydrogen
+
+## 📑 Table of contents
+
+- [Helpful links](#🔗-helpful-links)
+- [Conventions](#📐-conventions)
+- [Development guides](#🖥️-development-guides)
+  - [Understanding Hydrogen's build process](#understanding-hydrogens-build-process)
+  - [CSS properties and implementation](#css-properties-and-implementation)
+    - [How to add basic CSS properties](#how-to-add-basic-css-properties)
+    - [How to add complex CSS properties](#how-to-add-complex-css-properties)
+  - [Writing tests](#writing-tests)
+
+## 🔗 Helpful links
+
+- [Hydrogen's website](https://hydrogen.design/en)
+- [Hydrogen's documentation](https://hydrogen.design/en/docs)
+- [Gitlab](https://gitlab.com/hydrogen-css/hydrogen) - Hydrogen's code is stored here
+- [Latest package release](https://www.npmjs.com/package/@hydrogen-css/hydrogen/v/latest) - Found on NPM, contains the latest stable code
+- [Beta package release](https://www.npmjs.com/package/@hydrogen-css/hydrogen/v/beta) - Found on NPM, contains new and potentially unstable features
+
+## 📐 Conventions
+
+### Code conventions
+
+### Submitting bugs
+
+### Submitting a merge request
+
+## 🖥️ Development guides
+
+### Understanding Hydrogen's build process
 
 Hydrogen takes the following steps to build its CSS file:
 
@@ -27,7 +58,7 @@ Hydrogen takes the following steps to build its CSS file:
 - the CSS file is then written as a "raw" file so that it can be processed
 - AutoPrefixer and CSSnano are both run on the file with custom settings to produce the final CSS
 
-# Adding CSS properties
+### CSS properties and implementation
 
 - if the property needs custom scripting, create a script in `lib/scripts/properties`
 - if necessary, add imports to the build script in `lib/scripts/build-hydrogen.js`
@@ -39,7 +70,11 @@ Hydrogen takes the following steps to build its CSS file:
 - update the project's own local .vscode snippets file in `.vscode/hydrogen.code-snippets`
 - add release notes for the property in the changelog
 
-# Adding new tests
+#### How to add basic CSS properties
+
+#### How to add complex CSS properties
+
+### Writing tests
 
 - create a `test-[NAME]` directory
 - add an `env` directory with test command shell scripts
