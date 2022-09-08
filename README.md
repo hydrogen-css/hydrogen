@@ -4,20 +4,7 @@ Hydrogen is an open-source design and CSS utility framework powered by data-attr
 
 By parsing the contents of custom `data-h2-` attributes, Hydrogen allows you to style elements completely from your markup. It comes equipped with a comprehensive library of tools and configurations for easy, seamless development. At runtime, it processes your markup and builds a CSS file that contains only the code you've used, preventing duplication and bloat.
 
-[Website](https://beta.hydrogen.design) | [Roadmap](https://github.com/orgs/hydrogen-css/projects/1) | [Feedback](https://forms.office.com/r/vz80dsUabZ)
-
-## 📝 Quick guides
-
-- [Syntax](https://beta.hydrogen.design/en/docs/basics/syntax)
-- [Queries](https://beta.hydrogen.design/en/docs/basics/media)
-- Modifiers
-  - [:id[]](https://beta.hydrogen.design/en/docs/basics/modifiers/id)
-  - [:class[]](https://beta.hydrogen.design/en/docs/basics/modifiers/class)
-  - [:children[]](https://beta.hydrogen.design/en/docs/basics/modifiers/children)
-  - [:state](https://beta.hydrogen.design/en/docs/basics/modifiers/state)
-  - [:dark](https://beta.hydrogen.design/en/docs/basics/modifiers/dark)
-- [Layouts](https://beta.hydrogen.design/en/docs/basics/layout)
-- [Typography](https://beta.hydrogen.design/en/docs/basics/typography)
+[Website](https://beta.hydrogen.design) | [Roadmap](https://workflowy.com/s/hydrogen-roadmap/7Gjmdbjiqc0Wst1R) | [Feedback](https://forms.office.com/r/vz80dsUabZ)
 
 ## 🛠️ Basic usage
 
