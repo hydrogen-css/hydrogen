@@ -20,3 +20,7 @@ cd ../test-settings
 node ../log-test-setup.js --test="Settings test"
 npm install
 npm link @hydrogen-css/hydrogen
+cd ../test-defaults
+node ../log-test-setup.js --test="Default test"
+npm install
+npm link @hydrogen-css/hydrogen

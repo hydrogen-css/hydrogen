@@ -1,10 +1,30 @@
 {
   "version": "2.0.0-beta.26",
-  "date": "2022/AUG/30",
+  "date": "2022/SEP/08",
   "author": "Josh Beveridge",
   "beta": true,
   "en": {
     "breaking": [
+      {
+        "changes": [
+          "Overhauls the configuration data model for better categorization and to increase ease of validation for optional items.",
+          "Adds new configuration options inside of the new build object.",
+          "base_query_key allows you to optionally set a custom key for the base media query, which has been removed from the media configuration.",
+          "validation allows you to enable/disable the new CSS validation feature.",
+          "minification allows you to enable/disable CSSnano.",
+          "prefixing allows you to enable/disable Autoprefixer.",
+          "quiet allows you to enable/disable timer output in the console."
+        ],
+        "migrations": [
+          "debug is now logs, nested inside the build object.",
+          "variables is now var_export, nested inside the build object.",
+          "Both reset-styles and dark_mode are now nested inside the build object.",
+          "colors, containers, fonts, gradients, radii (from radius), shadows, and transitions are now nested inside a tokens object, which itself is nested inside a styles object.",
+          "Both media and typography are now found inside a foundations object, which is found inside the styles object."
+        ],
+        "attributes": [],
+        "log": []
+      },
       {
         "changes": [
           "Reworks gap so that it better aligns with other syntax choices around columns/rows/axes. Passing 1 option now sets a gap value on both, while 2 options applies to column and row respectively."
@@ -54,6 +74,36 @@
       }
     ],
     "features": [
+      {
+        "changes": [
+          "Adds support for CSS validation during CSS construction. This allows Hydrogen to warn you against invalid CSS before it gets processed, preventing errors and providing opportunities to fix otherwise hidden problems."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Updates the development setup script and adds new refresh and testing scripts."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Adds support for unique command flags that provide command line level control over certain build settings.",
+          "--config='' allows you to pass a directory containing a hydrogen.config.json file.",
+          "--quiet, --quiet=false allows you to enable/disable timer output in the console.",
+          "--validate, --validate==false allows you to enable/disable CSS validation.",
+          "--prefix, --prefix=false allows you to enable/disable Autoprefixer.",
+          "--logs, --logs=false allows you to enable/disable Hydrogen's log output.",
+          "--minify, --minify=false allows you to enable/disable CSSnano."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
       {
         "changes": [
           "Adds support for the transform property, including parsing of whitespace multipliers contained within the CSS declaration."
@@ -110,6 +160,46 @@
           "layer"
         ],
         "log": []
+      },
+      {
+        "changes": [
+          "Error reporting has been reworked to provide clearer headings and more detailed information, including things like invalid settings and the build step in which the error occurred."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Completely overhauls settings validation and validation output."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Completely overhauls internal testing and provides a more robust testing framework for catching bugs faster and more consistently."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Overhauls the property data model to be more concise and easier to manipulate."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Consolidated scripting for basic and size-only properties to make bugs less likely and code easier to maintain."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
       }
     ],
     "bugfixes": [
@@ -147,6 +237,14 @@
         "attributes": [
           "visibility"
         ],
+        "log": []
+      },
+      {
+        "changes": [
+          "Fixes incorrect timer reporting for the PostCSS processing step (prefixing and minification)."
+        ],
+        "migrations": [],
+        "attributes": [],
         "log": []
       }
     ]
