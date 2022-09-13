@@ -2,7 +2,10 @@
 
 - properties:              | object  | required |          | 
   - key:                   | object  | required |          | Note: property key
-    - title:               | string  | required |          | 
+    - title:               | object  | required |          | 
+      - en:                | string  | required |          |
+      - fr:                | string  | required |          |
+    - group:               | string  | required |          | Note: used to classify properties
     - property_keys:       | object  | required |          | 
       - key:               | object  | required |          | Note: property name option
         - attribute        | array   | required |          | Note: full attribute found

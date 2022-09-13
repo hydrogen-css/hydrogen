@@ -4,6 +4,20 @@
 --h2-base-line-height: 1.4;
 --h2-base-whitespace: 1.4;
 /* Colors */
+--h2-color-white: rgba(255, 255, 255, 1);
+--h2-color-white-light: rgb(255, 255, 255);
+--h2-color-white-lighter: rgb(255, 255, 255);
+--h2-color-white-lightest: rgb(255, 255, 255);
+--h2-color-white-dark: rgb(191, 191, 191);
+--h2-color-white-darker: rgb(128, 128, 128);
+--h2-color-white-darkest: rgb(64, 64, 64);
+--h2-color-black: #212130;
+--h2-color-black-light: rgb(87, 87, 101);
+--h2-color-black-lighter: rgb(143, 143, 152);
+--h2-color-black-lightest: rgb(199, 199, 204);
+--h2-color-black-dark: rgb(24, 24, 37);
+--h2-color-black-darker: rgb(16, 16, 25);
+--h2-color-black-darkest: rgb(8, 8, 12);
 --h2-color-primary: #9D5CFF;
 --h2-color-primary-light: rgb(179, 121, 255);
 --h2-color-primary-lighter: rgb(204, 165, 255);
@@ -13,13 +27,13 @@
 --h2-color-primary-darkest: rgb(38, 19, 64);
 --h2-color-primary-other: yellow;
 --h2-color-primary-customModifier: pink;
---h2-color-secondary: #5CFFEE;
---h2-color-secondary-light: rgb(121, 255, 252);
+--h2-color-secondary: #53FFE0;
+--h2-color-secondary-light: rgb(113, 255, 240);
 --h2-color-secondary-lighter: green;
---h2-color-secondary-lightest: rgb(210, 255, 254);
---h2-color-secondary-dark: rgb(57, 191, 188);
---h2-color-secondary-darker: rgb(38, 128, 126);
---h2-color-secondary-darkest: rgb(19, 64, 63);
+--h2-color-secondary-lightest: rgb(208, 255, 250);
+--h2-color-secondary-dark: rgb(49, 191, 176);
+--h2-color-secondary-darker: rgb(33, 128, 118);
+--h2-color-secondary-darkest: rgb(16, 64, 59);
 --h2-color-accent: #FF5C6D;
 --h2-color-accent-light: rgb(255, 121, 136);
 --h2-color-accent-lighter: rgb(255, 165, 176);
@@ -27,24 +41,17 @@
 --h2-color-accent-dark: rgb(191, 57, 72);
 --h2-color-accent-darker: rgb(128, 38, 48);
 --h2-color-accent-darkest: rgb(64, 19, 24);
---h2-color-black: rgba(20, 20, 30, 1);
---h2-color-black-light: rgb(78, 78, 87);
---h2-color-black-lighter: rgb(137, 137, 143);
---h2-color-black-lightest: rgb(196, 196, 199);
---h2-color-black-dark: rgb(14, 14, 23);
---h2-color-black-darker: rgb(10, 10, 16);
---h2-color-black-darkest: rgb(5, 5, 8);
---h2-color-white: rgba(255, 255, 255, 1);
---h2-color-white-light: rgb(255, 255, 255);
---h2-color-white-lighter: rgb(255, 255, 255);
---h2-color-white-lightest: rgb(255, 255, 255);
---h2-color-white-dark: rgb(191, 191, 191);
---h2-color-white-darker: rgb(128, 128, 128);
---h2-color-white-darkest: rgb(64, 64, 64);
+--h2-color-focus: #fbce3a;
+--h2-color-focus-light: rgb(255, 226, 93);
+--h2-color-focus-lighter: rgb(255, 236, 147);
+--h2-color-focus-lightest: rgb(255, 245, 201);
+--h2-color-focus-dark: rgb(191, 162, 29);
+--h2-color-focus-darker: rgb(128, 108, 19);
+--h2-color-focus-darkest: rgb(64, 54, 10);
 /* Container max widths */
 --h2-container-small: 39rem;
---h2-container-medium: 60rem;
---h2-container-large: 80rem;
+--h2-container-medium: 75rem;
+--h2-container-large: 90rem;
 /* Font families */
 --h2-font-family-sans: sans-serif;
 --h2-font-family-serif: serif;
@@ -91,7 +98,7 @@
 --h2-whitespace-9: calc(var(--h2-base-whitespace) * 9);
 --h2-whitespace-10: calc(var(--h2-base-whitespace) * 10);
 }
-@media screen and (min-width: 73em){
+@media screen and (min-width: 100em){
 :root{
 /* Core units */
 --h2-base-font-size: 112.5%;

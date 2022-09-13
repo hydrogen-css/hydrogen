@@ -4,7 +4,7 @@
 // Vendor dependencies
 
 // Hydrogen dependencies
-var { build_test_settings } = require('../../build-settings');
+var { build_development_config } = require('../../../lib/setup/build-settings');
 
 function modify_settings(settings) {
   // Manipulate the settings for this test =====================================
@@ -78,4 +78,4 @@ function modify_settings(settings) {
   return settings;
 }
 
-build_test_settings('Default test', modify_settings);
+build_development_config('Default test', modify_settings);

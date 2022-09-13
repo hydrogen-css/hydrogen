@@ -1,0 +1,96 @@
+<div data-h2-margin="base(x6, 0, x5, 0)">
+  <div data-h2-container="base(center, medium, x1) l-tablet(center, medium, x2)">
+    {% set heading = {
+      tag: "h2",
+      size: "h2",
+      margin: "",
+      img: {
+        path: "/static/img/icon-robot.svg",
+        alt: "test"
+      },
+      flourish: null,
+      label: features.title.label,
+      id: features.title.id,
+      link: null
+    } %}
+    {% include "components/heading.njk" %}
+    {% for item in features.sections %}
+      <div 
+        data-h2-margin="base(x3, 0, 0, 0)"
+        data-h2-display="base(grid)"
+        data-h2-grid-template-columns="base(100%) p-tablet(4rem auto)"
+        data-h2-gap="base(x2)">
+        <div>
+          {% set flourish = {
+            heading: "h6"
+          } %}
+          {% include "components/flourish.njk" %}
+        </div>
+        <div>
+          <div 
+            data-h2-display="base(grid)"
+            data-h2-grid-template-columns="base(100%) l-tablet(1fr 1fr)"
+            data-h2-gap="base(x4)">
+            <div>
+              {% set heading = {
+                tag: "h3",
+                size: "h6",
+                margin: "data-h2-margin='base(0, 0, x.5, 0)'",
+                img: null,
+                flourish: null,
+                label: item.title.label,
+                id: item.title.id,
+                link: null
+              } %}
+              {% include "components/heading.njk" %}
+              {% for content in item.copy %}
+                <p>{{ content }}</p>
+              {% endfor %}
+            </div>
+            <div>
+              {% set code = {
+                file: item.code.file,
+                lines: item.code.lines
+              } %}
+              {% include "components/code.njk" %}
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+    {% set heading = {
+      tag: "h3",
+      size: "h6",
+      margin: "data-h2-margin='base(x4, 0, x1, 0)'",
+      img: null,
+      flourish: null,
+      label: subfeatures.title.label,
+      id: subfeatures.title.id,
+      link: null
+    } %}
+    {% include "components/heading.njk" %}
+    <div
+      data-h2-display="base(grid)"
+      data-h2-grid-template-columns="base(1fr) p-tablet(1fr 1fr) l-tablet(1fr 1fr 1fr) laptop(1fr 1fr 1fr 1fr)"
+      data-h2-gap="base(x1)"
+      data-h2-background-color="base:children[>div](white) base:dark:children[>div](font.dark)"
+      data-h2-radius="base:children[>div](rounded)"
+      data-h2-padding="base:children[>div](x1)"
+      data-h2-shadow="base:children[>div](large)"
+      data-h2-color="base:children[p:first-child](primary.dark) base:dark:children[p:first-child](primary.lighter)"
+      data-h2-font-weight="base:children[p:first-child](800)"
+      data-h2-margin="base:children[p:not(:first-child)](x.5, 0, 0, 0)">
+      {% for item in subfeatures.list %}
+        <div>
+          <p>{{ item.label | safe }}</p>
+          {% for content in item.content %}
+            <p>{{ content | safe }}</p>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<div data-h2-container="base(center, medium, x1) l-tablet(center, medium, x2)">
+  {% include "components/rule.njk" %}
+</div>

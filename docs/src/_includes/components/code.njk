@@ -1,0 +1,67 @@
+<div
+  data-h2-font-family="base(mono)"
+  data-h2-background-color="base(code)"
+  data-h2-color="base(white)"
+  data-h2-radius="base(code)"
+  class="code_wrapper">
+  <div
+    data-h2-display="base(grid)"
+    data-h2-grid-template-columns="base(1fr auto)">
+    <div>
+      <span
+        data-h2-color="base(lighter.code)"
+        data-h2-display="base(block)"
+        data-h2-padding="base(x.5, x1)">{{ code.file }}</span>
+    </div>
+    <div>
+      <button
+        type="button"
+        onclick="copy_code(this)"
+        data-h2-background-color="base(transparent) base:focus-visible(focus)"
+        data-h2-color="base(lighter.code) base:hover(lighter.primary) base:dark(light.font) base:focus-visible(black)"
+        data-h2-border="base(all, 0px, solid, transparent) base(left, 1px, solid, light.code)"
+        data-h2-cursor="base(pointer)"
+        data-h2-padding="base(x.5, x1)"
+        data-h2-text-decoration="base(underline)" 
+        data-h2-radius="base(0, code, 0, 0)"
+        data-h2-font-family="base(sans)"
+        data-h2-font-size="base(caption)"
+        style="outline: none;">
+          <span class="default">Copy code</span>
+          <span class="confirmation">Copied</span>
+        </button>
+    </div>
+  </div>
+  <hr
+    data-h2-height="base(1px)"
+    data-h2-background-color="base(light.code)"
+    data-h2-margin="base(0)"
+    data-h2-border="base(all, 0px, solid, transparent)">
+  <div 
+    data-h2-max-height="base(35vh)" 
+    data-h2-overflow="base(auto)"
+    data-h2-outline="base(none)"
+    data-h2-border="base:focus-visible(top, x.5, solid, focus)">
+    <div
+      data-h2-display="base(grid)"
+      data-h2-grid-template-columns="base(auto 1fr)"
+      data-h2-gap="base(x.35)">
+      <div>
+        <pre
+          data-h2-padding="base(x.75, 0, x.75, x1)"
+          data-h2-margin="base(0)"><code>{% set lineCount = 0 %}{% for item in code.lines %}{% set lineCount = lineCount + 1 %}<span data-h2-color="base(lighter.code)">{{ lineCount }}</span><br>{% endfor %}</code></pre>
+      </div>
+      <div 
+        data-h2-overflow="base(auto, visible)"
+        data-h2-outline="base(none)"
+        data-h2-border="base:focus-visible(left, x.5, solid, focus)"
+        data-h2-padding="base(0, 0, 0, x.35)">
+        <pre
+          data-h2-display="base(flex)"
+          data-h2-padding="base(x.75, 0)"
+          data-h2-margin="base(0)"><code data-h2-display="base(block)" data-h2-padding="base(0, x1, 0, 0)">{% for item in code.lines %}{{ item }}<br>{% endfor %}</code></pre>
+      </div>
+    </div>
+  </div>
+  <textarea class="code_content">{% for item in code.lines %}{{ item }}{{ "\r\n" | safe }}{% endfor %}</textarea>
+</div>

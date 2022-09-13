@@ -1,6 +1,6 @@
 {
   "name": "@hydrogen-css/hydrogen",
-  "version": "2.0.0-beta.27",
+  "version": "2.0.0-beta.28",
   "description": "An open-source design and CSS utility framework powered by data-attributes. MIT Licensed.",
   "keywords": [
     "Hydrogen",
@@ -33,8 +33,10 @@
     "url": "https://gitlab.com/hydrogen-css/hydrogen"
   },
   "scripts": {
-    "setup": "tests/setup.sh",
-    "refresh": "tests/refresh.sh",
+    "setup": "lib/setup/setup.sh",
+    "refresh-docs": "docs/refresh.sh",
+    "refresh-tests": "tests/refresh.sh",
+    "docs": "cd docs && npm start",
     "test": "npm run test-defaults",
     "test-defaults": "tests/test-defaults/env/serve.sh",
     "test-properties": "tests/test-properties/env/serve.sh",
@@ -70,7 +72,7 @@
     "test-settings-unmatched-typography-key": "tests/test-settings/env/run-unmatched-typography-key.sh"
   },
   "dependencies": {
-    "autoprefixer": "^10.4.7",
+    "autoprefixer": "^10.4.9",
     "browserlist": "^1.0.1",
     "chokidar": "^3.5.3",
     "color": "^4.2.3",

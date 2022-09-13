@@ -1,0 +1,51 @@
+{
+  "name": "hydrogen-documentation",
+  "version": "1.0.0",
+  "description": "Hydrogen's documentation website.",
+  "keywords": [],
+  "homepage": "https://hydrogen.design",
+  "bugs": {
+    "url": "https://gitlab.com/hydrogen-css/hydrogen/-/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Josh Beveridge",
+    "url": "https://joshbeveridge.ca"
+  },
+  "main": ".eleventy.js",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/hydrogen-css/hydrogen"
+  },
+  "scripts": {
+    "start": "eleventy --serve --quiet",
+    "debug": "set DEBUG=* & eleventy",
+    "build": "eleventy"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy-navigation": "^0.3.3",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.2.2",
+    "@hydrogen-css/hydrogen": "^2.0.0-beta.27",
+    "autoprefixer": "^10.4.9",
+    "cross-env": "^7.0.2",
+    "luxon": "^1.25.0",
+    "postcss": "^8.4.14",
+    "postcss-cli": "^8.3.1"
+  },
+  "engines": {
+    "node": ">=14.18.1",
+    "npm": ">=8.11.0"
+  },
+  "browserslist": [
+    "last 1 version and not dead"
+  ],
+  "prettier": {
+    "singleQuote": true,
+    "proseWrap": "preserve",
+    "bracketSpacing": true,
+    "tabWidth": 2,
+    "useTabs": false,
+    "singleAttributePerLine": true
+  }
+}

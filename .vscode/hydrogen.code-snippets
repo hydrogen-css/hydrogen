@@ -32,6 +32,10 @@
       "data-h2-border=\"${1:query}${2::modifiers}(${3:sides}, ${4:width}, ${5:style}, ${6:color})\""
     ]
   },
+  "hydrogen-color": {
+    "prefix": ["data-h2-color", "data-h2-font-color"],
+    "body": ["data-h2-color=\"${1:query}${2::modifiers}(${3:color/gradient})\""]
+  },
   "hydrogen-container": {
     "prefix": "data-h2-container",
     "body": [
@@ -45,6 +49,10 @@
   "hydrogen-display": {
     "prefix": "data-h2-display",
     "body": ["data-h2-display=\"${1:query}${2::modifiers}(${3:display})\""]
+  },
+  "hydrogen-fill": {
+    "prefix": ["data-h2-fill"],
+    "body": ["data-h2-fill=\"${1:query}${2::modifiers}(${3:color})\""]
   },
   "hydrogen-flex-basis": {
     "prefix": "data-h2-flex-basis",
@@ -73,10 +81,6 @@
   "hydrogen-flex-wrap": {
     "prefix": "data-h2-flex-wrap",
     "body": ["data-h2-flex-wrap=\"${1:query}${2::modifiers}(${3:wrap})\""]
-  },
-  "hydrogen-font-color": {
-    "prefix": ["data-h2-color", "data-h2-font-color"],
-    "body": ["data-h2-color=\"${1:query}${2::modifiers}(${3:color/gradient})\""]
   },
   "hydrogen-font-family": {
     "prefix": "data-h2-font-family",

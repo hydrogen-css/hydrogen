@@ -1,0 +1,133 @@
+a:hover {
+  transition: color var(--h2-transition-duration-default)
+    var(--h2-transition-function-ease);
+}
+
+[data-h2] .is-active {
+  display: none;
+}
+
+.accent-radial {
+  height: 300%;
+  width: 200%;
+  position: absolute;
+  top: -150%;
+  left: -100%;
+  opacity: 20%;
+}
+
+.primary-radial {
+  height: 300%;
+  width: 200%;
+  position: absolute;
+  bottom: -150%;
+  right: -100%;
+  opacity: 20%;
+}
+
+.section-icon {
+  transform: rotate(-15deg);
+}
+
+#switcher.light #icon_sun {
+  animation: sunRotate 10s linear 0s infinite;
+}
+
+@keyframes sunRotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(359deg);
+  }
+}
+
+strong {
+  font-weight: 700;
+}
+
+/* Main menu toggle */
+.main_menu .main_menu_toggle {
+}
+
+.main_menu .main_menu_toggle .show_label {
+  display: inline;
+}
+
+.main_menu .main_menu_toggle .hide_label {
+  display: none;
+}
+
+.main_menu.showing .main_menu_toggle .show_label {
+  display: none;
+}
+
+.main_menu.showing .main_menu_toggle .hide_label {
+  display: inline;
+}
+
+.main_menu .menu_list {
+  display: none;
+}
+
+.main_menu.showing .menu_list {
+  display: block;
+}
+
+/* Code copying */
+.code_wrapper {
+}
+
+.code_wrapper button {
+  position: relative;
+}
+
+.code_wrapper button .default {
+  display: block;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.code_wrapper button .confirmation {
+  display: block;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s ease;
+}
+
+.code_wrapper button.copied .default {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.code_wrapper button.copied .confirmation {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.code_content {
+  display: none;
+}
+
+pre > code {
+  background-color: initial !important;
+  color: inherit !important;
+  /* padding: 0 !important; */
+  border-radius: 0;
+  top: 0 !important;
+}
+
+h1 > a:focus-visible,
+p > a:focus-visible,
+.h2-light p > a:focus-visible,
+li > a:focus-visible,
+.h2-light li > a:focus-visible,
+li > p > a:focus-visible,
+.h2-light li > p > a:focus-visible {
+  /* background-color: var(--h2-color-focus);
+  color: var(--h2-color-black);
+  outline: none; */
+}

@@ -1,0 +1,96 @@
+<div data-h2-margin="base(x5, 0)">
+  <div data-h2-container="base(center, medium, x1) l-tablet(center, medium, x2)">
+    {% set heading = {
+      tag: "h2",
+      size: "h2",
+      margin: "",
+      img: {
+        path: "/static/img/icon-flag.svg",
+        alt: "test"
+      },
+      flourish: null,
+      label: start.title.label,
+      id: start.title.id,
+      link: null
+    } %}
+    {% include "components/heading.njk" %}
+    <div data-h2-margin="base(x3, 0, 0, 0)">
+      {% set heading = {
+        tag: "h3",
+        size: "h6",
+        margin: "",
+        img: null,
+        flourish: true,
+        label: start.subtitle.label,
+        id: start.subtitle.id,
+        link: null
+      } %}
+      {% include "components/heading.njk" %}
+      {% for item in start.sections %}
+      <div 
+        data-h2-margin="base(x2, 0, 0, 0)"
+        data-h2-display="base(grid)"
+        data-h2-grid-template-columns="base(100%) p-tablet(4rem auto)"
+        data-h2-gap="base(x2)">
+        <div></div>
+        <div>
+          <div 
+            data-h2-display="base(grid)"
+            data-h2-grid-template-columns="base(100%) l-tablet(1fr 1fr)"
+            data-h2-gap="base(x4)">
+            <div>
+              {% for item in item.section %}
+                {% if item.type == "step" %}
+                  <div
+                    data-h2-display="base(inline-block)"
+                    data-h2-vertical-align="base(middle)"
+                    data-h2-margin="base(-4px, x.25, 0, 0)"
+                    data-h2-background-color="base(primary.lightest) base:dark(primary.dark)"
+                    data-h2-position="base(relative)"
+                    data-h2-height="base(x1.2)"
+                    data-h2-width="base(x1.2)"
+                    data-h2-radius="base(100%)">
+                    <span 
+                      data-h2-position="base(center)" 
+                      data-h2-font-size="base(caption, 1)"
+                      data-h2-font-weight="base(700)"
+                      data-h2-color="base(primary.darker) base:dark(white)">
+                      {{ item.index }}
+                    </span>
+                  </div>
+                  {% for item in item.content %}
+                    <p 
+                      data-h2-display="base(inline-block)" 
+                      data-h2-font-weight="base(700)" 
+                      data-h2-color="base(primary.dark) base:dark(primary.lighter)">
+                      {{ item | safe }}
+                    </p>
+                  {% endfor %}
+                {% elseif item.type == "copy" %}
+                  {% for item in item.content %}
+                    <p 
+                      data-h2-margin="base(x.5, 0, 0, 0)"
+                      data-h2-color="base:children[a]:hover(primary) base:dark:children[a]:hover(lighter.primary) base:children[a]:focus-visible(black)"
+                      data-h2-background-color="base:children[a]:focus-visible(focus)"
+                      data-h2-outline="base:children[a](none)">{{ item | safe }}</p>
+                  {% endfor %}
+                {% endif %}
+              {% endfor %}
+            </div>
+            <div>
+              {% set code = {
+                file: item.code.file,
+                lines: item.code.lines
+              } %}
+              {% include "components/code.njk" %}
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<div data-h2-container="base(center, medium, x1) l-tablet(center, medium, x2)">
+  {% include "components/rule.njk" %}
+</div>
