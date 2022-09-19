@@ -72,6 +72,6 @@
     "singleQuote": true
   },
   "devDependencies": {
-    "gulp-purgecss": "^4.0.3"
+    "gulp-purgecss": "^5.0.0"
   }
 }
