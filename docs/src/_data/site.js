@@ -2,6 +2,14 @@ module.exports = {
   build_time: new Date(),
   base_url: 'https://hydrogen.design',
   name: 'Hydrogen',
+  slogan: {
+    en: 'An open-source design and CSS utility framework powered by data-attributes.',
+    fr: "Un cadre de conception et d'utilité CSS à code source ouvert, alimenté par les attributs de données.",
+  },
+  description: {
+    en: 'Hydrogen is a utility-type CSS framework that allows you to style websites right in your markup. Design settings meet the flexibility of data-attributes to help you create consistent, beautiful experiences.',
+    fr: 'Hydrogen est un framework CSS de type utilitaire qui vous permet de styliser les sites Web directement dans votre balisage. Les paramètres de conception rencontrent la flexibilité des attributs de données pour vous aider à créer des expériences cohérentes et magnifiques.',
+  },
   languages: [
     {
       label: 'EN',
@@ -60,6 +68,28 @@ module.exports = {
           fr: 'Visit this page in English.',
         },
       },
+    },
+    code: {
+      copy_button: {
+        title: {
+          en: 'Copy the contents of this code window to your clipboard.',
+          fr: '',
+        },
+        label: {
+          en: 'Copy code',
+          fr: '',
+        },
+        label_active: {
+          en: 'Copied',
+          fr: '',
+        },
+      },
+    },
+  },
+  footer: {
+    farewell: {
+      en: 'Made in Canada by humans like you.',
+      fr: 'Fabriqué au Canada par des humains comme vous.',
     },
   },
 };

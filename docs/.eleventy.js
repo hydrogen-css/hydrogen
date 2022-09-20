@@ -88,11 +88,10 @@ module.exports = function (eleventyConfig) {
   // Copy favicon to route of /_site
   eleventyConfig.addPassthroughCopy({ './src/static/img/favicons': './' });
 
-  // Let Eleventy transform HTML files as nunjucks so that we can use .html instead of .njk
   return {
     dir: {
       input: 'src',
+      templateFormats: ['11ty.js'],
     },
-    htmlTemplateEngine: 'njk',
   };
 };

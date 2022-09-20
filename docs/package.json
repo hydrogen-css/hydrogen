@@ -18,7 +18,7 @@
     "url": "https://gitlab.com/hydrogen-css/hydrogen"
   },
   "scripts": {
-    "start": "eleventy --serve --quiet",
+    "start": "eleventy --serve",
     "debug": "set DEBUG=* & eleventy",
     "build": "eleventy"
   },
