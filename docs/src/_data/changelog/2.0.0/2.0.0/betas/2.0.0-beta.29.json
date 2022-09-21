@@ -1,0 +1,40 @@
+{
+  "version": "2.0.0-beta.29",
+  "date": "2022/SEP/20",
+  "author": "Josh Beveridge",
+  "beta": true,
+  "en": {
+    "breaking": [],
+    "features": [],
+    "optimizations": [],
+    "bugfixes": [
+      {
+        "changes": [
+          "Fixes a bug where state modifiers applied to children rather than the element they were applied to."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": [
+          "Because children can targeted directly using complex selectors, all other modifiers should generally apply to the element containing the attribute."
+        ]
+      }
+    ]
+  },
+  "fr": {
+    "breaking": [],
+    "features": [],
+    "optimizations": [],
+    "bugfixes": [
+      {
+        "changes": [
+          "Correction d'un bogue où les modificateurs d'état s'appliquaient aux enfants plutôt qu'à l'élément auquel ils étaient appliqués."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": [
+          "Comme les enfants peuvent être ciblés directement à l'aide de sélecteurs complexes, tous les autres modificateurs doivent généralement s'appliquer à l'élément contenant l'attribut."
+        ]
+      }
+    ]
+  }
+}

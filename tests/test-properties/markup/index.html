@@ -190,7 +190,7 @@
           <h2 id="nested-targeting">Nested selector targeting tests</h2>
           <div
             data-h2-display="base(grid)"
-            data-h2-grid-template-columns="base(1fr 1fr 1fr)"
+            data-h2-grid-template-columns="base(1fr 1fr 1fr 1fr)"
             data-h2-gap="base(x1)"
             data-h2-font-size="base(10px)">
             <div data-h2-background-color="base:children[div](blue) base:children[div]:dark(cyan)" data-h2-padding="base:children[div](x1)" data-h2-width="base:children[div](100%)" data-h2-margin="base:children[div](0, 0, x.5, 0)">
@@ -212,7 +212,16 @@
               <div></div>
             </div>
             <div data-h2-background-color="base:children[.child_test](pink) base:children[.child_test]:hover(orange)" data-h2-padding="base:children[.child_test](x1)" data-h2-width="base:children[.child_test](100%)" data-h2-margin="base:children[.child_test](0, 0, x.5, 0)">
-              <p>All child .child_test should be pink and padded and change to orange on hover except for 1 which should be yellow and change to green on hover<br><br></p>
+              <p>All children should be pink, padded, and collectively change to orange on hover except for 1 which should be yellow and change to green on hover<br><br></p>
+              <div class="child_test"></div>
+              <div class="child_test"></div>
+              <div class="child_test"></div>
+              <div class="child_test"></div>
+              <div class="child_test" data-h2-background-color="base(yellow) base:hover(green)"></div>
+              <div class="child_test"></div>
+            </div>
+            <div data-h2-background-color="base:children[.child_test](pink) base:children[.child_test:hover](orange)" data-h2-padding="base:children[.child_test](x1)" data-h2-width="base:children[.child_test](100%)" data-h2-margin="base:children[.child_test](0, 0, x.5, 0)">
+              <p>All children should be pink, padded, and individually change to orange on hover except for 1 which should be yellow and change to green on hover<br><br></p>
               <div class="child_test"></div>
               <div class="child_test"></div>
               <div class="child_test"></div>
