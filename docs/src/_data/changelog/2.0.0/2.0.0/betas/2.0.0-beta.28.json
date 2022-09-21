@@ -1,0 +1,83 @@
+{
+  "version": "2.0.0-beta.28",
+  "date": "2022/SEP/11",
+  "author": "Josh Beveridge",
+  "beta": true,
+  "en": {
+    "breaking": [],
+    "features": [
+      {
+        "changes": [
+          "The documentation website has been migrated into this repository so that the entire application is centralized."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Adds support for the fill property."
+        ],
+        "migrations": [],
+        "attributes": [
+          "fill"
+        ],
+        "log": []
+      },
+      {
+        "changes": [
+          "Adds a new font size for display style type that is calculated at a level above H1 in the type scale."
+        ],
+        "migrations": [],
+        "attributes": [
+          "font-size"
+        ],
+        "log": []
+      }
+    ],
+    "optimizations": [
+      {
+        "changes": [
+          "The setup script has been reworked to include the documentation environment."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Logs passed to the console have been centralized and reworked for more flexibility."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      }
+    ],
+    "bugfixes": [
+      {
+        "changes": [
+          "Hydrogen now executes based on the location of the configuration, rather than where you've run its command."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Fixes a bug with transform where decimals in multipliers weren't processed properly."
+        ],
+        "migrations": [],
+        "attributes": [
+          "transform"
+        ],
+        "log": []
+      }
+    ]
+  },
+  "fr": {
+    "breaking": [],
+    "features": [],
+    "optimizations": [],
+    "bugfixes": []
+  }
+}

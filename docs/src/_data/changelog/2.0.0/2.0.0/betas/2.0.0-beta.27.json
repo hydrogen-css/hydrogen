@@ -1,0 +1,498 @@
+{
+  "version": "2.0.0-beta.27",
+  "date": "2022/SEP/08",
+  "author": "Josh Beveridge",
+  "beta": true,
+  "en": {
+    "breaking": [
+      {
+        "changes": [
+          "Overhauls the configuration data model for better categorization and to increase ease of validation for optional items.",
+          "Adds new configuration options inside of the new build object.",
+          "base_query_key allows you to optionally set a custom key for the base media query, which has been removed from the media configuration.",
+          "validation allows you to enable/disable the new CSS validation feature.",
+          "minification allows you to enable/disable CSSnano.",
+          "prefixing allows you to enable/disable Autoprefixer.",
+          "quiet allows you to enable/disable timer output in the console."
+        ],
+        "migrations": [
+          "debug is now logs, nested inside the build object.",
+          "variables is now var_export, nested inside the build object.",
+          "Both reset-styles and dark_mode are now nested inside the build object.",
+          "colors, containers, fonts, gradients, radii (from radius), shadows, and transitions are now nested inside a tokens object, which itself is nested inside a styles object.",
+          "Both media and typography are now found inside a foundations object, which is found inside the styles object."
+        ],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Reworks gap so that it better aligns with other syntax choices around columns/rows/axes. Passing 1 option now sets a gap value on both, while 2 options applies to column and row respectively."
+        ],
+        "migrations": [
+          "Find instances of gap in your code and review the axes chosen, and replace the second value with a space unit where necessary.",
+          "For example: data-h2-gap='base(x3, both)' => data-h2-gap='base(x3)'",
+          "Another example: data-h2-gap='base(x2, row)' => data-h2-gap='base(0, x2)'"
+        ],
+        "attributes": [
+          "gap"
+        ],
+        "log": []
+      },
+      {
+        "changes": [
+          "Reworks overflow so that it better aligns with other syntax choices around columns/rows/axes. Passing 1 option now sets an overflow value on both axes, while 2 options applies to x and y respectively."
+        ],
+        "migrations": [
+          "Find instances of overflow in your code and review the axes chosen, and replace the second value with an overflow value where necessary.",
+          "For example: data-h2-overflow='base(hidden, y)' => data-h2-overflow='base(visible, hidden)'",
+          "Another example: data-h2-overflow='base(hidden, both)' => data-h2-overflow='base(hidden)'"
+        ],
+        "attributes": [
+          "overflow"
+        ],
+        "log": []
+      },
+      {
+        "changes": [
+          "Simplifies the flex-grid syntax even further to accept 2 (alignment, gutter) or 3 (alignment, column_gutter, row_gutter) values."
+        ],
+        "migrations": [
+          "Find instances of flex-grid in your code and remove the second option entirely.",
+          "For example: data-h2-flex-grid='base(center, x2, x3)' => data-h2-flex-grid='base(center, x3)'",
+          "Another example: data-h2-flex-grid='base(center, x2, 40px, 20px)' => data-h2-flex-grid='base(center, 40px, 20px)'"
+        ],
+        "attributes": [
+          "flex-grid"
+        ],
+        "log": [
+          "The flex-grid is now a deprecated back-up for browser support purposes. CSS grid is fully supported in 2.0.0, and flexbox was never meant to be a grid replacement. It has small implementation bugs regardless of the approach taken to generate a grid, so it's been simplified for ease-of-use.",
+          "Because flexbox's support of gap is implemented differently than grid, the flex-grid relies on a negative margin hack to allow for gap/gutter support. This approach has its downsides though, specifically that applying backgrounds, padding, or borders directly to the grid element doesn't behave as expected and that the negative margin overlaps previous elements if it's large.",
+          "These changes were implemented as the result of a bug with the current implementation relying on inline-flex over flex as the default grid display value. This gave the grid extra height if the grid items were smaller than the default line height of the tag used.",
+          "It's now recommended that applying styles to a grid be done on a wrapper element instead, which avoids a significant number of implementation bugs. Thus, grid-padding has been removed as an option from the flex-grid attribute."
+        ]
+      }
+    ],
+    "features": [
+      {
+        "changes": [
+          "Adds support for CSS validation during CSS construction. This allows Hydrogen to warn you against invalid CSS before it gets processed, preventing errors and providing opportunities to fix otherwise hidden problems."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Updates the development setup script and adds new refresh and testing scripts."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Adds support for unique command flags that provide command line level control over certain build settings.",
+          "--config='' allows you to pass a directory containing a hydrogen.config.json file.",
+          "--quiet, --quiet=false allows you to enable/disable timer output in the console.",
+          "--validate, --validate==false allows you to enable/disable CSS validation.",
+          "--prefix, --prefix=false allows you to enable/disable Autoprefixer.",
+          "--logs, --logs=false allows you to enable/disable Hydrogen's log output.",
+          "--minify, --minify=false allows you to enable/disable CSSnano."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Adds support for the transform property, including parsing of whitespace multipliers contained within the CSS declaration."
+        ],
+        "migrations": [],
+        "attributes": [
+          "transform"
+        ],
+        "log": [
+          "Transform is the first property that checks a CSS value for Hydrogen specific syntax and replaces it on the fly with the correct values."
+        ]
+      },
+      {
+        "changes": [
+          "Adds support for the line-height property, along with its alias, leading."
+        ],
+        "migrations": [],
+        "attributes": [
+          "line-height"
+        ],
+        "log": []
+      },
+      {
+        "changes": [
+          "Adds support for a new fraction-based column syntax for flex-item elements inside of a flex-grid.",
+          "The new syntax looks like this: data-h2-flex-item='base(1/2)'"
+        ],
+        "migrations": [],
+        "attributes": [
+          "flex-item"
+        ],
+        "log": []
+      }
+    ],
+    "optimizations": [
+      {
+        "changes": [
+          "Completely rewrites the query parsing script for cleaner and more reliable output, particularly when it comes to complex brackets nested inside of modifiers.",
+          "This also removed the parser's dependency on spaces as a delimiter for queries."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": [
+          "There's a complex parentheses bug where the parser will error out if there are is a non-equal number of opening and closing parentheses, but when the parentheses do in fact line up, the system doesn't have a way of identifying the problem.",
+          "CSS validation was a way of catching this bug before assembly."
+        ]
+      },
+      {
+        "changes": [
+          "Adds 'z-index' as an alias for 'layer'."
+        ],
+        "migrations": [],
+        "attributes": [
+          "layer"
+        ],
+        "log": []
+      },
+      {
+        "changes": [
+          "Error reporting has been reworked to provide clearer headings and more detailed information, including things like invalid settings and the build step in which the error occurred."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Completely overhauls settings validation and validation output."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Completely overhauls internal testing and provides a more robust testing framework for catching bugs faster and more consistently."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Overhauls the property data model to be more concise and easier to manipulate."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Consolidated scripting for basic and size-only properties to make bugs less likely and code easier to maintain."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      }
+    ],
+    "bugfixes": [
+      {
+        "changes": [
+          "Fixes a bug where CSS colors using a . character were inadvertently resulting in an error."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Fixes a bug where queries that weren't separated by a space were parsed as a single query, resulting in an error."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Fixes a bug where non-unit values passed to the container attribute would result in a string inside of a calc function."
+        ],
+        "migrations": [],
+        "attributes": [
+          "container"
+        ],
+        "log": []
+      },
+      {
+        "changes": [
+          "Fixes a bug where visibility was setting overflow to auto rather than visible, causing unexpected scroll bars."
+        ],
+        "migrations": [],
+        "attributes": [
+          "visibility"
+        ],
+        "log": []
+      },
+      {
+        "changes": [
+          "Fixes incorrect timer reporting for the PostCSS processing step (prefixing and minification)."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      }
+    ]
+  },
+  "fr": {
+    "breaking": [
+      {
+        "changes": [
+          "Refonte du modèle de données de configuration pour une meilleure catégorisation et une plus grande facilité de validation des éléments optionnels.",
+          "Ajoute de nouvelles options de configuration à l'intérieur du nouvel objet de build.",
+          "base_query_key vous permet de définir de manière facultative une clé personnalisée pour la requête média de base, qui a été supprimée de la configuration des médias.",
+          "validation vous permet d'activer/désactiver la nouvelle fonction de validation CSS.",
+          "minification vous permet d'activer/désactiver CSSnano.",
+          "prefixing vous permet d'activer/désactiver le Autoprefixer.",
+          "quiet vous permet d'activer/désactiver la sortie du timer dans la console."
+        ],
+        "migrations": [
+          "debug est maintenant logs, imbriqué dans l'objet build.",
+          "variables est maintenant var_export, imbriqué dans l'objet build.",
+          "reset_styles et dark_mode sont maintenant imbriqués dans l'objet de construction.",
+          "colors, containers, fonts, gradients, radii (à partir de radius), shadows et transitions sont maintenant imbriqués dans un objet tokens, qui lui-même est imbriqué dans un objet styles.",
+          "media et typography se trouvent désormais tous deux dans un objet foundations, qui se trouve dans l'objet styles."
+        ],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Remaniement gap pour qu'il s'aligne mieux avec les autres choix syntaxiques autour des colonnes/lignes/axes. Passer l'option 1 définit maintenant une valeur d'écart sur les deux, tandis que les options 2 s'appliquent respectivement à la colonne et à la ligne."
+        ],
+        "migrations": [
+          "Trouvez des exemples de gap dans votre code et revoyez les axes choisis, et remplacez la deuxième valeur par une unité d'espacement si nécessaire.",
+          "Par exemple : data-h2-gap='base(x3, both)' => data-h2-gap='base(x3)'",
+          "Un autre exemple : data-h2-gap='base(x2, row)' => data-h2-gap='base(0, x2)'"
+        ],
+        "attributes": [
+          "gap"
+        ],
+        "log": []
+      },
+      {
+        "changes": [
+          "Remaniement de l'overflow pour qu'il s'aligne mieux avec les autres choix syntaxiques autour des colonnes/lignes/axes. Passer l'option 1 définit maintenant une valeur de débordement sur les deux axes, tandis que les options 2 s'appliquent respectivement à x et y."
+        ],
+        "migrations": [
+          "Trouvez les cas de dépassement dans votre code et revoyez les axes choisis, et remplacez la deuxième valeur par une valeur de dépassement si nécessaire.",
+          "Par exemple : data-h2-overflow='base(hidden, y)' => data-h2-overflow='base(visible, hidden)'",
+          "Un autre exemple : data-h2-overflow='base(hidden, both)' => data-h2-overflow='base(hidden)'"
+        ],
+        "attributes": [
+          "overflow"
+        ],
+        "log": []
+      },
+      {
+        "changes": [
+          "Simplifie encore davantage la syntaxe de flex-grid en acceptant des valeurs de 2 (alignment, guttere) ou 3 (alignment, column_gutter, row_gutter)."
+        ],
+        "migrations": [
+          "Trouvez les instances de flex-grid dans votre code et supprimez entièrement la deuxième option.",
+          "Par exemple : data-h2-flex-grid='base(center, x2, x3)' => data-h2-flex-grid='base(center, x3)'",
+          "Un autre exemple : data-h2-flex-grid='base(center, x2, 40px, 20px)' => data-h2-flex-grid='base(center, 40px, 20px)'"
+        ],
+        "attributes": [
+          "flex-grid"
+        ],
+        "log": [
+          "La grille flexbox est désormais une solution de secours dépréciée à des fins de prise en charge par les navigateurs. La grille CSS est entièrement prise en charge dans la version 2.0.0, et flexbox n'a jamais été conçu pour remplacer la grille. Elle présente de petits bogues de mise en œuvre, quelle que soit l'approche adoptée pour générer une grille, et a donc été simplifiée pour en faciliter l'utilisation.",
+          "Étant donné que la prise en charge de l'espacement par flexbox est mise en œuvre différemment de celle de la grille, la grille flex s'appuie sur une marge négative pour permettre la prise en charge de l'espacement et de la gouttière. Cette approche présente toutefois des inconvénients, notamment le fait que l'application d'arrière-plans, de rembourrages ou de bordures directement à l'élément de la grille ne se comporte pas comme prévu et que la marge négative chevauche les éléments précédents si elle est importante.",
+          "Ces modifications ont été mises en œuvre à la suite d'un bogue dans l'implémentation actuelle qui utilisait inline-flex au lieu de flex comme valeur d'affichage de la grille par défaut. Cela donnait à la grille une hauteur supplémentaire si les éléments de la grille étaient plus petits que la hauteur de ligne par défaut de la balise utilisée.",
+          "Il est désormais recommandé d'appliquer des styles à une grille sur un élément d'habillage, ce qui permet d'éviter un grand nombre de bogues de mise en œuvre. Ainsi, le grid-padding a été supprimé en tant qu'option de l'attribut flex-grid."
+        ]
+      }
+    ],
+    "features": [
+      {
+        "changes": [
+          "Ajoute la prise en charge de la validation CSS pendant la construction du CSS. Hydrogen peut ainsi vous avertir des CSS non valides avant qu'ils ne soient traités, ce qui permet d'éviter les erreurs et de corriger des problèmes autrement cachés."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Mise à jour du script de configuration du développement et ajout de nouveaux scripts de rafraîchissement et de test."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Ajout de la prise en charge de drapeaux de commande uniques qui permettent de contrôler certains paramètres de construction au niveau de la ligne de commande.",
+          "--config='' vous permet de transmettre un répertoire contenant un fichier hydrogen.config.json.",
+          "--quiet, --quiet=false permet d'activer/désactiver la sortie du timer dans la console.",
+          "--validate, --validate==false vous permet d'activer/désactiver la validation CSS.",
+          "--prefix, --prefix=false permet d'activer/désactiver l'Autoprefixer.",
+          "--logs, --logs=false vous permet d'activer/désactiver la sortie des journaux d'Hydrogen.",
+          "--minify, --minify=false vous permet d'activer/désactiver CSSnano."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Ajoute la prise en charge de la propriété transform, y compris l'analyse des multiplicateurs d'espacement contenus dans la déclaration CSS."
+        ],
+        "migrations": [],
+        "attributes": [
+          "transform"
+        ],
+        "log": [
+          "Transform est la première propriété qui vérifie une valeur CSS pour la syntaxe spécifique à Hydrogen et la remplace à la volée par les valeurs correctes."
+        ]
+      },
+      {
+        "changes": [
+          "Ajoute la prise en charge de la propriété line-height, ainsi que de son alias, leading."
+        ],
+        "migrations": [],
+        "attributes": [
+          "line-height"
+        ],
+        "log": []
+      },
+      {
+        "changes": [
+          "Ajout de la prise en charge d'une nouvelle syntaxe de colonne basée sur les fractions pour les éléments flex-item à l'intérieur d'un flex-grid.",
+          "La nouvelle syntaxe ressemble à ceci : data-h2-flex-item='base(1/2)'."
+        ],
+        "migrations": [],
+        "attributes": [
+          "flex-item"
+        ],
+        "log": []
+      }
+    ],
+    "optimizations": [
+      {
+        "changes": [
+          "Réécriture complète du script d'analyse des requêtes pour une sortie plus propre et plus fiable, en particulier lorsqu'il s'agit de parenthèses complexes imbriquées dans des modificateurs.",
+          "Cela a également supprimé la dépendance de l'analyseur syntaxique vis-à-vis des espaces comme délimiteur des requêtes."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": [
+          "Il existe un bogue complexe concernant les parenthèses : l'analyseur syntaxique se trompe si le nombre de parenthèses ouvrantes et fermantes n'est pas égal, mais lorsque les parenthèses sont effectivement alignées, le système n'a aucun moyen d'identifier le problème.",
+          "La validation CSS était un moyen d'attraper ce bogue avant l'assemblage."
+        ]
+      },
+      {
+        "changes": [
+          "Ajoute 'z-index' comme alias pour 'layer'."
+        ],
+        "migrations": [],
+        "attributes": [
+          "layer"
+        ],
+        "log": []
+      },
+      {
+        "changes": [
+          "Les rapports d'erreur ont été retravaillés pour fournir des titres plus clairs et des informations plus détaillées, y compris des éléments tels que les paramètres invalides et l'étape de construction au cours de laquelle l'erreur s'est produite."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Refonte complète de la validation des paramètres et de la sortie de validation."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Refonte complète des tests internes et fourniture d'un cadre de test plus robuste permettant de détecter les bogues plus rapidement et de manière plus cohérente."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Refonte du modèle de données des propriétés pour le rendre plus concis et plus facile à manipuler."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Consolidation des scripts pour les propriétés de base et de taille uniquement afin de réduire les risques de bogues et de faciliter la maintenance du code."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      }
+    ],
+    "bugfixes": [
+      {
+        "changes": [
+          "Corrige un bogue pour lequel les couleurs CSS utilisant un caractère . entraînaient par inadvertance une erreur."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Correction d'un bogue où les requêtes qui n'étaient pas séparées par un espace étaient analysées comme une seule requête, ce qui entraînait une erreur."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Correction d'un bogue pour lequel des valeurs non unitaires passées à l'attribut conteneur pouvaient donner lieu à une chaîne de caractères à l'intérieur d'une fonction de calcul."
+        ],
+        "migrations": [],
+        "attributes": [
+          "container"
+        ],
+        "log": []
+      },
+      {
+        "changes": [
+          "Correction d'un bogue où la visibilité réglait le débordement sur auto plutôt que sur visible, provoquant des barres de défilement inattendues."
+        ],
+        "migrations": [],
+        "attributes": [
+          "visibility"
+        ],
+        "log": []
+      },
+      {
+        "changes": [
+          "Correction d'un rapport de temporisation incorrect pour l'étape de traitement PostCSS (préfixation et minification)."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      }
+    ]
+  }
+}

@@ -1,7 +1,11 @@
 {
   "properties": {
     "align-content": {
-      "title": "Align content",
+      "title": {
+        "en": "Align content",
+        "fr": ""
+      },
+      "group": "flexbox",
       "property_keys": {
         "align-content": {}
       },
@@ -25,7 +29,11 @@
       "incompatibilities": []
     },
     "align-items": {
-      "title": "Align items",
+      "title": {
+        "en": "Align items",
+        "fr": ""
+      },
+      "group": "flexbox",
       "property_keys": {
         "align-items": {}
       },
@@ -49,7 +57,11 @@
       "incompatibilities": []
     },
     "align-self": {
-      "title": "Align self",
+      "title": {
+        "en": "Align self",
+        "fr": ""
+      },
+      "group": "flexbox",
       "property_keys": {
         "align-self": {}
       },
@@ -73,7 +85,11 @@
       "incompatibilities": []
     },
     "background-color": {
-      "title": "Background color",
+      "title": {
+        "en": "Background color",
+        "fr": ""
+      },
+      "group": "basic",
       "property_keys": {
         "background-color": {},
         "bg-color": {}
@@ -100,7 +116,11 @@
       "incompatibilities": []
     },
     "border": {
-      "title": "Border",
+      "title": {
+        "en": "Border",
+        "fr": ""
+      },
+      "group": "basic",
       "property_keys": {
         "border": {}
       },
@@ -208,7 +228,11 @@
       "incompatibilities": []
     },
     "color": {
-      "title": "Font color",
+      "title": {
+        "en": "Color",
+        "fr": ""
+      },
+      "group": "font",
       "property_keys": {
         "color": {},
         "font-color": {}
@@ -235,7 +259,11 @@
       "incompatibilities": []
     },
     "container": {
-      "title": "Container",
+      "title": {
+        "en": "Container",
+        "fr": ""
+      },
+      "group": "space",
       "property_keys": {
         "container": {}
       },
@@ -287,7 +315,11 @@
       ]
     },
     "cursor": {
-      "title": "Cursor",
+      "title": {
+        "en": "Cursor",
+        "fr": ""
+      },
+      "group": "basic",
       "property_keys": {
         "cursor": {}
       },
@@ -311,7 +343,11 @@
       "incompatibilities": []
     },
     "display": {
-      "title": "Display",
+      "title": {
+        "en": "Display",
+        "fr": ""
+      },
+      "group": "basic",
       "property_keys": {
         "display": {}
       },
@@ -334,8 +370,41 @@
       },
       "incompatibilities": []
     },
+    "fill": {
+      "title": {
+        "en": "Fill",
+        "fr": ""
+      },
+      "group": "basic",
+      "property_keys": {
+        "fill": {}
+      },
+      "syntax": {
+        "data-h2-fill=\"query:modifiers(color)\"": {
+          "default": true,
+          "options": {
+            "color": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "configured color key",
+                "CSS color"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
     "flex-basis": {
-      "title": "Flex basis",
+      "title": {
+        "en": "Flex basis",
+        "fr": ""
+      },
+      "group": "flexbox",
       "property_keys": {
         "flex-basis": {}
       },
@@ -359,7 +428,11 @@
       "incompatibilities": []
     },
     "flex-direction": {
-      "title": "Flex direction",
+      "title": {
+        "en": "Flex direction",
+        "fr": ""
+      },
+      "group": "flexbox",
       "property_keys": {
         "flex-direction": {}
       },
@@ -383,7 +456,11 @@
       "incompatibilities": []
     },
     "flex-grid": {
-      "title": "Flex grid",
+      "title": {
+        "en": "Flex grid",
+        "fr": ""
+      },
+      "group": "flexbox",
       "property_keys": {
         "flex-grid": {}
       },
@@ -455,7 +532,11 @@
       "incompatibilities": []
     },
     "flex-grow": {
-      "title": "Flex grow",
+      "title": {
+        "en": "Flex grow",
+        "fr": ""
+      },
+      "group": "flexbox",
       "property_keys": {
         "flex-grow": {}
       },
@@ -479,7 +560,11 @@
       "incompatibilities": []
     },
     "flex-item": {
-      "title": "Flex item",
+      "title": {
+        "en": "Flex item",
+        "fr": ""
+      },
+      "group": "flexbox",
       "property_keys": {
         "flex-item": {}
       },
@@ -507,7 +592,11 @@
       "incompatibilities": []
     },
     "flex-wrap": {
-      "title": "Flex wrap",
+      "title": {
+        "en": "Flex wrap",
+        "fr": ""
+      },
+      "group": "flexbox",
       "property_keys": {
         "flex-wrap": {}
       },
@@ -531,7 +620,11 @@
       "incompatibilities": []
     },
     "font-family": {
-      "title": "Font family",
+      "title": {
+        "en": "Font family",
+        "fr": ""
+      },
+      "group": "font",
       "property_keys": {
         "font-family": {}
       },
@@ -555,7 +648,11 @@
       "incompatibilities": []
     },
     "font-size": {
-      "title": "Font size",
+      "title": {
+        "en": "Font size",
+        "fr": ""
+      },
+      "group": "font",
       "property_keys": {
         "font-size": {}
       },
@@ -598,7 +695,11 @@
       "incompatibilities": []
     },
     "font-style": {
-      "title": "Font style",
+      "title": {
+        "en": "Font style",
+        "fr": ""
+      },
+      "group": "font",
       "property_keys": {
         "font-style": {}
       },
@@ -622,7 +723,11 @@
       "incompatibilities": []
     },
     "font-weight": {
-      "title": "Font weight",
+      "title": {
+        "en": "Font weight",
+        "fr": ""
+      },
+      "group": "font",
       "property_keys": {
         "font-weight": {}
       },
@@ -646,7 +751,11 @@
       "incompatibilities": []
     },
     "gap": {
-      "title": "Gap",
+      "title": {
+        "en": "Gap",
+        "fr": ""
+      },
+      "group": "grid",
       "property_keys": {
         "gap": {}
       },
@@ -698,7 +807,11 @@
       "incompatibilities": []
     },
     "grid-column": {
-      "title": "Grid column",
+      "title": {
+        "en": "Grid column",
+        "fr": ""
+      },
+      "group": "grid",
       "property_keys": {
         "grid-column": {}
       },
@@ -722,7 +835,11 @@
       "incompatibilities": []
     },
     "grid-row": {
-      "title": "Grid row",
+      "title": {
+        "en": "Grid row",
+        "fr": ""
+      },
+      "group": "grid",
       "property_keys": {
         "grid-row": {}
       },
@@ -746,7 +863,11 @@
       "incompatibilities": []
     },
     "grid-template-columns": {
-      "title": "Grid template columns",
+      "title": {
+        "en": "Grid template columns",
+        "fr": ""
+      },
+      "group": "grid",
       "property_keys": {
         "grid-template-columns": {}
       },
@@ -770,7 +891,11 @@
       "incompatibilities": []
     },
     "grid-template-rows": {
-      "title": "Grid template rows",
+      "title": {
+        "en": "Grid template rows",
+        "fr": ""
+      },
+      "group": "grid",
       "property_keys": {
         "grid-template-rows": {}
       },
@@ -794,7 +919,11 @@
       "incompatibilities": []
     },
     "height": {
-      "title": "Height",
+      "title": {
+        "en": "Height",
+        "fr": ""
+      },
+      "group": "space",
       "property_keys": {
         "height": {}
       },
@@ -819,7 +948,11 @@
       "incompatibilities": []
     },
     "justify-content": {
-      "title": "Justify content",
+      "title": {
+        "en": "Justify content",
+        "fr": ""
+      },
+      "group": "flexbox",
       "property_keys": {
         "justify-content": {}
       },
@@ -843,7 +976,11 @@
       "incompatibilities": []
     },
     "justify-items": {
-      "title": "Justify items",
+      "title": {
+        "en": "Justify items",
+        "fr": ""
+      },
+      "group": "flexbox",
       "property_keys": {
         "justify-items": {}
       },
@@ -867,7 +1004,11 @@
       "incompatibilities": []
     },
     "layer": {
-      "title": "Layer",
+      "title": {
+        "en": "Layer",
+        "fr": ""
+      },
+      "group": "space",
       "property_keys": {
         "layer": {},
         "z-index": {}
@@ -902,7 +1043,11 @@
       "incompatibilities": []
     },
     "line-height": {
-      "title": "Line height",
+      "title": {
+        "en": "Line height",
+        "fr": ""
+      },
+      "group": "font",
       "property_keys": {
         "line-height": [],
         "leading": []
@@ -929,7 +1074,11 @@
       "incompatibilities": []
     },
     "list-style": {
-      "title": "List style",
+      "title": {
+        "en": "List style",
+        "fr": ""
+      },
+      "group": "font",
       "property_keys": {
         "list-style": {}
       },
@@ -953,7 +1102,11 @@
       "incompatibilities": []
     },
     "margin": {
-      "title": "Margin",
+      "title": {
+        "en": "Margin",
+        "fr": ""
+      },
+      "group": "space",
       "property_keys": {
         "margin": {}
       },
@@ -1056,7 +1209,11 @@
       ]
     },
     "margin-top": {
-      "title": "Margin top",
+      "title": {
+        "en": "Margin top",
+        "fr": ""
+      },
+      "group": "space",
       "property_keys": {
         "margin-top": {}
       },
@@ -1081,7 +1238,11 @@
       "incompatibilities": []
     },
     "margin-right": {
-      "title": "Margin right",
+      "title": {
+        "en": "Margin right",
+        "fr": ""
+      },
+      "group": "space",
       "property_keys": {
         "margin-right": {}
       },
@@ -1106,7 +1267,11 @@
       "incompatibilities": []
     },
     "margin-bottom": {
-      "title": "Margin bottom",
+      "title": {
+        "en": "Margin bottom",
+        "fr": ""
+      },
+      "group": "space",
       "property_keys": {
         "margin-bottom": {}
       },
@@ -1131,7 +1296,11 @@
       "incompatibilities": []
     },
     "margin-left": {
-      "title": "Margin left",
+      "title": {
+        "en": "Margin left",
+        "fr": ""
+      },
+      "group": "space",
       "property_keys": {
         "margin-left": {}
       },
@@ -1156,7 +1325,11 @@
       "incompatibilities": []
     },
     "max-height": {
-      "title": "Maximum height",
+      "title": {
+        "en": "Maximum height",
+        "fr": ""
+      },
+      "group": "space",
       "property_keys": {
         "max-height": {}
       },
@@ -1181,7 +1354,11 @@
       "incompatibilities": []
     },
     "max-width": {
-      "title": "Maximum width",
+      "title": {
+        "en": "Maximum width",
+        "fr": ""
+      },
+      "group": "space",
       "property_keys": {
         "max-width": {}
       },
@@ -1206,7 +1383,11 @@
       "incompatibilities": []
     },
     "min-height": {
-      "title": "Minimum height",
+      "title": {
+        "en": "Minimum height",
+        "fr": ""
+      },
+      "group": "space",
       "property_keys": {
         "min-height": {}
       },
@@ -1231,7 +1412,11 @@
       "incompatibilities": []
     },
     "min-width": {
-      "title": "Minimum width",
+      "title": {
+        "en": "Minimum width",
+        "fr": ""
+      },
+      "group": "space",
       "property_keys": {
         "min-width": {}
       },
@@ -1256,7 +1441,11 @@
       "incompatibilities": []
     },
     "offset": {
-      "title": "Offset",
+      "title": {
+        "en": "Offset",
+        "fr": ""
+      },
+      "group": "space",
       "property_keys": {
         "offset": {},
         "location": {}
@@ -1358,7 +1547,11 @@
       "incompatibilities": []
     },
     "opacity": {
-      "title": "Opacity",
+      "title": {
+        "en": "Opacity",
+        "fr": ""
+      },
+      "group": "basic",
       "property_keys": {
         "opacity": {}
       },
@@ -1382,7 +1575,11 @@
       "incompatibilities": []
     },
     "order": {
-      "title": "Order",
+      "title": {
+        "en": "Order",
+        "fr": ""
+      },
+      "group": "grid",
       "property_keys": {
         "order": {}
       },
@@ -1406,7 +1603,11 @@
       "incompatibilities": []
     },
     "outline": {
-      "title": "Outline",
+      "title": {
+        "en": "Outline",
+        "fr": ""
+      },
+      "group": "basic",
       "property_keys": {
         "outline": {}
       },
@@ -1430,7 +1631,11 @@
       "incompatibilities": []
     },
     "overflow": {
-      "title": "Overflow",
+      "title": {
+        "en": "Overflow",
+        "fr": ""
+      },
+      "group": "space",
       "property_keys": {
         "overflow": {}
       },
@@ -1479,7 +1684,11 @@
       "incompatibilities": []
     },
     "overlay": {
-      "title": "Overlay",
+      "title": {
+        "en": "Overlay",
+        "fr": ""
+      },
+      "group": "basic",
       "property_keys": {
         "overlay": {}
       },
@@ -1515,7 +1724,11 @@
       "incompatibilities": []
     },
     "padding": {
-      "title": "Padding",
+      "title": {
+        "en": "Padding",
+        "fr": ""
+      },
+      "group": "space",
       "property_keys": {
         "padding": {}
       },
@@ -1618,7 +1831,11 @@
       ]
     },
     "padding-top": {
-      "title": "Padding top",
+      "title": {
+        "en": "Padding top",
+        "fr": ""
+      },
+      "group": "space",
       "property_keys": {
         "padding-top": {}
       },
@@ -1643,7 +1860,11 @@
       "incompatibilities": []
     },
     "padding-right": {
-      "title": "Padding right",
+      "title": {
+        "en": "Padding right",
+        "fr": ""
+      },
+      "group": "space",
       "property_keys": {
         "padding-right": {}
       },
@@ -1668,7 +1889,11 @@
       "incompatibilities": []
     },
     "padding-bottom": {
-      "title": "Padding bottom",
+      "title": {
+        "en": "Padding bottom",
+        "fr": ""
+      },
+      "group": "space",
       "property_keys": {
         "padding-bottom": {}
       },
@@ -1693,7 +1918,11 @@
       "incompatibilities": []
     },
     "padding-left": {
-      "title": "Padding left",
+      "title": {
+        "en": "Padding left",
+        "fr": ""
+      },
+      "group": "space",
       "property_keys": {
         "padding-left": {}
       },
@@ -1718,7 +1947,11 @@
       "incompatibilities": []
     },
     "position": {
-      "title": "Position",
+      "title": {
+        "en": "Position",
+        "fr": ""
+      },
+      "group": "space",
       "property_keys": {
         "position": {}
       },
@@ -1743,7 +1976,11 @@
       "incompatibilities": []
     },
     "radius": {
-      "title": "Radius",
+      "title": {
+        "en": "Radius",
+        "fr": ""
+      },
+      "group": "basic",
       "property_keys": {
         "radius": {}
       },
@@ -1882,7 +2119,11 @@
       "incompatibilities": []
     },
     "shadow": {
-      "title": "Shadow",
+      "title": {
+        "en": "Shadow",
+        "fr": ""
+      },
+      "group": "basic",
       "property_keys": {
         "shadow": {}
       },
@@ -1907,7 +2148,11 @@
       "incompatibilities": []
     },
     "text-align": {
-      "title": "Text align",
+      "title": {
+        "en": "Text align",
+        "fr": ""
+      },
+      "group": "font",
       "property_keys": {
         "text-align": {}
       },
@@ -1931,7 +2176,11 @@
       "incompatibilities": []
     },
     "text-decoration": {
-      "title": "Text decoration",
+      "title": {
+        "en": "Text decoration",
+        "fr": ""
+      },
+      "group": "font",
       "property_keys": {
         "text-decoration": {}
       },
@@ -1955,7 +2204,11 @@
       "incompatibilities": []
     },
     "text-transform": {
-      "title": "Text transform",
+      "title": {
+        "en": "Text transform",
+        "fr": ""
+      },
+      "group": "font",
       "property_keys": {
         "text-transform": {}
       },
@@ -1979,7 +2232,11 @@
       "incompatibilities": []
     },
     "transform": {
-      "title": "Transform",
+      "title": {
+        "en": "Transform",
+        "fr": ""
+      },
+      "group": "space",
       "property_keys": {
         "transform": {}
       },
@@ -2004,7 +2261,11 @@
       "incompatibilities": []
     },
     "transition": {
-      "title": "Transition",
+      "title": {
+        "en": "Transition",
+        "fr": ""
+      },
+      "group": "basic",
       "property_keys": {
         "transition": {}
       },
@@ -2061,7 +2322,11 @@
       "incompatibilities": []
     },
     "vertical-align": {
-      "title": "Vertical align",
+      "title": {
+        "en": "Vertical align",
+        "fr": ""
+      },
+      "group": "space",
       "property_keys": {
         "vertical-align": {}
       },
@@ -2085,7 +2350,11 @@
       "incompatibilities": []
     },
     "visibility": {
-      "title": "Visibility",
+      "title": {
+        "en": "Visibility",
+        "fr": ""
+      },
+      "group": "basic",
       "property_keys": {
         "visibility": {}
       },
@@ -2111,7 +2380,11 @@
       "incompatibilities": []
     },
     "width": {
-      "title": "Width",
+      "title": {
+        "en": "Width",
+        "fr": ""
+      },
+      "group": "space",
       "property_keys": {
         "width": {}
       },

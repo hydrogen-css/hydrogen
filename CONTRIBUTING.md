@@ -9,6 +9,7 @@
   - [CSS properties and implementation](#css-properties-and-implementation)
     - [How to add basic CSS properties](#how-to-add-basic-css-properties)
     - [How to add complex CSS properties](#how-to-add-complex-css-properties)
+  - [Updating the documentation](#updating-the-documentation)
   - [Writing tests](#writing-tests)
 
 ## 🔗 Helpful links
@@ -73,6 +74,8 @@ Hydrogen takes the following steps to build its CSS file:
 #### How to add basic CSS properties
 
 #### How to add complex CSS properties
+
+### Updating the documentation
 
 ### Writing tests
 
