@@ -1,6 +1,6 @@
 {
   "version": "2.0.0-beta.28",
-  "date": "2022/SEP/11",
+  "date": "2022/SEP/20",
   "author": "Josh Beveridge",
   "beta": true,
   "en": {
@@ -76,8 +76,73 @@
   },
   "fr": {
     "breaking": [],
-    "features": [],
-    "optimizations": [],
-    "bugfixes": []
+    "features": [
+      {
+        "changes": [
+          "Le site web de documentation a été migré dans ce dépôt afin que l'ensemble de l'application soit centralisé."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Ajoute la prise en charge de la propriété fill."
+        ],
+        "migrations": [],
+        "attributes": [
+          "fill"
+        ],
+        "log": []
+      },
+      {
+        "changes": [
+          "Ajoute une nouvelle taille de police pour le type de style de display qui est calculé à un niveau supérieur à H1 dans l'échelle des types."
+        ],
+        "migrations": [],
+        "attributes": [
+          "font-size"
+        ],
+        "log": []
+      }
+    ],
+    "optimizations": [
+      {
+        "changes": [
+          "Le script d'installation a été retravaillé pour inclure l'environnement de documentation."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Les logs transmis à la console ont été centralisés et retravaillés pour plus de flexibilité."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      }
+    ],
+    "bugfixes": [
+      {
+        "changes": [
+          "Hydrogen s'exécute désormais en fonction de l'emplacement de la configuration, plutôt que de l'endroit où vous avez exécuté sa commande."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Correction d'un bogue avec la transformation où les décimales dans les multiplicateurs n'étaient pas traitées correctement."
+        ],
+        "migrations": [],
+        "attributes": [
+          "transform"
+        ],
+        "log": []
+      }
+    ]
   }
 }
