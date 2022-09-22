@@ -10,9 +10,7 @@ function render(data) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- SEO meta -->
-        <title>${data.title} / ${data.site.name}: ${
-    data.site.slogan[data.locale]
-  }</title>
+        <title>${data.title} · ${data.site.name}</title>
         <meta name="description" content="${
           data.site.description[data.locale]
         }"/>

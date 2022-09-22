@@ -84,9 +84,9 @@ var data = {
           code: {
             file: 'terminal',
             lines: [
-              '☼ Hydrogen - Timer - Total build: 234ms',
-              '☼ Hydrogen - Success',
-              '> Context: Hydrogen successfully build a CSS file in your output directory.',
+              '☼ Hydrogen - Timer',
+              '> Build step: Total build',
+              '> Timer: 279ms',
             ],
           },
         },

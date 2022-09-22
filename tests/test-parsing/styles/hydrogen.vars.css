@@ -65,6 +65,8 @@
 --h2-line-height-h2: 1.1252572016460904;
 --h2-font-size-h1: calc(var(--h2-font-size-h2) * 1.2 );
 --h2-line-height-h1: 1.406571502057613;
+--h2-font-size-display: calc(var(--h2-font-size-h1) * 1.2 );
+--h2-line-height-display: 1.1721429183813443;
 /* Gradients */
 /* Radii */
 /* Radii */
@@ -110,5 +112,7 @@
 --h2-line-height-h2: 1.1252572016460904;
 --h2-font-size-h1: calc(var(--h2-font-size-h2) * 1.2 );
 --h2-line-height-h1: 1.406571502057613;
+--h2-font-size-display: calc(var(--h2-font-size-h1) * 1.2 );
+--h2-line-height-display: 1.1721429183813443;
 }
 }
