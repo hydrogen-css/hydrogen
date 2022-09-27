@@ -65,7 +65,7 @@
 --h2-line-height-h2: 1.3762559999999997;
 --h2-font-size-h1: calc(var(--h2-font-size-h2) * 1.25 );
 --h2-line-height-h1: 1.1010048;
---h2-font-size-display: calc(var(--h2-font-size-h2) * 1.25 );
+--h2-font-size-display: calc(var(--h2-font-size-h1) * 1.25 );
 --h2-line-height-display: 1.1744051199999999;
 /* Gradients */
 --h2-gradient-divider: linear-gradient(90deg, #53FFE0, #9D5CFF);
@@ -118,7 +118,7 @@
 --h2-line-height-h2: 1.3762559999999997;
 --h2-font-size-h1: calc(var(--h2-font-size-h2) * 1.25 );
 --h2-line-height-h1: 1.1010048;
---h2-font-size-display: calc(var(--h2-font-size-h2) * 1.25 );
+--h2-font-size-display: calc(var(--h2-font-size-h1) * 1.25 );
 --h2-line-height-display: 1.1744051199999999;
 }
 }

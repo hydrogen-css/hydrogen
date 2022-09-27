@@ -39,6 +39,7 @@
     "docs": "cd docs && npm start",
     "test": "npm run test-defaults",
     "test-defaults": "tests/test-defaults/env/serve.sh",
+    "test-defaults-logs": "tests/test-defaults/env/serve-logs.sh",
     "test-properties": "tests/test-properties/env/serve.sh",
     "test-properties-logs": "tests/test-properties/env/serve-logs.sh",
     "test-properties-clean": "tests/test-properties/env/serve-clean.sh",
