@@ -48,6 +48,7 @@
     "test-parsing-clean": "tests/test-parsing/env/build-clean.sh",
     "test-init-fresh": "tests/test-initialization/env/fresh.sh",
     "test-init-blocked": "tests/test-initialization/env/blocked.sh",
+    "test-errors": "tests/test-errors/env/build.sh",
     "test-commands-build": "tests/test-commands/env/build.sh",
     "test-commands-build-dev": "tests/test-commands/env/build-dev.sh",
     "test-commands-build-prod": "tests/test-commands/env/build-prod.sh",

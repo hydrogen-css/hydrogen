@@ -44,37 +44,31 @@
 --h2-container-medium: 75rem;
 --h2-container-large: 90rem;
 /* Font families */
---h2-font-family-sans: 'Inter', sans-serif;
+--h2-font-family-sans: sans-serif;
 --h2-font-family-serif: serif;
 --h2-font-family-script: script;
 --h2-font-family-mono: monospace;
 /* Font sizes and line heights */
---h2-font-size-caption: calc((1 / 1.25 ) * 1rem);
+--h2-font-size-caption: calc((1 / 1.2 ) * 1rem);
 --h2-line-height-caption: var(--h2-base-line-height);
---h2-font-size-copy: 1rem;
+--h2-font-size-copy: calc(1 * 1rem);
 --h2-line-height-copy: var(--h2-base-line-height);
---h2-font-size-h6: calc((1 * 1.25 ) * 1rem);
---h2-line-height-h6: 1.1199999999999999;
---h2-font-size-h5: calc(var(--h2-font-size-h6) * 1.25 );
---h2-line-height-h5: 1.7919999999999998;
---h2-font-size-h4: calc(var(--h2-font-size-h5) * 1.25 );
---h2-line-height-h4: 1.4336;
---h2-font-size-h3: calc(var(--h2-font-size-h4) * 1.25 );
---h2-line-height-h3: 1.14688;
---h2-font-size-h2: calc(var(--h2-font-size-h3) * 1.25 );
---h2-line-height-h2: 1.3762559999999997;
---h2-font-size-h1: calc(var(--h2-font-size-h2) * 1.25 );
---h2-line-height-h1: 1.1010048;
---h2-font-size-display: calc(var(--h2-font-size-h1) * 1.25 );
---h2-line-height-display: 1.1744051199999999;
+--h2-font-size-h6: calc((1 * 1.2 ) * 1rem);
+--h2-line-height-h6: 1.1666666666666667;
+--h2-font-size-h5: calc(var(--h2-font-size-h6) * 1.2 );
+--h2-line-height-h5: 1.9444444444444444;
+--h2-font-size-h4: calc(var(--h2-font-size-h5) * 1.2 );
+--h2-line-height-h4: 1.6203703703703702;
+--h2-font-size-h3: calc(var(--h2-font-size-h4) * 1.2 );
+--h2-line-height-h3: 1.3503086419753085;
+--h2-font-size-h2: calc(var(--h2-font-size-h3) * 1.2 );
+--h2-line-height-h2: 1.1252572016460904;
+--h2-font-size-h1: calc(var(--h2-font-size-h2) * 1.2 );
+--h2-line-height-h1: 1.406571502057613;
+--h2-font-size-display: calc(var(--h2-font-size-h1) * 1.2 );
+--h2-line-height-display: 1.1721429183813443;
 /* Gradients */
---h2-gradient-divider: linear-gradient(90deg, #53FFE0, #9D5CFF);
---h2-gradient-primaryRadial: radial-gradient(rgba(157,92,255, 1), rgba(42, 44, 61, 1));
---h2-gradient-accentRadial: radial-gradient(rgba(83, 255, 224, 1), rgba(42, 44, 61, 1));
 /* Radii */
---h2-radius-rounded: 10px;
---h2-radius-pill: 50rem;
---h2-radius-circle: 100%;
 /* Radii */
 --h2-shadow-small: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, .2);
 --h2-shadow-medium: 0 0.25rem 0.5rem -0.05rem rgba(0, 0, 0, .2);
@@ -102,23 +96,23 @@
 --h2-base-line-height: 1.4;
 --h2-base-whitespace: 1.4;
 /* Font sizes and line heights */
---h2-font-size-caption: calc((1 / 1.25 ) * 1rem);
+--h2-font-size-caption: calc((1 / 1.2 ) * 1rem);
 --h2-line-height-caption: var(--h2-base-line-height);
---h2-font-size-copy: 1rem;
+--h2-font-size-copy: calc(1 * 1rem);
 --h2-line-height-copy: var(--h2-base-line-height);
---h2-font-size-h6: calc((1 * 1.25 ) * 1rem);
---h2-line-height-h6: 1.1199999999999999;
---h2-font-size-h5: calc(var(--h2-font-size-h6) * 1.25 );
---h2-line-height-h5: 1.7919999999999998;
---h2-font-size-h4: calc(var(--h2-font-size-h5) * 1.25 );
---h2-line-height-h4: 1.4336;
---h2-font-size-h3: calc(var(--h2-font-size-h4) * 1.25 );
---h2-line-height-h3: 1.14688;
---h2-font-size-h2: calc(var(--h2-font-size-h3) * 1.25 );
---h2-line-height-h2: 1.3762559999999997;
---h2-font-size-h1: calc(var(--h2-font-size-h2) * 1.25 );
---h2-line-height-h1: 1.1010048;
---h2-font-size-display: calc(var(--h2-font-size-h1) * 1.25 );
---h2-line-height-display: 1.1744051199999999;
+--h2-font-size-h6: calc((1 * 1.2 ) * 1rem);
+--h2-line-height-h6: 1.1666666666666667;
+--h2-font-size-h5: calc(var(--h2-font-size-h6) * 1.2 );
+--h2-line-height-h5: 1.9444444444444444;
+--h2-font-size-h4: calc(var(--h2-font-size-h5) * 1.2 );
+--h2-line-height-h4: 1.6203703703703702;
+--h2-font-size-h3: calc(var(--h2-font-size-h4) * 1.2 );
+--h2-line-height-h3: 1.3503086419753085;
+--h2-font-size-h2: calc(var(--h2-font-size-h3) * 1.2 );
+--h2-line-height-h2: 1.1252572016460904;
+--h2-font-size-h1: calc(var(--h2-font-size-h2) * 1.2 );
+--h2-line-height-h1: 1.406571502057613;
+--h2-font-size-display: calc(var(--h2-font-size-h1) * 1.2 );
+--h2-line-height-display: 1.1721429183813443;
 }
 }
