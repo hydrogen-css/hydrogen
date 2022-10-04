@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 cd tests
-node ../lib/scripts/logs/log-setup-tests.js
+node ../lib/scripts/logs/tests/test-env-setup.js
 cd test-commands
-node ../../lib/scripts/logs/log-tests-initialization.js --test="Commands"
+node ../../lib/scripts/logs/tests/test-setup.js --test="commands"
 rm -rf package-lock.json
 rm -rf node_modules
 rm -rf hydrogen.config.json
@@ -11,7 +11,7 @@ npm install --no-fund --no-audit
 npm link @hydrogen-css/hydrogen --no-fund --no-audit
 echo ''
 cd ../test-core
-node ../../lib/scripts/logs/log-tests-initialization.js --test="Core"
+node ../../lib/scripts/logs/tests/test-setup.js --test="core"
 rm -rf package-lock.json
 rm -rf node_modules
 rm -rf hydrogen.config.json
@@ -19,7 +19,7 @@ npm install --no-fund --no-audit
 npm link @hydrogen-css/hydrogen --no-fund --no-audit
 echo ''
 cd ../test-defaults
-node ../../lib/scripts/logs/log-tests-initialization.js --test="Default"
+node ../../lib/scripts/logs/tests/test-setup.js --test="default"
 rm -rf package-lock.json
 rm -rf node_modules
 rm -rf hydrogen.config.json
@@ -27,7 +27,7 @@ npm install --no-fund --no-audit
 npm link @hydrogen-css/hydrogen --no-fund --no-audit
 echo ''
 cd ../test-errors
-node ../../lib/scripts/logs/log-tests-initialization.js --test="Error"
+node ../../lib/scripts/logs/tests/test-setup.js --test="error"
 rm -rf package-lock.json
 rm -rf node_modules
 rm -rf hydrogen.config.json
@@ -35,7 +35,7 @@ npm install --no-fund --no-audit
 npm link @hydrogen-css/hydrogen --no-fund --no-audit
 echo ''
 cd ../test-initialization
-node ../../lib/scripts/logs/log-tests-initialization.js --test="Initialization"
+node ../../lib/scripts/logs/tests/test-setup.js --test="init"
 rm -rf package-lock.json
 rm -rf node_modules
 rm -rf hydrogen.config.json
@@ -43,7 +43,7 @@ npm install --no-fund --no-audit
 npm link @hydrogen-css/hydrogen --no-fund --no-audit
 echo ''
 cd ../test-parsing
-node ../../lib/scripts/logs/log-tests-initialization.js --test="Parsing"
+node ../../lib/scripts/logs/tests/test-setup.js --test="parsing"
 rm -rf package-lock.json
 rm -rf node_modules
 rm -rf hydrogen.config.json
@@ -51,7 +51,7 @@ npm install --no-fund --no-audit
 npm link @hydrogen-css/hydrogen --no-fund --no-audit
 echo ''
 cd ../test-properties
-node ../../lib/scripts/logs/log-tests-initialization.js --test="Property"
+node ../../lib/scripts/logs/tests/test-setup.js --test="property"
 rm -rf package-lock.json
 rm -rf node_modules
 rm -rf hydrogen.config.json
@@ -59,7 +59,7 @@ npm install --no-fund --no-audit
 npm link @hydrogen-css/hydrogen --no-fund --no-audit
 echo ''
 cd ../test-settings
-node ../../lib/scripts/logs/log-tests-initialization.js --test="Settings"
+node ../../lib/scripts/logs/tests/test-setup.js --test="settings"
 rm -rf package-lock.json
 rm -rf node_modules
 rm -rf hydrogen.config.json
@@ -67,7 +67,7 @@ npm install --no-fund --no-audit
 npm link @hydrogen-css/hydrogen --no-fund --no-audit
 echo ''
 cd ../test-stress
-node ../../lib/scripts/logs/log-tests-initialization.js --test="Stress"
+node ../../lib/scripts/logs/tests/test-setup.js --test="stress"
 rm -rf package-lock.json
 rm -rf node_modules
 rm -rf hydrogen.config.json
