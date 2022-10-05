@@ -60,7 +60,7 @@
 /* Font sizes and line heights */
 --h2-font-size-caption: calc((1 / 1.2 ) * 1rem);
 --h2-line-height-caption: var(--h2-base-line-height);
---h2-font-size-copy: calc(1 * 1rem);
+--h2-font-size-copy: 1rem;
 --h2-line-height-copy: var(--h2-base-line-height);
 --h2-font-size-h6: calc((1 * 1.2 ) * 1rem);
 --h2-line-height-h6: 1.1666666666666667;
@@ -109,7 +109,7 @@
 /* Font sizes and line heights */
 --h2-font-size-caption: calc((1 / 1.2 ) * 1rem);
 --h2-line-height-caption: var(--h2-base-line-height);
---h2-font-size-copy: calc(1 * 1rem);
+--h2-font-size-copy: 1rem;
 --h2-line-height-copy: var(--h2-base-line-height);
 --h2-font-size-h6: calc((1 * 1.2 ) * 1rem);
 --h2-line-height-h6: 1.1666666666666667;
