@@ -29,11 +29,6 @@
       type="text/css"
       href="../styles/hydrogen.css"
     />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="../styles/hydrogen.vars.css"
-    />
     <!-- Google fonts -->
     <link
       rel="preconnect"
@@ -51,7 +46,8 @@
   </head>
   <body
     data-h2-font-family="base(sans)"
-    data-h2-background-color="base(#f3f3f9)"
+    data-h2-color="base(black)"
+    data-h2-background-color="base(#f3f3f9) base:dark(#111117)"
   >
     <header>
       <div
@@ -98,11 +94,27 @@
                 >Code</a
               >
             </li>
+            <li>
+              <button
+                type="button"
+                onclick="switchTheme(this)"
+              >
+                Change theme
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                onclick="switchMode(this)"
+              >
+                Change mode
+              </button>
+            </li>
           </ul>
         </div>
       </div>
       <div
-        data-h2-background-color="base(black)"
+        data-h2-background-color="base(black) base:dark(white)"
         data-h2-position="base(relative)"
         data-h2-overflow="base(hidden)"
       >
@@ -128,7 +140,7 @@
         >
           <h1
             data-h2-font-weight="base(700)"
-            data-h2-color="base(white)"
+            data-h2-color="base(white) base:dark(black)"
             data-h2-text-align="base(center)"
             data-h2-padding="base(x7, 0, x8, 0)"
           >
@@ -156,7 +168,7 @@
         >
           <div
             data-h2-background-color="base(white)"
-            data-h2-shadow="base(large)"
+            data-h2-shadow="base(small)"
             data-h2-padding="base(x2)"
             data-h2-radius="base(rounded)"
           >
@@ -193,7 +205,7 @@
           </div>
           <div
             data-h2-background-color="base(white)"
-            data-h2-shadow="base(large)"
+            data-h2-shadow="base(small)"
             data-h2-radius="base(rounded)"
             data-h2-overflow="base(hidden)"
           >
@@ -203,7 +215,7 @@
                 data-h2-offset="base(0, 0, 0, 0)"
                 data-h2-height="base:children[>div](x1)"
                 data-h2-width="base:children[>div](100%)"
-                data-h2-border="base:children[>div:not(:first-child)](top, 1px, solid, accent.5)"
+                data-h2-border="base:children[>div:not(:first-child)](top, 1px, solid, accent.50)"
               >
                 <div></div>
                 <div></div>

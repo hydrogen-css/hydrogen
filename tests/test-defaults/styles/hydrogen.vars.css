@@ -4,42 +4,42 @@
 --h2-base-line-height: 1.4;
 --h2-base-whitespace: 1.4;
 /* Colors */
---h2-color-white: rgba(255, 255, 255, 1);
---h2-color-white-light: rgb(255, 255, 255);
---h2-color-white-lighter: rgb(255, 255, 255);
---h2-color-white-lightest: rgb(255, 255, 255);
---h2-color-white-dark: rgb(191, 191, 191);
---h2-color-white-darker: rgb(128, 128, 128);
---h2-color-white-darkest: rgb(64, 64, 64);
---h2-color-black: #212130;
---h2-color-black-light: rgb(87, 87, 101);
---h2-color-black-lighter: rgb(143, 143, 152);
---h2-color-black-lightest: rgb(199, 199, 204);
---h2-color-black-dark: rgb(24, 24, 37);
---h2-color-black-darker: rgb(16, 16, 25);
---h2-color-black-darkest: rgb(8, 8, 12);
---h2-color-primary: #9D5CFF;
---h2-color-primary-light: rgb(179, 121, 255);
---h2-color-primary-lighter: rgb(204, 165, 255);
---h2-color-primary-lightest: rgb(230, 210, 255);
---h2-color-primary-dark: rgb(115, 57, 191);
---h2-color-primary-darker: rgb(77, 38, 128);
---h2-color-primary-darkest: rgb(38, 19, 64);
---h2-color-accent: #53FFE0;
---h2-color-accent-light: rgb(113, 255, 240);
---h2-color-accent-lighter: rgb(160, 255, 245);
---h2-color-accent-lightest: rgb(208, 255, 250);
---h2-color-accent-dark: rgb(49, 191, 176);
---h2-color-accent-darker: rgb(33, 128, 118);
---h2-color-accent-darkest: rgb(16, 64, 59);
---h2-color-focus: #fbce3a;
---h2-color-focus-light: rgb(255, 226, 93);
---h2-color-focus-lighter: rgb(255, 236, 147);
---h2-color-focus-lightest: rgb(255, 245, 201);
---h2-color-focus-dark: rgb(191, 162, 29);
---h2-color-focus-darker: rgb(128, 108, 19);
---h2-color-focus-darkest: rgb(64, 54, 10);
-/* Container max widths */
+--h2-color-white: 255, 255, 255;
+--h2-color-white-light: 255, 255, 255;
+--h2-color-white-lighter: 255, 255, 255;
+--h2-color-white-lightest: 255, 255, 255;
+--h2-color-white-dark: 191, 191, 191;
+--h2-color-white-darker: 128, 128, 128;
+--h2-color-white-darkest: 64, 64, 64;
+--h2-color-black: 33, 33, 48;
+--h2-color-black-light: 87, 87, 101;
+--h2-color-black-lighter: 143, 143, 152;
+--h2-color-black-lightest: 199, 199, 204;
+--h2-color-black-dark: 24, 24, 37;
+--h2-color-black-darker: 16, 16, 25;
+--h2-color-black-darkest: 8, 8, 12;
+--h2-color-primary: 157, 92, 255;
+--h2-color-primary-light: 179, 121, 255;
+--h2-color-primary-lighter: 204, 165, 255;
+--h2-color-primary-lightest: 230, 210, 255;
+--h2-color-primary-dark: 115, 57, 191;
+--h2-color-primary-darker: 77, 38, 128;
+--h2-color-primary-darkest: 38, 19, 64;
+--h2-color-accent: 83, 255, 224;
+--h2-color-accent-light: 113, 255, 240;
+--h2-color-accent-lighter: 160, 255, 245;
+--h2-color-accent-lightest: 208, 255, 250;
+--h2-color-accent-dark: 49, 191, 176;
+--h2-color-accent-darker: 33, 128, 118;
+--h2-color-accent-darkest: 16, 64, 59;
+--h2-color-focus: 251, 206, 58;
+--h2-color-focus-light: 255, 226, 93;
+--h2-color-focus-lighter: 255, 236, 147;
+--h2-color-focus-lightest: 255, 245, 201;
+--h2-color-focus-dark: 191, 162, 29;
+--h2-color-focus-darker: 128, 108, 19;
+--h2-color-focus-darkest: 64, 54, 10;
+/* Container widths */
 --h2-container-small: 39rem;
 --h2-container-medium: 75rem;
 --h2-container-large: 90rem;
@@ -69,34 +69,86 @@
 --h2-line-height-display: 1.1744051199999999;
 /* Gradients */
 --h2-gradient-divider: linear-gradient(90deg, #53FFE0, #9D5CFF);
+--h2-gradient-fallback-divider: #53FFE0;
 --h2-gradient-primaryRadial: radial-gradient(rgba(157,92,255, 1), rgba(42, 44, 61, 1));
+--h2-gradient-fallback-primaryRadial: rgba(157,92,255, 1);
 --h2-gradient-accentRadial: radial-gradient(rgba(83, 255, 224, 1), rgba(42, 44, 61, 1));
+--h2-gradient-fallback-accentRadial: rgba(83, 255, 224, 1);
 /* Radii */
 --h2-radius-rounded: 10px;
 --h2-radius-pill: 50rem;
 --h2-radius-circle: 100%;
-/* Radii */
+/* Shadows */
 --h2-shadow-small: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, .2);
 --h2-shadow-medium: 0 0.25rem 0.5rem -0.05rem rgba(0, 0, 0, .2);
 --h2-shadow-large: 0 0.4rem 0.7rem -0.1rem rgba(0, 0, 0, .2);
 --h2-shadow-larger: 0 0.55rem 1rem -0.2rem rgba(0, 0, 0, .2);
 --h2-shadow-largest: 0 0.7rem 1.5rem -0.3rem rgba(0, 0, 0, .2);
-/* Transitions */
-/* Whitespace shortcuts */
-/* Note that these are merely for convenience. You can create any calc function you need using the --h2-base-whitespace variable */
---h2-whitespace-1: calc(var(--h2-base-whitespace) * 1);
---h2-whitespace-2: calc(var(--h2-base-whitespace) * 2);
---h2-whitespace-3: calc(var(--h2-base-whitespace) * 3);
---h2-whitespace-4: calc(var(--h2-base-whitespace) * 4);
---h2-whitespace-5: calc(var(--h2-base-whitespace) * 5);
---h2-whitespace-6: calc(var(--h2-base-whitespace) * 6);
---h2-whitespace-7: calc(var(--h2-base-whitespace) * 7);
---h2-whitespace-8: calc(var(--h2-base-whitespace) * 8);
---h2-whitespace-9: calc(var(--h2-base-whitespace) * 9);
---h2-whitespace-10: calc(var(--h2-base-whitespace) * 10);
+}
+[data-h2*="dark"]{
+/* Colors */
+--h2-color-white: 33, 33, 48;
+--h2-color-white-light: 87, 87, 101;
+--h2-color-white-lighter: 143, 143, 152;
+--h2-color-white-lightest: 199, 199, 204;
+--h2-color-white-dark: 24, 24, 37;
+--h2-color-white-darker: 16, 16, 25;
+--h2-color-white-darkest: 8, 8, 12;
+--h2-color-black: 255, 255, 255;
+--h2-color-black-light: 255, 255, 255;
+--h2-color-black-lighter: 255, 255, 255;
+--h2-color-black-lightest: 255, 255, 255;
+--h2-color-black-dark: 191, 191, 191;
+--h2-color-black-darker: 128, 128, 128;
+--h2-color-black-darkest: 64, 64, 64;
+/* Container widths */
+/* Font families */
+/* Gradients */
+/* Radii */
+/* Shadows */
+--h2-shadow-small: 0 0.1rem 0.2rem 0 rgba(255, 255, 255, .2);
+--h2-shadow-medium: 0 0.25rem 0.5rem -0.05rem rgba(255, 255, 255, .2);
+--h2-shadow-large: 0 0.4rem 0.7rem -0.1rem rgba(255, 255, 255, .2);
+--h2-shadow-larger: 0 0.55rem 1rem -0.2rem rgba(255, 255, 255, .2);
+--h2-shadow-largest: 0 0.7rem 1.5rem -0.3rem rgba(255, 255, 255, .2);
+}
+[data-h2*="theme"]{
+/* Colors */
+--h2-color-primary: 238, 52, 130;
+--h2-color-primary-light: 255, 89, 159;
+--h2-color-primary-lighter: 255, 144, 191;
+--h2-color-primary-lightest: 255, 200, 223;
+--h2-color-primary-dark: 191, 25, 95;
+--h2-color-primary-darker: 128, 17, 64;
+--h2-color-primary-darkest: 64, 8, 32;
+--h2-color-accent: 244, 177, 47;
+--h2-color-accent-light: 255, 201, 84;
+--h2-color-accent-lighter: 255, 219, 141;
+--h2-color-accent-lightest: 255, 237, 198;
+--h2-color-accent-dark: 191, 138, 21;
+--h2-color-accent-darker: 128, 92, 14;
+--h2-color-accent-darkest: 64, 46, 7;
+--h2-color-focus: 47, 115, 244;
+--h2-color-focus-light: 84, 145, 255;
+--h2-color-focus-lighter: 141, 182, 255;
+--h2-color-focus-lightest: 198, 219, 255;
+--h2-color-focus-dark: 21, 82, 191;
+--h2-color-focus-darker: 14, 55, 128;
+--h2-color-focus-darkest: 7, 27, 64;
+/* Gradients */
+--h2-gradient-divider: linear-gradient(90deg, #EE3482, #F4B12F);
+--h2-gradient-fallback-divider: #EE3482;
+--h2-gradient-primaryRadial: radial-gradient(rgba(238, 52, 130, 1), rgba(42, 44, 61, 1));
+--h2-gradient-fallback-primaryRadial: rgba(238, 52, 130, 1);
+--h2-gradient-accentRadial: radial-gradient(rgba(244, 177, 47, 1), rgba(42, 44, 61, 1));
+--h2-gradient-fallback-accentRadial: rgba(244, 177, 47, 1);
+}
+[data-h2*="dark"][data-h2*="theme"]{
+/* Colors */
+/* Gradients */
 }
 @media screen and (min-width: 100em){
-:root{
+:root {
 /* Core units */
 --h2-base-font-size: 112.5%;
 --h2-base-line-height: 1.4;
