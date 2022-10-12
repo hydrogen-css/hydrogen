@@ -113,6 +113,10 @@
 --h2-shadow-largest: 0 0.7rem 1.5rem -0.3rem rgba(255, 255, 255, .2);
 }
 [data-h2*="theme"]{
+/* Core units */
+--h2-base-font-size: 120%;
+--h2-base-line-height: 1.5;
+--h2-base-whitespace: 1.5;
 /* Colors */
 --h2-color-primary: 238, 52, 130;
 --h2-color-primary-light: 255, 89, 159;
@@ -135,6 +139,30 @@
 --h2-color-focus-dark: 21, 82, 191;
 --h2-color-focus-darker: 14, 55, 128;
 --h2-color-focus-darkest: 7, 27, 64;
+/* Font families */
+--h2-font-family-sans: 'Open Sans', sans-serif;
+--h2-font-family-serif: serif;
+--h2-font-family-script: script;
+--h2-font-family-mono: monospace;
+/* Font sizes and line heights */
+--h2-font-size-caption: calc((1 / 1.33 ) * 1rem);
+--h2-line-height-caption: var(--h2-base-line-height);
+--h2-font-size-copy: 1rem;
+--h2-line-height-copy: var(--h2-base-line-height);
+--h2-font-size-h6: calc((1 * 1.33 ) * 1rem);
+--h2-line-height-h6: 1.1278195488721805;
+--h2-font-size-h5: calc(var(--h2-font-size-h6) * 1.33 );
+--h2-line-height-h5: 1.6959692464243314;
+--h2-font-size-h4: calc(var(--h2-font-size-h5) * 1.33 );
+--h2-line-height-h4: 1.2751648469355876;
+--h2-font-size-h3: calc(var(--h2-font-size-h4) * 1.33 );
+--h2-line-height-h3: 1.4381558424085574;
+--h2-font-size-h2: calc(var(--h2-font-size-h3) * 1.33 );
+--h2-line-height-h2: 1.081320182262073;
+--h2-font-size-h1: calc(var(--h2-font-size-h2) * 1.33 );
+--h2-line-height-h1: 1.0840302579068402;
+--h2-font-size-display: calc(var(--h2-font-size-h1) * 1.33 );
+--h2-line-height-display: 1.0188254303635715;
 /* Gradients */
 --h2-gradient-divider: linear-gradient(90deg, #EE3482, #F4B12F);
 --h2-gradient-fallback-divider: #EE3482;
@@ -145,6 +173,7 @@
 }
 [data-h2*="dark"][data-h2*="theme"]{
 /* Colors */
+/* Font families */
 /* Gradients */
 }
 @media screen and (min-width: 100em){
@@ -172,5 +201,32 @@
 --h2-line-height-h1: 1.1010048;
 --h2-font-size-display: calc(var(--h2-font-size-h1) * 1.25 );
 --h2-line-height-display: 1.1744051199999999;
+}
+}
+@media screen and (min-width: 100em){
+ [data-h2*="theme"]{
+/* Core units */
+--h2-base-font-size: 150%;
+--h2-base-line-height: 1.5;
+--h2-base-whitespace: 1.5;
+/* Font sizes and line heights */
+--h2-font-size-caption: calc((1 / 1.33 ) * 1rem);
+--h2-line-height-caption: var(--h2-base-line-height);
+--h2-font-size-copy: 1rem;
+--h2-line-height-copy: var(--h2-base-line-height);
+--h2-font-size-h6: calc((1 * 1.33 ) * 1rem);
+--h2-line-height-h6: 1.1278195488721805;
+--h2-font-size-h5: calc(var(--h2-font-size-h6) * 1.33 );
+--h2-line-height-h5: 1.6959692464243314;
+--h2-font-size-h4: calc(var(--h2-font-size-h5) * 1.33 );
+--h2-line-height-h4: 1.2751648469355876;
+--h2-font-size-h3: calc(var(--h2-font-size-h4) * 1.33 );
+--h2-line-height-h3: 1.4381558424085574;
+--h2-font-size-h2: calc(var(--h2-font-size-h3) * 1.33 );
+--h2-line-height-h2: 1.081320182262073;
+--h2-font-size-h1: calc(var(--h2-font-size-h2) * 1.33 );
+--h2-line-height-h1: 1.0840302579068402;
+--h2-font-size-display: calc(var(--h2-font-size-h1) * 1.33 );
+--h2-line-height-display: 1.0188254303635715;
 }
 }

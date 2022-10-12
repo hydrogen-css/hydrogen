@@ -10,9 +10,9 @@ function modify_settings(settings) {
   // Manipulate the settings for this test
   settings.input = ['markup'];
   settings.output = 'styles';
-  settings.build.modes['dark'].method = 'toggle';
-  settings.build.var_export = true;
-  settings.styles.themes[0].fonts = [
+  settings.modes['dark'].method = 'toggle';
+  settings.processing.var_export = true;
+  settings.themes[0].fonts = [
     {
       key: 'sans',
       default: {
@@ -38,7 +38,7 @@ function modify_settings(settings) {
       },
     },
   ];
-  settings.styles.themes[0].gradients = [
+  settings.themes[0].gradients = [
     {
       key: 'divider',
       default: {
@@ -61,7 +61,7 @@ function modify_settings(settings) {
       },
     },
   ];
-  settings.styles.themes[0].radii = [
+  settings.themes[0].radii = [
     {
       key: 'rounded',
       default: {
@@ -83,6 +83,20 @@ function modify_settings(settings) {
   ];
   let test_theme = {
     key: 'theme',
+    typography: [
+      {
+        query_key: 'base',
+        size: '120%',
+        line_height: '1.5',
+        type_scale: '1.33',
+      },
+      {
+        query_key: 'desktop',
+        size: '150%',
+        line_height: '1.5',
+        type_scale: '1.33',
+      },
+    ],
     colors: [
       {
         key: 'primary',
@@ -107,7 +121,32 @@ function modify_settings(settings) {
       },
     ],
     containers: [],
-    fonts: [],
+    fonts: [
+      {
+        key: 'sans',
+        default: {
+          family: "'Open Sans', sans-serif",
+        },
+      },
+      {
+        key: 'serif',
+        default: {
+          family: 'serif',
+        },
+      },
+      {
+        key: 'script',
+        default: {
+          family: 'script',
+        },
+      },
+      {
+        key: 'mono',
+        default: {
+          family: 'monospace',
+        },
+      },
+    ],
     gradients: [
       {
         key: 'divider',
@@ -141,7 +180,7 @@ function modify_settings(settings) {
       delays: [],
     },
   };
-  settings.styles.themes = settings.styles.themes.concat(test_theme);
+  settings.themes = settings.themes.concat(test_theme);
   return settings;
 }
 
