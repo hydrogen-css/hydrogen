@@ -3,8 +3,8 @@ module.exports = {
   base_url: 'https://hydrogen.design',
   name: 'Hydrogen',
   slogan: {
-    en: 'An open-source design and CSS utility framework powered by data-attributes.',
-    fr: "Un cadre de conception et d'utilité CSS à code source ouvert, alimenté par les attributs de données.",
+    en: "The inline CSS framework you've been looking for.",
+    fr: 'Le cadre CSS en ligne que vous recherchez.',
   },
   description: {
     en: 'Hydrogen is a utility-type CSS framework that allows you to style websites right in your markup. Design settings meet the flexibility of data-attributes to help you create consistent, beautiful experiences.',

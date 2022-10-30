@@ -66,7 +66,7 @@ function render(data) {
               data-h2-font-size="base(h6)"
               data-h2-font-weight="base(300)"
               data-h2-max-width="base(x15)"
-              data-h2-color="base(white.8)"
+              data-h2-color="base(white.80)"
               data-h2-margin="base(x1, auto, 0, auto) p-tablet(x1, 0, 0, auto)"
               data-h2-text-align="base(center) p-tablet(right)">${
                 data.site.slogan[data.locale]

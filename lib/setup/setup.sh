@@ -15,7 +15,7 @@ rm -rf hydrogen.config.json
 npm install --no-fund
 npm link @hydrogen-css/hydrogen --no-fund --no-audit
 echo ''
-node ../lib/setup/config-documentation.js
+node settings.js
 cd ..
-tests/setup.sh
+lib/setup/tests-setup.sh
 node lib/scripts/logs/setup/success.js

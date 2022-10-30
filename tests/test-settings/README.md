@@ -4,8 +4,11 @@ The settings tests run specific validation tests to ensure that settings are par
 
 ## Goals of this test
 
-- 1: Test minimum settings requirements
-- 2: Test complete settings file
+- 1: Test minimum configuration requirements
+- 2: Test a complete settings file
+
+TBD
+
 - 3: Test input validation
 - 4: Test output validation
 - 5: Test build validation
@@ -21,8 +24,12 @@ The settings tests run specific validation tests to ensure that settings are par
 ## Expected output
 
 - Each test should expect different output:
+
   - 1: A clean compile
   - 2: A clean compile
+
+  TBD
+
   - 3: 1 error indicating that the input setting is the wrong type
   - 4: 1 error indicating that the output setting is the wrong type
   - 5: 3 errors

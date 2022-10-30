@@ -4,6 +4,7 @@ node_modules
 hydrogen-logs
 tests/**/hydrogen.config.json
 docs/**/hydrogen.config.json
+cache
 # Documentation
 docs/_site/
 docs/_tmp/

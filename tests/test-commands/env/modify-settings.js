@@ -7,11 +7,11 @@
 var { build_development_config } = require('../../../lib/setup/build-settings');
 
 function modify_settings(settings) {
-  // Manipulate the settings for this test =====================================
+  // Manipulate the settings for this test
   settings.input = ['markup'];
   settings.output = 'styles';
-  settings.build.dark_mode = 'toggle';
-  settings.build.var_export = true;
+  settings.modes['dark'].method = 'toggle';
+  settings.processing.var_export = true;
   return settings;
 }
 

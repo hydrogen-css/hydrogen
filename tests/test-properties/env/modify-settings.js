@@ -7,68 +7,85 @@
 var { build_development_config } = require('../../../lib/setup/build-settings');
 
 function modify_settings(settings) {
-  // Manipulate the settings for this test =====================================
+  // Manipulate the settings for this test
   settings.input = ['markup'];
   settings.output = 'styles';
-  settings.build.dark_mode = 'toggle';
-  settings.build.var_export = true;
-  settings.styles.tokens.colors = [
+  settings.modes['dark'].method = 'toggle';
+  settings.processing.var_export = true;
+  settings.themes[0].colors = [
     {
       key: 'white',
-      color: 'rgba(255, 255, 255, 1)',
-      modifiers: [],
+      default: {
+        color: 'rgba(255, 255, 255, 1)',
+        modifiers: [],
+      },
     },
     {
       key: 'black',
-      color: '#212130',
-      modifiers: [],
+      default: {
+        color: '#212130',
+        modifiers: [],
+      },
     },
     {
       key: 'primary',
-      color: '#9D5CFF',
-      modifiers: [
-        {
-          key: 'other',
-          color: 'yellow',
-        },
-        {
-          key: 'customModifier',
-          color: 'pink',
-        },
-      ],
+      default: {
+        color: '#9D5CFF',
+        modifiers: [
+          {
+            key: 'other',
+            color: 'yellow',
+          },
+          {
+            key: 'customModifier',
+            color: 'pink',
+          },
+        ],
+      },
     },
     {
       key: 'secondary',
-      color: '#53FFE0',
-      modifiers: [
-        {
-          key: 'lighter',
-          color: 'green',
-        },
-      ],
+      default: {
+        color: '#53FFE0',
+        modifiers: [
+          {
+            key: 'lighter',
+            color: 'green',
+          },
+        ],
+      },
     },
     {
       key: 'accent',
-      color: '#FF5C6D',
-      modifiers: [],
+      default: {
+        color: '#FF5C6D',
+        modifiers: [],
+      },
     },
     {
       key: 'focus',
-      color: '#fbce3a',
-      modifiers: [],
+      default: {
+        color: '#fbce3a',
+        modifiers: [],
+      },
     },
   ];
-  settings.styles.tokens.gradients = [
+  settings.themes[0].gradients = [
     {
       key: 'myLinearGradient',
-      gradient: 'linear-gradient(135deg, green, pink, rgba(255, 255, 255, 1))',
-      fallback: 'green',
+      default: {
+        gradient:
+          'linear-gradient(135deg, green, pink, rgba(255, 255, 255, 1))',
+        fallback: 'green',
+      },
     },
     {
       key: 'myRadialGradient',
-      gradient:
-        'radial-gradient(circle at left, green, pink, rgba(255, 255, 255, 1))',
-      fallback: 'green',
+      default: {
+        gradient:
+          'radial-gradient(circle at left, green, pink, rgba(255, 255, 255, 1))',
+        fallback: 'green',
+      },
     },
   ];
   return settings;

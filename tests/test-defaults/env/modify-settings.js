@@ -12,6 +12,17 @@ function modify_settings(settings) {
   settings.output = 'styles';
   settings.modes['dark'].method = 'toggle';
   settings.processing.var_export = true;
+  settings.themes[0].colors = settings.themes[0].colors.concat({
+    key: 'page',
+    default: {
+      color: '#f3f3f9',
+      modifiers: [],
+    },
+    dark: {
+      color: '#111117',
+      modifiers: [],
+    },
+  });
   settings.themes[0].fonts = [
     {
       key: 'sans',
@@ -180,7 +191,210 @@ function modify_settings(settings) {
       delays: [],
     },
   };
+  let dt_theme = {
+    key: 'dt',
+    colors: [
+      {
+        key: 'white',
+        default: {
+          color: 'white',
+          modifiers: [],
+        },
+        dark: {
+          color: '#2d2d2d',
+          modifiers: [],
+        },
+      },
+      {
+        key: 'primary',
+        default: {
+          color: '#00C3B7',
+          modifiers: [],
+        },
+        dark: {
+          color: '#86e3de',
+          modifiers: [],
+        },
+      },
+      {
+        key: 'accent',
+        default: {
+          color: '#9747FF',
+          modifiers: [],
+        },
+        dark: {
+          color: '#c395ff',
+          modifiers: [],
+        },
+      },
+      {
+        key: 'focus',
+        default: {
+          color: '#2F73F4',
+          modifiers: [],
+        },
+      },
+      {
+        key: 'page',
+        default: {
+          color: '#f3f3f9',
+          modifiers: [],
+        },
+        dark: {
+          color: '#111117',
+          modifiers: [],
+        },
+      },
+    ],
+    containers: [],
+    fonts: [
+      {
+        key: 'sans',
+        default: {
+          family: "'Open Sans', sans-serif",
+        },
+      },
+      {
+        key: 'serif',
+        default: {
+          family: 'serif',
+        },
+      },
+      {
+        key: 'script',
+        default: {
+          family: 'script',
+        },
+      },
+      {
+        key: 'mono',
+        default: {
+          family: 'monospace',
+        },
+      },
+    ],
+    gradients: [
+      {
+        key: 'divider',
+        default: {
+          gradient: 'linear-gradient(90deg, #FFB900, #00C3B7, #FF5958)',
+          fallback: '#FFB900',
+        },
+      },
+      {
+        key: 'primaryRadial',
+        default: {
+          gradient:
+            'radial-gradient(RGBA(255, 185, 0, 1), rgba(42, 44, 61, 1))',
+          fallback: 'RGBA(255, 185, 0, 1)',
+        },
+      },
+      {
+        key: 'accentRadial',
+        default: {
+          gradient:
+            'radial-gradient(RGBA(255, 89, 88, 1), rgba(42, 44, 61, 1))',
+          fallback: 'RGBA(255, 89, 88, 1)',
+        },
+      },
+    ],
+    radii: [],
+    shadows: [],
+    transitions: {
+      durations: [],
+      functions: [],
+      delays: [],
+    },
+  };
+  let iap_theme = {
+    key: 'iap',
+    colors: [
+      {
+        key: 'primary',
+        default: {
+          color: '#c01e5a',
+          modifiers: [],
+        },
+        dark: {
+          color: '#df6b96',
+          modifiers: [],
+        },
+      },
+      {
+        key: 'accent',
+        default: {
+          color: '#272f6b',
+          modifiers: [],
+        },
+        dark: {
+          color: '#6871b3',
+          modifiers: [],
+        },
+      },
+    ],
+    containers: [],
+    fonts: [
+      {
+        key: 'sans',
+        default: {
+          family: "'Open Sans', sans-serif",
+        },
+      },
+      {
+        key: 'serif',
+        default: {
+          family: 'serif',
+        },
+      },
+      {
+        key: 'script',
+        default: {
+          family: 'script',
+        },
+      },
+      {
+        key: 'mono',
+        default: {
+          family: 'monospace',
+        },
+      },
+    ],
+    gradients: [
+      {
+        key: 'divider',
+        default: {
+          gradient: 'linear-gradient(90deg, #c01e5a, #272f6b)',
+          fallback: '#c01e5a',
+        },
+      },
+      {
+        key: 'primaryRadial',
+        default: {
+          gradient:
+            'radial-gradient(rgba(192, 30, 90, 1), rgba(42, 44, 61, 1))',
+          fallback: 'rgba(192, 30, 90, 1)',
+        },
+      },
+      {
+        key: 'accentRadial',
+        default: {
+          gradient:
+            'radial-gradient(rgba(39, 47, 107, 1), rgba(42, 44, 61, 1))',
+          fallback: 'rgba(39, 47, 107, 1)',
+        },
+      },
+    ],
+    radii: [],
+    shadows: [],
+    transitions: {
+      durations: [],
+      functions: [],
+      delays: [],
+    },
+  };
   settings.themes = settings.themes.concat(test_theme);
+  settings.themes = settings.themes.concat(dt_theme);
+  settings.themes = settings.themes.concat(iap_theme);
   return settings;
 }
 

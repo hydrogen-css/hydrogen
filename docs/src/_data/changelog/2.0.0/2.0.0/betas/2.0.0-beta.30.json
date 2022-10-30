@@ -1,0 +1,179 @@
+{
+  "version": "2.0.0-beta.30",
+  "date": "2022/OCT/30",
+  "author": "Josh Beveridge",
+  "beta": true,
+  "en": {
+    "breaking": [
+      {
+        "changes": [
+          "Adds support for themes, each with their own default and dark mode settings."
+        ],
+        "migrations": [
+          "See the configuration model change for migration requirements."
+        ],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "The configuration model has been overhauled to better categorize information and to add support for themes."
+        ],
+        "migrations": [
+          "A majority of the settings found withing the \"build\" configuration have been broken out into more specific sections (e.g. modes, processing, and logging).",
+          "The \"styles\" configuration has been removed entirely in favor of \"media\" and \"themes\" configurations.",
+          "The \"base_query_key\" option should be moved under the \"media\" option, and all media query definitions should be moved under a \"queries\" option.",
+          "Themes require a key value, one of which must always be \"default\".",
+          "Themes should now contain a \"typography\" object, and then the expected style settings of colors, gradients, fonts, shadows, radii, transitions, etc.",
+          "Individual style settings should now contain a key, default, and dark object, which are then provided their own unique settings (e.g. for a color, the default and dark objects should be passed a color string and a modifier array."
+        ],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Provides new configuration options for automating dark mode, including the addition of a new :all mode modifier that will force a style to persist across modes."
+        ],
+        "migrations": [
+          "The \"dark_mode\" setting has been renamed and moved to \"modes\", which should contain an object that then contains a \"dark\" object.",
+          "The \"dark\" object can have the following values: \"automatic\" as a boolean, and \"method\" which accepts \"preference\" or \"toggle\" like the old option."
+        ],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Fixed a bug with opacity modifiers on colors, but caused a breaking change as a result that requires them to be written using the full percentage number (e.g. 10 for 10%)."
+        ],
+        "migrations": [
+          "Instances of opacity modifiers should be changed to reflect the full percentage expected, rather than the decimal value previously used (e.g. .2 for 20% should become .20)."
+        ],
+        "attributes": [
+          "background-color",
+          "border",
+          "color",
+          "fill",
+          "overlay"
+        ],
+        "log": []
+      },
+      {
+        "changes": [
+          "Color variable exports have been reformatted to export as red, blue, and green values."
+        ],
+        "migrations": [
+          "Color variables will need to be wrapped in an RGB or RGBA value."
+        ],
+        "attributes": [],
+        "log": []
+      }
+    ],
+    "features": [
+      {
+        "changes": [
+          "Adds support for all CSS properties."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Adds support for the :selectors modifier."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": [
+          "This includes deprecation for :id and :class."
+        ]
+      },
+      {
+        "changes": [
+          "Adds support for attribute selectors inside the :children modifier."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Hydrogen now returns a promise when a build completes/fails for easier integration with projects and build tools."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      }
+    ],
+    "optimizations": [
+      {
+        "changes": [
+          "Rearranges and optimizes certain function calls so that they are called less frequently and perform faster."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Adds new error and system logging for better debugging."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Separates and defines important data models using JSDocs for better documentation and function typing."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Adds new contextual console information including the number of input files processed during a build."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Begins the addition of per-function unit tests for more reliable change monitoring and bug prevention."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      }
+    ],
+    "bugfixes": [
+      {
+        "changes": [
+          "Fixes a bug that caused the compiler to duplicate CSS (and therefore increase build time) during incremental watch runs."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      },
+      {
+        "changes": [
+          "Fixes a bug where \"none\" wasn't properly parsed by the max-height/width and min-height/width properties."
+        ],
+        "migrations": [],
+        "attributes": [
+          "max-height",
+          "max-width",
+          "min-height",
+          "min-width"
+        ],
+        "log": []
+      }
+    ]
+  },
+  "fr": {
+    "breaking": [],
+    "features": [],
+    "optimizations": [],
+    "bugfixes": []
+  }
+}

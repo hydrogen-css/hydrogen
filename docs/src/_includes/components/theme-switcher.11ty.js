@@ -6,20 +6,20 @@ function render(data) {
       id="switcher"
       data-h2-fill="
         base:children[#icon_pref *](primary.lightest)
-        base:class[light]:children[#icon_pref *](black.lighter)
-        base:class[dark]:children[#icon_pref *](black.lighter)
+        base:selectors[.light]:children[#icon_pref *](black.lighter)
+        base:selectors[.dark]:children[#icon_pref *](black.lighter)
         base:dark:children[#icon_pref *](primary.dark)
         base:children[#icon_sun *](black.lighter)
-        base:class[light]:children[#icon_sun *](primary.lightest)
+        base:selectors[.light]:children[#icon_sun *](primary.lightest)
         base:children[#icon_moon *](black.lighter)
-        base:class[dark]:children[#icon_moon *](primary.dark)
+        base:selectors[.dark]:children[#icon_moon *](primary.dark)
         base:children[button:focus-visible #icon_pref *](black)
         base:children[button:focus-visible #icon_sun *](black)
         base:children[button:focus-visible #icon_moon *](black)"
       data-h2-transform="
-        base:class[pref]:children[#highlight](translate(0, 0))
-        base:class[light]:children[#highlight](translate(2rem, 0))
-        base:class[dark]:children[#highlight](translate(4rem, 0))">
+        base:selectors[.pref]:children[#highlight](translate(0, 0))
+        base:selectors[.light]:children[#highlight](translate(2rem, 0))
+        base:selectors[.dark]:children[#highlight](translate(4rem, 0))">
       <div 
         data-h2-border="base(all, 1px, solid, primary.darkest.2) base:dark(all, 1px, solid, primary.lightest.2)"
         data-h2-radius="base(50px)"

@@ -13,14 +13,14 @@ var data = {
       label: 'Home',
     },
     {
-      path: 'https://gitlab.com/hydrogen-css/hydrogen',
-      title: "View Hydrogen's open source code in a new tab.",
-      label: 'Code',
-    },
-    {
       path: '/en/docs',
       title: "View Hydrogen's documentation.",
       label: 'Documentation',
+    },
+    {
+      path: 'https://github.com/hydrogen-css/hydrogen',
+      title: "View Hydrogen's open source code in a new tab.",
+      label: 'Code',
     },
   ],
   hero: {
@@ -28,19 +28,19 @@ var data = {
       {
         title: 'What is Hydrogen?',
         content: [
-          'Hydrogen is a utility CSS framework that allows you to style websites right in your markup. Design settings meet the flexibility of data attributes to help you create consistent, beautiful experiences.',
+          'Hydrogen is a CSS framework that unites the power of inline styling with the efficiency of token-style settings to help you create consistent, beautiful experiences.',
         ],
       },
       {
         title: 'How does it work?',
         content: [
-          "Hydrogen scans your markup for instances of <code>data-h2</code> attributes and builds CSS based on their values. It produces a production-ready file that only contains exactly what you've asked for.",
+          'Hydrogen scans for <code>data-h2</code> attributes and parses their values, allowing it to build and validate a production-ready CSS file that contains only what your app needs.',
         ],
       },
       {
         title: 'Why should I use it?',
         content: [
-          'Leave behind the complexities of maintaining your CSS, remembering how to name classes, defining type scales, and enforcing consistent colors. Best of all, Hydrogen is fast, legible, and open-source.',
+          "Hydrogen lets you forget the chaos of maintaining CSS. Let it handle naming methodologies, typography, and enforcing your brand. It's fast, legible, and open-source.",
         ],
       },
     ],
@@ -58,35 +58,28 @@ var data = {
       list: [
         {
           title: {
-            label: 'An easy-to-learn, namespaced syntax.',
+            label: 'The CSS you know and love.',
             id: 'syntax',
           },
           content: [
-            "Hydrogen's syntax mimics CSS to make understanding your markup as easy as possible. It pulls from existing best practices to reduce the language learning curve, and it won't interfere with your existing CSS thanks to its custom attributes.",
+            "Hydrogen's syntax allows you to use any CSS property you can think of (and a few custom ones) while enhancing them with consistent, configurable, inline queries and modifiers. Customize queries, themes, dark mode, and more.",
           ],
-          code: {
-            file: 'index.html',
-            lines: [
-              '<p data-h2-color="base(primary) base:hover(accent)">',
-              '  Welcome to Hydrogen!',
-              '</p>',
-            ],
-          },
+          example: 'properties',
         },
         {
           title: {
-            label: 'Watch it build as you work, in an instant.',
+            label: 'It works while you work, and keeps up too.',
             id: 'speed',
           },
           content: [
-            'Rather than compiling a library, Hydrogen scans your code and builds a CSS file. Integrate it into your build tools and run it in the background as you develop and it will provide an up-to-date CSS file for you on the fly.',
+            'Rather than compiling a library, Hydrogen generates CSS on the fly by scanning your code and parsing its unique attributes. Integrate it into your build tools and run it in the background as you develop for on-demand styling.',
           ],
           code: {
             file: 'terminal',
             lines: [
-              '☼ Hydrogen - Timer',
-              '> Build step: Total build',
-              '> Timer: 279ms',
+              '☼ Hydrogen - System - Parsing attributes in 45 files...',
+              '☼ Hydrogen - Timers - 0259ms (Total build)',
+              '☼ Hydrogen - Success - Hydrogen successfully built its CSS file to your output directory.',
             ],
           },
         },
@@ -96,8 +89,9 @@ var data = {
             id: 'brand',
           },
           content: [
-            'Embracing a design token style approach, Hydrogen encourages you to define decisions like color, typography, radii, and shadows in its configuration file. Use these definitions in your attributes, and update them product-wide in a matter of seconds.',
+            'Embracing a design token style approach, Hydrogen encourages you to define decisions like color, typography, shadows, and transitions in its configuration file. Use these values in your attributes, and update them product-wide in a matter of seconds.',
           ],
+          example: 'themes',
           code: {
             file: 'index.html',
             lines: [
@@ -118,49 +112,49 @@ var data = {
         {
           title: 'Inline media queries',
           content: [
-            'Define any type of query in your configuration and then call them right in your markup.',
+            'Define media queries in your configuration and then call them directly in attributes.',
           ],
         },
         {
-          title: 'Target specific selectors',
+          title: 'Inline states',
           content: [
-            'Style component states by targeting whether an ID or class is present on your element.',
+            'Style native HTML interaction states like <code>:hover</code> and <code>:focus</code> right in your markup.',
           ],
         },
         {
-          title: 'Target nested elements',
+          title: 'Inline selectors',
           content: [
-            'Using the <code>:children</code> modifier, set styles on nested tags or selectors for bulk styling.',
+            'Using the <code>:selectors</code> modifier, apply styles to a specific ID, class, or attribute.',
           ],
         },
         {
-          title: 'Inline dark mode',
+          title: 'Inline nested elements',
           content: [
-            'Pair queries with dark mode counterparts and toggle them through a class or browser setting.',
+            'Using the <code>:children</code> modifier, apply styles to nested tags or selectors for bulk styling.',
           ],
         },
         {
-          title: 'Inline state styling',
+          title: 'Automated dark mode',
           content: [
-            'Style and manage native HTML interaction states like hover and focus right in your markup.',
+            'Define sibling values for dark mode and apply it using a single value.',
           ],
         },
         {
-          title: 'CSS value support',
+          title: 'Automated theming',
           content: [
-            'Use raw CSS values in many attributes to get it pixel perfect, including color, spacing, and more.',
+            'Create entire themes for your project and apply them app-wide in an instant.',
           ],
         },
         {
           title: 'Automated typography',
           content: [
-            'Generate a type scale, vertical rhythm, and whitespace framework based on line height.',
+            'Automatically generate a type scale, vertical rhythm, and whitespace tokens.',
           ],
         },
         {
-          title: 'Open-source',
+          title: 'Open-source code',
           content: [
-            'The framework is provided under an MIT license. Dig into the code and discover the possibilities.',
+            'Hydrogen is provided under an MIT license; fork the code and change it to suit your needs.',
           ],
         },
       ],

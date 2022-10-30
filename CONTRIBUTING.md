@@ -35,14 +35,13 @@
 Hydrogen takes the following steps to build its CSS file:
 
 - locate and parse the user's settings
+  - validate settings to ensure required fields, option types, and formats
   - grab command line arguments
   - populate and overwrite any build settings
-  - create runtime values
-- validate settings to ensure required fields, option types, and formats
-- parse input using RegEx for attributes and generate their data using custom JS parsing
-- generate core CSS and reset CSS if it was requested
+  - create runtime values for themes, config, input/output
 - produce a media array from the user's settings with objects that can be populated with CSS in the correct order
-- generate exported variables if they were requested
+- parse input using RegEx for attributes and generate their data using custom JS parsing, including variable creation
+- generate core CSS and reset CSS if it was requested
 - loop through the properties found
   - create the property's CSS selectors
   - create the property's actual CSS
@@ -51,6 +50,7 @@ Hydrogen takes the following steps to build its CSS file:
 - loop through each media object in the media array and append its output to the final CSS string
 - write a raw CSS file
 - process the raw CSS with Autoprefixer and CSSnano if they're enabled
+- write a variable export file if it was requested
 - write the processed CSS file as hydrogen.css
 
 ### CSS properties and implementation
@@ -72,6 +72,14 @@ Hydrogen takes the following steps to build its CSS file:
 ### Updating the documentation
 
 ### Writing tests
+
+#### Writing function unit tests
+
+- functions should live in their own file and be paired with a matching file-name.test.js
+- tests should follow a similar format and return promises where possible
+- all unit tests should be added to the final run-all.tests.js file in helpers
+
+#### Manual visual tests
 
 - create a `test-[NAME]` directory
 - add an `env` directory with test command shell scripts

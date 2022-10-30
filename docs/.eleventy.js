@@ -1,5 +1,5 @@
 const { DateTime } = require('luxon');
-var exec = require('child_process').execSync;
+const { hydrogen_build } = require('@hydrogen-css/hydrogen/lib/build');
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
 var fs = require('fs');
 var path = require('path');
@@ -10,9 +10,11 @@ module.exports = function (eleventyConfig) {
     startPath: 'en/',
   });
 
-  // Run Hydrogen before the eleventy build executes
+  // Run Hydrogen after the eleventy build executes
   eleventyConfig.on('eleventy.after', async () => {
-    console.log(exec('npx h2-build').toString());
+    await hydrogen_build().catch((error) => {
+      console.log(error);
+    });
   });
 
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
