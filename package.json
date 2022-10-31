@@ -1,10 +1,11 @@
 {
   "name": "@hydrogen-css/hydrogen",
-  "version": "2.0.0-beta.30",
-  "description": "An open-source design and CSS utility framework powered by data-attributes. MIT Licensed.",
+  "version": "2.0.0-beta.31",
+  "description": "An open-source, inline CSS framework powered by data-attributes. MIT Licensed.",
   "keywords": [
     "Hydrogen",
     "css",
+    "inline",
     "utility",
     "framework"
   ],
@@ -17,7 +18,7 @@
     "name": "Josh Beveridge",
     "url": "https://joshbeveridge.ca"
   },
-  "main": "./bin/index.js",
+  "main": "./hydrogen.js",
   "bin": {
     "hydrogen-init": "./bin/init.js",
     "hydrogen-watch": "./bin/watch.js",
