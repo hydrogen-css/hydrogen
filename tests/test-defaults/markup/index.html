@@ -29,11 +29,6 @@
       type="text/css"
       href="../styles/hydrogen.css"
     />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="../styles/hydrogen.vars.css"
-    />
     <!-- Google fonts -->
     <link
       rel="preconnect"
@@ -45,13 +40,18 @@
       crossorigin
     />
     <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
   </head>
   <body
     data-h2-font-family="base(sans)"
-    data-h2-background-color="base(#f3f3f9)"
+    data-h2-color="base(black)"
+    data-h2-background-color="base(#f3f3f9) base:dark(#111117)"
   >
     <header>
       <div
@@ -59,16 +59,15 @@
         data-h2-padding="base(x1, 0)"
       >
         <div
-          data-h2-container="base(center, medium, x1) p-tablet(center, medium,
-        x2)"
+          data-h2-container="base(center, medium, x1) p-tablet(center, medium, x2)"
         >
           <ul
             data-h2-list-style="base(none)"
             data-h2-display="base(flex)"
             data-h2-gap="base(x1, 0)"
             data-h2-padding="base(0)"
-            data-h2-color="base:children[a]:hover(primary) base:children[a]:focus-visible(black)"
-            data-h2-transition="base:children[a]:hover(color, .2s, ease)"
+            data-h2-color="base:children[a:hover](primary) base:children[a]:focus-visible(black)"
+            data-h2-transition="base:children[a:hover](color, .2s, ease)"
             data-h2-outline="base:children[a](none)"
           >
             <li>
@@ -99,11 +98,27 @@
                 >Code</a
               >
             </li>
+            <li>
+              <button
+                type="button"
+                onclick="switchTheme(this)"
+              >
+                Change theme
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                onclick="switchMode(this)"
+              >
+                Change mode
+              </button>
+            </li>
           </ul>
         </div>
       </div>
       <div
-        data-h2-background-color="base(black)"
+        data-h2-background-color="base(black) base:dark(white)"
         data-h2-position="base(relative)"
         data-h2-overflow="base(hidden)"
       >
@@ -129,12 +144,32 @@
         >
           <h1
             data-h2-font-weight="base(700)"
-            data-h2-color="base(white)"
+            data-h2-color="base:all(white)"
             data-h2-text-align="base(center)"
-            data-h2-padding="base(x7, 0, x8, 0)"
+            data-h2-padding="base(x7, 0, x2, 0)"
           >
             Hydrogen's test suite
           </h1>
+          <p
+            data-h2-color="base:all(white)"
+            data-h2-text-align="base(center)"
+            data-h2-padding="base(0, 0, x8, 0)"
+            data-h2-display="base(block) base:theme(none)"
+          >
+            I am a unique
+            <strong data-h2-font-weight="base(700)">default theme</strong>
+            tagline.
+          </p>
+          <p
+            data-h2-color="base:all(white)"
+            data-h2-text-align="base(center)"
+            data-h2-padding="base(0, 0, x8, 0)"
+            data-h2-display="base(none) base:theme(block)"
+          >
+            I am a unique
+            <strong data-h2-font-weight="base(700)">custom theme</strong>
+            tagline.
+          </p>
         </div>
       </div>
       <div
@@ -157,7 +192,7 @@
         >
           <div
             data-h2-background-color="base(white)"
-            data-h2-shadow="base(large)"
+            data-h2-shadow="base(small)"
             data-h2-padding="base(x2)"
             data-h2-radius="base(rounded)"
           >
@@ -183,116 +218,175 @@
               that things are off to a great start.
             </p>
             <p>
-              The box
+              The boxes
               <span data-h2-display="base(none) l-tablet(inline)"
                 >on the right</span
               ><span data-h2-display="base(inline) l-tablet(none)">below</span>
-              shows how Hydrogen dynamically generates a vertical rhythm and
-              whitespace system to match your typography settings. The blue
-              lines represent 1 line-height value (x1).
+              show how Hydrogen produces color and dynamically generates a
+              vertical rhythm and whitespace system to match your typography
+              settings. The lines represent 1 line-height value (x1).
             </p>
           </div>
-          <div
-            data-h2-background-color="base(white)"
-            data-h2-shadow="base(large)"
-            data-h2-radius="base(rounded)"
-            data-h2-overflow="base(hidden)"
-          >
-            <div data-h2-position="base(relative)">
+          <div>
+            <div
+              data-h2-background-color="base(white)"
+              data-h2-shadow="base(small)"
+              data-h2-radius="base(rounded)"
+              data-h2-overflow="base(hidden)"
+              data-h2-padding="base(x2)"
+              data-h2-margin="base(0, 0, x1, 0)"
+            >
               <div
-                data-h2-position="base(absolute)"
-                data-h2-offset="base(0, 0, 0, 0)"
-                data-h2-height="base:children[>div](x1)"
-                data-h2-width="base:children[>div](100%)"
-                data-h2-border="base:children[>div:not(:first-child)](top, 1px, solid, accent.5)"
+                data-h2-display="base(grid)"
+                data-h2-gap="base(x.5)"
+                data-h2-grid-template-columns="base(repeat(10, minmax(0, 1fr)))"
+                data-h2-text-align="base:children[>div](center)"
+                data-h2-padding="base:children[>div](x1, 0)"
+                data-h2-radius="base:children[>div](rounded)"
+                data-h2-font-weight="base:children[>div](700)"
               >
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div data-h2-background-color="base(primary.darkest)">
+                  &nbsp;
+                </div>
+                <div data-h2-background-color="base(primary.darker)">
+                  &nbsp;
+                </div>
+                <div data-h2-background-color="base(primary.dark)">&nbsp;</div>
+                <div
+                  data-h2-background-color="base(primary)"
+                  data-h2-grid-column="base(4/8)"
+                >
+                  Primary
+                </div>
+                <div data-h2-background-color="base(primary.light)">&nbsp;</div>
+                <div data-h2-background-color="base(primary.lighter)">
+                  &nbsp;
+                </div>
+                <div data-h2-background-color="base(primary.lightest)">
+                  &nbsp;
+                </div>
+                <div data-h2-background-color="base(accent.darkest)">
+                  &nbsp;
+                </div>
+                <div data-h2-background-color="base(accent.darker)">&nbsp;</div>
+                <div data-h2-background-color="base(accent.dark)">&nbsp;</div>
+                <div
+                  data-h2-background-color="base(accent)"
+                  data-h2-grid-column="base(4/8)"
+                >
+                  Secondary
+                </div>
+                <div data-h2-background-color="base(accent.light)">&nbsp;</div>
+                <div data-h2-background-color="base(accent.lighter)">
+                  &nbsp;
+                </div>
+                <div data-h2-background-color="base(accent.lightest)">
+                  &nbsp;
+                </div>
               </div>
-              <div
-                data-h2-position="base(relative)"
-                data-h2-padding="base(x2)"
-                data-h2-background-color="base:children[a]:focus-visible(focus)"
-                data-h2-color="base:children[a]:hover(primary) base:children[a]:focus-visible(black)"
-                data-h2-transition="base:children[a]:hover(color, .2s, ease)"
-                data-h2-outline="base:children[a](none)"
-              >
-                <h2
-                  data-h2-font-size="base(h3)"
-                  data-h2-margin="base(0, 0, x1, 0)"
+            </div>
+            <div
+              data-h2-background-color="base(white)"
+              data-h2-shadow="base(small)"
+              data-h2-radius="base(rounded)"
+              data-h2-overflow="base(hidden)"
+            >
+              <div data-h2-position="base(relative)">
+                <div
+                  data-h2-position="base(absolute)"
+                  data-h2-offset="base(0, 0, 0, 0)"
+                  data-h2-height="base:children[>div](x1)"
+                  data-h2-width="base:children[>div](100%)"
+                  data-h2-border="base:children[>div:not(:first-child)](top, 1px, solid, accent.50)"
                 >
-                  A heading
-                </h2>
-                <p data-h2-margin="base(0, 0, x1, 0)">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Curabitur lectus leo, finibus non arcu non, luctus vehicula
-                  massa. Nam scelerisque ligula orci, non pharetra orci porta
-                  id. Donec quis tincidunt nunc, at fermentum ex. Nulla
-                  tincidunt libero a ante facilisis, quis feugiat tellus
-                  molestie.
-                </p>
-                <p>
-                  Cras sodales pharetra nibh, quis suscipit odio dignissim
-                  tempus.
-                  <a href=""
-                    >Phasellus ante mauris, posuere et dignissim quis, placerat
-                    et tellus.</a
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <div
+                  data-h2-position="base(relative)"
+                  data-h2-padding="base(x2)"
+                  data-h2-background-color="base:children[a:focus-visible](focus)"
+                  data-h2-color="base:children[a:hover](primary) base:children[a:focus-visible](black)"
+                  data-h2-transition="base:children[a:hover](color, .2s, ease)"
+                  data-h2-outline="base:children[a](none)"
+                >
+                  <h2
+                    data-h2-font-size="base(h3)"
+                    data-h2-margin="base(0, 0, x1, 0)"
                   >
-                  Nam molestie metus a ipsum ultricies placerat.
-                </p>
-                <h3
-                  data-h2-font-size="base(h5)"
-                  data-h2-font-weight="base(800)"
-                  data-h2-margin="base(x2, 0, x1, 0)"
-                >
-                  A subheading
-                </h3>
-                <p data-h2-margin="base(0, 0, x1, 0)">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-                <ul
-                  data-h2-margin="base(0, 0, x1, 0)"
-                  data-h2-padding="base(0, 0, 0, x1)"
-                >
-                  <li>Morbi sed erat vel sapien mollis mattis.</li>
-                  <li>Proin dapibus tellus ac aliquam mollis.</li>
-                  <li>
-                    Curabitur sed lectus ut nulla porta porttitor eu at nulla.
-                  </li>
-                </ul>
-                <p>
-                  Cras sodales pharetra nibh, quis suscipit odio dignissim
-                  tempus. Phasellus ante mauris, posuere et dignissim quis,
-                  placerat et tellus. Nam molestie metus a ipsum ultricies
-                  placerat.
-                </p>
+                    A heading
+                  </h2>
+                  <p data-h2-margin="base(0, 0, x1, 0)">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Curabitur lectus leo, finibus non arcu non, luctus vehicula
+                    massa. Nam scelerisque ligula orci, non pharetra orci porta
+                    id. Donec quis tincidunt nunc, at fermentum ex. Nulla
+                    tincidunt libero a ante facilisis, quis feugiat tellus
+                    molestie.
+                  </p>
+                  <p>
+                    Cras sodales pharetra nibh, quis suscipit odio dignissim
+                    tempus.
+                    <a href=""
+                      >Phasellus ante mauris, posuere et dignissim quis,
+                      placerat et tellus.</a
+                    >
+                    Nam molestie metus a ipsum ultricies placerat.
+                  </p>
+                  <h3
+                    data-h2-font-size="base(h5)"
+                    data-h2-font-weight="base(800)"
+                    data-h2-margin="base(x2, 0, x1, 0)"
+                  >
+                    A subheading
+                  </h3>
+                  <p data-h2-margin="base(0, 0, x1, 0)">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                  <ul
+                    data-h2-margin="base(0, 0, x1, 0)"
+                    data-h2-padding="base(0, 0, 0, x1)"
+                  >
+                    <li>Morbi sed erat vel sapien mollis mattis.</li>
+                    <li>Proin dapibus tellus ac aliquam mollis.</li>
+                    <li>
+                      Curabitur sed lectus ut nulla porta porttitor eu at nulla.
+                    </li>
+                  </ul>
+                  <p>
+                    Cras sodales pharetra nibh, quis suscipit odio dignissim
+                    tempus. Phasellus ante mauris, posuere et dignissim quis,
+                    placerat et tellus. Nam molestie metus a ipsum ultricies
+                    placerat.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

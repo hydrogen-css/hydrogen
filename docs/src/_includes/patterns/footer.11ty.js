@@ -33,7 +33,7 @@ function render(data, props) {
             data-h2-font-size="base(h6)"
             data-h2-font-weight="base(300)"
             data-h2-max-width="base(x15)"
-            data-h2-color="base(white.8)"
+            data-h2-color="base(white.80)"
             data-h2-margin="base(0, 0, x1, auto)">${
               data.site.footer.farewell[data.locale]
             }</p>

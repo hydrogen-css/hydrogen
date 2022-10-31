@@ -1,5 +1,5 @@
 // Hydrogen dependencies
-const property_data = require('../../../../lib/data/properties.json');
+const property_data = require('../../../../lib/data/property-model');
 
 // Local dependencies
 const heading = require('../components/headings.11ty');
@@ -25,8 +25,8 @@ function render(data) {
         }</p>
         <ul data-h2-padding="base(0, 0, 0, x1)">
     `;
-    Object.keys(properties).forEach(function (property, p_index) {
-      if (group === properties[property].group) {
+    properties.forEach(function (property, p_index) {
+      if (group === property.group) {
         if (
           property != 'margin-top' &&
           property != 'margin-right' &&
@@ -43,13 +43,13 @@ function render(data) {
           <li data-h2-margin="base(x.25, 0, 0, 0)">
             <a
               href="/${data.locale}/docs/properties/${
-              properties[property].group
+              property.group
             }/${property}"
               title=""
               data-h2-background-color="base:focus-visible(focus)"
               data-h2-outline="base(none)"
               data-h2-color="base:hover(primary) base:dark:hover(lighter.primary) base:focus-visible(black)">${
-                properties[property].title[data.locale]
+                property.title[data.locale]
               }</a>
           </li>
         `;

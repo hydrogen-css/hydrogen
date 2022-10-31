@@ -16,6 +16,50 @@ function render(data) {
   // Generate main features
   let main_features = ``;
   data.features.main.list.forEach(function (item, index) {
+    let example;
+    if (item.example === 'themes') {
+      example = String.raw`
+        <div data-h2-display="base(grid)" data-h2-grid-template-columns="base(1fr 1fr)" data-h2-gap="base(x1)" data-h2-height="base(100%)">
+          <button>Fluo</button>
+          <button>Posh</button>
+          <button>Neo</button>
+          <button>Boo!</button>
+        </div>
+      `;
+    } else if (item.example === 'properties') {
+      example = String.raw`
+        <div
+          data-h2-background-color="base:children[div](primary.lightest)"
+          data-h2-border="base:children[div](all, 1px, solid, primary.dark) base:children[p](all, 1px, solid, transparent)"
+          data-h2-display="base(flex) base:children[div](inline-block)"
+          data-h2-flex-wrap="base(wrap)"
+          data-h2-gap="base(x.25)"
+          data-h2-padding="base(x.5, 0, 0, 0) base:children[div, p](x.15, x.5)"
+          data-h2-radius="base:children[div](pill)">
+          <div>background</div>
+          <div>color</div>
+          <div>gap</div>
+          <div>grid</div>
+          <div>flex</div>
+          <div>font-family</div>
+          <div>font-size</div>
+          <div>font-weight</div>
+          <div>margin</div>
+          <div>padding</div>
+          <div>position</div>
+          <div>shadow</div>
+          <div>transform</div>
+          <div>transition</div>
+          <div>z-index</div>
+          <p>and more...</p>
+        </div>
+      `;
+    } else {
+      example = code.render(data, {
+        file: item.code.file,
+        lines: item.code.lines,
+      });
+    }
     main_features =
       main_features +
       String.raw`
@@ -50,10 +94,7 @@ function render(data) {
               })()}
             </div>
             <div>
-              ${code.render(data, {
-                file: item.code.file,
-                lines: item.code.lines,
-              })}
+              ${example}
             </div>
           </div>
         </div>

@@ -31,8 +31,8 @@ function render(data) {
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
       </head>
       <body 
-        data-h2-background-color="base(#f3f3f9) base:dark(black) base:children[p code](black.1) base:dark:children[p code](code)"
-        data-h2-color="base(black.8) base:dark(white.6) base:children[p code](black) base:dark:children[p code](white)"
+        data-h2-background-color="base(#f3f3f9) base:dark(black) base:children[p code](black.10) base:dark:children[p code](code)"
+        data-h2-color="base(black.80) base:dark(white.60) base:children[p code](black) base:dark:children[p code](white)"
         data-h2-font-size="base:children[p code](caption)"
         data-h2-display="base:children[p code](inline-block)"
         data-h2-padding="base:children[p code](0, x.25)"

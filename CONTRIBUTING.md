@@ -34,30 +34,24 @@
 
 Hydrogen takes the following steps to build its CSS file:
 
-- checks for a configuration file
-  - if it can't find one, it checks the folder above
-- validates the configuration file has no errors or missing required values
-- loads the validated configuration
-- checks the "input" value in the configuration file and creates a list of files to check for attributes
-- loops through each file, loading it, converting it to a string, and scanning it for Hydrogen attributes
-- returns an array of Hydrogen attributes to be used
-- checks to see if the wrapper attribute exists anywhere and logs a warning if it doesn't
-- builds the core reset style CSS
-- creates a unique array of empty media queries from the configuration in the correct cascade order
-- builds a CSS variable file if the user has requested one
-- for each attribute, the property is found and individual values are separated
-- for each value found:
-  - the value is parsed for the media, mode, and state portion (anything before the "()") characters
-  - this portion is then parsed by ":" characters and compared against the available media query, mode, and state options for matches
-  - the CSS selector is constructed (including any pseudo elements required by states that have been found and/or classes supplied through the class modifier and/or children through the children modifier)
-  - the interior options are then parsed and separated
-  - Hydrogen then loops through all available properties, comparing the property found to what's available
-  - when it finds a match, it builds the relevant CSS using either a generic or custom script, depending on the complexity of the property
-  - it then does a complex match between the media query array produced earlier and the values found for media query, mode, and state
-    - when a match is found (e.g. base query, dark mode, hover), it adds the full CSS value to the respective media array
-- Hydrogen then loops through all the completed media array entries, appending them to a single string and closing query brackets where necessary
-- the CSS file is then written as a "raw" file so that it can be processed
-- AutoPrefixer and CSSnano are both run on the file with custom settings to produce the final CSS
+- locate and parse the user's settings
+  - validate settings to ensure required fields, option types, and formats
+  - grab command line arguments
+  - populate and overwrite any build settings
+  - create runtime values for themes, config, input/output
+- produce a media array from the user's settings with objects that can be populated with CSS in the correct order
+- parse input using RegEx for attributes and generate their data using custom JS parsing, including variable creation
+- generate core CSS and reset CSS if it was requested
+- loop through the properties found
+  - create the property's CSS selectors
+  - create the property's actual CSS
+  - validate the final CSS output to ensure it's valid
+  - add the final, valid CSS to its matching media object in the media array
+- loop through each media object in the media array and append its output to the final CSS string
+- write a raw CSS file
+- process the raw CSS with Autoprefixer and CSSnano if they're enabled
+- write a variable export file if it was requested
+- write the processed CSS file as hydrogen.css
 
 ### CSS properties and implementation
 
@@ -78,6 +72,14 @@ Hydrogen takes the following steps to build its CSS file:
 ### Updating the documentation
 
 ### Writing tests
+
+#### Writing function unit tests
+
+- functions should live in their own file and be paired with a matching file-name.test.js
+- tests should follow a similar format and return promises where possible
+- all unit tests should be added to the final run-all.tests.js file in helpers
+
+#### Manual visual tests
 
 - create a `test-[NAME]` directory
 - add an `env` directory with test command shell scripts
