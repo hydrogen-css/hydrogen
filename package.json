@@ -1,6 +1,6 @@
 {
   "name": "@hydrogen-css/hydrogen",
-  "version": "2.0.0-beta.31",
+  "version": "2.0.0-beta.32",
   "description": "An open-source, inline CSS framework powered by data-attributes. MIT Licensed.",
   "keywords": [
     "Hydrogen",
@@ -35,6 +35,8 @@
   },
   "scripts": {
     "setup": "lib/setup/setup.sh",
+    "refresh-docs": "lib/setup/docs-refresh.sh",
+    "refresh-tests": "lib/setup/tests-refresh.sh",
     "docs": "cd docs && npm start",
     "tests": "node -e 'require(\"./lib/scripts/helpers/run-all.test\").test()'",
     "test-function-calculate-line-height": "node -e 'require(\"./lib/scripts/helpers/calculate-line-height.test\").runTest()'",
@@ -44,8 +46,7 @@
     "test-function-parse-output": "node -e 'require(\"./lib/scripts/helpers/parse-output.test\").runTest()'",
     "test-function-parse-basic-property": "node -e 'require(\"./lib/scripts/properties/parse-basic-property.test\").runTest()'",
     "test-function-load-configuration": "node -e 'require(\"./lib/scripts/settings/load-configuration.test\").runTest()'",
-    "refresh-docs": "lib/setup/docs-refresh.sh",
-    "refresh-tests": "lib/setup/tests-refresh.sh",
+    "test-env-attributes": "cd tests/test-attributes && node -e 'require(\"./run.test\").run_test()'",
     "test-control": "tests/test-control/env/build.sh",
     "test-control-logs": "tests/test-control/env/build-logs.sh",
     "test-defaults": "tests/test-defaults/env/serve.sh",
