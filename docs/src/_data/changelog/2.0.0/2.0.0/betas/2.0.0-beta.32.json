@@ -1,0 +1,36 @@
+{
+  "version": "2.0.0-beta.32",
+  "date": "2022/NOV/01",
+  "author": "Josh Beveridge",
+  "beta": true,
+  "en": {
+    "breaking": [],
+    "features": [],
+    "optimizations": [
+      {
+        "changes": [
+          "Added new test functionality that supports running full Hydrogen builds and returning test results."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      }
+    ],
+    "bugfixes": [
+      {
+        "changes": [
+          "Fixed a bug where attributes were ignored during file processing if there was whitespace between key/value pairs."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      }
+    ]
+  },
+  "fr": {
+    "breaking": [],
+    "features": [],
+    "optimizations": [],
+    "bugfixes": []
+  }
+}

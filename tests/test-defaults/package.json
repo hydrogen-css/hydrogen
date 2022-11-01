@@ -4,8 +4,8 @@
   "scripts": {
     "browsersync": "browser-sync start --server --watch --startPath markup/index.html --reload-delay 500ms --no-open",
     "watch": "npx h2-watch",
-    "watch-logs": "npx h2-watch --logs",
-    "watch-clean": "npx h2-watch --clean",
+    "watch-logs": "npx h2-watch --h2_logs",
+    "watch-clean": "npx h2-watch --h2_clean",
     "serve": "npm-run-all --parallel watch browsersync",
     "serve-logs": "npm-run-all --parallel watch-logs browsersync",
     "serve-clean": "npm-run-all --parallel watch-clean browsersync"
