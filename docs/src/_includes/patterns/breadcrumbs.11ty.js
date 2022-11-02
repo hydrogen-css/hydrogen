@@ -174,7 +174,7 @@ function render(data) {
                 title="French translations for Hydrogen's documentation are coming soon."
                 data-h2-background-color="base:focus-visible(focus)"
                 data-h2-outline="base(none)"
-                data-h2-color="base(black.3) base:dark(white.3) base:focus-visible(black)">FR</a>
+                data-h2-color="base(black.30) base:dark(white.30) base:focus-visible(black)">FR</a>
             </li>
             </ul>
           </div>

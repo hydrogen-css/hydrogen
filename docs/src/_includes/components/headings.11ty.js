@@ -27,10 +27,15 @@ function render(data, props) {
     h1: 'data-h2-font-weight="base(700)"',
     h2: 'data-h2-font-weight="base(700)"',
     h3: 'data-h2-font-weight="base(700)"',
-    h4: 'data-h2-font-weight="base(700)"',
+    h4: 'data-h2-font-weight="base(300)"',
     h5: 'data-h2-font-weight="base(700)"',
     h6: 'data-h2-font-weight="base(700)"',
   };
+  // Set color
+  let color = "data-h2-color='base(black) base:dark(white)'";
+  if (props.color) {
+    color = props.color;
+  }
   // Set layout options
   let layout = 'data-h2-grid-template-columns="base(1fr)"';
   if (props.img || props.flourish) {
@@ -72,6 +77,27 @@ function render(data, props) {
       heading: props.size,
     });
   }
+  // Create hash
+  let hash = ``;
+  if (props.id != false) {
+    hash = String.raw`
+      <a 
+        data-h2-color="base(lightest.black) base:hover(primary) base:dark(darker.white) base:focus-visible(black)" 
+        data-h2-font-size="base(caption)" 
+        data-h2-display="base(inline)"
+        data-h2-background-color="base:focus-visible(focus)"
+        data-h2-padding="base(x.15, x.25)"
+        data-h2-font-weight="base(700)"
+        data-h2-position="base(absolute)"
+        data-h2-offset="base(50%, auto, auto, -x1)"
+        data-h2-text-decoration="base(none)"
+        data-h2-outline="base(none)"
+        style="transform: translate(0, -50%)"
+        href="${data.page.url}#${props.id}" 
+        title="Skip to this section.">
+        #</a>
+    `;
+  }
   // Create link
   let link = ``;
   if (props.link) {
@@ -109,24 +135,10 @@ function render(data, props) {
               id="${props.id}" 
               ${font_sizes[props.size]}
               ${font_weights[props.size]}
-              data-h2-color='base(black) base:dark(white)' 
+              ${color}
               data-h2-position='base(relative)'
               data-h2-display="base(inline-block) p-tablet(block)">
-              <a 
-                data-h2-color="base(lightest.black) base:hover(primary) base:dark(darker.white) base:focus-visible(black)" 
-                data-h2-font-size="base(caption)" 
-                data-h2-display="base(inline)"
-                data-h2-background-color="base:focus-visible(focus)"
-                data-h2-padding="base(x.15, x.25)"
-                data-h2-font-weight="base(700)"
-                data-h2-position="base(absolute)"
-                data-h2-offset="base(50%, auto, auto, -x1)"
-                data-h2-text-decoration="base(none)"
-                data-h2-outline="base(none)"
-                style="transform: translate(0, -50%)"
-                href="${data.page.url}#${props.id}" 
-                title="Skip to this section.">
-                #</a>
+              ${hash}
               ${props.label}
             </${props.tag}>
           </div>

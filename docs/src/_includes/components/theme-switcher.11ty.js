@@ -21,7 +21,7 @@ function render(data) {
         base:selectors[.light]:children[#highlight](translate(2rem, 0))
         base:selectors[.dark]:children[#highlight](translate(4rem, 0))">
       <div 
-        data-h2-border="base(all, 1px, solid, primary.darkest.2) base:dark(all, 1px, solid, primary.lightest.2)"
+        data-h2-border="base(all, 1px, solid, primary.darkest.20) base:dark(all, 1px, solid, primary.lightest.20)"
         data-h2-radius="base(50px)"
         data-h2-padding="base(x.25)"
         data-h2-position="base(relative)">
@@ -30,7 +30,7 @@ function render(data) {
           data-h2-gap="base(.25rem)"
           data-h2-height="base:children[>div](1.75rem)"
           data-h2-width="base:children[>div](1.75rem)"
-          data-h2-background-color="base:children[>div](rgba(230, 230, 230, 1)) base:children[>div]:dark(white.1)"
+          data-h2-background-color="base:children[>div](rgba(230, 230, 230, 10)) base:children[>div]:dark(white.10)"
           data-h2-radius="base:children[>div](circle)">
           <div></div>
           <div></div>

@@ -15,7 +15,7 @@ var data = {
     {
       path: '/en/docs',
       title: "View Hydrogen's documentation.",
-      label: 'Documentation',
+      label: 'Docs',
     },
     {
       path: 'https://github.com/hydrogen-css/hydrogen',
@@ -243,8 +243,8 @@ var data = {
   },
   properties: {
     title: {
-      label: 'Find a property',
-      id: 'properties',
+      label: 'The details',
+      id: 'details',
       icon: {
         path: '/static/img/icon-compass.svg',
         alt: 'A sticker-style icon of a compass.',
