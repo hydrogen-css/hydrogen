@@ -1,0 +1,46 @@
+{
+  "version": "2.0.0-beta.33",
+  "date": "2022/NOV/03",
+  "author": "Josh Beveridge",
+  "beta": true,
+  "en": {
+    "breaking": [],
+    "features": [
+      {
+        "changes": [
+          "Enhanced the parser to accurately find query values located inside of backtick characters."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": [
+          "An automated test was written for this feature."
+        ]
+      },
+      {
+        "changes": [
+          "Adds a new verbose setting to control how much console output Hydrogen produces."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      }
+    ],
+    "optimizations": [],
+    "bugfixes": [
+      {
+        "changes": [
+          "Fixed a bug caused by the Glob package where it doesn't accept \"\\\" characters, causing the build to fail on Windows."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
+      }
+    ]
+  },
+  "fr": {
+    "breaking": [],
+    "features": [],
+    "optimizations": [],
+    "bugfixes": []
+  }
+}

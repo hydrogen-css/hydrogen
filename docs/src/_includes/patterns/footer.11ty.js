@@ -12,6 +12,12 @@ var data = {};
  * @returns {String} the rendered pattern
  */
 function render(data, props) {
+  let container =
+    'data-h2-container="base(center, large, x1) p-tablet(center, large, x2)"';
+  if (data.navigation.key === 'home') {
+    container =
+      'data-h2-container="base(center, medium, x1) p-tablet(center, medium, x2)"';
+  }
   // Create the footer
   let footer = String.raw`
     <footer
@@ -32,7 +38,7 @@ function render(data, props) {
           <p
             data-h2-font-size="base(h6)"
             data-h2-font-weight="base(300)"
-            data-h2-max-width="base(x15)"
+            data-h2-max-width="base(x18)"
             data-h2-color="base(white.80)"
             data-h2-margin="base(0, 0, x1, auto)">${
               data.site.footer.farewell[data.locale]
@@ -50,15 +56,11 @@ function render(data, props) {
     <div
       data-h2-padding="base(x4, 0)"
       data-h2-position="base(relative)">
-      <div data-h2-container="base(center, medium, x1) p-tablet(center, medium, x2)">
+      <div ${container}>
         ${footer}
       </div>
     </div>
   `;
-  // Create the subpage wrapper and assemble it
-  let footer_wrapper = ``;
-  if (props.home) {
-  }
   // Render the pattern
   return footer_content;
 }

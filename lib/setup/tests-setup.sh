@@ -66,12 +66,4 @@ rm -rf hydrogen.config.json
 npm install --no-fund --no-audit
 npm link @hydrogen-css/hydrogen --no-fund --no-audit
 echo ''
-cd ../test-stress
-node ../../lib/scripts/logs/tests/test-setup.js --test="stress"
-rm -rf package-lock.json
-rm -rf node_modules
-rm -rf hydrogen.config.json
-npm install --no-fund --no-audit
-npm link @hydrogen-css/hydrogen --no-fund --no-audit
-echo ''
 cd ../../

@@ -6,3 +6,10 @@ const test = {
   'data-h2-background-color':
     'base(black) base:dark(white) base:children[>div](red) p-tablet(black)',
 };
+
+const jsx = {
+  'data-h2-background-color': `
+    base(magenta)
+    base:dark(lime)
+  `,
+};

@@ -8,6 +8,8 @@ function modify_settings(settings) {
   settings.input = ['src/_includes'];
   settings.output = '_site/static/css';
   settings.modes['dark'].method = 'toggle';
+  settings.logging.timers = false;
+  settings.logging.verbose = false;
   settings.themes[0].typography = [
     {
       query_key: 'base',
@@ -18,7 +20,7 @@ function modify_settings(settings) {
     {
       query_key: 'desktop',
       size: '112.5%',
-      line_height: '1.4',
+      line_height: '1.5',
       type_scale: '1.2',
     },
   ];

@@ -176,9 +176,11 @@
 [data-h2] [data-h2-background-color*="base(green)"]{background-color: green;}
 [data-h2] [data-h2-background-color*="base(black)"]{background-color: rgba(var(--h2-color-black), 1);}
 [data-h2] [data-h2-background-color*="base:children[>div](red)"] >div:not([data-h2-background-color]){background-color: red;}
+[data-h2] [data-h2-background-color*="base(magenta)"]{background-color: magenta;}
 /* base - dark - default - default */
 
 [data-h2*="dark"] [data-h2-background-color*="base:dark(white)"]{background-color: rgba(var(--h2-color-white), 1);}
+[data-h2*="dark"] [data-h2-background-color*="base:dark(lime)"]{background-color: lime;}
 /* base - light - visited - default */
 
 /* base - dark - visited - default */

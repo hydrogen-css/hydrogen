@@ -31,6 +31,8 @@ function test() {
         '[data-h2-background-color*="p-tablet(black)"]{background-color: rgba(var(--h2-color-black), 1);}}',
         '[data-h2-background-color*="desktop(primary)"]{background-color: rgba(var(--h2-color-primary), 1);}',
         '[data-h2-background-color*="desktop(purple)"]{background-color: purple;}}',
+        '[data-h2-background-color*="base(magenta)"]{background-color: magenta;}',
+        '[data-h2-background-color*="base:dark(lime)"]{background-color: lime;}',
       ];
       create_settings()
         .then((result) => {
