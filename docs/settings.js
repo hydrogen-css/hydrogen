@@ -9,6 +9,7 @@ function modify_settings(settings) {
   settings.output = '_site/static/css';
   settings.modes['dark'].method = 'toggle';
   settings.logging.timers = false;
+  settings.logging.verbose = false;
   settings.themes[0].typography = [
     {
       query_key: 'base',

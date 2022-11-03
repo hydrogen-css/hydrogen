@@ -15,6 +15,14 @@
         "log": [
           "An automated test was written for this feature."
         ]
+      },
+      {
+        "changes": [
+          "Adds a new verbose setting to control how much console output Hydrogen produces."
+        ],
+        "migrations": [],
+        "attributes": [],
+        "log": []
       }
     ],
     "optimizations": [],
