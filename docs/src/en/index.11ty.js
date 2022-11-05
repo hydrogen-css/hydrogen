@@ -20,7 +20,7 @@ var data = {
     {
       path: 'https://github.com/hydrogen-css/hydrogen',
       title: "View Hydrogen's open source code in a new tab.",
-      label: 'Code',
+      label: 'Github',
     },
   ],
   hero: {

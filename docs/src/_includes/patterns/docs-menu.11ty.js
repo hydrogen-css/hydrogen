@@ -1,6 +1,39 @@
 var data = {};
 
 function render(data) {
+  function create_page_menu() {
+    let output = ``;
+    data.main.forEach((item) => {
+      if (item.type === 'title') {
+        output =
+          output +
+          String.raw`
+          <li data-h2-margin="base(x.25, 0, 0, 0)">
+            <a
+              href="#${item.id}"
+              title="Skip to this section on the page.">${item.label}</a>
+          </li>
+        `;
+      } else if (item.type === 'section') {
+        output = output + String.raw`<ul data-h2-padding="base(0, 0, 0, x1)">`;
+        item.content.forEach((item) => {
+          if (item.type === 'title') {
+            output =
+              output +
+              String.raw`
+              <li data-h2-margin="base(x.25, 0, 0, 0)">
+                <a
+                  href="#${item.id}"
+                  title="Skip to this section on the page.">${item.label}</a>
+              </li>
+            `;
+          }
+        });
+        output = output + String.raw`</ul>`;
+      }
+    });
+    return output;
+  }
   return String.raw`
     <div
       data-h2-position="base(sticky)"
@@ -20,7 +53,7 @@ function render(data) {
               data-h2-font-color="base(dark.font) base:dark(white)"
               data-h2-text-align="base(center)">
               <a
-                href="/{{ locale }}/docs"
+                href="/${data.locale}/docs"
                 title=""
                 data-h2-background-color="base:focus-visible(focus)"
                 data-h2-color="base(black) base:focus-visible(black) base:hover(primary) base:dark(white) base:dark:hover(primary.lighter)"
@@ -29,7 +62,7 @@ function render(data) {
                 Hydrogen
               </a>
             </h1>
-            <!-- <form data-h2-margin="base(x2, auto, auto, auto)">
+            <form data-h2-margin="base(x2, auto, auto, auto)">
               <label
                 data-h2-display="base(block)"
                 data-h2-font-size="base(caption)"
@@ -43,7 +76,7 @@ function render(data) {
                 data-h2-width="base(100%)"
                 type="text"
                 placeholder="Find something...">
-            </form> -->
+            </form>
             <div
               class="main_menu" 
               data-h2-margin="base(x2, 0, 0, 0)">
@@ -80,10 +113,18 @@ function render(data) {
                   </li>
                   <li data-h2-margin="base(x.25, 0, 0, 0)">
                     <a 
+                      href="/en/docs"
+                      title=""
+                      data-h2-font-color="base:hover(primary) base:dark:hover(lighter.primary)">
+                      Docs
+                    </a>
+                  </li>
+                  <li data-h2-margin="base(x.25, 0, 0, 0)">
+                    <a 
                       href="https://github.com/hydrogen-design-system/hydrogen"
                       title=""
                       data-h2-font-color="base:hover(primary) base:dark:hover(lighter.primary)">
-                      Code
+                      Github
                     </a>
                   </li>
                   <li data-h2-margin="base(x.25, 0, 0, 0)">
@@ -91,7 +132,7 @@ function render(data) {
                       href="/en/releases"
                       title=""
                       data-h2-font-color="base:hover(primary) base:dark:hover(lighter.primary)">
-                      Updates
+                      Releases
                     </a>
                   </li>
                   <li data-h2-margin="base(x.25, 0, 0, 0)">
@@ -109,7 +150,7 @@ function render(data) {
               data-h2-margin="base(x1, 0, x.25, 0)"
               data-h2-font-weight="base(700)">On this page</p>
             <ul data-h2-padding="base(0, 0, 0, x1)">
-              
+              ${create_page_menu()}
             </ul>
           </div>
       </div>

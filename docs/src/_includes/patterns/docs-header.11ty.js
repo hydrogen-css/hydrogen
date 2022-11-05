@@ -66,7 +66,7 @@ function render(data) {
           ${generate_links()}
         </div>
       `;
-    } else if (data.navigation.key === 'releases') {
+    } else {
       sub = String.raw`
         <div data-h2-flex-grid="base(flex-start, x2, 0)">
           <div

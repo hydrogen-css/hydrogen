@@ -4,11 +4,11 @@ const { latest, beta } = require('../../_data/releases');
 
 var data = {};
 
-function render(data, section) {
+function render(data, content, level) {
   let type;
-  if (section.releases === 'latest') {
+  if (content.category === 'latest') {
     type = latest;
-  } else if (section.releases === 'beta') {
+  } else if (content.category === 'beta') {
     type = beta;
   }
   function get_release_content(release, change) {
@@ -24,17 +24,17 @@ function render(data, section) {
     } else if (change === 'testing') {
       title = 'Development and testing';
     }
-    let content = ``;
+    let output = ``;
     if (release[data.locale][change].length > 0) {
-      content =
-        content +
+      output =
+        output +
         String.raw`
         ${heading.render(data, {
-          tag: 'h5',
-          size: 'h6',
+          tag: level,
+          size: level,
           label: title,
           margin: 'data-h2-margin="base(x2, 0, x.5, 0)"',
-          id: 'latest',
+          id: content.category,
           alignment: 'left',
         })}
         <ul data-h2-padding="base(0, 0, 0, x1)">
@@ -42,23 +42,23 @@ function render(data, section) {
       release[data.locale][change].forEach((item) => {
         if (Array.isArray(item.changes)) {
           item.changes.forEach((change) => {
-            content =
-              content +
+            output =
+              output +
               String.raw`
                 <li>${change}</li>
               `;
           });
         } else {
-          content =
-            content +
+          output =
+            output +
             String.raw`
               <li>${item.changes}</li>
             `;
         }
       });
-      content = content + String.raw`</ul>`;
+      output = output + String.raw`</ul>`;
     }
-    return content;
+    return output;
   }
   // Create breaking
   let breaking = get_release_content(type, 'breaking');
