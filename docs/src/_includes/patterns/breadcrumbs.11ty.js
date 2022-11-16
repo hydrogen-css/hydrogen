@@ -132,7 +132,7 @@ function render(data) {
   });
   return String.raw`
     <div
-      data-h2-background-color="base(white) base:dark(dark.font)"
+      data-h2-background-color="base(background)"
       data-h2-border="base(bottom, 1px, solid, primary.darkest.2) base:dark(bottom, 1px, solid, primary.lightest.2)"
       data-h2-padding="base(x1, 0) l-tablet(x.5, 0)"
       data-h2-layer="base(3, relative)">
@@ -161,7 +161,7 @@ function render(data) {
               data-h2-justify-content="base(center) l-tablet(flex-end)"
               data-h2-gap="base(x1)">
               <li>
-                <span>version <strong data-h2-font-weight="base(800)" data-h2-color="base(dark.primary) base:dark(lighter.primary)">${
+                <span>version <strong data-h2-font-weight="base(800)" data-h2-color="base(dark.primary)">${
                   data.releases.beta.version
                 }</strong></span>
               </li>

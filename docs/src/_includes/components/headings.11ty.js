@@ -7,7 +7,7 @@ var data = {};
 /**
  * Render a heading component
  * @param {Object} data 11ty's data
- * @param {{tag: String, size: String, label: String, id: String, alignment?: String, margin?: String, img?: {path: String, alt: String}, flourish?: boolean, link?: {path: String, title: String, label: String}}} props the components's properties
+ * @param {{tag: String, size: String, label: String, id: String, alignment?: String, margin?: String, img?: {path: String, alt: String}, flourish?: boolean, chips?: HTMLElement[], link?: {path: String, title: String, label: String}}} props the components's properties
  * @returns {String} the rendered template
  */
 function render(data, props) {
@@ -32,7 +32,7 @@ function render(data, props) {
     h6: 'data-h2-font-weight="base(700)"',
   };
   // Set color
-  let color = "data-h2-color='base(black) base:dark(white)'";
+  let color = "data-h2-color='base(black)'";
   if (props.color) {
     color = props.color;
   }
@@ -82,21 +82,26 @@ function render(data, props) {
   if (props.id != false) {
     hash = String.raw`
       <a 
-        data-h2-color="base(lightest.black) base:hover(primary) base:dark(darker.white) base:focus-visible(black)" 
+        data-h2-color="base(black.lightest) base:hover(primary) base:dark(black.darker) base:focus-visible(black)" 
         data-h2-font-size="base(caption)" 
         data-h2-display="base(inline)"
         data-h2-background-color="base:focus-visible(focus)"
         data-h2-padding="base(x.15, x.25)"
         data-h2-font-weight="base(700)"
-        data-h2-position="base(absolute)"
-        data-h2-offset="base(50%, auto, auto, -x1)"
         data-h2-text-decoration="base(none)"
         data-h2-outline="base(none)"
-        style="transform: translate(0, -50%)"
+        data-h2-vertical-align="base(middle)"
         href="${data.page.url}#${props.id}" 
         title="Skip to this section.">
         #</a>
     `;
+  }
+  // Create chip
+  let chips = ``;
+  if (props.chips && props.chips.length > 0) {
+    props.chips.forEach((chip) => {
+      chips = chips + chip;
+    });
   }
   // Create link
   let link = ``;
@@ -138,8 +143,11 @@ function render(data, props) {
               ${color}
               data-h2-position='base(relative)'
               data-h2-display="base(inline-block) p-tablet(block)">
+              <span data-h2-vertical-align="base(middle)">
+                ${props.label}
+              </span>
+              ${chips}
               ${hash}
-              ${props.label}
             </${props.tag}>
           </div>
           ${link}

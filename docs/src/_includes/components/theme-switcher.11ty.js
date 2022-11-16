@@ -21,6 +21,7 @@ function render(data) {
         base:selectors[.light]:children[#highlight](translate(2rem, 0))
         base:selectors[.dark]:children[#highlight](translate(4rem, 0))">
       <div 
+        data-h2-background-color="base(foreground)"
         data-h2-border="base(all, 1px, solid, primary.darkest.20) base:dark(all, 1px, solid, primary.lightest.20)"
         data-h2-radius="base(50px)"
         data-h2-padding="base(x.25)"

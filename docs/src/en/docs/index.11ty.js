@@ -62,27 +62,7 @@ let data = {
       },
     },
     {
-      type: 'section',
-      content: [
-        {
-          type: 'title',
-          label: 'Stable',
-          id: 'stable',
-        },
-        {
-          type: 'release',
-          category: 'latest',
-        },
-        {
-          type: 'title',
-          label: 'Beta',
-          id: 'beta',
-        },
-        {
-          type: 'release',
-          category: 'beta',
-        },
-      ],
+      type: 'latest',
     },
   ],
 };

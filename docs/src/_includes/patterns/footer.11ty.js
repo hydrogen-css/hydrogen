@@ -46,7 +46,7 @@ function render(data, props) {
           <div
             data-h2-height="base(x.25)"
             data-h2-width="base(100%)"
-            data-h2-background-color="base(accent)"
+            data-h2-background-color="base(secondary)"
             data-h2-radius="base(rounded)"></div>
         </div>
       </div>

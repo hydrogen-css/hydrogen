@@ -3,6 +3,7 @@ const heading = require('../components/headings.11ty');
 const flourish = require('../components/flourish.11ty');
 const rule = require('../components/rule.11ty');
 const code = require('../components/code.11ty');
+const chip = require('../components/chip.11ty.js');
 
 // Create pattern-specific data
 var data = {};
@@ -27,31 +28,37 @@ function render(data) {
         </div>
       `;
     } else if (item.example === 'properties') {
+      examples = [
+        'background',
+        'color',
+        'gap',
+        'grid',
+        'flex',
+        'font-family',
+        'font-size',
+        'font-weight',
+        'margin',
+        'padding',
+        'position',
+        'shadow',
+        'transform',
+        'transition',
+        'z-index',
+      ];
+      let example_pills = ``;
+      examples.forEach((item) => {
+        example_pills =
+          example_pills + chip.render(data, { label: item, color: 'primary' });
+      });
       example = String.raw`
         <div
-          data-h2-background-color="base:children[div](primary.lightest)"
-          data-h2-border="base:children[div](all, 1px, solid, primary.dark) base:children[p](all, 1px, solid, transparent)"
-          data-h2-display="base(flex) base:children[div](inline-block)"
+          data-h2-display="base(flex)"
+          data-h2-align-items="base(center)"
           data-h2-flex-wrap="base(wrap)"
           data-h2-gap="base(x.25)"
-          data-h2-padding="base(x.5, 0, 0, 0) base:children[div, p](x.15, x.5)"
-          data-h2-radius="base:children[div](pill)">
-          <div>background</div>
-          <div>color</div>
-          <div>gap</div>
-          <div>grid</div>
-          <div>flex</div>
-          <div>font-family</div>
-          <div>font-size</div>
-          <div>font-weight</div>
-          <div>margin</div>
-          <div>padding</div>
-          <div>position</div>
-          <div>shadow</div>
-          <div>transform</div>
-          <div>transition</div>
-          <div>z-index</div>
-          <p>and more...</p>
+          data-h2-padding="base(x.5, 0, 0, 0)">
+          ${example_pills}
+          <p data-h2-vertical-align="base(middle)">and more...</p>
         </div>
       `;
     } else {
@@ -146,9 +153,9 @@ function render(data) {
           data-h2-grid-template-columns="base(1fr) p-tablet(repeat(2, minmax(0, 1fr))) l-tablet(repeat(3, minmax(0, 1fr))) laptop(repeat(4, minmax(0, 1fr)))"
           data-h2-gap="base(x1)"
           data-h2-background-color="base:children[>div](white) base:dark:children[>div](font.dark)"
+          data-h2-border="base:children[>div](all, 1px, solid, primary.darkest.20)"
           data-h2-radius="base:children[>div](rounded)"
           data-h2-padding="base:children[>div](x1)"
-          data-h2-shadow="base:children[>div](large)"
           data-h2-color="base:children[p:first-child](primary.dark) base:dark:children[p:first-child](primary.lighter)"
           data-h2-font-weight="base:children[p:first-child](800)"
           data-h2-margin="base:children[p:not(:first-child)](x.5, 0, 0, 0)">

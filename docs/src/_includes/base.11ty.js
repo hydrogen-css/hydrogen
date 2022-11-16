@@ -31,11 +31,11 @@ function render(data) {
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
       </head>
       <body 
-        data-h2-background-color="base(#f3f3f9) base:dark(black) base:children[p code](black.10) base:dark:children[p code](code)"
-        data-h2-color="base(black.80) base:dark(white.60) base:children[p code](black) base:dark:children[p code](white)"
-        data-h2-font-size="base:children[p code](caption)"
-        data-h2-display="base:children[p code](inline-block)"
-        data-h2-padding="base:children[p code](0, x.25)"
+        data-h2-background-color="base(background) base:children[p code, li code](black.10)"
+        data-h2-color="base(font) base:children[p code, li code](font)"
+        data-h2-font-size="base:children[p code, li code](caption)"
+        data-h2-display="base:children[p code, li code](inline-block)"
+        data-h2-padding="base:children[p code, li code](0, x.25)"
         class="test-font"
         data-h2-font-family="base(sans)">
         <a

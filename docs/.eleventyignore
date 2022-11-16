@@ -1,6 +1,7 @@
 node_modules
 README.md
-src/en/docs/basics
+src/en/docs/colors.11ty.js
+src/en/docs/typography.11ty.js
+src/en/docs/layout.11ty.js
 src/en/docs/properties
 src/en/docs/syntax
-src/en/docs/configuration.11ty.js

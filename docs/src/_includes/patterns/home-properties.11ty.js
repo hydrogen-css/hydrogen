@@ -119,7 +119,7 @@ function render(data) {
         data-h2-container="base(center, medium, x1) p-tablet(center, medium, x2)">
         <div
           data-h2-margin="base(-x3, 0, 0, 0)"
-          data-h2-background-color="base(white) base:dark(font.dark)"
+          data-h2-background-color="base(white)"
           data-h2-radius="base(rounded)"
           data-h2-padding="base(x1) l-tablet(x2)"
           data-h2-shadow="base(large)">

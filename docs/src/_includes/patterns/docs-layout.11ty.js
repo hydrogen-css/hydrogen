@@ -16,14 +16,14 @@ function render(data) {
         data-h2-offset="base(0, auto, auto, 0)"
         data-h2-height="base(var(--heightHack))"
         data-h2-width="base(100%)"
-        data-h2-bg-color="base(black)"
+        data-h2-background-color="base:all(black)"
         data-h2-overflow="base(hidden)">
         <div
           class="accent-radial"
-          data-h2-bg-color="base(accentRadial)"></div>
+          data-h2-background-color="base(accentRadial)"></div>
         <div
           class="primary-radial"
-          data-h2-bg-color="base(primaryRadial)"></div>
+          data-h2-background-color="base(primaryRadial)"></div>
         <div
           data-h2-height="base(x.5)"
           data-h2-width="base(100%)"

@@ -1,8 +1,11 @@
 const docs_layout = require('../patterns/docs-layout.11ty');
 const heading = require('../components/headings.11ty');
 const docs_header = require('../patterns/docs-header.11ty');
-const docs_releases = require('../patterns/docs-releases.11ty');
+const docs_release_latest = require('../patterns/releases-latest.11ty');
+const docs_release_summary = require('../patterns/releases-summary.11ty');
+const docs_history = require('../patterns/releases-history.11ty');
 const code = require('../components/code.11ty');
+const { latest, beta } = require('../../_data/releases');
 
 var data = {
   layout: 'patterns/docs-layout.11ty.js',
@@ -149,8 +152,14 @@ function render(data) {
       output = output + String.raw`</div>`;
       return output;
     }
-    function render_release(item, index, level) {
-      return docs_releases.render(data, item, level);
+    function render_latest(item, index) {
+      return docs_release_latest.render(data);
+    }
+    function render_history(item, index) {
+      return docs_history.render(data, item);
+    }
+    function render_release_summaries(item, index) {
+      return docs_release_summary.render(data, item);
     }
     function render_section(section, index) {
       let output = ``;
@@ -165,8 +174,6 @@ function render(data) {
           output = output + render_code(item, index);
         } else if (item.type === 'group') {
           output = output + render_group(item, index, 'h4');
-        } else if (item.type === 'release') {
-          output = output + render_release(item, index, 'h5');
         } else if (item.type === 'section') {
           output = output + render_subsection(item, index);
         }
@@ -186,8 +193,6 @@ function render(data) {
           output = output + render_code(item, index);
         } else if (item.type === 'group') {
           output = output + render_group(item, index, 'h5');
-        } else if (item.type === 'release') {
-          output = output + render_release(item, index, 'h6');
         }
       });
       return output;
@@ -198,13 +203,17 @@ function render(data) {
       } else if (item.type === 'copy') {
         content = content + render_copy(item, index);
       } else if (item.type === 'list') {
-        output = output + render_list(item, index);
+        content = content + render_list(item, index);
       } else if (item.type === 'code') {
         content = content + render_code(item, index);
       } else if (item.type === 'group') {
         content = content + render_group(item, index, 'h3');
-      } else if (item.type === 'release') {
-        content = content + render_release(item, index, 'h4');
+      } else if (item.type === 'latest') {
+        content = content + render_latest(item, index);
+      } else if (item.type === 'history') {
+        content = content + render_history(item, index);
+      } else if (item.type === 'release-summary') {
+        content = content + render_release_summaries(item, index);
       } else if (item.type === 'section') {
         content = content + render_section(item, index);
       }

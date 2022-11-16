@@ -25,7 +25,7 @@ function render(data) {
   return String.raw`
     <div 
       data-h2-position="base(relative)"
-      data-h2-background-color="base(black)">
+      data-h2-background-color="base:all(black)">
       <div
         data-h2-height="base(100%)"
         data-h2-width="base(100%)"
@@ -60,13 +60,13 @@ function render(data) {
             <div
               data-h2-height="base(x.25)"
               data-h2-width="base(100%)"
-              data-h2-background-color="base(accent)"
+              data-h2-background-color="base(secondary)"
               data-h2-radius="base(rounded)"></div>
             <p
               data-h2-font-size="base(h6)"
               data-h2-font-weight="base(300)"
               data-h2-max-width="base(x18)"
-              data-h2-color="base(white.80)"
+              data-h2-color="base:all(white.80)"
               data-h2-margin="base(x1, auto, 0, auto) p-tablet(x1, 0, 0, auto)"
               data-h2-text-align="base(center) p-tablet(right)">${
                 data.site.slogan[data.locale]
@@ -74,7 +74,7 @@ function render(data) {
           </div>
         </div>
         <h1
-          data-h2-color="base(white)"
+          data-h2-color="base:all(white)"
           data-h2-font-weight="base(700)"
           data-h2-padding="base(0, 0, x5, 0)"
           data-h2-text-align="base(center) p-tablet(left)"
@@ -93,11 +93,11 @@ function render(data) {
           data-h2-display="base(grid)"
           data-h2-grid-template-columns="base(1fr) l-tablet(1fr 1fr 1fr)"
           data-h2-gap="base(x1) l-tablet(x2, x1)"
-          data-h2-background-color="base:children[>div](white) base:dark:children[>div](font.dark)"
+          data-h2-background-color="base:children[>div](foreground)"
           data-h2-radius="base:children[>div](rounded)"
           data-h2-padding="base:children[>div](x1) l-tablet:children[>div](x2)"
           data-h2-shadow="base:children[>div](large)"
-          data-h2-color="base:children[p:first-child](primary.dark) base:dark:children[p:first-child](primary.lighter)"
+          data-h2-color="base:children[p:first-child](primary.dark)"
           data-h2-font-weight="base:children[p:first-child](800)"
           data-h2-margin="base:children[p:not(:first-child)](x.5, 0, 0, 0)">
           ${generate_hero_content(data)}

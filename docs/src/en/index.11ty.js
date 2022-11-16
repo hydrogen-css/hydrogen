@@ -22,6 +22,16 @@ var data = {
       title: "View Hydrogen's open source code in a new tab.",
       label: 'Github',
     },
+    {
+      path: '/en/releases',
+      title: "View Hydrogen's open source code in a new tab.",
+      label: 'Releases',
+    },
+    {
+      path: 'https://forms.office.com/r/vz80dsUabZ',
+      title: "View Hydrogen's open source code in a new tab.",
+      label: 'Feedback',
+    },
   ],
   hero: {
     features: [
@@ -243,8 +253,8 @@ var data = {
   },
   properties: {
     title: {
-      label: 'The details',
-      id: 'details',
+      label: 'Get started',
+      id: 'get-started',
       icon: {
         path: '/static/img/icon-compass.svg',
         alt: 'A sticker-style icon of a compass.',

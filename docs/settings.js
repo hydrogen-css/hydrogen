@@ -1,5 +1,6 @@
 // Init and imports
 'use strict';
+const { black } = require('colors');
 const { build_development_config } = require('../lib/setup/build-settings');
 
 // Construct the settings
@@ -35,17 +36,55 @@ function modify_settings(settings) {
     {
       key: 'font',
       default: {
-        color: '#53FFE0',
-        modifiers: [
-          {
-            key: 'light',
-            color: '#ccccdb',
-          },
-          {
-            key: 'dark',
-            color: '#2a2b38',
-          },
-        ],
+        color: '#4c4d59',
+        modifiers: [],
+      },
+      dark: {
+        color: '#d2d3d9',
+        modifiers: [],
+      },
+    },
+    {
+      key: 'foreground',
+      default: {
+        color: 'white',
+        modifiers: [],
+      },
+      dark: {
+        color: '#2a2b38',
+        modifiers: [],
+      },
+    },
+    {
+      key: 'background',
+      default: {
+        color: '#f4f8ff',
+        modifiers: [],
+      },
+      dark: {
+        color: '#212130',
+        modifiers: [],
+      },
+    },
+    {
+      key: 'error',
+      default: {
+        color: 'red',
+        modifiers: [],
+      },
+    },
+    {
+      key: 'warning',
+      default: {
+        color: 'orange',
+        modifiers: [],
+      },
+    },
+    {
+      key: 'success',
+      default: {
+        color: 'green',
+        modifiers: [],
       },
     }
   );

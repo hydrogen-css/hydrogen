@@ -23,6 +23,13 @@ function modify_settings(settings) {
       modifiers: [],
     },
   });
+  settings.themes[0].colors = settings.themes[0].colors.concat({
+    key: 'tertiary',
+    default: {
+      color: '#FF5958',
+      modifiers: [],
+    },
+  });
   settings.themes[0].fonts = [
     {
       key: 'sans',
@@ -206,6 +213,13 @@ function modify_settings(settings) {
         },
       },
       {
+        key: 'black',
+        default: {
+          color: '#1B1C22',
+          modifiers: [],
+        },
+      },
+      {
         key: 'primary',
         default: {
           color: '#00C3B7',
@@ -224,6 +238,13 @@ function modify_settings(settings) {
         },
         dark: {
           color: '#c395ff',
+          modifiers: [],
+        },
+      },
+      {
+        key: 'tertiary',
+        default: {
+          color: '#FF5958',
           modifiers: [],
         },
       },
