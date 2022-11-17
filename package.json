@@ -1,6 +1,6 @@
 {
   "name": "@hydrogen-css/hydrogen",
-  "version": "2.0.0-beta.33",
+  "version": "2.0.0-beta.34",
   "description": "An open-source, inline CSS framework powered by data-attributes. MIT Licensed.",
   "keywords": [
     "Hydrogen",
@@ -45,7 +45,9 @@
     "test-function-parse-input": "node -e 'require(\"./lib/scripts/helpers/parse-input.test\").runTest()'",
     "test-function-parse-output": "node -e 'require(\"./lib/scripts/helpers/parse-output.test\").runTest()'",
     "test-function-parse-basic-property": "node -e 'require(\"./lib/scripts/properties/parse-basic-property.test\").runTest()'",
+    "test-function-parse-new-property": "node -e 'require(\"./lib/scripts/properties/parse-new-property.test\").runTest()'",
     "test-function-load-configuration": "node -e 'require(\"./lib/scripts/settings/load-configuration.test\").runTest()'",
+    "test-env-playground": "cd tests/test-playground && node -e 'require(\"./run.test\").run_test()'",
     "test-env-attributes": "cd tests/test-attributes && node -e 'require(\"./run.test\").run_test()'",
     "test-control": "tests/test-control/env/build.sh",
     "test-control-logs": "tests/test-control/env/build-logs.sh",

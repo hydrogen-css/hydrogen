@@ -212,17 +212,10 @@
 }html{box-sizing: border-box;}html * {box-sizing: border-box;}html{font-size: var(--h2-base-font-size); line-height: var(--h2-base-line-height);}body {position: relative;}body, h1, h2, h3, h4, h5, h6, p, blockquote, fieldset, figure, aside {margin: 0;}img, iframe {max-width: 100%;}h1, h2, h3, h4, h5, h6 {font-weight: normal;}*:not(pre, code, kbd, samp) {font-family: inherit;}* {line-height: inherit;}span {color: inherit;font-size: inherit;font-weight: inherit;}em {color: inherit;font-size: inherit;font-style: italic;}strong {color: inherit;font-size: inherit;font-weight: 600;}a {color: inherit;font-size: inherit;font-weight: inherit;text-decoration: underline;}button {font-family: inherit; font-size: var(--h2-font-size-copy); line-height: var(--h2-line-height-copy);}input {font-family: inherit; font-size: var(--h2-font-size-copy); line-height: var(--h2-line-height-copy);}select {font-family: inherit; font-size: var(--h2-font-size-copy); line-height: var(--h2-line-height-copy);}textarea {font-family: inherit; font-size: var(--h2-font-size-copy); line-height: var(--h2-line-height-copy);}ul, ol, dl {margin: 0;}li {color: inherit;font-size: inherit;margin: 0;}caption, label {font-size: var(--h2-font-size-caption);line-height: var(--h2-line-height-caption);}p {font-size: var(--h2-font-size-copy);line-height: var(--h2-line-height-copy);}h6 {font-size: var(--h2-font-size-h6);line-height: var(--h2-line-height-h6);}h5 {font-size: var(--h2-font-size-h5);line-height: var(--h2-line-height-h5);}h4 {font-size: var(--h2-font-size-h4);line-height: var(--h2-line-height-h4);}h3 {font-size: var(--h2-font-size-h3);line-height: var(--h2-line-height-h3);}h2 {font-size: var(--h2-font-size-h2);line-height: var(--h2-line-height-h2);}h1 {font-size: var(--h2-font-size-h1);line-height: var(--h2-line-height-h1);}
 /* base - light - default - default */
 
-[data-h2] [data-h2-background-color*="base(yellow)"]{background-color: yellow;}
-[data-h2] [data-h2-background-color*="base(pink)"]{background-color: pink;}
-[data-h2] [data-h2-background-color*="base(primary)"]{background-color: rgba(var(--h2-color-primary), 1);}
-[data-h2] [data-h2-background-color*="base(green)"]{background-color: green;}
-[data-h2] [data-h2-background-color*="base(black)"]{background-color: rgba(var(--h2-color-black), 1);}
-[data-h2] [data-h2-background-color*="base:children[>div](red)"] >div:not([data-h2-background-color]){background-color: red;}
-[data-h2] [data-h2-background-color*="base(magenta)"]{background-color: magenta;}
+[data-h2] [data-h2-border*="base(x.5 solid blue)"]{border: calc((.5 * var(--h2-base-whitespace)) * 1rem) solid blue;}
+[data-h2] [data-h2-margin*="base(x3 x3)"]{margin: calc((3 * var(--h2-base-whitespace)) * 1rem) calc((3 * var(--h2-base-whitespace)) * 1rem);}
 /* base - dark - default - default */
 
-[data-h2*="dark"] [data-h2-background-color*="base:dark(white)"]{background-color: rgba(var(--h2-color-white), 1);}
-[data-h2*="dark"] [data-h2-background-color*="base:dark(lime)"]{background-color: lime;}
 /* base - light - visited - default */
 
 /* base - dark - visited - default */
@@ -332,10 +325,7 @@
 /* print - dark - active - default */
 @media print {}
 /* p-tablet - light - default - default */
-@media screen and (min-width: 48em) {
-[data-h2] [data-h2-background-color*="p-tablet(blue)"]{background-color: blue;}
-[data-h2] [data-h2-background-color*="p-tablet(cyan)"]{background-color: cyan;}
-[data-h2] [data-h2-background-color*="p-tablet(black)"]{background-color: rgba(var(--h2-color-black), 1);}}
+@media screen and (min-width: 48em) {}
 /* p-tablet - dark - default - default */
 @media screen and (min-width: 48em) {}
 /* p-tablet - light - visited - default */
@@ -503,9 +493,7 @@
 /* laptop - dark - active - default */
 @media screen and (min-width: 80em) {}
 /* desktop - light - default - default */
-@media screen and (min-width: 100em) {
-[data-h2] [data-h2-background-color*="desktop(primary)"]{background-color: rgba(var(--h2-color-primary), 1);}
-[data-h2] [data-h2-background-color*="desktop(purple)"]{background-color: purple;}}
+@media screen and (min-width: 100em) {}
 /* desktop - dark - default - default */
 @media screen and (min-width: 100em) {}
 /* desktop - light - visited - default */
