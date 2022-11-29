@@ -162,7 +162,7 @@
 --h2-font-family-mono-locked: monospace;
 /* Font sizes and line heights */
 --h2-font-size-caption: calc((1 / 1.25 ) * 1rem);
---h2-line-height-caption: var(--h2-base-line-height);
+--h2-line-height-caption: calc(var(--h2-base-line-height) * 1rem);
 --h2-font-size-copy: 1rem;
 --h2-line-height-copy: var(--h2-base-line-height);
 --h2-font-size-h6: calc((1 * 1.25 ) * 1rem);
@@ -299,7 +299,7 @@
 --h2-font-family-mono-locked: monospace;
 /* Font sizes and line heights */
 --h2-font-size-caption: calc((1 / 1.33 ) * 1rem);
---h2-line-height-caption: var(--h2-base-line-height);
+--h2-line-height-caption: calc(var(--h2-base-line-height) * 1rem);
 --h2-font-size-copy: 1rem;
 --h2-line-height-copy: var(--h2-base-line-height);
 --h2-font-size-h6: calc((1 * 1.33 ) * 1rem);
@@ -571,7 +571,7 @@
 --h2-base-whitespace: 1.4;
 /* Font sizes and line heights */
 --h2-font-size-caption: calc((1 / 1.25 ) * 1rem);
---h2-line-height-caption: var(--h2-base-line-height);
+--h2-line-height-caption: calc(var(--h2-base-line-height) * 1rem);
 --h2-font-size-copy: 1rem;
 --h2-line-height-copy: var(--h2-base-line-height);
 --h2-font-size-h6: calc((1 * 1.25 ) * 1rem);
@@ -598,7 +598,7 @@
 --h2-base-whitespace: 1.5;
 /* Font sizes and line heights */
 --h2-font-size-caption: calc((1 / 1.33 ) * 1rem);
---h2-line-height-caption: var(--h2-base-line-height);
+--h2-line-height-caption: calc(var(--h2-base-line-height) * 1rem);
 --h2-font-size-copy: 1rem;
 --h2-line-height-copy: var(--h2-base-line-height);
 --h2-font-size-h6: calc((1 * 1.33 ) * 1rem);

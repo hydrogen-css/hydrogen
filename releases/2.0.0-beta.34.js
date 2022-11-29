@@ -25,6 +25,24 @@ module.exports = {
   ],
   bugfixes: [
     {
+      breaking: true,
+      changes: {
+        en: [
+          'Offset was preventing the use of the true CSS <code>offset</code> value, so it has been removed in favor of <code>location</code>.',
+        ],
+      },
+      properties: ['offset', 'location'],
+    },
+    {
+      breaking: true,
+      changes: {
+        en: [
+          'Support for <code>z-index</code> has been migrated away from being an alias for <code>layer</code> in favor of true CSS <code>z-index</code> syntax, but this means that existing uses of <code>z-index</code> will no longer apply a position value.',
+        ],
+      },
+      properties: ['offset', 'location'],
+    },
+    {
       breaking: false,
       changes: {
         en: [
