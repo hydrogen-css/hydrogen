@@ -38,6 +38,8 @@
     "docs": "cd docs && npm start",
     "tests": "node -e 'require(\"./lib/scripts/run-all.test\").runTest()'",
     "": "",
+    "test-grandparent-1": "node -e 'require(\"./lib/test\").grandparent(1)'",
+    "test-grandparent-2": "node -e 'require(\"./lib/test\").grandparent(2)'",
     "test-fn-calculate-line-height": "node -e 'require(\"./lib/scripts/helpers/calculate-line-height.test\").runTest()'",
     "test-fn-delete-logs": "node -e 'require(\"./lib/scripts/helpers/delete-logs.test\").runTest()'",
     "test-fn-generate-date-time": "node -e 'require(\"./lib/scripts/helpers/generate-date-time.test\").runTest()'",
