@@ -2,7 +2,12 @@
 
 const { hydrogen_watch } = require('../lib/watch');
 
-hydrogen_watch().catch((error) => {
-  console.log(error);
-  return false;
-});
+try {
+  hydrogen_watch();
+} catch (error) {
+  if (error.step) {
+    throw error.error;
+  } else {
+    throw error;
+  }
+}
