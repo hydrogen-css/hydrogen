@@ -71,6 +71,7 @@ function run_tests() {
       step: 'Running test',
       test: 'Basic environment',
       buffers: {
+        top: false,
         bottom: true,
       },
     });
@@ -81,6 +82,7 @@ function run_tests() {
       step: 'Running test',
       test: 'Basic environment',
       buffers: {
+        top: false,
         bottom: true,
       },
     });

@@ -22,7 +22,7 @@ function render(data) {
         base:selectors[.dark]:children[#highlight](translate(4rem, 0))">
       <div 
         data-h2-background-color="base(foreground)"
-        data-h2-border="base(all, 1px, solid, primary.darkest.20) base:dark(all, 1px, solid, primary.lightest.20)"
+        data-h2-border="base(1px solid primary.darkest.20) base:dark(1px solid primary.lightest.20)"
         data-h2-radius="base(50px)"
         data-h2-padding="base(x.25)"
         data-h2-position="base(relative)">
@@ -39,7 +39,7 @@ function render(data) {
         </div>
         <div
           data-h2-position="base(absolute)"
-          data-h2-offset="base(x.25, auto, auto, x.25)" 
+          data-h2-location="base(x.25, auto, auto, x.25)" 
           data-h2-display="base(flex)"
           data-h2-gap="base(.25rem)">
           <div
@@ -52,7 +52,7 @@ function render(data) {
         </div>
         <div
           data-h2-position="base(absolute) base:children[>button](relative)"
-          data-h2-offset="base(x.25, auto, auto, x.25)"
+          data-h2-location="base(x.25, auto, auto, x.25)"
           data-h2-display="base(flex) base:children[>button](block)"
           data-h2-gap="base(.25rem)"
           data-h2-cursor="base:children[>button](pointer)"

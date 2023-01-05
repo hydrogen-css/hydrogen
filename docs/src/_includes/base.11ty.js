@@ -43,12 +43,12 @@ function render(data) {
           title=${skip_to_content.title[data.locale]}
           style="outline: none;"
           data-h2-display="base(block)"
-          data-h2-background-color="base(darker.primary) base:focus(focus)"
+          data-h2-background-color="base(primary.darker) base:focus(focus)"
           data-h2-color="base(white) base:focus(black)"
           data-h2-text-align="base(center)"
           data-h2-padding="base(x1)"
           data-h2-font-weight="base(700)"
-          data-h2-visibility="base(invisible) base:focus(visible)">
+          data-h2-visibility="base(hidden) base:focus(visible)">
           ${skip_to_content.label[data.locale]}
         </a>
         <a
@@ -56,12 +56,12 @@ function render(data) {
           title=${skip_to_nav.title[data.locale]}
           style="outline: none;"
           data-h2-display="base(block)"
-          data-h2-background-color="base(darker.primary) base:focus(focus)"
+          data-h2-background-color="base(primary.darker) base:focus(focus)"
           data-h2-color="base(white) base:focus(black)"
           data-h2-text-align="base(center)"
           data-h2-padding="base(x1)"
           data-h2-font-weight="base(700)"
-          data-h2-visibility="base(invisible) base:focus(visible)">
+          data-h2-visibility="base(hidden) base:focus(visible)">
           ${skip_to_nav.label[data.locale]}
         </a>
         ${data.content}

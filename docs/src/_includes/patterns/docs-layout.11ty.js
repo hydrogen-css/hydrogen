@@ -13,23 +13,23 @@ function render(data) {
     <div data-h2-position="base(relative)">
       <div
         data-h2-position="base(absolute)"
-        data-h2-offset="base(0, auto, auto, 0)"
+        data-h2-location="base(0, auto, auto, 0)"
         data-h2-height="base(var(--heightHack))"
         data-h2-width="base(100%)"
         data-h2-background-color="base:all(black)"
         data-h2-overflow="base(hidden)">
         <div
           class="accent-radial"
-          data-h2-background-color="base(accentRadial)"></div>
+          data-h2-background="base(accentRadial)"></div>
         <div
           class="primary-radial"
-          data-h2-background-color="base(primaryRadial)"></div>
+          data-h2-background="base(primaryRadial)"></div>
         <div
           data-h2-height="base(x.5)"
           data-h2-width="base(100%)"
-          data-h2-background-color="base(divider)"
+          data-h2-background="base(divider)"
           data-h2-position="base(absolute)"
-          data-h2-offset="base(auto, auto, 0, 0)"></div>
+          data-h2-location="base(auto, auto, 0, 0)"></div>
       </div>
       <div data-h2-container="base(center, large, x1) p-tablet(center, large, x2)">
         <div 

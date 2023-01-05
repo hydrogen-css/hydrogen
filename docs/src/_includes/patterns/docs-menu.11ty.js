@@ -38,10 +38,10 @@ function render(data) {
     <div
       data-h2-position="base(sticky)"
       data-h2-layer="base(5)"
-      data-h2-offset="base(0, auto, auto, auto)">
+      data-h2-location="base(0, auto, auto, auto)">
       <div data-h2-padding="base(x1, 0, 0, 0) l-tablet(x2, 0, 0, 0) laptop(x3, 0, 0, 0) desktop(x4, 0, 0, 0)">
         <div
-          data-h2-bg-color="base(foreground)"
+          data-h2-background="base(foreground)"
           data-h2-radius="base(rounded)"
           data-h2-padding="base(x2)"
           data-h2-shadow="base(large)"
@@ -53,7 +53,7 @@ function render(data) {
             <h1
               data-h2-font-size="base(h2)"
               data-h2-font-weight="base(800)"
-              data-h2-font-color="base(dark.font) base:dark(white)"
+              data-h2-font-color="base(font.dark) base:dark(white)"
               data-h2-text-align="base(center)">
               <a
                 href="/${data.locale}/docs"
@@ -69,9 +69,9 @@ function render(data) {
               <label
                 data-h2-display="base(block)"
                 data-h2-font-size="base(caption)"
-                data-h2-font-color="base(dark.font) base:dark(white)">Search</label>
+                data-h2-font-color="base(font.dark) base:dark(white)">Search</label>
               <input 
-                data-h2-border="base(all, 1px, solid, black)"
+                data-h2-border="base(1px solid black)"
                 data-h2-display="base(block)"
                 data-h2-radius="base(code)"
                 data-h2-padding="base(x.5, x1)"

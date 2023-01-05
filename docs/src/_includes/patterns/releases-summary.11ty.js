@@ -38,7 +38,7 @@ function render(data, content) {
       <div
         ${span}
         data-h2-background-color="base(foreground)"
-        data-h2-border="base(all, 1px, solid, primary.darkest.20) base:dark(all, 1px, solid, primary.lightest.20)"
+        data-h2-border="base(1px solid primary.darkest.20) base:dark(1px solid primary.lightest.20)"
         data-h2-radius="base(rounded)"
         data-h2-padding="base(x1)">
         ${label}

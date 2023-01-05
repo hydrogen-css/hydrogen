@@ -166,12 +166,12 @@ function render(data, release, state) {
         data-h2-outline="base(none)"
         data-h2-border="
           base(none)
-          base:children[>div](all, x.2, solid, primary)
-          base:focus-visible:children[>div](all, x.2, solid, black)"
+          base:children[>div](x.2 solid primary)
+          base:focus-visible:children[>div](x.2 solid black)"
         data-h2-margin="base(x2, 0, 0, 0)"
         data-h2-transition="base(box-shadow, .2s, ease)"
         data-h2-z-index="base(2)"
-        data-h2-offset="base(0, auto, auto, 0)"
+        data-h2-location="base(0, auto, auto, 0)"
         data-h2-transform="base(translate(-50%, 0))"
         title="Expand or collapse this release."
         onclick="toggle_ec(this)">
@@ -196,7 +196,7 @@ function render(data, release, state) {
       <div
         data-h2-background-color="base(foreground)"
         data-h2-padding="base(x1, x2, x1.5, x2)"
-        data-h2-border="base(all, 1px, solid, primary.darkest.20)"
+        data-h2-border="base(1px solid primary.darkest.20)"
         data-h2-radius="base(rounded)"
         data-h2-flex-grow="base(1)">
         ${heading.render(data, {

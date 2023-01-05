@@ -13,9 +13,9 @@ function render(data, props) {
     error: 'data-h2-background-color="base(error.lightest)"',
   };
   let border = {
-    primary: 'data-h2-border="base(all, 1px, solid, primary.dark)"',
-    secondary: 'data-h2-border="base(all, 1px, solid, secondary.darker)"',
-    error: 'data-h2-border="base(all, 1px, solid, error.darker)"',
+    primary: 'data-h2-border="base(1px solid primary.dark)"',
+    secondary: 'data-h2-border="base(1px solid secondary.darker)"',
+    error: 'data-h2-border="base(1px solid error.darker)"',
   };
   let font_color = {
     primary: 'data-h2-color="base(primary.dark)"',

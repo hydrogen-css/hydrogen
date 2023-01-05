@@ -153,7 +153,7 @@ function render(data) {
           data-h2-grid-template-columns="base(1fr) p-tablet(repeat(2, minmax(0, 1fr))) l-tablet(repeat(3, minmax(0, 1fr))) laptop(repeat(4, minmax(0, 1fr)))"
           data-h2-gap="base(x1)"
           data-h2-background-color="base:children[>div](white) base:dark:children[>div](font.dark)"
-          data-h2-border="base:children[>div](all, 1px, solid, primary.darkest.20)"
+          data-h2-border="base:children[>div](1px solid primary.darkest.20)"
           data-h2-radius="base:children[>div](rounded)"
           data-h2-padding="base:children[>div](x1)"
           data-h2-color="base:children[p:first-child](primary.dark) base:dark:children[p:first-child](primary.lighter)"
