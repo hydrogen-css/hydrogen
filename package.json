@@ -34,7 +34,7 @@
     "url": "https://gitlab.com/hydrogen-css/hydrogen"
   },
   "scripts": {
-    "setup": "lib/setup/setup.sh",
+    "setup": "./setup.sh",
     "docs": "cd docs && npm start",
     "": "",
     "tests": "node -e 'require(\"./lib/scripts/run-all.test\").runTest()'",

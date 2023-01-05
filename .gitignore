@@ -8,4 +8,3 @@ tests/**/hydrogen.config.json
 # Documentation
 docs/_site/
 docs/_tmp/
-docs/**/hydrogen.config.json

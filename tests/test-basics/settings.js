@@ -1,22 +1,23 @@
 'use strict';
 
-const { create_test_config } = require('../../lib/setup/create-test-config');
+const { get_settings_data } = require('../../lib/data/settings-model');
+var fs = require('fs');
 
-function modify_settings(settings) {
+function create_settings() {
   try {
+    // Delete existing settings
+    if (fs.existsSync('hydrogen.config.json')) {
+      fs.rmSync('hydrogen.config.json', { force: true });
+    }
+    // Get the default settings data
+    let settings = get_settings_data();
+    // Manipulate the settings for this environment
     settings.input = ['input'];
     settings.output = 'output';
     settings.modes['dark'].method = 'toggle';
     settings.processing.minification = true;
-    return settings;
-  } catch (error) {
-    throw error;
-  }
-}
-
-function create_settings(optional_path) {
-  try {
-    create_test_config('Basic environment', modify_settings, optional_path);
+    // Write the configuration file
+    fs.writeFileSync('hydrogen.config.json', JSON.stringify(settings, null, 2));
     return true;
   } catch (error) {
     throw error;
