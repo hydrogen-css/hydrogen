@@ -16,7 +16,7 @@ function modify_settings(settings) {
 
 function create_settings(optional_path) {
   try {
-    create_test_config('Basics test', modify_settings, optional_path);
+    create_test_config('Basic environment', modify_settings, optional_path);
     return true;
   } catch (error) {
     throw error;

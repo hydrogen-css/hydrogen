@@ -63,7 +63,7 @@ function test() {
   }
 }
 
-function run_test() {
+function run_tests() {
   try {
     test();
     log_message({
@@ -90,5 +90,5 @@ function run_test() {
 
 module.exports = {
   test,
-  run_test,
+  run_tests,
 };
