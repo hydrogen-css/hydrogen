@@ -16,7 +16,7 @@
 
 - [Hydrogen's website](https://hydrogen.design/en)
 - [Hydrogen's documentation](https://hydrogen.design/en/docs)
-- [Gitlab](https://gitlab.com/hydrogen-css/hydrogen) - Hydrogen's code is stored here
+- [Github](https://github.com/hydrogen-css/hydrogen) - Hydrogen's code is stored here
 - [Latest package release](https://www.npmjs.com/package/@hydrogen-css/hydrogen/v/latest) - Found on NPM, contains the latest stable code
 - [Beta package release](https://www.npmjs.com/package/@hydrogen-css/hydrogen/v/beta) - Found on NPM, contains new and potentially unstable features
 
@@ -44,7 +44,9 @@ Hydrogen takes the following steps to build its CSS file:
 - generate core CSS and reset CSS if it was requested
 - loop through the properties found
   - create the property's CSS selectors
-  - create the property's actual CSS
+  - parse the property's individual queries and options
+  - replace configured values
+  - generate final CSS
   - validate the final CSS output to ensure it's valid
   - add the final, valid CSS to its matching media object in the media array
 - loop through each media object in the media array and append its output to the final CSS string
@@ -53,21 +55,15 @@ Hydrogen takes the following steps to build its CSS file:
 - write a variable export file if it was requested
 - write the processed CSS file as hydrogen.css
 
-### CSS properties and implementation
+### Custom CSS properties and implementation
 
-- if the property needs custom scripting, create a script in `lib/scripts/properties`
-- if necessary, add imports to the build script in `lib/scripts/build-hydrogen.js`
-- add the property's scripts to the build in `lib/scripts/build-hydrogen.js`
-- add the new property to the property data model in `lib/data/property-model.json`
-- test the property by adding it to the testing UI markup in `tests/markup/site`
-- if it's a custom property, add tests to the error testing markup in `tests/markup/errors`
-- add the new property's syntax to the snippets file in `hydrogen.snippets.json`
-- update the project's own local .vscode snippets file in `.vscode/hydrogen.code-snippets`
+- if the property needs custom scripting, create a script in `lib/scripts/properties/custom`
+- add the property to the sorting function in `lib/scripts/properties/sort-custom-properties.js`
+- add the new property to the property data model in `lib/data/property-model.js`
+- test the property by adding it to the testing UI markup in `tests/basics/input/index.html`
+- add tests to the error testing markup in `tests/markup/errors`
+- add the new property's syntax to the snippets file in `.vscode/hydrogen.snippets.json`
 - add release notes for the property in the changelog
-
-#### How to add basic CSS properties
-
-#### How to add complex CSS properties
 
 ### Updating the documentation
 
@@ -75,16 +71,6 @@ Hydrogen takes the following steps to build its CSS file:
 
 #### Writing function unit tests
 
-- functions should live in their own file and be paired with a matching file-name.test.js
-- tests should follow a similar format and return promises where possible
-- all unit tests should be added to the final run-all.tests.js file in helpers
-
-#### Manual visual tests
-
-- create a `test-[NAME]` directory
-- add an `env` directory with test command shell scripts
-- enable permissions on the test shell scripts using `chmod +x ./tests/test-[NAME]/env/[SCRIPT].sh`
-- add a `modify-settings.js` file to copy over and modify the default Hydrogen settings based on the needs of the test
-- write the success criteria for the test in `test-[NAME]/README.md`
-- add the test to `tests/build.sh` and `tests/refresh.sh`
-- add test commands to `./package.json`
+- functions should live in their own file and be paired with a matching `file-name.test.js`
+- tests should follow a similar format
+- all unit tests should be added to the final `run-all.tests.js` file found in `./tests`

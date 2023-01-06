@@ -10,7 +10,7 @@ let Release = require('../lib/data/release-model-definition');
 /** @type {Release} */
 module.exports = {
   version: '2.0.0-beta.34',
-  date: new Date('2022-11-17'),
+  date: new Date('2023-01-06'),
   author: 'Josh Beveridge',
   features: [
     {
