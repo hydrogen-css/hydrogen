@@ -48,7 +48,7 @@ function render(data) {
           data-h2-text-align="base(center)"
           data-h2-padding="base(x1)"
           data-h2-font-weight="base(700)"
-          data-h2-visibility="base(hidden) base:focus(visible)">
+          data-h2-visibility="base(invisible) base:focus(revealed)">
           ${skip_to_content.label[data.locale]}
         </a>
         <a
@@ -61,7 +61,7 @@ function render(data) {
           data-h2-text-align="base(center)"
           data-h2-padding="base(x1)"
           data-h2-font-weight="base(700)"
-          data-h2-visibility="base(hidden) base:focus(visible)">
+          data-h2-visibility="base(invisible) base:focus(revealed)">
           ${skip_to_nav.label[data.locale]}
         </a>
         ${data.content}
