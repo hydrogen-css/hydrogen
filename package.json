@@ -38,24 +38,22 @@
     "docs": "cd docs && npm start",
     "": "",
     "tests": "node -e 'require(\"./lib/scripts/run-all.test\").runTest()'",
-    "": "",
     "test-cmd-build": "node -e 'require(\"./lib/build.test\").run_tests()'",
-    "": "",
     "test-basics": "cd tests/test-basics && node -e 'require(\"./run.test\").run_tests()'"
   },
   "dependencies": {
-    "autoprefixer": "^10.4.12",
+    "autoprefixer": "^10.4.13",
     "browserlist": "^1.0.1",
     "chokidar": "^3.5.3",
     "color": "^4.2.3",
     "colors": "^1.4.0",
-    "cssnano": "^5.1.13",
+    "cssnano": "^5.1.14",
     "csstree-validator": "^3.0.0",
     "glob": "^8.0.3",
     "lodash.clonedeep": "^4.5.0",
-    "postcss": "^8.4.16",
+    "postcss": "^8.4.21",
     "prompt": "^1.3.0",
-    "yargs": "^17.5.1"
+    "yargs": "^17.6.2"
   },
   "engines": {
     "node": ">=14.18.1",
