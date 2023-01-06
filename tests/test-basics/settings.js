@@ -16,6 +16,12 @@ function create_settings() {
     settings.output = 'output';
     settings.modes['dark'].method = 'toggle';
     settings.processing.minification = true;
+    settings.themes[0].radii.push({
+      key: 'rounded',
+      default: {
+        radius: '30px',
+      },
+    });
     // Write the configuration file
     fs.writeFileSync('hydrogen.config.json', JSON.stringify(settings, null, 2));
     return true;

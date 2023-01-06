@@ -50,6 +50,9 @@ function test() {
         step: error.step,
         test: 'Basic environment',
         error: error.error,
+        buffers: {
+          top: false,
+        },
       });
     } else {
       log_message({
@@ -57,6 +60,9 @@ function test() {
         step: 'Running test',
         test: 'Basic environment',
         error: error,
+        buffers: {
+          top: false,
+        },
       });
     }
     throw error;
@@ -68,7 +74,7 @@ function run_tests() {
     test();
     log_message({
       type: 'success',
-      step: 'Running test',
+      step: 'Test passed',
       test: 'Basic environment',
       buffers: {
         top: false,
@@ -79,10 +85,9 @@ function run_tests() {
   } catch (error) {
     log_message({
       type: 'failure',
-      step: 'Running test',
+      step: 'Test failed',
       test: 'Basic environment',
       buffers: {
-        top: false,
         bottom: true,
       },
     });
