@@ -5,9 +5,5 @@ const { hydrogen_init } = require('../lib/init');
 try {
   hydrogen_init();
 } catch (error) {
-  if (error.step) {
-    throw error.error;
-  } else {
-    throw error;
-  }
+  return false;
 }
