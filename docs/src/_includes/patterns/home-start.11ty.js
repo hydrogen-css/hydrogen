@@ -4,7 +4,7 @@ const rule = require('../components/rule.11ty');
 const code = require('../components/code.11ty');
 
 // Create pattern-specific data
-var data = {}
+var data = {};
 
 /**
  * Render the homepage's features pattern
@@ -15,9 +15,11 @@ function render(data) {
   // Generate steps
   let steps = ``;
   let counter = 0;
-  data.start.steps.forEach(function(step, s_index) {
+  data.start.steps.forEach(function (step, s_index) {
     counter = counter + 1;
-    steps = steps + String.raw`
+    steps =
+      steps +
+      String.raw`
       <div 
         data-h2-margin="base(x2, 0, 0, 0)"
         data-h2-display="base(grid)"
@@ -37,7 +39,7 @@ function render(data) {
                 data-h2-background-color="base(primary.light.2)"
                 data-h2-position="base(relative)"
                 data-h2-height="base(x1.2)"
-                data-h2-border="base(all, 1px, solid, primary.dark) base:dark(all, 1px, solid, primary.lighter)"
+                data-h2-border="base(1px solid primary.dark) base:dark(1px solid primary.lighter)"
                 data-h2-width="base(x1.2)"
                 data-h2-radius="base(100%)">
                 <span 
@@ -55,13 +57,15 @@ function render(data) {
                 data-h2-color="base(primary.dark) base:dark(primary.lighter)">
                 ${step.title}
               </p>
-              ${(function() {
+              ${(function () {
                 let items = ``;
-                step.content.forEach(function(child) {
-                  items = items + String.raw`
+                step.content.forEach(function (child) {
+                  items =
+                    items +
+                    String.raw`
                     <p
                       data-h2-margin="base(x.5, 0, 0, 0)"
-                      data-h2-color="base:children[a]:hover(primary) base:dark:children[a]:hover(lighter.primary) base:children[a]:focus-visible(black)"
+                      data-h2-color="base:children[a]:hover(primary) base:dark:children[a]:hover(primary.lighter) base:children[a]:focus-visible(black)"
                       data-h2-background-color="base:children[a]:focus-visible(focus)"
                       data-h2-outline="base:children[a](none)">${child}</p>
                   `;
@@ -70,51 +74,48 @@ function render(data) {
               })()}
             </div>
             <div>
-              ${code.render(data, {file: step.code.file, lines: step.code.lines})}
+              ${code.render(data, {
+                file: step.code.file,
+                lines: step.code.lines,
+              })}
             </div>
           </div>
         </div>
       </div>
-    `
-  })
+    `;
+  });
   // Render the pattern
   return String.raw`
     <div data-h2-margin="base(x5, 0)">
       <div data-h2-container="base(center, medium, x1) l-tablet(center, medium, x2)">
-        ${heading.render(
-          data, 
-          {
-            tag: 'h2', 
-            size: 'h2', 
-            label: data.start.title.label, 
-            id: data.start.title.id, 
-            img: {
-              path: data.start.title.icon.path, 
-              alt: data.start.title.icon.alt
-            }
-          }
-        )}
-        ${heading.render(
-          data, 
-          {
-            tag: 'h3', 
-            size: 'h6', 
-            label: data.start.subtitle.label, 
-            id: data.start.subtitle.id, 
-            margin: 'data-h2-margin="base(x3, 0, x1, 0)"',
-            flourish: true
-          }
-        )}
+        ${heading.render(data, {
+          tag: 'h2',
+          size: 'h2',
+          label: data.start.title.label,
+          id: data.start.title.id,
+          img: {
+            path: data.start.title.icon.path,
+            alt: data.start.title.icon.alt,
+          },
+        })}
+        ${heading.render(data, {
+          tag: 'h3',
+          size: 'h6',
+          label: data.start.subtitle.label,
+          id: data.start.subtitle.id,
+          margin: 'data-h2-margin="base(x3, 0, x1, 0)"',
+          flourish: true,
+        })}
         ${steps}
       </div>
     </div>
     <div data-h2-container="base(center, medium, x1) l-tablet(center, medium, x2)">
       ${rule.render(data)}
     </div>
-  `
+  `;
 }
 
 module.exports = {
   data,
-  render
+  render,
 };

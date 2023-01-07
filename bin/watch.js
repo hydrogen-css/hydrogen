@@ -2,4 +2,8 @@
 
 const { hydrogen_watch } = require('../lib/watch');
 
-hydrogen_watch();
+try {
+  hydrogen_watch();
+} catch (error) {
+  return false;
+}

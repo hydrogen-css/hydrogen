@@ -1,0 +1,32 @@
+{
+  "release-header": {
+    "prefix": "release header",
+    "body": [
+      "// Hydrogen data models\nlet Release = require('../lib/data/release-model-definition');\n/**\n * @typedef {import('../lib/data/release-model-definition').Release} Release\n *  @typedef {import('../lib/data/release-model-definition').Change} Change\n * @typedef {import('../lib/data/release-model-definition').Language} Language\n */\n\n// Release\n/** @type {Release} */\nmodule.exports = $0"
+    ]
+  },
+  "release": {
+    "prefix": "release",
+    "body": [
+      "{\n  author: '${1:Josh Beveridge}',\n  date: new Date('${2:${CURRENT_YEAR}}-${3:${CURRENT_MONTH}}-${4:${CURRENT_DATE}}'),\n  version: '${TM_FILENAME/(.*)\\..+$/$1/}',\n  $0\n};"
+    ]
+  },
+  "features": {
+    "prefix": "features",
+    "body": ["features: [\n  $0\n],"]
+  },
+  "optimizations": {
+    "prefix": "optimizations",
+    "body": ["optimizations: [\n  $0\n],"]
+  },
+  "bugfixes": {
+    "prefix": "bugfixes",
+    "body": ["bugfixes: [\n  $0\n],"]
+  },
+  "change": {
+    "prefix": "change",
+    "body": [
+      "{\n  breaking: ${1|false,true|},\n  changes: {\n    en: [$0]\n  }\n},"
+    ]
+  }
+}

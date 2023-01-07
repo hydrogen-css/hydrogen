@@ -142,3 +142,16 @@ function copy_code(e) {
     button.classList.remove('copied');
   }, 2000);
 }
+
+// Expand collapse
+function toggle_ec(e) {
+  let trigger = e;
+  let ec_wrapper = trigger.closest('.expand-collapse-wrapper');
+  let ec_content = ec_wrapper.querySelector('.expand-collapse-content');
+  // Toggle the wrapper
+  if (ec_wrapper.classList.contains('active')) {
+    ec_wrapper.classList.remove('active');
+  } else {
+    ec_wrapper.classList.add('active');
+  }
+}

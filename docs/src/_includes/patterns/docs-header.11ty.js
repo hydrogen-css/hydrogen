@@ -37,7 +37,7 @@ function render(data) {
                 data-h2-gap="base(x1) p-tablet(x2)">
                 ${flourish.render(data, {
                   heading: 'h6',
-                  color: 'data-h2-background-color="base(accent)"',
+                  color: 'data-h2-background-color="base(secondary)"',
                 })}
                 <div>
                   <p
@@ -49,7 +49,7 @@ function render(data) {
                       href=${item.path}
                       title=${item.title}
                       ${item.external ? 'target="_blank" rel="noreferrer"' : ''}
-                      data-h2-color="base:hover(lighter.primary)">${item.label}
+                      data-h2-color="base:hover(primary.lighter)">${item.label}
                     </a>
                   </p>
                 </div>
@@ -76,14 +76,14 @@ function render(data) {
               data-h2-width="p-tablet(x3)"
               data-h2-height="base(x.25)"
               data-h2-margin="p-tablet(0.6rem, auto, 0, auto) l-tablet(0.7rem, auto, 0, auto)"
-              data-h2-bg-color="base(accent)"
+              data-h2-background="base(secondary)"
               data-h2-radius="base(pill)"></div>
           </div>
           <div data-h2-flex-item="base(1of1) p-tablet(fill)">
             <p
               data-h2-font-size="base(h6, 1.3)"
               data-h2-font-weight="base(200)"
-              data-h2-font-color="base(white)"
+              data-h2-font-color="base:all(white)"
               data-h2-text-align="base(center) p-tablet(left)">${data.subtitle}</p>
           </div>
         </div>

@@ -6,13 +6,13 @@ function generate_home_nav(data) {
   let item_list = ``;
   data.home_nav.forEach(function (item, index) {
     let item_style =
-      'data-h2-color="base:hover(primary) base:dark:hover(lighter.primary) base:focus-visible(black)"';
+      'data-h2-color="base:hover(primary) base:dark:hover(primary.lighter) base:focus-visible(black)"';
     if (item.label === 'Home') {
       item_style = 'data-h2-font-weight="base(800)"';
       item_style = item_style + ' data-h2-text-decoration="base(none)"';
       item_style =
         item_style +
-        ' data-h2-color="base(dark.primary) base:hover(primary) base:dark(lighter.primary)"';
+        ' data-h2-color="base(primary.dark) base:hover(primary) base:dark(primary.lighter)"';
     }
     item_list =
       item_list +
@@ -52,7 +52,7 @@ function generate_crumbs(data) {
               title=""
               data-h2-background-color="base:focus-visible(focus)"
               data-h2-outline="base(none)"
-              data-h2-color="base:hover(primary) base:dark:hover(lighter.primary) base:focus-visible(black)">${collection.data.title}</a>${separator}
+              data-h2-color="base:hover(primary) base:dark:hover(primary.lighter) base:focus-visible(black)">${collection.data.title}</a>${separator}
           </li>
         ` + crumbs;
         } else {
@@ -63,7 +63,7 @@ function generate_crumbs(data) {
               href="${collection.url}"
               title=""
               data-h2-background-color="base:focus-visible(focus)"
-              data-h2-color="base(dark.primary) base:hover(primary) base:dark(lighter.primary) base:focus-visible(black)""
+              data-h2-color="base(primary.dark) base:hover(primary) base:dark(primary.lighter) base:focus-visible(black)"
               data-h2-text-decoration="base(none)"
               data-h2-outline="base(none)"
               data-h2-font-weight="base(800)">${collection.data.title}</a>
@@ -123,7 +123,7 @@ function render(data) {
             }"
             data-h2-background-color="base:focus-visible(focus)"
             data-h2-outline="base(none)"
-            data-h2-color="base:hover(primary) base:dark:hover(lighter.primary) base:focus-visible(black)">${
+            data-h2-color="base:hover(primary) base:dark:hover(primary.lighter) base:focus-visible(black)">${
               item.label
             }</a>
         </li>
@@ -132,8 +132,8 @@ function render(data) {
   });
   return String.raw`
     <div
-      data-h2-background-color="base(white) base:dark(dark.font)"
-      data-h2-border="base(bottom, 1px, solid, primary.darkest.2) base:dark(bottom, 1px, solid, primary.lightest.2)"
+      data-h2-background-color="base(background)"
+      data-h2-border-bottom="base(1px solid primary.darkest.2) base:dark(1px solid primary.lightest.2)"
       data-h2-padding="base(x1, 0) l-tablet(x.5, 0)"
       data-h2-layer="base(3, relative)">
       <div ${container}>
@@ -161,7 +161,7 @@ function render(data) {
               data-h2-justify-content="base(center) l-tablet(flex-end)"
               data-h2-gap="base(x1)">
               <li>
-                <span>version <strong data-h2-font-weight="base(800)" data-h2-color="base(dark.primary) base:dark(lighter.primary)">${
+                <span>version <strong data-h2-font-weight="base(800)" data-h2-color="base(primary.dark)">${
                   data.releases.beta.version
                 }</strong></span>
               </li>

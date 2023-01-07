@@ -20,7 +20,7 @@ function render(data, props) {
     h5: "data-h2-margin='base(calc((var(--h2-line-height-h5) / 2) * 1rem), 0, 0, 0)'",
     h6: "data-h2-margin='base(calc((var(--h2-line-height-h6) / 2) * 1rem), 0, 0, 0)'",
   };
-  let color = 'data-h2-background-color="base(primary) base:dark(accent)"';
+  let color = 'data-h2-background-color="base(primary) base:dark(secondary)"';
   if (props.color) {
     color = props.color;
   }

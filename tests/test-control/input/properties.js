@@ -37,7 +37,7 @@ let properties = {
   'data-h2-block-size': 'base(fit-content(20em))', // Space
   'data-h2-border': 'base(all, 1px, solid, primary)', // Custom
   'data-h2-border-block': 'base(medium dashed blue)', // Color
-  'data-h2-border-block-color': 'base(#f5f6f7)', // Color
+  'data-h2-border-block-color': 'base(primary.lighter.20)', // Color
   'data-h2-border-block-end': 'base(medium dashed blue)', // Color
   'data-h2-border-block-end-color': 'base(#f5f6f7)', // Color
   'data-h2-border-block-end-style': 'base(dotted)',

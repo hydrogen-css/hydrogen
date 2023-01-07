@@ -11,10 +11,12 @@ module.exports = function (eleventyConfig) {
   });
 
   // Run Hydrogen after the eleventy build executes
-  eleventyConfig.on('eleventy.after', async () => {
-    await hydrogen_build().catch((error) => {
+  eleventyConfig.on('eleventy.after', () => {
+    try {
+      hydrogen_build();
+    } catch (error) {
       console.log(error);
-    });
+    }
   });
 
   eleventyConfig.addPlugin(eleventyNavigationPlugin);

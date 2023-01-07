@@ -21,7 +21,7 @@ let data = {
       content: [
         {
           type: 'title',
-          label: 'Latest release',
+          label: 'Stable releases',
           id: 'latest',
         },
         {

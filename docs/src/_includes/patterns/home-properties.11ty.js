@@ -48,7 +48,7 @@ function render(data) {
               title=""
               data-h2-background-color="base:focus-visible(focus)"
               data-h2-outline="base(none)"
-              data-h2-color="base:hover(primary) base:dark:hover(lighter.primary) base:focus-visible(black)">${
+              data-h2-color="base:hover(primary) base:dark:hover(primary.lighter) base:focus-visible(black)">${
                 property.title[data.locale]
               }</a>
           </li>
@@ -92,34 +92,34 @@ function render(data) {
       <div
         data-h2-height="base(x.5)"
         data-h2-width="base(100%)"
-        data-h2-background-color="base(divider)"></div>
+        data-h2-background="base(divider)"></div>
       <div
         data-h2-height="base(100%)"
         data-h2-width="base(100%)"
         data-h2-position="base(absolute)"
-        data-h2-offset="base(0, auto, auto, 0)"
+        data-h2-location="base(0, auto, auto, 0)"
         data-h2-overflow="base(hidden)">
         <div 
-          data-h2-background-color="base(accentRadial)"
+          data-h2-background="base(accentRadial)"
           data-h2-position="base(absolute)"
           data-h2-height="base(300%)"
           data-h2-width="base(200%)"
           data-h2-opacity="base(20%)"
-          data-h2-offset="base(-150%, auto, auto, -100%)"></div>
+          data-h2-location="base(-150%, auto, auto, -100%)"></div>
         <div 
-          data-h2-background-color="base(primaryRadial)"
+          data-h2-background="base(primaryRadial)"
           data-h2-position="base(absolute)"
           data-h2-height="base(300%)"
           data-h2-width="base(200%)"
           data-h2-opacity="base(20%)"
-          data-h2-offset="base(auto, -100%, -150%, auto)"></div>
+          data-h2-location="base(auto, -100%, -150%, auto)"></div>
       </div>
       <div
         data-h2-position="base(relative)" 
         data-h2-container="base(center, medium, x1) p-tablet(center, medium, x2)">
         <div
           data-h2-margin="base(-x3, 0, 0, 0)"
-          data-h2-background-color="base(white) base:dark(font.dark)"
+          data-h2-background-color="base(white)"
           data-h2-radius="base(rounded)"
           data-h2-padding="base(x1) l-tablet(x2)"
           data-h2-shadow="base(large)">
