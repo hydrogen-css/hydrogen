@@ -132,7 +132,7 @@ function render(data) {
   return String.raw`
     <div
       data-h2-background-color="base(background)"
-      data-h2-border-bottom="base(1px solid primary.darkest.2) base:dark(1px solid primary.lightest.2)"
+      data-h2-border-bottom="base(1px solid primary.darkest.20)"
       data-h2-padding="base(x1, 0) l-tablet(x.5, 0)"
       data-h2-layer="base(3, relative)">
       <div ${container}>

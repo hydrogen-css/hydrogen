@@ -20,7 +20,8 @@
     "reset_styles": true,
     "prefixing": true,
     "minification": true,
-    "var_export": false
+    "var_export": false,
+    "auto_dark_modifiers": true
   },
   "logging": {
     "logs": false,
