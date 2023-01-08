@@ -7,7 +7,7 @@ function render(data) {
     <div 
       data-h2-margin="base(x3, 0, 0, 0) p-tablet(x4, 0, 0, 0) desktop(x5, 0, 0, 0)"
       data-h2-position="base(relative)"
-      data-h2-background-color="base(black)">
+      data-h2-background-color="base:all(black)">
       <div
         data-h2-height="base(x.5)"
         data-h2-width="base(100%)"

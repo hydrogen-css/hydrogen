@@ -43,7 +43,7 @@ function render(data) {
                   <p
                     data-h2-font-size="base(h6)"
                     data-h2-font-weight="base(200)"
-                    data-h2-font-color="base(white)"
+                    data-h2-font-color="base:all(white)"
                     data-h2-text-align="base(center) p-tablet(left)">
                     <a
                       href=${item.path}

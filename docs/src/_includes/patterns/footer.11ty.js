@@ -28,7 +28,7 @@ function render(data, props) {
         <p
           data-h2-font-size="base(h6)"
           data-h2-font-weight="base(700)"
-          data-h2-color="base(white)">${data.site.name}</p>
+          data-h2-color="base:all(white)">${data.site.name}</p>
       </div>
       <div data-h2-text-align="base(center) p-tablet(right)">
         <div
@@ -39,7 +39,7 @@ function render(data, props) {
             data-h2-font-size="base(h6)"
             data-h2-font-weight="base(300)"
             data-h2-max-width="base(x18)"
-            data-h2-color="base(white.80)"
+            data-h2-color="base:all(white.80)"
             data-h2-margin="base(0, 0, x1, auto)">${
               data.site.footer.farewell[data.locale]
             }</p>

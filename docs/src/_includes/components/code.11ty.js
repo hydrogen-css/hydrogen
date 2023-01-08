@@ -93,7 +93,8 @@ function render(data, props) {
       class="code_wrapper">
       <div
         data-h2-display="base(grid)"
-        data-h2-grid-template-columns="base(1fr auto)">
+        data-h2-grid-template-columns="base(1fr auto)"
+        data-h2-align-items="base(center)">
         <div>
           <span
             data-h2-color="base(code.lighter)"

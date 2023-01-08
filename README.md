@@ -77,7 +77,7 @@ You can read up on specifics about how Hydrogen works on a technical level in th
 
 The following functions are currently covered by automated tests:
 
-- hydrogen_build
+- `hydrogen_build`
 
 The following areas are currently covered by environment tests:
 

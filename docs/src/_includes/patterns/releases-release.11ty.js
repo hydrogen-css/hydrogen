@@ -159,6 +159,7 @@ function render(data, release, state) {
         data-h2-color="
           base:children[span](primary)
           base:focus-visible:children[span](black)"
+        data-h2-stroke="base:focus-visible:children[path](black)"
         data-h2-shadow="base(small) base:hover(large) base:focus-visible(none)"
         data-h2-cursor="base(pointer)"
         data-h2-position="base(absolute)"
@@ -183,15 +184,27 @@ function render(data, release, state) {
         <span
           class="ec-collapsed-icon"
           data-h2-position="base(center)"
-          data-h2-font-size="base(h6, 1)"
-          data-h2-margin="base(-1px, 0, 0, 0)"
-          data-h2-font-weight="base(600)">+</span>
+          data-h2-font-weight="base(600)">
+          <svg
+            data-h2-display="base(block)"
+            data-h2-height="base(x.75)" 
+            data-h2-width="base(x.75)" 
+            width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 23.1964L32.5 48.6964L58 23.1964" stroke="#9D5CFF" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
         <span
           class="ec-expanded-icon"
           data-h2-position="base(center)"
-          data-h2-font-size="base(h6, 1)"
-          data-h2-margin="base(-1px, 0, 0, 0)"
-          data-h2-font-weight="base(600)">–</span>
+          data-h2-font-weight="base(600)">
+          <svg
+            data-h2-display="base(block)"
+            data-h2-height="base(x.75)" 
+            data-h2-width="base(x.75)" 
+            width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M58 42.2344L32.5 16.7344L7 42.2344" stroke="#9D5CFF" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
       </button>
       <div
         data-h2-background-color="base(foreground)"
