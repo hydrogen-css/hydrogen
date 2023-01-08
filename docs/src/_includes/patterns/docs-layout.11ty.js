@@ -31,7 +31,7 @@ function render(data) {
           data-h2-position="base(absolute)"
           data-h2-location="base(auto, auto, 0, 0)"></div>
       </div>
-      <div data-h2-container="base(center, large, x1) p-tablet(center, large, x2)">
+      <div data-h2-container="base(center, large, x1) p-tablet(center, large, x2) l-tablet(center, large, x3)">
         <div 
           class="test-before" 
           data-h2-display="base(grid)"

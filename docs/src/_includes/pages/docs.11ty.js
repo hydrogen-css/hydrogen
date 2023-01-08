@@ -114,7 +114,7 @@ function render(data) {
     }
     function render_group(item, index, level) {
       let output = String.raw`
-        <div data-h2-display="base(grid)" data-h2-grid-template-columns="base(100%) l-tablet(repeat(2, minmax(0, 1fr)))" data-h2-gap="base(x3)">
+        <div data-h2-display="base(grid)" data-h2-grid-template-columns="base(100%) desktop(repeat(2, minmax(0, 1fr)))" data-h2-gap="base(x1) desktop(x3)">
       `;
       let content = [];
       let example = [];

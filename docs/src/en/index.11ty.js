@@ -15,7 +15,7 @@ var data = {
     {
       path: '/en/docs',
       title: "View Hydrogen's documentation.",
-      label: 'Docs',
+      label: 'Documentation',
     },
     {
       path: 'https://github.com/hydrogen-css/hydrogen',
@@ -26,11 +26,6 @@ var data = {
       path: '/en/releases',
       title: "View Hydrogen's open source code in a new tab.",
       label: 'Releases',
-    },
-    {
-      path: 'https://forms.office.com/r/vz80dsUabZ',
-      title: "View Hydrogen's open source code in a new tab.",
-      label: 'Feedback',
     },
   ],
   hero: {
