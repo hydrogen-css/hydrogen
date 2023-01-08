@@ -31,38 +31,47 @@ function render(data) {
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
       </head>
       <body 
-        data-h2-background-color="base(background) base:children[p code, li code](black.10)"
-        data-h2-color="base(font) base:children[p code, li code](font)"
+        data-h2-background-color="
+          base(background) 
+          base:children[p code, li code](black.10)
+          base:all:children[a:focus-visible](focus)"
+        data-h2-color="
+          base(font) 
+          base:children[p code, li code](font) 
+          base:children[h1, h2, h3, h4, h5, h6](black)
+          base:all:children[a:hover](primary)
+          base:all:children[a:focus-visible](black)"
+        data-h2-outline="base:children[a:focus-visible](none)"
         data-h2-font-size="base:children[p code, li code](caption)"
         data-h2-display="base:children[p code, li code](inline-block)"
         data-h2-padding="base:children[p code, li code](0, x.25)"
         class="test-font"
         data-h2-font-family="base(sans)">
         <a
-          href="#main"
-          title=${skip_to_content.title[data.locale]}
-          style="outline: none;"
-          data-h2-display="base(block)"
-          data-h2-background-color="base(primary.darker) base:focus(focus)"
-          data-h2-color="base(white) base:focus(black)"
-          data-h2-text-align="base(center)"
-          data-h2-padding="base(x1)"
-          data-h2-font-weight="base(700)"
-          data-h2-visibility="base(invisible) base:focus(revealed)">
-          ${skip_to_content.label[data.locale]}
-        </a>
-        <a
           href="#nav"
           title=${skip_to_nav.title[data.locale]}
           style="outline: none;"
           data-h2-display="base(block)"
           data-h2-background-color="base(primary.darker) base:focus(focus)"
-          data-h2-color="base(white) base:focus(black)"
+          data-h2-color="base(white) base:all:focus(black)"
           data-h2-text-align="base(center)"
           data-h2-padding="base(x1)"
           data-h2-font-weight="base(700)"
           data-h2-visibility="base(invisible) base:focus(revealed)">
           ${skip_to_nav.label[data.locale]}
+        </a>
+        <a
+          href="#main"
+          title=${skip_to_content.title[data.locale]}
+          style="outline: none;"
+          data-h2-display="base(block)"
+          data-h2-background-color="base(primary.darker) base:focus(focus)"
+          data-h2-color="base(white) base:all:focus(black)"
+          data-h2-text-align="base(center)"
+          data-h2-padding="base(x1)"
+          data-h2-font-weight="base(700)"
+          data-h2-visibility="base(invisible) base:focus(revealed)">
+          ${skip_to_content.label[data.locale]}
         </a>
         ${data.content}
         <!-- Local scripts -->

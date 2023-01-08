@@ -20,11 +20,25 @@ function render(data) {
     let example;
     if (item.example === 'themes') {
       example = String.raw`
-        <div data-h2-display="base(grid)" data-h2-grid-template-columns="base(1fr 1fr)" data-h2-gap="base(x1)" data-h2-height="base(100%)">
-          <button>Fluo</button>
+        <div 
+          data-h2-display="base(grid)" 
+          data-h2-grid-template-columns="base(1fr 1fr)" 
+          data-h2-gap="base(x1)" 
+          data-h2-height="base(100%)"
+          data-h2-background="base:children[button](foreground)"
+          data-h2-cursor="base:children[button](pointer)"
+          data-h2-border="base:children[button](none)"
+          data-h2-outline="base:children[button:focus-visible](none)"
+          data-h2-radius="base:children[button](rounded)"
+          data-h2-color="base:children[button](black)"
+          data-h2-text-decoration="base:children[button](underline)"
+          data-h2-shadow="
+            base:children[button](medium)
+            base:children[button:hover](larger)">
+          <button>Glow</button>
           <button>Posh</button>
-          <button>Neo</button>
-          <button>Boo!</button>
+          <button>Neon</button>
+          <button>Fern</button>
         </div>
       `;
     } else if (item.example === 'properties') {

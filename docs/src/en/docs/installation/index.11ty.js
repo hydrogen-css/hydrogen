@@ -3,13 +3,13 @@ const docs_layout = require('../../../_includes/pages/docs.11ty');
 let data = {
   layout: 'pages/docs.11ty.js',
   navigation: {
-    key: 'properties',
+    key: 'installation',
     parent: 'docs',
-    order: 4,
+    order: 1,
   },
-  title: 'Properties',
-  title_long: 'Property support',
-  subtitle: 'A summary of CSS and custom properties supported by Hydrogen.',
+  title: 'Installation',
+  title_long: 'Installing Hydrogen',
+  subtitle: 'Instructions on how to install and run Hydrogen on your project.',
   main: [
     {
       type: 'title',
@@ -25,7 +25,10 @@ let data = {
     {
       type: 'list',
       style: 'unordered',
-      items: ['Standard properties', 'Custom properties'],
+      items: [
+        '<a href="/en/docs/installation/getting-started" title="">Getting started</a>',
+        '<a href="/en/docs/installation/running-commands" title="">Running commands</a>',
+      ],
     },
   ],
 };

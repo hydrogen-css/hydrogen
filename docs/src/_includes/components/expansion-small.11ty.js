@@ -27,10 +27,8 @@ function render(data, props) {
         base:selectors[.active]:children[>.expand-collapse-content](block)">
       <button
         data-h2-cursor="base(pointer)"
-        data-h2-display="base(block)"
         data-h2-width="base(100%)"
         data-h2-border="base(none)"
-        data-h2-background="base(transparent)"
         data-h2-padding="base(0)"
         onclick="toggle_ec(this)">
         <div 
@@ -65,8 +63,7 @@ function render(data, props) {
           </div>
           <p 
             data-h2-text-align="base(left)"
-            data-h2-text-decoration="base(underline)"
-            data-h2-color="base(font.dark) base:dark(font.light)">${props.label}</p>
+            data-h2-text-decoration="base(underline)">${props.label}</p>
         </div>
       </button>
       <div class="expand-collapse-content" data-h2-margin-left="base(x.25)">

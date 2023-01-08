@@ -82,7 +82,7 @@ function render(data, props) {
   if (props.id != false) {
     hash = String.raw`
       <a 
-        data-h2-color="base(black.lightest) base:hover(primary) base:dark(black.darker) base:focus-visible(black)" 
+        data-h2-color="base(black.lightest) base:hover(primary) base:all:focus-visible(black)" 
         data-h2-font-size="base(caption)" 
         data-h2-display="base(inline)"
         data-h2-background-color="base:focus-visible(focus)"
@@ -115,7 +115,7 @@ function render(data, props) {
           data-h2-font-weight="base(300)"
           data-h2-background-color="base:focus-visible(focus)"
           style="outline: none;"
-          data-h2-color="base:hover(primary) base:dark:hover(primary.lighter) base:focus-visible(black)">${props.link.label}</a>
+          data-h2-color="base:hover(primary) base:all:focus-visible(black)">${props.link.label}</a>
       </div>
     `;
   }

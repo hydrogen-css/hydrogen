@@ -6,12 +6,13 @@ function generate_home_nav(data) {
   let item_list = ``;
   data.home_nav.forEach(function (item, index) {
     let item_style =
-      'data-h2-color="base:hover(primary) base:focus-visible(black)"';
+      'data-h2-color="base:hover(primary) base:all:focus-visible(black)"';
     if (item.label === 'Home') {
       item_style = 'data-h2-font-weight="base(800)"';
       item_style = item_style + ' data-h2-text-decoration="base(none)"';
       item_style =
-        item_style + ' data-h2-color="base(primary.dark) base:hover(primary)"';
+        item_style +
+        ' data-h2-color="base(primary.dark) base:all:focus-visible(black) base:hover(primary)"';
     }
     item_list =
       item_list +
@@ -51,7 +52,7 @@ function generate_crumbs(data) {
               title=""
               data-h2-background-color="base:focus-visible(focus)"
               data-h2-outline="base(none)"
-              data-h2-color="base:hover(primary) base:focus-visible(black)">${collection.data.title}</a>${separator}
+              data-h2-color="base:hover(primary) base:all:focus-visible(black)">${collection.data.title}</a>${separator}
           </li>
         ` + crumbs;
         } else {
@@ -62,7 +63,7 @@ function generate_crumbs(data) {
               href="${collection.url}"
               title=""
               data-h2-background-color="base:focus-visible(focus)"
-              data-h2-color="base(primary.dark) base:hover(primary) base:focus-visible(black)"
+              data-h2-color="base(primary.dark) base:hover(primary) base:all:focus-visible(black)"
               data-h2-text-decoration="base(none)"
               data-h2-outline="base(none)"
               data-h2-font-weight="base(800)">${collection.data.title}</a>
@@ -122,7 +123,7 @@ function render(data) {
             }"
             data-h2-background-color="base:focus-visible(focus)"
             data-h2-outline="base(none)"
-            data-h2-color="base:hover(primary) base:focus-visible(black)">${
+            data-h2-color="base:hover(primary) base:all:focus-visible(black)">${
               item.label
             }</a>
         </li>
@@ -173,7 +174,7 @@ function render(data) {
                 title="French translations for Hydrogen's documentation are coming soon."
                 data-h2-background-color="base:focus-visible(focus)"
                 data-h2-outline="base(none)"
-                data-h2-color="base(black.30) base:dark(white.30) base:focus-visible(black)">FR</a>
+                data-h2-color="base(black.30) base:all:focus-visible(black)">FR</a>
             </li>
             </ul>
           </div>

@@ -1,14 +1,14 @@
-const docs_layout = require('../../_includes/pages/docs.11ty');
+const docs_layout = require('../../../../_includes/pages/docs.11ty');
 
 let data = {
   layout: 'pages/docs.11ty.js',
   navigation: {
     key: 'commands',
-    parent: 'docs',
+    parent: 'installation',
     order: 2,
   },
   title: 'Commands',
-  title_long: 'CLI commands',
+  title_long: 'Running commands',
   subtitle: "Learn about Hydrogen's CLI tool and how to use it to build CSS.",
   main: [
     {

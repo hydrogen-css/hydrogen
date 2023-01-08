@@ -1,14 +1,13 @@
-const docs_layout = require('../../_includes/pages/docs.11ty');
+const docs_layout = require('../../../../_includes/pages/docs.11ty');
 
 let data = {
   layout: 'pages/docs.11ty.js',
   navigation: {
-    key: 'installation',
-    parent: 'docs',
+    key: 'getting-started',
+    parent: 'installation',
     order: 1,
   },
-  title: 'Installation',
-  title_long: 'Installing Hydrogen',
+  title: 'Getting started',
   subtitle: 'Learn how to install and initialize Hydrogen using Node.',
   main: [
     {
@@ -17,30 +16,25 @@ let data = {
       id: 'install',
     },
     {
-      type: 'section',
-      content: [
+      type: 'group',
+      items: [
         {
-          type: 'title',
-          label: 'Stable releases',
-          id: 'latest',
-        },
-        {
-          type: 'group',
+          type: 'copy',
           items: [
-            {
-              type: 'copy',
-              items: [
-                "Hydrogen runs behind the scenes using Node.js. In order to install Hydrogen on your project, you'll need to have Node and NPM installed on your machine. From there, inside of a command prompt/terminal window, navigate to the root of your project and run the installation command.",
-                "Once the command finishes, you'll be able to run Hydrogen's commands from your project. If you'd like to dig a little deeper into Hydrogen's code, you'll be able to find the installation inside of your project's <code>node_modules</code> folder.",
-              ],
-            },
-            {
-              type: 'code',
-              file: 'terminal',
-              lines: ['npm install @hydrogen-css/hydrogen --save-dev'],
-            },
+            "Hydrogen runs behind the scenes using Node.js. In order to install Hydrogen on your project, you'll need to have Node and NPM installed on your machine. From there, inside of a command prompt/terminal window, navigate to the root of your project and run the installation command.",
+            "Once the command finishes, you'll be able to run Hydrogen's commands from your project. If you'd like to dig a little deeper into Hydrogen's code, you'll be able to find the installation inside of your project's <code>node_modules</code> folder.",
           ],
         },
+        {
+          type: 'code',
+          file: 'terminal',
+          lines: ['npm install @hydrogen-css/hydrogen --save-dev'],
+        },
+      ],
+    },
+    {
+      type: 'section',
+      content: [
         {
           type: 'title',
           label: 'Beta releases',

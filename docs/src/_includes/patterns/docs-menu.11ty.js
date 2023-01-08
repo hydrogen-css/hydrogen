@@ -49,14 +49,14 @@ function render(data) {
     <ul data-h2-padding="base(0, 0, 0, x2)">
       <li data-h2-margin="base(x.25, 0, 0, 0)">
         <a 
-          href="/${data.locale}/docs/installation"
+          href="/${data.locale}/docs/installation/getting-started"
           title="">
           Getting started
         </a>
       </li>
       <li data-h2-margin="base(x.25, 0, 0, 0)">
         <a 
-          href="/${data.locale}/docs/commands"
+          href="/${data.locale}/docs/installation/running-commands"
           title="">
           Running commands
         </a>
@@ -68,21 +68,21 @@ function render(data) {
     <ul data-h2-padding="base(0, 0, 0, x2)">
       <li data-h2-margin="base(x.25, 0, 0, 0)">
         <a 
-          href="/${data.locale}/docs/configuration"
+          href="/${data.locale}/docs/configuration/core-settings"
           title="">
           Core settings
         </a>
       </li>
       <li data-h2-margin="base(x.25, 0, 0, 0)">
         <a 
-          href="/${data.locale}/docs/configuration/modes"
+          href="/${data.locale}/docs/configuration/configuring-modes"
           title="">
           Configuring dark mode
         </a>
       </li>
       <li data-h2-margin="base(x.25, 0, 0, 0)">
         <a 
-          href="/${data.locale}/docs/configuration/themes"
+          href="/${data.locale}/docs/configuration/creating-themes"
           title="">
           Creating themes
         </a>
@@ -94,28 +94,28 @@ function render(data) {
     <ul data-h2-padding="base(0, 0, 0, x2)">
       <li data-h2-margin="base(x.25, 0, 0, 0)">
         <a 
-          href="/${data.locale}/docs/installation"
+          href="/${data.locale}/docs/styling/syntax"
           title="">
           Syntax
         </a>
       </li>
       <li data-h2-margin="base(x.25, 0, 0, 0)">
         <a 
-          href="/${data.locale}/docs/commands"
+          href="/${data.locale}/docs/styling/typography"
           title="">
           Typography
         </a>
       </li>
       <li data-h2-margin="base(x.25, 0, 0, 0)">
         <a 
-          href="/${data.locale}/docs/commands"
+          href="/${data.locale}/docs/styling/layout"
           title="">
           Layout
         </a>
       </li>
       <li data-h2-margin="base(x.25, 0, 0, 0)">
         <a 
-          href="/${data.locale}/docs/commands"
+          href="/${data.locale}/docs/styling/colors"
           title="">
           Colors
         </a>
@@ -127,14 +127,14 @@ function render(data) {
     <ul data-h2-padding="base(0, 0, 0, x2)">
       <li data-h2-margin="base(x.25, 0, 0, 0)">
         <a 
-          href="/${data.locale}/docs/installation"
+          href="/${data.locale}/docs/properties/standard"
           title="">
           Standard properties
         </a>
       </li>
       <li data-h2-margin="base(x.25, 0, 0, 0)">
         <a 
-          href="/${data.locale}/docs/commands"
+          href="/${data.locale}/docs/properties/custom"
           title="">
           Custom properties
         </a>
@@ -143,7 +143,7 @@ function render(data) {
   `;
 
   let menu_content = String.raw`
-    <nav id="nav">
+    <nav>
       <ul data-h2-padding="base(0)" data-h2-list-style="base(none) base:children[ul](none)">
         <li data-h2-margin="base(x.25, 0, 0, 0)">
           <a 
@@ -191,6 +191,13 @@ function render(data) {
         </li>
         <li data-h2-margin="base(x.25, 0, 0, 0)">
           <a 
+            href="/en/docs/releases"
+            title="">
+            Releases
+          </a>
+        </li>
+        <li data-h2-margin="base(x.25, 0, 0, 0)">
+          <a 
             href="https://github.com/hydrogen-design-system/hydrogen"
             title=""
             target="_blank"
@@ -198,20 +205,6 @@ function render(data) {
             Github
           </a>
         </li>
-        <li data-h2-margin="base(x.25, 0, 0, 0)">
-          <a 
-            href="/en/releases"
-            title="">
-            Releases
-          </a>
-        </li>
-        <!-- <li data-h2-margin="base(x.25, 0, 0, 0)">
-          <a 
-            href="https://forms.office.com/r/vz80dsUabZ"
-            title="Submit generic, usability, or bug feedback.">
-            Feedback
-          </a>
-        </li> -->
       </ul>
     </nav>
   `;
@@ -223,7 +216,15 @@ function render(data) {
       data-h2-location="base(0, auto, auto, auto)">
       <div data-h2-padding="base(x1, 0, 0, 0) l-tablet(x2, 0, 0, 0) laptop(x3, 0, 0, 0) desktop(x4, 0, 0, 0)">
         <div
-          data-h2-background="base(foreground)"
+          data-h2-background="
+            base(foreground)
+            base:children[button](transparent)
+            base:children[a:focus-visible, button:focus-visible](focus)"
+          data-h2-border="base:children[a, button](none)"
+          data-h2-display="base:children[a, button](block)"
+          data-h2-outline="base:children[a, button](none)"
+          data-h2-color="base:children[a, button](font) base:all:children[a:focus-visible, button:focus-visible](black) base:children[a:hover, button:hover](primary)"
+          data-h2-stroke="base:all:children[a:focus-visible path, button:focus-visible path](black)"
           data-h2-radius="base(rounded)"
           data-h2-padding="base(x2)"
           data-h2-shadow="base(large)"
@@ -235,23 +236,22 @@ function render(data) {
             <h1
               data-h2-font-size="base(h2)"
               data-h2-font-weight="base(800)"
-              data-h2-font-color="base(font.dark) base:dark(white)"
               data-h2-text-align="base(center)">
               <a
                 href="/${data.locale}/docs"
                 title=""
-                data-h2-background-color="base:focus-visible(focus)"
-                data-h2-color="base(black) base:focus-visible(black) base:hover(primary)"
+                id="nav"
+                data-h2-color="base(black) base:hover(primary) base:all:focus-visible(black)"
                 data-h2-transition="base:hover(color, .2s, ease, 0s)"
                 data-h2-text-decoration="base(none)">
                 Hydrogen
               </a>
             </h1>
-            <form data-h2-margin="base(x1.5, auto, auto, auto)">
+            <!-- <form data-h2-margin="base(x1.5, auto, auto, auto)">
               <label
                 data-h2-display="base(block)"
                 data-h2-font-size="base(caption)"
-                data-h2-font-color="base(font.dark) base:dark(white)">Search the docs</label>
+                data-h2-font-color="base(font)">Search the docs</label>
               <input 
                 data-h2-border="base(1px solid black)"
                 data-h2-display="base(block)"
@@ -261,7 +261,7 @@ function render(data) {
                 data-h2-width="base(100%)"
                 type="text"
                 placeholder="Find something...">
-            </form>
+            </form> -->
             <div data-h2-margin="base(x2 0 0 0)">
               <p 
                 data-h2-color="base(black)"

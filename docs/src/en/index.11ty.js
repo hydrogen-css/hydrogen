@@ -18,14 +18,15 @@ var data = {
       label: 'Documentation',
     },
     {
+      path: '/en/docs/releases',
+      title:
+        'Learn more about the latest release, past updates, and upcoming features.',
+      label: 'Releases',
+    },
+    {
       path: 'https://github.com/hydrogen-css/hydrogen',
       title: "View Hydrogen's open source code in a new tab.",
       label: 'Github',
-    },
-    {
-      path: '/en/releases',
-      title: "View Hydrogen's open source code in a new tab.",
-      label: 'Releases',
     },
   ],
   hero: {

@@ -21,7 +21,7 @@ let data = {
       label: 'Configure your project',
     },
     {
-      path: '/en/docs/syntax',
+      path: '/en/docs/styling',
       title: 'Learn more about how to install Hydrogen on your project.',
       label: 'Style your interfaces',
     },
@@ -59,7 +59,7 @@ let data = {
       label: 'Latest releases',
       id: 'releases',
       link: {
-        path: '/en/releases',
+        path: '/en/docs/releases',
         label: 'View all updates',
         title: "View all of Hydrogen's documented releases.",
       },

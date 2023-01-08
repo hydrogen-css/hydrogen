@@ -158,8 +158,8 @@ function render(data, release, state) {
         data-h2-background-color="base(foreground) base:focus-visible(focus)"
         data-h2-color="
           base:children[span](primary)
-          base:focus-visible:children[span](black)"
-        data-h2-stroke="base:focus-visible:children[path](black)"
+          base:all:focus-visible:children[span](black)"
+        data-h2-stroke="base:all:focus-visible:children[path](black)"
         data-h2-shadow="base(small) base:hover(large) base:focus-visible(none)"
         data-h2-cursor="base(pointer)"
         data-h2-position="base(absolute)"
@@ -168,7 +168,7 @@ function render(data, release, state) {
         data-h2-border="
           base(none)
           base:children[>div](x.2 solid foreground)
-          base:focus-visible:children[>div](x.2 solid black)"
+          base:all:focus-visible:children[>div](x.2 solid black)"
         data-h2-margin="base(x2, 0, 0, 0)"
         data-h2-transition="base(box-shadow, .2s, ease)"
         data-h2-z-index="base(2)"
