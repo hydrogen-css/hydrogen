@@ -26,7 +26,12 @@ let data = {
     {
       type: 'list',
       style: 'unordered',
-      items: ['Syntax', 'Typography', 'Layout', 'Colors'],
+      items: [
+        '<a href="/en/docs/styling/syntax" title="">Syntax</a>',
+        '<a href="/en/docs/styling/typography" title="">Typography</a>',
+        '<a href="/en/docs/styling/layout" title="">Layout</a>',
+        '<a href="/en/docs/styling/colors" title="">Colors</a>',
+      ],
     },
   ],
 };

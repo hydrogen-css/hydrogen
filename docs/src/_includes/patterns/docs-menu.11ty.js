@@ -75,6 +75,13 @@ function render(data) {
       </li>
       <li data-h2-margin="base(x.25, 0, 0, 0)">
         <a 
+          href="/${data.locale}/docs/configuration/configuring-queries"
+          title="">
+          Configuring media queries
+        </a>
+      </li>
+      <li data-h2-margin="base(x.25, 0, 0, 0)">
+        <a 
           href="/${data.locale}/docs/configuration/configuring-modes"
           title="">
           Configuring dark mode
@@ -134,9 +141,9 @@ function render(data) {
       </li>
       <li data-h2-margin="base(x.25, 0, 0, 0)">
         <a 
-          href="/${data.locale}/docs/properties/custom"
+          href="/${data.locale}/docs/properties/hydrogen"
           title="">
-          Custom properties
+          Hydrogen properties
         </a>
       </li>
     </ul>

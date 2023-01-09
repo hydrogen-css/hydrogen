@@ -247,21 +247,49 @@ var data = {
       },
     ],
   },
-  properties: {
+  jump: {
     title: {
-      label: 'Get started',
-      id: 'get-started',
+      label: 'Jump right in',
+      id: 'start',
       icon: {
         path: '/static/img/icon-compass.svg',
         alt: 'A sticker-style icon of a compass.',
       },
-      link: {
-        path: '/en/docs',
-        title:
-          "Head on over to Hydrogen's documentation for more detailed property information.",
-        label: 'Visit the documentation',
-      },
     },
+    sections: [
+      {
+        title: 'Installation',
+        sub: [
+          '<a href="/en/docs/installation/getting-started" title="">Getting started</a>',
+          '<a href="/en/docs/installation/running-commands" title="">Running commands</a>',
+        ],
+      },
+      {
+        title: 'Configuration',
+        sub: [
+          '<a href="/en/docs/configuration/core-settings" title="">Core settings</a>',
+          '<a href="/en/docs/configuration/configuring-queries" title="">Configuring media queries</a>',
+          '<a href="/en/docs/configuration/configuring-modes" title="">Configuring dark mode</a>',
+          '<a href="/en/docs/configuration/creating themes" title="">Creating themes</a>',
+        ],
+      },
+      {
+        title: 'Styling',
+        sub: [
+          '<a href="/en/docs/styling/syntax" title="">Syntax</a>',
+          '<a href="/en/docs/styling/typography" title="">Typography</a>',
+          '<a href="/en/docs/styling/layout" title="">Layout</a>',
+          '<a href="/en/docs/styling/colors" title="">Colors</a>',
+        ],
+      },
+      {
+        title: 'Properties',
+        sub: [
+          '<a href="/en/docs/properties/standard" title="">Standard properties</a>',
+          '<a href="/en/docs/properties/hydrogen" title="">Hydrogen properties</a>',
+        ],
+      },
+    ],
   },
 };
 

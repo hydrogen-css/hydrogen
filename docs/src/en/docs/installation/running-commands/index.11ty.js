@@ -99,6 +99,26 @@ let data = {
       label: 'Flags',
       id: 'flags',
     },
+    {
+      type: 'section',
+      content: [
+        {
+          type: 'title',
+          label: 'Environment flags',
+          id: 'environment-flags',
+        },
+        {
+          type: 'title',
+          label: 'Processing flags',
+          id: 'processing-flags',
+        },
+        {
+          type: 'title',
+          label: 'Logging flags',
+          id: 'logging-flags',
+        },
+      ],
+    },
   ],
 };
 

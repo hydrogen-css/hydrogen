@@ -14,7 +14,7 @@ function render(data, props) {
     <hr 
       data-h2-border="base(none)"
       data-h2-height="base(1px)"
-      data-h2-background-color="base(primary.darkest.20) base:dark(primary.lightest.20)"
+      data-h2-background-color="base(primary.darkest.20)"
       data-h2-margin="base(0)">
   `;
 }

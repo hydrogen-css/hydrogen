@@ -13,6 +13,36 @@ var data = {};
  * @returns {String} the rendered pattern
  */
 function render(data) {
+  // Create sections
+  function get_sections() {
+    let sections = String.raw``;
+    data.jump.sections.forEach((i) => {
+      function get_subs() {
+        let subs = String.raw``;
+        i.sub.forEach((s) => {
+          subs = subs.concat(
+            String.raw`
+              <li>${s}</li>
+            `
+          );
+        });
+        return subs;
+      }
+      sections = sections.concat(String.raw`
+        <div>
+          <p data-h2-font-weight="base(700)" data-h2-color="base(primary.dark)">${
+            i.title
+          }</p>
+          <ul
+            data-h2-margin-top="base(x.5)" 
+            data-h2-padding-left="base(x.75)">
+            ${get_subs()}
+          </ul>
+        </div>
+      `);
+    });
+    return sections;
+  }
   // Render the pattern
   return String.raw`
     <div data-h2-margin="base(x5 0 0 0)" data-h2-padding="base(0, 0, x2, 0)">
@@ -20,11 +50,11 @@ function render(data) {
         ${heading.render(data, {
           tag: 'h2',
           size: 'h2',
-          label: data.friends.title.label,
-          id: data.friends.title.id,
+          label: data.jump.title.label,
+          id: data.jump.title.id,
           img: {
-            path: data.friends.title.icon.path,
-            alt: data.friends.title.icon.alt,
+            path: data.jump.title.icon.path,
+            alt: data.jump.title.icon.alt,
           },
         })}
       </div>
@@ -69,9 +99,9 @@ function render(data) {
           data-h2-shadow="base(large)">
           <div 
             data-h2-display="base(grid)" 
-            data-h2-grid-template-columns="base(repeat(1, minmax(0, 1fr))) p-tablet(repeat(3, minmax(0, 1fr))) l-tablet(repeat(5, minmax(0, 1fr)))" 
+            data-h2-grid-template-columns="base(repeat(1, minmax(0, 1fr))) p-tablet(repeat(2, minmax(0, 1fr))) l-tablet(repeat(4, minmax(0, 1fr)))" 
             data-h2-gap="base(x2)">
-            Stuff
+            ${get_sections()}
           </div>
         </div>
       </div>

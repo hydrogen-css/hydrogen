@@ -34,11 +34,12 @@ function render(data) {
           data-h2-text-decoration="base:children[button](underline)"
           data-h2-shadow="
             base:children[button](medium)
-            base:children[button:hover](larger)">
-          <button>Glow</button>
-          <button>Posh</button>
-          <button>Neon</button>
-          <button>Fern</button>
+            base:children[button:hover](larger)"
+          data-h2-transition="base:children[button](box-shadow .2s ease)">
+          <button onclick="toggle_glow(this)">Glow</button>
+          <button onclick="toggle_wave(this)">Wave</button>
+          <button onclick="toggle_neon(this)">Neon</button>
+          <button onclick="toggle_fern(this)">Fern</button>
         </div>
       `;
     } else if (item.example === 'properties') {

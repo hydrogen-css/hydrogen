@@ -19,13 +19,18 @@ let data = {
     {
       type: 'copy',
       items: [
-        "This section of the documentation summarizes the first steps you'll have to take to get Hydrogen running on your project. If you've used Node tools in the past, setup should be pretty straightforward.",
+        "This section of the documentation outlines the various options you can set inside of Hydrogen's configuration file. The settings file can be broken apart into three key areas: core build settings, mode settings, and themes.",
       ],
     },
     {
       type: 'list',
       style: 'unordered',
-      items: ['Core settings', 'Configuring dark mode', 'Creating themes'],
+      items: [
+        '<a href="/en/docs/configuration/core-settings" title="">Core settings</a>',
+        '<a href="/en/docs/configuration/configuring-queries" title="">Configuring media queries</a>',
+        '<a href="/en/docs/configuration/configuring-modes" title="">Configuring dark mode</a>',
+        '<a href="/en/docs/configuration/creating themes" title="">Creating themes</a>',
+      ],
     },
   ],
 };

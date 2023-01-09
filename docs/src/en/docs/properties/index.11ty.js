@@ -25,7 +25,10 @@ let data = {
     {
       type: 'list',
       style: 'unordered',
-      items: ['Standard properties', 'Custom properties'],
+      items: [
+        '<a href="/en/docs/properties/standard" title="">Standard properties</a>',
+        '<a href="/en/docs/properties/hydrogen" title="">Hydrogen properties</a>',
+      ],
     },
   ],
 };

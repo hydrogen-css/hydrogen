@@ -90,7 +90,7 @@ function render(data) {
   let gap = 'data-h2-gap="base(x1)"';
   if (data.navigation.key === 'home') {
     container =
-      'data-h2-container="base(center, medium, x1) p-tablet(center, medium, x2) l-tablet(center, large, x3)"';
+      'data-h2-container="base(center, medium, x1) p-tablet(center, medium, x2) l-tablet(center, medium, x3)"';
     nav_id = 'nav';
     nav_items = generate_home_nav(data);
   } else {
