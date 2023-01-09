@@ -6,13 +6,13 @@ Hydrogen is an open-source design and CSS utility framework powered by data-attr
 
 It leverages data-attributes to allow the styling of elements right in your markup, rather than creating your own classes. Hydrogen offers a comprehensive library of tools and configurations for easy, seamless development. When you're ready to publish your project, it then processes your markup and creates a custom CSS file that contains only the code you've used, reducing its own footprint.
 
-[Website](https://hydrogen.design) | [Roadmap](https://github.com/orgs/hydrogen-css/projects/1) | [Feedback](https://forms.office.com/r/vz80dsUabZ)
+[Website](https://hydrogen.design) | [Roadmap](https://github.com/orgs/hydrogen-css/projects/1)
 
 ## 🥳 Upcoming 2.0.0 release
 
 Hydrogen is about to undergo some significant improvements, including a drastic speed increase and a massive feature drop. This release does come with some breaking changes, and an upgrade guide will be provided when the time comes.
 
-You can read more about what's included by viewing the `release/2.0.0` branch [here on Github](https://github.com/hydrogen-css/hydrogen/tree/release/2.0.0).
+You can read more about what's included by viewing the `release/2.0.0` branch [here on Github](https://github.com/hydrogen-css/hydrogen/pull/200).
 
 `2.0.0` is almost ready to go, but the [documentation site](https://beta.hydrogen.design) needs to be wrapped up first. In the meantime, if you plan to use Hydrogen on a new project, we recommend installing `2.0.0` now to make it a seamless transition.
 
