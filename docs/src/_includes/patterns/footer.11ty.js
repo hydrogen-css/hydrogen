@@ -13,10 +13,10 @@ var data = {};
  */
 function render(data, props) {
   let container =
-    'data-h2-container="base(center, large, x1) p-tablet(center, large, x2)"';
+    'data-h2-container="base(center, large, x1) p-tablet(center, large, x2) l-tablet(center, medium, x3)"';
   if (data.navigation.key === 'home') {
     container =
-      'data-h2-container="base(center, medium, x1) p-tablet(center, medium, x2)"';
+      'data-h2-container="base(center, medium, x1) p-tablet(center, medium, x2) l-tablet(center, medium, x3)"';
   }
   // Create the footer
   let footer = String.raw`
@@ -28,7 +28,7 @@ function render(data, props) {
         <p
           data-h2-font-size="base(h6)"
           data-h2-font-weight="base(700)"
-          data-h2-color="base(white)">${data.site.name}</p>
+          data-h2-color="base:all(white)">${data.site.name}</p>
       </div>
       <div data-h2-text-align="base(center) p-tablet(right)">
         <div
@@ -39,7 +39,7 @@ function render(data, props) {
             data-h2-font-size="base(h6)"
             data-h2-font-weight="base(300)"
             data-h2-max-width="base(x18)"
-            data-h2-color="base(white.80)"
+            data-h2-color="base:all(white.80)"
             data-h2-margin="base(0, 0, x1, auto)">${
               data.site.footer.farewell[data.locale]
             }</p>

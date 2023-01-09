@@ -1,3 +1,5 @@
+const expansion_small = require('../components/expansion-small.11ty.js');
+
 var data = {};
 
 function render(data) {
@@ -15,7 +17,9 @@ function render(data) {
           </li>
         `;
       } else if (item.type === 'section') {
-        output = output + String.raw`<ul data-h2-padding="base(0, 0, 0, x1)">`;
+        output =
+          output +
+          String.raw`<ul data-h2-list-style="base(none)" data-h2-padding="base(0, 0, 0, x1)">`;
         item.content.forEach((item) => {
           if (item.type === 'title') {
             output =
@@ -34,6 +38,184 @@ function render(data) {
     });
     return output;
   }
+
+  let page_content = String.raw`
+    <ul data-h2-padding="base(0)" data-h2-list-style="base(none)">
+      ${create_page_menu()}
+    </ul>
+  `;
+
+  let installation_content = String.raw`
+    <ul data-h2-padding="base(0, 0, 0, x2)">
+      <li data-h2-margin="base(x.25, 0, 0, 0)">
+        <a 
+          href="/${data.locale}/docs/installation/getting-started"
+          title="">
+          Getting started
+        </a>
+      </li>
+      <li data-h2-margin="base(x.25, 0, 0, 0)">
+        <a 
+          href="/${data.locale}/docs/installation/running-commands"
+          title="">
+          Running commands
+        </a>
+      </li>
+    </ul>
+  `;
+
+  let configuration_content = String.raw`
+    <ul data-h2-padding="base(0, 0, 0, x2)">
+      <li data-h2-margin="base(x.25, 0, 0, 0)">
+        <a 
+          href="/${data.locale}/docs/configuration/core-settings"
+          title="">
+          Core settings
+        </a>
+      </li>
+      <li data-h2-margin="base(x.25, 0, 0, 0)">
+        <a 
+          href="/${data.locale}/docs/configuration/configuring-queries"
+          title="">
+          Configuring media queries
+        </a>
+      </li>
+      <li data-h2-margin="base(x.25, 0, 0, 0)">
+        <a 
+          href="/${data.locale}/docs/configuration/configuring-modes"
+          title="">
+          Configuring dark mode
+        </a>
+      </li>
+      <li data-h2-margin="base(x.25, 0, 0, 0)">
+        <a 
+          href="/${data.locale}/docs/configuration/creating-themes"
+          title="">
+          Creating themes
+        </a>
+      </li>
+    </ul>
+  `;
+
+  let styling_content = String.raw`
+    <ul data-h2-padding="base(0, 0, 0, x2)">
+      <li data-h2-margin="base(x.25, 0, 0, 0)">
+        <a 
+          href="/${data.locale}/docs/styling/syntax"
+          title="">
+          Syntax
+        </a>
+      </li>
+      <li data-h2-margin="base(x.25, 0, 0, 0)">
+        <a 
+          href="/${data.locale}/docs/styling/typography"
+          title="">
+          Typography
+        </a>
+      </li>
+      <li data-h2-margin="base(x.25, 0, 0, 0)">
+        <a 
+          href="/${data.locale}/docs/styling/layout"
+          title="">
+          Layout
+        </a>
+      </li>
+      <li data-h2-margin="base(x.25, 0, 0, 0)">
+        <a 
+          href="/${data.locale}/docs/styling/colors"
+          title="">
+          Colors
+        </a>
+      </li>
+    </ul>
+  `;
+
+  let properties_content = String.raw`
+    <ul data-h2-padding="base(0, 0, 0, x2)">
+      <li data-h2-margin="base(x.25, 0, 0, 0)">
+        <a 
+          href="/${data.locale}/docs/properties/standard"
+          title="">
+          Standard properties
+        </a>
+      </li>
+      <li data-h2-margin="base(x.25, 0, 0, 0)">
+        <a 
+          href="/${data.locale}/docs/properties/hydrogen"
+          title="">
+          Hydrogen properties
+        </a>
+      </li>
+    </ul>
+  `;
+
+  let menu_content = String.raw`
+    <nav>
+      <ul data-h2-padding="base(0)" data-h2-list-style="base(none) base:children[ul](none)">
+        <li data-h2-margin="base(x.25, 0, 0, 0)">
+          <a 
+            href="/${data.locale}"
+            title="">
+            Home
+          </a>
+        </li>
+        <li data-h2-margin="base(x.25, 0, 0, 0)">
+          <a 
+            href="/${data.locale}/docs"
+            title="">
+            Documentation
+          </a>
+          <ul data-h2-padding="base(0)">
+            <li data-h2-margin="base(x.25, 0, 0, 0)">
+              ${expansion_small.render(data, {
+                state: false,
+                label: 'Installation',
+                content: installation_content,
+              })}
+            </li>
+            <li data-h2-margin="base(x.25, 0, 0, 0)">
+              ${expansion_small.render(data, {
+                state: false,
+                label: 'Configuration',
+                content: configuration_content,
+              })}
+            </li>
+            <li data-h2-margin="base(x.25, 0, 0, 0)">
+              ${expansion_small.render(data, {
+                state: false,
+                label: 'Styling',
+                content: styling_content,
+              })}
+            </li>
+            <li data-h2-margin="base(x.25, 0, 0, 0)">
+              ${expansion_small.render(data, {
+                state: false,
+                label: 'Properties',
+                content: properties_content,
+              })}
+            </li>
+          </ul>
+        </li>
+        <li data-h2-margin="base(x.25, 0, 0, 0)">
+          <a 
+            href="/en/docs/releases"
+            title="">
+            Releases
+          </a>
+        </li>
+        <li data-h2-margin="base(x.25, 0, 0, 0)">
+          <a 
+            href="https://github.com/hydrogen-design-system/hydrogen"
+            title=""
+            target="_blank"
+            rel="noreferrer">
+            Github
+          </a>
+        </li>
+      </ul>
+    </nav>
+  `;
+
   return String.raw`
     <div
       data-h2-position="base(sticky)"
@@ -41,7 +223,15 @@ function render(data) {
       data-h2-location="base(0, auto, auto, auto)">
       <div data-h2-padding="base(x1, 0, 0, 0) l-tablet(x2, 0, 0, 0) laptop(x3, 0, 0, 0) desktop(x4, 0, 0, 0)">
         <div
-          data-h2-background="base(foreground)"
+          data-h2-background="
+            base(foreground)
+            base:children[button](transparent)
+            base:children[a:focus-visible, button:focus-visible](focus)"
+          data-h2-border="base:children[a, button](none)"
+          data-h2-display="base:children[a, button](block)"
+          data-h2-outline="base:children[a, button](none)"
+          data-h2-color="base:children[a, button](font) base:all:children[a:focus-visible, button:focus-visible](black) base:children[a:hover, button:hover](primary)"
+          data-h2-stroke="base:all:children[a:focus-visible path, button:focus-visible path](black)"
           data-h2-radius="base(rounded)"
           data-h2-padding="base(x2)"
           data-h2-shadow="base(large)"
@@ -53,23 +243,22 @@ function render(data) {
             <h1
               data-h2-font-size="base(h2)"
               data-h2-font-weight="base(800)"
-              data-h2-font-color="base(font.dark) base:dark(white)"
               data-h2-text-align="base(center)">
               <a
                 href="/${data.locale}/docs"
                 title=""
-                data-h2-background-color="base:focus-visible(focus)"
-                data-h2-color="base(black) base:focus-visible(black) base:hover(primary)"
+                id="nav"
+                data-h2-color="base(black) base:hover(primary) base:all:focus-visible(black)"
                 data-h2-transition="base:hover(color, .2s, ease, 0s)"
                 data-h2-text-decoration="base(none)">
                 Hydrogen
               </a>
             </h1>
-            <form data-h2-margin="base(x2, auto, auto, auto)">
+            <!-- <form data-h2-margin="base(x1.5, auto, auto, auto)">
               <label
                 data-h2-display="base(block)"
                 data-h2-font-size="base(caption)"
-                data-h2-font-color="base(font.dark) base:dark(white)">Search</label>
+                data-h2-font-color="base(font)">Search the docs</label>
               <input 
                 data-h2-border="base(1px solid black)"
                 data-h2-display="base(block)"
@@ -79,142 +268,24 @@ function render(data) {
                 data-h2-width="base(100%)"
                 type="text"
                 placeholder="Find something...">
-            </form>
-            <p 
-              data-h2-margin="base(x2, 0, 0, 0)"
-              data-h2-font-weight="base(700)">On this page</p>
-            <ul data-h2-padding="base(0, 0, 0, x1)">
-              ${create_page_menu()}
-            </ul>
-            <div
-              class="main_menu" 
-              data-h2-margin="base(x1, 0, 0, 0)">
-              <!-- <button
-                type="button"
-                onclick="toggle_main_menu(this)"
-                class="main_menu_toggle"
-                data-h2-cursor="base(pointer)"
-                data-h2-display="base(block)"
-                data-h2-background-color="base(transparent) base:focus-visible(focus)"
-                data-h2-border="base(none)"
-                data-h2-width="base(100%)"
-                data-h2-font-weight="base(700)"
-                data-h2-padding="base(0)"
-                data-h2-margin="base(0, 0, x.25, 0)"
-                data-h2-text-align="base(left)"
-                data-h2-color="base(primary.dark) base:hover(black) base:focus-visible(black) base:dark(primary.lighter) base:dark:hover(white)"
-                data-h2-transition="base:hover(color, .2s, ease, 0s)"
-                data-h2-text-decoration="base(underline)"
-                style="outline: none;">
-                <span class="show_label">Show</span><span class="hide_label">Hide</span> the main menu
-              </button> -->
+            </form> -->
+            <div data-h2-margin="base(x2 0 0 0)">
               <p 
-                data-h2-margin="base(x1, 0, x.25, 0)"
-                data-h2-font-weight="base(700)">Main menu</p>
-              <nav id="nav">
-                <ul data-h2-padding="base(0, 0, 0, x1)">
-                  <li data-h2-margin="base(x.25, 0, 0, 0)">
-                    <a 
-                      href="/${data.locale}"
-                      title="">
-                      Home
-                    </a>
-                  </li>
-                  <li data-h2-margin="base(x.25, 0, 0, 0)">
-                    <a 
-                      href="/${data.locale}/docs"
-                      title="">
-                      Docs
-                    </a>
-                    <ul data-h2-padding="base(0, 0, 0, x1)">
-                      <li data-h2-margin="base(x.25, 0, 0, 0)">
-                        <a 
-                          href="/${data.locale}/docs/installation"
-                          title="">
-                          Installation
-                        </a>
-                      </li>
-                      <li data-h2-margin="base(x.25, 0, 0, 0)">
-                        <a 
-                          href="/${data.locale}/docs/commands"
-                          title="">
-                          Commands
-                        </a>
-                      </li>
-                      <li data-h2-margin="base(x.25, 0, 0, 0)">
-                        <a 
-                          href="/${data.locale}/docs/tooling"
-                          title="">
-                          Tooling
-                        </a>
-                      </li>
-                      <li data-h2-margin="base(x.25, 0, 0, 0)">
-                        <a 
-                          href="/${data.locale}/docs/configuration"
-                          title="">
-                          Configuration
-                        </a>
-                      </li>
-                      <li data-h2-margin="base(x.25, 0, 0, 0)">
-                        <a 
-                          href="/${data.locale}/docs/syntax"
-                          title="">
-                          Syntax
-                        </a>
-                      </li>
-                      <li data-h2-margin="base(x.25, 0, 0, 0)">
-                        <a 
-                          href="/${data.locale}/docs/colors"
-                          title="">
-                          Colors
-                        </a>
-                      </li>
-                      <li data-h2-margin="base(x.25, 0, 0, 0)">
-                        <a 
-                          href="/${data.locale}/docs/typography"
-                          title="">
-                          Typography
-                        </a>
-                      </li>
-                      <li data-h2-margin="base(x.25, 0, 0, 0)">
-                        <a 
-                          href="/${data.locale}/docs/layout"
-                          title="">
-                          Layout
-                        </a>
-                        <li data-h2-margin="base(x.25, 0, 0, 0)">
-                        <a 
-                          href="/${data.locale}/docs/properties"
-                          title="">
-                          Properties
-                        </a>
-                      </li>
-                      </li>
-                    </ul>
-                  </li>
-                  <li data-h2-margin="base(x.25, 0, 0, 0)">
-                    <a 
-                      href="https://github.com/hydrogen-design-system/hydrogen"
-                      title="">
-                      Github
-                    </a>
-                  </li>
-                  <li data-h2-margin="base(x.25, 0, 0, 0)">
-                    <a 
-                      href="/en/releases"
-                      title="">
-                      Releases
-                    </a>
-                  </li>
-                  <li data-h2-margin="base(x.25, 0, 0, 0)">
-                    <a 
-                      href="https://forms.office.com/r/vz80dsUabZ"
-                      title="Submit generic, usability, or bug feedback.">
-                      Feedback
-                    </a>
-                  </li>
-                </ul>
-              </nav>
+                data-h2-color="base(black)"
+                data-h2-font-weight="base(700)" 
+                data-h2-text-align="base(left)">
+                Main menu
+              </p>
+              ${menu_content}
+            </div>
+            <div data-h2-margin="base(x1 0 0 0)">
+              <p 
+                data-h2-color="base(black)"
+                data-h2-font-weight="base(700)" 
+                data-h2-text-align="base(left)">
+                On this page
+              </p>
+              ${page_content}
             </div>
           </div>
       </div>

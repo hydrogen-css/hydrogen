@@ -64,7 +64,7 @@ function render(data, props) {
           alt="${props.img.alt}"
           data-h2-display="base(inline-block)"
           data-h2-position="base(relative) p-tablet(absolute)"
-          data-h2-location="p-tablet(50%, auto, auto, 50%)"
+          data-h2-location="p-tablet(55%, auto, auto, 50%)"
           data-h2-width="base(x3) p-tablet(100%)"
           data-h2-transform="base(rotate(-15deg)) p-tablet(translate(-50%, -50%) rotate(-15deg))" />
       </div>
@@ -82,7 +82,7 @@ function render(data, props) {
   if (props.id != false) {
     hash = String.raw`
       <a 
-        data-h2-color="base(black.lightest) base:hover(primary) base:dark(black.darker) base:focus-visible(black)" 
+        data-h2-color="base(black.lightest) base:hover(primary) base:all:focus-visible(black)" 
         data-h2-font-size="base(caption)" 
         data-h2-display="base(inline)"
         data-h2-background-color="base:focus-visible(focus)"
@@ -115,7 +115,7 @@ function render(data, props) {
           data-h2-font-weight="base(300)"
           data-h2-background-color="base:focus-visible(focus)"
           style="outline: none;"
-          data-h2-color="base:hover(primary) base:dark:hover(primary.lighter) base:focus-visible(black)">${props.link.label}</a>
+          data-h2-color="base:hover(primary) base:all:focus-visible(black)">${props.link.label}</a>
       </div>
     `;
   }

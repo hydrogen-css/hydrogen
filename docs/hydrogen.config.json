@@ -12,8 +12,9 @@
   "output": "_site/static/css",
   "modes": {
     "dark": {
+      "method": "toggle",
       "automatic": true,
-      "method": "toggle"
+      "automatic_modifiers": true
     }
   },
   "processing": {
@@ -59,7 +60,7 @@
         {
           "query_key": "base",
           "size": "100%",
-          "line_height": "1.4",
+          "line_height": "1.5",
           "type_scale": "1.2"
         },
         {
@@ -275,30 +276,45 @@
           "key": "small",
           "default": {
             "shadow": "0 0.1rem 0.2rem 0 rgba(0, 0, 0, .2)"
+          },
+          "dark": {
+            "shadow": "0 0.1rem 0.2rem 0 rgba(0, 0, 0, .5)"
           }
         },
         {
           "key": "medium",
           "default": {
             "shadow": "0 0.25rem 0.5rem -0.05rem rgba(0, 0, 0, .2)"
+          },
+          "dark": {
+            "shadow": "0 0.25rem 0.5rem -0.05rem rgba(0, 0, 0, .5)"
           }
         },
         {
           "key": "large",
           "default": {
             "shadow": "0 0.4rem 0.7rem -0.1rem rgba(0, 0, 0, .2)"
+          },
+          "dark": {
+            "shadow": "0 0.4rem 0.7rem -0.1rem rgba(0, 0, 0, .5)"
           }
         },
         {
           "key": "larger",
           "default": {
             "shadow": "0 0.55rem 1rem -0.2rem rgba(0, 0, 0, .2)"
+          },
+          "dark": {
+            "shadow": "0 0.55rem 1rem -0.2rem rgba(0, 0, 0, .5)"
           }
         },
         {
           "key": "largest",
           "default": {
             "shadow": "0 0.7rem 1.5rem -0.3rem rgba(0, 0, 0, .2)"
+          },
+          "dark": {
+            "shadow": "0 0.7rem 1.5rem -0.3rem rgba(0, 0, 0, .5)"
           }
         }
       ],
@@ -307,6 +323,198 @@
         "functions": [],
         "delays": []
       }
+    },
+    {
+      "key": "wave",
+      "colors": [
+        {
+          "key": "primary",
+          "default": {
+            "color": "#17bed9",
+            "modifiers": []
+          }
+        },
+        {
+          "key": "secondary",
+          "default": {
+            "color": "#1747d9",
+            "modifiers": []
+          }
+        },
+        {
+          "key": "foreground",
+          "default": {
+            "color": "white",
+            "modifiers": []
+          },
+          "dark": {
+            "color": "#2a2b38",
+            "modifiers": []
+          }
+        },
+        {
+          "key": "background",
+          "default": {
+            "color": "#f4f8ff",
+            "modifiers": []
+          },
+          "dark": {
+            "color": "#212130",
+            "modifiers": []
+          }
+        }
+      ],
+      "gradients": [
+        {
+          "key": "divider",
+          "default": {
+            "gradient": "linear-gradient(90deg, #17bed9, #1747d9)",
+            "fallback": "#17bed9"
+          }
+        },
+        {
+          "key": "primaryRadial",
+          "default": {
+            "gradient": "radial-gradient(rgba(23, 190, 217, 1), rgba(23, 71, 217, 1))",
+            "fallback": "rgba(23, 190, 217, 1)"
+          }
+        },
+        {
+          "key": "accentRadial",
+          "default": {
+            "gradient": "radial-gradient(rgba(23, 190, 217, 1), rgba(23, 71, 217, 1))",
+            "fallback": "rgba(23, 190, 217, 1)"
+          }
+        }
+      ]
+    },
+    {
+      "key": "neon",
+      "colors": [
+        {
+          "key": "primary",
+          "default": {
+            "color": "#ff1a7b",
+            "modifiers": []
+          }
+        },
+        {
+          "key": "secondary",
+          "default": {
+            "color": "#ffc61a",
+            "modifiers": []
+          }
+        },
+        {
+          "key": "foreground",
+          "default": {
+            "color": "white",
+            "modifiers": []
+          },
+          "dark": {
+            "color": "#2a2b38",
+            "modifiers": []
+          }
+        },
+        {
+          "key": "background",
+          "default": {
+            "color": "#f4f8ff",
+            "modifiers": []
+          },
+          "dark": {
+            "color": "#212130",
+            "modifiers": []
+          }
+        }
+      ],
+      "gradients": [
+        {
+          "key": "divider",
+          "default": {
+            "gradient": "linear-gradient(90deg, #ff1a7b, #ffc61a)",
+            "fallback": "#ff1a7b"
+          }
+        },
+        {
+          "key": "primaryRadial",
+          "default": {
+            "gradient": "radial-gradient(rgba(255, 26, 123, 1), rgba(255, 198, 26, 1))",
+            "fallback": "rgba(255, 26, 123, 1)"
+          }
+        },
+        {
+          "key": "accentRadial",
+          "default": {
+            "gradient": "radial-gradient(rgba(255, 26, 123, 1), rgba(255, 198, 26, 1))",
+            "fallback": "rgba(255, 26, 123, 1)"
+          }
+        }
+      ]
+    },
+    {
+      "key": "fern",
+      "colors": [
+        {
+          "key": "primary",
+          "default": {
+            "color": "rgb(21, 157, 106)",
+            "modifiers": []
+          }
+        },
+        {
+          "key": "secondary",
+          "default": {
+            "color": "rgb(138, 217, 23)",
+            "modifiers": []
+          }
+        },
+        {
+          "key": "foreground",
+          "default": {
+            "color": "white",
+            "modifiers": []
+          },
+          "dark": {
+            "color": "#2a2b38",
+            "modifiers": []
+          }
+        },
+        {
+          "key": "background",
+          "default": {
+            "color": "#f4f8ff",
+            "modifiers": []
+          },
+          "dark": {
+            "color": "#212130",
+            "modifiers": []
+          }
+        }
+      ],
+      "gradients": [
+        {
+          "key": "divider",
+          "default": {
+            "gradient": "linear-gradient(90deg, rgb(21, 157, 106), rgb(138, 217, 23))",
+            "fallback": "rgb(21, 157, 106)"
+          }
+        },
+        {
+          "key": "primaryRadial",
+          "default": {
+            "gradient": "radial-gradient(rgba(21, 157, 106, 1), rgba(138, 217, 23, 1))",
+            "fallback": "rgba(21, 157, 106, 1)"
+          }
+        },
+        {
+          "key": "accentRadial",
+          "default": {
+            "gradient": "radial-gradient(rgba(21, 157, 106, 1), rgba(138, 217, 23, 1))",
+            "fallback": "rgba(21, 157, 106, 1)"
+          }
+        }
+      ]
     }
   ]
 }

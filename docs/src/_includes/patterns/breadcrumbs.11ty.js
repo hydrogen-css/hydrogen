@@ -6,13 +6,13 @@ function generate_home_nav(data) {
   let item_list = ``;
   data.home_nav.forEach(function (item, index) {
     let item_style =
-      'data-h2-color="base:hover(primary) base:dark:hover(primary.lighter) base:focus-visible(black)"';
+      'data-h2-color="base:hover(primary) base:all:focus-visible(black)"';
     if (item.label === 'Home') {
       item_style = 'data-h2-font-weight="base(800)"';
       item_style = item_style + ' data-h2-text-decoration="base(none)"';
       item_style =
         item_style +
-        ' data-h2-color="base(primary.dark) base:hover(primary) base:dark(primary.lighter)"';
+        ' data-h2-color="base(primary.dark) base:all:focus-visible(black) base:hover(primary)"';
     }
     item_list =
       item_list +
@@ -52,7 +52,7 @@ function generate_crumbs(data) {
               title=""
               data-h2-background-color="base:focus-visible(focus)"
               data-h2-outline="base(none)"
-              data-h2-color="base:hover(primary) base:dark:hover(primary.lighter) base:focus-visible(black)">${collection.data.title}</a>${separator}
+              data-h2-color="base:hover(primary) base:all:focus-visible(black)">${collection.data.title}</a>${separator}
           </li>
         ` + crumbs;
         } else {
@@ -63,7 +63,7 @@ function generate_crumbs(data) {
               href="${collection.url}"
               title=""
               data-h2-background-color="base:focus-visible(focus)"
-              data-h2-color="base(primary.dark) base:hover(primary) base:dark(primary.lighter) base:focus-visible(black)"
+              data-h2-color="base(primary.dark) base:hover(primary) base:all:focus-visible(black)"
               data-h2-text-decoration="base(none)"
               data-h2-outline="base(none)"
               data-h2-font-weight="base(800)">${collection.data.title}</a>
@@ -84,13 +84,13 @@ function generate_crumbs(data) {
 
 function render(data) {
   let container =
-    'data-h2-container="base(center, large, x1) p-tablet(center, large, x2)"';
+    'data-h2-container="base(center, large, x1) p-tablet(center, large, x2) l-tablet(center, large, x3)"';
   let nav_id = '';
   let nav_items = '';
   let gap = 'data-h2-gap="base(x1)"';
   if (data.navigation.key === 'home') {
     container =
-      'data-h2-container="base(center, medium, x1) p-tablet(center, medium, x2)"';
+      'data-h2-container="base(center, medium, x1) p-tablet(center, medium, x2) l-tablet(center, medium, x3)"';
     nav_id = 'nav';
     nav_items = generate_home_nav(data);
   } else {
@@ -123,7 +123,7 @@ function render(data) {
             }"
             data-h2-background-color="base:focus-visible(focus)"
             data-h2-outline="base(none)"
-            data-h2-color="base:hover(primary) base:dark:hover(primary.lighter) base:focus-visible(black)">${
+            data-h2-color="base:hover(primary) base:all:focus-visible(black)">${
               item.label
             }</a>
         </li>
@@ -133,7 +133,7 @@ function render(data) {
   return String.raw`
     <div
       data-h2-background-color="base(background)"
-      data-h2-border-bottom="base(1px solid primary.darkest.2) base:dark(1px solid primary.lightest.2)"
+      data-h2-border-bottom="base(1px solid primary.darkest.20)"
       data-h2-padding="base(x1, 0) l-tablet(x.5, 0)"
       data-h2-layer="base(3, relative)">
       <div ${container}>
@@ -174,7 +174,7 @@ function render(data) {
                 title="French translations for Hydrogen's documentation are coming soon."
                 data-h2-background-color="base:focus-visible(focus)"
                 data-h2-outline="base(none)"
-                data-h2-color="base(black.30) base:dark(white.30) base:focus-visible(black)">FR</a>
+                data-h2-color="base(black.30) base:all:focus-visible(black)">FR</a>
             </li>
             </ul>
           </div>

@@ -30,7 +30,8 @@ function render(data, content) {
     });
     let span = ``;
     if (item === 'beta') {
-      span = 'data-h2-grid-column="base(1 / 1) p-tablet(1 / 4)"';
+      span =
+        'data-h2-grid-column="base(1 / 1) p-tablet(1 / 4) l-tablet(1 / 1) laptop(1 / 4)"';
     }
     output =
       output +
@@ -38,7 +39,7 @@ function render(data, content) {
       <div
         ${span}
         data-h2-background-color="base(foreground)"
-        data-h2-border="base(1px solid primary.darkest.20) base:dark(1px solid primary.lightest.20)"
+        data-h2-border="base(1px solid primary.darkest.20)"
         data-h2-radius="base(rounded)"
         data-h2-padding="base(x1)">
         ${label}
@@ -48,10 +49,10 @@ function render(data, content) {
   });
   return String.raw`
     <div
-      data-h2-margin="base(x2, 0, 0, 0)"
+      data-h2-margin="base(x1, 0, 0, 0)"
       data-h2-display="base(grid)"
       data-h2-gap="base(x1)"
-      data-h2-grid-template-columns="base(1fr) p-tablet(repeat(3, minmax(0, 1fr)))">
+      data-h2-grid-template-columns="base(1fr) p-tablet(repeat(3, minmax(0, 1fr))) l-tablet(100%) laptop(repeat(3, minmax(0, 1fr)))">
       ${output}
     </div>
   `;

@@ -20,11 +20,26 @@ function render(data) {
     let example;
     if (item.example === 'themes') {
       example = String.raw`
-        <div data-h2-display="base(grid)" data-h2-grid-template-columns="base(1fr 1fr)" data-h2-gap="base(x1)" data-h2-height="base(100%)">
-          <button>Fluo</button>
-          <button>Posh</button>
-          <button>Neo</button>
-          <button>Boo!</button>
+        <div 
+          data-h2-display="base(grid)" 
+          data-h2-grid-template-columns="base(1fr 1fr)" 
+          data-h2-gap="base(x1)" 
+          data-h2-height="base(100%)"
+          data-h2-background="base:children[button](foreground)"
+          data-h2-cursor="base:children[button](pointer)"
+          data-h2-border="base:children[button](none)"
+          data-h2-outline="base:children[button:focus-visible](none)"
+          data-h2-radius="base:children[button](rounded)"
+          data-h2-color="base:children[button](black)"
+          data-h2-text-decoration="base:children[button](underline)"
+          data-h2-shadow="
+            base:children[button](medium)
+            base:children[button:hover](larger)"
+          data-h2-transition="base:children[button](box-shadow .2s ease)">
+          <button onclick="toggle_glow(this)">Glow</button>
+          <button onclick="toggle_wave(this)">Wave</button>
+          <button onclick="toggle_neon(this)">Neon</button>
+          <button onclick="toggle_fern(this)">Fern</button>
         </div>
       `;
     } else if (item.example === 'properties') {
@@ -129,7 +144,7 @@ function render(data) {
   // Render the pattern
   return String.raw`
     <div data-h2-margin="base(x3, 0) l-tablet(x5, 0)">
-      <div data-h2-container="base(center, medium, x1) p-tablet(center, medium, x2)">
+      <div data-h2-container="base(center, medium, x1) p-tablet(center, medium, x2) l-tablet(center, medium, x3)">
         ${heading.render(data, {
           tag: 'h2',
           size: 'h2',
@@ -152,18 +167,18 @@ function render(data) {
           data-h2-display="base(grid)"
           data-h2-grid-template-columns="base(1fr) p-tablet(repeat(2, minmax(0, 1fr))) l-tablet(repeat(3, minmax(0, 1fr))) laptop(repeat(4, minmax(0, 1fr)))"
           data-h2-gap="base(x1)"
-          data-h2-background-color="base:children[>div](white) base:dark:children[>div](font.dark)"
+          data-h2-background-color="base:children[>div](foreground)"
           data-h2-border="base:children[>div](1px solid primary.darkest.20)"
           data-h2-radius="base:children[>div](rounded)"
           data-h2-padding="base:children[>div](x1)"
-          data-h2-color="base:children[p:first-child](primary.dark) base:dark:children[p:first-child](primary.lighter)"
+          data-h2-color="base:children[p:first-child](primary.dark)"
           data-h2-font-weight="base:children[p:first-child](800)"
           data-h2-margin="base:children[p:not(:first-child)](x.5, 0, 0, 0)">
           ${sub_features}
         </div>
       </div>
     </div>
-    <div data-h2-container="base(center, medium, x1) l-tablet(center, medium, x2)">
+    <div data-h2-container="base(center, medium, x1) p-tablet(center, medium, x2) l-tablet(center, medium, x3)">
       ${rule.render(data)}
     </div>
   `;

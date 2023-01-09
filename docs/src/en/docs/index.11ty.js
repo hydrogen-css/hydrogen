@@ -7,23 +7,23 @@ let data = {
     key: 'docs',
     parent: 'home',
   },
-  title: 'Docs',
+  title: 'Documentation',
   title_long: 'Welcome to the docs',
   header_index: [
     {
       path: '/en/docs/installation',
       title: 'Learn more about how to install Hydrogen on your project.',
-      label: 'Installation',
+      label: 'Install Hydrogen',
     },
     {
       path: '/en/docs/configuration',
       title: 'Learn more about how to install Hydrogen on your project.',
-      label: 'Configuration',
+      label: 'Configure your project',
     },
     {
-      path: '/en/docs/syntax',
+      path: '/en/docs/styling',
       title: 'Learn more about how to install Hydrogen on your project.',
-      label: 'Syntax and snippets',
+      label: 'Style your interfaces',
     },
     {
       path: '/en/docs/properties',
@@ -38,7 +38,7 @@ let data = {
     {
       path: 'https://github.com/hydrogen-css/hydrogen/blob/release/2.0.0/CONTRIBUTING.md',
       title: 'Learn more about how to install Hydrogen on your project.',
-      label: 'Contribute',
+      label: 'Contribute back',
     },
   ],
   main: [
@@ -49,14 +49,17 @@ let data = {
     },
     {
       type: 'copy',
-      items: ['An introduction will find its way here eventually.'],
+      items: [
+        "Thanks for visiting Hydrogen's documentation! This document contains everything you'll need to install Hydrogen on your project, create a theme, run commands, style your interfaces, and troubleshoot common problems.",
+        "Have a question but can't find the answer here? Submit a ticket on Github and perhaps the community can provide some insight. We'd also love to receive feedback on how this documentation can be improved.",
+      ],
     },
     {
       type: 'title',
       label: 'Latest releases',
       id: 'releases',
       link: {
-        path: '/en/releases',
+        path: '/en/docs/releases',
         label: 'View all updates',
         title: "View all of Hydrogen's documented releases.",
       },

@@ -49,7 +49,7 @@ function render(data) {
       </div>
       <div
         data-h2-position="base(relative)" 
-        data-h2-container="base(center, medium, x1) l-tablet(center, medium, x2)">
+        data-h2-container="base(center, medium, x1) p-tablet(center, medium, x2) l-tablet(center, medium, x3)">
         <div 
           data-h2-padding="base(x4, 0)"
           data-h2-text-align="base(right)">
@@ -88,7 +88,7 @@ function render(data) {
     <div
       data-h2-position="base(relative)"
       data-h2-margin="base(-x3, 0, 0, 0)">
-      <div data-h2-container="base(center, medium, x1) l-tablet(center, medium, x2)">
+      <div data-h2-container="base(center, medium, x1) p-tablet(center, medium, x2)l-tablet(center, medium, x3)">
         <div
           data-h2-display="base(grid)"
           data-h2-grid-template-columns="base(1fr) l-tablet(1fr 1fr 1fr)"

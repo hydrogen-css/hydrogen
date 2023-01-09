@@ -6,7 +6,7 @@ var data = {};
 
 function render(data, content) {
   let output = String.raw`
-    <div data-h2-margin="base(x2, 0, 0, 0)">
+    <div data-h2-margin="base(x1, 0, 0, 0)">
   `;
   // Render the latest stable release
   output = output + release_layout.render(data, latest, 'latest');
