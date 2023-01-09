@@ -6,7 +6,7 @@ Hydrogen is an open-source design and CSS utility framework powered by data-attr
 
 It leverages data-attributes to allow the styling of elements right in your markup, rather than creating your own classes. Hydrogen offers a comprehensive library of tools and configurations for easy, seamless development. When you're ready to publish your project, it then processes your markup and creates a custom CSS file that contains only the code you've used, reducing its own footprint.
 
-[Website](https://hydrogen.design) | [Roadmap](https://github.com/orgs/hydrogen-css/projects/1)
+[Website](https://hydrogen.design) | [Roadmap](https://workflowy.com/s/hydrogen/7Gjmdbjiqc0Wst1R)
 
 ## 🥳 Upcoming 2.0.0 release
 
