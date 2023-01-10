@@ -1,6 +1,7 @@
 const base_layout = require('../base.11ty');
 const breadcrumb_component = require('../patterns/breadcrumbs.11ty');
 const docs_menu = require('../patterns/docs-menu.11ty');
+const docs_pagination = require('../patterns/docs-pagination.11ty');
 const docs_footer = require('../patterns/docs-footer.11ty');
 
 var data = {
@@ -44,6 +45,7 @@ function render(data) {
           </div>
           <div>
             ${data.content}
+            ${docs_pagination.render(data)}
           </div>
         </div>
       </div>

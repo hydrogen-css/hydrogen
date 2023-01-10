@@ -14,6 +14,7 @@ function render(data) {
     ${breadcrumb_component.render(data)}
     ${home_hero.render(data)}
     ${home_features.render(data)}
+    ${home_start.render(data)}
     ${home_jump.render(data)}
   `;
 }
