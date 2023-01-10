@@ -39,7 +39,7 @@ function render(data) {
                 data-h2-background-color="base(primary.light.2)"
                 data-h2-position="base(relative)"
                 data-h2-height="base(x1.2)"
-                data-h2-border="base(1px solid primary.dark) base:dark(1px solid primary.lighter)"
+                data-h2-border="base(1px solid primary.dark)"
                 data-h2-width="base(x1.2)"
                 data-h2-radius="base(100%)">
                 <span 
@@ -47,14 +47,14 @@ function render(data) {
                   data-h2-position="base(center)" 
                   data-h2-font-size="base(caption, 1)"
                   data-h2-font-weight="base(700)"
-                  data-h2-color="base(primary.darker) base:dark(primary.lighter)">
+                  data-h2-color="base(primary.darker)">
                   ${counter}
                 </span>
               </div>
               <p 
                 data-h2-display="base(inline-block)" 
                 data-h2-font-weight="base(700)" 
-                data-h2-color="base(primary.dark) base:dark(primary.lighter)">
+                data-h2-color="base(primary.dark)">
                 ${step.title}
               </p>
               ${(function () {
@@ -65,8 +65,8 @@ function render(data) {
                     String.raw`
                     <p
                       data-h2-margin="base(x.5, 0, 0, 0)"
-                      data-h2-color="base:children[a]:hover(primary) base:dark:children[a]:hover(primary.lighter) base:children[a]:focus-visible(black)"
-                      data-h2-background-color="base:children[a]:focus-visible(focus)"
+                      data-h2-color="base:children[a:hover](primary) base:all:children[a:focus-visible](black)"
+                      data-h2-background-color="base:children[a:focus-visible](focus)"
                       data-h2-outline="base:children[a](none)">${child}</p>
                   `;
                 });
