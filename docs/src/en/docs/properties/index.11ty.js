@@ -3,9 +3,10 @@ const docs_layout = require('../../../_includes/pages/docs.11ty');
 let data = {
   layout: 'pages/docs.11ty.js',
   navigation: {
+    order: 15,
     key: 'properties',
     parent: 'docs',
-    order: 4,
+    pagination: true,
   },
   title: 'Properties',
   title_long: 'Property support',

@@ -108,7 +108,6 @@ function render(data) {
             path: set_icon().path,
             alt: set_icon().alt,
           },
-          alignment: 'left',
         })}
         <div data-h2-padding="base(x1, 0, 0, 0) l-tablet(x2, 0, 0, 0)">
           ${generate_sub()}

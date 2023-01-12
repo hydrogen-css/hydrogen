@@ -3,9 +3,10 @@ const docs_layout = require('../../../../_includes/pages/docs.11ty');
 let data = {
   layout: 'pages/docs.11ty.js',
   navigation: {
+    order: 12,
     key: 'typography',
     parent: 'styling',
-    order: 2,
+    pagination: true,
   },
   title: 'Typography',
   title_long: 'Setting typography',

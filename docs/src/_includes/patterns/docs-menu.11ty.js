@@ -39,6 +39,31 @@ function render(data) {
     return output;
   }
 
+  function return_menu_item(label, url, external) {
+    function external_data() {
+      if (external) {
+        return 'target="_blank" rel="noreferrer"';
+      } else {
+        return '';
+      }
+    }
+    return String.raw`
+      <li data-h2-margin="base(x.25, 0, 0, 0)" data-h2-position="base(relative)">
+        <span
+          data-h2-font-size="base(1rem)"
+          data-h2-position="base(absolute)"
+          data-h2-location="base(-2px, auto, auto, -1.5rem)"
+          data-h2-color="base(primary.light)">•</span>
+        <a 
+          href="${url}"
+          title=""
+          ${external_data()}>
+          ${label}
+        </a>
+      </li>
+    `;
+  }
+
   let page_content = String.raw`
     <ul data-h2-padding="base(0)" data-h2-list-style="base(none)">
       ${create_page_menu()}
@@ -47,53 +72,35 @@ function render(data) {
 
   let installation_content = String.raw`
     <ul data-h2-padding="base(0, 0, 0, x2)">
-      <li data-h2-margin="base(x.25, 0, 0, 0)">
-        <a 
-          href="/${data.locale}/docs/installation/getting-started"
-          title="">
-          Getting started
-        </a>
-      </li>
-      <li data-h2-margin="base(x.25, 0, 0, 0)">
-        <a 
-          href="/${data.locale}/docs/installation/running-commands"
-          title="">
-          Running commands
-        </a>
-      </li>
+      ${return_menu_item(
+        'Getting started',
+        '/' + data.locale + '/docs/installation/getting-started'
+      )}
+      ${return_menu_item(
+        'Running commands',
+        '/' + data.locale + '/docs/installation/running-commands'
+      )}
     </ul>
   `;
 
   let configuration_content = String.raw`
     <ul data-h2-padding="base(0, 0, 0, x2)">
-      <li data-h2-margin="base(x.25, 0, 0, 0)">
-        <a 
-          href="/${data.locale}/docs/configuration/core-settings"
-          title="">
-          Core settings
-        </a>
-      </li>
-      <li data-h2-margin="base(x.25, 0, 0, 0)">
-        <a 
-          href="/${data.locale}/docs/configuration/configuring-queries"
-          title="">
-          Configuring media queries
-        </a>
-      </li>
-      <li data-h2-margin="base(x.25, 0, 0, 0)">
-        <a 
-          href="/${data.locale}/docs/configuration/configuring-modes"
-          title="">
-          Configuring dark mode
-        </a>
-      </li>
-      <li data-h2-margin="base(x.25, 0, 0, 0)">
-        <a 
-          href="/${data.locale}/docs/configuration/creating-themes"
-          title="">
-          Creating themes
-        </a>
-      </li>
+      ${return_menu_item(
+        'Core settings',
+        '/' + data.locale + '/docs/configuration/core-settings'
+      )}
+      ${return_menu_item(
+        'Configuring media queries',
+        '/' + data.locale + '/docs/configuration/configuring-queries'
+      )}
+      ${return_menu_item(
+        'Configuring dark mode',
+        '/' + data.locale + '/docs/configuration/configuring-modes'
+      )}
+      ${return_menu_item(
+        'Creating themes',
+        '/' + data.locale + '/docs/configuration/creating-themes'
+      )}
     </ul>
   `;
 
@@ -152,13 +159,7 @@ function render(data) {
   let menu_content = String.raw`
     <nav>
       <ul data-h2-padding="base(0)" data-h2-list-style="base(none) base:children[ul](none)">
-        <li data-h2-margin="base(x.25, 0, 0, 0)">
-          <a 
-            href="/${data.locale}"
-            title="">
-            Home
-          </a>
-        </li>
+        ${return_menu_item('Home', '/' + data.locale)}
         <li data-h2-margin="base(x.25, 0, 0, 0)">
           <a 
             href="/${data.locale}/docs"
@@ -196,22 +197,12 @@ function render(data) {
             </li>
           </ul>
         </li>
-        <li data-h2-margin="base(x.25, 0, 0, 0)">
-          <a 
-            href="/en/docs/releases"
-            title="">
-            Releases
-          </a>
-        </li>
-        <li data-h2-margin="base(x.25, 0, 0, 0)">
-          <a 
-            href="https://github.com/hydrogen-design-system/hydrogen"
-            title=""
-            target="_blank"
-            rel="noreferrer">
-            Github
-          </a>
-        </li>
+        ${return_menu_item('Releases', '/' + data.locale + '/docs/releases')}
+        ${return_menu_item(
+          'Github',
+          'https://github.com/hydrogen-design-system/hydrogen',
+          true
+        )}
       </ul>
     </nav>
   `;

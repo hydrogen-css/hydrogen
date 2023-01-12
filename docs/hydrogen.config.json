@@ -61,6 +61,12 @@
           "query_key": "base",
           "size": "100%",
           "line_height": "1.5",
+          "type_scale": "1.15"
+        },
+        {
+          "query_key": "p-tablet",
+          "size": "100%",
+          "line_height": "1.5",
           "type_scale": "1.2"
         },
         {
@@ -330,14 +336,14 @@
         {
           "key": "primary",
           "default": {
-            "color": "#17bed9",
+            "color": "#1747d9",
             "modifiers": []
           }
         },
         {
           "key": "secondary",
           "default": {
-            "color": "#1747d9",
+            "color": "#17bed9",
             "modifiers": []
           }
         },

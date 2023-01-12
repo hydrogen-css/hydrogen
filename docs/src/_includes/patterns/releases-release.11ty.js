@@ -167,8 +167,8 @@ function render(data, release, state) {
         data-h2-outline="base(none)"
         data-h2-border="
           base(none)
-          base:children[>div](x.2 solid foreground)
-          base:all:focus-visible:children[>div](x.2 solid black)"
+          base:children[>div](x.1 solid foreground)
+          base:all:focus-visible:children[>div](x.1 solid black)"
         data-h2-margin="base(x2, 0, 0, 0)"
         data-h2-transition="base(box-shadow, .2s, ease)"
         data-h2-z-index="base(2)"

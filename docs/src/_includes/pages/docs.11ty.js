@@ -113,8 +113,12 @@ function render(data) {
       });
     }
     function render_group(item, index, level) {
+      let margin = 'data-h2-margin="base(x1, 0, 0, 0)"';
+      if (index === 0 && item_index === 0) {
+        margin = '';
+      }
       let output = String.raw`
-        <div data-h2-display="base(grid)" data-h2-grid-template-columns="base(100%) desktop(repeat(2, minmax(0, 1fr)))" data-h2-gap="base(x1) desktop(x3)">
+        <div ${margin} data-h2-display="base(grid)" data-h2-grid-template-columns="base(100%) desktop(repeat(2, minmax(0, 1fr)))" data-h2-gap="base(x1) desktop(x3)">
       `;
       let content = [];
       let example = [];

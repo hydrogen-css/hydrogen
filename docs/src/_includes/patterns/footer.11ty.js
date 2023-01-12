@@ -22,7 +22,7 @@ function render(data, props) {
   let footer = String.raw`
     <footer
       data-h2-display="base(grid)"
-      data-h2-grid-template-columns="base(repeat(2, minmax(0, 1fr)))"
+      data-h2-grid-template-columns="p-tablet(repeat(2, minmax(0, 1fr)))"
       data-h2-gap="base(x2)">
       <div data-h2-text-align="base(center) p-tablet(left)">
         <p

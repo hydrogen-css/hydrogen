@@ -3,9 +3,10 @@ const docs_layout = require('../../../_includes/pages/docs.11ty');
 let data = {
   layout: 'pages/docs.11ty.js',
   navigation: {
+    order: 2,
     key: 'installation',
     parent: 'docs',
-    order: 1,
+    pagination: true,
   },
   title: 'Installation',
   title_long: 'Installing Hydrogen',

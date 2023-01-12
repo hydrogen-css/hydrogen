@@ -9,6 +9,13 @@ var data = {
 };
 
 function render(data) {
+  function get_pagination() {
+    if (data.navigation.pagination) {
+      return docs_pagination.render(data);
+    } else {
+      return String.raw``;
+    }
+  }
   return String.raw`
     ${breadcrumb_component.render(data)}
     <div data-h2-position="base(relative)">
@@ -45,7 +52,7 @@ function render(data) {
           </div>
           <div>
             ${data.content}
-            ${docs_pagination.render(data)}
+            ${get_pagination()}
           </div>
         </div>
       </div>

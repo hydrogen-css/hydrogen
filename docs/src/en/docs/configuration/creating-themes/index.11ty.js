@@ -3,9 +3,10 @@ const docs_layout = require('../../../../_includes/pages/docs.11ty');
 let data = {
   layout: 'pages/docs.11ty.js',
   navigation: {
+    order: 9,
     key: 'creating-themes',
     parent: 'configuration',
-    order: 4,
+    pagination: true,
   },
   title: 'Creating themes',
   subtitle: 'TBD',

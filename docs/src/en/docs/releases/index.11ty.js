@@ -6,7 +6,6 @@ let data = {
   navigation: {
     key: 'releases',
     parent: 'docs',
-    order: 5,
   },
   title: 'Releases',
   subtitle:

@@ -3,9 +3,10 @@ const docs_layout = require('../../../../_includes/pages/docs.11ty');
 let data = {
   layout: 'pages/docs.11ty.js',
   navigation: {
+    order: 11,
     key: 'syntax',
     parent: 'styling',
-    order: 1,
+    pagination: true,
   },
   title: 'Syntax',
   title_long: 'Syntax overview',

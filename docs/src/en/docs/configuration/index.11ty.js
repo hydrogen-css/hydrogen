@@ -3,9 +3,10 @@ const docs_layout = require('../../../_includes/pages/docs.11ty');
 let data = {
   layout: 'pages/docs.11ty.js',
   navigation: {
+    order: 5,
     key: 'configuration',
     parent: 'docs',
-    order: 2,
+    pagination: true,
   },
   title: 'Configuration',
   title_long: 'Configuring Hydrogen',
@@ -29,7 +30,7 @@ let data = {
         '<a href="/en/docs/configuration/core-settings" title="">Core settings</a>',
         '<a href="/en/docs/configuration/configuring-queries" title="">Configuring media queries</a>',
         '<a href="/en/docs/configuration/configuring-modes" title="">Configuring dark mode</a>',
-        '<a href="/en/docs/configuration/creating themes" title="">Creating themes</a>',
+        '<a href="/en/docs/configuration/creating-themes" title="">Creating themes</a>',
       ],
     },
   ],

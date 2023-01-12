@@ -120,6 +120,7 @@ function render(data, props) {
     `;
   }
   return String.raw`
+    <a id="${props.id}" ></a>
     <div 
       ${margin}
       data-h2-display="base(grid)"
@@ -137,7 +138,6 @@ function render(data, props) {
             data-h2-flex-grow="p-tablet(1)"
             ${alignment}>
             <${props.tag} 
-              id="${props.id}" 
               ${font_sizes[props.size]}
               ${font_weights[props.size]}
               ${color}

@@ -3,9 +3,10 @@ const docs_layout = require('../../../../_includes/pages/docs.11ty');
 let data = {
   layout: 'pages/docs.11ty.js',
   navigation: {
+    order: 3,
     key: 'getting-started',
     parent: 'installation',
-    order: 1,
+    pagination: true,
   },
   title: 'Getting started',
   subtitle: 'Learn how to install and initialize Hydrogen using Node.',

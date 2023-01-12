@@ -42,6 +42,20 @@ module.exports = function (eleventyConfig) {
     './src/static/_redirects': './_redirects',
   });
 
+  eleventyConfig.addCollection('en_docs', function (collectionApi) {
+    return collectionApi
+      .getFilteredByGlob('./src/en/docs/**/*.11ty.js')
+      .filter(function (item) {
+        return item.data.navigation.order;
+      })
+      .sort(function (a, b) {
+        if (!a.data.navigation.order);
+        else if (a.data.navigation.order > b.data.navigation.order) return 1;
+        else if (a.data.navigation.order < b.data.navigation.order) return -1;
+        else return 0;
+      });
+  });
+
   // eleventyConfig.addCollection('all_en', function (collectionApi) {
   //   return collectionApi.getFilteredByGlob('./src/en/docs/**/*.md');
   // });
