@@ -9,28 +9,22 @@ function render(data) {
       if (item.type === 'title') {
         output =
           output +
-          String.raw`
-          <li data-h2-margin="base(x.25, 0, 0, 0)">
-            <a
-              href="#${item.id}"
-              title="Skip to this section on the page.">${item.label}</a>
-          </li>
-        `;
+          return_menu_item(item.label, '#' + item.id, {
+            external: false,
+            children: false,
+          });
       } else if (item.type === 'section') {
         output =
           output +
-          String.raw`<ul data-h2-list-style="base(none)" data-h2-padding="base(0, 0, 0, x1)">`;
+          String.raw`<ul data-h2-list-style="base(none)" data-h2-padding="base(0, 0, 0, x.75)">`;
         item.content.forEach((item) => {
           if (item.type === 'title') {
             output =
               output +
-              String.raw`
-              <li data-h2-margin="base(x.25, 0, 0, 0)">
-                <a
-                  href="#${item.id}"
-                  title="Skip to this section on the page.">${item.label}</a>
-              </li>
-            `;
+              return_menu_item(item.label, '#' + item.id, {
+                external: false,
+                children: false,
+              });
           }
         });
         output = output + String.raw`</ul>`;
@@ -39,7 +33,7 @@ function render(data) {
     return output;
   }
 
-  function return_menu_item(label, url, external) {
+  function return_menu_item(label, url, { external, children }) {
     function external_data() {
       if (external) {
         return 'target="_blank" rel="noreferrer"';
@@ -47,19 +41,30 @@ function render(data) {
         return '';
       }
     }
+    function child_data() {
+      if (children) {
+        return children;
+      } else {
+        return '';
+      }
+    }
     return String.raw`
-      <li data-h2-margin="base(x.25, 0, 0, 0)" data-h2-position="base(relative)">
-        <span
-          data-h2-font-size="base(1rem)"
-          data-h2-position="base(absolute)"
-          data-h2-location="base(-2px, auto, auto, -1.5rem)"
-          data-h2-color="base(primary.light)">•</span>
-        <a 
-          href="${url}"
-          title=""
-          ${external_data()}>
-          ${label}
-        </a>
+      <li data-h2-margin="base(x.25, 0, 0, 0)">
+        <div data-h2-display="base(flex)" data-h2-gap="base(x.25)">
+          <div data-h2-height="base(x1)" data-h2-width="base(x.5)" data-h2-position="base(relative)">
+            <span
+              data-h2-font-size="base(1rem)"
+              data-h2-color="base(primary.dark)"
+              data-h2-position="base(center)">•</span>
+          </div>
+          <a 
+            href="${url}"
+            title=""
+            ${external_data()}>
+            ${label}
+          </a>
+        </div>
+        ${child_data()}
       </li>
     `;
   }
@@ -71,87 +76,138 @@ function render(data) {
   `;
 
   let installation_content = String.raw`
-    <ul data-h2-padding="base(0, 0, 0, x2)">
+    <ul data-h2-padding="base(0, 0, 0, x.75)">
       ${return_menu_item(
         'Getting started',
-        '/' + data.locale + '/docs/installation/getting-started'
+        '/' + data.locale + '/docs/installation/getting-started',
+        {
+          external: false,
+          children: false,
+        }
       )}
       ${return_menu_item(
         'Running commands',
-        '/' + data.locale + '/docs/installation/running-commands'
+        '/' + data.locale + '/docs/installation/running-commands',
+        {
+          external: false,
+          children: false,
+        }
       )}
     </ul>
   `;
 
   let configuration_content = String.raw`
-    <ul data-h2-padding="base(0, 0, 0, x2)">
+    <ul data-h2-padding="base(0, 0, 0, x.75)">
       ${return_menu_item(
         'Core settings',
-        '/' + data.locale + '/docs/configuration/core-settings'
+        '/' + data.locale + '/docs/configuration/core-settings',
+        {
+          external: false,
+          children: false,
+        }
       )}
       ${return_menu_item(
         'Configuring media queries',
-        '/' + data.locale + '/docs/configuration/configuring-queries'
+        '/' + data.locale + '/docs/configuration/configuring-queries',
+        {
+          external: false,
+          children: false,
+        }
       )}
       ${return_menu_item(
         'Configuring dark mode',
-        '/' + data.locale + '/docs/configuration/configuring-modes'
+        '/' + data.locale + '/docs/configuration/configuring-modes',
+        {
+          external: false,
+          children: false,
+        }
       )}
       ${return_menu_item(
         'Creating themes',
-        '/' + data.locale + '/docs/configuration/creating-themes'
+        '/' + data.locale + '/docs/configuration/creating-themes',
+        {
+          external: false,
+          children: false,
+        }
       )}
     </ul>
   `;
 
   let styling_content = String.raw`
-    <ul data-h2-padding="base(0, 0, 0, x2)">
-      <li data-h2-margin="base(x.25, 0, 0, 0)">
-        <a 
-          href="/${data.locale}/docs/styling/syntax"
-          title="">
-          Syntax
-        </a>
-      </li>
-      <li data-h2-margin="base(x.25, 0, 0, 0)">
-        <a 
-          href="/${data.locale}/docs/styling/typography"
-          title="">
-          Typography
-        </a>
-      </li>
-      <li data-h2-margin="base(x.25, 0, 0, 0)">
-        <a 
-          href="/${data.locale}/docs/styling/layout"
-          title="">
-          Layout
-        </a>
-      </li>
-      <li data-h2-margin="base(x.25, 0, 0, 0)">
-        <a 
-          href="/${data.locale}/docs/styling/colors"
-          title="">
-          Colors
-        </a>
-      </li>
+    <ul data-h2-padding="base(0, 0, 0, x.75)">
+      ${return_menu_item('Syntax', '/' + data.locale + '/docs/styling/syntax', {
+        external: false,
+        children: false,
+      })}
+      ${return_menu_item(
+        'Typography',
+        '/' + data.locale + '/docs/styling/typography',
+        {
+          external: false,
+          children: false,
+        }
+      )}
+      ${return_menu_item('Layout', '/' + data.locale + '/docs/styling/layout', {
+        external: false,
+        children: false,
+      })}
+      ${return_menu_item('Colors', '/' + data.locale + '/docs/styling/colors', {
+        external: false,
+        children: false,
+      })}
     </ul>
   `;
 
   let properties_content = String.raw`
-    <ul data-h2-padding="base(0, 0, 0, x2)">
+    <ul data-h2-padding="base(0, 0, 0, x.75)">
+      ${return_menu_item(
+        'Standard properties',
+        '/' + data.locale + '/docs/properties/standard',
+        {
+          external: false,
+          children: false,
+        }
+      )}
+      ${return_menu_item(
+        'Hydrogen properties',
+        '/' + data.locale + '/docs/properties/hydrogen',
+        {
+          external: false,
+          children: false,
+        }
+      )}
+    </ul>
+  `;
+
+  let docs_menu = String.raw`
+    <ul data-h2-padding="base(0, 0, 0, x.75)">
       <li data-h2-margin="base(x.25, 0, 0, 0)">
-        <a 
-          href="/${data.locale}/docs/properties/standard"
-          title="">
-          Standard properties
-        </a>
+        ${expansion_small.render(data, {
+          state: false,
+          label: 'Installation',
+          content: installation_content,
+        })}
       </li>
       <li data-h2-margin="base(x.25, 0, 0, 0)">
-        <a 
-          href="/${data.locale}/docs/properties/hydrogen"
-          title="">
-          Hydrogen properties
-        </a>
+        ${expansion_small.render(data, {
+          state: false,
+          label: 'Configuration',
+          content: configuration_content,
+        })}
+      </li>
+      <li data-h2-margin="base(x.25, 0, 0, 0)">
+        ${expansion_small.render(data, {
+          state: false,
+          label: 'Styling',
+          content: styling_content,
+        })}
+      </li>
+      <li data-h2-margin="base(x.25, 0, 0, 0)">
+        ${expansion_small.render(data, {
+          state: false,
+          label: 'Properties',
+          content: properties_content,
+        })}
       </li>
     </ul>
   `;
@@ -159,49 +215,25 @@ function render(data) {
   let menu_content = String.raw`
     <nav>
       <ul data-h2-padding="base(0)" data-h2-list-style="base(none) base:children[ul](none)">
-        ${return_menu_item('Home', '/' + data.locale)}
-        <li data-h2-margin="base(x.25, 0, 0, 0)">
-          <a 
-            href="/${data.locale}/docs"
-            title="">
-            Documentation
-          </a>
-          <ul data-h2-padding="base(0)">
-            <li data-h2-margin="base(x.25, 0, 0, 0)">
-              ${expansion_small.render(data, {
-                state: false,
-                label: 'Installation',
-                content: installation_content,
-              })}
-            </li>
-            <li data-h2-margin="base(x.25, 0, 0, 0)">
-              ${expansion_small.render(data, {
-                state: false,
-                label: 'Configuration',
-                content: configuration_content,
-              })}
-            </li>
-            <li data-h2-margin="base(x.25, 0, 0, 0)">
-              ${expansion_small.render(data, {
-                state: false,
-                label: 'Styling',
-                content: styling_content,
-              })}
-            </li>
-            <li data-h2-margin="base(x.25, 0, 0, 0)">
-              ${expansion_small.render(data, {
-                state: false,
-                label: 'Properties',
-                content: properties_content,
-              })}
-            </li>
-          </ul>
-        </li>
-        ${return_menu_item('Releases', '/' + data.locale + '/docs/releases')}
+        ${return_menu_item('Home', '/' + data.locale, {
+          external: false,
+          children: false,
+        })}
+        ${return_menu_item('Documentation', '/' + data.locale + '/docs', {
+          external: false,
+          children: docs_menu,
+        })}
+        ${return_menu_item('Releases', '/' + data.locale + '/docs/releases', {
+          external: false,
+          children: false,
+        })}
         ${return_menu_item(
           'Github',
           'https://github.com/hydrogen-design-system/hydrogen',
-          true
+          {
+            external: true,
+            children: false,
+          }
         )}
       </ul>
     </nav>

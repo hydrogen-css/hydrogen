@@ -32,14 +32,15 @@ function render(data, props) {
         data-h2-padding="base(0)"
         onclick="toggle_ec(this)">
         <div 
-          data-h2-display="base(grid)" 
+          data-h2-display="base(flex)" 
           data-h2-gap="base(x.25)" 
-          data-h2-grid-template-columns="base(x1 1fr)">
-          <div data-h2-position="base(relative)">
+          data-h2-align-items="base(center)">
+          <div data-h2-width="base(x.5)" data-h2-position="base(relative)">
             <span
               class="ec-collapsed-icon"
               data-h2-position="base(center)"
-              data-h2-font-weight="base(600)">
+              data-h2-font-weight="base(600)"
+              data-h2-stroke="base:children[path](primary.dark)">
               <svg
                 data-h2-display="base(block)"
                 data-h2-height="base(x.5)" 
@@ -51,7 +52,8 @@ function render(data, props) {
             <span
               class="ec-expanded-icon"
               data-h2-position="base(center)"
-              data-h2-font-weight="base(600)">
+              data-h2-font-weight="base(600)"
+              data-h2-stroke="base:children[path](primary.dark)">
               <svg
                 data-h2-display="base(block)"
                 data-h2-height="base(x.5)" 
@@ -66,7 +68,7 @@ function render(data, props) {
             data-h2-text-decoration="base(underline)">${props.label}</p>
         </div>
       </button>
-      <div class="expand-collapse-content" data-h2-margin-left="base(x.25)">
+      <div class="expand-collapse-content">
         ${props.content}
       </div>
     </div>

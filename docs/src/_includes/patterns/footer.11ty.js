@@ -13,7 +13,7 @@ var data = {};
  */
 function render(data, props) {
   let container =
-    'data-h2-container="base(center, large, x1) p-tablet(center, large, x2) l-tablet(center, medium, x3)"';
+    'data-h2-container="base(center, large, x1) p-tablet(center, large, x2) l-tablet(center, large, x3)"';
   if (data.navigation.key === 'home') {
     container =
       'data-h2-container="base(center, medium, x1) p-tablet(center, medium, x2) l-tablet(center, medium, x3)"';
