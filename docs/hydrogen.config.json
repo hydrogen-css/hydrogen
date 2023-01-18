@@ -361,7 +361,7 @@
         {
           "key": "background",
           "default": {
-            "color": "#f4f8ff",
+            "color": "#f9fcff",
             "modifiers": []
           },
           "dark": {
@@ -425,7 +425,7 @@
         {
           "key": "background",
           "default": {
-            "color": "#f4f8ff",
+            "color": "#fff9fb",
             "modifiers": []
           },
           "dark": {
@@ -489,7 +489,7 @@
         {
           "key": "background",
           "default": {
-            "color": "#f4f8ff",
+            "color": "#f9fffd",
             "modifiers": []
           },
           "dark": {

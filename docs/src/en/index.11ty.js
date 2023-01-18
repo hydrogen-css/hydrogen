@@ -270,7 +270,7 @@ var data = {
           '<a href="/en/docs/configuration/core-settings" title="">Core settings</a>',
           '<a href="/en/docs/configuration/configuring-queries" title="">Configuring media queries</a>',
           '<a href="/en/docs/configuration/configuring-modes" title="">Configuring dark mode</a>',
-          '<a href="/en/docs/configuration/creating themes" title="">Creating themes</a>',
+          '<a href="/en/docs/configuration/creating-themes" title="">Creating themes</a>',
         ],
       },
       {

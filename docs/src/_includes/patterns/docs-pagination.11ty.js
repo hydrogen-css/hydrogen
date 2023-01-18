@@ -15,17 +15,31 @@ function render(data) {
           data-h2-text-transform="base(uppercase)"
           data-h2-font-size="base(caption)"
           data-h2-font-weight="base(700)"
-          data-h2-margin="base(0, 0, 0, x1.2)"
           data-h2-color="base(black.lighter)">
           Previously
         </p>
-        <a href="${
-          data.collections.en_docs[current - 1].url
-        }" title="" data-h2-text-decoration="base(none)" data-h2-font-weight="base(700)" data-h2-color="base(primary.dark) base:hover(font) base:all:focus-visible(black)">
-          <span data-h2-font-size="base(h6, 1)" data-h2-float="base(left)">&#171;</span>
-          <span data-h2-font-size="base(h6, 1)" data-h2-text-decoration="base(underline)" data-h2-margin="base(0, 0, 0, x.5)">${
-            data.collections.en_docs[previous].data.title
-          }</span>
+        <a 
+          href="${data.collections.en_docs[current - 1].url}" 
+          title="" 
+          data-h2-text-decoration="base(none)" 
+          data-h2-font-weight="base(700)" 
+          data-h2-color="
+            base(primary.dark) 
+            base:hover(font) 
+            base:all:focus-visible(black)"
+          data-h2-position="base(relative)">
+          <span 
+            data-h2-font-size="base(h6, 1)"
+            data-h2-position="base(absolute)"
+            data-h2-location="base(50%, auto, auto, 0)"
+            data-h2-transform="base(translate(calc((100% + x.25) * -1), -55%))">
+            &#171;
+          </span>
+          <span 
+            data-h2-font-size="base(h6, 1)" 
+            data-h2-text-decoration="base(underline)">
+            ${data.collections.en_docs[previous].data.title}
+          </span>
         </a>
       `;
     } else {
@@ -39,17 +53,31 @@ function render(data) {
           data-h2-text-transform="base(uppercase)"
           data-h2-font-size="base(caption)"
           data-h2-font-weight="base(700)"
-          data-h2-margin="base(0, x1.2, 0, 0)"
           data-h2-color="base(black.lighter)">
           Up next
         </p>
-        <a href="${
-          data.collections.en_docs[current + 1].url
-        }" title="" data-h2-text-decoration="base(none)" data-h2-font-weight="base(700)" data-h2-color="base(primary.dark) base:hover(font) base:all:focus-visible(black)">
-          <span data-h2-font-size="base(h6, 1)" data-h2-text-decoration="base(underline)" data-h2-margin="base(0, x.5, 0, 0)">${
-            data.collections.en_docs[current + 1].data.title
-          }</span>
-          <span data-h2-font-size="base(h6, 1)" data-h2-float="base(right)">&#187;</span>
+        <a 
+          href="${data.collections.en_docs[current + 1].url}" 
+          title="" 
+          data-h2-text-decoration="base(none)" 
+          data-h2-font-weight="base(700)" 
+          data-h2-color="
+            base(primary.dark) 
+            base:hover(font) 
+            base:all:focus-visible(black)"
+          data-h2-position="base(relative)">
+          <span 
+            data-h2-font-size="base(h6, 1)" 
+            data-h2-text-decoration="base(underline)">
+            ${data.collections.en_docs[current + 1].data.title}
+          </span>
+          <span 
+            data-h2-font-size="base(h6, 1)"
+            data-h2-position="base(absolute)"
+            data-h2-location="base(50%, 0, auto, auto)"
+            data-h2-transform="base(translate(calc(100% + x.25), -55%))">
+            &#187;
+          </span>
         </a>
       `;
     } else {

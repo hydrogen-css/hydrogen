@@ -43,8 +43,8 @@ function render(data, props) {
               data-h2-stroke="base:children[path](primary.dark)">
               <svg
                 data-h2-display="base(block)"
-                data-h2-height="base(x.5)" 
-                data-h2-width="base(x.5)" 
+                data-h2-height="base(x.4)" 
+                data-h2-width="base(x.4)" 
                 width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7 23.1964L32.5 48.6964L58 23.1964" stroke="#9D5CFF" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
@@ -56,8 +56,8 @@ function render(data, props) {
               data-h2-stroke="base:children[path](primary.dark)">
               <svg
                 data-h2-display="base(block)"
-                data-h2-height="base(x.5)" 
-                data-h2-width="base(x.5)" 
+                data-h2-height="base(x.4)" 
+                data-h2-width="base(x.4)" 
                 width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M58 42.2344L32.5 16.7344L7 42.2344" stroke="#9D5CFF" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>

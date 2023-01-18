@@ -181,6 +181,10 @@ function render(data) {
 
   let docs_menu = String.raw`
     <ul data-h2-padding="base(0, 0, 0, x.75)">
+      ${return_menu_item('Welcome', '/' + data.locale + '/docs', {
+        external: false,
+        children: false,
+      })}
       <li data-h2-margin="base(x.25, 0, 0, 0)">
         ${expansion_small.render(data, {
           state: false,
@@ -219,10 +223,13 @@ function render(data) {
           external: false,
           children: false,
         })}
-        ${return_menu_item('Documentation', '/' + data.locale + '/docs', {
-          external: false,
-          children: docs_menu,
-        })}
+        <li data-h2-margin="base(x.25, 0, 0, 0)">
+          ${expansion_small.render(data, {
+            state: false,
+            label: 'Documentation',
+            content: docs_menu,
+          })}
+        </li>
         ${return_menu_item('Releases', '/' + data.locale + '/docs/releases', {
           external: false,
           children: false,
@@ -277,7 +284,7 @@ function render(data) {
                 Hydrogen
               </a>
             </h1>
-            <!-- <form data-h2-margin="base(x1.5, auto, auto, auto)">
+            <form data-h2-margin="base(x1.5, auto, auto, auto)">
               <label
                 data-h2-display="base(block)"
                 data-h2-font-size="base(caption)"
@@ -291,7 +298,7 @@ function render(data) {
                 data-h2-width="base(100%)"
                 type="text"
                 placeholder="Find something...">
-            </form> -->
+            </form>
             <div data-h2-margin="base(x2 0 0 0)">
               <p 
                 data-h2-color="base(black)"
