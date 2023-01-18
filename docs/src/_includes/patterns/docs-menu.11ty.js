@@ -181,14 +181,14 @@ function render(data) {
 
   let docs_menu = String.raw`
     <ul data-h2-padding="base(0, 0, 0, x.75)">
-      ${return_menu_item('Welcome', '/' + data.locale + '/docs', {
-        external: false,
-        children: false,
-      })}
       <li data-h2-margin="base(x.25, 0, 0, 0)">
         ${expansion_small.render(data, {
           state: false,
           label: 'Installation',
+          link: {
+            url: '/' + data.locale + '/docs/installation',
+            label: 'Installation',
+          },
           content: installation_content,
         })}
       </li>
@@ -196,6 +196,10 @@ function render(data) {
         ${expansion_small.render(data, {
           state: false,
           label: 'Configuration',
+          link: {
+            url: '/' + data.locale + '/docs/configuration',
+            label: 'Configuration',
+          },
           content: configuration_content,
         })}
       </li>
@@ -203,6 +207,10 @@ function render(data) {
         ${expansion_small.render(data, {
           state: false,
           label: 'Styling',
+          link: {
+            url: '/' + data.locale + '/docs/styling',
+            label: 'Styling',
+          },
           content: styling_content,
         })}
       </li>
@@ -210,6 +218,10 @@ function render(data) {
         ${expansion_small.render(data, {
           state: false,
           label: 'Properties',
+          link: {
+            url: '/' + data.locale + '/docs/properties',
+            label: 'Properties',
+          },
           content: properties_content,
         })}
       </li>
@@ -227,6 +239,10 @@ function render(data) {
           ${expansion_small.render(data, {
             state: false,
             label: 'Documentation',
+            link: {
+              url: '/' + data.locale + '/docs',
+              label: 'Documentation',
+            },
             content: docs_menu,
           })}
         </li>
