@@ -20,8 +20,8 @@ function render(data) {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#9d5cff">
-        <meta name="msapplication-TileColor" content="#00aba9">
-        <meta name="theme-color" content="#212130">
+        <meta name="msapplication-TileColor" content="#9d5cff">
+        <meta name="theme-color" content="#9d5cff">
         <!-- Local styles -->
         <link rel="stylesheet" type="text/css" href="/static/css/hydrogen.css"/>
         <link rel="stylesheet" type="text/css" href="/static/css/app.css"/>
