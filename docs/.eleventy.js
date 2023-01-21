@@ -56,6 +56,59 @@ module.exports = function (eleventyConfig) {
       });
   });
 
+  eleventyConfig.addCollection('en_installation', function (collectionApi) {
+    return collectionApi
+      .getFilteredByGlob('./src/en/docs/installation/*/*.11ty.js')
+      .filter(function (item) {
+        return item.data.navigation.order;
+      })
+      .sort(function (a, b) {
+        if (!a.data.navigation.order);
+        else if (a.data.navigation.order > b.data.navigation.order) return 1;
+        else if (a.data.navigation.order < b.data.navigation.order) return -1;
+        else return 0;
+      });
+  });
+  eleventyConfig.addCollection('en_configuration', function (collectionApi) {
+    return collectionApi
+      .getFilteredByGlob('./src/en/docs/configuration/*/*.11ty.js')
+      .filter(function (item) {
+        return item.data.navigation.order;
+      })
+      .sort(function (a, b) {
+        if (!a.data.navigation.order);
+        else if (a.data.navigation.order > b.data.navigation.order) return 1;
+        else if (a.data.navigation.order < b.data.navigation.order) return -1;
+        else return 0;
+      });
+  });
+  eleventyConfig.addCollection('en_styling', function (collectionApi) {
+    return collectionApi
+      .getFilteredByGlob('./src/en/docs/styling/*/*.11ty.js')
+      .filter(function (item) {
+        return item.data.navigation.order;
+      })
+      .sort(function (a, b) {
+        if (!a.data.navigation.order);
+        else if (a.data.navigation.order > b.data.navigation.order) return 1;
+        else if (a.data.navigation.order < b.data.navigation.order) return -1;
+        else return 0;
+      });
+  });
+  eleventyConfig.addCollection('en_properties', function (collectionApi) {
+    return collectionApi
+      .getFilteredByGlob('./src/en/docs/properties/*/*.11ty.js')
+      .filter(function (item) {
+        return item.data.navigation.order;
+      })
+      .sort(function (a, b) {
+        if (!a.data.navigation.order);
+        else if (a.data.navigation.order > b.data.navigation.order) return 1;
+        else if (a.data.navigation.order < b.data.navigation.order) return -1;
+        else return 0;
+      });
+  });
+
   // eleventyConfig.addCollection('all_en', function (collectionApi) {
   //   return collectionApi.getFilteredByGlob('./src/en/docs/**/*.md');
   // });

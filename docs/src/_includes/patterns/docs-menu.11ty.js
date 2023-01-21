@@ -51,7 +51,10 @@ function render(data) {
     return String.raw`
       <li data-h2-margin="base(x.25, 0, 0, 0)">
         <div data-h2-display="base(flex)" data-h2-gap="base(x.25)">
-          <div data-h2-height="base(x1)" data-h2-width="base(x.5)" data-h2-position="base(relative)">
+          <div 
+            data-h2-height="base(x1)" 
+            data-h2-width="base(x.75)" 
+            data-h2-position="base(relative)">
             <span
               data-h2-font-size="base(1rem)"
               data-h2-color="base(primary.dark)"
@@ -274,8 +277,11 @@ function render(data) {
             base:children[button](transparent)
             base:children[a:focus-visible, button:focus-visible](focus)"
           data-h2-border="base:children[a, button](none)"
+          data-h2-border-top="base:focus-visible(x.5 solid focus)"
           data-h2-display="base:children[a, button](block)"
-          data-h2-outline="base:children[a, button](none)"
+          data-h2-outline="
+            base:focus-visible(none)
+            base:children[a, button](none)"
           data-h2-color="base:children[a, button](font) base:all:children[a:focus-visible, button:focus-visible](black) base:children[a:hover, button:hover](primary)"
           data-h2-stroke="base:all:children[a:focus-visible path, button:focus-visible path](black)"
           data-h2-radius="base(rounded)"

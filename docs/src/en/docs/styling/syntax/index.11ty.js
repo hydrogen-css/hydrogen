@@ -397,44 +397,45 @@ let data = {
       ],
     },
     {
-      type: 'group',
-      items: [
-        {
-          type: 'copy',
-          items: ['<strong>To add snippets to your local project:</strong>'],
-        },
-        {
-          type: 'list',
-          style: 'ordered',
-          items: [
-            "In your project folder, create a <code>.vscode</code> folder if one doesn't already exist",
-            'Create a file in that folder named <code>hydrogen.code-snippets</code>',
-            'Paste the snippets data into the file',
-            'Save',
-          ],
-        },
-      ],
-    },
-    {
-      type: 'group',
-      items: [
-        {
-          type: 'copy',
-          items: ['<strong>To add snippets to VS Code globally:</strong>'],
-        },
-        {
-          type: 'list',
-          style: 'ordered',
-          items: [
-            'In VS Code, hit <code>CTRL+SHIFT+P</code> to open the command palette',
-            'Select "Configure User Snippets"',
-            'Select "New Global Snippets File..."',
-            'Enter a file name (e.g. <code>hydrogen</code>)',
-            'Paste the snippets data into the file',
-            'Save',
-          ],
-        },
-      ],
+      type: 'split',
+      first: {
+        items: [
+          {
+            type: 'copy',
+            items: ['<strong>To add snippets to your local project:</strong>'],
+          },
+          {
+            type: 'list',
+            style: 'ordered',
+            items: [
+              "In your project folder, create a <code>.vscode</code> folder if one doesn't already exist",
+              'Create a file in that folder named <code>hydrogen.code-snippets</code>',
+              'Paste the snippets data into the file',
+              'Save',
+            ],
+          },
+        ],
+      },
+      second: {
+        items: [
+          {
+            type: 'copy',
+            items: ['<strong>To add snippets to VS Code globally:</strong>'],
+          },
+          {
+            type: 'list',
+            style: 'ordered',
+            items: [
+              'In VS Code, hit <code>CTRL+SHIFT+P</code> to open the command palette',
+              'Select "Configure User Snippets"',
+              'Select "New Global Snippets File..."',
+              'Enter a file name (e.g. <code>hydrogen</code>)',
+              'Paste the snippets data into the file',
+              'Save',
+            ],
+          },
+        ],
+      },
     },
   ],
 };

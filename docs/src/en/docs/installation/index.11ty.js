@@ -24,12 +24,8 @@ let data = {
       ],
     },
     {
-      type: 'list',
-      style: 'unordered',
-      items: [
-        '<a href="/en/docs/installation/getting-started" title="">Getting started</a>',
-        '<a href="/en/docs/installation/running-commands" title="">Running commands</a>',
-      ],
+      type: 'overview',
+      collection_id: 'en_installation',
     },
   ],
 };

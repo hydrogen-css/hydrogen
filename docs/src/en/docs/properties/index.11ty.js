@@ -24,12 +24,8 @@ let data = {
       ],
     },
     {
-      type: 'list',
-      style: 'unordered',
-      items: [
-        '<a href="/en/docs/properties/standard" title="">Standard properties</a>',
-        '<a href="/en/docs/properties/hydrogen" title="">Hydrogen properties</a>',
-      ],
+      type: 'overview',
+      collection_id: 'en_properties',
     },
   ],
 };

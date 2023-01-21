@@ -47,14 +47,14 @@ function render(data, props) {
         base:selectors[.active]:children[>.expand-collapse-content](block)">
       <div
         data-h2-display="base(flex)" 
-        data-h2-gap="base(x.25)" 
+        data-h2-gap="base(x.25)"
         data-h2-align-items="base(center)">
         <button
           data-h2-background="base(transparent) base:focus-visible(focus)"
           data-h2-color="base:all:focus-visible(black)"
           data-h2-cursor="base(pointer)"
-          data-h2-height="base(x.5)"
-          data-h2-width="base(x.5)" 
+          data-h2-height="base(x.75)"
+          data-h2-width="base(x.75)" 
           data-h2-border="base(none)"
           data-h2-padding="base(0)"
           data-h2-position="base(relative)"

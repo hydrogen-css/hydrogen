@@ -156,6 +156,51 @@ function render(data) {
       output = output + String.raw`</div>`;
       return output;
     }
+    function render_split(item, index) {
+      let margin = 'data-h2-margin="base(x1, 0, 0, 0)"';
+      if (index === 0 && item_index === 0) {
+        margin = '';
+      }
+      let output = String.raw`
+        <div 
+          ${margin} 
+          data-h2-display="base(grid)" 
+          data-h2-grid-template-columns="
+            base(100%) 
+            desktop(repeat(2, minmax(0, 1fr)))" 
+          data-h2-gap="base(x1) desktop(x3)">
+      `;
+      let item1 = String.raw`<div>`;
+      item.first.items.forEach((e) => {
+        if (e.type === 'copy') {
+          item1 = item1 + render_copy(e, index);
+        } else if (e.type === 'list') {
+          item1 = item1 + render_list(e, index);
+        } else if (e.type === 'code') {
+          item1 = item1 + render_code(e, index);
+        }
+      });
+      item1 = item1 + String.raw`</div>`;
+      let item2 = String.raw`<div>`;
+      item.second.items.forEach((e) => {
+        if (e.type === 'copy') {
+          item2 = item2 + render_copy(e, index);
+        } else if (e.type === 'list') {
+          item2 = item2 + render_list(e, index);
+        } else if (e.type === 'code') {
+          item2 = item2 + render_code(e, index);
+        }
+      });
+      item2 = item2 + String.raw`</div>`;
+      output =
+        output +
+        String.raw`
+          ${item1}
+          ${item2}
+        </div>
+      `;
+      return output;
+    }
     function render_latest(item, index) {
       return docs_release_latest.render(data);
     }
@@ -201,6 +246,45 @@ function render(data) {
       });
       return output;
     }
+    function render_overview(item, index) {
+      let posts = data.collections[item.collection_id];
+      let output = String.raw`
+        <div
+          data-h2-margin="base(x2, 0, 0, 0)"
+          data-h2-display="base(grid)"
+          data-h2-grid-template-columns="base(100%) p-tablet(repeat(2, minmax(0, 1fr)))"
+          data-h2-gap="base(x1) p-tablet(x2)">
+      `;
+      posts.forEach((card) => {
+        function get_title() {
+          if (card.data.title_long) {
+            return card.data.title_long;
+          } else {
+            return card.data.title;
+          }
+        }
+        output =
+          output +
+          String.raw`
+            <a
+              href="${card.url}"
+              title=""
+              data-h2-display="base(block)"
+              data-h2-background="base(foreground)"
+              data-h2-radius="base(rounded)"
+              data-h2-shadow="base(medium) base:hover(larger)"
+              data-h2-transition-property="base(box-shadow, color)"
+              data-h2-transition-duration="base(.2s)"
+              data-h2-transition-timing-function="base(ease)"
+              data-h2-padding="base(x5, x1, x1, x1)"
+              data-h2-font-weight="base(700)">
+              ${get_title()}
+            </a>
+          `;
+      });
+      output = output + String.raw`</div>`;
+      return output;
+    }
     data.main.forEach((item, index) => {
       if (item.type === 'title') {
         content = content + render_title(item, index, 'h3');
@@ -212,6 +296,8 @@ function render(data) {
         content = content + render_code(item, index);
       } else if (item.type === 'group') {
         content = content + render_group(item, index, 'h3');
+      } else if (item.type === 'split') {
+        content = content + render_split(item, index);
       } else if (item.type === 'latest') {
         content = content + render_latest(item, index);
       } else if (item.type === 'history') {
@@ -220,6 +306,8 @@ function render(data) {
         content = content + render_release_summaries(item, index);
       } else if (item.type === 'section') {
         content = content + render_section(item, index);
+      } else if (item.type === 'overview') {
+        content = content + render_overview(item, index);
       }
     });
     return content;
