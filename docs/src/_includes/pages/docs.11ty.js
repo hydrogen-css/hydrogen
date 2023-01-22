@@ -6,6 +6,7 @@ const docs_release_summary = require('../patterns/releases-summary.11ty');
 const docs_history = require('../patterns/releases-history.11ty');
 const code = require('../components/code.11ty');
 const { latest, beta } = require('../../_data/releases');
+const expansion = require('../components/expansion-content.11ty');
 
 var data = {
   layout: 'patterns/docs-layout.11ty.js',
@@ -21,7 +22,7 @@ function render(data) {
         if (index === 0) {
           margin = 'data-h2-margin="base(0, 0, x.5, 0)"';
         }
-      } else if (level === 'h4' || level === 'h5') {
+      } else if (level === 'h4' || level === 'h5' || level === 'h6') {
         margin = 'data-h2-margin="base(x2, 0, x.5, 0)"';
       }
       if (item.link) {
@@ -114,7 +115,7 @@ function render(data) {
     }
     function render_group(item, index, level) {
       let margin = 'data-h2-margin="base(x1, 0, 0, 0)"';
-      if (index === 0 && item_index === 0) {
+      if (index === 0) {
         margin = '';
       }
       let output = String.raw`
@@ -158,7 +159,7 @@ function render(data) {
     }
     function render_split(item, index) {
       let margin = 'data-h2-margin="base(x1, 0, 0, 0)"';
-      if (index === 0 && item_index === 0) {
+      if (index === 0) {
         margin = '';
       }
       let output = String.raw`
@@ -223,6 +224,8 @@ function render(data) {
           output = output + render_code(item, index);
         } else if (item.type === 'group') {
           output = output + render_group(item, index, 'h4');
+        } else if (item.type === 'expansion') {
+          output = output + render_expansion(item, index);
         } else if (item.type === 'section') {
           output = output + render_subsection(item, index);
         }
@@ -242,8 +245,73 @@ function render(data) {
           output = output + render_code(item, index);
         } else if (item.type === 'group') {
           output = output + render_group(item, index, 'h5');
+        } else if (item.type === 'expansion') {
+          output = output + render_expansion(item, index);
+        } else if (item.type === 'section') {
+          output = output + render_subsubsection(item, index);
         }
       });
+      return output;
+    }
+    function render_subsubsection(section, index) {
+      let output = ``;
+      section.content.forEach((item, index) => {
+        if (item.type === 'title') {
+          output = output + render_title(item, index, 'h6');
+        } else if (item.type === 'copy') {
+          output = output + render_copy(item, index);
+        } else if (item.type === 'list') {
+          output = output + render_list(item, index);
+        } else if (item.type === 'code') {
+          output = output + render_code(item, index);
+        } else if (item.type === 'group') {
+          output = output + render_group(item, index, 'h6');
+        } else if (item.type === 'expansion') {
+          output = output + render_expansion(item, index);
+        }
+      });
+      return output;
+    }
+    function render_expansion(item, index) {
+      let margin = 'data-h2-margin="base(x2, 0, 0, x1)"';
+      if (index === 0) {
+        margin = 'data-h2-margin="base(0, 0, 0, x1)"';
+      }
+      let output = String.raw`
+        <div ${margin}>
+      `;
+      let label = heading.render(data, {
+        tag: 'h6',
+        size: 'h6',
+        label: item.label,
+        id: item.id,
+        alignment: 'left',
+      });
+      let content = String.raw`
+        <div data-h2-margin="base(x1, 0, 0, 0)">
+      `;
+      item.items.forEach((item, index) => {
+        if (item.type === 'title') {
+          content = content + render_title(item, index, 'h5');
+        } else if (item.type === 'copy') {
+          content = content + render_copy(item, index);
+        } else if (item.type === 'list') {
+          content = content + render_list(item, index);
+        } else if (item.type === 'code') {
+          content = content + render_code(item, index);
+        } else if (item.type === 'group') {
+          content = content + render_group(item, index, 'h5');
+        }
+      });
+      content = content + `</div>`;
+      output =
+        output +
+        expansion.render(data, {
+          state: item.state,
+          label: label,
+          content: content,
+        }) +
+        String.raw`</div>`;
       return output;
     }
     function render_overview(item, index) {
@@ -306,6 +374,8 @@ function render(data) {
         content = content + render_release_summaries(item, index);
       } else if (item.type === 'section') {
         content = content + render_section(item, index);
+      } else if (item.type === 'expansion') {
+        content = content + render_expansion(item, index);
       } else if (item.type === 'overview') {
         content = content + render_overview(item, index);
       }

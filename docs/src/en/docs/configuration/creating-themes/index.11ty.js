@@ -32,17 +32,114 @@ let data = {
           id: 'default',
         },
         {
-          type: 'copy',
+          type: 'group',
           items: [
-            "Hydrogen requires that you have at least one theme defined in your configuration, and that theme must have its <code>key</code> value set to <code>default</code>. This default theme allows you to set base styles for your project and doesn't require any special work to be applied.",
-            "Subsequent themes require a unique key value and when used in your code, only work if your project's <code>data-h2</code> wrapper value contains the theme's key as a value.",
+            {
+              type: 'copy',
+              items: [
+                "Hydrogen requires that you have at least one theme defined in your configuration, and that theme must have its <code>key</code> value set to <code>default</code>. This default theme allows you to set base styles for your project and doesn't require any special work to be applied.",
+                "Subsequent themes require a unique key value and when used in your code, only work if your project's <code>data-h2</code> wrapper value contains the theme's key as a value.",
+              ],
+            },
+            {
+              type: 'code',
+              file: 'hydrogen.config.json',
+              lines: [
+                '"themes": [',
+                '  {',
+                '    "key": "default",',
+                '    "typography": []',
+                '    "colors": []',
+                '    "containers": []',
+                '    "fonts": []',
+                '    "gradients": []',
+                '    "radii": []',
+                '    "shadows": []',
+                '    "transitions": {',
+                '      "durations": []',
+                '      "functions": []',
+                '      "delays": []',
+                '    },',
+                '  },',
+                '  ...',
+                ']',
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      type: 'section',
+      content: [
+        {
+          type: 'title',
+          label: 'Creating and applying themes',
+          id: 'create',
+        },
+        {
+          type: 'group',
+          items: [
+            {
+              type: 'copy',
+              items: [
+                "Custom themes you create above and beyond the default theme can be as simple or complex as the settings will allow. In a lot of cases, all you'll need to do is create a new series of color settings. In other cases, you'll want to modify the typography, font families, spacing, and more.",
+                "When defining theme settings, make sure that you apply the settings using the same key values defined in your default theme. This will allow the themes to swap styles instantaneously when their key is applied to the site. Activating your new theme is as simple as adding your key to your site's <code>data-h2</code> attribute: <code>data-h2='myTheme'</code>.",
+              ],
+            },
+            {
+              type: 'code',
+              file: 'hydrogen.config.json',
+              lines: [
+                '"themes": [',
+                '  {',
+                '    "key": "default",',
+                '    "colors": [',
+                '      {',
+                '        "default": {',
+                '          "key: "primary",',
+                '          "color": "red"',
+                '        }',
+                '      }',
+                '    ]',
+                '  },',
+                '  {',
+                '    "key": "myTheme",',
+                '    "colors": [',
+                '      {',
+                '        "default": {',
+                '          "key: "primary",',
+                '          "color": "blue"',
+                '        }',
+                '      }',
+                '    ]',
+                '  }',
+                ']',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'group',
+          items: [
+            {
+              type: 'copy',
+              items: [
+                "When styling your project, you might run into an instance where you need styles to apply explicitly to a custom theme, but not the default app. Hydrogen allows you to do this by applying the theme's key value as a query modifier. Styles used this way will only apply to the element when the theme's key is applied to the <code>data-h2</code> attribute.",
+              ],
+            },
+            {
+              type: 'code',
+              file: 'index.html',
+              lines: ['base:myTheme(primary)'],
+            },
           ],
         },
       ],
     },
     {
       type: 'title',
-      label: 'Core settings',
+      label: 'Core theme settings',
       id: 'core',
     },
     {
@@ -116,7 +213,7 @@ let data = {
     },
     {
       type: 'title',
-      label: 'Theme styles',
+      label: 'Theme style settings',
       id: 'styles',
     },
     {

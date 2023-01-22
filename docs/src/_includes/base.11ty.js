@@ -5,7 +5,7 @@ function render(data) {
   const skip_to_nav = data.site.components.skip_to_nav;
   return String.raw`
     <!DOCTYPE html>
-    <html lang="${data.locale}" data-h2>
+    <html lang="${data.locale}" data-h2=''>
       <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">

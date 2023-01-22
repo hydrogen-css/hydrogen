@@ -10,109 +10,90 @@ window.onresize = function () {
   body.setAttribute('style', `--heightHack: ${docsHead}px`);
 };
 
-// Listeners
+// Get Hydrogen elements
+let instances = document.querySelectorAll('[data-h2]');
+let switcher = document.querySelector('#switcher');
 
-function testDark() {
-  var hydrogen = document.querySelectorAll('[data-h2]');
+// Listeners
+function check_for_dark_mode() {
   if (
     (window.matchMedia('(prefers-color-scheme: dark)').matches &&
-      (localStorage.theme === undefined || localStorage.theme != 'light')) ||
-    (localStorage.theme != undefined && localStorage.theme === 'dark')
+      (localStorage.mode === undefined || localStorage.mode != 'light')) ||
+    (localStorage.mode != undefined && localStorage.mode === 'dark')
   ) {
-    hydrogen.forEach(function (item) {
-      item.dataset.h2 = 'dark';
+    instances.forEach((hydrogen) => {
+      hydrogen.dataset.h2 = hydrogen.dataset.h2 + ' dark';
     });
   } else {
-    hydrogen.forEach(function (item) {
-      item.dataset.h2 = '';
+    instances.forEach((hydrogen) => {
+      hydrogen.dataset.h2 = hydrogen.dataset.h2.replace(/dark/g, '');
     });
   }
 }
 window
   .matchMedia('(prefers-color-scheme: dark)')
-  .addEventListener('change', (e) => e.matches && testDark());
+  .addEventListener('change', (e) => e.matches && check_for_dark_mode());
 window
   .matchMedia('(prefers-color-scheme: light)')
-  .addEventListener('change', (e) => e.matches && testDark());
+  .addEventListener('change', (e) => e.matches && check_for_dark_mode());
 
 // Storage check
-
-if (localStorage.theme != undefined) {
-  if (localStorage.theme === 'dark') {
-    var hydrogen = document.querySelectorAll('[data-h2]');
-    var switcher = document.querySelector('#switcher');
-    switcher.classList.remove('light');
+if (localStorage.mode != undefined) {
+  if (localStorage.mode === 'dark') {
     switcher.classList.add('dark');
-    switcher.classList.remove('pref');
-    hydrogen.forEach(function (item) {
-      item.dataset.h2 = 'dark';
+    switcher.classList.remove('light', 'pref');
+    instances.forEach((hydrogen) => {
+      hydrogen.dataset.h2 = hydrogen.dataset.h2 + ' dark';
     });
-  } else if (localStorage.theme === 'light') {
-    var hydrogen = document.querySelectorAll('[data-h2]');
-    var switcher = document.querySelector('#switcher');
+  } else if (localStorage.mode === 'light') {
     switcher.classList.add('light');
-    switcher.classList.remove('dark');
-    switcher.classList.remove('pref');
-    hydrogen.forEach(function (item) {
-      item.dataset.h2 = '';
+    switcher.classList.remove('dark', 'pref');
+    instances.forEach((hydrogen) => {
+      hydrogen.dataset.h2 = hydrogen.dataset.h2.replace(/dark/g, '');
     });
   }
 } else if (
-  localStorage.theme == undefined &&
+  localStorage.mode == undefined &&
   window.matchMedia('(prefers-color-scheme: dark)').matches
 ) {
-  var hydrogen = document.querySelectorAll('[data-h2]');
-  var switcher = document.querySelector('#switcher');
-  switcher.classList.remove('light');
-  switcher.classList.remove('dark');
-  switcher.classList.remove('pref');
-  hydrogen.forEach(function (item) {
-    item.dataset.h2 = 'dark';
+  switcher.classList.remove('light', 'dark', 'pref');
+  instances.forEach((hydrogen) => {
+    hydrogen.dataset.h2 = hydrogen.dataset.h2 + ' dark';
   });
 }
 
 // Toggles
-
-function enablePref() {
-  var hydrogen = document.querySelectorAll('[data-h2]');
-  var switcher = document.querySelector('#switcher');
-  switcher.classList.remove('light');
-  switcher.classList.remove('dark');
+function enable_mode_preference() {
   switcher.classList.add('pref');
+  switcher.classList.remove('light', 'dark');
   if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    hydrogen.forEach(function (item) {
-      item.dataset.h2 = 'dark';
+    instances.forEach((hydrogen) => {
+      if (!hydrogen.dataset.h2.includes('dark'))
+        hydrogen.dataset.h2 = hydrogen.dataset.h2 + ' dark';
     });
   } else {
-    hydrogen.forEach(function (item) {
-      item.dataset.h2 = '';
+    instances.forEach((hydrogen) => {
+      hydrogen.dataset.h2 = hydrogen.dataset.h2.replace(/dark/g, '');
     });
   }
-  localStorage.removeItem('theme');
+  localStorage.removeItem('mode');
 }
-
-function enableLight() {
-  var hydrogen = document.querySelectorAll('[data-h2]');
-  var switcher = document.querySelector('#switcher');
+function enable_mode_light() {
   switcher.classList.add('light');
-  switcher.classList.remove('dark');
-  switcher.classList.remove('pref');
-  hydrogen.forEach(function (item) {
-    item.dataset.h2 = '';
+  switcher.classList.remove('dark', 'pref');
+  instances.forEach((hydrogen) => {
+    hydrogen.dataset.h2 = hydrogen.dataset.h2.replace(/dark/g, '');
   });
-  localStorage.theme = 'light';
+  localStorage.mode = 'light';
 }
-
-function enableDark() {
-  var hydrogen = document.querySelectorAll('[data-h2]');
-  var switcher = document.querySelector('#switcher');
-  switcher.classList.remove('light');
+function enable_mode_dark() {
   switcher.classList.add('dark');
-  switcher.classList.remove('pref');
-  hydrogen.forEach(function (item) {
-    item.dataset.h2 = 'dark';
+  switcher.classList.remove('light', 'pref');
+  instances.forEach((hydrogen) => {
+    if (!hydrogen.dataset.h2.includes('dark'))
+      hydrogen.dataset.h2 = hydrogen.dataset.h2 + ' dark';
   });
-  localStorage.theme = 'dark';
+  localStorage.mode = 'dark';
 }
 
 // Toggle main menu

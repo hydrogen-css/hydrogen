@@ -71,7 +71,7 @@ function render(data) {
               data.site.components.breadcrumbs.theme_switcher.preference_toggle
                 .title[data.locale]
             }"
-            onclick="enablePref()">
+            onclick="enable_mode_preference()">
             <svg
               id="icon_pref"
               data-h2-height="base(x.8)"
@@ -90,7 +90,7 @@ function render(data) {
               data.site.components.breadcrumbs.theme_switcher.light_toggle
                 .title[data.locale]
             }"
-            onclick="enableLight()">
+            onclick="enable_mode_light()">
             <svg
               id="icon_sun"
               data-h2-height="base(x.8)"
@@ -116,7 +116,7 @@ function render(data) {
                 data.locale
               ]
             }"
-            onclick="enableDark()">
+            onclick="enable_mode_dark()">
             <svg 
               id="icon_moon"
               viewBox="0 0 19 18" 
