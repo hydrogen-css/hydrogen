@@ -21,7 +21,7 @@ let data = {
     {
       type: 'copy',
       items: [
-        "This section of the documentation summarizes the first steps you'll have to take to get Hydrogen running on your project. If you've used Node tools in the past, setup should be pretty straightforward.",
+        'This section of the documentation covers the meat of how to use Hydrogen in your code, including a syntax breakdown, how to use properties, and applying central styles like typography and color.',
       ],
     },
     {

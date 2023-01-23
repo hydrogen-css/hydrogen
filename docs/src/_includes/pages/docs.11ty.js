@@ -63,10 +63,28 @@ function render(data) {
     }
     function render_list(item, index) {
       let output = ``;
+      let margin = 'data-h2-margin="base(x1, 0, 0, 0)"';
+      if (index === 0) {
+        margin = '';
+      }
       if (item.style === 'ordered') {
         output = output + String.raw`<ol data-h2-padding="base(0, 0, 0, x1)">`;
       } else if (item.style === 'unordered') {
         output = output + String.raw`<ul data-h2-padding="base(0, 0, 0, x1)">`;
+      } else if (item.style === 'grid') {
+        output =
+          output +
+          String.raw`
+            <ul 
+              ${margin}
+              data-h2-padding="base(0, 0, 0, x1)"
+              data-h2-display="base(grid)"
+              data-h2-gap="base(0, x1) p-tablet(0, x2)"
+              data-h2-grid-template-columns="
+                base(100%) 
+                p-tablet(repeat(2, minmax(0, 1fr))) 
+                laptop(repeat(4, minmax(0, 1fr)))">
+          `;
       }
       item.items.forEach((list_item) => {
         if (Array.isArray(list_item)) {
@@ -99,7 +117,7 @@ function render(data) {
       });
       if (item.style === 'ordered') {
         output = output + String.raw`</ol>`;
-      } else if (item.style === 'unordered') {
+      } else if (item.style === 'unordered' || item.style === 'grid') {
         output = output + String.raw`</ul>`;
       }
       return output;
