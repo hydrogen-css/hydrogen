@@ -24,6 +24,14 @@ module.exports = {
   ],
   bugfixes: [
     {
+      breaking: true,
+      changes: {
+        en: [
+          'Fixes a bug that occurred if you tried to use multiple transition values that was caused by transition being given compatibility support.It has been removed, which has caused a breaking change and requires transition attributes to be reformatted to match standard CSS syntax.',
+        ],
+      },
+    },
+    {
       breaking: false,
       changes: {
         en: [
