@@ -6,7 +6,7 @@ function render(data) {
       id="switcher"
       data-h2-fill="
         base:children[#icon_pref *](primary.lightest)
-        base:dark:children[#icon_pref *](primary.light)
+        base:dark:children[#icon_pref *](primary.dark)
         base:selectors[.light]:children[#icon_pref *](black.lighter)
         base:selectors[.dark]:children[#icon_pref *](black.lighter)
         base:children[#icon_sun *](black.lighter)
@@ -46,7 +46,7 @@ function render(data) {
             id="highlight"
             data-h2-height="base(1.75rem)"
             data-h2-width="base(1.75rem)"
-            data-h2-transition="base(transform, .2s, ease, 0s)"
+            data-h2-transition="base(transform .2s ease 0s)"
             data-h2-background-color="base(black)"
             data-h2-radius="base(circle)"></div>
         </div>
