@@ -14,6 +14,15 @@ module.exports = {
   author: 'Josh Beveridge',
   features: [
     {
+      breaking: true,
+      changes: {
+        en: [
+          'Fixes the behaviour of modifiers requiring their opposite to be used in <code>:dark</code> mode if the <code>automatic_modifiers</code> setting is enabled.',
+          "For example. previously, you'd need to use <code>:dark(primary.light)</code> to access <code>primary.dark</code> but Hydrogen is now smart enough to process the color literally by swapping the opposite color in.",
+        ],
+      },
+    },
+    {
       breaking: false,
       changes: {
         en: [
