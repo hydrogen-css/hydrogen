@@ -306,7 +306,13 @@ function render(data) {
                 Hydrogen
               </a>
             </h1>
-            <form data-h2-margin="base(x1.5, auto, auto, auto)">
+            <hr
+              data-h2-border="base(none)"
+              data-h2-width="base(100%)"
+              data-h2-height="base(1px)"
+              data-h2-margin-top="base(x1.5)"
+              data-h2-background="base(primary.lighter) base:dark(primary.dark)">
+            <!-- <form data-h2-margin="base(x1.5, auto, auto, auto)">
               <label
                 data-h2-display="base(block)"
                 data-h2-font-size="base(caption)"
@@ -320,8 +326,8 @@ function render(data) {
                 data-h2-width="base(100%)"
                 type="text"
                 placeholder="Find something...">
-            </form>
-            <div data-h2-margin="base(x2 0 0 0)">
+            </form> -->
+            <div data-h2-margin="base(x1.5 0 0 0)">
               <p 
                 data-h2-color="base(black)"
                 data-h2-font-weight="base(700)" 

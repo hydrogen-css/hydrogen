@@ -131,6 +131,96 @@ function render(data) {
         lines: item.lines,
       });
     }
+    function render_rhythm(item, index) {
+      let output = String.raw`
+        <div
+          data-h2-background="base(foreground)"
+          data-h2-radius="base(rounded)"
+          data-h2-shadow="base(large)"
+          data-h2-padding="base(0, x2)">
+          <span
+            data-h2-height="base(x2)"
+            data-h2-background="base(secondary.lightest.5)"
+            data-h2-align-items="base(center)"
+            data-h2-justify-content="base(center)"
+            data-h2-font-size="base(caption)"
+            data-h2-display="base(flex)"
+            data-h2-width="base(100%)">x2 line height</span>
+          <h3>Heading 3</h3>
+          <span
+            data-h2-height="base(x1)"
+            data-h2-background="base(primary.lightest.5)"
+            data-h2-align-items="base(center)"
+            data-h2-justify-content="base(center)"
+            data-h2-font-size="base(caption)"
+            data-h2-display="base(flex)"
+            data-h2-width="base(100%)">x1 line height</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius morbi enim nunc faucibus a pellentesque sit amet porttitor.</p>
+          <span
+            data-h2-height="base(x1)"
+            data-h2-background="base(primary.lightest.5)"
+            data-h2-align-items="base(center)"
+            data-h2-justify-content="base(center)"
+            data-h2-font-size="base(caption)"
+            data-h2-display="base(flex)"
+            data-h2-width="base(100%)">x1 line height</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius morbi enim nunc faucibus a pellentesque sit amet porttitor.</p>
+          <span
+            data-h2-height="base(x2)"
+            data-h2-background="base(secondary.lightest.5)"
+            data-h2-align-items="base(center)"
+            data-h2-justify-content="base(center)"
+            data-h2-font-size="base(caption)"
+            data-h2-display="base(flex)"
+            data-h2-width="base(100%)">x2 line height</span>
+          <h4>Heading 4</h4>
+          <span
+            data-h2-height="base(x1)"
+            data-h2-background="base(primary.lightest.5)"
+            data-h2-align-items="base(center)"
+            data-h2-justify-content="base(center)"
+            data-h2-font-size="base(caption)"
+            data-h2-display="base(flex)"
+            data-h2-width="base(100%)">x1 line height</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius morbi enim nunc faucibus a pellentesque sit amet porttitor.</p>
+          <span
+            data-h2-height="base(x1)"
+            data-h2-background="base(primary.lightest.5)"
+            data-h2-align-items="base(center)"
+            data-h2-justify-content="base(center)"
+            data-h2-font-size="base(caption)"
+            data-h2-display="base(flex)"
+            data-h2-width="base(100%)">x1 line height</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius morbi enim nunc faucibus a pellentesque sit amet porttitor.</p>
+          <span
+            data-h2-height="base(x2)"
+            data-h2-background="base(secondary.lightest.5)"
+            data-h2-align-items="base(center)"
+            data-h2-justify-content="base(center)"
+            data-h2-font-size="base(caption)"
+            data-h2-display="base(flex)"
+            data-h2-width="base(100%)">x2 line height</span>
+        </div>
+      `;
+      return output;
+    }
+    function render_rhythm_clear(item, index) {
+      let output = String.raw`
+        <div
+          data-h2-background="base(foreground)"
+          data-h2-radius="base(rounded)"
+          data-h2-shadow="base(large)"
+          data-h2-padding="base(x2)">
+          <h3>Heading 3</h3>
+          <p data-h2-margin-top="base(x1)">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius morbi enim nunc faucibus a pellentesque sit amet porttitor.</p>
+          <p data-h2-margin-top="base(x1)">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius morbi enim nunc faucibus a pellentesque sit amet porttitor.</p>
+          <h4 data-h2-margin-top="base(x2)">Heading 4</h4>
+          <p data-h2-margin-top="base(x1)">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius morbi enim nunc faucibus a pellentesque sit amet porttitor.</p>
+          <p data-h2-margin-top="base(x1)">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius morbi enim nunc faucibus a pellentesque sit amet porttitor.</p>
+        </div>
+      `;
+      return output;
+    }
     function render_group(item, index, level) {
       let margin = 'data-h2-margin="base(x1, 0, 0, 0)"';
       if (index === 0) {
@@ -145,7 +235,8 @@ function render(data) {
         if (
           subitem.type === 'title' ||
           subitem.type === 'copy' ||
-          subitem.type === 'list'
+          subitem.type === 'list' ||
+          subitem.type === 'rhythm-clear'
         ) {
           content = content.concat(subitem);
         } else {
@@ -160,6 +251,8 @@ function render(data) {
           output = output + render_copy(item, index);
         } else if (item.type === 'list') {
           output = output + render_list(item, index);
+        } else if (item.type === 'rhythm-clear') {
+          output = output + render_rhythm_clear(item, index);
         }
       });
       output = output + String.raw`</div>`;
@@ -169,6 +262,8 @@ function render(data) {
           output = output + render_code(item, index);
         } else if (item.type === 'embed') {
           output = output + render_embed(item, index);
+        } else if (item.type === 'rhythm') {
+          output = output + render_rhythm(item, index);
         }
       });
       output = output + String.raw`</div>`;

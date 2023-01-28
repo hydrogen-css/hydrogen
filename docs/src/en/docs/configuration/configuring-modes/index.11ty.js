@@ -401,7 +401,6 @@ let data = {
                   type: 'copy',
                   items: [
                     "For times when the automatic swap isn't working as you'd expect, you can override automatic dark mode styles using the <code>:dark</code> modifier on your query. This is especially useful for accessibility corrections.",
-                    "It's important to note that while the <code>:dark</code> modifier will override automatically applied styles, it won't take priority over automated color modifiers. This means that if you enable <code>automatic_modifiers</code> and set <code>base:dark(primary.light)</code>, the result will be the value for <code>primary.dark</code>.",
                     'For objects that need to retain their styles across both light and dark modes, you can use the <code>:all</code> modifier on your query to force the styles to stay the same.',
                   ],
                 },
