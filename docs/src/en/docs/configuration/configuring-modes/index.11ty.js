@@ -61,7 +61,7 @@ let data = {
           items: [
             '<code>method</code> allows you to control the user-experience of how the mode will be applied to the end-product. <a href="#approach" title="">You can learn more about the <code>preference</code> and <code>toggle</code> below.</a>',
             '<code>automatic</code> tells Hydrogen whether or not you want dark mode styles to apply automatically in your code. This setting allows you to <a href="/en/docs/configuration/creating-themes/#styles" title="Learn more about creating themes.">define dark mode values for your theme</a> and have them apply without any extra work. Disabling this setting allows you to apply your dark mode styles by hand, preventing unexpected results.',
-            '<code>automatic_modifiers</code> will tell Hydrogen if you want it to automatically swap its default color modifiers for their opposite in dark mode. For example, if you set <code>primary.darker</code> as a color in light mode, this setting will automatically apply the <code>primary.lighter</code> value in dark mode.',
+            '<code>swap_default_modifiers</code> will tell Hydrogen if you want it to automatically swap its default color modifiers for their opposite in dark mode. For example, if you set <code>primary.darker</code> as a color in light mode, this setting will automatically apply the <code>primary.lighter</code> value in dark mode.',
           ],
         },
         {
@@ -72,7 +72,7 @@ let data = {
             '  "dark": {',
             '    "method": "preference",',
             '    "automatic": true,',
-            '    "automatic_modifiers": true,',
+            '    "swap_default_modifiers": true,',
             '  }',
             '}',
           ],
@@ -386,7 +386,7 @@ let data = {
               items: [
                 "As described in <a href='#settings' title='Scroll back up to the mode settings description.'>the settings documentation above</a>, the <code>automatic</code> option will tell Hydrogen to automatically apply your dark mode specific values for you. This is a blanket application, so if you choose to tell the theme to swap out <code>white</code> for <code>black</code> in dark mode, every instance of <code>white</code> will automatically be black.",
                 "In a majority of cases, this is extremely helpful, because it will allow you to focus your effort on the handful of instances where the color swap doesn't make sense. <strong>This is particularly important when performing accessibility audits to ensure that your swapped color hasn't created contrast problems.</strong>",
-                "To extend this even further, a second control is provided through the <code>automatic_modifiers</code> option that will automatically swap Hydrogen's default color modifiers for their opposite when dark mode is enabled. For example, <code>primary.dark</code> in light mode will swap to the value generated for <code>primary.light</code> when dark mode is toggled on. This allows for intuitive theme building by ensuring that a majority of contrast instances are accounted for when dark mode is automatically applied.",
+                "To extend this even further, a second control is provided through the <code>swap_default_modifiers</code> option that will automatically swap Hydrogen's default color modifiers for their opposite when dark mode is enabled. For example, <code>primary.dark</code> in light mode will swap to the value generated for <code>primary.light</code> when dark mode is toggled on. This allows for intuitive theme building by ensuring that a majority of contrast instances are accounted for when dark mode is automatically applied.",
               ],
             },
             {

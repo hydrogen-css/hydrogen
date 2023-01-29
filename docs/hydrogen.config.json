@@ -13,9 +13,7 @@
   "modes": {
     "method": "toggle",
     "dark": {
-      "method": "toggle",
       "automatic": true,
-      "automatic_modifiers": true,
       "swap_default_modifiers": true
     }
   },
