@@ -50,7 +50,7 @@ let data = {
     {
       type: 'copy',
       items: [
-        "Thanks for visiting Hydrogen's documentation! This document contains everything you'll need to install Hydrogen on your project, create a theme, run commands, style your interfaces, and troubleshoot common problems.",
+        "Thanks for visiting Hydrogen's documentation! This site contains everything you'll need to install Hydrogen on your project, create a theme, run commands, style your interfaces, and troubleshoot common problems.",
         "Have a question but can't find the answer here? Submit a ticket on Github and perhaps the community can provide some insight. We'd also love to receive feedback on how this documentation can be improved.",
       ],
     },

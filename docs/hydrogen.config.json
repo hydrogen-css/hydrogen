@@ -11,10 +11,12 @@
   ],
   "output": "_site/static/css",
   "modes": {
+    "method": "toggle",
     "dark": {
       "method": "toggle",
       "automatic": true,
-      "automatic_modifiers": true
+      "automatic_modifiers": true,
+      "swap_default_modifiers": true
     }
   },
   "processing": {

@@ -111,7 +111,7 @@ var data = {
     },
     sub: {
       title: {
-        label: 'And a whole lot more...',
+        label: "There's a whole lot more too...",
         id: 'more',
       },
       list: [
