@@ -22,4 +22,14 @@ module.exports = {
       },
     },
   ],
+  bugfixes: [
+    {
+      breaking: false,
+      changes: {
+        en: [
+          "Fixes a bug with the init script that caused an error if the input or output directories were specified inside directories that didn't yet exist.",
+        ],
+      },
+    },
+  ],
 };
