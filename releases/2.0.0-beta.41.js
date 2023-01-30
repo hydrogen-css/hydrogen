@@ -27,6 +27,14 @@ module.exports = {
       breaking: false,
       changes: {
         en: [
+          'Fixes a bug with configured properties that conflicted with values containing the configured key. Matches now look for preceding dash (-) and underscore (_) characters to account for this.',
+        ],
+      },
+    },
+    {
+      breaking: false,
+      changes: {
+        en: [
           "Fixes a bug with the init script that caused an error if the input or output directories were specified inside directories that didn't yet exist.",
         ],
       },

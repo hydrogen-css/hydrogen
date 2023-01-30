@@ -22,6 +22,12 @@ function create_settings() {
         radius: '30px',
       },
     });
+    settings.themes[0].transitions.durations.push({
+      key: 'ease',
+      default: {
+        duration: 'linear',
+      },
+    });
     // Write the configuration file
     fs.writeFileSync('hydrogen.config.json', JSON.stringify(settings, null, 2));
     return true;
