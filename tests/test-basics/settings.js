@@ -14,7 +14,7 @@ function create_settings() {
     // Manipulate the settings for this environment
     settings.input = ['input'];
     settings.output = 'output';
-    settings.modes['dark'].method = 'toggle';
+    settings.modes.method = 'toggle';
     settings.processing.minification = true;
     settings.themes[0].radii.push({
       key: 'rounded',
