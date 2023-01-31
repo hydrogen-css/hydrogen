@@ -28,24 +28,25 @@ function render(data, props) {
       data-h2-overflow="base(hidden)">
       <div 
         data-h2-text-align="base(center) p-tablet(left)"
-        data-h2-position="base(relative)">
+        data-h2-position="base(relative)"
+        data-h2-order="base(2) p-tablet(1)">
         <p
           data-h2-font-size="base(h6)"
           data-h2-font-weight="base(700)"
           data-h2-color="base:all(white)">${data.site.name}</p>
-        <div>
-          <img
-            src="/static/img/icon_theo.svg"
-            alt=""
-            data-h2-display="base(inline-block)"
-            data-h2-position="base(absolute)"
-            data-h2-location="p-tablet(auto, auto, -x4, 0)"
-            data-h2-width="base(x3)"
-            data-h2-transition="base(transform .2s ease-in-out)"
-            data-h2-transform="base(translate(0, 60%)) base:hover(translate(0, 0))" />
-        </div>
+        <img
+          src="/static/img/icon_theo.svg"
+          alt=""
+          data-h2-display="base(inline-block)"
+          data-h2-position="base(absolute)"
+          data-h2-location="base(auto, auto, -x4, 50%) p-tablet(auto, auto, -x4, 0)"
+          data-h2-width="base(x3)"
+          data-h2-transition="base(transform .2s ease-in-out)"
+          data-h2-transform="base(translate(-50%, 60%)) p-tablet(translate(0, 60%)) p-tablet:hover(translate(0, 0))" />
       </div>
-      <div data-h2-text-align="base(center) p-tablet(right)">
+      <div 
+        data-h2-text-align="base(center) p-tablet(right)"
+        data-h2-order="base(1) p-tablet(2)">
         <div
           data-h2-display="base(inline-block)"
           data-h2-width="base(100%)"

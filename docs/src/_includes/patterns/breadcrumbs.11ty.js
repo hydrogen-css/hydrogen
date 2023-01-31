@@ -144,7 +144,9 @@ function render(data) {
           data-h2-align-items="base(center)"
           data-h2-padding="base:children[ul](0)"
           data-h2-list-style="base:children[ul](none)">
-          <div data-h2-text-align="base(center) l-tablet(left)">
+          <div
+            data-h2-display="base(none) p-tablet(block)" 
+            data-h2-text-align="base(center) l-tablet(left)">
             <ul
               id="${nav_id}"
               data-h2-display="base(flex)"

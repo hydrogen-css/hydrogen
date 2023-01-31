@@ -1,3 +1,5 @@
+const mobile_menu = require('./patterns/menu-mobile.11ty');
+
 var data = {};
 
 function render(data) {
@@ -78,6 +80,7 @@ function render(data) {
           data-h2-visually-hidden="base(invisible) base:focus-visible(visible)">
           ${skip_to_content.label[data.locale]}
         </a>
+        ${mobile_menu.render(data)}
         ${data.content}
         <!-- Local scripts -->
         <script src="/static/js/app.js"></script>

@@ -177,3 +177,25 @@ function toggle_fern(e) {
   }
   wrapper.dataset.h2 = 'fern ' + mode;
 }
+
+function toggle_menu(e) {
+  let wrapper = e.closest('.mobile-menu');
+  if (wrapper.classList.contains('active')) {
+    wrapper.classList.remove('active');
+  } else {
+    wrapper.classList.add('active');
+  }
+}
+
+function capture_anchor_clicks() {
+  let anchors = document.querySelectorAll('.mobile-menu a');
+  anchors.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      if (e.target.getAttribute('href').includes('#')) {
+        e.target.closest('.mobile-menu').classList.remove('active');
+      }
+    });
+  });
+}
+
+capture_anchor_clicks();

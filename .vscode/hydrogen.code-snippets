@@ -164,7 +164,7 @@
   "hydrogen-layer": {
     "prefix": "data-h2-layer",
     "body": [
-      "data-h2-layer=\"${1:query}${2::modifiers}${3:index}, ${4:position})\""
+      "data-h2-layer=\"${1:query}${2::modifiers}(${3:index}, ${4:position})\""
     ]
   },
   "hydrogen-list-style": {
