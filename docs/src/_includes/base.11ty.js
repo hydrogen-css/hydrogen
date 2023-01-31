@@ -22,6 +22,11 @@ function render(data) {
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#9d5cff">
         <meta name="msapplication-TileColor" content="#9d5cff">
         <meta name="theme-color" content="#9d5cff">
+        <!-- Open graph image settings -->
+        <meta property="og:image" content="/static/img/social-hydrogen.png">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="1201">
+        <meta property="og:image:height" content="628">
         <!-- Local styles -->
         <link rel="stylesheet" type="text/css" href="/static/css/hydrogen.css"/>
         <link rel="stylesheet" type="text/css" href="/static/css/app.css"/>
