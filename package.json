@@ -35,6 +35,7 @@
   },
   "scripts": {
     "setup": "./setup.sh",
+    "deploy": "./deploy.sh",
     "docs": "cd docs && npm start",
     "": "",
     "tests": "node -e 'require(\"./lib/scripts/run-all.test\").runTest()'",
