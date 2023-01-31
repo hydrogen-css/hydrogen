@@ -96,7 +96,7 @@ let data = {
             {
               type: 'copy',
               items: [
-                'If <code>reset_styles</code> is enabled in your configuration, standard elements will be automatically set to their Hydrogen value counterpart. For example, <code>heading</code> elements will be given their relevant heading scale value and calculated line height.',
+                'If <code>include_reset_css</code> is enabled in your configuration, standard elements will be automatically set to their Hydrogen value counterpart. For example, <code>heading</code> elements will be given their relevant heading scale value and calculated line height.',
               ],
             },
             {

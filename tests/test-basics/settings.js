@@ -15,7 +15,7 @@ function create_settings() {
     settings.input = ['input'];
     settings.output = 'output';
     settings.modes.method = 'toggle';
-    settings.processing.minification = true;
+    settings.processing.minify_css = true;
     settings.themes[0].radii.push({
       key: 'rounded',
       default: {

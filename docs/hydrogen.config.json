@@ -18,10 +18,10 @@
     }
   },
   "processing": {
-    "reset_styles": true,
-    "prefixing": true,
-    "minification": true,
-    "var_export": false
+    "include_reset_css": true,
+    "browser_prefix_css": true,
+    "minify_css": true,
+    "export_variable_file": false
   },
   "logging": {
     "create_logs": false,

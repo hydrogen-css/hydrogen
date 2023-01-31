@@ -73,10 +73,10 @@ let data = {
             {
               type: 'copy',
               items: [
-                "The <code>reset_styles</code> setting tells Hydrogen whether or not to include basic reset CSS in its output. If Hydrogen is interfering with your project's existing CSS, disabling this might resolve the issue.",
-                'The <code>prefixing</code> setting enables/disables whether AutoPrefixer is run on the final CSS output. AutoPrefixer provides helpful CSS browser prefixes to ensure compatibility across browsers.',
-                'The <code>minification</code> setting enables/disables whether CSSnano is run on the final CSS output. CSSnano compresses the final output using a series of basic rules to ensure the output file size is as small as possible.',
-                "The <code>var_export</code> setting tells Hydrogen whether or not you want a CSS variable file exported to the output folder. Hydrogen's output includes these variables, however, if you want to use the variables on a page that doesn't include Hydrogen, this file can be helpful.",
+                "The <code>include_reset_css</code> setting tells Hydrogen whether or not to include basic reset CSS in its output. If Hydrogen is interfering with your project's existing CSS, disabling this might resolve the issue.",
+                'The <code>browser_prefix_css</code> setting enables/disables whether AutoPrefixer is run on the final CSS output. AutoPrefixer provides helpful CSS browser prefixes to ensure compatibility across browsers.',
+                'The <code>minify_css</code> setting enables/disables whether CSSnano is run on the final CSS output. CSSnano compresses the final output using a series of basic rules to ensure the output file size is as small as possible.',
+                "The <code>export_variable_file</code> setting tells Hydrogen whether or not you want a CSS variable file exported to the output folder. Hydrogen's output includes these variables, however, if you want to use the variables on a page that doesn't include Hydrogen, this file can be helpful.",
               ],
             },
             {
@@ -84,10 +84,10 @@ let data = {
               file: 'hydrogen.config.json',
               lines: [
                 '"processing": {',
-                '  "reset_styles": true',
-                '  "prefixing": true',
-                '  "minification": true',
-                '  "var_export": false',
+                '  "include_reset_css": true',
+                '  "browser_prefix_css": true',
+                '  "minify_css": true',
+                '  "export_variable_file": false',
                 '}',
               ],
             },
