@@ -57,10 +57,86 @@ function html(pieces) {
 /**
  * Render a heading component
  * @param {Object} data 11ty's data
- * @param {{file: String, lines: [String]}} props the components's properties
+ * @param {{copy: boolean, file: String, lines: [String]}} props the components's properties
  * @returns {String} the rendered template
  */
 function render(data, props) {
+  // Render the header
+  function render_header() {
+    let output = ``;
+    if (props.file) {
+      if (props.copy) {
+        output =
+          output +
+          String.raw`
+          <div
+            data-h2-display="base(grid)"
+            data-h2-grid-template-columns="base(1fr auto)"
+            data-h2-align-items="base(center)">
+            <div>
+              <span
+                data-h2-color="base:all(white)"
+                data-h2-display="base(block)"
+                data-h2-padding="base(x.5, x1)">${props.file}</span>
+            </div>
+            <div>
+              <button
+                type="button"
+                title="${
+                  data.site.components.code.copy_button.title[data.locale]
+                }"
+                onclick="copy_code(this)"
+                data-h2-background-color="base(transparent) base:focus-visible(focus)"
+                data-h2-color="base:all(white) base:all:hover(primary.lighter) base:all:focus-visible(black)"
+                data-h2-border="base(0px solid transparent)"
+                data-h2-border-left="base:all(1px solid white.1)"
+                data-h2-cursor="base(pointer)"
+                data-h2-padding="base(x.5, x1)"
+                data-h2-text-decoration="base(underline)" 
+                data-h2-radius="base(0, code, 0, 0)"
+                data-h2-font-family="base(sans)"
+                data-h2-font-size="base(caption)"
+                style="outline: none;">
+                  <span class="default">${
+                    data.site.components.code.copy_button.label[data.locale]
+                  }</span>
+                  <span class="confirmation">${
+                    data.site.components.code.copy_button.label_active[
+                      data.locale
+                    ]
+                  }</span>
+                </button>
+            </div>
+        `;
+      } else {
+        output =
+          output +
+          String.raw`
+          <div
+            data-h2-display="base(grid)"
+            data-h2-grid-template-columns="base(1fr)"
+            data-h2-align-items="base(center)">
+            <div>
+              <span
+                data-h2-color="base:all(white)"
+                data-h2-display="base(block)"
+                data-h2-padding="base(x.5, x1)">${props.file}</span>
+            </div>
+        `;
+      }
+      output =
+        output +
+        String.raw`
+        </div>
+        <hr
+          data-h2-height="base(1px)"
+          data-h2-background-color="base:all(white.1)"
+          data-h2-margin="base(0)"
+          data-h2-border="base(0px solid transparent)">
+      `;
+    }
+    return output;
+  }
   // Generate line count
   // {% set lineCount = 0 %}{% for item in code.lines %}{% set lineCount = lineCount + 1 %}<span data-h2-color="base(code.lighter)">{{ lineCount }}</span><br>{% endfor %}
   let line_count = ``;
@@ -92,46 +168,7 @@ function render(data, props) {
       data-h2-color="base:all(white)"
       data-h2-radius="base(code)"
       class="code_wrapper">
-      <div
-        data-h2-display="base(grid)"
-        data-h2-grid-template-columns="base(1fr auto)"
-        data-h2-align-items="base(center)">
-        <div>
-          <span
-            data-h2-color="base:all(white)"
-            data-h2-display="base(block)"
-            data-h2-padding="base(x.5, x1)">${props.file}</span>
-        </div>
-        <div>
-          <button
-            type="button"
-            title="${data.site.components.code.copy_button.title[data.locale]}"
-            onclick="copy_code(this)"
-            data-h2-background-color="base(transparent) base:focus-visible(focus)"
-            data-h2-color="base:all(white) base:all:hover(primary.lighter) base:all:focus-visible(black)"
-            data-h2-border="base(0px solid transparent)"
-            data-h2-border-left="base:all(1px solid white.1)"
-            data-h2-cursor="base(pointer)"
-            data-h2-padding="base(x.5, x1)"
-            data-h2-text-decoration="base(underline)" 
-            data-h2-radius="base(0, code, 0, 0)"
-            data-h2-font-family="base(sans)"
-            data-h2-font-size="base(caption)"
-            style="outline: none;">
-              <span class="default">${
-                data.site.components.code.copy_button.label[data.locale]
-              }</span>
-              <span class="confirmation">${
-                data.site.components.code.copy_button.label_active[data.locale]
-              }</span>
-            </button>
-        </div>
-      </div>
-      <hr
-        data-h2-height="base(1px)"
-        data-h2-background-color="base:all(white.1)"
-        data-h2-margin="base(0)"
-        data-h2-border="base(0px solid transparent)">
+      ${render_header()}
       <div 
         data-h2-max-height="base(35vh)" 
         data-h2-overflow="base(auto)"

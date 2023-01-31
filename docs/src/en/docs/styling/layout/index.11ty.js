@@ -35,7 +35,6 @@ let data = {
         },
         {
           type: 'code',
-          file: '',
           lines: [
             'x1 : (line-height x 1)',
             'x2 : (line-height x 2)',
@@ -56,7 +55,6 @@ let data = {
         },
         {
           type: 'code',
-          file: 'index.html',
           lines: [
             'data-h2-padding="base(x2 x1)"',
             'data-h2-margin-top="base(x3)"',
@@ -96,6 +94,7 @@ let data = {
             {
               type: 'code',
               file: 'index.html',
+              copy: true,
               lines: [
                 '<div',
                 '  data-h2-display="base(grid)"',
@@ -145,6 +144,7 @@ let data = {
             {
               type: 'code',
               file: 'index.html',
+              copy: true,
               lines: [
                 '<div data-h2-flex-grid="base(alignment, column-gap, row-gap)">',
                 '  children',
@@ -180,6 +180,7 @@ let data = {
             {
               type: 'code',
               file: 'index.html',
+              copy: true,
               lines: [
                 '<div data-h2-flex-grid="base(flex-start, x2, x1)">',
                 '  <div data-h2-flex-item="base(1of1) desktop(1of2)></div>"',

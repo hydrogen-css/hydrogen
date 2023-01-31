@@ -17,7 +17,7 @@ module.exports = {
       breaking: true,
       changes: {
         en: [
-          'Removes the <code>method</code> setting from the dark <code>mode<code> configuration in favor of a more global <code>mode.method</code> setting. This will apply the same method to all future modes to help avoid potential conflicts between application methodologies.',
+          'Removes the <code>method</code> setting from the dark <code>mode</code> configuration in favor of a more global <code>mode.method</code> setting. This will apply the same method to all future modes to help avoid potential conflicts between application methodologies.',
         ],
       },
     },

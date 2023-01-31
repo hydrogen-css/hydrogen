@@ -31,6 +31,7 @@ let data = {
         {
           type: 'code',
           file: 'hydrogen.config.json',
+          copy: true,
           lines: [
             '"colors": [',
             '  {',
@@ -113,6 +114,7 @@ let data = {
             {
               type: 'code',
               file: 'hydrogen.config.json',
+              copy: true,
               lines: [
                 '"colors": [',
                 '  {',
@@ -148,11 +150,15 @@ let data = {
           type: 'copy',
           items: [
             "You can also manage a color's value and modifiers per mode. By adding a <code>dark</code> key alongside your color's <code>default</code> configuration, you can control exactly how the value works in a dark mode context.",
+            'The <code>auto_apply_styles</code> and <code>swap_default_modifiers</code> mode settings are also helpful tools for managing how colors work across modes.',
+            "By enabling <code>auto_apply_styles</code> whatever value you set under the color's <code>dark</code> configuration will automatically be applied if dark mode is triggered. This setting will also apply the same logic to your custom modifiers if you give them dark mode counterparts with a matching key.",
+            'The <code>swap_default_modifiers</code> setting will tell Hydrogen to programmatically swap the built-in color modifiers (<code>light</code>, <code>darker</code>, etc.) with their natural opposite when dark mode is triggered. This can be helpful if you want all <code>color.light</code> values to automatically switch to <code>color.dark</code> and so on.',
           ],
         },
         {
           type: 'code',
           file: 'hydrogen.config.json',
+          copy: true,
           lines: [
             '"colors": [',
             '  {',
@@ -173,14 +179,6 @@ let data = {
       ],
     },
     {
-      type: 'copy',
-      items: [
-        'The <code>automatic</code> and <code>swap_default_modifiers</code> mode settings are also helpful tools for managing how colors work across modes.',
-        "By enabling <code>automatic</code> whatever value you set under the color's <code>dark</code> configuration will automatically be applied if dark mode is triggered. This setting will also apply the same logic to your custom modifiers if you give them dark mode counterparts with a matching key.",
-        'The <code>swap_default_modifiers</code> setting will tell Hydrogen to programmatically swap the built-in color modifiers (<code>light</code>, <code>darker</code>, etc.) with their natural opposite when dark mode is triggered. This can be helpful if you want all <code>color.light</code> values to automatically switch to <code>color.dark</code> and so on.',
-      ],
-    },
-    {
       type: 'title',
       label: 'Colors across themes',
       id: 'themes',
@@ -197,6 +195,7 @@ let data = {
         {
           type: 'code',
           file: 'hydrogen.config.json',
+          copy: true,
           lines: [
             '"themes": [',
             '  {',

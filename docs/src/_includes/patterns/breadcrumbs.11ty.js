@@ -161,9 +161,12 @@ function render(data) {
               data-h2-justify-content="base(center) l-tablet(flex-end)"
               data-h2-gap="base(x1)">
               <li>
-                <span>version <strong data-h2-font-weight="base(800)" data-h2-color="base(primary.dark)">${
-                  data.releases.beta.version
-                }</strong></span>
+                <span>version <a 
+                  data-h2-font-weight="base(800)" 
+                  data-h2-color="base(primary.dark)"
+                  href="/${data.locale}/docs/releases">
+                  ${data.releases.latest.version}</a>
+                </span>
               </li>
               <li data-h2-vertical-align="base(middle)">
                 ${theme_switcher.render(data)}

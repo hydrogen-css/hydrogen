@@ -115,6 +115,29 @@ function releases() {
   }
 }
 
+function featured() {
+  try {
+    let parsed_data = [];
+    fs.readdirSync(path.resolve(process.cwd(), '../releases')).forEach(
+      (file) => {
+        if (file != 'index.js') {
+          let change_data = require(path.resolve(
+            process.cwd(),
+            '../releases/' + file
+          ));
+          if (change_data.featured) {
+            parsed_data.push(change_data);
+          }
+        }
+      }
+    );
+    return parsed_data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 module.exports = {
   releases,
+  featured,
 };

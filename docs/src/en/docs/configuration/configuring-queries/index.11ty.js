@@ -29,7 +29,6 @@ let data = {
         },
         {
           type: 'code',
-          file: 'index.html',
           lines: ['media(options)'],
         },
       ],
@@ -45,7 +44,6 @@ let data = {
         },
         {
           type: 'code',
-          file: 'index.html',
           lines: [
             'media:hover(options)',
             'media:dark(options)',
@@ -74,7 +72,6 @@ let data = {
             },
             {
               type: 'code',
-              file: 'index.html',
               lines: ['data-h2-color="base(yellow)"'],
             },
           ],
@@ -97,7 +94,6 @@ let data = {
             },
             {
               type: 'code',
-              file: 'index.html',
               lines: [
                 'data-h2-color="',
                 '  base(yellow)',
@@ -131,6 +127,7 @@ let data = {
         {
           type: 'code',
           file: 'hydrogen.config.json',
+          copy: true,
           lines: [
             '"media": {',
             '  "base_key": "base",',

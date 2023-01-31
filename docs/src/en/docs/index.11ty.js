@@ -56,6 +56,19 @@ let data = {
     },
     {
       type: 'title',
+      label: 'Featured release',
+      id: 'featured',
+      link: {
+        path: '/en/docs/releases',
+        label: 'View all updates',
+        title: "View all of Hydrogen's documented releases.",
+      },
+    },
+    {
+      type: 'featured',
+    },
+    {
+      type: 'title',
       label: 'Latest releases',
       id: 'releases',
       link: {

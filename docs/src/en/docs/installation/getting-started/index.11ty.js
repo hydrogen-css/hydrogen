@@ -98,7 +98,7 @@ let data = {
         },
         {
           type: 'code',
-          file: 'terminal',
+          file: 'index.html',
           lines: [
             '<!DOCTYPE html>',
             '<html data-h2>',

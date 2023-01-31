@@ -3,7 +3,7 @@ var data = {};
 /**
  * Render a heading component
  * @param {Object} data 11ty's data
- * @param {{state: boolean, label: string, content: HTMLElement}} props the components's properties
+ * @param {{state: "active" | null, label: string | HTMLElement, content: HTMLElement}} props the components's properties
  * @returns {String} the rendered template
  */
 function render(data, props) {

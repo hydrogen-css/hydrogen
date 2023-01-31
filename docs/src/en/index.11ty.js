@@ -1,4 +1,5 @@
 const home_layout = require('../_includes/pages/home.11ty');
+const { latest } = require('../_data/releases');
 
 var data = {
   layout: 'pages/home.11ty.js',
@@ -68,7 +69,7 @@ var data = {
             id: 'syntax',
           },
           content: [
-            "Hydrogen's syntax allows you to use any CSS property you can think of (and a few custom ones) while enhancing them with consistent, configurable, inline queries and modifiers. Customize queries, themes, dark mode, and more.",
+            "Hydrogen's syntax supports any CSS property you can think of (and a few custom ones) while enhancing them with configurable, inline queries and modifiers. You'll write familiar CSS syntax while easily targeting custom themes, dark mode, and interaction states.",
           ],
           example: 'properties',
         },
@@ -78,14 +79,16 @@ var data = {
             id: 'speed',
           },
           content: [
-            'Rather than compiling a library, Hydrogen generates CSS on the fly by scanning your code and parsing its unique attributes. Integrate it into your build tools and run it in the background as you develop for on-demand styling.',
+            'Rather than compiling a library, Hydrogen generates CSS on the fly by scanning your code and parsing unique <code>data-h2</code> attributes. Integrate it into your build tools and run it in the background as you develop for on-demand styling.',
           ],
           code: {
-            file: 'terminal',
             lines: [
-              '☼ Hydrogen - System - Parsing attributes in 45 files...',
-              '☼ Hydrogen - Timers - 0259ms (Total build)',
-              '☼ Hydrogen - Success - Hydrogen successfully built its CSS file to your output directory.',
+              '☼ Hydrogen - System - Starting the build...',
+              '  Message  > Hydrogen v' + latest.version,
+              '☼ Hydrogen - System - 28 files were processed...',
+              '☼ Hydrogen - System - Exporting CSS...',
+              '☼ Hydrogen - Timers - 0646ms (Total build)',
+              '☼ Hydrogen - Success - Exporting CSS',
             ],
           },
         },
@@ -95,7 +98,7 @@ var data = {
             id: 'brand',
           },
           content: [
-            'Embracing a design token style approach, Hydrogen encourages you to define decisions like color, typography, shadows, and transitions in its configuration file. Use these values in your attributes, and update them product-wide in a matter of seconds.',
+            'Embracing a design token style approach, Hydrogen wants you to define decisions like color, typography, and shadows in its configuration file. Using these values in your attributes creates consistency and allows you to update them product-wide in a matter of seconds.',
           ],
           example: 'themes',
           code: {

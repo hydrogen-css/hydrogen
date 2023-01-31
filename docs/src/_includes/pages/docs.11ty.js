@@ -1,6 +1,7 @@
 const docs_layout = require('../patterns/docs-layout.11ty');
 const heading = require('../components/headings.11ty');
 const docs_header = require('../patterns/docs-header.11ty');
+const docs_release_featured = require('../patterns/releases-featured.11ty');
 const docs_release_latest = require('../patterns/releases-latest.11ty');
 const docs_release_summary = require('../patterns/releases-summary.11ty');
 const docs_history = require('../patterns/releases-history.11ty');
@@ -128,6 +129,7 @@ function render(data) {
     function render_code(item, index) {
       return code.render(data, {
         file: item.file,
+        copy: item.copy,
         lines: item.lines,
       });
     }
@@ -315,6 +317,9 @@ function render(data) {
       `;
       return output;
     }
+    function render_featured(item, index) {
+      return docs_release_featured.render(data);
+    }
     function render_latest(item, index) {
       return docs_release_latest.render(data);
     }
@@ -479,6 +484,8 @@ function render(data) {
         content = content + render_group(item, index, 'h3');
       } else if (item.type === 'split') {
         content = content + render_split(item, index);
+      } else if (item.type === 'featured') {
+        content = content + render_featured(item, index);
       } else if (item.type === 'latest') {
         content = content + render_latest(item, index);
       } else if (item.type === 'history') {

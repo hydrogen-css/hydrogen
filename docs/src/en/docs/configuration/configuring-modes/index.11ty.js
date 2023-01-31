@@ -57,6 +57,7 @@ let data = {
         {
           type: 'code',
           file: 'hydrogen.config.json',
+          copy: true,
           lines: [
             '"modes": {',
             '  "method: "preference"',
@@ -121,6 +122,7 @@ let data = {
                 {
                   type: 'code',
                   file: 'index.html',
+                  copy: true,
                   lines: [
                     '<div>',
                     '  <button onclick="enable_mode_preference()">',
@@ -149,6 +151,7 @@ let data = {
                 {
                   type: 'code',
                   file: 'app.js',
+                  copy: true,
                   lines: [
                     "let instances = document.querySelectorAll('[data-h2]');",
                   ],
@@ -168,6 +171,7 @@ let data = {
                 {
                   type: 'code',
                   file: 'app.js',
+                  copy: true,
                   lines: [
                     'function check_for_dark_mode() {',
                     '  if (',
@@ -207,6 +211,7 @@ let data = {
                 {
                   type: 'code',
                   file: 'app.js',
+                  copy: true,
                   lines: [
                     'if (localStorage.mode != undefined) {',
                     "  if (localStorage.mode === 'dark') {",
@@ -243,6 +248,7 @@ let data = {
                 {
                   type: 'code',
                   file: 'app.js',
+                  copy: true,
                   lines: [
                     'function enable_mode_preference() {',
                     "  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {",
@@ -273,6 +279,7 @@ let data = {
                 {
                   type: 'code',
                   file: 'app.js',
+                  copy: true,
                   lines: [
                     'function enable_mode_light() {',
                     '  instances.forEach((hydrogen) => {',
@@ -296,6 +303,7 @@ let data = {
                 {
                   type: 'code',
                   file: 'app.js',
+                  copy: true,
                   lines: [
                     'function enable_mode_dark() {',
                     '  instances.forEach((hydrogen) => {',
@@ -337,6 +345,7 @@ let data = {
         {
           type: 'code',
           file: 'hydrogen.config.json',
+          copy: true,
           lines: [
             '"modes": {',
             '  "dark": {',
@@ -359,7 +368,6 @@ let data = {
         },
         {
           type: 'code',
-          file: 'index.html',
           lines: ['data-h2-color="base:dark(primary)"'],
         },
       ],

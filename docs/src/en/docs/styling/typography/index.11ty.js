@@ -55,6 +55,7 @@ let data = {
             {
               type: 'code',
               file: 'hydrogen.config.json',
+              copy: true,
               lines: [
                 '"typography": [',
                 '  {',

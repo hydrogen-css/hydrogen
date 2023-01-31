@@ -64,7 +64,6 @@ let data = {
             },
             {
               type: 'code',
-              file: 'index.html',
               lines: ['data-h2-property="query() ..."'],
             },
           ],
@@ -90,7 +89,6 @@ let data = {
             },
             {
               type: 'code',
-              file: 'index.html',
               lines: ['media:mode:state:selectors[]:children[](options)'],
             },
           ],
@@ -107,7 +105,6 @@ let data = {
             },
             {
               type: 'code',
-              file: 'index.html',
               lines: ['base()'],
             },
           ],
@@ -128,7 +125,6 @@ let data = {
             },
             {
               type: 'code',
-              file: 'index.html',
               lines: ['base:dark()'],
             },
           ],
@@ -145,7 +141,6 @@ let data = {
             },
             {
               type: 'code',
-              file: 'index.html',
               lines: ['base:hover()'],
             },
           ],
@@ -162,7 +157,6 @@ let data = {
             },
             {
               type: 'code',
-              file: 'index.html',
               lines: ['base:selectors[.active, #target]()'],
             },
           ],
@@ -179,7 +173,6 @@ let data = {
             },
             {
               type: 'code',
-              file: 'index.html',
               lines: ['base:children[button]()'],
             },
           ],
@@ -196,7 +189,6 @@ let data = {
             },
             {
               type: 'code',
-              file: 'index.html',
               lines: ['data-h2-padding="base(5px)"'],
             },
           ],
