@@ -11,7 +11,7 @@ function modify_settings(settings) {
   settings.input = ['markup'];
   settings.output = 'styles';
   settings.modes['dark'].method = true;
-  settings.processing.var_export = 'string';
+  settings.processing.export_variable_file = 'string';
   return settings;
 }
 

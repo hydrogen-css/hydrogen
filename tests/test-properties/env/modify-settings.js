@@ -11,7 +11,7 @@ function modify_settings(settings) {
   settings.input = ['markup'];
   settings.output = 'styles';
   settings.modes['dark'].method = 'toggle';
-  settings.processing.var_export = true;
+  settings.processing.export_variable_file = true;
   settings.themes[0].colors = [
     {
       key: 'white',

@@ -8,7 +8,7 @@ function modify_settings(settings) {
       settings.input = ['input'];
       settings.output = 'output';
       settings.modes['dark'].method = 'toggle';
-      settings.processing.minification = false;
+      settings.processing.minify_css = false;
       resolve(settings);
     } catch (error) {
       console.log(error);

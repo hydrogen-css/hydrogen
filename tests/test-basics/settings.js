@@ -14,12 +14,18 @@ function create_settings() {
     // Manipulate the settings for this environment
     settings.input = ['input'];
     settings.output = 'output';
-    settings.modes['dark'].method = 'toggle';
-    settings.processing.minification = true;
+    settings.modes.method = 'toggle';
+    settings.processing.minify_css = true;
     settings.themes[0].radii.push({
       key: 'rounded',
       default: {
         radius: '30px',
+      },
+    });
+    settings.themes[0].transitions.durations.push({
+      key: 'ease',
+      default: {
+        duration: 'linear',
       },
     });
     // Write the configuration file

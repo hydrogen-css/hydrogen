@@ -31,14 +31,14 @@ function modify_settings(settings) {
     },
   };
   settings.processing = {
-    prefixing: true,
-    minification: true,
-    reset_styles: true,
-    var_export: true,
+    browser_prefix_css: true,
+    minify_css: true,
+    include_reset_css: true,
+    export_variable_file: true,
   };
   settings.logging = {
-    logs: true,
-    timers: false,
+    generate_logs: true,
+    show_timers: false,
   };
   settings.media = {
     base_key: 'custom',

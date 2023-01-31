@@ -35,7 +35,7 @@ TBD
   - 5: 3 errors
     - That the dark_mode setting is the wrong type
     - That the dark_mode setting must be one of two values
-    - That the var_export setting is the wrong type
+    - That the export_variable_file setting is the wrong type
   - 6: 1 error indicating that a key contains whitespace
   - 7: 1 error indicating that a key contains a period
   - 8: 4 errors, 2 of which are duplicates
