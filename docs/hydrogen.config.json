@@ -24,9 +24,9 @@
     "export_variable_file": false
   },
   "logging": {
-    "create_logs": false,
+    "generate_logs": false,
     "show_timers": true,
-    "reduce_console_output": true
+    "verbose_console_output": true
   },
   "media": {
     "base_key": "base",

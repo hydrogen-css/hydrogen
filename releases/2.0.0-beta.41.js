@@ -10,7 +10,7 @@ let Release = require('../lib/data/release-model-definition');
 /** @type {Release} */
 module.exports = {
   version: '2.0.0-beta.41',
-  date: new Date('2023-01-30'),
+  date: new Date('2023-01-31'),
   author: 'Josh Beveridge',
   optimizations: [
     {
@@ -32,6 +32,9 @@ module.exports = {
           '<code>processing.var_export</code> > <code>processing.export_variable_file</code>',
           '<code>processing.prefixing</code> > <code>processing.browser_prefix_css</code>',
           '<code>processing.minification</code> > <code>processing.minify_css</code>',
+          '<code>logging.logs</code> > <code>logging.generate_logs</code>',
+          '<code>logging.timers</code> > <code>logging.show_timers</code>',
+          '<code>logging.verbose</code> > <code>logging.verbose_console_output</code>',
         ],
       },
     },
@@ -42,6 +45,14 @@ module.exports = {
       changes: {
         en: [
           'Fixes a bug with configured properties that conflicted with values containing the configured key. Matches now look for preceding dash (-) and underscore (_) characters to account for this.',
+        ],
+      },
+    },
+    {
+      breaking: false,
+      changes: {
+        en: [
+          'Fixes a bug where timers and console output called before settings had been parsed ignored CLI flags.',
         ],
       },
     },

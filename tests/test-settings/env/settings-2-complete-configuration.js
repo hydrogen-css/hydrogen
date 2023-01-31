@@ -37,8 +37,8 @@ function modify_settings(settings) {
     export_variable_file: true,
   };
   settings.logging = {
-    logs: true,
-    timers: false,
+    generate_logs: true,
+    show_timers: false,
   };
   settings.media = {
     base_key: 'custom',
