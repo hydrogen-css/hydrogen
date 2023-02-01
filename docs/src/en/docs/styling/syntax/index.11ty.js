@@ -384,7 +384,7 @@ let data = {
     {
       type: 'copy',
       items: [
-        "Hydrogen also provides a handy VS Code-compatible snippets file that makes adding attributes to your code a breeze. Once added, you can begin typing <code>h2-</code> in your code and tab complete any property available to you. If you find a CSS property that isn't included in the autocomplete, Hydrogen will still parse it properly.",
+        "Hydrogen also provides a handy <a href='https://github.com/hydrogen-css/hydrogen/blob/main/.vscode/hydrogen.code-snippets' title='Grab the snippets file from Github.' target='_blank' rel='noreferrer'>VS Code-compatible snippets file</a> that makes adding attributes to your code a breeze. Once added, you can begin typing <code>h2-</code> in your code and tab complete any property available to you. If you find a CSS property that isn't included in the autocomplete, Hydrogen will still parse it properly.",
         'The snippets provide helpful prompts for the syntax, making remembering what you need fast and easy. We recommend adding the snippets to your project files to make them available to anyone working on your code, but you can also add them as a global snippets file if you choose to.',
       ],
     },

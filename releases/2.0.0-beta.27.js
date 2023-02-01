@@ -81,7 +81,7 @@ module.exports = {
       breaking: false,
       changes: {
         en: [
-          'Adds support for the <code>ine-height</code> property, along with its alias, <code>leading</code>.',
+          'Adds support for the <code>line-height</code> property, along with its alias, <code>leading</code>.',
         ],
         fr: [
           'Ajoute la prise en charge de la propriété <code>line-height</code>, ainsi que de son alias, <code>leading</code>.',

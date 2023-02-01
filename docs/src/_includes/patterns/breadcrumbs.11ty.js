@@ -145,7 +145,7 @@ function render(data) {
           data-h2-padding="base:children[ul](0)"
           data-h2-list-style="base:children[ul](none)">
           <div
-            data-h2-visually-hidden="base(hidden) p-tablet(visible)" 
+            data-h2-visually-hidden="base(hidden) l-tablet(visible)" 
             data-h2-text-align="base(center) l-tablet(left)">
             <ul
               id="${nav_id}"

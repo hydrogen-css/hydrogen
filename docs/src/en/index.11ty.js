@@ -35,19 +35,19 @@ var data = {
       {
         title: 'What is Hydrogen?',
         content: [
-          'Hydrogen is a CSS framework that unites the power of inline styling with the efficiency of token-style settings to help you create consistent, beautiful experiences.',
+          'Hydrogen is a CSS framework that combines the power of inline styling with the efficiency of token-style settings to help you create consistent, beautiful experiences.',
         ],
       },
       {
         title: 'How does it work?',
         content: [
-          'Hydrogen scans for <code>data-h2</code> attributes and parses their values, allowing it to build and validate a production-ready CSS file that contains only what your app needs.',
+          "Hydrogen scans your code for <code>data-h2</code> attributes, parses their values, and seamlessly creates a production-ready CSS file containing exactly what you've asked for.",
         ],
       },
       {
         title: 'Why should I use it?',
         content: [
-          "Hydrogen lets you forget the chaos of maintaining CSS. Let it handle naming methodologies, typography, and enforcing your brand. It's fast, legible, and open-source.",
+          'Hydrogen helps you move beyond the chaos of maintaining CSS. It handles naming methodologies, typography, and enforcing your brand all while being fast, legible, and open-source.',
         ],
       },
     ],
@@ -69,7 +69,7 @@ var data = {
             id: 'syntax',
           },
           content: [
-            "Hydrogen's syntax supports any CSS property you can think of (and a few custom ones) while enhancing them with configurable, inline queries and modifiers. You'll write familiar CSS syntax while easily targeting custom themes, dark mode, and interaction states.",
+            "Hydrogen's syntax supports any CSS property you can think of (and a few custom ones) while enhancing them with configurable, inline queries and modifiers. You can write familiar CSS syntax while easily targeting custom themes, dark mode, and interaction states.",
           ],
           example: 'properties',
         },
@@ -98,7 +98,7 @@ var data = {
             id: 'brand',
           },
           content: [
-            'Embracing a design token style approach, Hydrogen wants you to define decisions like color, typography, and shadows in its configuration file. Using these values in your attributes creates consistency and allows you to update them product-wide in a matter of seconds.',
+            "Embracing a design-token-style approach, Hydrogen's configuration allows you to centrally define decisions such as color, typography, and shadows. These values then become usable in Hydrogen's attributes, allowing you to update them product-wide in a matter of seconds.",
           ],
           example: 'themes',
           code: {
@@ -145,7 +145,7 @@ var data = {
         {
           title: 'Automated dark mode',
           content: [
-            'Define sibling values for dark mode and apply it using a single value.',
+            'Define sibling values for dark mode and apply them instantly using a single value.',
           ],
         },
         {
