@@ -1,5 +1,9 @@
 #!/usr/bin/env node
 
-const build = require('../lib/scripts/node/build');
+const { hydrogen_build } = require('../lib/build');
 
-build.build();
+try {
+  hydrogen_build();
+} catch (error) {
+  return false;
+}

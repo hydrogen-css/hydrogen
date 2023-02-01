@@ -1,5 +1,9 @@
 #!/usr/bin/env node
 
-const init = require('../lib/scripts/node/init');
+const { hydrogen_init } = require('../lib/init');
 
-init.init();
+try {
+  hydrogen_init();
+} catch (error) {
+  return false;
+}

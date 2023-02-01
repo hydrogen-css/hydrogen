@@ -1,5 +1,9 @@
 #!/usr/bin/env node
 
-const watch = require('../lib/scripts/node/watch');
+const { hydrogen_watch } = require('../lib/watch');
 
-watch.watch();
+try {
+  hydrogen_watch();
+} catch (error) {
+  return false;
+}

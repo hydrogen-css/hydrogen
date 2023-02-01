@@ -1,0 +1,2412 @@
+{
+  "properties": {
+    "align-content": {
+      "title": {
+        "en": "Align content",
+        "fr": ""
+      },
+      "group": "flexbox",
+      "property_keys": {
+        "align-content": {}
+      },
+      "syntax": {
+        "data-h2-align-content=\"query:modifiers(alignment)\"": {
+          "default": true,
+          "options": {
+            "alignment": {
+              "required": true,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "CSS align-content"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "align-items": {
+      "title": {
+        "en": "Align items",
+        "fr": ""
+      },
+      "group": "flexbox",
+      "property_keys": {
+        "align-items": {}
+      },
+      "syntax": {
+        "data-h2-align-items=\"query:modifiers(alignment)\"": {
+          "default": true,
+          "options": {
+            "alignment": {
+              "required": true,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "CSS align-items"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "align-self": {
+      "title": {
+        "en": "Align self",
+        "fr": ""
+      },
+      "group": "flexbox",
+      "property_keys": {
+        "align-self": {}
+      },
+      "syntax": {
+        "data-h2-align-self=\"query:modifiers(alignment)\"": {
+          "default": true,
+          "options": {
+            "alignment": {
+              "required": true,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "CSS align-self"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "background-color": {
+      "title": {
+        "en": "Background color",
+        "fr": ""
+      },
+      "group": "basic",
+      "property_keys": {
+        "background-color": {},
+        "bg-color": {}
+      },
+      "syntax": {
+        "data-h2-background-color=\"query:modifiers(color | gradient)\"": {
+          "default": true,
+          "options": {
+            "color | gradient": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "configured color key",
+                "configured gradient key",
+                "CSS color"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "border": {
+      "title": {
+        "en": "Border",
+        "fr": ""
+      },
+      "group": "basic",
+      "property_keys": {
+        "border": {}
+      },
+      "syntax": {
+        "data-h2-border=\"query:modifiers(none)\"": {
+          "default": false,
+          "options": {
+            "none": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": false
+              },
+              "values": [
+                "none"
+              ]
+            }
+          }
+        },
+        "data-h2-border=\"query:modifiers(side, border)\"": {
+          "default": false,
+          "options": {
+            "side": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": false
+              },
+              "values": [
+                "all",
+                "top-bottom",
+                "right-left",
+                "top",
+                "right",
+                "bottom",
+                "left"
+              ]
+            },
+            "border": {
+              "required": true,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "CSS border shorthand"
+              ]
+            }
+          }
+        },
+        "data-h2-border=\"query:modifiers(side, width, style, color)\"": {
+          "default": true,
+          "options": {
+            "side": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": false
+              },
+              "values": [
+                "all",
+                "top-bottom",
+                "right-left",
+                "top",
+                "right",
+                "bottom",
+                "left"
+              ]
+            },
+            "width": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            },
+            "style": {
+              "required": true,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "CSS border-style"
+              ]
+            },
+            "color": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "configured color key",
+                "CSS color"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "color": {
+      "title": {
+        "en": "Color",
+        "fr": ""
+      },
+      "group": "font",
+      "property_keys": {
+        "color": {},
+        "font-color": {}
+      },
+      "syntax": {
+        "data-h2-color=\"query:modifiers(color | gradient)\"": {
+          "default": true,
+          "options": {
+            "color | gradient": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "configured color key",
+                "configured gradient key",
+                "CSS color"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "container": {
+      "title": {
+        "en": "Container",
+        "fr": ""
+      },
+      "group": "space",
+      "property_keys": {
+        "container": {}
+      },
+      "syntax": {
+        "data-h2-container=\"query:modifiers(alignment, max-width, side-padding)\"": {
+          "default": true,
+          "options": {
+            "alignment": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": false
+              },
+              "values": [
+                "left",
+                "center",
+                "right"
+              ]
+            },
+            "max-width": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "configured container key",
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            },
+            "side-padding": {
+              "required": false,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": [
+        "margin",
+        "padding"
+      ]
+    },
+    "cursor": {
+      "title": {
+        "en": "Cursor",
+        "fr": ""
+      },
+      "group": "basic",
+      "property_keys": {
+        "cursor": {}
+      },
+      "syntax": {
+        "data-h2-cursor=\"query:modifiers(cursor)\"": {
+          "default": true,
+          "options": {
+            "cursor": {
+              "required": true,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "CSS cursor"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "display": {
+      "title": {
+        "en": "Display",
+        "fr": ""
+      },
+      "group": "basic",
+      "property_keys": {
+        "display": {}
+      },
+      "syntax": {
+        "data-h2-display=\"query:modifiers(display)\"": {
+          "default": true,
+          "options": {
+            "display": {
+              "required": true,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "CSS display"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "fill": {
+      "title": {
+        "en": "Fill",
+        "fr": ""
+      },
+      "group": "basic",
+      "property_keys": {
+        "fill": {}
+      },
+      "syntax": {
+        "data-h2-fill=\"query:modifiers(color)\"": {
+          "default": true,
+          "options": {
+            "color": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "configured color key",
+                "CSS color"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "flex-basis": {
+      "title": {
+        "en": "Flex basis",
+        "fr": ""
+      },
+      "group": "flexbox",
+      "property_keys": {
+        "flex-basis": {}
+      },
+      "syntax": {
+        "data-h2-flex-basis=\"query:modifiers(basis)\"": {
+          "default": true,
+          "options": {
+            "basis": {
+              "required": true,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "CSS flex-basis"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "flex-direction": {
+      "title": {
+        "en": "Flex direction",
+        "fr": ""
+      },
+      "group": "flexbox",
+      "property_keys": {
+        "flex-direction": {}
+      },
+      "syntax": {
+        "data-h2-flex-direction=\"query:modifiers(direction)\"": {
+          "default": true,
+          "options": {
+            "direction": {
+              "required": true,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "CSS flex-direction"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "flex-grid": {
+      "title": {
+        "en": "Flex grid",
+        "fr": ""
+      },
+      "group": "flexbox",
+      "property_keys": {
+        "flex-grid": {}
+      },
+      "syntax": {
+        "data-h2-flex-grid=\"query:modifiers(alignment, gutter)\"": {
+          "default": false,
+          "options": {
+            "alignment": {
+              "required": true,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "CSS align-items"
+              ]
+            },
+            "gutter": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            }
+          }
+        },
+        "data-h2-flex-grid=\"query:modifiers(alignment, column-gutter, row-gutter)\"": {
+          "default": true,
+          "options": {
+            "alignment": {
+              "required": true,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "CSS align-items"
+              ]
+            },
+            "column-gutter": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            },
+            "row-gutter": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "flex-grow": {
+      "title": {
+        "en": "Flex grow",
+        "fr": ""
+      },
+      "group": "flexbox",
+      "property_keys": {
+        "flex-grow": {}
+      },
+      "syntax": {
+        "data-h2-flex-grow=\"query:modifiers(grow)\"": {
+          "default": true,
+          "options": {
+            "grow": {
+              "required": true,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "number"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "flex-item": {
+      "title": {
+        "en": "Flex item",
+        "fr": ""
+      },
+      "group": "flexbox",
+      "property_keys": {
+        "flex-item": {}
+      },
+      "syntax": {
+        "data-h2-flex-item=\"query:modifiers(span)\"": {
+          "default": true,
+          "options": {
+            "span": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": false
+              },
+              "values": [
+                "XofY",
+                "X/Y",
+                "auto",
+                "content",
+                "fill"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "flex-wrap": {
+      "title": {
+        "en": "Flex wrap",
+        "fr": ""
+      },
+      "group": "flexbox",
+      "property_keys": {
+        "flex-wrap": {}
+      },
+      "syntax": {
+        "data-h2-flex-wrap=\"query:modifiers(wrap)\"": {
+          "default": true,
+          "options": {
+            "wrap": {
+              "required": true,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "CSS flex-wrap"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "font-family": {
+      "title": {
+        "en": "Font family",
+        "fr": ""
+      },
+      "group": "font",
+      "property_keys": {
+        "font-family": {}
+      },
+      "syntax": {
+        "data-h2-font-family=\"query:modifiers(family)\"": {
+          "default": true,
+          "options": {
+            "family": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": false
+              },
+              "values": [
+                "configured font key"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "font-size": {
+      "title": {
+        "en": "Font size",
+        "fr": ""
+      },
+      "group": "font",
+      "property_keys": {
+        "font-size": {}
+      },
+      "syntax": {
+        "data-h2-size=\"query:modifiers(size, line-height)\"": {
+          "default": true,
+          "options": {
+            "size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "h1",
+                "h2",
+                "h3",
+                "h4",
+                "h5",
+                "h6",
+                "copy",
+                "caption",
+                "CSS unit"
+              ]
+            },
+            "line-height": {
+              "required": false,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "number",
+                "CSS unit"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "font-style": {
+      "title": {
+        "en": "Font style",
+        "fr": ""
+      },
+      "group": "font",
+      "property_keys": {
+        "font-style": {}
+      },
+      "syntax": {
+        "data-h2-font-style=\"query:modifiers(style)\"": {
+          "default": true,
+          "options": {
+            "style": {
+              "required": true,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "CSS font-style"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "font-weight": {
+      "title": {
+        "en": "Font weight",
+        "fr": ""
+      },
+      "group": "font",
+      "property_keys": {
+        "font-weight": {}
+      },
+      "syntax": {
+        "data-h2-font-weight=\"query:modifiers(weight)\"": {
+          "default": true,
+          "options": {
+            "weight": {
+              "required": true,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "CSS font-weight"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "gap": {
+      "title": {
+        "en": "Gap",
+        "fr": ""
+      },
+      "group": "grid",
+      "property_keys": {
+        "gap": {}
+      },
+      "syntax": {
+        "data-h2-gap=\"query:modifiers(size)\"": {
+          "default": false,
+          "options": {
+            "size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            }
+          }
+        },
+        "data-h2-gap=\"query:modifiers(column-size, row-size)\"": {
+          "default": true,
+          "options": {
+            "column-size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            },
+            "row-size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "grid-column": {
+      "title": {
+        "en": "Grid column",
+        "fr": ""
+      },
+      "group": "grid",
+      "property_keys": {
+        "grid-column": {}
+      },
+      "syntax": {
+        "data-h2-grid-column=\"query:modifiers(span)\"": {
+          "default": true,
+          "options": {
+            "span": {
+              "required": true,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "CSS grid span"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "grid-row": {
+      "title": {
+        "en": "Grid row",
+        "fr": ""
+      },
+      "group": "grid",
+      "property_keys": {
+        "grid-row": {}
+      },
+      "syntax": {
+        "data-h2-grid-row=\"query:modifiers(span)\"": {
+          "default": true,
+          "options": {
+            "span": {
+              "required": true,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "CSS grid span"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "grid-template-columns": {
+      "title": {
+        "en": "Grid template columns",
+        "fr": ""
+      },
+      "group": "grid",
+      "property_keys": {
+        "grid-template-columns": {}
+      },
+      "syntax": {
+        "data-h2-grid-template-columns=\"query:modifiers(template)\"": {
+          "default": true,
+          "options": {
+            "template": {
+              "required": true,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "CSS grid template"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "grid-template-rows": {
+      "title": {
+        "en": "Grid template rows",
+        "fr": ""
+      },
+      "group": "grid",
+      "property_keys": {
+        "grid-template-rows": {}
+      },
+      "syntax": {
+        "data-h2-grid-template-rows=\"query:modifiers(template)\"": {
+          "default": true,
+          "options": {
+            "template": {
+              "required": true,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "CSS grid template"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "height": {
+      "title": {
+        "en": "Height",
+        "fr": ""
+      },
+      "group": "space",
+      "property_keys": {
+        "height": {}
+      },
+      "syntax": {
+        "data-h2-height=\"query:modifiers(size)\"": {
+          "default": true,
+          "options": {
+            "size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "justify-content": {
+      "title": {
+        "en": "Justify content",
+        "fr": ""
+      },
+      "group": "flexbox",
+      "property_keys": {
+        "justify-content": {}
+      },
+      "syntax": {
+        "data-h2-justify-content=\"query:modifiers(justification)\"": {
+          "default": true,
+          "options": {
+            "justification": {
+              "required": true,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "CSS justify-content"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "justify-items": {
+      "title": {
+        "en": "Justify items",
+        "fr": ""
+      },
+      "group": "flexbox",
+      "property_keys": {
+        "justify-items": {}
+      },
+      "syntax": {
+        "data-h2-justify-items=\"query:modifiers(justification)\"": {
+          "default": true,
+          "options": {
+            "justification": {
+              "required": true,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "CSS justify-items"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "layer": {
+      "title": {
+        "en": "Layer",
+        "fr": ""
+      },
+      "group": "space",
+      "property_keys": {
+        "layer": {},
+        "z-index": {}
+      },
+      "syntax": {
+        "data-h2-layer=\"query:modifiers(z-index, position)\"": {
+          "default": true,
+          "options": {
+            "z-index": {
+              "required": true,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "number"
+              ]
+            },
+            "position": {
+              "required": false,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "CSS position"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "line-height": {
+      "title": {
+        "en": "Line height",
+        "fr": ""
+      },
+      "group": "font",
+      "property_keys": {
+        "line-height": [],
+        "leading": []
+      },
+      "syntax": {
+        "data-h2-line-height=\"query:modifiers(line-height)\"": {
+          "default": true,
+          "options": {
+            "line-height": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "number",
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "list-style": {
+      "title": {
+        "en": "List style",
+        "fr": ""
+      },
+      "group": "font",
+      "property_keys": {
+        "list-style": {}
+      },
+      "syntax": {
+        "data-h2-list-style=\"query:modifiers(style)\"": {
+          "default": true,
+          "options": {
+            "style": {
+              "required": true,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "CSS list-style"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "margin": {
+      "title": {
+        "en": "Margin",
+        "fr": ""
+      },
+      "group": "space",
+      "property_keys": {
+        "margin": {}
+      },
+      "syntax": {
+        "data-h2-margin=\"query:modifiers(size)\"": {
+          "default": false,
+          "options": {
+            "size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            }
+          }
+        },
+        "data-h2-margin=\"query:modifiers(top-bottom-size, right-left-size)\"": {
+          "default": false,
+          "options": {
+            "top-bottom-size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            },
+            "right-left-size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            }
+          }
+        },
+        "data-h2-margin=\"query:modifiers(top-size, right-size, bottom-size, left-size)\"": {
+          "default": true,
+          "options": {
+            "top-size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            },
+            "right-size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            },
+            "bottom-size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            },
+            "left-size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": [
+        "container"
+      ]
+    },
+    "margin-top": {
+      "title": {
+        "en": "Margin top",
+        "fr": ""
+      },
+      "group": "space",
+      "property_keys": {
+        "margin-top": {}
+      },
+      "syntax": {
+        "data-h2-margin-top=\"query:modifiers(size)\"": {
+          "default": true,
+          "options": {
+            "size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "margin-right": {
+      "title": {
+        "en": "Margin right",
+        "fr": ""
+      },
+      "group": "space",
+      "property_keys": {
+        "margin-right": {}
+      },
+      "syntax": {
+        "data-h2-margin-right=\"query:modifiers(size)\"": {
+          "default": true,
+          "options": {
+            "size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "margin-bottom": {
+      "title": {
+        "en": "Margin bottom",
+        "fr": ""
+      },
+      "group": "space",
+      "property_keys": {
+        "margin-bottom": {}
+      },
+      "syntax": {
+        "data-h2-margin-bottom=\"query:modifiers(size)\"": {
+          "default": true,
+          "options": {
+            "size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "margin-left": {
+      "title": {
+        "en": "Margin left",
+        "fr": ""
+      },
+      "group": "space",
+      "property_keys": {
+        "margin-left": {}
+      },
+      "syntax": {
+        "data-h2-margin-left=\"query:modifiers(size)\"": {
+          "default": true,
+          "options": {
+            "size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "max-height": {
+      "title": {
+        "en": "Maximum height",
+        "fr": ""
+      },
+      "group": "space",
+      "property_keys": {
+        "max-height": {}
+      },
+      "syntax": {
+        "data-h2-max-height=\"query:modifiers(size)\"": {
+          "default": true,
+          "options": {
+            "size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "max-width": {
+      "title": {
+        "en": "Maximum width",
+        "fr": ""
+      },
+      "group": "space",
+      "property_keys": {
+        "max-width": {}
+      },
+      "syntax": {
+        "data-h2-max-width=\"query:modifiers(size)\"": {
+          "default": true,
+          "options": {
+            "size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "min-height": {
+      "title": {
+        "en": "Minimum height",
+        "fr": ""
+      },
+      "group": "space",
+      "property_keys": {
+        "min-height": {}
+      },
+      "syntax": {
+        "data-h2-min-height=\"query:modifiers(size)\"": {
+          "default": true,
+          "options": {
+            "size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "min-width": {
+      "title": {
+        "en": "Minimum width",
+        "fr": ""
+      },
+      "group": "space",
+      "property_keys": {
+        "min-width": {}
+      },
+      "syntax": {
+        "data-h2-min-width=\"query:modifiers(size)\"": {
+          "default": true,
+          "options": {
+            "size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "offset": {
+      "title": {
+        "en": "Offset",
+        "fr": ""
+      },
+      "group": "space",
+      "property_keys": {
+        "offset": {},
+        "location": {}
+      },
+      "syntax": {
+        "data-h2-offset=\"query:modifiers(size)\"": {
+          "default": false,
+          "options": {
+            "size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            }
+          }
+        },
+        "data-h2-offset=\"query:modifiers(top-bottom-size, right-left-size)\"": {
+          "default": false,
+          "options": {
+            "top-bottom-size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            },
+            "right-left-size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            }
+          }
+        },
+        "data-h2-offset=\"query:modifiers(top-size, right-size, bottom-size, left-size)\"": {
+          "default": true,
+          "options": {
+            "top-size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            },
+            "right-size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            },
+            "bottom-size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            },
+            "left-size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "opacity": {
+      "title": {
+        "en": "Opacity",
+        "fr": ""
+      },
+      "group": "basic",
+      "property_keys": {
+        "opacity": {}
+      },
+      "syntax": {
+        "data-h2-opacity=\"query:modifiers(opacity)\"": {
+          "default": true,
+          "options": {
+            "opacity": {
+              "required": true,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "number"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "order": {
+      "title": {
+        "en": "Order",
+        "fr": ""
+      },
+      "group": "grid",
+      "property_keys": {
+        "order": {}
+      },
+      "syntax": {
+        "data-h2-order=\"query:modifiers(order)\"": {
+          "default": true,
+          "options": {
+            "order": {
+              "required": true,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "number"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "outline": {
+      "title": {
+        "en": "Outline",
+        "fr": ""
+      },
+      "group": "basic",
+      "property_keys": {
+        "outline": {}
+      },
+      "syntax": {
+        "data-h2-outline=\"query:modifiers(outline)\"": {
+          "default": true,
+          "options": {
+            "outline": {
+              "required": true,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "CSS outline"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "overflow": {
+      "title": {
+        "en": "Overflow",
+        "fr": ""
+      },
+      "group": "space",
+      "property_keys": {
+        "overflow": {}
+      },
+      "syntax": {
+        "data-h2-overflow=\"query:modifiers(overflow)\"": {
+          "default": false,
+          "options": {
+            "overflow": {
+              "required": true,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "CSS overflow"
+              ]
+            }
+          }
+        },
+        "data-h2-overflow=\"query:modifiers(x-overflow, y-overflow)\"": {
+          "default": true,
+          "options": {
+            "x-overflow": {
+              "required": true,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "CSS overflow"
+              ]
+            },
+            "y-overflow": {
+              "required": true,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "CSS overflow"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "overlay": {
+      "title": {
+        "en": "Overlay",
+        "fr": ""
+      },
+      "group": "basic",
+      "property_keys": {
+        "overlay": {}
+      },
+      "syntax": {
+        "data-h2-overlay=\"query:modifiers(color | gradient, opacity)\"": {
+          "default": true,
+          "options": {
+            "color | gradient": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "configured color key",
+                "configured gradient key",
+                "CSS color"
+              ]
+            },
+            "opacity": {
+              "required": false,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "number"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "padding": {
+      "title": {
+        "en": "Padding",
+        "fr": ""
+      },
+      "group": "space",
+      "property_keys": {
+        "padding": {}
+      },
+      "syntax": {
+        "data-h2-padding=\"query:modifiers(size)\"": {
+          "default": false,
+          "options": {
+            "size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            }
+          }
+        },
+        "data-h2-padding=\"query:modifiers(top-bottom-size, right-left-size)\"": {
+          "default": false,
+          "options": {
+            "top-bottom-size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            },
+            "right-left-size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            }
+          }
+        },
+        "data-h2-padding=\"query:modifiers(top-size, right-size, bottom-size, left-size)\"": {
+          "default": true,
+          "options": {
+            "top-size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            },
+            "right-size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            },
+            "bottom-size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            },
+            "left-size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": [
+        "container"
+      ]
+    },
+    "padding-top": {
+      "title": {
+        "en": "Padding top",
+        "fr": ""
+      },
+      "group": "space",
+      "property_keys": {
+        "padding-top": {}
+      },
+      "syntax": {
+        "data-h2-padding-top=\"query:modifiers(size)\"": {
+          "default": true,
+          "options": {
+            "size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "padding-right": {
+      "title": {
+        "en": "Padding right",
+        "fr": ""
+      },
+      "group": "space",
+      "property_keys": {
+        "padding-right": {}
+      },
+      "syntax": {
+        "data-h2-padding-right=\"query:modifiers(size)\"": {
+          "default": true,
+          "options": {
+            "size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "padding-bottom": {
+      "title": {
+        "en": "Padding bottom",
+        "fr": ""
+      },
+      "group": "space",
+      "property_keys": {
+        "padding-bottom": {}
+      },
+      "syntax": {
+        "data-h2-padding-bottom=\"query:modifiers(size)\"": {
+          "default": true,
+          "options": {
+            "size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "padding-left": {
+      "title": {
+        "en": "Padding left",
+        "fr": ""
+      },
+      "group": "space",
+      "property_keys": {
+        "padding-left": {}
+      },
+      "syntax": {
+        "data-h2-padding-left=\"query:modifiers(size)\"": {
+          "default": true,
+          "options": {
+            "size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "position": {
+      "title": {
+        "en": "Position",
+        "fr": ""
+      },
+      "group": "space",
+      "property_keys": {
+        "position": {}
+      },
+      "syntax": {
+        "data-h2-position=\"query:modifiers(position)\"": {
+          "default": true,
+          "options": {
+            "position": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "center",
+                "CSS position"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "radius": {
+      "title": {
+        "en": "Radius",
+        "fr": ""
+      },
+      "group": "basic",
+      "property_keys": {
+        "radius": {}
+      },
+      "syntax": {
+        "data-h2-radius=\"query:modifiers(radius)\"": {
+          "default": true,
+          "options": {
+            "radius": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "configured radius key",
+                "CSS unit"
+              ]
+            }
+          }
+        },
+        "data-h2-radius=\"query:modifiers(top-left-bottom-right-radius, top-right-bottom-left-radius)\"": {
+          "default": false,
+          "options": {
+            "top-left-bottom-right-radius": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "configured radius key",
+                "CSS unit"
+              ]
+            },
+            "top-right-bottom-left-radius": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "configured radius key",
+                "CSS unit"
+              ]
+            }
+          }
+        },
+        "data-h2-radius=\"query:modifiers(top-left-radius, top-right-bottom-left-radius, bottom-right-radius)\"": {
+          "default": false,
+          "options": {
+            "top-left-radius": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "configured radius key",
+                "CSS unit"
+              ]
+            },
+            "top-right-bottom-left-radius": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "configured radius key",
+                "CSS unit"
+              ]
+            },
+            "bottom-right-radius": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "configured radius key",
+                "CSS unit"
+              ]
+            }
+          }
+        },
+        "data-h2-radius=\"query:modifiers(top-left-radius, top-right-radius, bottom-right-radius, bottom-left-radius)\"": {
+          "default": false,
+          "options": {
+            "top-left-radius": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "configured radius key",
+                "CSS unit"
+              ]
+            },
+            "top-right-radius": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "configured radius key",
+                "CSS unit"
+              ]
+            },
+            "bottom-right-radius": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "configured radius key",
+                "CSS unit"
+              ]
+            },
+            "bottom-left-radius": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "configured radius key",
+                "CSS unit"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "shadow": {
+      "title": {
+        "en": "Shadow",
+        "fr": ""
+      },
+      "group": "basic",
+      "property_keys": {
+        "shadow": {}
+      },
+      "syntax": {
+        "data-h2-shadow=\"query:modifiers(shadow)\"": {
+          "default": true,
+          "options": {
+            "shadow": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "configured shadow key",
+                "CSS box-shadow"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "text-align": {
+      "title": {
+        "en": "Text align",
+        "fr": ""
+      },
+      "group": "font",
+      "property_keys": {
+        "text-align": {}
+      },
+      "syntax": {
+        "data-h2-text-align=\"query:modifiers(alignment)\"": {
+          "default": true,
+          "options": {
+            "alignment": {
+              "required": true,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "CSS text-align"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "text-decoration": {
+      "title": {
+        "en": "Text decoration",
+        "fr": ""
+      },
+      "group": "font",
+      "property_keys": {
+        "text-decoration": {}
+      },
+      "syntax": {
+        "data-h2-text-decoration=\"query:modifiers(decoration)\"": {
+          "default": true,
+          "options": {
+            "decoration": {
+              "required": true,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "CSS text-decoration"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "text-transform": {
+      "title": {
+        "en": "Text transform",
+        "fr": ""
+      },
+      "group": "font",
+      "property_keys": {
+        "text-transform": {}
+      },
+      "syntax": {
+        "data-h2-text-transform=\"query:modifiers(transformation)\"": {
+          "default": true,
+          "options": {
+            "transformation": {
+              "required": true,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "CSS text-transform"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "transform": {
+      "title": {
+        "en": "Transform",
+        "fr": ""
+      },
+      "group": "space",
+      "property_keys": {
+        "transform": {}
+      },
+      "syntax": {
+        "data-h2-transform=\"query:modifiers(transformation)\"": {
+          "default": true,
+          "options": {
+            "transformation": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS transform"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "transition": {
+      "title": {
+        "en": "Transition",
+        "fr": ""
+      },
+      "group": "basic",
+      "property_keys": {
+        "transition": {}
+      },
+      "syntax": {
+        "data-h2-transition=\"query:modifiers(property, duration, function, delay)\"": {
+          "default": true,
+          "options": {
+            "property": {
+              "required": true,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "CSS property"
+              ]
+            },
+            "duration": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "configured duration key",
+                "CSS time unit"
+              ]
+            },
+            "function": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "configured function key",
+                "CSS transition function"
+              ]
+            },
+            "delay": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "configured delay key",
+                "CSS time unit"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "vertical-align": {
+      "title": {
+        "en": "Vertical align",
+        "fr": ""
+      },
+      "group": "space",
+      "property_keys": {
+        "vertical-align": {}
+      },
+      "syntax": {
+        "data-h2-vertical-align=\"query:modifiers(alignment)\"": {
+          "default": true,
+          "options": {
+            "alignment": {
+              "required": true,
+              "types": {
+                "key": false,
+                "css": true
+              },
+              "values": [
+                "CSS vertical-align"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "visibility": {
+      "title": {
+        "en": "Visibility",
+        "fr": ""
+      },
+      "group": "basic",
+      "property_keys": {
+        "visibility": {}
+      },
+      "syntax": {
+        "data-h2-visibility=\"query:modifiers(visibility)\"": {
+          "default": true,
+          "options": {
+            "visibility": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": false
+              },
+              "values": [
+                "visible",
+                "invisible",
+                "hidden"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    },
+    "width": {
+      "title": {
+        "en": "Width",
+        "fr": ""
+      },
+      "group": "space",
+      "property_keys": {
+        "width": {}
+      },
+      "syntax": {
+        "data-h2-width=\"query:modifiers(size)\"": {
+          "default": true,
+          "options": {
+            "size": {
+              "required": true,
+              "types": {
+                "key": true,
+                "css": true
+              },
+              "values": [
+                "whitespace multiplier",
+                "CSS unit"
+              ]
+            }
+          }
+        }
+      },
+      "incompatibilities": []
+    }
+  }
+}

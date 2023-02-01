@@ -1,102 +1,84 @@
-# ☀️ Hydrogen
-
-<img alt="npm latest" src="https://img.shields.io/npm/v/@hydrogen-css/hydrogen/latest?color=%239D5CFF&label=latest&style=for-the-badge"> <img alt="npm beta" src="https://img.shields.io/npm/v/@hydrogen-css/hydrogen/beta?color=%239D5CFF&label=beta&style=for-the-badge">
+# 🌞 Welcome to Hydrogen
 
 Hydrogen is an open-source design and CSS utility framework powered by data-attributes.
 
-It leverages data-attributes to allow the styling of elements right in your markup, rather than creating your own classes. Hydrogen offers a comprehensive library of tools and configurations for easy, seamless development. When you're ready to publish your project, it then processes your markup and creates a custom CSS file that contains only the code you've used, reducing its own footprint.
+By parsing the contents of custom `data-h2-` attributes, Hydrogen allows you to style elements completely from your markup. It comes equipped with a comprehensive library of tools and configurations for easy, seamless development. At runtime, it processes your markup and builds a CSS file that contains only the code you've used, preventing duplication and bloat.
 
-[Website](https://hydrogen.design) | [Roadmap](https://workflowy.com/s/hydrogen/7Gjmdbjiqc0Wst1R)
+[Website](https://hydrogen.design) | [Roadmap](https://workflowy.com/s/hydrogens-roadmap/7Gjmdbjiqc0Wst1R)
 
-## 🥳 Upcoming 2.0.0 release
-
-Hydrogen is about to undergo some significant improvements, including a drastic speed increase and a massive feature drop. This release does come with some breaking changes, and an upgrade guide will be provided when the time comes.
-
-You can read more about what's included by viewing the `release/2.0.0` branch [here on Github](https://github.com/hydrogen-css/hydrogen/pull/200).
-
-`2.0.0` is almost ready to go, but the [documentation site](https://beta.hydrogen.design) needs to be wrapped up first. In the meantime, if you plan to use Hydrogen on a new project, we recommend installing `2.0.0` now to make it a seamless transition.
-
-You can install the latest `2.0.0` beta release by running `npm install @hydrogen-css/hydrogen@beta --save-dev`
-
-## 🛠️ Basic Usage
+## 🛠️ Basic usage
 
 ### Installation
 
+- navigate to your project
 - run `npm install @hydrogen-css/hydrogen` to install Hydrogen
-- run `npx h2-init` to setup your input/output directories
+- run `npx h2-init` to create a configuration file and set up your input/output directories
 - modify your `hydrogen.config.json` file to match your theme
-- run `npx h2-watch` to watch your files for changes and compile when a change is detected
-- run `npx h2-build` when you're ready to deploy to production
+- add `data-h2` to your `<html>` element or parent wrapper
+- run `npx h2-build` when you're ready to build your CSS or integrate the module into your build tool
 
 ### Syntax
 
-Hydrogen uses a custom `data-attribute` syntax for complex styling.
+Hydrogen uses a custom `data-attribute` syntax:
 
 `data-h2-property="query:modifiers(options)"`
 
-An example of a Hydrogen attribute in use would be something like:
+An example of a Hydrogen attribute in use looks something like this:
 
-`data-h2-bg-color="b(primary) b:h(accent)"`
+`data-h2-color="base(primary) base:hover(accent)"`
 
-This repository also contains a handy `hydrogen.snippets.json` file that contains snippet automation for VS Code, enabling auto completion and tab stops.
+This repository also contains a handy `hydrogen.snippets.json` file that offers snippet automation for VS Code, enabling auto completion and tab stops so that you don't have to memorize options for every property.
 
 ## 🏗️ Configuration
 
-You can learn more about Hydrogen's configuration file on the [documentation website](https://hydrogen.design/#configuration).
+Hydrogen is configured using a `hydrogen.config.json` file located at the root of your project. The `npx h2-init` script is designed to create this file for you and prompts for some required information to get things working.
 
-Hydrogen is configured using a `hydrogen.config.json` file located at the root of your project. The `npx h2-init` script is designed to create this file for you and prompts for some required information before you can proceed.
+Within this configuration file, you can modify many of Hydrogen's options to include values that suit your project's needs and theme, including custom media queries, colors, typography, and shadows.
 
-Within this configuration file, you can modify many of Hydrogen's utilities to include values that suit your project's needs and theme, including custom media queries, colors, whitespace, and shadows.
+You can learn more about [configuring Hydrogen in the documentation](https://beta.hydrogen.design/en/docs/setup/configuration).
 
 ## 🤖 Features
 
-### Compression
-
-Hydrogen uses custom scripting to scan your code for `data-h2` attributes and then custom builds a CSS stylesheet that contains only Hydrogen's base and the attributes you've used. No bloat. No duplication. This means that the library in production is extremely small while allowing it to provide a robust set of features and support complex customization.
-
 ### Utilities
 
-You can learn about [utility usage in the documentation](https://hydrogen.design/#backgroundColor), but Hydrogen offers the following utilities:
+Hydrogen supports almost all CSS properties and includes a handful of custom properties that provide support for common tasks such as containers or color overlays. Standard CSS properties accept their relevant CSS syntax as options.
 
-- `align-content`
-- `align-items`
-- `align-self`
-- `bg-color`
-- `border`
-- `container`
-- `display`
-- `flex-direction`
-- `flex-grid` and `flex-item`
-- `flex-wrap`
-- `font-color`
-- `font-family`
-- `font-size`
-- `font-style`
-- `font-weight`
-- `justify-content`
-- `layer` for `z-index` control
-- `location` for positioning control
-- `margin`
-- `opacity`
-- `order` for flex item order control
-- `overflow`
-- `overlay`
-- `padding`
-- `position`
-- `radius`
-- `shadow`
-- `text-align`
-- `text-transform`
-- `visibility`
-- `width`
+`data-h2-display="base(grid)"`
+`data-h2-border-top="base(1px solid black)"`
 
-### States
+Custom Hydrogen properties use a comma separated syntax to accept specific options:
 
-Along with media queries, Hydrogen offers the ability to modify attributes using the following [state](https://hydrogen.design/#states) keys:
+`data-h2-container="base(center, large)"`
+`data-h2-flex-grid="base(flex-start, x2)"`
 
-- `:d` for `disabled`
-- `:f` for `focus`
-- `:h` for `hover`
-- `:a` for `active`
+### Queries and modifiers
 
-While media queries work with all attributes, states are restricted to the utilities listed in the state section of the documentation.
+The biggest advantage to Hydrogen's `data-attribute` syntax is that it enables the use of inline media queries, selectors, states, targeting of nested elements, and dark mode. By chaining modifiers onto your query, you can target complex combinations of elements, manage styles based on the presence of classes or ids, bulk style an element's children, and more.
+
+[Learn more about modifiers in the documentation.](https://beta.hydrogen.design/basics/modifiers)
+
+### Speed and compression
+
+Hydrogen uses custom scripting to scan your code for `data-h2-` attributes and then builds a CSS stylesheet that contains only Hydrogen's core and the attributes you've used. No bloat. No duplication. This means that the library in production is concise while allowing it to provide a robust set of features and support complex customization.
+
+It also runs Autoprefixer and CSSNano on itself to provide a complete, production ready file.
+
+# Development and contribution
+
+- Pull the repository down
+- run `npm run setup`
+- do some development work in `lib`
+- write function tests in sibling `function.test.js` files, or add environment tests in `./tests`
+- run tests using the commands found in the root `package.json`
+
+You can read up on specifics about how Hydrogen works on a technical level in the development README found in `CONTRIBUTING.md`.
+
+## Testing coverage
+
+The following functions are currently covered by automated tests:
+
+- `hydrogen_build`
+
+The following areas are currently covered by environment tests:
+
+- basic environment

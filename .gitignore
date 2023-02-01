@@ -1,3 +1,10 @@
+# Package
 .DS_Store
 node_modules
-lib/stage/styles/hydrogen
+hydrogen-logs
+cache
+# Test caches
+tests/**/hydrogen.config.json
+# Documentation
+docs/_site/
+docs/_tmp/

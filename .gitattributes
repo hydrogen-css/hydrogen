@@ -1,1 +1,3 @@
-lib/stage/**/* linguist-documentation
+tests/**/* linguist-documentation
+docs/**/* linguist-documentation
+*.test.js linguist-documentation
