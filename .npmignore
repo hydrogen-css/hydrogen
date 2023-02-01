@@ -3,3 +3,5 @@
 tests
 docs
 node_modules
+deploy.sh
+setup.sh
