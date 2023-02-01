@@ -31,7 +31,7 @@ let data = {
           type: 'code',
           file: 'index.html',
           lines: [
-            '<button data-h2-background="base(primary)>',
+            '<button data-h2-background="base(primary)">',
             '  Hello',
             '</button>',
           ],
