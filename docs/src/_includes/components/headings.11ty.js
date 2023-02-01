@@ -132,7 +132,7 @@ function render(data, props) {
       <div>
         <div 
           data-h2-display="base(grid) p-tablet(flex)"
-          data-h2-gap="base(x2)"
+          data-h2-gap="base(x1) p-tablet(x2)"
           data-h2-align-items="p-tablet(center)">
           <div
             data-h2-flex-grow="p-tablet(1)"

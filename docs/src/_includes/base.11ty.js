@@ -58,7 +58,7 @@ function render(data) {
           href="#nav"
           title=${skip_to_nav.title[data.locale]}
           style="outline: none;"
-          data-h2-display="base(block)"
+          data-h2-display="base(none) l-tablet(block)"
           data-h2-background-color="base(primary.darker) base:focus-visible(focus)"
           data-h2-color="base(white) base:all:focus-visible(black)"
           data-h2-text-align="base(center)"

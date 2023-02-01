@@ -24,7 +24,7 @@ function render(data, props) {
       data-h2-display="base(grid)"
       data-h2-grid-template-columns="p-tablet(repeat(2, minmax(0, 1fr)))"
       data-h2-gap="base(x2)"
-      data-h2-padding-bottom="base(x4)"
+      data-h2-padding-bottom="base(x7) p-tablet(x4)"
       data-h2-overflow="base(hidden)">
       <div 
         data-h2-text-align="base(center) p-tablet(left)"

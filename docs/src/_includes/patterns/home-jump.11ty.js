@@ -45,7 +45,7 @@ function render(data) {
   }
   // Render the pattern
   return String.raw`
-    <div data-h2-margin="base(x5 0 0 0)" data-h2-padding="base(0, 0, x1, 0)">
+    <div data-h2-margin="base(x3, 0) l-tablet(x5, 0)" data-h2-padding="base(0, 0, x1, 0)">
       <div data-h2-container="base(center, medium, x1) p-tablet(center, medium, x2)">
         ${heading.render(data, {
           tag: 'h2',
@@ -100,7 +100,7 @@ function render(data) {
           <div 
             data-h2-display="base(grid)" 
             data-h2-grid-template-columns="base(repeat(1, minmax(0, 1fr))) p-tablet(repeat(2, minmax(0, 1fr))) l-tablet(repeat(4, minmax(0, 1fr)))" 
-            data-h2-gap="base(x2)">
+            data-h2-gap="base(x1) p-tablet(x2)">
             ${get_sections()}
           </div>
         </div>

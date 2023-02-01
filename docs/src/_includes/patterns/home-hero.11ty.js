@@ -24,6 +24,7 @@ function generate_hero_content(data) {
 function render(data) {
   return String.raw`
     <div 
+      id="main"
       data-h2-position="base(relative)"
       data-h2-background-color="base:all(black)">
       <div

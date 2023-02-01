@@ -33,7 +33,7 @@ function render(data) {
             String.raw`
               <div
                 data-h2-display="base(grid)"
-                data-h2-grid-template-columns="base(100%) p-tablet(4rem auto)"
+                data-h2-grid-template-columns="base(4rem auto) p-tablet(4rem auto)"
                 data-h2-gap="base(x1) p-tablet(x2)">
                 ${flourish.render(data, {
                   heading: 'h6',
@@ -43,7 +43,7 @@ function render(data) {
                   <p
                     data-h2-font-size="base(h6)"
                     data-h2-font-weight="base(200)"
-                    data-h2-text-align="base(center) p-tablet(left)">
+                    data-h2-text-align="base(left)">
                     <a
                       href=${item.path}
                       title=${item.title}
@@ -61,6 +61,7 @@ function render(data) {
       }
       sub = String.raw`
         <div
+          data-h2-margin="base(x2, 0, 0, 0) p-tablet(0)"
           data-h2-display="base(grid)"
           data-h2-grid-template-columns="base(100%) p-tablet(repeat(2, minmax(0, 1fr)))"
           data-h2-gap="base(x1)">

@@ -30,6 +30,7 @@ function render(data) {
           data-h2-border="base:children[button](none)"
           data-h2-outline="base:children[button:focus-visible](none)"
           data-h2-radius="base:children[button](rounded)"
+          data-h2-padding="base:children[button](x1)"
           data-h2-color="base:children[button](black)"
           data-h2-text-decoration="base:children[button](underline)"
           data-h2-shadow="

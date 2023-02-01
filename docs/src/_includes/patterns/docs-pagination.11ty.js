@@ -93,7 +93,7 @@ function render(data) {
             data-h2-border="base(0px solid transparent)"
             data-h2-background-color="base(black.lightest)" 
             data-h2-margin="base(x1.5, 0, x3, 0)"/>
-          <div data-h2-flex-grid="base(flex-start, x1) p-tablet(flex-start, x2) laptop(flex-start, x3)">
+          <div data-h2-flex-grid="base(flex-start, x1) p-tablet(flex-start, x2) laptop(flex-start, x3)" data-h2-padding="base(0, x1) p-tablet(0)">
             <div data-h2-flex-item="base(1of2)">
               ${get_previous()}
             </div>

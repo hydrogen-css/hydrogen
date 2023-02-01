@@ -33,7 +33,6 @@ function render(data) {
           label: item.label,
           margin: margin,
           id: item.id,
-          alignment: 'left',
           link: item.link,
         });
       } else {
@@ -43,7 +42,6 @@ function render(data) {
           label: item.label,
           margin: margin,
           id: item.id,
-          alignment: 'left',
         });
       }
     }

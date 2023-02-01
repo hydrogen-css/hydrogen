@@ -145,7 +145,7 @@ function render(data) {
           data-h2-padding="base:children[ul](0)"
           data-h2-list-style="base:children[ul](none)">
           <div
-            data-h2-display="base(none) p-tablet(block)" 
+            data-h2-visually-hidden="base(hidden) p-tablet(visible)" 
             data-h2-text-align="base(center) l-tablet(left)">
             <ul
               id="${nav_id}"
@@ -165,7 +165,7 @@ function render(data) {
               <li>
                 <span>version <a 
                   data-h2-font-weight="base(800)" 
-                  data-h2-color="base(primary.dark)"
+                  data-h2-color="base(primary.dark) base:all:focus-visible(black)"
                   href="/${data.locale}/docs/releases">
                   ${data.releases.latest.version}</a>
                 </span>

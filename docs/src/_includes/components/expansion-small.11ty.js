@@ -52,10 +52,12 @@ function render(data, props) {
         <button
           data-h2-background="base(transparent) base:focus-visible(focus)"
           data-h2-color="base:all:focus-visible(black)"
+          data-h2-stroke="base:all:focus-visible:children[svg, path](black)"
           data-h2-cursor="base(pointer)"
           data-h2-height="base(x.75)"
           data-h2-width="base(x.75)" 
           data-h2-border="base(none)"
+          data-h2-outline="base(none)"
           data-h2-padding="base(0)"
           data-h2-position="base(relative)"
           onclick="toggle_ec(this)">

@@ -180,22 +180,58 @@ function toggle_fern(e) {
 
 function toggle_menu(e) {
   let wrapper = e.closest('.mobile-menu');
+  let links = wrapper.querySelectorAll('a');
+  let buttons = wrapper.querySelectorAll('button:not(.mobile-menu-trigger)');
   if (wrapper.classList.contains('active')) {
     wrapper.classList.remove('active');
+    links.forEach((link) => {
+      link.setAttribute('tabindex', '-1');
+    });
+    buttons.forEach((button) => {
+      button.setAttribute('tabindex', '-1');
+    });
   } else {
     wrapper.classList.add('active');
+    links.forEach((link) => {
+      link.setAttribute('tabindex', '0');
+    });
+    buttons.forEach((button) => {
+      button.setAttribute('tabindex', '0');
+    });
   }
 }
 
 function capture_anchor_clicks() {
-  let anchors = document.querySelectorAll('.mobile-menu a');
-  anchors.forEach((link) => {
+  let menu = document.querySelector('.mobile-menu');
+  let links = menu.querySelectorAll('a');
+  let buttons = menu.querySelectorAll('button:not(.mobile-menu-trigger)');
+  links.forEach((link) => {
     link.addEventListener('click', (e) => {
       if (e.target.getAttribute('href').includes('#')) {
         e.target.closest('.mobile-menu').classList.remove('active');
+        links.forEach((link) => {
+          link.setAttribute('tabindex', '-1');
+        });
+        buttons.forEach((button) => {
+          button.setAttribute('tabindex', '-1');
+        });
       }
     });
   });
 }
 
 capture_anchor_clicks();
+
+function remove_mobile_menu_from_tab_order() {
+  let menu = document.querySelector('.mobile-menu');
+  let links = menu.querySelectorAll('a');
+  let buttons = menu.querySelectorAll('button:not(.mobile-menu-trigger)');
+  links.forEach((link) => {
+    link.setAttribute('tabindex', '-1');
+  });
+  buttons.forEach((button) => {
+    button.setAttribute('tabindex', '-1');
+  });
+}
+
+remove_mobile_menu_from_tab_order();

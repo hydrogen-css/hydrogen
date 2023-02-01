@@ -24,13 +24,13 @@ function render(data) {
         data-h2-margin="base(x2, 0, 0, 0)"
         data-h2-display="base(grid)"
         data-h2-grid-template-columns="base(100%) p-tablet(4rem auto)"
-        data-h2-gap="base(x2)">
+        data-h2-gap="base(x1) p-tablet(x2)">
         <div></div>
         <div>
           <div 
             data-h2-display="base(grid)"
             data-h2-grid-template-columns="base(100%) l-tablet(repeat(2, minmax(0, 1fr)))"
-            data-h2-gap="base(x4)">
+            data-h2-gap="base(x1) l-tablet(x4)">
             <div>
               <div
                 data-h2-display="base(inline-block)"
@@ -86,7 +86,7 @@ function render(data) {
   });
   // Render the pattern
   return String.raw`
-    <div data-h2-margin="base(x5, 0)">
+    <div data-h2-margin="base(x3, 0) l-tablet(x5, 0)">
       <div data-h2-container="base(center, medium, x1) l-tablet(center, medium, x2)">
         ${heading.render(data, {
           tag: 'h2',
@@ -103,6 +103,7 @@ function render(data) {
           size: 'h6',
           label: data.start.subtitle.label,
           id: data.start.subtitle.id,
+          alignment: 'left',
           margin: 'data-h2-margin="base(x3, 0, x1, 0)"',
           flourish: true,
         })}
