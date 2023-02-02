@@ -16,6 +16,8 @@ function render(data) {
         <meta name="description" content="${
           data.site.description[data.locale]
         }"/>
+        <!-- 11ty -->
+        <meta name="generator" content="Eleventy">
         <!-- Favicons -->
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
