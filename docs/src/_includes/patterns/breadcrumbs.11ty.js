@@ -154,7 +154,7 @@ function render(data) {
               data-h2-justify-content="base(center) l-tablet(flex-start)"
               ${gap}>
               ${nav_items}
-            <ul>
+            </ul>
           </div>
           <div>
             <ul 
@@ -174,12 +174,11 @@ function render(data) {
                 ${theme_switcher.render(data)}
               </li>
               <li>
-              <a 
-                href="javascript:void(0)"
+              <span 
                 title="French translations for Hydrogen's documentation are coming soon."
-                data-h2-background-color="base:focus-visible(focus)"
-                data-h2-outline="base(none)"
-                data-h2-color="base(black.30) base:all:focus-visible(black)">FR</a>
+                data-h2-text-decoration="base(underline)"
+                h2 data-h2-cursor="base(pointer)"
+                data-h2-color="base(black.70)">FR</span>
             </li>
             </ul>
           </div>

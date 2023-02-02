@@ -253,7 +253,7 @@ var data = {
   jump: {
     title: {
       label: 'Jump right in',
-      id: 'start',
+      id: 'jump',
       icon: {
         path: '/static/img/icon-compass.svg',
         alt: 'A sticker-style icon of a compass.',

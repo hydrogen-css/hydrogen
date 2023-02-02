@@ -120,7 +120,7 @@ function render(data, props) {
     `;
   }
   return String.raw`
-    <a id="${props.id}" ></a>
+    <span id="${props.id}" ></span>
     <div 
       ${margin}
       data-h2-display="base(grid)"

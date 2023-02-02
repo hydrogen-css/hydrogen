@@ -1,13 +1,17 @@
 const body = document.querySelector('body');
 
 window.onload = function () {
-  var docsHead = document.querySelector('#docs_header').clientHeight;
-  body.setAttribute('style', `--heightHack: ${docsHead}px`);
+  if (document.querySelector('#docs_header')) {
+    var docsHead = document.querySelector('#docs_header').clientHeight;
+    body.setAttribute('style', `--heightHack: ${docsHead}px`);
+  }
 };
 
 window.onresize = function () {
-  var docsHead = document.querySelector('#docs_header').clientHeight;
-  body.setAttribute('style', `--heightHack: ${docsHead}px`);
+  if (document.querySelector('#docs_header')) {
+    var docsHead = document.querySelector('#docs_header').clientHeight;
+    body.setAttribute('style', `--heightHack: ${docsHead}px`);
+  }
 };
 
 // Get Hydrogen elements
