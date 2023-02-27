@@ -3,7 +3,6 @@ const get_menu_data = require('../components/menu.11ty');
 var data = {};
 
 function render(data) {
-  console.log(data.main);
   return String.raw`
     <div
       class="mobile-menu"
