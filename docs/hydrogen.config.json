@@ -232,22 +232,19 @@
         {
           "key": "divider",
           "default": {
-            "gradient": "linear-gradient(90deg, #53FFE0, #9D5CFF)",
-            "fallback": "#53FFE0"
+            "gradient": "linear-gradient(90deg, #53FFE0, #9D5CFF)"
           }
         },
         {
           "key": "primaryRadial",
           "default": {
-            "gradient": "radial-gradient(rgba(157,92,255, 1), rgba(42, 44, 61, 1))",
-            "fallback": "rgba(157,92,255, 1)"
+            "gradient": "radial-gradient(rgba(157,92,255, 1), rgba(42, 44, 61, 1))"
           }
         },
         {
           "key": "accentRadial",
           "default": {
-            "gradient": "radial-gradient(rgba(83, 255, 224, 1), rgba(42, 44, 61, 1))",
-            "fallback": "rgba(83, 255, 224, 1)"
+            "gradient": "radial-gradient(rgba(83, 255, 224, 1), rgba(42, 44, 61, 1))"
           }
         }
       ],
@@ -374,22 +371,19 @@
         {
           "key": "divider",
           "default": {
-            "gradient": "linear-gradient(90deg, #17bed9, #1747d9)",
-            "fallback": "#17bed9"
+            "gradient": "linear-gradient(90deg, #17bed9, #1747d9)"
           }
         },
         {
           "key": "primaryRadial",
           "default": {
-            "gradient": "radial-gradient(rgba(23, 190, 217, 1), rgba(23, 71, 217, 1))",
-            "fallback": "rgba(23, 190, 217, 1)"
+            "gradient": "radial-gradient(rgba(23, 190, 217, 1), rgba(23, 71, 217, 1))"
           }
         },
         {
           "key": "accentRadial",
           "default": {
-            "gradient": "radial-gradient(rgba(23, 190, 217, 1), rgba(23, 71, 217, 1))",
-            "fallback": "rgba(23, 190, 217, 1)"
+            "gradient": "radial-gradient(rgba(23, 190, 217, 1), rgba(23, 71, 217, 1))"
           }
         }
       ]
@@ -438,22 +432,19 @@
         {
           "key": "divider",
           "default": {
-            "gradient": "linear-gradient(90deg, #ff1a7b, #ffc61a)",
-            "fallback": "#ff1a7b"
+            "gradient": "linear-gradient(90deg, #ff1a7b, #ffc61a)"
           }
         },
         {
           "key": "primaryRadial",
           "default": {
-            "gradient": "radial-gradient(rgba(255, 26, 123, 1), rgba(255, 198, 26, 1))",
-            "fallback": "rgba(255, 26, 123, 1)"
+            "gradient": "radial-gradient(rgba(255, 26, 123, 1), rgba(255, 198, 26, 1))"
           }
         },
         {
           "key": "accentRadial",
           "default": {
-            "gradient": "radial-gradient(rgba(255, 26, 123, 1), rgba(255, 198, 26, 1))",
-            "fallback": "rgba(255, 26, 123, 1)"
+            "gradient": "radial-gradient(rgba(255, 26, 123, 1), rgba(255, 198, 26, 1))"
           }
         }
       ]
@@ -502,22 +493,19 @@
         {
           "key": "divider",
           "default": {
-            "gradient": "linear-gradient(90deg, rgb(21, 157, 106), rgb(138, 217, 23))",
-            "fallback": "rgb(21, 157, 106)"
+            "gradient": "linear-gradient(90deg, rgb(21, 157, 106), rgb(138, 217, 23))"
           }
         },
         {
           "key": "primaryRadial",
           "default": {
-            "gradient": "radial-gradient(rgba(21, 157, 106, 1), rgba(138, 217, 23, 1))",
-            "fallback": "rgba(21, 157, 106, 1)"
+            "gradient": "radial-gradient(rgba(21, 157, 106, 1), rgba(138, 217, 23, 1))"
           }
         },
         {
           "key": "accentRadial",
           "default": {
-            "gradient": "radial-gradient(rgba(21, 157, 106, 1), rgba(138, 217, 23, 1))",
-            "fallback": "rgba(21, 157, 106, 1)"
+            "gradient": "radial-gradient(rgba(21, 157, 106, 1), rgba(138, 217, 23, 1))"
           }
         }
       ]

@@ -23,6 +23,25 @@ module.exports = {
       },
     },
   ],
-  optimizations: [],
-  bugfixes: [],
+  optimizations: [
+    {
+      breaking: false,
+      changes: {
+        en: [
+          'Adds an optional development environment variable <code>H2DEBUG</code> that can be used to force every function to log errors to the console.',
+          'This is primarily for development work and debugging on Hydrogen and not for use by end users.',
+        ],
+      },
+    },
+  ],
+  bugfixes: [
+    {
+      breaking: false,
+      changes: {
+        en: [
+          'Fixes a bug that prevented CSS compilation if the unsupported fallback value was missing from gradient theme configurations.',
+        ],
+      },
+    },
+  ],
 };
