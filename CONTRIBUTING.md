@@ -2,17 +2,15 @@
 
 ## 📑 Table of contents
 
-- [Helpful links](#🔗-helpful-links)
-- [Conventions](#📐-conventions)
-- [Development guides](#🖥️-development-guides)
+- [Helpful links](#link-helpful-links)
+- [Conventions](#triangular_ruler-conventions)
+- [Development guides](#desktop_computer-development-guides)
   - [Understanding Hydrogen's build process](#understanding-hydrogens-build-process)
-  - [CSS properties and implementation](#css-properties-and-implementation)
-    - [How to add basic CSS properties](#how-to-add-basic-css-properties)
-    - [How to add complex CSS properties](#how-to-add-complex-css-properties)
+  - [Custom CSS properties and implementation](#custom-css-properties-and-implementation)
   - [Updating the documentation](#updating-the-documentation)
   - [Writing tests](#writing-tests)
 
-## 🔗 Helpful links
+## :link: Helpful links
 
 - [Hydrogen's website](https://hydrogen.design/en)
 - [Hydrogen's documentation](https://hydrogen.design/en/docs)
@@ -20,7 +18,7 @@
 - [Latest package release](https://www.npmjs.com/package/@hydrogen-css/hydrogen/v/latest) - Found on NPM, contains the latest stable code
 - [Beta package release](https://www.npmjs.com/package/@hydrogen-css/hydrogen/v/beta) - Found on NPM, contains new and potentially unstable features
 
-## 📐 Conventions
+## :triangular_ruler: Conventions
 
 ### Code conventions
 
@@ -28,7 +26,7 @@
 
 ### Submitting a merge request
 
-## 🖥️ Development guides
+## :desktop_computer: Development guides
 
 ### Understanding Hydrogen's build process
 
