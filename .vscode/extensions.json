@@ -1,6 +1,7 @@
 {
     "recommendations": [
         "esbenp.prettier-vscode",
-        "bierner.lit-html"
+        "bierner.lit-html",
+        "bierner.github-markdown-preview"
     ]
 }

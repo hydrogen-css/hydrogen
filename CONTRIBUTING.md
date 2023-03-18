@@ -1,74 +1,60 @@
-# 🌞 Welcome to Hydrogen
+# 🌞 Hydrogen's contribution guidelines
 
-## 📑 Table of contents
-
-- [Helpful links](#link-helpful-links)
-- [Conventions](#triangular_ruler-conventions)
-- [Development guides](#desktop_computer-development-guides)
-  - [Understanding Hydrogen's build process](#understanding-hydrogens-build-process)
-  - [Custom CSS properties and implementation](#custom-css-properties-and-implementation)
-  - [Updating the documentation](#updating-the-documentation)
-  - [Writing tests](#writing-tests)
+Thanks for considering helping out with Hydrogen! Below is a set of helpful information that should give you a basic understanding of the project's contribution expectations and best practices.
 
 ## :link: Helpful links
 
 - [Hydrogen's website](https://hydrogen.design/en)
 - [Hydrogen's documentation](https://hydrogen.design/en/docs)
-- [Github](https://github.com/hydrogen-css/hydrogen) - Hydrogen's code is stored here
-- [Latest package release](https://www.npmjs.com/package/@hydrogen-css/hydrogen/v/latest) - Found on NPM, contains the latest stable code
-- [Beta package release](https://www.npmjs.com/package/@hydrogen-css/hydrogen/v/beta) - Found on NPM, contains new and potentially unstable features
+- [Code repository](https://github.com/hydrogen-css/hydrogen)
+- [Latest package release](https://www.npmjs.com/package/@hydrogen-css/hydrogen/v/latest)
+- [Beta package release](https://www.npmjs.com/package/@hydrogen-css/hydrogen/v/beta)
 
 ## :triangular_ruler: Conventions
 
 ### Code conventions
 
-### Submitting bugs
+- Try to keep functions contained to their own files
+- Format files with `prettier` on save
+- When writing new functions or editing existing functions, they should be accompanied by a sibling `.test.js` file containing unit-level tests
+  - Include tests to ensure the function handles valid and invalid input
+  - Include tests to ensure errors are properly returned
+  - Include tests to ensure the function returns output in the expected format
+- Leave concise comments as frequently as reasonably possible that describe the goal of the line or group
+- New features, bugfixes, and enhancements should always be given their own branch, preferably named `release/X.X.X` if they're in bulk
+- All new branches should be submitted as pull requests
 
-### Submitting a merge request
+### System conventions
+
+- When adding new console logging, wrap the log in the appropriate checks to ensure that it doesn't add to the reduced output mode
+- Always update the correct documentation inside of `docs` in the same PR as the new/updated feature
 
 ## :desktop_computer: Development guides
 
 ### Understanding Hydrogen's build process
 
-Hydrogen takes the following steps to build its CSS file:
+The following is a step-by-step linear guide to how Hydrogen runs on a project.
 
-- locate and parse the user's settings
-  - validate settings to ensure required fields, option types, and formats
-  - grab command line arguments
-  - populate and overwrite any build settings
-  - create runtime values for themes, config, input/output
-- produce a media array from the user's settings with objects that can be populated with CSS in the correct order
-- parse input using RegEx for attributes and generate their data using custom JS parsing, including variable creation
-- generate core CSS and reset CSS if it was requested
-- loop through the properties found
-  - create the property's CSS selectors
-  - parse the property's individual queries and options
-  - replace configured values
-  - generate final CSS
-  - validate the final CSS output to ensure it's valid
-  - add the final, valid CSS to its matching media object in the media array
-- loop through each media object in the media array and append its output to the final CSS string
-- write a raw CSS file
-- process the raw CSS with Autoprefixer and CSSnano if they're enabled
-- write a variable export file if it was requested
-- write the processed CSS file as hydrogen.css
-
-### Custom CSS properties and implementation
-
-- if the property needs custom scripting, create a script in `lib/scripts/properties/custom`
-- add the property to the sorting function in `lib/scripts/properties/sort-custom-properties.js`
-- add the new property to the property data model in `lib/data/property-model.js`
-- test the property by adding it to the testing UI markup in `tests/basics/input/index.html`
-- add tests to the error testing markup in `tests/markup/errors`
-- add the new property's syntax to the snippets file in `.vscode/hydrogen.snippets.json`
-- add release notes for the property in the changelog
-
-### Updating the documentation
-
-### Writing tests
-
-#### Writing function unit tests
-
-- functions should live in their own file and be paired with a matching `file-name.test.js`
-- tests should follow a similar format
-- all unit tests should be added to the final `run-all.tests.js` file found in `./tests`
+1. Locate and parse the user's `hydrogen.config.json` settings
+   1. Find a configuration file
+      1. If the user passed `h2_config_path` use the file found in that directory, otherwise
+      2. Check the current process directory for a configuration file, otherwise
+      3. Check recursively up from the process directory for a configuration file
+   2. Validate the existing settings to ensure required options, types, and formats
+   3. Load the default build settings from the data model and replace them with any configured values
+   4. Parse configured theme settings
+   5. Check for command line arguments and replace any default or configured settings with their values
+2. Using the `mode` and `media` configurations, generate a media query object for CSS storage
+3. CSS variables are created based on the final configuration data and sorted into relevant media queries
+4. If enabled, Hydrogen's core CSS is built
+5. Files found in the `input` directories are read and parsed using RegExp for `data-h2-` attributes
+   1. When a new attribute is found, it's broken into consumable parts based on Hydrogen's syntax
+   2. Individual query values found in the attribute are parsed for their media query, modifiers, and content, which are then added to the attribute's object record
+6. Once all attributes are parsed and deconstructed, CSS is constructed
+   1. Custom selectors are generated and are added to the record
+   2. The actual CSS code is created and added to the record
+   3. The attribute record is added to the media query object generated earlier
+7. The media query object is then looped through, assembling a single unprocssed CSS string
+8. The CSS string is then optionally run through Autoprefixer (browser prefixing) and CSSnano (CSS minification)
+9. If requested, a `hydrogen.vars.css` variable file is written to the configured `output` directory
+10. The final processed CSS is written to a `hydrogen.css` file in the configured `output` directory

@@ -4,7 +4,7 @@ Hydrogen is an open-source design and CSS utility framework powered by data-attr
 
 By parsing the contents of custom `data-h2-` attributes, Hydrogen allows you to style elements completely from your markup. It comes equipped with a comprehensive library of tools and configurations for easy, seamless development. At runtime, it processes your markup and builds a CSS file that contains only the code you've used, preventing duplication and bloat.
 
-[Website](https://hydrogen.design) | [Roadmap](https://workflowy.com/s/hydrogens-roadmap/7Gjmdbjiqc0Wst1R)
+[Website](https://hydrogen.design) | [Roadmap](https://workflowy.com/s/hydrogen/7Gjmdbjiqc0Wst1R)
 
 ## 🛠️ Basic usage
 
@@ -35,7 +35,7 @@ Hydrogen is configured using a `hydrogen.config.json` file located at the root o
 
 Within this configuration file, you can modify many of Hydrogen's options to include values that suit your project's needs and theme, including custom media queries, colors, typography, and shadows.
 
-You can learn more about [configuring Hydrogen in the documentation](https://beta.hydrogen.design/en/docs/setup/configuration).
+You can learn more about [configuring Hydrogen in the documentation](https://hydrogen.design/en/docs/configuration/).
 
 ## 🤖 Features
 
@@ -55,7 +55,7 @@ Custom Hydrogen properties use a comma separated syntax to accept specific optio
 
 The biggest advantage to Hydrogen's `data-attribute` syntax is that it enables the use of inline media queries, selectors, states, targeting of nested elements, and dark mode. By chaining modifiers onto your query, you can target complex combinations of elements, manage styles based on the presence of classes or ids, bulk style an element's children, and more.
 
-[Learn more about modifiers in the documentation.](https://beta.hydrogen.design/basics/modifiers)
+[Learn more about modifiers in the documentation.](https://hydrogen.design/en/docs/styling/syntax/)
 
 ### Speed and compression
 

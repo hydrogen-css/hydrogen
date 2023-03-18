@@ -1,6 +1,6 @@
 {
   "name": "@hydrogen-css/hydrogen",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "An open-source, inline CSS framework powered by data-attributes. MIT Licensed.",
   "keywords": [
     "Hydrogen",
@@ -31,7 +31,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/hydrogen-css/hydrogen"
+    "url": "https://github.com/hydrogen-css/hydrogen"
   },
   "scripts": {
     "setup": "./setup.sh",
