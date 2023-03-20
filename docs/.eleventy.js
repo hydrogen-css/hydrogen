@@ -1,8 +1,6 @@
 const { DateTime } = require('luxon');
 const { hydrogen_build } = require('@hydrogen-css/hydrogen/lib/build');
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
-var fs = require('fs');
-var path = require('path');
 
 module.exports = function (eleventyConfig) {
   // Serve from en directory
