@@ -29,7 +29,7 @@ function render(data, props) {
       ${font_color[props.color]}
       data-h2-padding="base(x.15, x.5)"
       data-h2-radius="base(pill)"
-      data-h2-font-size="base(copy)"
+      data-h2-font-size="base(caption, 1.3)"
       data-h2-font-weight="base(400)"
       data-h2-display="base(inline-block)"
       data-h2-vertical-align="base(middle)">

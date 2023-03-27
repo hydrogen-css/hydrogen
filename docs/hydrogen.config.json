@@ -333,14 +333,14 @@
         {
           "key": "primary",
           "default": {
-            "color": "#1747d9",
+            "color": "#3b67ed",
             "modifiers": []
           }
         },
         {
           "key": "secondary",
           "default": {
-            "color": "#17bed9",
+            "color": "#3bed9d",
             "modifiers": []
           }
         },
@@ -371,19 +371,19 @@
         {
           "key": "divider",
           "default": {
-            "gradient": "linear-gradient(90deg, #17bed9, #1747d9)"
+            "gradient": "linear-gradient(90deg, #3bed9d, #3b67ed)"
           }
         },
         {
           "key": "primaryRadial",
           "default": {
-            "gradient": "radial-gradient(rgba(23, 190, 217, 1), rgba(23, 71, 217, 1))"
+            "gradient": "radial-gradient(rgba(59, 103, 237, .5), rgba(23, 71, 217, 1))"
           }
         },
         {
           "key": "accentRadial",
           "default": {
-            "gradient": "radial-gradient(rgba(23, 190, 217, 1), rgba(23, 71, 217, 1))"
+            "gradient": "radial-gradient(#3bed9d, rgba(23, 71, 217, 1))"
           }
         }
       ]
@@ -438,7 +438,7 @@
         {
           "key": "primaryRadial",
           "default": {
-            "gradient": "radial-gradient(rgba(255, 26, 123, 1), rgba(255, 198, 26, 1))"
+            "gradient": "radial-gradient(rgba(255, 26, 123, .7), rgba(255, 198, 26, 1))"
           }
         },
         {
@@ -455,14 +455,14 @@
         {
           "key": "primary",
           "default": {
-            "color": "rgb(21, 157, 106)",
+            "color": "rgb(29, 193, 119)",
             "modifiers": []
           }
         },
         {
           "key": "secondary",
           "default": {
-            "color": "rgb(138, 217, 23)",
+            "color": "rgb(78, 221, 17)",
             "modifiers": []
           }
         },
@@ -493,19 +493,19 @@
         {
           "key": "divider",
           "default": {
-            "gradient": "linear-gradient(90deg, rgb(21, 157, 106), rgb(138, 217, 23))"
+            "gradient": "linear-gradient(90deg, rgb(78, 221, 17), rgb(29, 193, 119))"
           }
         },
         {
           "key": "primaryRadial",
           "default": {
-            "gradient": "radial-gradient(rgba(21, 157, 106, 1), rgba(138, 217, 23, 1))"
+            "gradient": "radial-gradient(rgb(29, 193, 119), rgba(138, 217, 23, 1))"
           }
         },
         {
           "key": "accentRadial",
           "default": {
-            "gradient": "radial-gradient(rgba(21, 157, 106, 1), rgba(138, 217, 23, 1))"
+            "gradient": "radial-gradient(rgba(78, 221, 17, .5), rgba(138, 217, 23, 1))"
           }
         }
       ]

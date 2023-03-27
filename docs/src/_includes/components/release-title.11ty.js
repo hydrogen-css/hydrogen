@@ -21,33 +21,31 @@ function render(data, unique, release) {
   }
   // Create the breaking chip
   let breaking_chip = ``;
+  // let breaking_chip_template = chip.render(data, {
+  //   label: 'breaking',
+  //   color: 'error',
+  // });
+  let breaking_chip_template = String.raw`
+    <span data-h2-margin="base(0, x.25)" data-h2-color="base(white.dark)">|</span><span data-h2-font-weight="base(700)" data-h2-color="base(error.dark)">🚨 Breaking</span>
+  `;
   if (release.features && release.features.length > 0) {
     release.features.forEach((feature) => {
       if (feature.breaking) {
-        breaking_chip = chip.render(data, {
-          label: 'breaking',
-          color: 'error',
-        });
+        breaking_chip = breaking_chip_template;
       }
     });
   }
   if (release.optimizations && release.optimizations.length > 0) {
     release.optimizations.forEach((optimization) => {
       if (optimization.breaking) {
-        breaking_chip = chip.render(data, {
-          label: 'breaking',
-          color: 'error',
-        });
+        breaking_chip = breaking_chip_template;
       }
     });
   }
   if (release.bugfixes && release.bugfixes.length > 0) {
     release.bugfixes.forEach((bugfix) => {
       if (bugfix.breaking) {
-        breaking_chip = chip.render(data, {
-          label: 'breaking',
-          color: 'error',
-        });
+        breaking_chip = breaking_chip_template;
       }
     });
   }
@@ -60,13 +58,14 @@ function render(data, unique, release) {
       margin: 'data-h2-margin="base(0, 0, x.5, 0)"',
       id: unique + '-' + release.version,
       alignment: 'left',
-      chips: [release_type, breaking_chip],
+      chips: [release_type],
     })}
     <p data-h2-font-size="base(caption)">
       <span data-h2-font-weight="base(700)">Released on:</span> ${release.date.toLocaleString(
         'default',
         { month: 'long' }
       )} ${release.date.getDate()}, ${release.date.getFullYear()}
+      ${breaking_chip}
     </p>
   `;
 }

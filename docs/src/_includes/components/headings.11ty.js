@@ -175,11 +175,13 @@ function render(data, props) {
               <span data-h2-vertical-align="base(middle)">
                 ${props.label}
               </span>
-              ${chips}
               ${hash}
             </${props.tag}>
           </div>
           ${link}
+          <div>
+            ${chips}
+          </div>
         </div>
       </div>
     </div>

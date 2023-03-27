@@ -33,7 +33,7 @@ function render(data, unique, release) {
         if (item.breaking) {
           breaking_label = String.raw`
             <span
-              data-h2-color="base(error.darker)"
+              data-h2-color="base(error.dark)"
               data-h2-font-weight="base(700)">Breaking: </span>
           `;
         }
