@@ -7,7 +7,7 @@ function render(data) {
   const skip_to_nav = data.site.components.skip_to_nav;
   return String.raw`
     <!DOCTYPE html>
-    <html lang="${data.locale}" data-h2=''>
+    <html lang="${data.locale}" data-h2='' style="scroll-behavior: smooth;">
       <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,6 +50,7 @@ function render(data) {
           base:children[h1, h2, h3, h4, h5, h6](black)
           base:all:children[a:hover](primary)
           base:all:children[a:focus-visible](black)"
+        data-h2-overflow="base:selectors[.locked](hidden)"
         data-h2-outline="base:children[a:focus-visible](none)"
         data-h2-font-size="base:children[p code, li code](caption)"
         data-h2-display="base:children[p code, li code](inline-block)"
@@ -82,6 +83,32 @@ function render(data) {
           data-h2-visually-hidden="base(invisible) base:focus-visible(visible)">
           ${skip_to_content.label[data.locale]}
         </a>
+        <div
+          class="mobile-menu-backdrop"
+          data-h2-background="base:all(black)"
+          data-h2-position="base(fixed)"
+          data-h2-height="base(100%)"
+          data-h2-width="base(100%)"
+          data-h2-opacity="base(0%) base:selectors[.active](85%)"
+          data-h2-transform="base(translate(-100%, -100%)) base:selectors[.active](translate(0px, 0px))"
+          data-h2-transition="base(transform 0s ease .3s, opacity .1s linear .2s) base:selectors[.active](opacity .1s linear)"
+          data-h2-z-index="base(90)"
+          data-h2-overflow="base(hidden)">
+          <div 
+            data-h2-background="base(accentRadial)"
+            data-h2-position="base(absolute)"
+            data-h2-height="base(300%)"
+            data-h2-width="base(200%)"
+            data-h2-opacity="base(20%)"
+            data-h2-location="base(-150%, auto, auto, -100%)"></div>
+          <div 
+            data-h2-background="base(primaryRadial)"
+            data-h2-position="base(absolute)"
+            data-h2-height="base(300%)"
+            data-h2-width="base(200%)"
+            data-h2-opacity="base(20%)"
+            data-h2-location="base(auto, -100%, -150%, auto)"></div>
+        </div>
         ${mobile_menu.render(data)}
         ${data.content}
         <!-- Local scripts -->

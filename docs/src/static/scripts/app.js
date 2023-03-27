@@ -183,10 +183,14 @@ function toggle_fern(e) {
 }
 
 function toggle_menu(e) {
+  let body = document.querySelector('body');
+  let backdrop = document.querySelector('.mobile-menu-backdrop');
   let wrapper = e.closest('.mobile-menu');
   let links = wrapper.querySelectorAll('a');
   let buttons = wrapper.querySelectorAll('button:not(.mobile-menu-trigger)');
   if (wrapper.classList.contains('active')) {
+    body.classList.remove('locked');
+    backdrop.classList.remove('active');
     wrapper.classList.remove('active');
     links.forEach((link) => {
       link.setAttribute('tabindex', '-1');
@@ -195,6 +199,8 @@ function toggle_menu(e) {
       button.setAttribute('tabindex', '-1');
     });
   } else {
+    body.classList.add('locked');
+    backdrop.classList.add('active');
     wrapper.classList.add('active');
     links.forEach((link) => {
       link.setAttribute('tabindex', '0');
@@ -206,6 +212,8 @@ function toggle_menu(e) {
 }
 
 function capture_anchor_clicks() {
+  let body = document.querySelector('body');
+  let backdrop = document.querySelector('.mobile-menu-backdrop');
   let menu = document.querySelector('.mobile-menu');
   let links = menu.querySelectorAll('a');
   let buttons = menu.querySelectorAll('button:not(.mobile-menu-trigger)');
@@ -213,6 +221,8 @@ function capture_anchor_clicks() {
     link.addEventListener('click', (e) => {
       if (e.target.getAttribute('href').includes('#')) {
         e.target.closest('.mobile-menu').classList.remove('active');
+        body.classList.remove('locked');
+        backdrop.classList.remove('active');
         links.forEach((link) => {
           link.setAttribute('tabindex', '-1');
         });
