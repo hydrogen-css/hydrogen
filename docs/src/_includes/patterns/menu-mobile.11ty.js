@@ -16,10 +16,14 @@ function render(data) {
       data-h2-location="base(auto, auto, -5px, 0)"
       data-h2-width="base(100%)"
       data-h2-layer="base(100, fixed)"
+      data-h2-opacity="base:children[>nav >a](0%) base:selectors[.active]:children[>nav >a](100%)"
       data-h2-transform="
         base:children[>nav](translate(0, 100%)) 
         base:selectors[.active]:children[>nav](translate(0, -100%))"
-      data-h2-transition="base:children[>nav](.2s ease-in) base:selectors[.active]:children[>nav](.2s ease-out .1s)">
+      data-h2-transition="
+        base:children[>nav](.2s ease-in) 
+        base:selectors[.active]:children[>nav](.2s ease-out .1s)
+        base:selectors[.active]:children[>nav >a](.2s ease-out .3s)">
       <div data-h2-padding="base(x.5, 0, 0, 0)">
         <button
           class="mobile-menu-trigger"
@@ -49,6 +53,16 @@ function render(data) {
         data-h2-height="base(50vh)"
         data-h2-width="base(100%)"
         aria-hidden="true">
+        <a
+          href=""
+          title=""
+          data-h2-position="base(absolute)"
+          data-h2-location="base(0, auto, auto, 50%)"
+          data-h2-transform="base(translate(-50%, -100%))"
+          data-h2-color="base:all(white)"
+          data-h2-font-weight="base(700)"
+          data-h2-font-size="base(display)"
+          data-h2-text-decoration="base(none)">Hydrogen</a>
         <div
           data-h2-background="base(foreground)"
           data-h2-shadow="base(largest)"

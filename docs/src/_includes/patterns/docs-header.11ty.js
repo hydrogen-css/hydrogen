@@ -61,7 +61,7 @@ function render(data) {
       }
       sub = String.raw`
         <div
-          data-h2-margin="base(x2, 0, 0, 0) p-tablet(0)"
+          data-h2-margin="base(0)"
           data-h2-display="base(grid)"
           data-h2-grid-template-columns="base(100%) p-tablet(repeat(2, minmax(0, 1fr)))"
           data-h2-gap="base(x1)">

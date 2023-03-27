@@ -89,7 +89,7 @@ function render(data) {
           data-h2-position="base(fixed)"
           data-h2-height="base(100%)"
           data-h2-width="base(100%)"
-          data-h2-opacity="base(0%) base:selectors[.active](85%)"
+          data-h2-opacity="base(0%) base:selectors[.active](95%)"
           data-h2-transform="base(translate(-100%, -100%)) base:selectors[.active](translate(0px, 0px))"
           data-h2-transition="base(transform 0s ease .3s, opacity .1s linear .2s) base:selectors[.active](opacity .1s linear)"
           data-h2-z-index="base(90)"
