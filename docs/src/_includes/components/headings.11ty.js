@@ -1,5 +1,8 @@
 // Local dependencies
 const cp_flourish = require('./flourish.11ty');
+const robot = require('./icons/robot.11ty');
+const flag = require('./icons/flag.11ty');
+const compass = require('./icons/compass.11ty');
 
 // Create component-specific data
 var data = {};
@@ -53,7 +56,33 @@ function render(data, props) {
   }
   // Create icon
   let icon = ``;
-  if (props.img) {
+  if (props.svg) {
+    let svg = ``;
+    if (props.svg === 'robot') {
+      svg = robot.render(data);
+    } else if (props.svg === 'flag') {
+      svg = flag.render(data);
+    } else if (props.svg === 'compass') {
+      svg = compass.render(data);
+    } else {
+      throw new Error('Pass an existing icon.');
+    }
+    icon = String.raw`
+      <div 
+        data-h2-position="base(relative)"
+        data-h2-height="p-tablet(100%)"
+        data-h2-text-align="base(center)">
+        <div
+          data-h2-display="base(inline-block)"
+          data-h2-position="base(relative) p-tablet(absolute)"
+          data-h2-location="p-tablet(60%, auto, auto, 50%)"
+          data-h2-width="base(x3) p-tablet(100%)"
+          data-h2-transform="base(rotate(-15deg)) p-tablet(translate(-50%, -50%) rotate(-15deg))">
+          ${svg}
+        </div>
+      </div>
+    `;
+  } else if (props.img) {
     icon = String.raw`
       <div 
         data-h2-position="base(relative)"
@@ -64,7 +93,7 @@ function render(data, props) {
           alt="${props.img.alt}"
           data-h2-display="base(inline-block)"
           data-h2-position="base(relative) p-tablet(absolute)"
-          data-h2-location="p-tablet(55%, auto, auto, 50%)"
+          data-h2-location="p-tablet(60%, auto, auto, 50%)"
           data-h2-width="base(x3) p-tablet(100%)"
           data-h2-transform="base(rotate(-15deg)) p-tablet(translate(-50%, -50%) rotate(-15deg))" />
       </div>

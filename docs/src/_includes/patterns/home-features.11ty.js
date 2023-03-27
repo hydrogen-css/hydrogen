@@ -151,6 +151,7 @@ function render(data) {
           size: 'h2',
           label: 'Feature overview',
           id: 'features',
+          svg: 'robot',
           img: {
             path: '/static/img/icon-robot.svg',
             alt: "A sticker-style icon of one of Hydrogen's adorable little mascots, Beep. Beep is a robot.",

@@ -93,6 +93,7 @@ function render(data) {
           size: 'h2',
           label: data.start.title.label,
           id: data.start.title.id,
+          svg: 'flag',
           img: {
             path: data.start.title.icon.path,
             alt: data.start.title.icon.alt,

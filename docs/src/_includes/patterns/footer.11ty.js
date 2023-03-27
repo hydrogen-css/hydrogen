@@ -1,6 +1,7 @@
 // Hydrogen dependencies
 
 // Local dependencies
+const theo = require('../components/icons/theo.11ty');
 
 // Create pattern-specific data
 var data = {};
@@ -34,15 +35,15 @@ function render(data, props) {
           data-h2-font-size="base(h6)"
           data-h2-font-weight="base(700)"
           data-h2-color="base:all(white)">${data.site.name}</p>
-        <img
-          src="/static/img/icon_theo.svg"
-          alt=""
+        <div
           data-h2-display="base(inline-block)"
           data-h2-position="base(absolute)"
           data-h2-location="base(auto, auto, -x4, 50%) p-tablet(auto, auto, -x4, 0)"
           data-h2-width="base(x3)"
           data-h2-transition="base(transform .2s ease-in-out)"
-          data-h2-transform="base(translate(-50%, 60%)) p-tablet(translate(0, 60%)) p-tablet:hover(translate(0, 0))" />
+          data-h2-transform="base(translate(-50%, 60%)) p-tablet(translate(0, 60%)) p-tablet:hover(translate(0, 0))">
+          ${theo.render(data)}
+        </div>
       </div>
       <div 
         data-h2-text-align="base(center) p-tablet(right)"
