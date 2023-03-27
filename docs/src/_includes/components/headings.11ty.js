@@ -128,9 +128,11 @@ function render(data, props) {
   // Create chip
   let chips = ``;
   if (props.chips && props.chips.length > 0) {
+    chips = `<div>`;
     props.chips.forEach((chip) => {
       chips = chips + chip;
     });
+    chips = chips + `</div>`;
   }
   // Create link
   let link = ``;
@@ -161,7 +163,7 @@ function render(data, props) {
       <div>
         <div 
           data-h2-display="base(grid) p-tablet(flex)"
-          data-h2-gap="base(x1) p-tablet(x2)"
+          data-h2-gap="base(x.5) p-tablet(x2)"
           data-h2-align-items="p-tablet(center)">
           <div
             data-h2-flex-grow="p-tablet(1)"
@@ -179,9 +181,7 @@ function render(data, props) {
             </${props.tag}>
           </div>
           ${link}
-          <div>
-            ${chips}
-          </div>
+          ${chips}
         </div>
       </div>
     </div>

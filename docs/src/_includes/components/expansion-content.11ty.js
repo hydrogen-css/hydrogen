@@ -74,7 +74,7 @@ function render(data, props) {
       </button>
       <div
         data-h2-background-color="base(foreground)"
-        data-h2-padding="base(x1, x2)"
+        data-h2-padding="base(x1, x1, x1, x1.5) p-tablet(x1, x2)"
         data-h2-border="base(1px solid primary.darkest.20)"
         data-h2-radius="base(rounded)"
         data-h2-flex-grow="base(1)">

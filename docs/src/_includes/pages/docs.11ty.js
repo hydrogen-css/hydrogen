@@ -389,9 +389,10 @@ function render(data) {
       return output;
     }
     function render_expansion(item, index) {
-      let margin = 'data-h2-margin="base(x2, 0, 0, x1)"';
+      let margin =
+        'data-h2-margin="base(x1, 0, 0, x.5) p-tablet(x1, 0, 0, x1)"';
       if (index === 0) {
-        margin = 'data-h2-margin="base(0, 0, 0, x1)"';
+        margin = 'data-h2-margin="base(0, 0, 0, x.5) p-tablet(0, 0, 0, x1)"';
       }
       let output = String.raw`
         <div ${margin}>

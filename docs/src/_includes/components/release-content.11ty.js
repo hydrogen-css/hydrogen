@@ -26,7 +26,7 @@ function render(data, unique, release) {
           id: unique + '-' + release.version + '-' + change,
           alignment: 'left',
         })}
-        <ul data-h2-padding="base(0, 0, 0, x1)">
+        <ul data-h2-padding="base(0, 0, 0, x.75) p-tablet(0, 0, 0, x1)">
       `;
       release[change].forEach((item) => {
         let breaking_label = ``;
@@ -42,7 +42,9 @@ function render(data, unique, release) {
           if (item.changes[data.locale].length > 1) {
             item.changes[data.locale].forEach((change, index) => {
               if (index === 0) {
-                output = output + String.raw`${breaking_label}${change}<ul>`;
+                output =
+                  output +
+                  String.raw`${breaking_label}${change}<ul data-h2-padding="base(0, 0, 0, x.75) p-tablet(0, 0, 0, x1)">`;
               } else if (index === item.changes[data.locale].length - 1) {
                 output = output + String.raw`<li>${change}</li></ul>`;
               } else {

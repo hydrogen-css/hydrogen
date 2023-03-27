@@ -8,7 +8,7 @@ var data = {};
 
 function render(data, content) {
   let output = String.raw`
-    <div data-h2-margin="base(x2, 0, 0, x1) p-tablet(x1, 0, 0, x1)">
+    <div data-h2-margin="base(x1, 0, 0, x.5) p-tablet(x1, 0, 0, x1)">
   `;
   // Render the latest stable release
   output =

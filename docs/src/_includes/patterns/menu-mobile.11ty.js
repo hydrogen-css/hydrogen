@@ -21,9 +21,9 @@ function render(data) {
         base:children[>nav](translate(0, 100%)) 
         base:selectors[.active]:children[>nav](translate(0, -100%))"
       data-h2-transition="
-        base:children[>nav](.2s ease-in) 
-        base:selectors[.active]:children[>nav](.2s ease-out .1s)
-        base:selectors[.active]:children[>nav >a](.2s ease-out .3s)">
+        base:children[>nav](.2s ease) 
+        base:selectors[.active]:children[>nav](.2s ease .1s)
+        base:selectors[.active]:children[>nav >a](.2s ease .3s)">
       <div data-h2-padding="base(x.5, 0, 0, 0)">
         <button
           class="mobile-menu-trigger"
@@ -57,7 +57,7 @@ function render(data) {
           href=""
           title=""
           data-h2-position="base(absolute)"
-          data-h2-location="base(0, auto, auto, 50%)"
+          data-h2-location="base(-x.5, auto, auto, 50%)"
           data-h2-transform="base(translate(-50%, -100%))"
           data-h2-color="base:all(white)"
           data-h2-font-weight="base(700)"
