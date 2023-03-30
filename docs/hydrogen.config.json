@@ -60,20 +60,22 @@
         {
           "query_key": "base",
           "size": "100%",
-          "line_height": "1.5",
-          "type_scale": "1.15"
+          "type_scale": "1.15",
+          "line_height": "1.5"
         },
         {
           "query_key": "p-tablet",
           "size": "100%",
-          "line_height": "1.5",
-          "type_scale": "1.2"
+          "type_scale": "1.2",
+          "line_heights": {
+            "h6": "1.2"
+          }
         },
         {
           "query_key": "desktop",
           "size": "112.5%",
-          "line_height": "1.5",
-          "type_scale": "1.2"
+          "type_scale": "1.2",
+          "line_height": "1.5"
         }
       ],
       "colors": [

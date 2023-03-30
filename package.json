@@ -69,6 +69,7 @@
     "bracketSpacing": true,
     "tabWidth": 2,
     "useTabs": false,
-    "singleAttributePerLine": true
+    "singleAttributePerLine": true,
+    "printWidth": 100
   }
 }
