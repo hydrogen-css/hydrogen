@@ -71,5 +71,8 @@
     "useTabs": false,
     "singleAttributePerLine": true,
     "printWidth": 100
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
   }
 }
