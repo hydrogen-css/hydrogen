@@ -37,10 +37,7 @@
     "setup": "./setup.sh",
     "deploy": "./deploy.sh",
     "docs": "cd docs && npm start",
-    "": "",
-    "tests": "node -e 'require(\"./lib/scripts/run-all.test\").runTest()'",
-    "test-cmd-build": "node -e 'require(\"./lib/build.test\").run_tests()'",
-    "test-basics": "cd tests/test-basics && node -e 'require(\"./run.test\").run_tests()'"
+    "test": "jest"
   },
   "dependencies": {
     "autoprefixer": "^10.4.13",
