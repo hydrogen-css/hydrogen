@@ -23,9 +23,10 @@
     "build": "eleventy"
   },
   "dependencies": {
-    "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-navigation": "^0.3.3",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.2.2",
+    "@11ty/eleventy-upgrade-help": "^2.0.5",
     "@hydrogen-css/hydrogen": "^2.0.1",
     "autoprefixer": "^10.4.9",
     "cross-env": "^7.0.2",

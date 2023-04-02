@@ -1,13 +1,9 @@
 const { DateTime } = require('luxon');
 const { hydrogen_build } = require('@hydrogen-css/hydrogen/lib/build');
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
+const UpgradeHelper = require('@11ty/eleventy-upgrade-help');
 
 module.exports = function (eleventyConfig) {
-  // Serve from en directory
-  eleventyConfig.setBrowserSyncConfig({
-    startPath: 'en/',
-  });
-
   // Run Hydrogen after the eleventy build executes
   eleventyConfig.on('eleventy.after', () => {
     try {
@@ -108,55 +104,14 @@ module.exports = function (eleventyConfig) {
       });
   });
 
-  // eleventyConfig.addCollection('all_en', function (collectionApi) {
-  //   return collectionApi.getFilteredByGlob('./src/en/docs/**/*.md');
-  // });
-
-  // eleventyConfig.addCollection('all_fr', function (collectionApi) {
-  //   return collectionApi.getFilteredByGlob('./src/fr/docs/**/*.md');
-  // });
-
-  // eleventyConfig.addCollection('configuration_en', function (collectionApi) {
-  //   return collectionApi.getFilteredByGlob('./src/en/configuration/**/*.md');
-  // });
-
-  // eleventyConfig.addCollection('configuration_fr', function (collectionApi) {
-  //   return collectionApi.getFilteredByGlob('./src/fr/configuration/**/*.md');
-  // });
-
-  // eleventyConfig.addCollection('attributes_en', function (collectionApi) {
-  //   return collectionApi.getFilteredByGlob('./src/en/docs/attributes/**/*.md');
-  // });
-
-  // eleventyConfig.addCollection('attributes_fr', function (collectionApi) {
-  //   return collectionApi.getFilteredByGlob('./src/fr/docs/attributes/**/*.md');
-  // });
-
-  // eleventyConfig.addCollection('attributes_en_asc', function (collectionApi) {
-  //   return collectionApi
-  //     .getFilteredByGlob('./src/en/docs/attributes/**/*.md')
-  //     .sort(function (a, b) {
-  //       if (a.data.key > b.data.key) return 1;
-  //       else if (a.data.key < b.data.key) return -1;
-  //       else return 0;
-  //     });
-  // });
-
-  // eleventyConfig.addCollection('attributes_fr_asc', function (collectionApi) {
-  //   return collectionApi
-  //     .getFilteredByGlob('./src/fr/docs/attributes/**/*.md')
-  //     .sort(function (a, b) {
-  //       if (a.data.key > b.data.key) return 1;
-  //       else if (a.data.key < b.data.key) return -1;
-  //       else return 0;
-  //     });
-  // });
-
   // Copy Image Folder to /_site
   eleventyConfig.addPassthroughCopy('./src/static/img');
 
   // Copy favicon to route of /_site
   eleventyConfig.addPassthroughCopy({ './src/static/img/favicons': './' });
+
+  // If you have other `addPlugin` calls, it’s important that UpgradeHelper is added last.
+  // eleventyConfig.addPlugin(UpgradeHelper);
 
   return {
     dir: {
