@@ -1,5 +1,4 @@
 // Hydrogen data models
-let Release = require('../lib/data/release-model-definition');
 /**
  * @typedef {import('../lib/data/release-model-definition').Release} Release
  * @typedef {import('../lib/data/release-model-definition').Change} Change
@@ -26,9 +25,7 @@ module.exports = {
     {
       breaking: false,
       changes: {
-        en: [
-          'Adds support for a whitespace configuration in the settings file.',
-        ],
+        en: ['Adds support for a whitespace configuration in the settings file.'],
       },
       properties: ['margin', 'padding'],
     },
@@ -45,9 +42,7 @@ module.exports = {
     {
       breaking: false,
       changes: {
-        en: [
-          'Adds specificity to margin and padding so that they override reset styles.',
-        ],
+        en: ['Adds specificity to margin and padding so that they override reset styles.'],
       },
       properties: ['margin', 'padding'],
     },

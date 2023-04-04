@@ -1,5 +1,4 @@
 // Hydrogen data models
-let Release = require('../lib/data/release-model-definition');
 /**
  * @typedef {import('../lib/data/release-model-definition').Release} Release
  * @typedef {import('../lib/data/release-model-definition').Change} Change
@@ -49,9 +48,7 @@ module.exports = {
     {
       breaking: false,
       changes: {
-        en: [
-          'The setup script has been reworked to include the documentation environment.',
-        ],
+        en: ['The setup script has been reworked to include the documentation environment.'],
         fr: [
           "Le script d'installation a été retravaillé pour inclure l'environnement de documentation.",
         ],
@@ -60,9 +57,7 @@ module.exports = {
     {
       breaking: false,
       changes: {
-        en: [
-          'Logs passed to the console have been centralized and reworked for more flexibility.',
-        ],
+        en: ['Logs passed to the console have been centralized and reworked for more flexibility.'],
         fr: [
           'Les logs transmis à la console ont été centralisés et retravaillés pour plus de flexibilité.',
         ],

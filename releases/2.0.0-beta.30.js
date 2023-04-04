@@ -1,5 +1,4 @@
 // Hydrogen data models
-let Release = require('../lib/data/release-model-definition');
 /**
  * @typedef {import('../lib/data/release-model-definition').Release} Release
  * @typedef {import('../lib/data/release-model-definition').Change} Change
@@ -16,9 +15,7 @@ module.exports = {
     {
       breaking: true,
       changes: {
-        en: [
-          'Adds support for themes, each with their own default and dark mode settings.',
-        ],
+        en: ['Adds support for themes, each with their own default and dark mode settings.'],
       },
       migrations: {
         en: ['See the configuration model change for migration requirements.'],
@@ -56,9 +53,7 @@ module.exports = {
     {
       breaking: false,
       changes: {
-        en: [
-          'Adds support for attribute selectors inside the <code>:children</code> modifier.',
-        ],
+        en: ['Adds support for attribute selectors inside the <code>:children</code> modifier.'],
       },
     },
     {

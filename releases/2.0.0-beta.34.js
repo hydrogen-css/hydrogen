@@ -1,5 +1,4 @@
 // Hydrogen data models
-let Release = require('../lib/data/release-model-definition');
 /**
  * @typedef {import('../lib/data/release-model-definition').Release} Release
  * @typedef {import('../lib/data/release-model-definition').Change} Change
@@ -25,9 +24,7 @@ module.exports = {
     {
       breaking: false,
       changes: {
-        en: [
-          'The snippets file has been updated with many common CSS properties for ease-of-use.',
-        ],
+        en: ['The snippets file has been updated with many common CSS properties for ease-of-use.'],
       },
       notes: [],
     },
@@ -46,13 +43,7 @@ module.exports = {
         "offset now represents CSS offset and should be replaced with location to retain Hydrogen's original functionality.",
         'visibility continues to support invisible as a custom value, but the styles associated with visible have been moved to the revealed key in favor of supporting the actual CSS visible value.',
       ],
-      properties: [
-        'border',
-        'background-color',
-        'offset',
-        'location',
-        'visibility',
-      ],
+      properties: ['border', 'background-color', 'offset', 'location', 'visibility'],
     },
     {
       breaking: true,

@@ -1,5 +1,4 @@
 // Hydrogen data models
-let Release = require('../lib/data/release-model-definition');
 /**
  * @typedef {import('../lib/data/release-model-definition').Release} Release
  * @typedef {import('../lib/data/release-model-definition').Change} Change
@@ -17,9 +16,7 @@ module.exports = {
       breaking: false,
       changes: {
         en: ['Rolls back an accidental package publish of the 2.0.0 beta.'],
-        fr: [
-          'Annule une publication accidentelle de paquets de la version 2.0.0 beta.',
-        ],
+        fr: ['Annule une publication accidentelle de paquets de la version 2.0.0 beta.'],
       },
     },
   ],

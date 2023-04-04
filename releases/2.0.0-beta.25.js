@@ -1,5 +1,4 @@
 // Hydrogen data models
-let Release = require('../lib/data/release-model-definition');
 /**
  * @typedef {import('../lib/data/release-model-definition').Release} Release
  * @typedef {import('../lib/data/release-model-definition').Change} Change
@@ -38,9 +37,7 @@ module.exports = {
     {
       breaking: false,
       changes: {
-        en: [
-          'Updates snippets to be more concise now that there are many modifier types.',
-        ],
+        en: ['Updates snippets to be more concise now that there are many modifier types.'],
         fr: [
           "Met à jour les extraits pour qu'ils soient plus concis maintenant qu'il existe de nombreux types de modificateurs.",
         ],

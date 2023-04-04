@@ -1,5 +1,4 @@
 // Hydrogen data models
-let Release = require('../lib/data/release-model-definition');
 /**
  * @typedef {import('../lib/data/release-model-definition').Release} Release
  * @typedef {import('../lib/data/release-model-definition').Change} Change
@@ -107,9 +106,7 @@ module.exports = {
     {
       breaking: false,
       changes: {
-        en: [
-          "Hydrogen's documentation has been completely rebuilt from the ground up using 11ty.",
-        ],
+        en: ["Hydrogen's documentation has been completely rebuilt from the ground up using 11ty."],
       },
     },
     {

@@ -1,5 +1,4 @@
 // Hydrogen data models
-let Release = require('../lib/data/release-model-definition');
 /**
  * @typedef {import('../lib/data/release-model-definition').Release} Release
  * @typedef {import('../lib/data/release-model-definition').Change} Change
@@ -72,9 +71,7 @@ module.exports = {
     {
       breaking: false,
       changes: {
-        en: [
-          'Adds a new feedback link to the info object in the configuration file.',
-        ],
+        en: ['Adds a new feedback link to the info object in the configuration file.'],
         fr: [
           "Ajoute un nouveau lien de retour d'information à l'objet info dans le fichier de configuration.",
         ],
@@ -109,12 +106,8 @@ module.exports = {
     {
       breaking: false,
       changes: {
-        en: [
-          'Fixes the broken settings link in the info object in the configuration file.',
-        ],
-        fr: [
-          "Corrige le lien brisé des paramètres dans l'objet info du fichier de configuration.",
-        ],
+        en: ['Fixes the broken settings link in the info object in the configuration file.'],
+        fr: ["Corrige le lien brisé des paramètres dans l'objet info du fichier de configuration."],
       },
     },
   ],
