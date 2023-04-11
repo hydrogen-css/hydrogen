@@ -3,8 +3,8 @@
 node_modules
 hydrogen-logs
 cache
-# Test caches
-tests/**/hydrogen.config.json
 # Documentation
 docs/_site/
 docs/_tmp/
+# Test caches
+test/styles

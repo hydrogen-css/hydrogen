@@ -36,8 +36,11 @@
   "scripts": {
     "setup": "./setup.sh",
     "deploy": "./deploy.sh",
-    "docs": "cd docs && npm start",
-    "test": "jest"
+    "docs": "npm link --no-fund --no-audit && cd docs && npm link @hydrogen-css/hydrogen --no-fund --no-audit && npm start",
+    "docs-build": "npm link --no-fund --no-audit && cd docs && npm link @hydrogen-css/hydrogen --no-fund --no-audit && npm run build",
+    "test": "npm link --no-fund --no-audit && cd test && npm link @hydrogen-css/hydrogen --no-fund --no-audit && npm start",
+    "test-build": "npm link --no-fund --no-audit && cd test && npm link @hydrogen-css/hydrogen --no-fund --no-audit && npm run build",
+    "jest": "jest"
   },
   "dependencies": {
     "autoprefixer": "^10.4.13",

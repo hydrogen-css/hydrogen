@@ -1,0 +1,43 @@
+{
+  "name": "hydrogen-test-environment",
+  "version": "1.0.0",
+  "description": "Hydrogen's test website.",
+  "keywords": [],
+  "homepage": "https://hydrogen.design",
+  "bugs": {
+    "url": "https://github.com/hydrogen-css/hydrogen/issues/new"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Josh Beveridge",
+    "url": "https://joshbeveridge.ca"
+  },
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hydrogen-css/hydrogen"
+  },
+  "scripts": {
+    "start": "browser-sync start -s -w --startPath='markup/index.html' --no-open & H2DEBUG=true npx h2-watch",
+    "build": "H2DEBUG=true npx h2-build"
+  },
+  "devDependencies": {
+    "@hydrogen-css/hydrogen": "^2.0.1",
+    "browser-sync": "^2.29.1"
+  },
+  "engines": {
+    "node": ">=14.18.1",
+    "npm": ">=8.11.0"
+  },
+  "browserslist": [
+    "last 1 version and not dead"
+  ],
+  "prettier": {
+    "singleQuote": true,
+    "proseWrap": "preserve",
+    "bracketSpacing": true,
+    "tabWidth": 2,
+    "useTabs": false,
+    "singleAttributePerLine": true
+  }
+}
