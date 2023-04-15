@@ -1,5 +1,4 @@
 // Hydrogen data models
-let Release = require('../lib/data/release-model-definition');
 /**
  * @typedef {import('../lib/data/release-model-definition').Release} Release
  * @typedef {import('../lib/data/release-model-definition').Change} Change
@@ -41,9 +40,7 @@ module.exports = {
     {
       breaking: false,
       changes: {
-        en: [
-          'Adds support for normal and stretch prop values when defining a grid.',
-        ],
+        en: ['Adds support for normal and stretch prop values when defining a grid.'],
       },
       properties: ['flex-grid'],
     },
@@ -73,9 +70,7 @@ module.exports = {
     {
       breaking: false,
       changes: {
-        en: [
-          'Reworks a lot of the scripting into more centralized, reusable chunks.',
-        ],
+        en: ['Reworks a lot of the scripting into more centralized, reusable chunks.'],
       },
     },
     {

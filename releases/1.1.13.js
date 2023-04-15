@@ -1,5 +1,4 @@
 // Hydrogen data models
-let Release = require('../lib/data/release-model-definition');
 /**
  * @typedef {import('../lib/data/release-model-definition').Release} Release
  * @typedef {import('../lib/data/release-model-definition').Change} Change
@@ -28,22 +27,12 @@ module.exports = {
           'Sets transition all for these properties rather than dedicated values because when used in concert, the last one would always take precendence.',
         ],
       },
-      properties: [
-        'background-color',
-        'border',
-        'color',
-        'opacity',
-        'overlay',
-        'shadow',
-        'width',
-      ],
+      properties: ['background-color', 'border', 'color', 'opacity', 'overlay', 'shadow', 'width'],
     },
     {
       breaking: false,
       changes: {
-        en: [
-          'Fixes a bug that broke the production build script if the flex grid was disabled.',
-        ],
+        en: ['Fixes a bug that broke the production build script if the flex grid was disabled.'],
       },
     },
   ],

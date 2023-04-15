@@ -1,5 +1,4 @@
 // Hydrogen data models
-let Release = require('../lib/data/release-model-definition');
 /**
  * @typedef {import('../lib/data/release-model-definition').Release} Release
  * @typedef {import('../lib/data/release-model-definition').Change} Change
@@ -35,9 +34,7 @@ module.exports = {
     {
       breaking: false,
       changes: {
-        en: [
-          "Fixes CLI flags by allowing them to accept an empty value or 'true' to enable them.",
-        ],
+        en: ["Fixes CLI flags by allowing them to accept an empty value or 'true' to enable them."],
       },
     },
     {
@@ -59,9 +56,7 @@ module.exports = {
     {
       breaking: false,
       changes: {
-        en: [
-          "Fixes a bug where <code>flex-grid</code>'s gap property was being ignored.",
-        ],
+        en: ["Fixes a bug where <code>flex-grid</code>'s gap property was being ignored."],
       },
     },
   ],

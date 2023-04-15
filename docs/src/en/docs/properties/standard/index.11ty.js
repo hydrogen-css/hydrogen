@@ -1,9 +1,9 @@
 const docs_layout = require('../../../../_includes/pages/docs.11ty');
 const {
-  get_property_data,
-} = require('../../../../../node_modules/@hydrogen-css/hydrogen/lib/data/property-model');
+  get_css_property_data,
+} = require('../../../../../node_modules/@hydrogen-css/hydrogen/lib/data/css-property-data');
 
-let prop_data = get_property_data();
+let prop_data = get_css_property_data();
 let custom_props = prop_data.properties.custom_identifiers;
 let color_props = prop_data.properties.color.filter((item) => {
   return custom_props.indexOf(item) === -1;

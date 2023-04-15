@@ -1,5 +1,4 @@
 // Hydrogen data models
-let Release = require('../lib/data/release-model-definition');
 /**
  * @typedef {import('../lib/data/release-model-definition').Release} Release
  * @typedef {import('../lib/data/release-model-definition').Change} Change
@@ -24,26 +23,20 @@ module.exports = {
     {
       breaking: false,
       changes: {
-        en: [
-          'Adds a default configuration in the color settings for transparent.',
-        ],
+        en: ['Adds a default configuration in the color settings for transparent.'],
       },
     },
     {
       breaking: false,
       changes: {
-        en: [
-          'Adds the ability to use negative whitespace values in the margin attribute.',
-        ],
+        en: ['Adds the ability to use negative whitespace values in the margin attribute.'],
       },
       properties: ['margin'],
     },
     {
       breaking: false,
       changes: {
-        en: [
-          "Adds the opacity attribute so that you can now control an element's opacity.",
-        ],
+        en: ["Adds the opacity attribute so that you can now control an element's opacity."],
       },
       properties: ['opacity'],
     },
@@ -79,9 +72,7 @@ module.exports = {
     {
       breaking: false,
       changes: {
-        en: [
-          'Removes some legacy code and cleans up some dependencies in the script files.',
-        ],
+        en: ['Removes some legacy code and cleans up some dependencies in the script files.'],
       },
     },
     { breaking: false, changes: { en: ['Adds Prettier support.'] } },
@@ -96,9 +87,7 @@ module.exports = {
     {
       breaking: false,
       changes: {
-        en: [
-          'Renames the default theme colors to use agnostic language (e.g. purple => primary).',
-        ],
+        en: ['Renames the default theme colors to use agnostic language (e.g. purple => primary).'],
       },
     },
     {

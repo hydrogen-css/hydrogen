@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  data-h2
+  style="scroll-behavior: smooth"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <!-- SEO meta -->
+    <title>Hydrogen Test Environment</title>
+    <meta
+      name="description"
+      content="${
+          data.site.description[data.locale]
+        }"
+    />
+    <!-- Local styles -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../styles//hydrogen.css"
+    />
+    <!-- Google fonts -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    data-h2-background-color="base(background)"
+    data-h2-font-family="base(sans)"
+  >
+    <!-- Content -->
+    <div
+      data-h2-container="base(center, medium, x2)"
+      data-h2-padding-top="base(x2)"
+      data-h2-padding-bottom="base(x2)"
+    >
+      <div
+        data-h2-background="base(foreground)"
+        data-h2-padding="base(x3)"
+        data-h2-radius="base(5px)"
+        data-h2-shadow="base(medium)"
+        data-h2-margin="base(0, 0, x2, 0) base:children[>*:not(:first-child)](x1, 0, 0, 0)"
+      >
+        <h1>Heading level 1</h1>
+        <h2>Heading level 2</h2>
+        <h3>Heading level 3</h3>
+        <h4>Heading level 4</h4>
+        <h5>Heading level 5</h5>
+        <h6>Heading level 6</h6>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh
+          nisl condimentum id venenatis a. Nibh sit amet commodo nulla facilisi
+          nullam vehicula. Sit amet commodo nulla facilisi nullam. Placerat
+          vestibulum lectus mauris ultrices eros in cursus. Sagittis eu volutpat
+          odio facilisis. Mattis pellentesque id nibh tortor. Amet mauris
+          commodo quis imperdiet massa tincidunt nunc pulvinar.
+        </p>
+        <p data-h2-font-size="base(caption)">
+          Ultrices neque ornare aenean euismod elementum nisi. Molestie at
+          elementum eu facilisis sed odio morbi quis commodo. Quam id leo in
+          vitae turpis massa sed elementum. Porta nibh venenatis cras sed felis
+          eget velit aliquet. Donec pretium vulputate sapien nec sagittis
+          aliquam malesuada bibendum arcu. Tortor id aliquet lectus proin nibh
+          nisl.
+        </p>
+      </div>
+      <div
+        data-h2-flex-grid="base(flex-start, x2)"
+        data-h2-height="base:children[>div>div](x4)"
+        data-h2-cursor="base:children[>div>div](pointer)"
+        data-h2-radius="base:children[>div>div](5px)"
+        data-h2-shadow="base:children[>div>div](medium) base:children[>div>div:hover](largest)"
+        data-h2-transition="base:children[>div>div](box-shadow .3s ease)"
+        data-h2-width="base:children[>div>div](100%)"
+      >
+        <div data-h2-flex-item="base(1/2) p-tablet(1of4) laptop(1/6)">
+          <div data-h2-background-color="base(red)"></div>
+        </div>
+        <div data-h2-flex-item="base(1/2) p-tablet(1of4) laptop(1/6)">
+          <div data-h2-background-color="base(blue)"></div>
+        </div>
+        <div data-h2-flex-item="base(1/2) p-tablet(1of4) laptop(1/6)">
+          <div data-h2-background-color="base(yellow)"></div>
+        </div>
+        <div data-h2-flex-item="base(1/2) p-tablet(1of4) laptop(1/6)">
+          <div data-h2-background-color="base(green)"></div>
+        </div>
+        <div data-h2-flex-item="base(1/2) p-tablet(1of4) laptop(1/6)">
+          <div data-h2-background-color="base(orange)"></div>
+        </div>
+        <div data-h2-flex-item="base(1/2) p-tablet(1of4) laptop(1/6)">
+          <div data-h2-background-color="base(purple)"></div>
+        </div>
+      </div>
+      <div
+        data-h2-display="base(grid)"
+        data-h2-grid-template-columns="base(repeat(2, minmax(0, 1fr))) p-tablet(repeat(4, minmax(0, 1fr))) laptop(repeat(7, minmax(0, 1fr)))"
+        data-h2-gap="base(x2)"
+        data-h2-margin="base(x2, 0, 0, 0)"
+        data-h2-height="base:children[>div>div](x4)"
+        data-h2-cursor="base:children[>div>div](pointer)"
+        data-h2-radius="base:children[>div>div](5px)"
+        data-h2-shadow="base:children[>div>div](medium) base:children[>div>div:hover](largest)"
+        data-h2-transition="base:children[>div>div](box-shadow .3s ease)"
+        data-h2-width="base:children[>div>div](100%)"
+      >
+        <div>
+          <div data-h2-background-color="base(primary.lightest)"></div>
+        </div>
+        <div>
+          <div data-h2-background-color="base(primary.lighter)"></div>
+        </div>
+        <div>
+          <div data-h2-background-color="base(primary.light)"></div>
+        </div>
+        <div>
+          <div data-h2-background-color="base(primary)"></div>
+        </div>
+        <div>
+          <div data-h2-background-color="base(primary.dark)"></div>
+        </div>
+        <div>
+          <div data-h2-background-color="base(primary.darker)"></div>
+        </div>
+        <div>
+          <div data-h2-background-color="base(primary.darkest)"></div>
+        </div>
+      </div>
+      <div
+        data-h2-display="base(grid)"
+        data-h2-grid-template-columns="base(repeat(2, minmax(0, 1fr))) p-tablet(repeat(5, minmax(0, 1fr))) laptop(repeat(11, minmax(0, 1fr)))"
+        data-h2-gap="base(x2)"
+        data-h2-margin="base(x2, 0, 0, 0)"
+        data-h2-height="base:children[>div>div](x4)"
+        data-h2-cursor="base:children[>div>div](pointer)"
+        data-h2-radius="base:children[>div>div](5px)"
+        data-h2-shadow="base:children[>div>div](medium) base:children[>div>div:hover](largest)"
+        data-h2-transition="base:children[>div>div](box-shadow .3s ease)"
+        data-h2-width="base:children[>div>div](100%)"
+      >
+        <div>
+          <div data-h2-background-color="base(secondary.0)"></div>
+        </div>
+        <div>
+          <div data-h2-background-color="base(secondary.1)"></div>
+        </div>
+        <div>
+          <div data-h2-background-color="base(secondary.2)"></div>
+        </div>
+        <div>
+          <div data-h2-background-color="base(secondary.3)"></div>
+        </div>
+        <div>
+          <div data-h2-background-color="base(secondary.4)"></div>
+        </div>
+        <div>
+          <div data-h2-background-color="base(secondary.5)"></div>
+        </div>
+        <div>
+          <div data-h2-background-color="base(secondary.6)"></div>
+        </div>
+        <div>
+          <div data-h2-background-color="base(secondary.7)"></div>
+        </div>
+        <div>
+          <div data-h2-background-color="base(secondary.8)"></div>
+        </div>
+        <div>
+          <div data-h2-background-color="base(secondary.9)"></div>
+        </div>
+        <div>
+          <div data-h2-background-color="base(secondary.100)"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Local scripts -->
+    <script src="./index.js"></script>
+  </body>
+</html>

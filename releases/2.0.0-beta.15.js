@@ -1,5 +1,4 @@
 // Hydrogen data models
-let Release = require('../lib/data/release-model-definition');
 /**
  * @typedef {import('../lib/data/release-model-definition').Release} Release
  * @typedef {import('../lib/data/release-model-definition').Change} Change
@@ -92,17 +91,13 @@ module.exports = {
     {
       breaking: false,
       changes: {
-        en: [
-          'Adds validation to prevent bad query values from causing an error.',
-        ],
+        en: ['Adds validation to prevent bad query values from causing an error.'],
       },
     },
     {
       breaking: false,
       changes: {
-        en: [
-          'Adds validation to prevent empty query matches from making it into the parser.',
-        ],
+        en: ['Adds validation to prevent empty query matches from making it into the parser.'],
       },
     },
   ],

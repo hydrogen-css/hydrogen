@@ -1,5 +1,4 @@
 // Hydrogen data models
-let Release = require('../lib/data/release-model-definition');
 /**
  * @typedef {import('../lib/data/release-model-definition').Release} Release
  * @typedef {import('../lib/data/release-model-definition').Change} Change
@@ -39,9 +38,7 @@ module.exports = {
     {
       breaking: false,
       changes: {
-        en: [
-          'Adds a new npx h2-clean script that will remove any log files Hydrogen has created.',
-        ],
+        en: ['Adds a new npx h2-clean script that will remove any log files Hydrogen has created.'],
       },
     },
     {
@@ -55,9 +52,7 @@ module.exports = {
     {
       breaking: false,
       changes: {
-        en: [
-          'Radius now supports a 3 value syntax that matches its CSS counterpart.',
-        ],
+        en: ['Radius now supports a 3 value syntax that matches its CSS counterpart.'],
       },
       properties: ['radius'],
     },

@@ -6,6 +6,6 @@ cd docs
 npm install --no-fund
 npm link @hydrogen-css/hydrogen --no-fund --no-audit
 cd ..
-node lib/scripts/logging/setup/success.js
+node lib/scripts/console-logging/log-setup-success/index.js
 cd docs
 npm run build

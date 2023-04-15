@@ -1,8 +1,0 @@
-{
-  "name": "@hydrogen-css/hydrogen-tests-control",
-  "version": "1.0.0",
-  "scripts": {
-    "build": "npx h2-build",
-    "build-logs": "npx h2-build --logs"
-  }
-}

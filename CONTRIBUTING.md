@@ -14,26 +14,24 @@ Thanks for considering helping out with Hydrogen! Below is a set of helpful info
 
 ### Code conventions
 
-- Try to keep functions contained to their own files
+- Functions should be added to `index.js` files inside of a folder named after the function's name
+- Function folders should be prefixed with two digits (e.g. 01) if the function is a synchronous step or dependency
+- Functions should be accompanied by an `index.test.js` Jest test where possible
 - Format files with `prettier` on save
-- When writing new functions or editing existing functions, they should be accompanied by a sibling `.test.js` file containing unit-level tests
-  - Include tests to ensure the function handles valid and invalid input
-  - Include tests to ensure errors are properly returned
-  - Include tests to ensure the function returns output in the expected format
-- Leave concise comments as frequently as reasonably possible that describe the goal of the line or group
+- Leave concise comments as frequently as reasonably possible that describe the goal of the line or group of lines
 - New features, bugfixes, and enhancements should always be given their own branch, preferably named `release/X.X.X` if they're in bulk
 - All new branches should be submitted as pull requests
 
 ### System conventions
 
-- When adding new console logging, wrap the log in the appropriate checks to ensure that it doesn't add to the reduced output mode
+- When adding new console logging to Hydrogen's output, wrap the log in the appropriate checks to ensure that it doesn't add to the reduced output mode
 - Always update the correct documentation inside of `docs` in the same PR as the new/updated feature
 
 ## :desktop_computer: Development guides
 
 ### Understanding Hydrogen's build process
 
-The following is a step-by-step linear guide to how Hydrogen runs on a project.
+Hydrogen's folder structure inside of the `lib` directory does its best to represent the following process as closely as possible so that it's always clear where in the build you are while making changes.
 
 1. Locate and parse the user's `hydrogen.config.json` settings
    1. Find a configuration file

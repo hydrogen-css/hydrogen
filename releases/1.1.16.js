@@ -1,5 +1,4 @@
 // Hydrogen data models
-let Release = require('../lib/data/release-model-definition');
 /**
  * @typedef {import('../lib/data/release-model-definition').Release} Release
  * @typedef {import('../lib/data/release-model-definition').Change} Change
@@ -16,9 +15,7 @@ module.exports = {
     {
       breaking: false,
       changes: {
-        en: [
-          "Fixes a bug where the content value didn't reset the flex value.",
-        ],
+        en: ["Fixes a bug where the content value didn't reset the flex value."],
       },
       properties: ['flex-item'],
     },

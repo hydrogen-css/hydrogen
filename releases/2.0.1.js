@@ -1,5 +1,4 @@
 // Hydrogen data models
-let Release = require('../lib/data/release-model-definition');
 /**
  * @typedef {import('../lib/data/release-model-definition').Release} Release
  * @typedef {import('../lib/data/release-model-definition').Change} Change
@@ -17,9 +16,7 @@ module.exports = {
     {
       breaking: false,
       changes: {
-        en: [
-          'Console output has been reduced even further when the verbose option is disabled.',
-        ],
+        en: ['Console output has been reduced even further when the verbose option is disabled.'],
       },
     },
   ],

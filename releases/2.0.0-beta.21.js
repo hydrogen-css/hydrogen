@@ -1,5 +1,4 @@
 // Hydrogen data models
-let Release = require('../lib/data/release-model-definition');
 /**
  * @typedef {import('../lib/data/release-model-definition').Release} Release
  * @typedef {import('../lib/data/release-model-definition').Change} Change
@@ -22,9 +21,7 @@ module.exports = {
     {
       breaking: false,
       changes: {
-        en: [
-          'Reorganizes the cascade order of states to better reflect expected control.',
-        ],
+        en: ['Reorganizes the cascade order of states to better reflect expected control.'],
       },
     },
   ],

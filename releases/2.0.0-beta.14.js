@@ -1,5 +1,4 @@
 // Hydrogen data models
-let Release = require('../lib/data/release-model-definition');
 /**
  * @typedef {import('../lib/data/release-model-definition').Release} Release
  * @typedef {import('../lib/data/release-model-definition').Change} Change
@@ -16,9 +15,7 @@ module.exports = {
     {
       breaking: false,
       changes: {
-        en: [
-          'Adds reset styles to buttons, inputs, select elements, and text areas.',
-        ],
+        en: ['Adds reset styles to buttons, inputs, select elements, and text areas.'],
       },
     },
   ],
@@ -26,9 +23,7 @@ module.exports = {
     {
       breaking: false,
       changes: {
-        en: [
-          'Migrates the watch script away from node-watch in favor of chokidar.',
-        ],
+        en: ['Migrates the watch script away from node-watch in favor of chokidar.'],
       },
     },
   ],

@@ -1,5 +1,4 @@
 // Hydrogen data models
-let Release = require('../lib/data/release-model-definition');
 /**
  * @typedef {import('../lib/data/release-model-definition').Release} Release
  * @typedef {import('../lib/data/release-model-definition').Change} Change
@@ -27,9 +26,7 @@ module.exports = {
     {
       breaking: false,
       changes: {
-        en: [
-          'Updates the development setup script and adds new refresh and testing scripts.',
-        ],
+        en: ['Updates the development setup script and adds new refresh and testing scripts.'],
         fr: [
           'Mise à jour du script de configuration du développement et ajout de nouveaux scripts de rafraîchissement et de test.',
         ],
@@ -257,9 +254,7 @@ module.exports = {
       breaking: false,
       changes: {
         en: ['Adds <code>z-index</code> as an alias for <code>layer</code>.'],
-        fr: [
-          'Ajoute <code>z-index</code> comme alias pour <code>layer</code>.',
-        ],
+        fr: ['Ajoute <code>z-index</code> comme alias pour <code>layer</code>.'],
       },
       properties: ['layer'],
     },
@@ -278,9 +273,7 @@ module.exports = {
       breaking: false,
       changes: {
         en: ['Completely overhauls settings validation and validation output.'],
-        fr: [
-          'Refonte complète de la validation des paramètres et de la sortie de validation.',
-        ],
+        fr: ['Refonte complète de la validation des paramètres et de la sortie de validation.'],
       },
     },
     {
@@ -297,9 +290,7 @@ module.exports = {
     {
       breaking: false,
       changes: {
-        en: [
-          'Overhauls the property data model to be more concise and easier to manipulate.',
-        ],
+        en: ['Overhauls the property data model to be more concise and easier to manipulate.'],
         fr: [
           'Refonte du modèle de données des propriétés pour le rendre plus concis et plus facile à manipuler.',
         ],
