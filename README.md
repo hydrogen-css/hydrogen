@@ -65,20 +65,17 @@ It also runs Autoprefixer and CSSNano on itself to provide a complete, productio
 
 # Development and contribution
 
-- Pull the repository down
-- run `npm run setup`
-- do some development work in `lib`
-- write function tests in sibling `function.test.js` files, or add environment tests in `./tests`
-- run tests using the commands found in the root `package.json`
+- Fork the repository and pull it down
+- Navigate to the code repository and run `npm run setup`
+- To add a feature or propose a change, ensure you're doing the following:
+  - Update the relevant files in the `lib` directory
+  - Update or create matching Jest test files for your changes
+  - If relevant, add a visual test in the `test` directory's `markup`
+  - Update the documentation in the `docs` directory
+- Submit a pull request with details on your changes
 
-You can read up on specifics about how Hydrogen works on a technical level in the development README found in `CONTRIBUTING.md`.
+- Hydrogen takes two approaches to development testing:
+  - [Jest](https://jestjs.io/) is used for function level unit tests and can be run using `npm run jest`
+  - The `test` directory contains a working Hydrogen project for visual testing and real-world compiling tests and can be run using `npm run test`
 
-## Testing coverage
-
-The following functions are currently covered by automated tests:
-
-- `hydrogen_build`
-
-The following areas are currently covered by environment tests:
-
-- basic environment
+The folder structure in the `lib` directory tries to reflect the relationships between functions, including whether a function is a synchronous build step or a reusable parsing function. You can read up on specifics about how Hydrogen works on a technical level in the `CONTRIBUTING.md` file.
