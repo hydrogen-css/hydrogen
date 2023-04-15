@@ -61,21 +61,31 @@
           "query_key": "base",
           "size": "100%",
           "type_scale": "1.15",
-          "line_height": "1.5"
-        },
-        {
-          "query_key": "p-tablet",
-          "size": "100%",
-          "type_scale": "1.2",
           "line_heights": {
-            "h6": "1.2"
+            "caption": "1.5",
+            "copy": "1.4",
+            "h6": "1.1",
+            "h5": "1.1",
+            "h4": "1.1",
+            "h3": "1.1",
+            "h2": "1.1",
+            "h1": "1.1"
           }
         },
         {
-          "query_key": "desktop",
+          "query_key": "laptop",
           "size": "112.5%",
-          "type_scale": "1.2",
-          "line_height": "1.5"
+          "type_scale": "1.15",
+          "line_heights": {
+            "caption": "1.5",
+            "copy": "1.4",
+            "h6": "1.1",
+            "h5": "1.1",
+            "h4": "1.1",
+            "h3": "1.1",
+            "h2": "1.1",
+            "h1": "1.1"
+          }
         }
       ],
       "colors": [
