@@ -9,6 +9,8 @@
 /** @type {Release} */
 module.exports = {
   version: '2.0.2',
+  summary:
+    'This release centers around internal development testing and the addition of more granular control over type scale line height values.',
   featured: false,
   date: new Date('2023-03-27'),
   author: 'Josh Beveridge',

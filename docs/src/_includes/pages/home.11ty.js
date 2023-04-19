@@ -1,15 +1,13 @@
-const base_layout = require('../base.11ty');
-const breadcrumb_component = require('../patterns/breadcrumbs.11ty');
-const home_hero = require('../patterns/home-hero.11ty');
-const home_features = require('../patterns/home-features.11ty');
-const home_start = require('../patterns/home-start.11ty');
-const home_jump = require('../patterns/home-jump.11ty');
-
-var data = {
+let data = {
   layout: 'base.11ty.js',
 };
 
 function render(data) {
+  let breadcrumb_component = require('../patterns/breadcrumbs.11ty');
+  let home_hero = require('../patterns/home-hero.11ty');
+  let home_features = require('../patterns/home-features.11ty');
+  let home_start = require('../patterns/home-start.11ty');
+  let home_jump = require('../patterns/home-jump.11ty');
   return String.raw`
     ${breadcrumb_component.render(data)}
     ${home_hero.render(data)}

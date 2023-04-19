@@ -1,12 +1,10 @@
-const docs_layout = require('../patterns/docs-layout.11ty');
-const { history } = require('../../_data/releases');
-const release_title = require('../components/release-title.11ty');
-const release_content = require('../components/release-content.11ty');
-const expansion = require('../components/expansion-content.11ty');
-
 var data = {};
 
 function render(data, content) {
+  let { history } = require('../../_data/releases');
+  let release_title = require('../components/release-title.11ty');
+  let release_content = require('../components/release-content.11ty');
+  let expansion = require('../components/expansion-content.11ty');
   let output = String.raw`
     <div data-h2-margin="base(x2, 0, 0, x1) p-tablet(x1, 0, 0, x1)">
   `;

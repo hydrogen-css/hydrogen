@@ -1,6 +1,3 @@
-const releases = require('../../_data/releases');
-const docs_layout = require('../../_includes/pages/docs.11ty');
-
 let data = {
   layout: 'pages/docs.11ty.js',
   navigation: {

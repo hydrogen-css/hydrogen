@@ -180,7 +180,7 @@ let data = {
             {
               type: 'copy',
               items: [
-                "A theme's typography settings allow you to customize how Hydrogen's typography system will generate font sizes and layout whitespace values. By linking the typography setting with a media query defined in your <code>media</code> settings, you can trigger different styles at different breakpoints in order to create the best possible experience for the amount of space available.",
+                "A theme's typography settings allow you to customize how <a href='/en/docs/styling/typography' title='Learn more about configuring and using typography.'>Hydrogen's typography system</a> will generate font sizes and layout whitespace values. By linking the typography setting with a media query defined in your <code>media</code> settings, you can trigger different styles at different breakpoints in order to create the best possible experience for the amount of space available.",
                 'You can add as many typography definitions as you need to achieve your intended level of granularity and control.',
               ],
             },
@@ -190,8 +190,8 @@ let data = {
               items: [
                 "<code>query_key</code> accepts any of the keys you've defined in your <code>media</code> settings. This will trigger the typography object's settings at that media query. Setting the value to <code>base</code> (or your custom base query key) will set that specific typography setting to be the default setting.",
                 "<code>size</code> allows you to set the base font size on the <code>html</code> element. This will then set the foundation for your body copy and subsequent headings. It's recommended that you use a percentage value for this setting to avoid removing control from the user's accessibility options.",
-                "<code>line_height</code> will set your body copy's line height and also be used to generate the vertical rhythm and layout whitespace values.",
                 "<code>type_scale</code> will tell Hydrogen how to generate heading sizes from <code>h6</code> through <code>h1</code>. The <a href='https://type-scale.com/' title='Learn more about type scales.' target='_blank' rel='noreferrer'>type scale website</a> provides helpful information about type scales and how they work.",
+                "<code>line_heights</code> accepts optional configurations for each of the type scale's units, the most important of which is <code>body</code>, whose value is used to determine how Hydrogen calculates whitespace multipliers. <code>body</code> will default to a value of <code>1.4</code> if you don't specify a custom value.",
               ],
             },
             {
@@ -203,8 +203,18 @@ let data = {
                 '  {',
                 '    "query_key": "base",',
                 '    "size": "100%",',
-                '    "line_height": "1.4",',
                 '    "type_scale": "1.25",',
+                '    "line_heights": {',
+                '      "caption": "1.5",',
+                '      "body": "1.4",',
+                '      "h6": "1.1",',
+                '      "h5": "1.1",',
+                '      "h4": "1.1",',
+                '      "h3": "1.1",',
+                '      "h2": "1.1",',
+                '      "h1": "1.1",',
+                '      "display": "1.1"',
+                '    }',
                 '  },',
                 '  ...',
                 '],',

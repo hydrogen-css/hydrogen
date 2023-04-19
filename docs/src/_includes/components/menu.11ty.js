@@ -1,8 +1,7 @@
-const expansion_small = require('./expansion-small.11ty.js');
-
 var data = {};
 
 function render(data) {
+  let expansion_small = require('./expansion-small.11ty.js');
   function return_menu_item(label, url, { external, children }) {
     function external_data() {
       if (external) {
@@ -198,13 +197,21 @@ function render(data) {
   function menu_content() {
     let output = String.raw`
       <div>
-        <p 
-          data-h2-color="base(black)"
-          data-h2-font-weight="base(700)" 
-          data-h2-text-align="base(left)">
-          Main menu
-        </p>
-        <ul data-h2-padding="base(0)" data-h2-list-style="base(none)">
+        <div
+          data-h2-display="base(flex)"
+          data-h2-align-items="base(center)"
+          data-h2-gap="base(x1)">
+          <p 
+            data-h2-color="base(black)"
+            data-h2-font-weight="base(700)" 
+            data-h2-text-align="base(left)">
+            Main menu
+          </p>
+          <div
+            data-h2-height="base(1px)"
+            data-h2-background="base(primary)"
+            data-h2-flex-grow="base(1)"></div>
+        </div>
     `;
     output =
       output +
@@ -241,7 +248,7 @@ function render(data) {
         </ul>
       </nav>
     `;
-    output = output + String.raw`</div></ul>`;
+    output = output + String.raw`</div>`;
     return output;
   }
 
@@ -249,12 +256,21 @@ function render(data) {
     if (data.navigation.key != 'home') {
       let output = String.raw`
       <div data-h2-margin="base(x1 0 0 0)">
-        <p 
-          data-h2-color="base(black)"
-          data-h2-font-weight="base(700)" 
-          data-h2-text-align="base(left)">
-          On this page
-        </p>
+        <div
+          data-h2-display="base(flex)"
+          data-h2-align-items="base(center)"
+          data-h2-gap="base(x1)">
+          <p 
+            data-h2-color="base(black)"
+            data-h2-font-weight="base(700)" 
+            data-h2-text-align="base(left)">
+            On this page
+          </p>
+          <div
+            data-h2-height="base(1px)"
+            data-h2-background="base(primary)"
+            data-h2-flex-grow="base(1)"></div>
+        </div>
         <ul data-h2-padding="base(0)" data-h2-list-style="base(none)">
       `;
       data.main.forEach((item) => {
@@ -282,7 +298,7 @@ function render(data) {
           output = output + String.raw`</ul>`;
         }
       });
-      output = output + String.raw`</div></ul>`;
+      output = output + String.raw`</ul></div>`;
       return output;
     } else {
       return String.raw``;

@@ -1,14 +1,12 @@
-const base_layout = require('../base.11ty');
-const breadcrumb_component = require('../patterns/breadcrumbs.11ty');
-const docs_menu = require('../patterns/docs-menu.11ty');
-const docs_pagination = require('../patterns/docs-pagination.11ty');
-const docs_footer = require('../patterns/docs-footer.11ty');
-
-var data = {
+let data = {
   layout: 'base.11ty.js',
 };
 
 function render(data) {
+  let breadcrumb_component = require('./breadcrumbs.11ty');
+  let docs_menu = require('./docs-menu.11ty');
+  let docs_pagination = require('./docs-pagination.11ty');
+  let docs_footer = require('./docs-footer.11ty');
   function get_pagination() {
     if (data.navigation.pagination) {
       return docs_pagination.render(data);

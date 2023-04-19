@@ -22,7 +22,7 @@ let data = {
       type: 'copy',
       items: [
         "Based on your theme's <code>typography</code> settings, Hydrogen builds a custom <a href='https://type-scale.com/' title='Visit the Type Scale website to play around with type scale values.' target='_blank' rel='noreferrer'>type scale</a> that contains automated, incremental typography styles.",
-        'Hydrogen uses both the <code>type_scale</code> and <code>line_height</code> values to assign copy, heading, and caption font sizes and accompanying line heights that will automatically adapt to their respective media <code>query_key</code>.',
+        'Hydrogen uses both the <code>type_scale</code> and <code>line_heights</code> values to assign copy, heading, and caption font sizes and accompanying line heights that will automatically adapt to their respective media <code>query_key</code>.',
       ],
     },
     {
@@ -48,8 +48,8 @@ let data = {
               items: [
                 '<code>query_key</code>: is the <code>key</code> value that defines a particular media query. This value tells Hydrogen when to apply this specific set of typography styles.',
                 "<code>size</code>: determines the base value for your paragraph body copy. It's recommended that you use a percentage value for this setting to avoid unexpected accessibility limitations. <code>100%</code> will equal the user's current browser value (often <code>16px</code> by default).",
-                '<code>line_height</code>: determines the base value for your paragraph body copy. This value will be applied to headings in multiples and also determines Hydrogen\'s <a href="#rhythm" title="Learn more about how vertical rhythm works.">vertical rhythm system</a>.',
                 "<code>type_scale</code>: is the ratio at which headings should be increased in size from your base paragraph. If you're unsure what value to set, you can use the <a href='https://type-scale.com/' title='Visit the Type Scale website to play around with type scale values.' target='_blank' rel='noreferrer'>type scale</a> website to find one that suits your needs.",
+                "<code>line_heights</code> accepts optional configurations for each of the type scale's units, the most important of which is <code>body</code>, whose value is used to determine how Hydrogen calculates whitespace multipliers. <code>body</code> will default to a value of <code>1.4</code> if you don't specify a custom value.",
               ],
             },
             {
@@ -61,8 +61,18 @@ let data = {
                 '  {',
                 '    "query_key": "base",',
                 '    "size": "100%",',
-                '    "line_height": "1.5",',
                 '    "type_scale": "1.15"',
+                '    "line_heights": {',
+                '      "caption": "1.5",',
+                '      "body": "1.4",',
+                '      "h6": "1.1",',
+                '      "h5": "1.1",',
+                '      "h4": "1.1",',
+                '      "h3": "1.1",',
+                '      "h2": "1.1",',
+                '      "h1": "1.1",',
+                '      "display": "1.1"',
+                '    }',
                 '  },',
                 '  ...',
                 '],',
@@ -108,7 +118,7 @@ let data = {
                 '  This would be heading 1 sized.',
                 '</span>',
                 '',
-                '<span data-h2-font-size="base(copy)">',
+                '<span data-h2-font-size="base(body)">',
                 '  This would be paragraph sized.',
                 '</span>',
                 '',
@@ -133,7 +143,7 @@ let data = {
           type: 'copy',
           items: [
             'The next page, <a href="/en/docs/styling/layout" title="Learn more about whitespace and grids.">Layout</a>, goes into detail about how Hydrogen provides you with handy, consistent whitespace units. It\'s important to note, however, that these values have their root in your typography settings.',
-            'These space units are generated and adapt based on your configured line height, allowing you to set typography in a consistent vertical rhythm. These units use a common syntax inside of attributes: <code>x1</code>, <code>x2</code>, etc. These multipliers set space between elements in a way that echoes your content, creating a pleasant reading experience for your user.',
+            'These space units are generated and adapt based on your configured <code>body</code> line height, allowing you to set typography in a consistent vertical rhythm. These units use a common syntax inside of attributes: <code>x1</code>, <code>x2</code>, etc. These multipliers set space between elements in a way that echoes your content, creating a pleasant reading experience for your user.',
           ],
         },
         {
@@ -151,6 +161,7 @@ let data = {
     },
     {
       type: 'group',
+      early: true,
       items: [
         {
           type: 'rhythm-clear',

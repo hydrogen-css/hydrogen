@@ -1,9 +1,3 @@
-// Hydrogen dependencies
-
-// Local dependencies
-const heading = require('../components/headings.11ty');
-const footer = require('../patterns/footer.11ty');
-
 // Create pattern-specific data
 var data = {};
 
@@ -13,6 +7,9 @@ var data = {};
  * @returns {String} the rendered pattern
  */
 function render(data) {
+  // Local dependencies
+  let heading = require('../components/headings.11ty');
+  let footer = require('../patterns/footer.11ty');
   // Create sections
   function get_sections() {
     let sections = String.raw``;

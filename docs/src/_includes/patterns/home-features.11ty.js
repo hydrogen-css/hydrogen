@@ -1,10 +1,3 @@
-// Local dependencies
-const heading = require('../components/headings.11ty');
-const flourish = require('../components/flourish.11ty');
-const rule = require('../components/rule.11ty');
-const code = require('../components/code.11ty');
-const chip = require('../components/chip.11ty.js');
-
 // Create pattern-specific data
 var data = {};
 
@@ -14,6 +7,12 @@ var data = {};
  * @returns {String} the rendered pattern
  */
 function render(data) {
+  // Local dependencies
+  let heading = require('../components/headings.11ty');
+  let flourish = require('../components/flourish.11ty');
+  let rule = require('../components/rule.11ty');
+  let code = require('../components/code.11ty');
+  let chip = require('../components/chip.11ty.js');
   // Generate main features
   let main_features = ``;
   data.features.main.list.forEach(function (item, index) {

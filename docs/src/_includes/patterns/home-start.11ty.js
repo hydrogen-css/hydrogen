@@ -1,8 +1,3 @@
-// Local dependencies
-const heading = require('../components/headings.11ty');
-const rule = require('../components/rule.11ty');
-const code = require('../components/code.11ty');
-
 // Create pattern-specific data
 var data = {};
 
@@ -12,6 +7,10 @@ var data = {};
  * @returns {String} the rendered pattern
  */
 function render(data) {
+  // Local dependencies
+  let heading = require('../components/headings.11ty');
+  let rule = require('../components/rule.11ty');
+  let code = require('../components/code.11ty');
   // Generate steps
   let steps = ``;
   let counter = 0;

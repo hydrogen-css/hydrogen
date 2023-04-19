@@ -1,9 +1,8 @@
-const heading = require('../components/headings.11ty');
-const flourish = require('../components/flourish.11ty');
-
 var data = {};
 
 function render(data) {
+  let heading = require('../components/headings.11ty');
+  let flourish = require('../components/flourish.11ty');
   function set_icon() {
     let icon = {
       path: '/static/img/icon-gear.svg',

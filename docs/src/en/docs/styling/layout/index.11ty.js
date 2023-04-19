@@ -30,7 +30,7 @@ let data = {
         {
           type: 'copy',
           items: [
-            "As described in the <a href='/en/docs/styling/typography/#rhythm' title='Learn more about vertical rhythm.'>typography styling section</a>, these multiplier units are created by, and adapt to, your project's current typography settings. At their core, multipliers are rooted in your base paragraph's line-height value.",
+            "As described in the <a href='/en/docs/styling/typography/#rhythm' title='Learn more about vertical rhythm.'>typography styling section</a>, these multiplier units are created by, and adapt to, your project's current typography settings. At their core, multipliers are rooted in your typography's <code>body</code> line-height value.",
           ],
         },
         {

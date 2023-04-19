@@ -1,8 +1,5 @@
-const expansion_small = require('../components/expansion-small.11ty.js');
-
-var data = {};
-
 function render(data) {
+  let expansion_small = require('../components/expansion-small.11ty');
   function create_page_menu() {
     let output = ``;
     data.main.forEach((item) => {
@@ -306,12 +303,6 @@ function render(data) {
                 Hydrogen
               </a>
             </h1>
-            <hr
-              data-h2-border="base(none)"
-              data-h2-width="base(100%)"
-              data-h2-height="base(1px)"
-              data-h2-margin-top="base(x1.5)"
-              data-h2-background="base(primary.lighter) base:dark(primary.dark)">
             <!-- <form data-h2-margin="base(x1.5, auto, auto, auto)">
               <label
                 data-h2-display="base(block)"
@@ -327,22 +318,42 @@ function render(data) {
                 type="text"
                 placeholder="Find something...">
             </form> -->
-            <div data-h2-margin="base(x1.5 0 0 0)">
-              <p 
-                data-h2-color="base(black)"
-                data-h2-font-weight="base(700)" 
-                data-h2-text-align="base(left)">
-                Main menu
-              </p>
+            <div data-h2-margin="base(x2 0 0 0)">
+              <div
+                data-h2-display="base(flex)"
+                data-h2-align-items="base(center)"
+                data-h2-gap="base(x1)">
+                <p 
+                  data-h2-color="base(black)"
+                  data-h2-font-weight="base(700)" 
+                  data-h2-text-align="base(left)">
+                  Main menu
+                </p>
+                <div
+                  data-h2-height="base(1px)"
+                  data-h2-background="base(primary)"
+                  data-h2-flex-grow="base(1)">
+                </div>
+              </div>
               ${menu_content}
             </div>
             <div data-h2-margin="base(x1 0 0 0)">
-              <p 
-                data-h2-color="base(black)"
-                data-h2-font-weight="base(700)" 
-                data-h2-text-align="base(left)">
-                On this page
-              </p>
+              <div
+                data-h2-display="base(flex)"
+                data-h2-align-items="base(center)"
+                data-h2-gap="base(x1)">
+                <p 
+                  data-h2-color="base(black)"
+                  data-h2-font-weight="base(700)" 
+                  data-h2-text-align="base(left)">
+                  On this page
+                </p>
+                <div
+                  data-h2-height="base(1px)"
+                  data-h2-background="base(primary)"
+                  data-h2-flex-grow="base(1)">
+                </div>
+              </div>
               ${page_content}
             </div>
           </div>
@@ -352,6 +363,5 @@ function render(data) {
 }
 
 module.exports = {
-  data,
   render,
 };

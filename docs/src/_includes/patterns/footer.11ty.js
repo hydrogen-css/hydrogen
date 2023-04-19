@@ -1,8 +1,3 @@
-// Hydrogen dependencies
-
-// Local dependencies
-const theo = require('../components/icons/theo.11ty');
-
 // Create pattern-specific data
 var data = {};
 
@@ -13,6 +8,8 @@ var data = {};
  * @returns {String} the rendered pattern
  */
 function render(data, props) {
+  // Local dependencies
+  let theo = require('../components/icons/theo.11ty');
   let container =
     'data-h2-container="base(center, large, x1) p-tablet(center, large, x2) l-tablet(center, large, x3)"';
   if (data.navigation.key === 'home') {

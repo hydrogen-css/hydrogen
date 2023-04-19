@@ -143,9 +143,7 @@ function render(data, props) {
   let counter = 0;
   props.lines.forEach(function (item, index) {
     counter = counter + 1;
-    line_count =
-      line_count +
-      String.raw`<span data-h2-color="base:all(code.lighter)">${counter}</span><br>`;
+    line_count = line_count + String.raw`${counter}<br>`;
   });
   // Generate code lines
   // {% for item in code.lines %}{{ item }}<br>{% endfor %}
@@ -166,6 +164,7 @@ function render(data, props) {
       data-h2-background-color="base:all(code)"
       data-h2-border="base:all(1px solid white.1)"
       data-h2-color="base:all(white)"
+      data-h2-font-size="base:children[pre, code](caption)"
       data-h2-radius="base(code)"
       class="code_wrapper">
       ${render_header()}
@@ -181,7 +180,7 @@ function render(data, props) {
           <div>
             <pre
               data-h2-padding="base(x.75, 0, x.75, x1)"
-              data-h2-margin="base(0)"><code>${line_count}</code></pre>
+              data-h2-margin="base(0)"><code data-h2-color="base:all(code.lighter)">${line_count}</code></pre>
           </div>
           <div 
             data-h2-overflow="base(auto, visible)"

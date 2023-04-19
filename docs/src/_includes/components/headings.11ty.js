@@ -1,8 +1,4 @@
 // Local dependencies
-const cp_flourish = require('./flourish.11ty');
-const robot = require('./icons/robot.11ty');
-const flag = require('./icons/flag.11ty');
-const compass = require('./icons/compass.11ty');
 
 // Create component-specific data
 var data = {};
@@ -14,6 +10,10 @@ var data = {};
  * @returns {String} the rendered template
  */
 function render(data, props) {
+  let cp_flourish = require('./flourish.11ty');
+  let robot = require('./icons/robot.11ty');
+  let flag = require('./icons/flag.11ty');
+  let compass = require('./icons/compass.11ty');
   // Set font size
   let font_sizes = {
     display: 'data-h2-font-size="base(display)"',

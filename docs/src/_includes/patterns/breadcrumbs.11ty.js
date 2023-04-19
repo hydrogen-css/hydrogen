@@ -1,5 +1,3 @@
-const theme_switcher = require('../components/theme-switcher.11ty');
-
 var data = {};
 
 function generate_home_nav(data) {
@@ -83,6 +81,7 @@ function generate_crumbs(data) {
 }
 
 function render(data) {
+  let theme_switcher = require('../components/theme-switcher.11ty');
   let container =
     'data-h2-container="base(center, large, x1) p-tablet(center, large, x2) l-tablet(center, large, x3)"';
   let nav_id = '';

@@ -1,8 +1,7 @@
-const chip = require('../components/chip.11ty.js');
-
 var data = {};
 
 function render(data, content) {
+  let chip = require('../components/chip.11ty.js');
   let output = ``;
   Object.keys(content.content).forEach((item) => {
     let category = 'Stable';

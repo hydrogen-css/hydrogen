@@ -1,30 +1,27 @@
-const docs_layout = require('../patterns/docs-layout.11ty');
-const heading = require('../components/headings.11ty');
-const docs_header = require('../patterns/docs-header.11ty');
-const docs_release_featured = require('../patterns/releases-featured.11ty');
-const docs_release_latest = require('../patterns/releases-latest.11ty');
-const docs_release_summary = require('../patterns/releases-summary.11ty');
-const docs_history = require('../patterns/releases-history.11ty');
-const code = require('../components/code.11ty');
-const { latest, beta } = require('../../_data/releases');
-const expansion = require('../components/expansion-content.11ty');
-
-var data = {
+let data = {
   layout: 'patterns/docs-layout.11ty.js',
 };
 
 function render(data) {
+  let heading = require('../components/headings.11ty');
+  let docs_header = require('../patterns/docs-header.11ty');
+  let docs_release_featured = require('../patterns/releases-featured.11ty');
+  let docs_release_latest = require('../patterns/releases-latest.11ty');
+  let docs_release_summary = require('../patterns/releases-summary.11ty');
+  let docs_history = require('../patterns/releases-history.11ty');
+  let code = require('../components/code.11ty');
+  let expansion = require('../components/expansion-content.11ty');
   function create_content() {
     let content = ``;
     function render_title(item, index, level) {
       let margin = '';
       if (level === 'h3') {
-        margin = 'data-h2-margin="base(x3, 0, x.5, 0)"';
+        margin = 'data-h2-margin="base(x3, 0, x1, 0)"';
         if (index === 0) {
-          margin = 'data-h2-margin="base(0, 0, x.5, 0)"';
+          margin = 'data-h2-margin="base(0, 0, x1, 0)"';
         }
       } else if (level === 'h4' || level === 'h5' || level === 'h6') {
-        margin = 'data-h2-margin="base(x2, 0, x.5, 0)"';
+        margin = 'data-h2-margin="base(x2, 0, x1, 0)"';
       }
       if (item.link) {
         return heading.render(data, {
@@ -48,7 +45,7 @@ function render(data) {
     function render_copy(item, index) {
       let output = ``;
       item.items.forEach((content, item_index) => {
-        let margin = 'data-h2-margin="base(x.5, 0, 0, 0)"';
+        let margin = 'data-h2-margin="base(x1, 0, 0, 0)"';
         if (index === 0 && item_index === 0) {
           margin = '';
         }
@@ -137,7 +134,7 @@ function render(data) {
           data-h2-background="base(foreground)"
           data-h2-radius="base(rounded)"
           data-h2-shadow="base(large)"
-          data-h2-padding="base(0, x2)">
+          data-h2-padding="base:children[h3, h4, p](0, x2)">
           <span
             data-h2-height="base(x2)"
             data-h2-background="base(secondary.lightest.5)"
@@ -145,8 +142,8 @@ function render(data) {
             data-h2-justify-content="base(center)"
             data-h2-font-size="base(caption)"
             data-h2-display="base(flex)"
-            data-h2-width="base(100%)">x2 line height</span>
-          <h3>Heading 3</h3>
+            data-h2-width="base(100%)">body line-height x2</span>
+          <h3>Heading</h3>
           <span
             data-h2-height="base(x1)"
             data-h2-background="base(primary.lightest.5)"
@@ -154,7 +151,7 @@ function render(data) {
             data-h2-justify-content="base(center)"
             data-h2-font-size="base(caption)"
             data-h2-display="base(flex)"
-            data-h2-width="base(100%)">x1 line height</span>
+            data-h2-width="base(100%)">body line-height x1</span>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius morbi enim nunc faucibus a pellentesque sit amet porttitor.</p>
           <span
             data-h2-height="base(x1)"
@@ -163,34 +160,7 @@ function render(data) {
             data-h2-justify-content="base(center)"
             data-h2-font-size="base(caption)"
             data-h2-display="base(flex)"
-            data-h2-width="base(100%)">x1 line height</span>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius morbi enim nunc faucibus a pellentesque sit amet porttitor.</p>
-          <span
-            data-h2-height="base(x2)"
-            data-h2-background="base(secondary.lightest.5)"
-            data-h2-align-items="base(center)"
-            data-h2-justify-content="base(center)"
-            data-h2-font-size="base(caption)"
-            data-h2-display="base(flex)"
-            data-h2-width="base(100%)">x2 line height</span>
-          <h4>Heading 4</h4>
-          <span
-            data-h2-height="base(x1)"
-            data-h2-background="base(primary.lightest.5)"
-            data-h2-align-items="base(center)"
-            data-h2-justify-content="base(center)"
-            data-h2-font-size="base(caption)"
-            data-h2-display="base(flex)"
-            data-h2-width="base(100%)">x1 line height</span>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius morbi enim nunc faucibus a pellentesque sit amet porttitor.</p>
-          <span
-            data-h2-height="base(x1)"
-            data-h2-background="base(primary.lightest.5)"
-            data-h2-align-items="base(center)"
-            data-h2-justify-content="base(center)"
-            data-h2-font-size="base(caption)"
-            data-h2-display="base(flex)"
-            data-h2-width="base(100%)">x1 line height</span>
+            data-h2-width="base(100%)">body line-height x1</span>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius morbi enim nunc faucibus a pellentesque sit amet porttitor.</p>
           <span
             data-h2-height="base(x2)"
@@ -199,7 +169,34 @@ function render(data) {
             data-h2-justify-content="base(center)"
             data-h2-font-size="base(caption)"
             data-h2-display="base(flex)"
-            data-h2-width="base(100%)">x2 line height</span>
+            data-h2-width="base(100%)">body line-height x2</span>
+          <h4>Subheading</h4>
+          <span
+            data-h2-height="base(x1)"
+            data-h2-background="base(primary.lightest.5)"
+            data-h2-align-items="base(center)"
+            data-h2-justify-content="base(center)"
+            data-h2-font-size="base(caption)"
+            data-h2-display="base(flex)"
+            data-h2-width="base(100%)">body line-height x1</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius morbi enim nunc faucibus a pellentesque sit amet porttitor.</p>
+          <span
+            data-h2-height="base(x1)"
+            data-h2-background="base(primary.lightest.5)"
+            data-h2-align-items="base(center)"
+            data-h2-justify-content="base(center)"
+            data-h2-font-size="base(caption)"
+            data-h2-display="base(flex)"
+            data-h2-width="base(100%)">body line-height x1</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius morbi enim nunc faucibus a pellentesque sit amet porttitor.</p>
+          <span
+            data-h2-height="base(x2)"
+            data-h2-background="base(secondary.lightest.5)"
+            data-h2-align-items="base(center)"
+            data-h2-justify-content="base(center)"
+            data-h2-font-size="base(caption)"
+            data-h2-display="base(flex)"
+            data-h2-width="base(100%)">body line-height x2</span>
         </div>
       `;
       return output;
@@ -211,10 +208,10 @@ function render(data) {
           data-h2-radius="base(rounded)"
           data-h2-shadow="base(large)"
           data-h2-padding="base(x2)">
-          <h3>Heading 3</h3>
+          <h3>Heading</h3>
           <p data-h2-margin-top="base(x1)">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius morbi enim nunc faucibus a pellentesque sit amet porttitor.</p>
           <p data-h2-margin-top="base(x1)">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius morbi enim nunc faucibus a pellentesque sit amet porttitor.</p>
-          <h4 data-h2-margin-top="base(x2)">Heading 4</h4>
+          <h4 data-h2-margin-top="base(x2)">Subheading</h4>
           <p data-h2-margin-top="base(x1)">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius morbi enim nunc faucibus a pellentesque sit amet porttitor.</p>
           <p data-h2-margin-top="base(x1)">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius morbi enim nunc faucibus a pellentesque sit amet porttitor.</p>
         </div>
@@ -226,8 +223,14 @@ function render(data) {
       if (index === 0) {
         margin = '';
       }
+      let columns =
+        'data-h2-grid-template-columns="base(100%) desktop(repeat(2, minmax(0, 1fr)))"';
+      if (item.early) {
+        columns =
+          'data-h2-grid-template-columns="base(100%) p-tablet(repeat(2, minmax(0, 1fr)))"';
+      }
       let output = String.raw`
-        <div ${margin} data-h2-display="base(grid)" data-h2-grid-template-columns="base(100%) desktop(repeat(2, minmax(0, 1fr)))" data-h2-gap="base(x1) desktop(x3)">
+        <div ${margin} data-h2-display="base(grid)" ${columns} data-h2-gap="base(x1) desktop(x3)">
       `;
       let content = [];
       let example = [];

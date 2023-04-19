@@ -1,8 +1,7 @@
-const get_menu_data = require('../components/menu.11ty');
-
 var data = {};
 
 function render(data) {
+  let get_menu_data = require('../components/menu.11ty');
   return String.raw`
     <div
       class="mobile-menu"
@@ -21,9 +20,9 @@ function render(data) {
         base:children[>nav](translate(0, 100%)) 
         base:selectors[.active]:children[>nav](translate(0, -100%))"
       data-h2-transition="
-        base:children[>nav](.2s ease) 
-        base:selectors[.active]:children[>nav](.2s ease .1s)
-        base:selectors[.active]:children[>nav >a](.2s ease .3s)">
+        base:children[>nav](.5s ease) 
+        base:selectors[.active]:children[>nav](.5s ease)
+        base:selectors[.active]:children[>nav >a](.2s ease)">
       <div data-h2-padding="base(x.5, 0, 0, 0)">
         <button
           class="mobile-menu-trigger"
@@ -50,19 +49,10 @@ function render(data) {
         data-h2-position="base(absolute)"
         data-h2-layer="base(1)"
         data-h2-location="base(0, auto, auto, 0)"
-        data-h2-height="base(50vh)"
+        data-h2-height="base(x24)"
+        data-h2-max-height="base(70vh)"
         data-h2-width="base(100%)"
         aria-hidden="true">
-        <a
-          href=""
-          title=""
-          data-h2-position="base(absolute)"
-          data-h2-location="base(-x.5, auto, auto, 50%)"
-          data-h2-transform="base(translate(-50%, -100%))"
-          data-h2-color="base:all(white)"
-          data-h2-font-weight="base(700)"
-          data-h2-font-size="base(display)"
-          data-h2-text-decoration="base(none)">Hydrogen</a>
         <div
           data-h2-background="base(foreground)"
           data-h2-shadow="base(largest)"
@@ -70,8 +60,22 @@ function render(data) {
           data-h2-radius="base(rounded)"
           data-h2-overflow="base(auto)">
           <div
-            data-h2-padding="base(x1)"
+            data-h2-padding="base(x2)"
             data-h2-min-height="base(100%)">
+            <h1
+              data-h2-font-size="base(h1)"
+              data-h2-font-weight="base(800)"
+              data-h2-text-align="base(center)"
+              data-h2-margin="base(0, 0, x2, 0)">
+              <a
+                href="/${data.locale}/docs"
+                title=""
+                data-h2-color="base(black) base:hover(primary) base:all:focus-visible(black)"
+                data-h2-transition="base:hover(color, .2s, ease, 0s)"
+                data-h2-text-decoration="base(none)">
+                Hydrogen
+              </a>
+            </h1>
             ${get_menu_data.render(data)}
           </div>
         </div>

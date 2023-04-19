@@ -1,6 +1,4 @@
-const mobile_menu = require('./patterns/menu-mobile.11ty');
-
-var data = {};
+let data = {};
 
 function render(data) {
   const skip_to_content = data.site.components.skip_to_content;
@@ -86,12 +84,13 @@ function render(data) {
         <div
           class="mobile-menu-backdrop"
           data-h2-background="base:all(black)"
+          data-h2-display="l-tablet(none)"
           data-h2-position="base(fixed)"
           data-h2-height="base(100%)"
           data-h2-width="base(100%)"
           data-h2-opacity="base(0%) base:selectors[.active](95%)"
           data-h2-transform="base(translate(-100%, -100%)) base:selectors[.active](translate(0px, 0px))"
-          data-h2-transition="base(transform 0s ease .3s, opacity .1s linear .2s) base:selectors[.active](opacity .1s linear)"
+          data-h2-transition="base(transform 0s ease .5s, opacity .3s linear .2s) base:selectors[.active](opacity .3s linear .2s)"
           data-h2-z-index="base(90)"
           data-h2-overflow="base(hidden)">
           <div 
@@ -109,7 +108,7 @@ function render(data) {
             data-h2-opacity="base(20%)"
             data-h2-location="base(auto, -100%, -150%, auto)"></div>
         </div>
-        ${mobile_menu.render(data)}
+        ${require('./patterns/menu-mobile.11ty').render(data)}
         ${data.content}
         <!-- Local scripts -->
         <script src="/static/js/app.js"></script>

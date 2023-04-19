@@ -1,8 +1,7 @@
-const heading = require('./headings.11ty');
-
 var data = {};
 
 function render(data, unique, release) {
+  let heading = require('./headings.11ty');
   // Create the release information
   function get_release_content(release, change) {
     let title = '';
@@ -22,11 +21,11 @@ function render(data, unique, release) {
           tag: 'h5',
           size: 'h6',
           label: title,
-          margin: 'data-h2-margin="base(x1, 0, x.5, 0)"',
+          margin: 'data-h2-margin="base(x1, 0, 0, 0)"',
           id: unique + '-' + release.version + '-' + change,
           alignment: 'left',
         })}
-        <ul data-h2-padding="base(0, 0, 0, x.75) p-tablet(0, 0, 0, x1)">
+        <ul data-h2-padding="base(0, 0, 0, x.75) p-tablet(0, 0, 0, x1) base:children[li](x.5, 0, 0, 0)">
       `;
       release[change].forEach((item) => {
         let breaking_label = ``;

@@ -1,9 +1,8 @@
-const heading = require('./headings.11ty');
-const chip = require('./chip.11ty.js');
-
 var data = {};
 
 function render(data, unique, release) {
+  let heading = require('./headings.11ty');
+  let chip = require('./chip.11ty.js');
   // Create the type chip
   let release_type = ``;
   if (release.beta) {
@@ -18,6 +17,11 @@ function render(data, unique, release) {
   } else {
     // Patch release
     release_type = chip.render(data, { label: 'patch', color: 'primary' });
+  }
+  // Check for and build the summary if it's available
+  let summary = ``;
+  if (release.summary) {
+    summary = String.raw`<p data-h2-margin="base(0, 0, x1, 0)">${release.summary}</p>`;
   }
   // Create the breaking chip
   let breaking_chip = ``;
@@ -60,11 +64,11 @@ function render(data, unique, release) {
       alignment: 'left',
       chips: [release_type],
     })}
+    ${summary}
     <p data-h2-font-size="base(caption)">
-      <span data-h2-font-weight="base(700)">Released on:</span> ${release.date.toLocaleString(
-        'default',
-        { month: 'long' }
-      )} ${release.date.getDate()}, ${release.date.getFullYear()}
+      ${release.date.toLocaleString('default', {
+        month: 'long',
+      })} ${release.date.getDate()}, ${release.date.getFullYear()}
       ${breaking_chip}
     </p>
   `;

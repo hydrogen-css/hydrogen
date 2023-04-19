@@ -1,4 +1,3 @@
-const home_layout = require('../_includes/pages/home.11ty');
 const { latest } = require('../_data/releases');
 
 var data = {

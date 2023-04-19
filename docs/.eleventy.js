@@ -4,6 +4,41 @@ const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
 const UpgradeHelper = require('@11ty/eleventy-upgrade-help');
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.setServerOptions({
+    // Default values are shown:
+
+    // Whether the live reload snippet is used
+    liveReload: true,
+
+    // Whether DOM diffing updates are applied where possible instead of page reloads
+    domDiff: false,
+
+    // The starting port number
+    // Will increment up to (configurable) 10 times if a port is already in use.
+    port: 8080,
+
+    // Additional files to watch that will trigger server updates
+    // Accepts an Array of file paths or globs (passed to `chokidar.watch`).
+    // Works great with a separate bundler writing files to your output folder.
+    // e.g. `watch: ["_site/**/*.css"]`
+    watch: [],
+
+    // Show local network IP addresses for device testing
+    showAllHosts: false,
+
+    // Use a local key/certificate to opt-in to local HTTP/2 with https
+    https: {
+      // key: "./localhost.key",
+      // cert: "./localhost.cert",
+    },
+
+    // Change the default file encoding for reading/serving files
+    encoding: 'utf-8',
+
+    // Show the dev server version number on the command line
+    showVersion: true,
+  });
+
   // Run Hydrogen after the eleventy build executes
   eleventyConfig.on('eleventy.after', () => {
     try {
@@ -36,6 +71,14 @@ module.exports = function (eleventyConfig) {
     './src/static/scripts/app.js': './static/js/app.js',
     './src/static/_redirects': './_redirects',
   });
+
+  // Copy Image Folder to /_site
+  eleventyConfig.addPassthroughCopy('./src/static/img');
+
+  // Copy favicon to route of /_site
+  eleventyConfig.addPassthroughCopy({ './src/static/img/favicons': './' });
+
+  eleventyConfig.addWatchTarget('../releases/**/*');
 
   eleventyConfig.addCollection('en_docs', function (collectionApi) {
     return collectionApi
@@ -104,19 +147,14 @@ module.exports = function (eleventyConfig) {
       });
   });
 
-  // Copy Image Folder to /_site
-  eleventyConfig.addPassthroughCopy('./src/static/img');
-
-  // Copy favicon to route of /_site
-  eleventyConfig.addPassthroughCopy({ './src/static/img/favicons': './' });
-
   // If you have other `addPlugin` calls, it’s important that UpgradeHelper is added last.
   // eleventyConfig.addPlugin(UpgradeHelper);
 
   return {
     dir: {
       input: 'src',
-      templateFormats: ['11ty.js'],
+      includes: '_includes',
     },
+    templateFormats: ['11ty.js'],
   };
 };
