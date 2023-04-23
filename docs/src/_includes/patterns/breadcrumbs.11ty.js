@@ -3,8 +3,7 @@ var data = {};
 function generate_home_nav(data) {
   let item_list = ``;
   data.home_nav.forEach((item, index) => {
-    let item_style =
-      'data-h2-color="base:hover(primary) base:all:focus-visible(black)"';
+    let item_style = 'data-h2-color="base:hover(primary) base:all:focus-visible(black)"';
     if (item.label === 'Home') {
       item_style = 'data-h2-font-weight="base(800)"';
       item_style = item_style + ' data-h2-text-decoration="base(none)"';
@@ -37,17 +36,14 @@ function generate_crumbs(data) {
   let root = false;
   do {
     collection.forEach((post) => {
-      if (
-        post.data.locale === data.locale &&
-        post.data.navigation.key === active_key
-      ) {
+      if (post.data.locale === data.locale && post.data.navigation.key === active_key) {
         if (!current_page) {
           separator = String.raw`
             <span data-h2-margin="base(0, 0, 0, x.5)" data-h2-display="base(inline-block)">/</span>
           `;
           crumbs =
             String.raw`
-              <li>
+              <li data-h2-display="base(flex)">
                 <a
                   href="${post.url}"
                   title=""
@@ -59,7 +55,7 @@ function generate_crumbs(data) {
         } else {
           crumbs =
             String.raw`
-              <li>
+              <li data-h2-display="base(flex)">
                 <a 
                   href="${post.url}" 
                   title="" 
@@ -141,7 +137,7 @@ function render(data) {
       <div ${container}>
         <div
           data-h2-display="base(grid)"
-          data-h2-grid-template-columns="base(1fr) l-tablet(1fr 1fr)"
+          data-h2-grid-template-columns="base(1fr) l-tablet(70% 1fr)"
           data-h2-gap="base(x1)"
           data-h2-align-items="base(center)"
           data-h2-padding="base:children[ul](0)"
