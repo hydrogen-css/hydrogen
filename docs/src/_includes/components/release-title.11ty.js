@@ -67,7 +67,10 @@ function render(data, unique, release) {
     <p 
       data-h2-font-size="base(caption)"
       data-h2-vertical-align="base(middle) base:children[*](middle)"
-      data-h2-margin="base:children[> span:first-child](0, 0, x.07, 0) base:children[> span:not(:first-child)](x.25, 0, 0, 0) p-tablet:children[> span](0)">
+      data-h2-margin="
+        base:children[> span:first-child](0, 0, x.07, 0) 
+        base:children[> span:not(:first-child)](x.25, 0, 0, 0) 
+        p-tablet:children[> span:first-child, > span:not(:first-child)](0)">
       ${release_type}<span data-h2-margin="base(0, x.25)" data-h2-display="base(none) p-tablet(inline)">•</span>
       <span data-h2-display="base(block) p-tablet(inline)">Released: ${release.date.toLocaleString(
         'default',

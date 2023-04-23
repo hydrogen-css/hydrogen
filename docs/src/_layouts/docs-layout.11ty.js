@@ -41,14 +41,15 @@ function render(data) {
         <div 
           class="test-before" 
           data-h2-display="base(grid)"
-          data-h2-grid-template-columns="base(1fr) l-tablet(x15 minmax(0, 1fr))"
+          data-h2-grid-template-columns="base(1fr) l-tablet(minmax(0, 1fr) x15)"
           data-h2-gap="base(x1) l-tablet(x3) desktop(x4)">
           <div
+            data-h2-order="base(2)"
             data-h2-position="base(relative)" 
             data-h2-display="base(none) l-tablet(block)">
             ${docs_menu.render(data)}
           </div>
-          <div>
+          <div data-h2-order="base(1)">
             ${data.content}
             ${get_pagination()}
           </div>

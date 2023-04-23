@@ -33,7 +33,7 @@ function render(data, props) {
         data-h2-radius="base(circle)"
         data-h2-outline="base(none)"
         data-h2-border="
-          base(none)
+          base(1px solid primary.darkest.2)
           base:children[>div](x.1 solid foreground)
           base:all:focus-visible:children[>div](x.1 solid black)"
         data-h2-transition="base(box-shadow, .2s, ease)"
@@ -65,7 +65,7 @@ function render(data, props) {
         <span
           class="ec-expanded-icon"
           data-h2-position="base(absolute)"
-          data-h2-top="base(calc(50% + 1px))"
+          data-h2-top="base(50%)"
           data-h2-left="base(50%)"
           data-h2-transform="base(translate(-50%, -50%))"
           data-h2-font-weight="base(600)">

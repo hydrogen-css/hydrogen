@@ -30,6 +30,10 @@ module.exports = function (eleventyConfig) {
     // Show the dev server version number on the command line
     showVersion: true,
   });
+  // Add the Hydrogen configuration file as a watch target
+  eleventyConfig.addWatchTarget('./hydrogen.config.json');
+  // Add the Hydrogen library release directory as a watch target for easy reloading
+  eleventyConfig.addWatchTarget('../releases/**/*');
   // Run Hydrogen after the eleventy build executes
   eleventyConfig.on('eleventy.after', () => {
     try {
@@ -61,8 +65,6 @@ module.exports = function (eleventyConfig) {
     './src/static/img': './static/img',
     './src/static/img/favicons': './',
   });
-  // Add the Hydrogen library release directory as a watch target for easy reloading
-  eleventyConfig.addWatchTarget('../releases/**/*');
   // Build the English collections
   // Full site
   eleventyConfig.addCollection('en_site', function (collectionApi) {

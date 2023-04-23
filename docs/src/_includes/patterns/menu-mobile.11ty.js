@@ -1,7 +1,7 @@
 var data = {};
 
 function render(data) {
-  let get_menu_data = require('../components/menu.11ty');
+  let menu_data = require('../components/menu.11ty');
   return String.raw`
     <div
       class="mobile-menu"
@@ -28,6 +28,7 @@ function render(data) {
           class="mobile-menu-trigger"
           data-h2-background="base:all(code) base:all:focus-visible(focus)"
           data-h2-border="base(none)"
+          data-h2-border-top="base:all(1px solid primary.lightest.2)"
           data-h2-padding="base(x1, x1, calc(x1 + 5px), x1)"
           data-h2-shadow="base(largest)"
           data-h2-overflow="base(hidden)"
@@ -55,6 +56,7 @@ function render(data) {
         aria-hidden="true">
         <div
           data-h2-background="base(foreground)"
+          data-h2-border="base(1px solid primary.darkest.2)"
           data-h2-shadow="base(largest)"
           data-h2-height="base(100%)"
           data-h2-radius="base(rounded)"
@@ -62,20 +64,7 @@ function render(data) {
           <div
             data-h2-padding="base(x1.5, x2, x2, x2)"
             data-h2-min-height="base(100%)">
-            <h1
-              data-h2-font-weight="base(800)"
-              data-h2-text-align="base(center)"
-              data-h2-margin="base(0, 0, x1.5, 0)">
-              <a
-                href="/${data.locale}/docs"
-                title=""
-                data-h2-color="base(black) base:hover(primary) base:all:focus-visible(black)"
-                data-h2-transition="base:hover(color, .2s, ease, 0s)"
-                data-h2-text-decoration="base(none)">
-                Hydrogen
-              </a>
-            </h1>
-            ${get_menu_data.render(data)}
+            ${menu_data.render(data)}
           </div>
         </div>
       </nav>

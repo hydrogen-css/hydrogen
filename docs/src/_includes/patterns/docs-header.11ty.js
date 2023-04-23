@@ -24,9 +24,25 @@ function render(data) {
   function generate_sub() {
     let sub = ``;
     if (data.navigation.key === 'docs') {
-      let links = ``;
+      let links = String.raw`
+        <div 
+            data-h2-display="base(grid)"
+            data-h2-grid-template-columns="base(100%)"
+            data-h2-gap="base(x1)">
+      `;
       function generate_links() {
-        data.header_index.forEach((item) => {
+        data.header_index.forEach((item, index) => {
+          if (index === Math.ceil((data.header_index.length - 1) / 2)) {
+            links =
+              links +
+              String.raw`
+              </div>
+              <div
+                data-h2-display="base(grid)"
+                data-h2-grid-template-columns="base(100%)"
+                data-h2-gap="base(x1)">
+            `;
+          }
           links =
             links +
             String.raw`
@@ -56,6 +72,7 @@ function render(data) {
               </div>
             `;
         });
+        links = links + `</div>`;
         return links;
       }
       sub = String.raw`
@@ -100,7 +117,7 @@ function render(data) {
       <div data-h2-layer="base(2, relative)">
         ${heading.render(data, {
           tag: 'h2',
-          size: 'h1',
+          size: 'display',
           label: data.title_long ? data.title_long : data.title,
           id: false,
           color: 'data-h2-color="base:all(white)"',
