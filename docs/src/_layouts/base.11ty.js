@@ -11,9 +11,7 @@ function render(data) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- SEO meta -->
         <title>${data.title} · ${data.site.name}</title>
-        <meta name="description" content="${
-          data.site.description[data.locale]
-        }"/>
+        <meta name="description" content="${data.site.description[data.locale]}">
         <!-- 11ty -->
         <meta name="generator" content="Eleventy">
         <!-- Favicons -->
@@ -30,8 +28,8 @@ function render(data) {
         <meta property="og:image:width" content="1201">
         <meta property="og:image:height" content="628">
         <!-- Local styles -->
-        <link rel="stylesheet" type="text/css" href="/static/css/hydrogen.css"/>
-        <link rel="stylesheet" type="text/css" href="/static/css/app.css"/>
+        <link rel="stylesheet" type="text/css" href="/static/css/hydrogen.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/app.css">
         <!-- Google fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,7 +55,7 @@ function render(data) {
         data-h2-font-family="base(sans)">
         <a
           href="#nav"
-          title=${skip_to_nav.title[data.locale]}
+          title="${skip_to_nav.title[data.locale]}"
           style="outline: none;"
           data-h2-display="base(none) l-tablet(block)"
           data-h2-background-color="base(primary.darker) base:focus-visible(focus)"
@@ -70,7 +68,7 @@ function render(data) {
         </a>
         <a
           href="#main"
-          title=${skip_to_content.title[data.locale]}
+          title="${skip_to_content.title[data.locale]}"
           style="outline: none;"
           data-h2-display="base(block)"
           data-h2-background-color="base(primary.darker) base:focus-visible(focus)"
