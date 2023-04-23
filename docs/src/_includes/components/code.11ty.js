@@ -190,7 +190,7 @@ function render(data, props) {
             <pre
               data-h2-display="base(flex)"
               data-h2-padding="base(x.75, 0)"
-              data-h2-margin="base(0)"><code data-h2-display="base(block)" data-h2-padding="base(0, x1, 0, 0)">${code_lines}</code></pre>
+              data-h2-margin="base(0)"><code data-h2-display="base(block)" data-h2-padding="base(0, x1, 0, 0)">${code_lines_safe}</code></pre>
           </div>
         </div>
       </div>
