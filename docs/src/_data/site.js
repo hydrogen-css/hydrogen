@@ -76,7 +76,7 @@ module.exports = {
           fr: '',
         },
         label: {
-          en: 'Copy code',
+          en: 'Copy',
           fr: '',
         },
         label_active: {

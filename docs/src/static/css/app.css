@@ -1,6 +1,5 @@
 a:hover {
-  transition: color var(--h2-transition-duration-default)
-    var(--h2-transition-function-ease);
+  transition: color var(--h2-transition-duration-default) var(--h2-transition-function-ease);
 }
 
 [data-h2] .is-active {
@@ -106,28 +105,4 @@ strong {
 .code_wrapper button.copied .confirmation {
   opacity: 1;
   transition: opacity 0.2s ease;
-}
-
-.code_content {
-  display: none;
-}
-
-pre > code {
-  background-color: initial !important;
-  color: inherit !important;
-  /* padding: 0 !important; */
-  border-radius: 0;
-  top: 0 !important;
-}
-
-h1 > a:focus-visible,
-p > a:focus-visible,
-.h2-light p > a:focus-visible,
-li > a:focus-visible,
-.h2-light li > a:focus-visible,
-li > p > a:focus-visible,
-.h2-light li > p > a:focus-visible {
-  /* background-color: var(--h2-color-focus);
-  color: var(--h2-color-black);
-  outline: none; */
 }

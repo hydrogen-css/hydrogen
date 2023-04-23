@@ -104,7 +104,9 @@ function render(data, props) {
               <span
                 data-h2-color="base:all(white)"
                 data-h2-display="base(block)"
-                data-h2-padding="base(x.5, x1)">${props.file}</span>
+                data-h2-padding="base(x.5, x1)"
+                data-h2-font-family="base(mono)"
+                data-h2-font-size="base(caption)">${props.file}</span>
             </div>
             ${copy_button}
           </div>
@@ -140,11 +142,9 @@ function render(data, props) {
   // Return the component
   return String.raw`
     <div
-      data-h2-font-family="base(mono)"
       data-h2-background-color="base:all(code)"
       data-h2-border="base:all(1px solid white.1)"
       data-h2-color="base:all(white)"
-      data-h2-font-size="base:children[pre, code](caption)"
       data-h2-radius="base(code)"
       class="code_wrapper">
       ${render_header()}
@@ -160,7 +160,7 @@ function render(data, props) {
           <div>
             <pre
               data-h2-padding="base(x.75, 0, x.75, x1)"
-              data-h2-margin="base(0)"><code data-h2-color="base:all(code.lighter)">${line_count}</code></pre>
+              data-h2-margin="base(0)"><code data-h2-color="base:all(code.lighter)" data-h2-font-family="base(mono)" data-h2-font-size="base(caption)">${line_count}</code></pre>
           </div>
           <div 
             data-h2-overflow="base(auto, visible)"
@@ -168,13 +168,14 @@ function render(data, props) {
             data-h2-border-left="base:focus-visible(x.5 solid focus)"
             data-h2-padding="base(0, 0, 0, x.35)">
             <pre
-              data-h2-display="base(block)"
               data-h2-padding="base(x.75, 0)"
-              data-h2-margin="base(0)"><code data-h2-display="base(block)" data-h2-padding="base(0, x1, 0, 0)">${code_lines_safe}</code></pre>
+              data-h2-margin="base(0)"><code data-h2-padding="base(0, x1, 0, 0)" data-h2-font-family="base(mono)" data-h2-font-size="base(caption)">${code_lines_safe}</code></pre>
           </div>
         </div>
       </div>
-      <textarea class="code_content">${code_lines_safe}</textarea>
+      <textarea 
+        class="code_content"
+        data-h2-display="base(none)">${code_lines_safe}</textarea>
     </div>
   `;
 }
