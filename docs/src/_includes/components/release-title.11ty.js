@@ -30,7 +30,7 @@ function render(data, unique, release) {
   //   color: 'error',
   // });
   let breaking_chip_template = String.raw`
-    <span data-h2-display="base(none) p-tablet(inline)" data-h2-margin="base(0, x.25)" data-h2-color="base(white.dark)">|</span><span data-h2-display="base(block) p-tablet(inline)" data-h2-font-weight="base(700)" data-h2-color="base(error.dark)" data-h2-margin="base(x.25, 0, 0, 0) p-tablet(0)">🚨 Breaking</span>
+    <span data-h2-margin="base(0, x.25)" data-h2-display="base(none) p-tablet(inline)">•</span><span data-h2-display="base(block) p-tablet(inline)" data-h2-font-weight="base(700)" data-h2-color="base(error.dark)">🚨 Breaking</span>
   `;
   if (release.features && release.features.length > 0) {
     release.features.forEach((feature) => {
@@ -62,13 +62,19 @@ function render(data, unique, release) {
       margin: 'data-h2-margin="base(0, 0, x.5, 0)"',
       id: unique + '-' + release.version,
       alignment: 'left',
-      chips: [release_type],
     })}
     ${summary}
-    <p data-h2-font-size="base(caption)">
-      ${release.date.toLocaleString('default', {
-        month: 'long',
-      })} ${release.date.getDate()}, ${release.date.getFullYear()}
+    <p 
+      data-h2-font-size="base(caption)"
+      data-h2-vertical-align="base(middle) base:children[*](middle)"
+      data-h2-margin="base:children[> span:first-child](0, 0, x.07, 0) base:children[> span:not(:first-child)](x.25, 0, 0, 0) p-tablet:children[> span](0)">
+      ${release_type}<span data-h2-margin="base(0, x.25)" data-h2-display="base(none) p-tablet(inline)">•</span>
+      <span data-h2-display="base(block) p-tablet(inline)">Released: ${release.date.toLocaleString(
+        'default',
+        {
+          month: 'long',
+        }
+      )} ${release.date.getDate()}, ${release.date.getFullYear()}</span>
       ${breaking_chip}
     </p>
   `;

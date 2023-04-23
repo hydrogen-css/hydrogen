@@ -3,10 +3,10 @@ let data = {
 };
 
 function render(data) {
-  let breadcrumb_component = require('./breadcrumbs.11ty');
-  let docs_menu = require('./docs-menu.11ty');
-  let docs_pagination = require('./docs-pagination.11ty');
-  let docs_footer = require('./docs-footer.11ty');
+  let breadcrumb_component = require('../_includes/patterns/breadcrumbs.11ty');
+  let docs_menu = require('../_includes/patterns/docs-menu.11ty');
+  let docs_pagination = require('../_includes/patterns/docs-pagination.11ty');
+  let docs_footer = require('../_includes/patterns/docs-footer.11ty');
   function get_pagination() {
     if (data.navigation.pagination) {
       return docs_pagination.render(data);

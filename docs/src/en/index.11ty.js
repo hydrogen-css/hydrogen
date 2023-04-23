@@ -1,7 +1,7 @@
 const { latest } = require('../_data/releases');
 
 var data = {
-  layout: 'pages/home.11ty.js',
+  layout: 'home.11ty.js',
   navigation: {
     key: 'home',
   },

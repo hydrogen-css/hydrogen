@@ -1,16 +1,16 @@
 let data = {
-  layout: 'patterns/docs-layout.11ty.js',
+  layout: 'docs-layout.11ty.js',
 };
 
 function render(data) {
-  let heading = require('../components/headings.11ty');
-  let docs_header = require('../patterns/docs-header.11ty');
-  let docs_release_featured = require('../patterns/releases-featured.11ty');
-  let docs_release_latest = require('../patterns/releases-latest.11ty');
-  let docs_release_summary = require('../patterns/releases-summary.11ty');
-  let docs_history = require('../patterns/releases-history.11ty');
-  let code = require('../components/code.11ty');
-  let expansion = require('../components/expansion-content.11ty');
+  let heading = require('../_includes/components/headings.11ty');
+  let docs_header = require('../_includes/patterns/docs-header.11ty');
+  let docs_release_featured = require('../_includes/patterns/releases-featured.11ty');
+  let docs_release_latest = require('../_includes/patterns/releases-latest.11ty');
+  let docs_release_summary = require('../_includes/patterns/releases-summary.11ty');
+  let docs_history = require('../_includes/patterns/releases-history.11ty');
+  let code = require('../_includes/components/code.11ty');
+  let expansion = require('../_includes/components/expansion-content.11ty');
   function create_content() {
     let content = ``;
     function render_title(item, index, level) {

@@ -60,13 +60,12 @@ function render(data) {
           data-h2-radius="base(rounded)"
           data-h2-overflow="base(auto)">
           <div
-            data-h2-padding="base(x2)"
+            data-h2-padding="base(x1.5, x2, x2, x2)"
             data-h2-min-height="base(100%)">
             <h1
-              data-h2-font-size="base(h1)"
               data-h2-font-weight="base(800)"
               data-h2-text-align="base(center)"
-              data-h2-margin="base(0, 0, x2, 0)">
+              data-h2-margin="base(0, 0, x1.5, 0)">
               <a
                 href="/${data.locale}/docs"
                 title=""

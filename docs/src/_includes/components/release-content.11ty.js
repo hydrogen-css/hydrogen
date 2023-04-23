@@ -6,11 +6,11 @@ function render(data, unique, release) {
   function get_release_content(release, change) {
     let title = '';
     if (change === 'features') {
-      title = 'New features';
+      title = '✨ New features (' + release[change].length + ')';
     } else if (change === 'optimizations') {
-      title = 'Optimizations';
+      title = '🛠️ Optimizations (' + release[change].length + ')';
     } else if (change === 'bugfixes') {
-      title = 'Bugfixes';
+      title = '🪲 Bugfixes (' + release[change].length + ')';
     }
     let output = ``;
     if (release[change] && release[change].length > 0) {
@@ -25,7 +25,7 @@ function render(data, unique, release) {
           id: unique + '-' + release.version + '-' + change,
           alignment: 'left',
         })}
-        <ul data-h2-padding="base(0, 0, 0, x.75) p-tablet(0, 0, 0, x1) base:children[li](x.5, 0, 0, 0)">
+        <ul data-h2-padding="base(0, 0, 0, x.75) p-tablet(0, 0, 0, x1) base:children[li](x.5, 0, 0, 0)" data-h2-word-break="base:children[code](break-all)">
       `;
       release[change].forEach((item) => {
         let breaking_label = ``;
@@ -85,6 +85,9 @@ function render(data, unique, release) {
   }
   // Generate the release HTML
   return String.raw`
+    ${require('./rule.11ty').render(data, {
+      margin: 'data-h2-margin="base(x1, 0, 0, 0)"',
+    })}
     ${features}
     ${optimizations}
     ${bugfixes}

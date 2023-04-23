@@ -1,5 +1,5 @@
 let data = {
-  layout: 'pages/docs.11ty.js',
+  layout: 'docs.11ty.js',
   navigation: {
     key: 'docs',
     parent: 'home',

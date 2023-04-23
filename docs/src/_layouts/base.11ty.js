@@ -108,7 +108,7 @@ function render(data) {
             data-h2-opacity="base(20%)"
             data-h2-location="base(auto, -100%, -150%, auto)"></div>
         </div>
-        ${require('./patterns/menu-mobile.11ty').render(data)}
+        ${require('../_includes/patterns/menu-mobile.11ty').render(data)}
         ${data.content}
         <!-- Local scripts -->
         <script src="/static/js/app.js"></script>

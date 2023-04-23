@@ -15,9 +15,9 @@ var path = require('path');
 // Script ==========================================================================================
 
 module.exports = {
-  history: require(path.resolve('../releases')).releases(),
-  latest: require(path.resolve('../releases')).stable(),
-  stable: require(path.resolve('../releases')).stable(),
-  beta: require(path.resolve('../releases')).beta(),
-  featured: require(path.resolve('../releases')).featured(),
+  history: require('@hydrogen-css/hydrogen/releases').releases(),
+  latest: require('@hydrogen-css/hydrogen/releases').stable(),
+  stable: require('@hydrogen-css/hydrogen/releases').stable(),
+  beta: require('@hydrogen-css/hydrogen/releases').beta(),
+  featured: require('@hydrogen-css/hydrogen/releases').featured(),
 };

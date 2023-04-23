@@ -1,7 +1,6 @@
-const docs_layout = require('../../../../_includes/pages/docs.11ty');
 const {
   get_css_property_data,
-} = require('../../../../../node_modules/@hydrogen-css/hydrogen/lib/data/css-property-data');
+} = require('@hydrogen-css/hydrogen/lib/data/css-property-data');
 
 let prop_data = get_css_property_data();
 let custom_props = prop_data.properties.custom_identifiers;
@@ -25,7 +24,7 @@ let transition_props = prop_data.properties.transition.filter((item) => {
 });
 
 let data = {
-  layout: 'pages/docs.11ty.js',
+  layout: 'docs.11ty.js',
   navigation: {
     order: 16,
     key: 'standard-properties',
