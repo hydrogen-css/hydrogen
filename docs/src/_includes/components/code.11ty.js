@@ -168,7 +168,7 @@ function render(data, props) {
             data-h2-border-left="base:focus-visible(x.5 solid focus)"
             data-h2-padding="base(0, 0, 0, x.35)">
             <pre
-              data-h2-display="base(flex)"
+              data-h2-display="base(block)"
               data-h2-padding="base(x.75, 0)"
               data-h2-margin="base(0)"><code data-h2-display="base(block)" data-h2-padding="base(0, x1, 0, 0)">${code_lines_safe}</code></pre>
           </div>
