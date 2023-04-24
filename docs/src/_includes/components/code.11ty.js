@@ -76,7 +76,7 @@ function render(data, props) {
             data-h2-background-color="base(transparent) base:focus-visible(focus)"
             data-h2-color="base:all(white) base:all:hover(primary.lighter) base:all:focus-visible(black)"
             data-h2-border="base(0px solid transparent)"
-            data-h2-border-left="base:all(1px solid white.1)"
+            data-h2-border-left="base:all(1px solid primary.lightest.2)"
             data-h2-cursor="base(pointer)"
             data-h2-padding="base(x.5, x1)"
             data-h2-text-decoration="base(underline)" 
@@ -112,7 +112,7 @@ function render(data, props) {
           </div>
           <hr
             data-h2-height="base(1px)"
-            data-h2-background-color="base:all(white.1)"
+            data-h2-background-color="base:all(primary.lightest.2)"
             data-h2-margin="base(0)"
             data-h2-border="base(0px solid transparent)" />
         `;
@@ -143,7 +143,7 @@ function render(data, props) {
   return String.raw`
     <div
       data-h2-background-color="base:all(code)"
-      data-h2-border="base:all(1px solid white.1)"
+      data-h2-border="base:all(1px solid primary.lightest.2)"
       data-h2-color="base:all(white)"
       data-h2-radius="base(code)"
       class="code_wrapper">

@@ -26,7 +26,7 @@ function render(data) {
           data-h2-height="base(100%)"
           data-h2-background="base:children[button](foreground)"
           data-h2-cursor="base:children[button](pointer)"
-          data-h2-border="base:children[button](none)"
+          data-h2-border="base:children[button](1px solid primary.darkest.2)"
           data-h2-outline="base:children[button:focus-visible](none)"
           data-h2-radius="base:children[button](rounded)"
           data-h2-padding="base:children[button](x1)"
@@ -62,8 +62,7 @@ function render(data) {
       ];
       let example_pills = ``;
       examples.forEach((item) => {
-        example_pills =
-          example_pills + chip.render(data, { label: item, color: 'primary' });
+        example_pills = example_pills + chip.render(data, { label: item, color: 'primary' });
       });
       example = String.raw`
         <div

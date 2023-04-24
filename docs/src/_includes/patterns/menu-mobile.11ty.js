@@ -29,7 +29,7 @@ function render(data) {
           data-h2-background="base:all(code) base:all:focus-visible(focus)"
           data-h2-border="base(none)"
           data-h2-border-top="base:all(1px solid primary.lightest.2)"
-          data-h2-padding="base(x1, x1, calc(x1 + 5px), x1)"
+          data-h2-padding="base(x1, x1, calc(x1.5 + 5px), x1)"
           data-h2-shadow="base(largest)"
           data-h2-overflow="base(hidden)"
           data-h2-width="base(100%)"

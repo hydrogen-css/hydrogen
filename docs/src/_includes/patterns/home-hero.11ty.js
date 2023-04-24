@@ -71,9 +71,7 @@ function render(data) {
               data-h2-max-width="base(x18)"
               data-h2-color="base:all(white.80)"
               data-h2-margin="base(x1, auto, 0, auto) p-tablet(x1, 0, 0, auto)"
-              data-h2-text-align="base(center) p-tablet(right)">${
-                data.site.slogan[data.locale]
-              }</p>
+              data-h2-text-align="base(center) p-tablet(right)">${data.site.slogan[data.locale]}</p>
           </div>
         </div>
         <h1
@@ -96,10 +94,11 @@ function render(data) {
         <div
           data-h2-display="base(grid)"
           data-h2-grid-template-columns="base(1fr) l-tablet(1fr 1fr 1fr)"
-          data-h2-gap="base(x1) l-tablet(x2 x1)"
+          data-h2-gap="base(x.5) l-tablet(x2 x1)"
           data-h2-background-color="base:children[>div](foreground)"
           data-h2-radius="base:children[>div](rounded)"
           data-h2-padding="base:children[>div](x1) l-tablet:children[>div](x2)"
+          data-h2-border="base:children[>div](1px solid primary.darkest.2)"
           data-h2-shadow="base:children[>div](large)"
           data-h2-color="base:children[p:first-child](primary.dark)"
           data-h2-font-weight="base:children[p:first-child](800)"

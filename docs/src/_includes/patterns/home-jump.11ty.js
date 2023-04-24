@@ -28,9 +28,7 @@ function render(data) {
       }
       sections = sections.concat(String.raw`
         <div>
-          <p data-h2-font-weight="base(700)" data-h2-color="base(primary.dark)">${
-            i.title
-          }</p>
+          <p data-h2-font-weight="base(700)" data-h2-color="base(primary.dark)">${i.title}</p>
           ${rule.render(data, {
             margin: 'data-h2-margin="base(x.25, 0, x1, 0)"',
           })}
@@ -94,7 +92,8 @@ function render(data) {
         data-h2-position="base(relative)" 
         data-h2-container="base(center, medium, x1) p-tablet(center, medium, x2) l-tablet(center, medium, x3)">
         <div
-          data-h2-margin="base(-x3, 0, 0, calc(4rem + x2))"
+          data-h2-margin="base(-x3, 0, 0, 0) p-tablet(-x3, 0, 0, calc(4rem + x2))"
+          data-h2-border="base(1px solid primary.darkest.2)"
           data-h2-background-color="base(foreground)"
           data-h2-radius="base(rounded)"
           data-h2-padding="base(x1) l-tablet(x2)"
