@@ -23,8 +23,7 @@ function render(data, props) {
       data-h2-display="base(grid)"
       data-h2-grid-template-columns="l-tablet(repeat(2, minmax(0, 1fr)))"
       data-h2-gap="base(x2)"
-      data-h2-padding-bottom="base(x7) l-tablet(x4)"
-      data-h2-overflow="base(hidden)">
+      data-h2-padding-bottom="base(x7) l-tablet(x4)">
       <div 
         data-h2-text-align="base(center) l-tablet(left)"
         data-h2-position="base(relative)"
@@ -36,21 +35,21 @@ function render(data, props) {
         <div
           data-h2-display="base(block)"
           data-h2-position="base(absolute)"
-          data-h2-location="base(auto, auto, -x3.5, 50%) l-tablet(auto, auto, -x4, 0)"
+          data-h2-location="base(auto, auto, -x3.5, 50%) l-tablet(auto, auto, -x4, -10px)"
           data-h2-transform="base(translate(-50%, 0)) l-tablet(translate(0, 0))"
           >
           <span 
             data-h2-display="base(inline-block)"
-            data-h2-transition="base(transform .2s ease-in-out)" 
+            data-h2-transition="base(transform .5s cubic-bezier(.68,-0.55,.27,1.55))" 
             data-h2-transform="base(translate(0, 60%)) l-tablet(translate(0, 60%)) l-tablet:hover(translate(0, 0))"
-            data-h2-width="base(x3)">
+            data-h2-width="base(x3.2)">
             ${theo.render(data)}
           </span>
           <span 
             data-h2-display="base(inline-block)"
-            data-h2-transition="base(transform .2s ease-in-out)" 
+            data-h2-transition="base(transform .5s cubic-bezier(.68,-0.55,.27,1.55))" 
             data-h2-transform="base(translate(0, 60%)) l-tablet(translate(0, 60%)) l-tablet:hover(translate(0, 0))"
-            data-h2-width="base(x2.5)">
+            data-h2-width="base(x3)">
             ${sybil.render(data)}
           </span>
         </div>
@@ -82,7 +81,8 @@ function render(data, props) {
   let footer_content = String.raw`
     <div
       data-h2-padding="base(x4, 0, 0, 0)"
-      data-h2-position="base(relative)">
+      data-h2-position="base(relative)"
+      data-h2-overflow="base(hidden)">
       <div ${container}>
         ${footer}
       </div>
