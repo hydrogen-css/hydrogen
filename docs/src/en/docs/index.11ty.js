@@ -5,7 +5,7 @@ let data = {
     parent: 'home',
   },
   title: 'Documentation',
-  title_long: 'Welcome to the docs',
+  title_long: 'Documentation',
   header_index: [
     {
       path: '/en/docs/installation',
@@ -41,7 +41,7 @@ let data = {
   main: [
     {
       type: 'title',
-      label: 'About the docs',
+      label: 'Welcome to Hydrogen!',
       id: 'about',
     },
     {
@@ -53,24 +53,7 @@ let data = {
     },
     {
       type: 'title',
-      label: 'Featured release',
-      id: 'featured',
-      link: {
-        path: '/en/docs/releases',
-        label: 'View all updates',
-        title: "View all of Hydrogen's documented releases.",
-      },
-    },
-    {
-      type: 'copy',
-      items: ['Check out the latest and greatest major release!'],
-    },
-    {
-      type: 'featured',
-    },
-    {
-      type: 'title',
-      label: 'Latest releases',
+      label: 'Recent updates',
       id: 'releases',
       link: {
         path: '/en/docs/releases',
@@ -79,7 +62,31 @@ let data = {
       },
     },
     {
-      type: 'latest',
+      type: 'copy',
+      items: [
+        'Learn more about the latest and greatest releases containing new features, optimized tooling, bugfixes, and a better overall experience.',
+      ],
+    },
+    {
+      type: 'section',
+      content: [
+        {
+          type: 'title',
+          label: 'Featured release',
+          id: 'featured',
+        },
+        {
+          type: 'featured',
+        },
+        {
+          type: 'title',
+          label: 'Latest stable and beta releases',
+          id: 'latest',
+        },
+        {
+          type: 'latest',
+        },
+      ],
     },
   ],
 };

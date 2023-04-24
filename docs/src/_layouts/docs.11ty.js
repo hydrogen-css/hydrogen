@@ -85,11 +85,9 @@ function render(data) {
       item.items.forEach((list_item) => {
         if (Array.isArray(list_item)) {
           if (item.style === 'ordered') {
-            output =
-              output + String.raw`<ol data-h2-padding="base(0, 0, 0, x1)">`;
+            output = output + String.raw`<ol data-h2-padding="base(0, 0, 0, x1)">`;
           } else if (item.style === 'unordered') {
-            output =
-              output + String.raw`<ul data-h2-padding="base(0, 0, 0, x1)">`;
+            output = output + String.raw`<ul data-h2-padding="base(0, 0, 0, x1)">`;
           }
           list_item.forEach((sub_list_item) => {
             output =
@@ -223,11 +221,9 @@ function render(data) {
       if (index === 0) {
         margin = '';
       }
-      let columns =
-        'data-h2-grid-template-columns="base(100%) desktop(repeat(2, minmax(0, 1fr)))"';
+      let columns = 'data-h2-grid-template-columns="base(100%) desktop(repeat(2, minmax(0, 1fr)))"';
       if (item.early) {
-        columns =
-          'data-h2-grid-template-columns="base(100%) p-tablet(repeat(2, minmax(0, 1fr)))"';
+        columns = 'data-h2-grid-template-columns="base(100%) p-tablet(repeat(2, minmax(0, 1fr)))"';
       }
       let output = String.raw`
         <div ${margin} data-h2-display="base(grid)" ${columns} data-h2-gap="base(x1) desktop(x3)">
@@ -345,6 +341,10 @@ function render(data) {
           output = output + render_group(item, index, 'h4');
         } else if (item.type === 'expansion') {
           output = output + render_expansion(item, index);
+        } else if (item.type === 'featured') {
+          output = output + render_featured(item, index);
+        } else if (item.type === 'latest') {
+          output = output + render_latest(item, index);
         } else if (item.type === 'section') {
           output = output + render_subsection(item, index);
         }
@@ -392,8 +392,7 @@ function render(data) {
       return output;
     }
     function render_expansion(item, index) {
-      let margin =
-        'data-h2-margin="base(x1, 0, 0, x.5) p-tablet(x1, 0, 0, x1)"';
+      let margin = 'data-h2-margin="base(x1, 0, 0, x.5) p-tablet(x1, 0, 0, x1)"';
       if (index === 0) {
         margin = 'data-h2-margin="base(0, 0, 0, x.5) p-tablet(0, 0, 0, x1)"';
       }

@@ -78,9 +78,9 @@ function render(data) {
           data-h2-order="base(1) p-tablet(2)"
           data-h2-color="base:all(white)"
           data-h2-font-weight="base(700)"
-          data-h2-padding="base(x4, 0, 0, 0) p-tablet(0, 0, x5, 0)"
+          data-h2-padding="base(x4, 0, 0, 0) p-tablet(0, 0, x4, 0)"
           data-h2-text-align="base(center) p-tablet(left)"
-          data-h2-font-size="base(display)">${data.site.name}</h1>
+          data-h2-font-size="base(calc(var(--h2-font-size-display) * 1.15))">${data.site.name}</h1>
       </div>
     </div>
     <div
