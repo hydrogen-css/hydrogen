@@ -97,8 +97,7 @@ function render(data) {
       </entry>
     `;
   });
-  return String.raw`
-    <?xml version="1.0" encoding="utf-8"?>
+  return String.raw`<?xml version="1.0" encoding="utf-8"?>
     <feed xmlns="http://www.w3.org/2005/Atom" xml:base="${data.metadata.url}">
       <title>${data.metadata.title}</title>
       <subtitle>${data.metadata.subtitle}</subtitle>

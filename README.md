@@ -1,6 +1,6 @@
 # 🌞 Welcome to Hydrogen
 
-<img alt='npm (tag)' src='https://img.shields.io/npm/v/@hydrogen-css/hydrogen/latest?color=%239D5CFF&label=latest'> <img alt='npm (tag)' src='https://img.shields.io/npm/v/@hydrogen-css/hydrogen/beta?color=%239D5CFF&label=beta'> <img alt='Netlify' src='https://img.shields.io/netlify/f508b5d3-904e-4a1b-9ec9-cf8c2334f0e3?label=docs'> <a href='https://hydrogen.design/feed.xml' title="Subscribe to updates."><img src='https://img.shields.io/badge/rss-active-orange'></a>
+<img alt='npm (tag)' src='https://img.shields.io/npm/v/@hydrogen-css/hydrogen/latest?color=%239D5CFF&label=latest'> <img alt='npm (tag)' src='https://img.shields.io/npm/v/@hydrogen-css/hydrogen/beta?color=%239D5CFF&label=beta'> <img alt='Netlify' src='https://img.shields.io/netlify/f508b5d3-904e-4a1b-9ec9-cf8c2334f0e3?label=docs'> <a href='https://hydrogen.design/feed.xml' title="Subscribe to updates."><img src='https://img.shields.io/badge/feed-active-orange'></a>
 
 Hydrogen is an open-source design and CSS utility framework powered by data-attributes.
 
