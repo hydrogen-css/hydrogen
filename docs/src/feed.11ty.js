@@ -74,17 +74,19 @@ function render(data) {
     let optimizations = content_type(post, 'optimizations');
     let bugfixes = content_type(post, 'bugfixes');
     return String.raw`
-      <div data-h2-font-family="base(sans)">
-        ${summary}
-        <p>
-          <span>Released: ${post.date.toLocaleString('default', {
-            month: 'long',
-          })} ${post.date.getDate()}, ${post.date.getFullYear()}</span>
-        </p>
-        <hr data-h2-background-color="base(black.lightest)" data-h2-height="base(1px)" data-h2-border="base(none)">
-        ${features}
-        ${optimizations}
-        ${bugfixes}
+      <div data-h2="">
+        <div data-h2-font-family="base(sans)">
+          ${summary}
+          <p>
+            <span>Released: ${post.date.toLocaleString('default', {
+              month: 'long',
+            })} ${post.date.getDate()}, ${post.date.getFullYear()}</span>
+          </p>
+          <hr data-h2-background-color="base(black.lightest)" data-h2-height="base(1px)" data-h2-border="base(none)">
+          ${features}
+          ${optimizations}
+          ${bugfixes}
+        </div>
       </div>
     `;
   }
@@ -100,7 +102,7 @@ function render(data) {
         <link href="${absoluteUrl('en/releases#' + post.version, data.metadata.url)}"/>
         <updated>${dateToRfc3339(post.date)}</updated>
         <id>${absoluteUrl('en/docs/releases#' + post.version, data.metadata.url)}</id>
-        <content xml:lang="${data.metadata.language}" type="html" data-h2>${escape(
+        <content xml:lang="${data.metadata.language}" type="html">${escape(
         post_content(post)
       )}</content>
       </entry>
