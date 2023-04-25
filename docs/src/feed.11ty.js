@@ -27,11 +27,17 @@ function render(data) {
       let content = ``;
       if (post[type] && post[type].length > 0) {
         if (type === 'features') {
-          content = content + `<h2>✨ New features (${post[type].length})</h2><ul>`;
+          content =
+            content +
+            `<h2 data-h2-font-size="base(h4)" data-h2-font-weight="800">✨ New features (${post[type].length})</h2><ul>`;
         } else if (type === 'optimizations') {
-          content = content + `<h2>🛠️ Optimizations (${post[type].length})</h2><ul>`;
+          content =
+            content +
+            `<h2 data-h2-font-size="base(h4)" data-h2-font-weight="800">🛠️ Optimizations (${post[type].length})</h2><ul>`;
         } else if (type === 'bugfixes') {
-          content = content + `<h2>🪲 Bugfixes (${post[type].length})</h2><ul>`;
+          content =
+            content +
+            `<h2 data-h2-font-size="base(h4)" data-h2-font-weight="800">🪲 Bugfixes (${post[type].length})</h2><ul>`;
         }
         post[type].forEach((item) => {
           if (Array.isArray(item.changes[data.metadata.language])) {
@@ -68,16 +74,18 @@ function render(data) {
     let optimizations = content_type(post, 'optimizations');
     let bugfixes = content_type(post, 'bugfixes');
     return String.raw`
-      ${summary}
-      <p>
-        <span>Released: ${post.date.toLocaleString('default', {
-          month: 'long',
-        })} ${post.date.getDate()}, ${post.date.getFullYear()}</span>
-      </p>
-      <hr>
-      ${features}
-      ${optimizations}
-      ${bugfixes}
+      <div data-h2-font-family="base(sans)">
+        ${summary}
+        <p>
+          <span>Released: ${post.date.toLocaleString('default', {
+            month: 'long',
+          })} ${post.date.getDate()}, ${post.date.getFullYear()}</span>
+        </p>
+        <hr data-h2-background-color="base(black.lightest)" data-h2-height="base(1px)" data-h2-border="base(none)">
+        ${features}
+        ${optimizations}
+        ${bugfixes}
+      </div>
     `;
   }
   data.releases.rss.reverse().forEach((post, index) => {
@@ -92,7 +100,7 @@ function render(data) {
         <link href="${absoluteUrl('en/releases#' + post.version, data.metadata.url)}"/>
         <updated>${dateToRfc3339(post.date)}</updated>
         <id>${absoluteUrl('en/docs/releases#' + post.version, data.metadata.url)}</id>
-        <content xml:lang="${data.metadata.language}" type="html">${escape(
+        <content xml:lang="${data.metadata.language}" type="html" data-h2>${escape(
         post_content(post)
       )}</content>
       </entry>
