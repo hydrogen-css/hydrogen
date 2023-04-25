@@ -156,7 +156,7 @@ function render(data, props) {
       ${margin}
       data-h2-display="base(grid)"
       ${layout}
-      data-h2-gap="base(x1) p-tablet(x2)"
+      data-h2-gap="base(x1)"
       data-h2-align-items="base(center)">
       ${icon}
       ${flourish}

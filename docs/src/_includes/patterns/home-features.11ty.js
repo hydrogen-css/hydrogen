@@ -22,7 +22,7 @@ function render(data) {
         <div 
           data-h2-display="base(grid)" 
           data-h2-grid-template-columns="base(1fr 1fr)" 
-          data-h2-gap="base(x1)" 
+          data-h2-gap="base(x.5)" 
           data-h2-height="base(100%)"
           data-h2-background="base:children[button](foreground)"
           data-h2-cursor="base:children[button](pointer)"
@@ -88,13 +88,14 @@ function render(data) {
         data-h2-margin="base(x2, 0, 0, 0) p-tablet(x3, 0, 0, 0)"
         data-h2-display="base(grid)"
         data-h2-grid-template-columns="base(100%) p-tablet(4rem auto)"
-        data-h2-gap="base(x1) p-tablet(x2)">
+        data-h2-gap="base(x1)">
         <div>
           ${flourish.render(data, { heading: 'h6' })}
         </div>
         <div>
           <div 
             data-h2-display="base(grid)"
+            data-h2-align-items="base(center)"
             data-h2-grid-template-columns="base(100%) l-tablet(repeat(2, minmax(0, 1fr)))"
             data-h2-gap="base(x1) p-tablet(x2) l-tablet(x4)">
             <div>
@@ -142,7 +143,7 @@ function render(data) {
   });
   // Render the pattern
   return String.raw`
-    <div data-h2-margin="base(x3, 0) l-tablet(x5, 0)">
+    <div data-h2-margin="base(x3, 0) l-tablet(x4, 0)">
       <div data-h2-container="base(center, medium, x1) p-tablet(center, medium, x2) l-tablet(center, medium, x3)">
         ${heading.render(data, {
           tag: 'h2',
@@ -156,25 +157,39 @@ function render(data) {
           },
         })}
         ${main_features}
-        ${heading.render(data, {
-          tag: 'h3',
-          size: 'h6',
-          label: 'And a whole lot more...',
-          id: 'more',
-          margin: "data-h2-margin='base(x4, 0, x1, 0)'",
-        })}
-        <div
+        <div 
+          data-h2-margin="base(x2, 0, 0, 0) p-tablet(x3, 0, 0, 0)"
           data-h2-display="base(grid)"
-          data-h2-grid-template-columns="base(1fr) p-tablet(repeat(2, minmax(0, 1fr))) l-tablet(repeat(3, minmax(0, 1fr))) laptop(repeat(4, minmax(0, 1fr)))"
-          data-h2-gap="base(x1)"
-          data-h2-background-color="base:children[>div](foreground)"
-          data-h2-border="base:children[>div](1px solid primary.darkest.20)"
-          data-h2-radius="base:children[>div](rounded)"
-          data-h2-padding="base:children[>div](x1)"
-          data-h2-color="base:children[p:first-child](primary.dark)"
-          data-h2-font-weight="base:children[p:first-child](800)"
-          data-h2-margin="base:children[p:not(:first-child)](x.5, 0, 0, 0)">
-          ${sub_features}
+          data-h2-grid-template-columns="base(100%) p-tablet(4rem auto)"
+          data-h2-gap="base(x1)">
+          <div>
+            ${flourish.render(data, { heading: 'h6' })}
+          </div>
+          <div>
+            <div>
+              ${heading.render(data, {
+                tag: 'h3',
+                size: 'h6',
+                label: 'And a whole lot more...',
+                id: 'more',
+                alignment: 'left',
+                margin: 'data-h2-margin="base(0, 0, x1, 0)"',
+              })}
+            </div>
+            <div
+              data-h2-display="base(grid)"
+              data-h2-grid-template-columns="base(1fr) p-tablet(repeat(2, minmax(0, 1fr))) l-tablet(repeat(3, minmax(0, 1fr))) laptop(repeat(4, minmax(0, 1fr)))"
+              data-h2-gap="base(x1)"
+              data-h2-background-color="base:children[>div](foreground)"
+              data-h2-border="base:children[>div](1px solid primary.darkest.20)"
+              data-h2-radius="base:children[>div](rounded)"
+              data-h2-padding="base:children[>div](x1)"
+              data-h2-color="base:children[p:first-child](primary.dark)"
+              data-h2-font-weight="base:children[p:first-child](800)"
+              data-h2-margin="base:children[p:not(:first-child)](x.5, 0, 0, 0)">
+              ${sub_features}
+            </div>
+          </div>
         </div>
       </div>
     </div>

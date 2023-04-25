@@ -22,6 +22,7 @@ function generate_hero_content(data) {
 }
 
 function render(data) {
+  let code = require('../components/code.11ty');
   return String.raw`
     <div 
       id="main"
@@ -74,13 +75,17 @@ function render(data) {
               data-h2-text-align="base(center) p-tablet(right)">${data.site.slogan[data.locale]}</p>
           </div>
         </div>
-        <h1
-          data-h2-order="base(1) p-tablet(2)"
-          data-h2-color="base:all(white)"
-          data-h2-font-weight="base(700)"
-          data-h2-padding="base(x4, 0, 0, 0) p-tablet(0, 0, x4, 0)"
-          data-h2-text-align="base(center) p-tablet(left)"
-          data-h2-font-size="base(calc(var(--h2-font-size-display) * 1.15))">${data.site.name}</h1>
+        <div data-h2-order="base(1) p-tablet(2)" data-h2-padding="base(x4, 0, 0, 0) p-tablet(0, 0, x3.5, 0)">
+          <h1
+            data-h2-color="base:all(white)"
+            data-h2-font-weight="base(700)"
+            data-h2-margin-bottom="base(x.5)"
+            data-h2-text-align="base(center) p-tablet(left)"
+            data-h2-font-size="base(calc(var(--h2-font-size-display) * 1.15))">
+            ${data.site.name}
+          </h1>
+          <code data-h2-color="base:all(white)">📋 npm install @hydrogen-css/hydrogen --save</code>
+        </div>
       </div>
     </div>
     <div

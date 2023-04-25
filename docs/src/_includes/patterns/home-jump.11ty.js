@@ -44,7 +44,7 @@ function render(data) {
   }
   // Render the pattern
   return String.raw`
-    <div data-h2-margin="base(x3, 0, x2, 0) l-tablet(x5, 0, x3, 0)" data-h2-padding="base(0, 0, x1, 0)">
+    <div data-h2-margin="base(x3, 0, x2, 0) l-tablet(x4, 0, x3, 0)" data-h2-padding="base(0, 0, x1, 0)">
       <div data-h2-container="base(center, medium, x1) p-tablet(center, medium, x2) l-tablet(center, medium, x3)">
         ${heading.render(data, {
           tag: 'h2',
@@ -92,7 +92,7 @@ function render(data) {
         data-h2-position="base(relative)" 
         data-h2-container="base(center, medium, x1) p-tablet(center, medium, x2) l-tablet(center, medium, x3)">
         <div
-          data-h2-margin="base(-x3, 0, 0, 0) p-tablet(-x3, 0, 0, calc(4rem + x2))"
+          data-h2-margin="base(-x3, 0, 0, 0) p-tablet(-x3, 0, 0, calc(4rem + x1))"
           data-h2-border="base(1px solid primary.darkest.2)"
           data-h2-background-color="base(foreground)"
           data-h2-radius="base(rounded)"

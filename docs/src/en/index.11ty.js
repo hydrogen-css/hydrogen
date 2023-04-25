@@ -19,8 +19,7 @@ var data = {
     },
     {
       path: '/en/docs/releases',
-      title:
-        'Learn more about the latest release, past updates, and upcoming features.',
+      title: 'Learn more about the latest release, past updates, and upcoming features.',
       label: 'Releases',
     },
     {
@@ -84,9 +83,7 @@ var data = {
             lines: [
               '☼ Hydrogen - System - Starting the build...',
               '  Message  > Hydrogen v' + latest.version,
-              '☼ Hydrogen - System - 28 files were processed...',
-              '☼ Hydrogen - System - Exporting CSS...',
-              '☼ Hydrogen - Timers - 0646ms (Total build)',
+              '☼ Hydrogen - Timers - 0238ms (Total build)',
               '☼ Hydrogen - Success - Exporting CSS',
             ],
           },
@@ -102,11 +99,7 @@ var data = {
           example: 'themes',
           code: {
             file: 'index.html',
-            lines: [
-              '<p data-h2-color="base(myBrandColor)">',
-              '  Your project name.',
-              '</p>',
-            ],
+            lines: ['<p data-h2-color="base(myBrandColor)">', '  Your project name.', '</p>'],
           },
         },
       ],
@@ -149,15 +142,11 @@ var data = {
         },
         {
           title: 'Automated theming',
-          content: [
-            'Create entire themes for your project and apply them app-wide in an instant.',
-          ],
+          content: ['Create entire themes for your project and apply them app-wide in an instant.'],
         },
         {
           title: 'Automated typography',
-          content: [
-            'Automatically generate a type scale, vertical rhythm, and whitespace tokens.',
-          ],
+          content: ['Automatically generate a type scale, vertical rhythm, and whitespace tokens.'],
         },
         {
           title: 'Open-source code',
@@ -170,11 +159,16 @@ var data = {
   },
   start: {
     title: {
-      label: 'Quick start',
+      label: 'Get started',
       id: 'start',
       icon: {
         path: '/static/img/icon-flag.svg',
         alt: 'A sticker-style icon of a race flag.',
+      },
+      link: {
+        label: 'Installation documentation',
+        title: 'Visit the docs and learn more about installing Hydrogen in depth.',
+        path: '/en/docs/installation',
       },
     },
     subtitle: {
@@ -188,7 +182,6 @@ var data = {
           'Ensure you have <a href="https://nodejs.org/en/" title="Learn more about Node and NPM." target="_blank" rel="noreferrer">Node installed</a> on your machine. Then navigate to your project in a terminal and run the NPM installation command to install Hydrogen.',
         ],
         code: {
-          file: 'terminal',
           lines: ['npm install @hydrogen-css/hydrogen --save'],
         },
       },
@@ -198,7 +191,6 @@ var data = {
           "From your project, run the <code>h2-init</code> command to create a configuration file. You'll be asked to specify your input and output directories.",
         ],
         code: {
-          file: 'terminal',
           lines: ['npx h2-init'],
         },
       },
@@ -208,7 +200,6 @@ var data = {
           "To apply Hydrogen to your entire project, add the <code>data-h2</code> attribute to your <code>html</code> element. Hydrogen's styles won't work outside of this attribute, so feel free to apply it elsewhere if you only need to style a subset of your project.",
         ],
         code: {
-          file: 'index.html',
           lines: ['<!DOCTYPE html>', '<html data-h2>', '  <body />', '</html>'],
         },
       },
@@ -218,9 +209,9 @@ var data = {
           "Like any other CSS file, you'll need to import Hydrogen's CSS into the <code>head</code> of your document.",
         ],
         code: {
-          file: 'index.html',
           lines: [
             '<head>',
+            ,
             '  ...',
             '  <link rel="stylesheet" href="path/to/hydrogen.css">',
             '</head>',
@@ -233,17 +224,15 @@ var data = {
           'Now that the CSS file is ready to be loaded in, you can start going wild with Hydrogen attributes to style your project.',
         ],
         code: {
-          file: 'index.html',
-          lines: ['<p data-h2-color="base(primary)">', '  Hello!', '</p>'],
+          lines: ['<p data-h2-color="base(primary)">Hello!</p>'],
         },
       },
       {
-        title: 'Watch the magic',
+        title: 'Built it!',
         content: [
           "When you're ready to view your masterpiece, you can run the build (or watch) command to compile your custom built CSS file.",
         ],
         code: {
-          file: 'terminal',
           lines: ['npx h2-build'],
         },
       },
