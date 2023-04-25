@@ -1,6 +1,7 @@
 const { DateTime } = require('luxon');
 const { hydrogen_build } = require('@hydrogen-css/hydrogen/lib/build');
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
+const pluginRss = require('@11ty/eleventy-plugin-rss');
 const UpgradeHelper = require('@11ty/eleventy-upgrade-help');
 
 module.exports = function (eleventyConfig) {
@@ -43,12 +44,12 @@ module.exports = function (eleventyConfig) {
       console.log(error);
     }
   });
+  // Add other plugins
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addPlugin(pluginRss);
   // Create a human readable date format
   eleventyConfig.addFilter('readableDate', (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat(
-      'dd LLL yyyy'
-    );
+    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('dd LLL yyyy');
   });
   // date filter (localized)
   eleventyConfig.addNunjucksFilter('date', function (date, format, locale) {
@@ -147,6 +148,6 @@ module.exports = function (eleventyConfig) {
       includes: '_includes',
       layouts: '_layouts',
     },
-    templateFormats: ['11ty.js', 'njk'],
+    templateFormats: ['11ty.js'],
   };
 };

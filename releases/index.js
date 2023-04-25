@@ -20,12 +20,13 @@ const beta_version = exec('npm view @hydrogen-css/hydrogen@beta version').toStri
 
 // Script ==========================================================================================
 
+const file_list = glob.sync(path.resolve(process.cwd(), '../releases/**/*.js'), {
+  ignore: [path.resolve(process.cwd(), '../releases/index.js')],
+});
+
 function releases() {
   try {
     let parsed_data = [];
-    let file_list = glob.sync(path.resolve(process.cwd(), '../releases/**/*.js'), {
-      ignore: [path.resolve(process.cwd(), '../releases/index.js')],
-    });
     file_list.forEach((file) => {
       let change_data = require(file);
       // Get the major, minor, and patch values from the file
@@ -120,9 +121,6 @@ function releases() {
 function featured() {
   try {
     let parsed_data = [];
-    let file_list = glob.sync(path.resolve(process.cwd(), '../releases/**/*.js'), {
-      ignore: [path.resolve(process.cwd(), '../releases/index.js')],
-    });
     file_list.forEach((file) => {
       let change_data = require(file);
       if (change_data.featured) {
@@ -165,9 +163,42 @@ function beta() {
   }
 }
 
+function rss() {
+  function zeroes(number) {
+    let zeroed = number;
+    if (number.length === 1) {
+      zeroed = '000' + number;
+    } else if (number.length === 2) {
+      zeroed = '00' + number;
+    } else if (number.length === 3) {
+      zeroed = '0' + number;
+    }
+    return zeroed;
+  }
+  let parsed_data = [];
+  file_list.forEach((file) => {
+    let change_data = require(file);
+    // Get the major, minor, and patch values from the file
+    const version = change_data.version;
+    const version_numbers = version.match(/\d+/g);
+    let major = zeroes(version_numbers[0].toString());
+    let minor = zeroes(version_numbers[1].toString());
+    let patch = zeroes(version_numbers[2].toString());
+    let beta = '';
+    if (version.includes('beta') && zeroes(version_numbers[3])) {
+      beta = '.' + zeroes(version_numbers[3].toString());
+    }
+    change_data.order = parseFloat(major + minor + patch + beta).toFixed(4);
+    parsed_data = parsed_data.concat(change_data);
+  });
+  parsed_data.sort((a, b) => parseFloat(a.order) - parseFloat(b.order));
+  return parsed_data;
+}
+
 module.exports = {
   releases,
   stable,
   beta,
   featured,
+  rss,
 };

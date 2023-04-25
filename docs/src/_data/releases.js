@@ -4,20 +4,21 @@
 // Data models
 
 // Data imports
+let releases = require('@hydrogen-css/hydrogen/releases');
 
 // Local functions
 
 // Helper functions
 
 // Vendor imports
-var path = require('path');
 
 // Script ==========================================================================================
 
 module.exports = {
-  history: require('@hydrogen-css/hydrogen/releases').releases(),
-  latest: require('@hydrogen-css/hydrogen/releases').stable(),
-  stable: require('@hydrogen-css/hydrogen/releases').stable(),
-  beta: require('@hydrogen-css/hydrogen/releases').beta(),
-  featured: require('@hydrogen-css/hydrogen/releases').featured(),
+  history: releases.releases(),
+  latest: releases.stable(),
+  stable: releases.stable(),
+  beta: releases.beta(),
+  featured: releases.featured(),
+  rss: releases.rss(),
 };

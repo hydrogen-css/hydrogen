@@ -53,6 +53,10 @@ function render(data, unique, release) {
       }
     });
   }
+  let unique_string = '';
+  if (unique) {
+    unique_string = unique + '-';
+  }
   // Generate the release HTML
   return String.raw`
     ${heading.render(data, {
@@ -60,7 +64,7 @@ function render(data, unique, release) {
       size: 'h5',
       label: release.version,
       margin: 'data-h2-margin="base(0, 0, x.5, 0)"',
-      id: unique + '-' + release.version,
+      id: unique_string + release.version,
       alignment: 'left',
     })}
     ${summary}

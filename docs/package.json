@@ -49,5 +49,9 @@
     "useTabs": false,
     "singleAttributePerLine": true,
     "printWidth": 100
+  },
+  "devDependencies": {
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "escape-html": "^1.0.3"
   }
 }

@@ -27,14 +27,10 @@ function render(data, content) {
                   output +
                   expansion.render(data, {
                     state: '',
-                    label: release_title.render(
-                      data,
-                      'featured',
-                      history[major][minor][patch].release
-                    ),
+                    label: release_title.render(data, null, history[major][minor][patch].release),
                     content: release_content.render(
                       data,
-                      'featured',
+                      null,
                       history[major][minor][patch].release
                     ),
                   });
@@ -51,12 +47,12 @@ function render(data, content) {
                         state: '',
                         label: release_title.render(
                           data,
-                          'featured',
+                          null,
                           history[major][minor][patch].betas[beta]
                         ),
                         content: release_content.render(
                           data,
-                          'featured',
+                          null,
                           history[major][minor][patch].betas[beta]
                         ),
                       });
