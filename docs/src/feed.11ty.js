@@ -27,11 +27,11 @@ function render(data) {
       let content = ``;
       if (post[type] && post[type].length > 0) {
         if (type === 'features') {
-          content = content + `<h2>✨ New features (${post[type].length})</h2>`;
+          content = content + `<h2>✨ New features (${post[type].length})</h2><ul>`;
         } else if (type === 'optimizations') {
-          content = content + `<h2>🛠️ Optimizations (${post[type].length})</h2>`;
+          content = content + `<h2>🛠️ Optimizations (${post[type].length})</h2><ul>`;
         } else if (type === 'bugfixes') {
-          content = content + `<h2>🪲 Bugfixes (${post[type].length})</h2>`;
+          content = content + `<h2>🪲 Bugfixes (${post[type].length})</h2><ul>`;
         }
         post[type].forEach((item) => {
           if (Array.isArray(item.changes[data.metadata.language])) {
@@ -60,6 +60,7 @@ function render(data) {
               `;
           }
         });
+        content = content + `</ul>`;
       }
       return content;
     }
@@ -67,13 +68,13 @@ function render(data) {
     let optimizations = content_type(post, 'optimizations');
     let bugfixes = content_type(post, 'bugfixes');
     return String.raw`
-      <h1>Release ${post.version}</h1>
       ${summary}
       <p>
         <span>Released: ${post.date.toLocaleString('default', {
           month: 'long',
         })} ${post.date.getDate()}, ${post.date.getFullYear()}</span>
       </p>
+      <hr>
       ${features}
       ${optimizations}
       ${bugfixes}
