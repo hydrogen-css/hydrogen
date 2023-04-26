@@ -66,32 +66,6 @@ function render(data, props) {
     let output = '';
     let columns = 'data-h2-grid-template-columns="base(1fr)"';
     let copy_button = '';
-    if (props.copy) {
-      columns = 'data-h2-grid-template-columns="base(1fr auto)"';
-      copy_button = String.raw`
-        <div>
-          <button
-            title="${data.site.components.code.copy_button.title[data.locale]}"
-            onclick="copy_code(this)"
-            data-h2-background-color="base(transparent) base:focus-visible(focus)"
-            data-h2-color="base:all(white) base:all:hover(primary.lighter) base:all:focus-visible(black)"
-            data-h2-border="base(0px solid transparent)"
-            data-h2-border-left="base:all(1px solid primary.lightest.2)"
-            data-h2-cursor="base(pointer)"
-            data-h2-padding="base(x.5, x1)"
-            data-h2-text-decoration="base(underline)" 
-            data-h2-radius="base(0, code, 0, 0)"
-            data-h2-font-family="base(sans)"
-            data-h2-font-size="base(caption)"
-            data-h2-outline="base(none)">
-            <span class="default">${data.site.components.code.copy_button.label[data.locale]}</span>
-            <span class="confirmation">${
-              data.site.components.code.copy_button.label_active[data.locale]
-            }</span>
-          </button>
-        </div>
-      `;
-    }
     if (props.file) {
       output =
         output +
@@ -152,7 +126,22 @@ function render(data, props) {
         data-h2-max-height="base(35vh)" 
         data-h2-overflow="base(auto)"
         data-h2-outline="base(none)"
-        data-h2-border-top="base:focus-visible(x.5 solid focus)">
+        data-h2-border-top="base:focus-visible(x.5 solid focus)"
+        data-h2-position="base(relative)">
+        <button
+          title="${data.site.components.code.copy_button.title[data.locale]}"
+          onclick="copy_code(this)"
+          data-h2-background-color="base(transparent)"
+          data-h2-border="base(none)"
+          data-h2-cursor="base(pointer)"
+          data-h2-padding="base(x.25)"
+          data-h2-font-size="base(caption)"
+          data-h2-outline="base(none)"
+          data-h2-position="base(absolute)"
+          data-h2-location="base(x.5, x.5, auto, auto)">
+          <span class="default">📋</span>
+          <span class="confirmation">✅</span>
+        </button>
         <div
           data-h2-display="base(grid)"
           data-h2-grid-template-columns="base(auto 1fr)"
@@ -169,7 +158,7 @@ function render(data, props) {
             data-h2-padding="base(0, 0, 0, x.35)">
             <pre
               data-h2-padding="base(x.75, 0)"
-              data-h2-margin="base(0)"><code data-h2-padding="base(0, x1, 0, 0)" data-h2-font-family="base(mono)" data-h2-font-size="base(caption)">${code_lines_safe}</code></pre>
+              data-h2-margin="base(0)"><code data-h2-padding="base(0, x2, 0, 0)" data-h2-font-family="base(mono)" data-h2-font-size="base(caption)">${code_lines_safe}</code></pre>
           </div>
         </div>
       </div>

@@ -25,7 +25,12 @@ function render(data) {
     steps =
       steps +
       String.raw`
-        <button data-h2-display="base(block)" data-h2-grid-column="base(1 / 2)" data-h2-text-align="base(left)">
+        <button 
+          data-h2-background="base(transparent)"
+          data-h2-border="base(none)"
+          data-h2-display="base(block)" 
+          data-h2-grid-column="base(1 / 2)" 
+          data-h2-text-align="base(left)">
           <div
             data-h2-display="base(inline-block)"
             data-h2-vertical-align="base(middle)"

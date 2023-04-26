@@ -23,6 +23,20 @@ function render(data) {
     if (post.summary) {
       summary = String.raw`<p>${post.summary}</p>`;
     }
+    let release_type = ``;
+    if (post.beta) {
+      // Beta release
+      release_type = 'Beta release';
+    } else if (post.minor === '0' && post.patch === '0') {
+      // Major release
+      release_type = 'Major release';
+    } else if (post.patch === '0') {
+      // Minor release
+      release_type = 'Minor release';
+    } else {
+      // Patch release
+      release_type = 'Patch release';
+    }
     function content_type(post, type) {
       let content = ``;
       if (post[type] && post[type].length > 0) {
@@ -70,6 +84,7 @@ function render(data) {
     return String.raw`
       ${summary}
       <p>
+        <span>${release_type} • </span>
         <span>Released: ${post.date.toLocaleString('default', {
           month: 'long',
         })} ${post.date.getDate()}, ${post.date.getFullYear()}</span>
