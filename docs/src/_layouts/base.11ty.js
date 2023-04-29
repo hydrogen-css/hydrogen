@@ -27,6 +27,25 @@ function render(data) {
         <meta property="og:image:type" content="image/png">
         <meta property="og:image:width" content="1201">
         <meta property="og:image:height" content="628">
+        <!-- Theme scripts -->
+        <script>
+          let hydrogen = document.querySelector('html');
+          if (!localStorage.mode) {
+            hydrogen.dataset.h2 = hydrogen.dataset.h2.replace(/pref/, '').replace(/dark/g, '').replace(/light/g, '') + ' pref';
+          } else if (
+            !localStorage.mode && window.matchMedia('(prefers-color-scheme: dark)').matches
+          ) {
+            hydrogen.dataset.h2 = hydrogen.dataset.h2.replace(/pref/, '').replace(/dark/g, '').replace(/light/g, '') + ' dark';
+          } else if (localStorage.mode) {
+            if (localStorage.mode === 'pref') {
+              hydrogen.dataset.h2 = hydrogen.dataset.h2.replace(/pref/, '').replace(/dark/g, '').replace(/light/g, '') + ' pref';
+            } else if (localStorage.mode === 'light') {
+              hydrogen.dataset.h2 = hydrogen.dataset.h2.replace(/pref/, '').replace(/dark/g, '').replace(/light/g, '') + ' light';
+            } else if (localStorage.mode === 'dark') {
+              hydrogen.dataset.h2 = hydrogen.dataset.h2.replace(/pref/, '').replace(/dark/g, '').replace(/light/g, '') + ' dark';
+            } 
+          }
+        </script>
         <!-- Local styles -->
         <link rel="stylesheet" type="text/css" href="/static/css/hydrogen.css">
         <link rel="stylesheet" type="text/css" href="/static/css/app.css">

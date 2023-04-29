@@ -28,7 +28,7 @@ a:hover {
   transform: rotate(-15deg);
 }
 
-#switcher.light #icon_sun {
+#switcher.light #light svg {
   animation: sunRotate 10s linear 0s infinite;
 }
 

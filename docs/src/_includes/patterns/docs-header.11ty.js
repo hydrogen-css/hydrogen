@@ -114,6 +114,27 @@ function render(data) {
       id="docs_header"
       data-h2-padding="base(x2, 0, x3, 0) l-tablet(x3, 0, x4, 0) desktop(x4, 0, x5, 0)"
       data-h2-layer="base(2, relative)">
+      <div
+        data-h2-position="base(absolute)"
+        data-h2-location="base(0, auto, auto, 0)"
+        data-h2-height="base(100%)"
+        data-h2-width="base(200vw)"
+        data-h2-transform="base(translate(-50%, 0))"
+        data-h2-background-color="base:all(black)"
+        data-h2-overflow="base(hidden)">
+        <div
+          class="accent-radial"
+          data-h2-background="base(accentRadial)"></div>
+        <div
+          class="primary-radial"
+          data-h2-background="base(primaryRadial)"></div>
+        <div
+          data-h2-height="base(x.5)"
+          data-h2-width="base(100%)"
+          data-h2-background="base(divider)"
+          data-h2-position="base(absolute)"
+          data-h2-location="base(auto, auto, 0, 0)"></div>
+      </div>
       <div data-h2-layer="base(2, relative)">
         ${heading.render(data, {
           tag: 'h2',

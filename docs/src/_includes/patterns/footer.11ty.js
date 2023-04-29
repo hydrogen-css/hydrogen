@@ -40,14 +40,16 @@ function render(data, props) {
           >
           <span 
             data-h2-display="base(inline-block)"
-            data-h2-transition="base(transform .5s cubic-bezier(.68,-0.55,.27,1.55))" 
+            data-h2-cursor="base(pointer)"
+            data-h2-transition="base(transform .3s ease-out)" 
             data-h2-transform="base(translate(0, 60%)) l-tablet(translate(0, 60%)) l-tablet:hover(translate(0, 0))"
             data-h2-width="base(x3.2)">
             ${theo.render(data)}
           </span>
           <span 
             data-h2-display="base(inline-block)"
-            data-h2-transition="base(transform .5s cubic-bezier(.68,-0.55,.27,1.55))" 
+            data-h2-cursor="base(pointer)"
+            data-h2-transition="base(transform .3s ease-out)" 
             data-h2-transform="base(translate(0, 60%)) l-tablet(translate(0, 60%)) l-tablet:hover(translate(0, 0))"
             data-h2-width="base(x3)">
             ${sybil.render(data)}

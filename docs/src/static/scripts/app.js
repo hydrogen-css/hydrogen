@@ -1,22 +1,23 @@
 const body = document.querySelector('body');
 
-window.onload = function () {
-  if (document.querySelector('#docs_header')) {
-    var docsHead = document.querySelector('#docs_header').clientHeight;
-    body.setAttribute('style', `--heightHack: ${docsHead}px`);
-  }
-};
-
-window.onresize = function () {
-  if (document.querySelector('#docs_header')) {
-    var docsHead = document.querySelector('#docs_header').clientHeight;
-    body.setAttribute('style', `--heightHack: ${docsHead}px`);
-  }
-};
-
 // Get Hydrogen elements
 let instances = document.querySelectorAll('[data-h2]');
+
+// Storage check
 let switcher = document.querySelector('#switcher');
+if (!localStorage.mode) {
+  switcher.setAttribute('class', 'pref');
+} else if (!localStorage.mode && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  switcher.setAttribute('class', 'dark');
+} else if (localStorage.mode != undefined) {
+  if (localStorage.mode === 'pref') {
+    switcher.setAttribute('class', 'pref');
+  } else if (localStorage.mode === 'light') {
+    switcher.setAttribute('class', 'light');
+  } else if (localStorage.mode === 'dark') {
+    switcher.setAttribute('class', 'dark');
+  }
+}
 
 // Listeners
 function check_for_dark_mode() {
@@ -40,31 +41,6 @@ window
 window
   .matchMedia('(prefers-color-scheme: light)')
   .addEventListener('change', (e) => e.matches && check_for_dark_mode());
-
-// Storage check
-if (localStorage.mode != undefined) {
-  if (localStorage.mode === 'dark') {
-    switcher.classList.add('dark');
-    switcher.classList.remove('light', 'pref');
-    instances.forEach((hydrogen) => {
-      hydrogen.dataset.h2 = hydrogen.dataset.h2 + ' dark';
-    });
-  } else if (localStorage.mode === 'light') {
-    switcher.classList.add('light');
-    switcher.classList.remove('dark', 'pref');
-    instances.forEach((hydrogen) => {
-      hydrogen.dataset.h2 = hydrogen.dataset.h2.replace(/dark/g, '');
-    });
-  }
-} else if (
-  localStorage.mode == undefined &&
-  window.matchMedia('(prefers-color-scheme: dark)').matches
-) {
-  switcher.classList.remove('light', 'dark', 'pref');
-  instances.forEach((hydrogen) => {
-    hydrogen.dataset.h2 = hydrogen.dataset.h2 + ' dark';
-  });
-}
 
 // Toggles
 function enable_mode_preference() {
@@ -94,8 +70,7 @@ function enable_mode_dark() {
   switcher.classList.add('dark');
   switcher.classList.remove('light', 'pref');
   instances.forEach((hydrogen) => {
-    if (!hydrogen.dataset.h2.includes('dark'))
-      hydrogen.dataset.h2 = hydrogen.dataset.h2 + ' dark';
+    if (!hydrogen.dataset.h2.includes('dark')) hydrogen.dataset.h2 = hydrogen.dataset.h2 + ' dark';
   });
   localStorage.mode = 'dark';
 }

@@ -4,79 +4,67 @@ function render(data) {
   return String.raw`
     <div 
       id="switcher"
+      data-h2-background-color="
+        base:children[button](primary.darkest.15)
+        base:dark:children[button](primary.lightest.35)
+        base:all:children[button:focus-visible](focus)
+
+        base:selectors[.pref]:children[#pref](primary.darkest.8)
+        base:dark:selectors[.pref]:children[#pref](primary.lightest.8)
+        base:all:selectors[.pref]:children[#pref:focus-visible](focus)
+
+        base:selectors[.light]:children[#light](primary.darkest.8)
+        base:dark:selectors[.light]:children[#light](primary.lightest.8)
+        base:all:selectors[.light]:children[#light:focus-visible](focus)
+
+        base:selectors[.dark]:children[#dark](primary.darkest.8)
+        base:dark:selectors[.dark]:children[#dark](primary.lightest.8)
+        base:all:selectors[.dark]:children[#dark:focus-visible](focus)"
       data-h2-fill="
-        base:children[#icon_pref *](primary.lightest)
-        base:dark:children[#icon_pref *](primary.dark)
-        base:selectors[.light]:children[#icon_pref *](black.lighter)
-        base:selectors[.dark]:children[#icon_pref *](black.lighter)
-        base:children[#icon_sun *](black.lighter)
-        base:selectors[.light]:children[#icon_sun *](primary.lightest)
-        base:children[#icon_moon *](black.lighter)
-        base:selectors[.dark]:children[#icon_moon *](primary.light)
-        base:all:children[button:focus-visible #icon_pref *](black)
-        base:all:children[button:focus-visible #icon_sun *](black)
-        base:all:children[button:focus-visible #icon_moon *](black)"
-      data-h2-transform="
-        base:selectors[.pref]:children[#highlight](translate(0, 0))
-        base:selectors[.light]:children[#highlight](translate(2rem, 0))
-        base:selectors[.dark]:children[#highlight](translate(4rem, 0))">
+        base:children[svg *](black)
+        base:dark:children[svg *](white)
+        base:all:children[button:focus-visible svg *](black)
+
+        base:selectors[.pref]:children[#pref svg *](primary.lightest)
+        base:dark:selectors[.pref]:children[#pref svg *](primary.darkest)
+        base:all:selectors[.pref]:children[#pref:focus-visible svg *](black)
+
+        base:selectors[.light]:children[#light svg *](primary.lightest)
+        base:dark:selectors[.light]:children[#light svg *](primary.darkest)
+        base:all:selectors[.light]:children[#light:focus-visible svg *](black)
+
+        base:selectors[.dark]:children[#dark svg *](primary.lightest)
+        base:dark:selectors[.dark]:children[#dark svg *](primary.darkest)
+        base:all:selectors[.dark]:children[#dark:focus-visible svg *](black)">
       <div 
         data-h2-background-color="base(foreground)"
         data-h2-border="base(1px solid primary.darkest.20)"
         data-h2-radius="base(50px)"
         data-h2-padding="base(x.25)"
         data-h2-position="base(relative)">
-        <div 
-          data-h2-display="base(flex)"
-          data-h2-gap="base(.25rem)"
-          data-h2-height="base:children[>div](1.75rem)"
-          data-h2-width="base:children[>div](1.75rem)"
-          data-h2-background-color="base:children[>div](black.1)"
-          data-h2-radius="base:children[>div](circle)">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
         <div
-          data-h2-position="base(absolute)"
-          data-h2-location="base(x.25, auto, auto, x.25)" 
-          data-h2-display="base(flex)"
-          data-h2-gap="base(.25rem)">
-          <div
-            id="highlight"
-            data-h2-height="base(1.75rem)"
-            data-h2-width="base(1.75rem)"
-            data-h2-transition="base(transform .2s ease 0s)"
-            data-h2-background-color="base(black)"
-            data-h2-radius="base(circle)"></div>
-        </div>
-        <div
-          data-h2-position="base(absolute) base:children[>button](relative)"
+          data-h2-position="base:children[button](relative)"
           data-h2-location="base(x.25, auto, auto, x.25)"
           data-h2-display="base(flex) base:children[>button](block)"
           data-h2-gap="base(.25rem)"
           data-h2-cursor="base:children[>button](pointer)"
-          data-h2-background-color="
-            base:children[>button](transparent) 
-            base:children[>button:focus-visible](focus)"
           data-h2-outline="base:children[>button](none)"
-          data-h2-height="base:children[>button](1.75rem)"
-          data-h2-width="base:children[>button](1.75rem)"
+          data-h2-height="base:children[>button](30px)"
+          data-h2-width="base:children[>button](30px)"
           data-h2-radius="base:children[>button](circle)"
           data-h2-border="base:children[>button](none)"
           data-h2-padding="base:children[>button](0)">
           <button 
             type="button" 
+            id="pref"
             title="${
-              data.site.components.breadcrumbs.theme_switcher.preference_toggle
-                .title[data.locale]
+              data.site.components.breadcrumbs.theme_switcher.preference_toggle.title[data.locale]
             }"
             onclick="enable_mode_preference()">
             <svg
-              id="icon_pref"
-              data-h2-height="base(x.8)"
+              data-h2-height="base(20px)"
               data-h2-position="base(center)"
-              viewBox="0 0 18 17" 
+              viewBox="0 0 18 18" 
               fill="none" 
               xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M9.16352 13.9031H9.00049H7.65912H6.26215C5.86037 13.9031 5.53467 14.2288 5.53467 14.6306C5.53467 15.0324 5.86037 15.3581 6.26215 15.3581H7.65912L9.00049 15.3581L9.00079 15.3581H9.16352L10.3975 15.3581C10.3976 15.3581 10.3977 15.3581 10.3978 15.3581L11.9019 15.3581C12.3036 15.3581 12.6293 15.0324 12.6293 14.6306C12.6293 14.2288 12.3036 13.9031 11.9019 13.9031H10.3975H9.16352Z" fill="#36106E"/>
@@ -86,14 +74,13 @@ function render(data) {
           </button>
           <button 
             type="button" 
+            id="light"
             title="${
-              data.site.components.breadcrumbs.theme_switcher.light_toggle
-                .title[data.locale]
+              data.site.components.breadcrumbs.theme_switcher.light_toggle.title[data.locale]
             }"
             onclick="enable_mode_light()">
             <svg
-              id="icon_sun"
-              data-h2-height="base(x.8)"
+              data-h2-height="base(20px)"
               data-h2-position="base(center)"
               viewBox="0 0 18 18" 
               fill="none" 
@@ -111,18 +98,16 @@ function render(data) {
           </button>
           <button 
             type="button" 
+            id="dark"
             title="${
-              data.site.components.breadcrumbs.theme_switcher.dark_toggle.title[
-                data.locale
-              ]
+              data.site.components.breadcrumbs.theme_switcher.dark_toggle.title[data.locale]
             }"
             onclick="enable_mode_dark()">
             <svg 
-              id="icon_moon"
-              viewBox="0 0 19 18" 
+              viewBox="0 0 18 18" 
               fill="none" 
               xmlns="http://www.w3.org/2000/svg"
-              data-h2-height="base(x.8)"
+              data-h2-height="base(20px)"
               data-h2-position="base(center)">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M9.2372 15.4923C12.8228 15.4923 15.7295 12.5856 15.7295 9.00001C15.7295 5.4144 12.8228 2.50769 9.2372 2.50769C6.63288 2.50769 4.38672 4.04111 3.35234 6.25433C4.13306 5.33054 5.30026 4.7439 6.60448 4.7439C8.95505 4.7439 10.8606 6.64942 10.8606 8.99999C10.8606 11.3506 8.95505 13.2561 6.60448 13.2561C5.30024 13.2561 4.13301 12.6694 3.35229 11.7456C4.38666 13.9589 6.63285 15.4923 9.2372 15.4923Z" fill="#36106E"/>
             </svg>
