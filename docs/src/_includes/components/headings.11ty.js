@@ -113,16 +113,22 @@ function render(data, props) {
       <a 
         data-h2-color="base(black.lightest) base:hover(primary) base:all:focus-visible(black)" 
         data-h2-font-size="base(caption)" 
-        data-h2-display="base(inline)"
+        data-h2-display="base(inline-block)"
         data-h2-background-color="base:focus-visible(focus)"
-        data-h2-padding="base(x.15, x.25)"
         data-h2-font-weight="base(700)"
         data-h2-text-decoration="base(none)"
+        data-h2-radius="base(code)"
         data-h2-outline="base(none)"
-        data-h2-vertical-align="base(middle)"
+        data-h2-height="base(x1.5)"
+        data-h2-width="base(x1.5)"
+        data-h2-position="base(relative)"
+        data-h2-margin="base(-x.25, 0, 0, 0)"
+        data-h2-top="base(x.25)"
+        data-h2-left="base(-x.25)"
+        data-h2-vertical-align="base(text-bottom)"
         href="${data.page.url}#${props.id}" 
         title="Skip to this section.">
-        #</a>
+        <span data-h2-position="base(center)">#</span></a>
     `;
   }
   // Create chip
@@ -175,7 +181,7 @@ function render(data, props) {
               data-h2-position='base(relative)'
               data-h2-display="base(inline-block) p-tablet(block)">
               ${chips}
-              <span data-h2-vertical-align="base(middle)">
+              <span data-h2-vertical-align="base(middle)" data-h2-overflow-wrap="base(anywhere)">
                 ${props.label}
               </span>
               ${hash}

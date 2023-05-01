@@ -24,13 +24,13 @@ function render(data) {
           data-h2-grid-template-columns="base(1fr 1fr)" 
           data-h2-gap="base(x.5)" 
           data-h2-height="base(100%)"
-          data-h2-background="base:children[button](foreground)"
+          data-h2-background="base:children[button](foreground) base:children[button:focus-visible](focus)"
           data-h2-cursor="base:children[button](pointer)"
           data-h2-border="base:children[button](1px solid primary.darkest.2)"
           data-h2-outline="base:children[button:focus-visible](none)"
           data-h2-radius="base:children[button](rounded)"
           data-h2-padding="base:children[button](x1)"
-          data-h2-color="base:children[button](black)"
+          data-h2-color="base:children[button](black) base:all:children[button:focus-visible](black)"
           data-h2-text-decoration="base:children[button](underline)"
           data-h2-shadow="
             base:children[button](medium)
@@ -76,10 +76,7 @@ function render(data) {
         </div>
       `;
     } else {
-      example = code.render(data, {
-        file: item.code.file,
-        lines: item.code.lines,
-      });
+      example = code.render(data, item.code);
     }
     main_features =
       main_features +
@@ -179,7 +176,7 @@ function render(data) {
             <div
               data-h2-display="base(grid)"
               data-h2-grid-template-columns="base(1fr) p-tablet(repeat(2, minmax(0, 1fr))) l-tablet(repeat(3, minmax(0, 1fr))) laptop(repeat(4, minmax(0, 1fr)))"
-              data-h2-gap="base(x1)"
+              data-h2-gap="base(x.5) p-tablet(x1)"
               data-h2-background-color="base:children[>div](foreground)"
               data-h2-border="base:children[>div](1px solid primary.darkest.20)"
               data-h2-radius="base:children[>div](rounded)"

@@ -28,18 +28,23 @@ function render(data, props) {
         data-h2-text-align="base(center) l-tablet(left)"
         data-h2-position="base(relative)"
         data-h2-order="base(2) l-tablet(1)">
-        <p
+        <a
+          href="/${data.locale}"
+          title="Return to Hydrogen's homepage."
           data-h2-font-size="base(h6)"
           data-h2-font-weight="base(700)"
-          data-h2-color="base:all(white)">${data.site.name}</p>
+          data-h2-color="base:all(white) base:all:hover(primary) base:all:focus-visible(black)">${
+            data.site.name
+          }</a>
         <div
-          data-h2-display="base(block)"
+          data-h2-display="base(grid)"
+          data-h2-grid-template-columns="base(1fr 1fr)"
           data-h2-position="base(absolute)"
           data-h2-location="base(auto, auto, -x3.5, 50%) l-tablet(auto, auto, -x4, -10px)"
           data-h2-transform="base(translate(-50%, 0)) l-tablet(translate(0, 0))"
           >
           <span 
-            data-h2-display="base(inline-block)"
+            data-h2-display="base(block)"
             data-h2-cursor="base(pointer)"
             data-h2-transition="base(transform .3s ease-out)" 
             data-h2-transform="base(translate(0, 60%)) l-tablet(translate(0, 60%)) l-tablet:hover(translate(0, 0))"
@@ -47,7 +52,7 @@ function render(data, props) {
             ${theo.render(data)}
           </span>
           <span 
-            data-h2-display="base(inline-block)"
+            data-h2-display="base(block)"
             data-h2-cursor="base(pointer)"
             data-h2-transition="base(transform .3s ease-out)" 
             data-h2-transform="base(translate(0, 60%)) l-tablet(translate(0, 60%)) l-tablet:hover(translate(0, 0))"

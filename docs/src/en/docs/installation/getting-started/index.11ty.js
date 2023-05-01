@@ -27,6 +27,8 @@ let data = {
         {
           type: 'code',
           file: 'terminal',
+          language: 'powershell',
+          count: 1,
           lines: ['npm install @hydrogen-css/hydrogen --save-dev'],
         },
       ],
@@ -51,6 +53,8 @@ let data = {
             {
               type: 'code',
               file: 'terminal',
+              language: 'powershell',
+              count: 1,
               lines: ['npm install @hydrogen-css/hydrogen@beta --save-dev'],
             },
           ],
@@ -74,6 +78,8 @@ let data = {
         {
           type: 'code',
           file: 'terminal',
+          language: 'powershell',
+          count: 1,
           lines: ['npx h2-init'],
         },
       ],
@@ -97,6 +103,8 @@ let data = {
         {
           type: 'code',
           file: 'index.html',
+          language: 'html',
+          count: 11,
           lines: [
             '<!DOCTYPE html>',
             '<html data-h2>',

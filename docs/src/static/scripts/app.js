@@ -224,3 +224,17 @@ function remove_mobile_menu_from_tab_order() {
 }
 
 remove_mobile_menu_from_tab_order();
+
+// Home start handlers
+
+function start_step_click(e) {
+  document.querySelectorAll('.start-step-button').forEach((button) => {
+    button.classList.remove('active');
+  });
+  document.querySelectorAll('.start-step-content').forEach((button) => {
+    button.classList.remove('active');
+  });
+  e.classList.add('active');
+  let step = e.getAttribute('data-step');
+  document.querySelector(`[data-step="${step}"].start-step-content`).classList.add('active');
+}

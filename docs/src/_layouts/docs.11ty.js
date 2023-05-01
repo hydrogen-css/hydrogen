@@ -120,11 +120,7 @@ function render(data) {
       return item.embed;
     }
     function render_code(item, index) {
-      return code.render(data, {
-        file: item.file,
-        copy: item.copy,
-        lines: item.lines,
-      });
+      return code.render(data, item);
     }
     function render_rhythm(item, index) {
       let output = String.raw`

@@ -18,10 +18,9 @@ function render(data) {
     ${breadcrumb_component.render(data)}
     <div data-h2-position="base(relative)">
       <div data-h2-container="base(center, large, x1) p-tablet(center, large, x2) l-tablet(center, large, x3)">
-        <div 
-          class="test-before" 
+        <div
           data-h2-display="base(grid)"
-          data-h2-grid-template-columns="base(1fr) l-tablet(minmax(0, 1fr) x15)"
+          data-h2-grid-template-columns="base(100%) l-tablet(minmax(0, 1fr) x15)"
           data-h2-gap="base(x1) l-tablet(x3) desktop(x4)">
           <div
             data-h2-order="base(2)"

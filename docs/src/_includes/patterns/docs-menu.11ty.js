@@ -9,6 +9,7 @@ function render(data) {
       data-h2-location="base(0, auto, auto, auto)">
       <div data-h2-padding="base(x1, 0, 0, 0) l-tablet(x2, 0, 0, 0) laptop(x3, 0, 0, 0) desktop(x4, 0, 0, 0)">
         <div
+          id="nav"
           data-h2-background="
             base(foreground)
             base:children[button](transparent)

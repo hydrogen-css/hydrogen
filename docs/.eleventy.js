@@ -61,6 +61,10 @@ module.exports = function (eleventyConfig) {
   // Copy Static Files to /_Site
   eleventyConfig.addPassthroughCopy({
     './src/static/css/app.css': './static/css/app.css',
+    './src/static/css/duotone-sea.css': './static/css/duotone-sea.css',
+    './src/static/css/synthwave.css': './static/css/synthwave.css',
+    './src/static/css/laserwave.css': './static/css/laserwave.css',
+    './node_modules/prismjs/themes/prism-funky.min.css': './static/css/prism-funky.min.css',
     './src/static/scripts/app.js': './static/js/app.js',
     './src/static/_redirects': './_redirects',
     './src/static/img': './static/img',

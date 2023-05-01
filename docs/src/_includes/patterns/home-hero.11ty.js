@@ -22,7 +22,6 @@ function generate_hero_content(data) {
 }
 
 function render(data) {
-  let code = require('../components/code.11ty');
   return String.raw`
     <div 
       id="main"
@@ -81,10 +80,35 @@ function render(data) {
             data-h2-font-weight="base(700)"
             data-h2-margin-bottom="base(x.5)"
             data-h2-text-align="base(center) p-tablet(left)"
-            data-h2-font-size="base(calc(var(--h2-font-size-display) * 1.15))">
+            data-h2-font-size="base(calc(var(--h2-font-size-display) * 1.15))"
+            data-h2-overflow-wrap="base(anywhere)">
             ${data.site.name}
           </h1>
-          <code data-h2-color="base:all(white)">📋 npm install @hydrogen-css/hydrogen --save</code>
+          <div class="code_wrapper">
+            <button
+              title="${data.site.components.code.copy_button.title[data.locale]}"
+              onclick="copy_code(this)"
+              data-h2-background-color="base(transparent) base:focus-visible(focus)"
+              data-h2-border="base(none)"
+              data-h2-cursor="base(pointer)"
+              data-h2-margin="base(0, x.25, 0, 0)"
+              data-h2-font-size="base(caption)"
+              data-h2-outline="base(none)"
+              data-h2-radius="base(5px)"
+              data-h2-height="base(x1.5)"
+              data-h2-width="base(x1.5)"
+              data-h2-vertical-align="base(middle)">
+              <span 
+                class="default"
+                data-h2-position="base(center)">📋</span>
+              <span 
+                class="confirmation"
+                data-h2-position="base(center)">✅</span>
+            </button><code data-h2-color="base:all(white)">npm install @hydrogen-css/hydrogen --save</code>
+            <textarea 
+              class="code_content"
+              data-h2-display="base(none)">npm install @hydrogen-css/hydrogen --save</textarea>
+          </div>
         </div>
       </div>
     </div>

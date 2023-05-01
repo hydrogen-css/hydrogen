@@ -8,8 +8,7 @@ let data = {
   },
   title: 'Media queries',
   title_long: 'Configuring media queries',
-  subtitle:
-    'Understand how to create and use media query values with Hydrogen.',
+  subtitle: 'Understand how to create and use media query values with Hydrogen.',
   main: [
     {
       type: 'title',
@@ -27,6 +26,8 @@ let data = {
         },
         {
           type: 'code',
+          language: 'html',
+          count: 1,
           lines: ['media(options)'],
         },
       ],
@@ -42,11 +43,9 @@ let data = {
         },
         {
           type: 'code',
-          lines: [
-            'media:hover(options)',
-            'media:dark(options)',
-            'media:dark:focus(options)',
-          ],
+          language: 'html',
+          count: 3,
+          lines: ['media:hover(options)', 'media:dark(options)', 'media:dark:focus(options)'],
         },
       ],
     },
@@ -70,7 +69,9 @@ let data = {
             },
             {
               type: 'code',
-              lines: ['data-h2-color="base(yellow)"'],
+              language: 'html',
+              count: 1,
+              lines: ['<p data-h2-color="base(yellow)">'],
             },
           ],
         },
@@ -92,13 +93,10 @@ let data = {
             },
             {
               type: 'code',
+              language: 'html',
+              count: 6,
               lines: [
-                'data-h2-color="',
-                '  base(yellow)',
-                '  customQuery(pink)',
-                '  customQuery:dark(green)',
-                '  customQuery:hover(blue)',
-                '"',
+                '<p data-h2-color="\n  base(yellow)\n  customQuery(pink)\n  customQuery:dark(green)\n  customQuery:hover(blue)\n">',
               ],
             },
           ],
@@ -125,7 +123,8 @@ let data = {
         {
           type: 'code',
           file: 'hydrogen.config.json',
-          copy: true,
+          language: 'json',
+          count: 10,
           lines: [
             '"media": {',
             '  "base_key": "base",',

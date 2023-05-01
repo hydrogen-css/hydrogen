@@ -97,14 +97,10 @@ function render(data) {
   `;
   let configuration_content = String.raw`
     <ul data-h2-padding="base(0, 0, 0, x1)">
-      ${return_menu_item(
-        'Core settings',
-        '/' + data.locale + '/docs/configuration/core-settings',
-        {
-          external: false,
-          children: false,
-        }
-      )}
+      ${return_menu_item('Core settings', '/' + data.locale + '/docs/configuration/core-settings', {
+        external: false,
+        children: false,
+      })}
       ${return_menu_item(
         'Configuring media queries',
         '/' + data.locale + '/docs/configuration/configuring-queries',
@@ -137,14 +133,10 @@ function render(data) {
         external: false,
         children: false,
       })}
-      ${return_menu_item(
-        'Typography',
-        '/' + data.locale + '/docs/styling/typography',
-        {
-          external: false,
-          children: false,
-        }
-      )}
+      ${return_menu_item('Typography', '/' + data.locale + '/docs/styling/typography', {
+        external: false,
+        children: false,
+      })}
       ${return_menu_item('Layout', '/' + data.locale + '/docs/styling/layout', {
         external: false,
         children: false,
@@ -157,22 +149,14 @@ function render(data) {
   `;
   let properties_content = String.raw`
     <ul data-h2-padding="base(0, 0, 0, x1)">
-      ${return_menu_item(
-        'Standard properties',
-        '/' + data.locale + '/docs/properties/standard',
-        {
-          external: false,
-          children: false,
-        }
-      )}
-      ${return_menu_item(
-        'Hydrogen properties',
-        '/' + data.locale + '/docs/properties/hydrogen',
-        {
-          external: false,
-          children: false,
-        }
-      )}
+      ${return_menu_item('Standard properties', '/' + data.locale + '/docs/properties/standard', {
+        external: false,
+        children: false,
+      })}
+      ${return_menu_item('Hydrogen properties', '/' + data.locale + '/docs/properties/hydrogen', {
+        external: false,
+        children: false,
+      })}
     </ul>
   `;
   let docs_menu = String.raw`
@@ -224,7 +208,7 @@ function render(data) {
     </ul>
   `;
   let menu_content = String.raw`
-  <div data-h2-margin="base(x2 0 0 0)">
+  <div data-h2-margin="base(x1, 0, 0, 0) mobile(x2 0 0 0)">
       <p 
         data-h2-color="base(black)"
         data-h2-font-weight="base(700)" 
@@ -255,14 +239,10 @@ function render(data) {
           external: false,
           children: false,
         })}
-        ${return_menu_item(
-          'Github',
-          'https://github.com/hydrogen-design-system/hydrogen',
-          {
-            external: true,
-            children: false,
-          }
-        )}
+        ${return_menu_item('Github', 'https://github.com/hydrogen-design-system/hydrogen', {
+          external: true,
+          children: false,
+        })}
       </ul>
     </nav>
     </div>
@@ -270,7 +250,7 @@ function render(data) {
   let page_content = '';
   if (data.main) {
     page_content = String.raw`
-      <div data-h2-margin="base(x2 0 0 0)">
+      <div data-h2-margin="base(x1, 0, 0, 0) mobile(x2 0 0 0)">
         <p 
           data-h2-color="base(black)"
           data-h2-font-weight="base(700)" 
@@ -292,8 +272,7 @@ function render(data) {
       data-h2-text-align="base(center)">
       <a
         href="/${data.locale}/docs"
-        title=""
-        id="nav"
+        title="Return the main documentation page."
         data-h2-color="base(black) base:hover(primary) base:all:focus-visible(black)"
         data-h2-transition="base:hover(color, .2s, ease, 0s)"
         data-h2-text-decoration="base(none)">

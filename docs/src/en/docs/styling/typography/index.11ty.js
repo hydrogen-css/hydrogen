@@ -8,8 +8,7 @@ let data = {
   },
   title: 'Typography',
   title_long: 'Setting typography',
-  subtitle:
-    'Learn how Hydrogen generates type styles and how you can apply them to elements.',
+  subtitle: 'Learn how Hydrogen generates type styles and how you can apply them to elements.',
   main: [
     {
       type: 'title',
@@ -53,7 +52,8 @@ let data = {
             {
               type: 'code',
               file: 'hydrogen.config.json',
-              copy: true,
+              language: 'json',
+              count: 19,
               lines: [
                 '"typography": [',
                 '  {',
@@ -111,6 +111,8 @@ let data = {
             {
               type: 'code',
               file: 'index.html',
+              language: 'html',
+              count: 11,
               lines: [
                 '<span data-h2-font-size="base(h1)">',
                 '  This would be heading 1 sized.',
@@ -147,6 +149,8 @@ let data = {
         {
           type: 'code',
           file: 'index.html',
+          language: 'html',
+          count: 5,
           lines: [
             '<div data-h2-height="base(x2)"></div>',
             '',

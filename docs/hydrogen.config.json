@@ -37,6 +37,10 @@
         "query": "print"
       },
       {
+        "key": "mobile",
+        "query": "screen and (min-width: 414px)"
+      },
+      {
         "key": "p-tablet",
         "query": "screen and (min-width: 48em)"
       },
@@ -47,6 +51,10 @@
       {
         "key": "laptop",
         "query": "screen and (min-width: 80em)"
+      },
+      {
+        "key": "header",
+        "query": "screen and (min-width: 88.4rem)"
       },
       {
         "key": "desktop",
@@ -60,6 +68,14 @@
       "typography": [
         {
           "query_key": "base",
+          "size": "95%",
+          "type_scale": "1.1",
+          "line_heights": {
+            "body": "auto"
+          }
+        },
+        {
+          "query_key": "mobile",
           "size": "105%",
           "type_scale": "1.15",
           "line_heights": {

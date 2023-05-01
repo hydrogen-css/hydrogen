@@ -29,6 +29,8 @@ let data = {
         {
           type: 'code',
           file: 'terminal',
+          language: 'powershell',
+          count: 1,
           lines: ['npx h2-init'],
         },
       ],
@@ -68,6 +70,8 @@ let data = {
         {
           type: 'code',
           file: 'terminal',
+          language: 'powershell',
+          count: 1,
           lines: ['npx h2-build'],
         },
       ],
@@ -89,6 +93,8 @@ let data = {
         {
           type: 'code',
           file: 'terminal',
+          language: 'powershell',
+          count: 1,
           lines: ['npx h2-watch'],
         },
       ],
@@ -132,6 +138,8 @@ let data = {
             {
               type: 'code',
               file: 'terminal',
+              language: 'powershell',
+              count: 2,
               lines: ['npx h2-build --h2_prefix', 'npx h2-build --h2_minify'],
             },
           ],
@@ -162,6 +170,8 @@ let data = {
             {
               type: 'code',
               file: 'terminal',
+              language: 'powershell',
+              count: 3,
               lines: [
                 'npx h2-build --h2_logs',
                 'npx h2-build --h2_timers',
@@ -209,10 +219,9 @@ let data = {
             {
               type: 'code',
               file: 'terminal',
-              lines: [
-                'npx h2-build --h2_env_dev',
-                'npx h2-build --h2_env_prod',
-              ],
+              language: 'powershell',
+              count: 2,
+              lines: ['npx h2-build --h2_env_dev', 'npx h2-build --h2_env_prod'],
             },
           ],
         },

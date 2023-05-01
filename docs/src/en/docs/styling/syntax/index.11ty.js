@@ -8,8 +8,7 @@ let data = {
   },
   title: 'Syntax',
   title_long: 'Syntax overview',
-  subtitle:
-    'Learn about an attribute is constructed and how they enable styling.',
+  subtitle: 'Learn about an attribute is constructed and how they enable styling.',
   main: [
     {
       type: 'title',
@@ -28,11 +27,9 @@ let data = {
         {
           type: 'code',
           file: 'index.html',
-          lines: [
-            '<button data-h2-background="base(primary)">',
-            '  Hello',
-            '</button>',
-          ],
+          language: 'html',
+          count: 3,
+          lines: ['<button data-h2-background="base(primary)">', '  Hello', '</button>'],
         },
       ],
     },
@@ -62,7 +59,9 @@ let data = {
             },
             {
               type: 'code',
-              lines: ['data-h2-property="query() ..."'],
+              language: 'html',
+              count: 1,
+              lines: ['<p data-h2-property="query() ..."></p>'],
             },
           ],
         },
@@ -87,6 +86,8 @@ let data = {
             },
             {
               type: 'code',
+              language: 'html',
+              count: 1,
               lines: ['media:mode:state:selectors[]:children[](options)'],
             },
           ],
@@ -103,6 +104,8 @@ let data = {
             },
             {
               type: 'code',
+              language: 'html',
+              count: 1,
               lines: ['base()'],
             },
           ],
@@ -123,6 +126,8 @@ let data = {
             },
             {
               type: 'code',
+              language: 'html',
+              count: 1,
               lines: ['base:dark()'],
             },
           ],
@@ -139,6 +144,8 @@ let data = {
             },
             {
               type: 'code',
+              language: 'html',
+              count: 1,
               lines: ['base:hover()'],
             },
           ],
@@ -155,6 +162,8 @@ let data = {
             },
             {
               type: 'code',
+              language: 'html',
+              count: 1,
               lines: ['base:selectors[.active, #target]()'],
             },
           ],
@@ -171,6 +180,8 @@ let data = {
             },
             {
               type: 'code',
+              language: 'html',
+              count: 1,
               lines: ['base:children[button]()'],
             },
           ],
@@ -187,6 +198,8 @@ let data = {
             },
             {
               type: 'code',
+              language: 'html',
+              count: 1,
               lines: ['data-h2-padding="base(5px)"'],
             },
           ],
@@ -225,6 +238,8 @@ let data = {
             {
               type: 'code',
               file: 'index.html',
+              language: 'html',
+              count: 1,
               lines: ['<p data-h2-color="base(primary)">My text</p>'],
             },
           ],
@@ -241,11 +256,9 @@ let data = {
             {
               type: 'code',
               file: 'index.html',
-              lines: [
-                '<p data-h2-color="base(primary) desktop(secondary)">',
-                '  My text',
-                '</p>',
-              ],
+              language: 'html',
+              count: 3,
+              lines: ['<p data-h2-color="base(primary) desktop(secondary)">', '  My text', '</p>'],
             },
           ],
         },
@@ -262,6 +275,8 @@ let data = {
             {
               type: 'code',
               file: 'index.html',
+              language: 'html',
+              count: 3,
               lines: [
                 '<p data-h2-color="base(primary) base:dark(white) desktop(secondary)">',
                 '  My text',
@@ -288,12 +303,10 @@ let data = {
             {
               type: 'code',
               file: 'index.html',
+              language: 'html',
+              count: 5,
               lines: [
-                '<button',
-                '  onclick="delete()"',
-                '  data-h2-background="base(red)">',
-                '  Delete button',
-                '</button>',
+                '<button\n  onclick="delete()"\n  data-h2-background="base(red)">\n  Delete button\n</button>',
               ],
             },
           ],
@@ -316,7 +329,9 @@ let data = {
             },
             {
               type: 'code',
-              file: 'index.html',
+              file: 'app.js',
+              language: 'javascript',
+              count: 18,
               lines: [
                 'const alertTypes = {',
                 '  success: {',
@@ -358,6 +373,8 @@ let data = {
             {
               type: 'code',
               file: '🚫 Hydrogen will not parse this',
+              language: 'javascript',
+              count: 9,
               lines: [
                 'var my_value = "base(blue)"',
                 '',

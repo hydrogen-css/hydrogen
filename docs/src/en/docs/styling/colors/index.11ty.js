@@ -29,7 +29,8 @@ let data = {
         {
           type: 'code',
           file: 'hydrogen.config.json',
-          copy: true,
+          language: 'json',
+          count: 10,
           lines: [
             '"colors": [',
             '  {',
@@ -112,7 +113,8 @@ let data = {
             {
               type: 'code',
               file: 'hydrogen.config.json',
-              copy: true,
+              language: 'json',
+              count: 16,
               lines: [
                 '"colors": [',
                 '  {',
@@ -156,7 +158,8 @@ let data = {
         {
           type: 'code',
           file: 'hydrogen.config.json',
-          copy: true,
+          language: 'json',
+          count: 14,
           lines: [
             '"colors": [',
             '  {',
@@ -193,7 +196,8 @@ let data = {
         {
           type: 'code',
           file: 'hydrogen.config.json',
-          copy: true,
+          language: 'json',
+          count: 13,
           lines: [
             '"themes": [',
             '  {',

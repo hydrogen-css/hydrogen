@@ -8,8 +8,7 @@ let data = {
   },
   title: 'Dark mode',
   title_long: 'Configuring dark mode',
-  subtitle:
-    'Learn how to configure dark mode and automatically apply it to your project.',
+  subtitle: 'Learn how to configure dark mode and automatically apply it to your project.',
   main: [
     {
       type: 'title',
@@ -55,15 +54,9 @@ let data = {
         {
           type: 'code',
           file: 'hydrogen.config.json',
-          copy: true,
-          lines: [
-            '"modes": {',
-            '  "method: "preference"',
-            '  "dark": {',
-            '    ...',
-            '  }',
-            '}',
-          ],
+          language: 'json',
+          count: 6,
+          lines: ['"modes": {', '  "method": "preference"', '  "dark": {', '    ...', '  }', '}'],
         },
       ],
     },
@@ -96,11 +89,7 @@ let data = {
         {
           type: 'list',
           style: 'unordered',
-          items: [
-            'Their browser setting',
-            'Manual light mode',
-            'Manual dark mode',
-          ],
+          items: ['Their browser setting', 'Manual light mode', 'Manual dark mode'],
         },
         {
           type: 'expansion',
@@ -120,7 +109,8 @@ let data = {
                 {
                   type: 'code',
                   file: 'index.html',
-                  copy: true,
+                  language: 'html',
+                  count: 11,
                   lines: [
                     '<div>',
                     '  <button onclick="enable_mode_preference()">',
@@ -149,10 +139,9 @@ let data = {
                 {
                   type: 'code',
                   file: 'app.js',
-                  copy: true,
-                  lines: [
-                    "let instances = document.querySelectorAll('[data-h2]');",
-                  ],
+                  language: 'javascript',
+                  count: 1,
+                  lines: ["let instances = document.querySelectorAll('[data-h2]');"],
                 },
               ],
             },
@@ -169,7 +158,8 @@ let data = {
                 {
                   type: 'code',
                   file: 'app.js',
-                  copy: true,
+                  language: 'javascript',
+                  count: 21,
                   lines: [
                     'function check_for_dark_mode() {',
                     '  if (',
@@ -209,7 +199,8 @@ let data = {
                 {
                   type: 'code',
                   file: 'app.js',
-                  copy: true,
+                  language: 'javascript',
+                  count: 18,
                   lines: [
                     'if (localStorage.mode != undefined) {',
                     "  if (localStorage.mode === 'dark') {",
@@ -246,7 +237,8 @@ let data = {
                 {
                   type: 'code',
                   file: 'app.js',
-                  copy: true,
+                  language: 'javascript',
+                  count: 13,
                   lines: [
                     'function enable_mode_preference() {',
                     "  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {",
@@ -277,7 +269,8 @@ let data = {
                 {
                   type: 'code',
                   file: 'app.js',
-                  copy: true,
+                  language: 'javascript',
+                  count: 6,
                   lines: [
                     'function enable_mode_light() {',
                     '  instances.forEach((hydrogen) => {',
@@ -301,7 +294,8 @@ let data = {
                 {
                   type: 'code',
                   file: 'app.js',
-                  copy: true,
+                  language: 'javascript',
+                  count: 7,
                   lines: [
                     'function enable_mode_dark() {',
                     '  instances.forEach((hydrogen) => {',
@@ -343,7 +337,8 @@ let data = {
         {
           type: 'code',
           file: 'hydrogen.config.json',
-          copy: true,
+          language: 'json',
+          count: 6,
           lines: [
             '"modes": {',
             '  "dark": {',
@@ -366,7 +361,9 @@ let data = {
         },
         {
           type: 'code',
-          lines: ['data-h2-color="base:dark(primary)"'],
+          language: 'html',
+          count: 1,
+          lines: ['<span data-h2-color="base:dark(primary)"></span>'],
         },
       ],
     },

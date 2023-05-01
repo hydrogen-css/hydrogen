@@ -80,6 +80,8 @@ var data = {
             'Rather than compiling a library, Hydrogen generates CSS on the fly by scanning your code and parsing unique <code>data-h2</code> attributes. Integrate it into your build tools and run it in the background as you develop for on-demand styling.',
           ],
           code: {
+            language: 'powershell',
+            count: 4,
             lines: [
               '☼ Hydrogen - System - Starting the build...',
               '  Message  > Hydrogen v' + latest.version,
@@ -99,6 +101,8 @@ var data = {
           example: 'themes',
           code: {
             file: 'index.html',
+            language: 'html',
+            count: 3,
             lines: ['<p data-h2-color="base(myBrandColor)">', '  Your project name.', '</p>'],
           },
         },
@@ -182,6 +186,8 @@ var data = {
           'Ensure you have <a href="https://nodejs.org/en/" title="Learn more about Node and NPM." target="_blank" rel="noreferrer">Node installed</a> on your machine. Then navigate to your project in a terminal and run the NPM installation command to install Hydrogen.',
         ],
         code: {
+          language: 'powershell',
+          count: 1,
           lines: ['npm install @hydrogen-css/hydrogen --save'],
         },
       },
@@ -191,6 +197,8 @@ var data = {
           "From your project, run the <code>h2-init</code> command to create a configuration file. You'll be asked to specify your input and output directories.",
         ],
         code: {
+          language: 'powershell',
+          count: 1,
           lines: ['npx h2-init'],
         },
       },
@@ -200,6 +208,8 @@ var data = {
           "To apply Hydrogen to your entire project, add the <code>data-h2</code> attribute to your <code>html</code> element. Hydrogen's styles won't work outside of this attribute, so feel free to apply it elsewhere if you only need to style a subset of your project.",
         ],
         code: {
+          language: 'html',
+          count: 4,
           lines: ['<!DOCTYPE html>', '<html data-h2>', '  <body />', '</html>'],
         },
       },
@@ -209,9 +219,10 @@ var data = {
           "Like any other CSS file, you'll need to import Hydrogen's CSS into the <code>head</code> of your document.",
         ],
         code: {
+          language: 'html',
+          count: 4,
           lines: [
             '<head>',
-            ,
             '  ...',
             '  <link rel="stylesheet" href="path/to/hydrogen.css">',
             '</head>',
@@ -224,6 +235,8 @@ var data = {
           'Now that the CSS file is ready to be loaded in, you can start going wild with Hydrogen attributes to style your project.',
         ],
         code: {
+          language: 'html',
+          count: 1,
           lines: ['<p data-h2-color="base(primary)">Hello!</p>'],
         },
       },
@@ -233,6 +246,8 @@ var data = {
           "When you're ready to view your masterpiece, you can run the build (or watch) command to compile your custom built CSS file.",
         ],
         code: {
+          language: 'powershell',
+          count: 1,
           lines: ['npx h2-build'],
         },
       },

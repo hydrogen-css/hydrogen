@@ -50,6 +50,8 @@ let data = {
             {
               type: 'code',
               file: 'hydrogen.config.json',
+              language: 'json',
+              count: 5,
               lines: [
                 '"input": [',
                 '  "path/to/first/input/folder",',
@@ -80,6 +82,8 @@ let data = {
             {
               type: 'code',
               file: 'hydrogen.config.json',
+              language: 'json',
+              count: 6,
               lines: [
                 '"processing": {',
                 '  "include_reset_css": true',
@@ -110,6 +114,8 @@ let data = {
             {
               type: 'code',
               file: 'hydrogen.config.json',
+              language: 'json',
+              count: 5,
               lines: [
                 '"logging": {',
                 '  "generate_logs": false',

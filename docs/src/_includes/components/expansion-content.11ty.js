@@ -32,13 +32,10 @@ function render(data, props) {
         data-h2-position="base(absolute)"
         data-h2-radius="base(circle)"
         data-h2-outline="base(none)"
-        data-h2-border="
-          base(1px solid primary.darkest.2)
-          base:children[>div](x.1 solid foreground)
-          base:all:focus-visible:children[>div](x.1 solid black)"
+        data-h2-border="base(1px solid primary.darkest.2)"
         data-h2-transition="base(box-shadow, .2s, ease)"
         data-h2-z-index="base(2)"
-        data-h2-location="base(x.6, auto, auto, 0)"
+        data-h2-location="base(x.75, auto, auto, 0)"
         data-h2-transform="base(translate(-50%, 0))"
         title="Expand or collapse this release."
         onclick="toggle_ec(this)">

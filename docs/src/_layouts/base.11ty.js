@@ -49,6 +49,7 @@ function render(data) {
         <!-- Local styles -->
         <link rel="stylesheet" type="text/css" href="/static/css/hydrogen.css">
         <link rel="stylesheet" type="text/css" href="/static/css/app.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/laserwave.css">
         <!-- Google fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -77,6 +78,19 @@ function render(data) {
           title="${skip_to_nav.title[data.locale]}"
           style="outline: none;"
           data-h2-display="base(none) l-tablet(block)"
+          data-h2-background-color="base(primary.darker) base:focus-visible(focus)"
+          data-h2-color="base(white) base:all:focus-visible(black)"
+          data-h2-text-align="base(center)"
+          data-h2-padding="base(x1)"
+          data-h2-font-weight="base(700)"
+          data-h2-visually-hidden="base(invisible) base:focus-visible(visible)">
+          ${skip_to_nav.label[data.locale]}
+        </a>
+        <a
+          href="#mobileNav"
+          title="${skip_to_nav.title[data.locale]}"
+          style="outline: none;"
+          data-h2-display="base(block) l-tablet(none)"
           data-h2-background-color="base(primary.darker) base:focus-visible(focus)"
           data-h2-color="base(white) base:all:focus-visible(black)"
           data-h2-text-align="base(center)"

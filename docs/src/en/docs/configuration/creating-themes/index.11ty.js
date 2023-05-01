@@ -42,7 +42,8 @@ let data = {
             {
               type: 'code',
               file: 'hydrogen.config.json',
-              copy: true,
+              language: 'json',
+              count: 18,
               lines: [
                 '"themes": [',
                 '  {',
@@ -89,7 +90,8 @@ let data = {
             {
               type: 'code',
               file: 'hydrogen.config.json',
-              copy: true,
+              language: 'json',
+              count: 24,
               lines: [
                 '"themes": [',
                 '  {',
@@ -97,7 +99,7 @@ let data = {
                 '    "colors": [',
                 '      {',
                 '        "default": {',
-                '          "key: "primary",',
+                '          "key": "primary",',
                 '          "color": "red"',
                 '        }',
                 '      }',
@@ -108,7 +110,7 @@ let data = {
                 '    "colors": [',
                 '      {',
                 '        "default": {',
-                '          "key: "primary",',
+                '          "key": "primary",',
                 '          "color": "blue"',
                 '        }',
                 '      }',
@@ -130,6 +132,8 @@ let data = {
             },
             {
               type: 'code',
+              language: 'html',
+              count: 1,
               lines: ['base:myTheme(primary)'],
             },
           ],
@@ -162,7 +166,8 @@ let data = {
             {
               type: 'code',
               file: 'hydrogen.config.json',
-              copy: true,
+              language: 'json',
+              count: 1,
               lines: ['"key": "myTheme",'],
             },
           ],
@@ -195,7 +200,8 @@ let data = {
             {
               type: 'code',
               file: 'hydrogen.config.json',
-              copy: true,
+              language: 'json',
+              count: 19,
               lines: [
                 '"typography": [',
                 '  {',
@@ -240,6 +246,8 @@ let data = {
         {
           type: 'code',
           file: 'hydrogen.config.json',
+          language: 'json',
+          count: 11,
           lines: [
             '"setting": [',
             '  {',
@@ -293,7 +301,8 @@ let data = {
             {
               type: 'code',
               file: 'hydrogen.config.json',
-              copy: true,
+              language: 'json',
+              count: 13,
               lines: [
                 '"colors": [',
                 '  {',
@@ -336,7 +345,8 @@ let data = {
             {
               type: 'code',
               file: 'hydrogen.config.json',
-              copy: true,
+              language: 'json',
+              count: 9,
               lines: [
                 '"containers": [',
                 '  {',
@@ -375,7 +385,8 @@ let data = {
             {
               type: 'code',
               file: 'hydrogen.config.json',
-              copy: true,
+              language: 'json',
+              count: 9,
               lines: [
                 '"fonts": [',
                 '  {',
@@ -414,7 +425,8 @@ let data = {
             {
               type: 'code',
               file: 'hydrogen.config.json',
-              copy: true,
+              language: 'json',
+              count: 9,
               lines: [
                 '"gradients": [',
                 '  {',
@@ -451,7 +463,8 @@ let data = {
             {
               type: 'code',
               file: 'hydrogen.config.json',
-              copy: true,
+              language: 'json',
+              count: 9,
               lines: [
                 '"radii": [',
                 '  {',
@@ -494,7 +507,8 @@ let data = {
             {
               type: 'code',
               file: 'hydrogen.config.json',
-              copy: true,
+              language: 'json',
+              count: 12,
               lines: [
                 '"shadows": [',
                 '  {',
@@ -538,7 +552,8 @@ let data = {
             {
               type: 'code',
               file: 'hydrogen.config.json',
-              copy: true,
+              language: 'json',
+              count: 29,
               lines: [
                 '"transitions": {',
                 '  "durations": [',
