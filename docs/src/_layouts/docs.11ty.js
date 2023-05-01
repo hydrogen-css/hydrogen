@@ -436,7 +436,7 @@ function render(data) {
           data-h2-margin="base(x2, 0, 0, 0)"
           data-h2-display="base(grid)"
           data-h2-grid-template-columns="base(100%) p-tablet(repeat(2, minmax(0, 1fr)))"
-          data-h2-gap="base(x1) p-tablet(x2)">
+          data-h2-gap="base(x.5) p-tablet(x1)">
       `;
       posts.forEach((card) => {
         function get_title() {
@@ -456,10 +456,11 @@ function render(data) {
               data-h2-background="base(foreground)"
               data-h2-radius="base(rounded)"
               data-h2-shadow="base(medium) base:hover(larger)"
+              data-h2-border="base(1px solid primary.darkest.2)"
               data-h2-transition-property="base(box-shadow, color)"
               data-h2-transition-duration="base(.2s)"
               data-h2-transition-timing-function="base(ease)"
-              data-h2-padding="base(x5, x1, x1, x1)"
+              data-h2-padding="base(x4, x1, x1, x1)"
               data-h2-font-weight="base(700)">
               ${get_title()}
             </a>

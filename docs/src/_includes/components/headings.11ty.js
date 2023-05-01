@@ -76,6 +76,7 @@ function render(data, props) {
           data-h2-display="base(inline-block)"
           data-h2-position="base(relative) p-tablet(absolute)"
           data-h2-location="p-tablet(60%, auto, auto, 50%)"
+          data-h2-height="base:children[svg](auto)"
           data-h2-width="base(x3) p-tablet(100%)"
           data-h2-transform="base(rotate(-15deg)) p-tablet(translate(-50%, -50%) rotate(-15deg))">
           ${svg}
@@ -122,10 +123,9 @@ function render(data, props) {
         data-h2-height="base(x1.5)"
         data-h2-width="base(x1.5)"
         data-h2-position="base(relative)"
-        data-h2-margin="base(-x.25, 0, 0, 0)"
-        data-h2-top="base(x.25)"
+        data-h2-margin="base(-x.25 0)"
         data-h2-left="base(-x.25)"
-        data-h2-vertical-align="base(text-bottom)"
+        data-h2-vertical-align="base(middle)"
         href="${data.page.url}#${props.id}" 
         title="Skip to this section.">
         <span data-h2-position="base(center)">#</span></a>

@@ -205,7 +205,7 @@ var data = {
       {
         title: 'Add <code>data-h2</code> to your <code>html</code> element',
         content: [
-          "To apply Hydrogen to your entire project, add the <code>data-h2</code> attribute to your <code>html</code> element. Hydrogen's styles won't work outside of this attribute, so feel free to apply it elsewhere if you only need to style a subset of your project.",
+          'Add the <code>data-h2</code> attribute to your <code>html</code> element to apply Hydrogen project-wide. You can also add it to select elements instead.',
         ],
         code: {
           language: 'html',
@@ -241,7 +241,7 @@ var data = {
         },
       },
       {
-        title: 'Built it!',
+        title: 'Build it!',
         content: [
           "When you're ready to view your masterpiece, you can run the build (or watch) command to compile your custom built CSS file.",
         ],

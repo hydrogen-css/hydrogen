@@ -170,8 +170,9 @@ function render(data, props) {
             data-h2-padding="base(0, 0, 0, x.5)"
             tabindex="0">
             <pre
-              data-h2-padding="base(x.75, 0)"
-              data-h2-margin="base(0)"><code data-h2-font-family="base(mono)" data-h2-font-size="base(caption)">${displayed_code_html}</code></pre>
+              data-h2-padding="base(x.75, x3. x.75, 0)"
+              data-h2-margin="base(0)"
+              data-h2-display="base(inline-block)"><code data-h2-display="base(inline-block)" data-h2-font-family="base(mono)" data-h2-font-size="base(caption)">${displayed_code_html}</code></pre>
           </div>
         </div>
       </div>

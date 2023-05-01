@@ -116,7 +116,7 @@ function render(data) {
       data-h2-layer="base(2, relative)">
       <div
         data-h2-position="base(absolute)"
-        data-h2-location="base(0px, auto, auto, -x1) p-tablet(0px, auto, auto, -x2) l-tablet(0px, auto, auto, -x3) header(0px, auto, auto, calc(((100vw - var(--h2-container-large)) / 2) * -1))"
+        data-h2-location="base(0px, auto, auto, -x1) p-tablet(0px, auto, auto, -x2) l-tablet(0px, auto, auto, -x3) header(0px, auto, auto, calc((((100vw - var(--h2-container-large)) / 2) - -x18) * -1)) header(0px, auto, auto, calc((((100vw - var(--h2-container-large)) / 2) - -x19) * -1))"
         data-h2-height="base(100%)"
         data-h2-width="base(100vw)"
         data-h2-background-color="base:all(black)"

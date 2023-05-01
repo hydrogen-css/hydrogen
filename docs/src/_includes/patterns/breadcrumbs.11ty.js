@@ -171,13 +171,13 @@ function render(data) {
               <li data-h2-vertical-align="base(middle)">
                 ${theme_switcher.render(data)}
               </li>
-              <li>
-              <span 
-                title="French translations for Hydrogen's documentation are coming soon."
-                data-h2-text-decoration="base(underline)"
-                h2 data-h2-cursor="base(pointer)"
-                data-h2-color="base(black.70)">FR</span>
-            </li>
+              <!-- <li>
+                <span 
+                  title="French translations for Hydrogen's documentation are coming soon."
+                  data-h2-text-decoration="base(underline)"
+                  h2 data-h2-cursor="base(pointer)"
+                  data-h2-color="base(black.70)">FR</span>
+              </li> -->
             </ul>
           </div>
         </div>
