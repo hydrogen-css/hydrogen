@@ -112,7 +112,7 @@ function render(data, props) {
   if (props.id != false) {
     hash = String.raw`
       <a 
-        data-h2-color="base(black.lightest) base:hover(primary) base:all:focus-visible(black)" 
+        data-h2-color="base(black.3) base:hover(primary) base:all:focus-visible(black)" 
         data-h2-font-size="base(caption)" 
         data-h2-display="base(inline-block)"
         data-h2-background-color="base:focus-visible(focus)"
@@ -124,7 +124,7 @@ function render(data, props) {
         data-h2-width="base(x1.5)"
         data-h2-position="base(relative)"
         data-h2-margin="base(-x.25 0)"
-        data-h2-left="base(-x.25)"
+        data-h2-left="base(-x.15)"
         data-h2-vertical-align="base(middle)"
         href="${data.page.url}#${props.id}" 
         title="Skip to this section.">

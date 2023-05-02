@@ -30,7 +30,7 @@ function render(data, unique, release) {
   //   color: 'error',
   // });
   let breaking_chip_template = String.raw`
-    <span data-h2-margin="base(0, x.25)" data-h2-display="base(none) p-tablet(inline)">•</span><span data-h2-display="base(block) p-tablet(inline)" data-h2-font-weight="base(700)" data-h2-color="base(error.dark)">🚨 Breaking</span>
+    <span data-h2-margin="base(0, x.25)" data-h2-display="base(none) p-tablet(inline)">•</span><span data-h2-display="base(block) p-tablet(inline)" data-h2-font-weight="base(700)" data-h2-color="base(error.dark) base:dark(error.lighter)">🚨 Breaking</span>
   `;
   if (release.features && release.features.length > 0) {
     release.features.forEach((feature) => {

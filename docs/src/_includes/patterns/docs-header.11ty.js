@@ -86,7 +86,7 @@ function render(data) {
       `;
     } else {
       sub = String.raw`
-        <div data-h2-flex-grid="base(flex-start, x2, 0)">
+        <div data-h2-flex-grid="base(flex-start, x1, 0)">
           <div
             data-h2-display="base(none) p-tablet(block)" 
             data-h2-flex-item="base(content)">
@@ -116,9 +116,12 @@ function render(data) {
       data-h2-layer="base(2, relative)">
       <div
         data-h2-position="base(absolute)"
-        data-h2-location="base(0px, auto, auto, -x1) p-tablet(0px, auto, auto, -x2) l-tablet(0px, auto, auto, -x3) header(0px, auto, auto, calc((((100vw - var(--h2-container-large)) / 2) - -x18) * -1)) header(0px, auto, auto, calc((((100vw - var(--h2-container-large)) / 2) - -x19) * -1))"
+        data-h2-location="
+          base(0px, calc(0px - x1), auto, calc(0px - x1)) 
+          p-tablet(0px, calc(0px - x2), auto, calc(0px - x2)) 
+          l-tablet(0px, min(calc(0px - x3), calc(0px - x3 - ((100vw - (var(--h2-container-large) + x4)) / 2))), auto, min(calc(0px - x3 - x15 - x3), calc(0px - x3 - x15 - x3 - ((100vw - (var(--h2-container-large) + x4)) / 2))))
+          desktop(0px, min(calc(0px - x3), calc(0px - x3 - ((100vw - (var(--h2-container-large) + x6)) / 2))), auto, min(calc(0px - x4 - x15 - x3), calc(0px - x4 - x15 - x3 - ((100vw - (var(--h2-container-large) + x6)) / 2))))"
         data-h2-height="base(100%)"
-        data-h2-width="base(100vw)"
         data-h2-background-color="base:all(black)"
         data-h2-overflow="base(hidden)">
         <div
@@ -146,7 +149,7 @@ function render(data) {
             alt: set_icon().alt,
           },
         })}
-        <div data-h2-padding="base(x1, 0, 0, 0) l-tablet(x2, 0, 0, 0)">
+        <div data-h2-padding="base(x1, 0, 0, 0) p-tablet(x2, 0, 0, 0)">
           ${generate_sub()}
         </div>
       </div>

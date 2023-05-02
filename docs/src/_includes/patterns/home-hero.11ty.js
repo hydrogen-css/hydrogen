@@ -91,7 +91,7 @@ function render(data) {
               data-h2-background-color="base(transparent) base:focus-visible(focus)"
               data-h2-border="base(none)"
               data-h2-cursor="base(pointer)"
-              data-h2-margin="base(0, x.25, 0, 0)"
+              data-h2-margin="base(0, x.25, 0, -1ch)"
               data-h2-font-size="base(caption)"
               data-h2-outline="base(none)"
               data-h2-radius="base(5px)"

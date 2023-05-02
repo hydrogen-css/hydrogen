@@ -53,10 +53,6 @@
         "query": "screen and (min-width: 80em)"
       },
       {
-        "key": "header",
-        "query": "screen and (min-width: 88.4rem)"
-      },
-      {
         "key": "desktop",
         "query": "screen and (min-width: 100em)"
       }
@@ -71,7 +67,7 @@
           "size": "95%",
           "type_scale": "1.1",
           "line_heights": {
-            "body": "auto"
+            "body": "1.45"
           }
         },
         {
@@ -79,7 +75,7 @@
           "size": "105%",
           "type_scale": "1.15",
           "line_heights": {
-            "body": "auto"
+            "body": "1.45"
           }
         },
         {
@@ -87,7 +83,7 @@
           "size": "112.5%",
           "type_scale": "1.15",
           "line_heights": {
-            "body": "auto"
+            "body": "1.45"
           }
         }
       ],
@@ -213,7 +209,7 @@
         {
           "key": "large",
           "default": {
-            "max_width": "80rem"
+            "max_width": "85rem"
           }
         }
       ],
