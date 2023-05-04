@@ -61,7 +61,9 @@ function render(data) {
           data-h2-shadow="base(largest)"
           data-h2-height="base(100%)"
           data-h2-radius="base(rounded)"
-          data-h2-overflow="base(auto)">
+          data-h2-overflow="base(auto)"
+          data-h2-max-width="base(x18)"
+          data-h2-margin="base(0, auto)">
           <div
             data-h2-padding="base(x1) mobile(x1.5, x2, x2, x2)"
             data-h2-min-height="base(100%)">

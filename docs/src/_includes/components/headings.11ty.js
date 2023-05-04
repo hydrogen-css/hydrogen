@@ -143,11 +143,19 @@ function render(data, props) {
   // Create link
   let link = ``;
   if (props.link) {
+    let external = ``;
+    if (props.link.external) {
+      external = String.raw`
+        rel="noreferrer"
+        target="_blank"
+      `;
+    }
     link = String.raw`
       <div data-h2-text-align="base(center) p-tablet(right)">
         <a
           href="${props.link.path}"
           title="${props.link.title}"
+          ${external}
           data-h2-font-size="base(h6, 1.3)"
           data-h2-font-weight="base(300)"
           data-h2-background-color="base:focus-visible(focus)"

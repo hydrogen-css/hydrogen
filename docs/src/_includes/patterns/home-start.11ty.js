@@ -82,8 +82,8 @@ function render(data) {
         data-h2-margin-top="base(x1) l-tablet(0)"
         data-h2-top="l-tablet(-x2)"
         data-h2-right="l-tablet(0px)"
-        data-h2-height="p-tablet(calc(100% + x2))"
-        data-h2-overflow="p-tablet(auto)">
+        data-h2-height="l-tablet(calc(100% + x2))"
+        data-h2-overflow="l-tablet(auto)">
         ${(() => {
           let items = ``;
           step.content.forEach((child, child_index) => {
@@ -132,9 +132,9 @@ function render(data) {
           flourish: true,
         })}
         <div 
-          data-h2-margin-left="l-tablet(calc(4rem + x1))"
+          data-h2-margin-left="p-tablet(calc(4rem + x1))"
           data-h2-display="base(grid)"
-          data-h2-grid-template-columns="p-tablet(30%)"
+          data-h2-grid-template-columns="l-tablet(30%)"
           data-h2-position="base(relative)">
           ${steps}
         </div>

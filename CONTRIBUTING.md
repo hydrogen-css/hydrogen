@@ -7,6 +7,7 @@ Thanks for considering helping out with Hydrogen! Below is a set of helpful info
 - [Hydrogen's website](https://hydrogen.design/en)
 - [Hydrogen's documentation](https://hydrogen.design/en/docs)
 - [Code repository](https://github.com/hydrogen-css/hydrogen)
+- [Development roadmap](https://github.com/orgs/hydrogen-css/projects/3/views/3)
 - [Latest package release](https://www.npmjs.com/package/@hydrogen-css/hydrogen/v/latest)
 - [Beta package release](https://www.npmjs.com/package/@hydrogen-css/hydrogen/v/beta)
 
