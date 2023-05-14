@@ -27,6 +27,8 @@ function render(data, props) {
           base:children[span](primary)
           base:all:focus-visible:children[span](black)"
         data-h2-stroke="base:all:focus-visible:children[path](black)"
+        data-h2-padding="base(0)"
+        data-h2-display="base(block)"
         data-h2-shadow="base(small) base:hover(large) base:focus-visible(none)"
         data-h2-cursor="base(pointer)"
         data-h2-position="base(absolute)"
@@ -35,8 +37,8 @@ function render(data, props) {
         data-h2-border="base(1px solid primary.darkest.2)"
         data-h2-transition="base(box-shadow, .2s, ease)"
         data-h2-z-index="base(2)"
-        data-h2-location="base(x.75, auto, auto, 0)"
-        data-h2-transform="base(translate(-50%, 0))"
+        data-h2-location="base(calc((x2 + (var(--h2-line-height-h6) * 1rem)) / 2), auto, auto, 0)"
+        data-h2-transform="base(translate(-50%, -40%))"
         title="Expand or collapse this release."
         onclick="toggle_ec(this)">
         <div
