@@ -189,6 +189,14 @@
         </div>
       </div>
     </div>
+    <!-- Expected errors -->
+    <p data-h2-margin="base(calc(true, false))"></p>
+    <p data-h2-bugaloo="base(welrfjadsf)"></p>
+    <p data-h2-color="base(rgb\(50, 50, 50))"></p>
+    <!-- Known errors -->
+    <p data-h2-font-size="base(clamp(1rem, 10vw, 2rem))"></p>
+    <!-- Experimental errors -->
+    <p data-h2-background="base(image-set('logo.png' 2x, 'logo.png'))"></p>
     <!-- Local scripts -->
     <script src="./index.js"></script>
   </body>

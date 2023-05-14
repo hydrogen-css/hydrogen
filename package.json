@@ -37,14 +37,14 @@
     "setup": "./setup.sh",
     "deploy": "./deploy.sh",
     "docs": "npm link --no-fund --no-audit && cd docs && npm link @hydrogen-css/hydrogen --no-fund --no-audit && npm start",
-    "docs-build": "npm link --no-fund --no-audit && cd docs && npm link @hydrogen-css/hydrogen --no-fund --no-audit && npm run build",
+    "docs:build": "npm link --no-fund --no-audit && cd docs && npm link @hydrogen-css/hydrogen --no-fund --no-audit && npm run build",
     "test": "npm link --no-fund --no-audit && cd test && npm link @hydrogen-css/hydrogen --no-fund --no-audit && npm start",
-    "test-build": "npm link --no-fund --no-audit && cd test && npm link @hydrogen-css/hydrogen --no-fund --no-audit && npm run build",
+    "test:build": "npm link --no-fund --no-audit && cd test && npm link @hydrogen-css/hydrogen --no-fund --no-audit && npm run build",
     "jest": "jest"
   },
   "dependencies": {
     "autoprefixer": "^10.4.13",
-    "browserlist": "^1.0.1",
+    "browserslist": "^4.21.5",
     "chokidar": "^3.5.3",
     "color": "^4.2.3",
     "colors": "^1.4.0",
