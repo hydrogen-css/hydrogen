@@ -74,17 +74,21 @@ function render(data) {
               data-h2-text-align="base(center) p-tablet(right)">${data.site.slogan[data.locale]}</p>
           </div>
         </div>
-        <div data-h2-order="base(1) p-tablet(2)" data-h2-padding="base(x4, 0, 0, 0) p-tablet(0, 0, x3.5, 0)">
+        <div 
+          data-h2-order="base(1) p-tablet(2)" 
+          data-h2-padding="base(x4, 0, 0, 0) p-tablet(0, 0, x3.5, 0)"
+          data-h2-text-align="base(center) p-tablet(left)">
           <h1
             data-h2-color="base:all(white)"
             data-h2-font-weight="base(700)"
             data-h2-margin-bottom="base(x.5)"
-            data-h2-text-align="base(center) p-tablet(left)"
             data-h2-font-size="base(calc(var(--h2-font-size-display) * 1.15))"
             data-h2-overflow-wrap="base(anywhere)">
             ${data.site.name}
           </h1>
-          <div class="code_wrapper">
+          <div 
+            class="code_wrapper"
+            data-h2-display="base(inline-block) p-tablet(block)">
             <button
               title="${data.site.components.code.copy_button.title[data.locale]}"
               onclick="copy_code(this)"

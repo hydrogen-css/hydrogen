@@ -65,7 +65,7 @@ function render(data) {
           data-h2-max-width="base(x18)"
           data-h2-margin="base(0, auto)">
           <div
-            data-h2-padding="base(x1) mobile(x1.5, x2, x2, x2)"
+            data-h2-padding="base(x1.5) mobile(x1.5, x2, x2, x2)"
             data-h2-min-height="base(100%)">
             ${menu_data.render(data)}
           </div>

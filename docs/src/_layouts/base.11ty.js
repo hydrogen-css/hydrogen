@@ -30,20 +30,18 @@ function render(data) {
         <!-- Theme scripts -->
         <script>
           let hydrogen = document.querySelector('html');
-          if (!localStorage.mode) {
-            hydrogen.dataset.h2 = hydrogen.dataset.h2.replace(/pref/, '').replace(/dark/g, '').replace(/light/g, '') + ' pref';
-          } else if (
-            !localStorage.mode && window.matchMedia('(prefers-color-scheme: dark)').matches
-          ) {
-            hydrogen.dataset.h2 = hydrogen.dataset.h2.replace(/pref/, '').replace(/dark/g, '').replace(/light/g, '') + ' dark';
-          } else if (localStorage.mode) {
-            if (localStorage.mode === 'pref') {
-              hydrogen.dataset.h2 = hydrogen.dataset.h2.replace(/pref/, '').replace(/dark/g, '').replace(/light/g, '') + ' pref';
-            } else if (localStorage.mode === 'light') {
-              hydrogen.dataset.h2 = hydrogen.dataset.h2.replace(/pref/, '').replace(/dark/g, '').replace(/light/g, '') + ' light';
+          if (localStorage.mode) {
+            if (localStorage.mode === 'light') {
+              hydrogen.dataset.h2 = hydrogen.dataset.h2.replace(/dark/g, '').replace(/light/g, '') + ' light';
             } else if (localStorage.mode === 'dark') {
-              hydrogen.dataset.h2 = hydrogen.dataset.h2.replace(/pref/, '').replace(/dark/g, '').replace(/light/g, '') + ' dark';
+              hydrogen.dataset.h2 = hydrogen.dataset.h2.replace(/dark/g, '').replace(/light/g, '') + ' dark';
             } 
+          } else if (
+            window.matchMedia('(prefers-color-scheme: dark)').matches
+          ) {
+            hydrogen.dataset.h2 = hydrogen.dataset.h2.replace(/dark/g, '').replace(/light/g, '') + ' dark';
+          } else {
+            hydrogen.dataset.h2 = hydrogen.dataset.h2.replace(/dark/g, '').replace(/light/g, '');
           }
         </script>
         <!-- Local styles -->

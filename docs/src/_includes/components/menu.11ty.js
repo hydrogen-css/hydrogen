@@ -208,7 +208,7 @@ function render(data) {
     </ul>
   `;
   let menu_content = String.raw`
-  <div data-h2-margin="base(x1, 0, 0, 0) mobile(x2 0 0 0)">
+  <div data-h2-margin="base(x1.5, 0, 0, 0) mobile(x2 0 0 0)">
       <p 
         data-h2-color="base(black)"
         data-h2-font-weight="base(700)" 
