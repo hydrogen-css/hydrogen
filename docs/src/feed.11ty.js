@@ -14,7 +14,7 @@ let data = {
 };
 
 function render(data) {
-  let { dateToRfc3339, absoluteUrl } = require('@11ty/eleventy-plugin-rss');
+  let { absoluteUrl, dateToRfc822 } = require('@11ty/eleventy-plugin-rss');
   var escape = require('escape-html');
   let posts = ``;
   let last_updated;
@@ -37,6 +37,11 @@ function render(data) {
       // Patch release
       release_type = 'Patch release';
     }
+    // Create the breaking chip
+    let breaking_chip = ``;
+    let breaking_chip_template = String.raw`
+      <span>• 🚨 Breaking</span>
+    `;
     function content_type(post, type) {
       let content = ``;
       if (post[type] && post[type].length > 0) {
@@ -48,6 +53,11 @@ function render(data) {
           content = content + `<h2>🪲 Bugfixes (${post[type].length})</h2><ul>`;
         }
         post[type].forEach((item) => {
+          // Check to see if the change is breaking and set the breaking flag
+          if (item.breaking) {
+            breaking_chip = breaking_chip_template;
+          }
+          // Build the change content
           if (Array.isArray(item.changes[data.metadata.language])) {
             content = content + String.raw`<li>`;
             if (item.changes[data.metadata.language].length > 1) {
@@ -88,6 +98,7 @@ function render(data) {
         <span>Released: ${post.date.toLocaleString('default', {
           month: 'long',
         })} ${post.date.getDate()}, ${post.date.getFullYear()}</span>
+        ${breaking_chip}
       </p>
       <hr>
       ${features}
@@ -97,36 +108,41 @@ function render(data) {
   }
   data.releases.rss.reverse().forEach((post, index) => {
     if (index === 0) {
-      last_updated = dateToRfc3339(post.date);
+      last_updated = dateToRfc822(post.date);
     }
     posts =
       posts +
       String.raw`
-      <entry>
+      <item>
         <title>Release ${post.version}</title>
-        <link href="${absoluteUrl('en/releases#' + post.version, data.metadata.url)}"/>
-        <updated>${dateToRfc3339(post.date)}</updated>
-        <id>${absoluteUrl('en/docs/releases#' + post.version, data.metadata.url)}</id>
-        <content xml:lang="${data.metadata.language}" type="html">${escape(
-        post_content(post)
-      )}</content>
-      </entry>
+        <link>${absoluteUrl('en/releases#' + post.version, data.metadata.url)}</link>
+        <description>${escape(post_content(post))}</description>
+        <pubDate>${dateToRfc822(post.date)}</pubDate>
+        <dc:creator>${data.metadata.author.name}</dc:creator>
+        <guid>${absoluteUrl('en/releases#' + post.version, data.metadata.url)}</guid>
+      </item>
     `;
   });
   return String.raw`<?xml version="1.0" encoding="utf-8"?>
-    <feed xmlns="http://www.w3.org/2005/Atom" xml:base="${data.metadata.url}">
-      <title>${data.metadata.title}</title>
-      <subtitle>${data.metadata.subtitle}</subtitle>
-      <link href="${absoluteUrl(data.metadata.url + data.permalink)}" rel="self"/>
-      <link href="${data.metadata.url}"/>
-      <updated>${last_updated}</updated>
-      <id>${data.metadata.url}</id>
-      <author>
-        <name>${data.metadata.author.name}</name>
-        <email>${data.metadata.author.email}</email>
-      </author>
-      ${posts}
-    </feed>
+    <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="${
+      data.metadata.url
+    }" xmlns:atom="http://www.w3.org/2005/Atom">
+      <channel>
+        <title>${data.metadata.title}</title>
+        <link>${data.metadata.url}</link>
+        <atom:link href="${absoluteUrl(
+          data.metadata.url + data.permalink
+        )}" rel="self" type="application/rss+xml" />
+        <description>${data.metadata.subtitle}</description>
+        <language>${data.metadata.language}</language>
+        <image>
+          <url>${data.site.base_url}/static/img/social-hydrogen.png</url>
+          <title>The Hydrogen logo</title>
+          <link>${data.site.base_url}/en</link>
+        </image>
+        ${posts}
+      </channel>
+    </rss>
   `;
 }
 
