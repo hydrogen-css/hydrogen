@@ -29,10 +29,12 @@ function render(data) {
         data-h2-background="
           base(transparent)
           base:children[>div](foreground)
-          base:selectors[.active]:children[>div](primary.dark)"
+          base:selectors[.active]:children[>div](primary.dark)
+          base:focus-visible:children[>div, >span](focus)"
         data-h2-padding="base(0)"
-        data-h2-border="base(none)"
+        data-h2-border="base(none) base:children[>div](1px solid primary.darkest.2) base:focus-visible:children[>div](1px solid focus)"
         data-h2-display="base(flex)" 
+        data-h2-outline="base:focus-visible(none)"
         data-h2-gap="base(x.5)"
         data-h2-cursor="base(pointer) base:selectors[.active](initial)"
         data-h2-pointer-events="base:selectors[.active](none)"
@@ -42,7 +44,10 @@ function render(data) {
           base:children[>div>span](primary.dark)
           base:children[>span](font)
           base:hover:children[>span](primary)
-          base:selectors[.active]:children[>div>span](white)"
+          base:selectors[.active]:children[>div>span](white)
+          base:all:focus-visible:children[>span](black)
+          base:all:focus-visible:children[>div>span](black)
+          base:all:focus-visible:selectors[.active]:children[>div>span](black)"
         data-h2-text-decoration="base:children[>span](underline) base:selectors[.active]:children[>span](none)">
         <div
           data-h2-display="base(block)"
@@ -50,7 +55,6 @@ function render(data) {
           data-h2-position="base(relative)"
           data-h2-min-height="base(x1)"
           data-h2-height="base(x1)"
-          data-h2-border="base(1px solid primary.darkest.2)"
           data-h2-min-width="base(x1)"
           data-h2-width="base(x1)"
           data-h2-radius="base(100%)">
