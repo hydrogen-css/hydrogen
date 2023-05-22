@@ -38,7 +38,6 @@ module.exports = function (eleventyConfig) {
   // Run Hydrogen after the eleventy build executes
   eleventyConfig.on('eleventy.after', () => {
     try {
-      process.env.H2DEBUG = true;
       hydrogen_build();
     } catch (error) {
       console.log(error);

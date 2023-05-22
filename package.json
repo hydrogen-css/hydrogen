@@ -36,10 +36,12 @@
   "scripts": {
     "setup": "./setup.sh",
     "deploy": "./deploy.sh",
-    "docs": "npm link --no-fund --no-audit && cd docs && npm link @hydrogen-css/hydrogen --no-fund --no-audit && npm start",
-    "docs:build": "npm link --no-fund --no-audit && cd docs && npm link @hydrogen-css/hydrogen --no-fund --no-audit && npm run build",
-    "test": "npm link --no-fund --no-audit && cd test && npm link @hydrogen-css/hydrogen --no-fund --no-audit && npm start",
-    "test:build": "npm link --no-fund --no-audit && cd test && npm link @hydrogen-css/hydrogen --no-fund --no-audit && npm run build",
+    "docs": "npm link --no-fund --no-audit && cd docs && npm link @hydrogen-css/hydrogen --no-fund --no-audit && H2DEBUG=true npm start",
+    "docs:build": "npm link --no-fund --no-audit && cd docs && npm link @hydrogen-css/hydrogen --no-fund --no-audit && H2DEBUG=true npm run build",
+    "docs:build:logs": "npm link --no-fund --no-audit && cd docs && npm link @hydrogen-css/hydrogen --no-fund --no-audit && H2DEBUG=true HYDROGEN_LOGS=true npm run build",
+    "test": "npm link --no-fund --no-audit && cd test && npm link @hydrogen-css/hydrogen --no-fund --no-audit && H2DEBUG=true npm start",
+    "test:build": "npm link --no-fund --no-audit && cd test && npm link @hydrogen-css/hydrogen --no-fund --no-audit && H2DEBUG=true npm run build",
+    "test:build:logs": "npm link --no-fund --no-audit && cd test && npm link @hydrogen-css/hydrogen --no-fund --no-audit && H2DEBUG=true HYDROGEN_LOGS=true npm run build",
     "jest": "jest"
   },
   "dependencies": {
