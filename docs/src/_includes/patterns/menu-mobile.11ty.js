@@ -12,7 +12,7 @@ function render(data) {
         base:children[>div>button>span:last-child](none)
         base:selectors[.active]:children[>div>button>span:first-of-type](none)
         base:selectors[.active]:children[>div>button>span:last-child](block)"
-      data-h2-location="base(auto, auto, -5px, 0)"
+      data-h2-location="base(auto, auto, 0, 0)"
       data-h2-width="base(100%)"
       data-h2-layer="base(100, fixed)"
       data-h2-opacity="base:children[>nav >a](0%) base:selectors[.active]:children[>nav >a](100%)"
@@ -23,13 +23,13 @@ function render(data) {
         base:children[>nav](.5s ease) 
         base:selectors[.active]:children[>nav](.5s ease)
         base:selectors[.active]:children[>nav >a](.2s ease)">
-      <div data-h2-padding="base(x.5, 0, 0, 0)">
+      <div data-h2-padding="base(x.5)">
         <button
           class="mobile-menu-trigger"
           id="mobileNav"
           data-h2-background="base:all(code) base:all:focus-visible(focus)"
-          data-h2-border="base(none)"
-          data-h2-border-top="base:all(1px solid primary.lightest.2)"
+          data-h2-border="base:all(1px solid primary.lightest.2)"
+          data-h2-radius="base(rounded)"
           data-h2-padding="base(x1, x1, calc(x1 + 5px), x1)"
           data-h2-shadow="base(largest)"
           data-h2-overflow="base(hidden)"

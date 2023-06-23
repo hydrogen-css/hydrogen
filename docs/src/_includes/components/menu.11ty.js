@@ -219,7 +219,7 @@ function render(data) {
         margin: 'data-h2-margin="base(x.25, 0, 0, 0)"',
       })}
       <nav>
-      <ul data-h2-padding="base(x.5, 0, 0, x1)" data-h2-list-style="base(none) base:children[ul](none)">
+      <ul data-h2-padding="base(0, 0, 0, x1)" data-h2-list-style="base(none) base:children[ul](none)">
         ${return_menu_item('Home', '/' + data.locale, {
           external: false,
           children: false,
@@ -260,7 +260,7 @@ function render(data) {
         ${rule.render(data, {
           margin: 'data-h2-margin="base(x.25, 0, 0, 0)"',
         })}
-        <ul data-h2-padding="base(x.5, 0, 0, x1)" data-h2-list-style="base(none)">
+        <ul data-h2-padding="base(0, 0, 0, x1)" data-h2-list-style="base(none)">
           ${create_page_menu(data)}
         </ul>
       </div>
