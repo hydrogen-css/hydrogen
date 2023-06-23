@@ -1,0 +1,7 @@
+/* data-h2 is required for the following styles because they need to override Hydrogen attribute styles */
+[data-h2] .side-menu__item .side-menu__item__label {
+  visibility: hidden;
+  position: absolute;
+  left: -100%;
+  width: 0px;
+}
