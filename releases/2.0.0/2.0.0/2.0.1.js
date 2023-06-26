@@ -9,6 +9,8 @@
 /** @type {Release} */
 module.exports = {
   version: '2.0.1',
+  summary:
+    'This release contains a handful of minor quality of life changes, including reduced console output and better development console error logging.',
   featured: false,
   date: new Date('2023-02-27'),
   author: 'Josh Beveridge',

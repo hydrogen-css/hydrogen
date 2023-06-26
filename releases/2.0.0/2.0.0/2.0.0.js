@@ -9,6 +9,8 @@
 /** @type {Release} */
 module.exports = {
   version: '2.0.0',
+  summary:
+    'This release reworks almost every single feature and option, enabling more reliable output, faster compile times, and loads of new features and options.',
   featured: true,
   date: new Date('2023-02-01'),
   author: 'Josh Beveridge',

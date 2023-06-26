@@ -32,7 +32,7 @@ function render(data, props) {
     h3: 'data-h2-font-weight="base(700)"',
     h4: 'data-h2-font-weight="base(300)"',
     h5: 'data-h2-font-weight="base(700)"',
-    h6: 'data-h2-font-weight="base(300)"',
+    h6: 'data-h2-font-weight="base(700)"',
   };
   // Set color
   let color = "data-h2-color='base(black)'";
