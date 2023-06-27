@@ -1,10 +1,14 @@
-# 🌞 Welcome to Hydrogen
+<img src="https://github.com/hydrogen-css/hydrogen/assets/6960386/a2485099-6b4d-404b-83c6-0de775964b6d" />
+
+---
+
+<a href='https://hydrogen.design/en/docs/releases/#latest' title="View Hydrogen's latest stable release."><img alt='npm (tag)' src='https://img.shields.io/npm/v/@hydrogen-css/hydrogen/latest?color=%239D5CFF&label=latest'></a> <a href='https://hydrogen.design/en/docs/releases/#latest' title="View Hydrogen's latest beta release."><img alt='npm (tag)' src='https://img.shields.io/npm/v/@hydrogen-css/hydrogen/beta?color=%239D5CFF&label=beta'></a> <img alt='Netlify' src='https://img.shields.io/netlify/f508b5d3-904e-4a1b-9ec9-cf8c2334f0e3?label=docs'> <a href='https://hydrogen.design/feed.xml' title="Subscribe to updates."><img src='https://img.shields.io/badge/feed-subscribe-orange'></a>
 
 Hydrogen is an open-source design and CSS utility framework powered by data-attributes.
 
 By parsing the contents of custom `data-h2-` attributes, Hydrogen allows you to style elements completely from your markup. It comes equipped with a comprehensive library of tools and configurations for easy, seamless development. At runtime, it processes your markup and builds a CSS file that contains only the code you've used, preventing duplication and bloat.
 
-[Website](https://hydrogen.design) | [Roadmap](https://workflowy.com/s/hydrogens-roadmap/7Gjmdbjiqc0Wst1R)
+[Website](https://hydrogen.design) | [Roadmap](https://github.com/orgs/hydrogen-css/projects/3/views/3)
 
 ## 🛠️ Basic usage
 
@@ -35,7 +39,7 @@ Hydrogen is configured using a `hydrogen.config.json` file located at the root o
 
 Within this configuration file, you can modify many of Hydrogen's options to include values that suit your project's needs and theme, including custom media queries, colors, typography, and shadows.
 
-You can learn more about [configuring Hydrogen in the documentation](https://beta.hydrogen.design/en/docs/setup/configuration).
+You can learn more about [configuring Hydrogen in the documentation](https://hydrogen.design/en/docs/configuration/).
 
 ## 🤖 Features
 
@@ -55,7 +59,7 @@ Custom Hydrogen properties use a comma separated syntax to accept specific optio
 
 The biggest advantage to Hydrogen's `data-attribute` syntax is that it enables the use of inline media queries, selectors, states, targeting of nested elements, and dark mode. By chaining modifiers onto your query, you can target complex combinations of elements, manage styles based on the presence of classes or ids, bulk style an element's children, and more.
 
-[Learn more about modifiers in the documentation.](https://beta.hydrogen.design/basics/modifiers)
+[Learn more about modifiers in the documentation.](https://hydrogen.design/en/docs/styling/syntax/)
 
 ### Speed and compression
 
@@ -65,20 +69,17 @@ It also runs Autoprefixer and CSSNano on itself to provide a complete, productio
 
 # Development and contribution
 
-- Pull the repository down
-- run `npm run setup`
-- do some development work in `lib`
-- write function tests in sibling `function.test.js` files, or add environment tests in `./tests`
-- run tests using the commands found in the root `package.json`
+- Fork the repository and pull it down
+- Navigate to the code repository and run `npm run setup`
+- To add a feature or propose a change, ensure you're doing the following:
+  - Update the relevant files in the `lib` directory
+  - Update or create matching Jest test files for your changes
+  - If relevant, add a visual test in the `test` directory's `markup`
+  - Update the documentation in the `docs` directory
+- Submit a pull request with details on your changes
 
-You can read up on specifics about how Hydrogen works on a technical level in the development README found in `CONTRIBUTING.md`.
+- Hydrogen takes two approaches to development testing:
+  - [Jest](https://jestjs.io/) is used for function level unit tests and can be run using `npm run jest`
+  - The `test` directory contains a working Hydrogen project for visual testing and real-world compiling tests and can be run using `npm run test`
 
-## Testing coverage
-
-The following functions are currently covered by automated tests:
-
-- `hydrogen_build`
-
-The following areas are currently covered by environment tests:
-
-- basic environment
+The folder structure in the `lib` directory tries to reflect the relationships between functions, including whether a function is a synchronous build step or a reusable parsing function. You can read up on specifics about how Hydrogen works on a technical level in the `CONTRIBUTING.md` file.

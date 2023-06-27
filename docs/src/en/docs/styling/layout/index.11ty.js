@@ -1,7 +1,5 @@
-const docs_layout = require('../../../../_includes/pages/docs.11ty');
-
 let data = {
-  layout: 'pages/docs.11ty.js',
+  layout: 'docs.11ty.js',
   navigation: {
     order: 13,
     key: 'layout',
@@ -10,8 +8,7 @@ let data = {
   },
   title: 'Layout',
   title_long: 'Applying layouts',
-  subtitle:
-    "Learn about whitespace units, layout tips, and Hydrogen's flexbox grid system.",
+  subtitle: "Learn about whitespace units, layout tips, and Hydrogen's flexbox grid system.",
   main: [
     {
       type: 'title',
@@ -30,11 +27,13 @@ let data = {
         {
           type: 'copy',
           items: [
-            "As described in the <a href='/en/docs/styling/typography/#rhythm' title='Learn more about vertical rhythm.'>typography styling section</a>, these multiplier units are created by, and adapt to, your project's current typography settings. At their core, multipliers are rooted in your base paragraph's line-height value.",
+            "As described in the <a href='/en/docs/styling/typography/#rhythm' title='Learn more about vertical rhythm.'>typography styling section</a>, these multiplier units are created by, and adapt to, your project's current typography settings. At their core, multipliers are rooted in your typography's <code>body</code> line-height value.",
           ],
         },
         {
           type: 'code',
+          language: 'markup',
+          count: 4,
           lines: [
             'x1 : (line-height x 1)',
             'x2 : (line-height x 2)',
@@ -55,10 +54,12 @@ let data = {
         },
         {
           type: 'code',
+          language: 'html',
+          count: 3,
           lines: [
-            'data-h2-padding="base(x2 x1)"',
-            'data-h2-margin-top="base(x3)"',
-            'data-h2-gap="base(x1.5)"',
+            '<p data-h2-padding="base(x2 x1)"></p>',
+            '<p data-h2-margin-top="base(x3)"></p>',
+            '<p data-h2-gap="base(x1.5)"></p>',
           ],
         },
       ],
@@ -94,15 +95,10 @@ let data = {
             {
               type: 'code',
               file: 'index.html',
-              copy: true,
+              language: 'html',
+              count: 11,
               lines: [
-                '<div',
-                '  data-h2-display="base(grid)"',
-                '  data-h2-grid-template-columns="',
-                '    base(1fr)',
-                '    p-tablet(1fr 1fr)',
-                '    desktop(1fr 1fr 1fr)"',
-                '  data-h2-gap="base(x1) desktop(x3)">',
+                '<div\n  data-h2-display="base(grid)"\n  data-h2-grid-template-columns="\n    base(1fr)\n    p-tablet(1fr 1fr)\n    desktop(1fr 1fr 1fr)"\n  data-h2-gap="base(x1) desktop(x3)">',
                 '  <div></div>',
                 '  <div></div>',
                 '  <div></div>',
@@ -144,7 +140,8 @@ let data = {
             {
               type: 'code',
               file: 'index.html',
-              copy: true,
+              language: 'html',
+              count: 3,
               lines: [
                 '<div data-h2-flex-grid="base(alignment, column-gap, row-gap)">',
                 '  children',
@@ -180,12 +177,13 @@ let data = {
             {
               type: 'code',
               file: 'index.html',
-              copy: true,
+              language: 'html',
+              count: 5,
               lines: [
                 '<div data-h2-flex-grid="base(flex-start, x2, x1)">',
-                '  <div data-h2-flex-item="base(1of1) desktop(1of2)></div>"',
-                '  <div data-h2-flex-item="base(1of1) desktop(3of10)></div>"',
-                '  <div data-h2-flex-item="base(1of1) desktop(1of5)></div>"',
+                '  <div data-h2-flex-item="base(1of1) desktop(1of2)"></div>',
+                '  <div data-h2-flex-item="base(1of1) desktop(3of10)"></div>',
+                '  <div data-h2-flex-item="base(1of1) desktop(1of5)"></div>',
                 '</div>',
               ],
             },

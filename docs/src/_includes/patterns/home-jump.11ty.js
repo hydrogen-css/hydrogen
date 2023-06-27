@@ -1,9 +1,3 @@
-// Hydrogen dependencies
-
-// Local dependencies
-const heading = require('../components/headings.11ty');
-const footer = require('../patterns/footer.11ty');
-
 // Create pattern-specific data
 var data = {};
 
@@ -13,6 +7,10 @@ var data = {};
  * @returns {String} the rendered pattern
  */
 function render(data) {
+  // Local dependencies
+  let heading = require('../components/headings.11ty');
+  let rule = require('../components/rule.11ty');
+  let footer = require('../patterns/footer.11ty');
   // Create sections
   function get_sections() {
     let sections = String.raw``;
@@ -30,11 +28,12 @@ function render(data) {
       }
       sections = sections.concat(String.raw`
         <div>
-          <p data-h2-font-weight="base(700)" data-h2-color="base(primary.dark)">${
-            i.title
-          }</p>
+          <p data-h2-font-weight="base(700)" data-h2-color="base(primary.dark)">${i.title}</p>
+          ${rule.render(data, {
+            margin: 'data-h2-margin="base(x.25, 0, x1, 0)"',
+          })}
           <ul
-            data-h2-margin-top="base(x.5)" 
+            data-h2-margin-top="base(x.5) base:children[>li](x.5)" 
             data-h2-padding-left="base(x.75)">
             ${get_subs()}
           </ul>
@@ -45,13 +44,14 @@ function render(data) {
   }
   // Render the pattern
   return String.raw`
-    <div data-h2-margin="base(x3, 0) l-tablet(x5, 0)" data-h2-padding="base(0, 0, x1, 0)">
+    <div data-h2-margin="base(x3, 0, x2, 0) l-tablet(x4, 0, x3, 0)" data-h2-padding="base(0, 0, x1, 0)">
       <div data-h2-container="base(center, medium, x1) p-tablet(center, medium, x2) l-tablet(center, medium, x3)">
         ${heading.render(data, {
           tag: 'h2',
           size: 'h2',
           label: data.jump.title.label,
           id: data.jump.title.id,
+          svg: 'compass',
           img: {
             path: data.jump.title.icon.path,
             alt: data.jump.title.icon.alt,
@@ -92,7 +92,8 @@ function render(data) {
         data-h2-position="base(relative)" 
         data-h2-container="base(center, medium, x1) p-tablet(center, medium, x2) l-tablet(center, medium, x3)">
         <div
-          data-h2-margin="base(-x3, 0, 0, 0)"
+          data-h2-margin="base(-x3, 0, 0, 0) p-tablet(-x3, 0, 0, calc(4rem + x1))"
+          data-h2-border="base(1px solid primary.darkest.2)"
           data-h2-background-color="base(foreground)"
           data-h2-radius="base(rounded)"
           data-h2-padding="base(x1) l-tablet(x2)"

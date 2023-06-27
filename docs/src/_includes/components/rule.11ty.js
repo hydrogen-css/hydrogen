@@ -10,12 +10,16 @@ var data = {};
  * @returns {String} the rendered template
  */
 function render(data, props) {
+  let margin = 'data-h2-margin="base(0)"';
+  if (props && props.margin) {
+    margin = props.margin;
+  }
   return String.raw`
     <hr 
       data-h2-border="base(none)"
       data-h2-height="base(1px)"
-      data-h2-background-color="base(primary.darkest.20)"
-      data-h2-margin="base(0)">
+      data-h2-background-color="base(primary.darkest.2)"
+      ${margin}>
   `;
 }
 

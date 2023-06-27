@@ -5,7 +5,7 @@
   "keywords": [],
   "homepage": "https://hydrogen.design",
   "bugs": {
-    "url": "https://gitlab.com/hydrogen-css/hydrogen/-/issues"
+    "url": "https://github.com/hydrogen-css/hydrogen/issues/new"
   },
   "license": "MIT",
   "author": {
@@ -15,7 +15,7 @@
   "main": ".eleventy.js",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/hydrogen-css/hydrogen"
+    "url": "https://github.com/hydrogen-css/hydrogen"
   },
   "scripts": {
     "start": "eleventy --serve",
@@ -23,15 +23,17 @@
     "build": "eleventy"
   },
   "dependencies": {
-    "@11ty/eleventy": "^1.0.2",
-    "@11ty/eleventy-navigation": "^0.3.3",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^3.2.2",
-    "@hydrogen-css/hydrogen": "^2.0.0-beta.27",
-    "autoprefixer": "^10.4.9",
-    "cross-env": "^7.0.2",
-    "luxon": "^1.25.0",
-    "postcss": "^8.4.14",
-    "postcss-cli": "^8.3.1"
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@11ty/eleventy-upgrade-help": "^2.0.5",
+    "@hydrogen-css/hydrogen": "^2.0.1",
+    "autoprefixer": "^10.4.14",
+    "cross-env": "^7.0.3",
+    "luxon": "^3.3.0",
+    "postcss": "^8.4.24",
+    "postcss-cli": "^10.1.0",
+    "prismjs": "^1.29.0"
   },
   "engines": {
     "node": ">=14.18.1",
@@ -46,6 +48,11 @@
     "bracketSpacing": true,
     "tabWidth": 2,
     "useTabs": false,
-    "singleAttributePerLine": true
+    "singleAttributePerLine": true,
+    "printWidth": 100
+  },
+  "devDependencies": {
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "escape-html": "^1.0.3"
   }
 }

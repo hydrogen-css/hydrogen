@@ -1,103 +1,91 @@
 const body = document.querySelector('body');
 
-window.onload = function () {
-  if (document.querySelector('#docs_header')) {
-    var docsHead = document.querySelector('#docs_header').clientHeight;
-    body.setAttribute('style', `--heightHack: ${docsHead}px`);
-  }
-};
-
-window.onresize = function () {
-  if (document.querySelector('#docs_header')) {
-    var docsHead = document.querySelector('#docs_header').clientHeight;
-    body.setAttribute('style', `--heightHack: ${docsHead}px`);
-  }
-};
-
 // Get Hydrogen elements
 let instances = document.querySelectorAll('[data-h2]');
 let switcher = document.querySelector('#switcher');
 
-// Listeners
-function check_for_dark_mode() {
-  if (
-    (window.matchMedia('(prefers-color-scheme: dark)').matches &&
-      (localStorage.mode === undefined || localStorage.mode != 'light')) ||
-    (localStorage.mode != undefined && localStorage.mode === 'dark')
-  ) {
+// Toggle preference
+function enable_mode_preference() {
+  switcher.classList.add('pref');
+  switcher.classList.remove('light', 'dark');
+  if (window.matchMedia('(prefers-color-scheme: light)').matches) {
     instances.forEach((hydrogen) => {
-      hydrogen.dataset.h2 = hydrogen.dataset.h2 + ' dark';
+      hydrogen.dataset.h2 =
+        hydrogen.dataset.h2.replace(/dark/g, '').replace(/light/g, '') + ' light';
+    });
+  } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    instances.forEach((hydrogen) => {
+      hydrogen.dataset.h2 =
+        hydrogen.dataset.h2.replace(/dark/g, '').replace(/light/g, '') + ' dark';
     });
   } else {
     instances.forEach((hydrogen) => {
-      hydrogen.dataset.h2 = hydrogen.dataset.h2.replace(/dark/g, '');
+      hydrogen.dataset.h2 = hydrogen.dataset.h2.replace(/dark/g, '').replace(/light/g, '');
+    });
+  }
+  localStorage.removeItem('mode');
+}
+
+// Toggle light
+function enable_mode_light() {
+  switcher.classList.add('light');
+  switcher.classList.remove('dark', 'pref');
+  instances.forEach((hydrogen) => {
+    hydrogen.dataset.h2 = hydrogen.dataset.h2.replace(/dark/g, '').replace(/light/g, '') + ' light';
+  });
+  localStorage.mode = 'light';
+}
+
+// Toggle dark
+function enable_mode_dark() {
+  switcher.classList.add('dark');
+  switcher.classList.remove('light', 'pref');
+  instances.forEach((hydrogen) => {
+    hydrogen.dataset.h2 = hydrogen.dataset.h2.replace(/dark/g, '').replace(/light/g, '') + ' dark';
+  });
+  localStorage.mode = 'dark';
+}
+
+// Listeners
+function watch_for_mode_changes() {
+  if (
+    (localStorage.mode && localStorage.mode === 'light') ||
+    (!localStorage.mode && window.matchMedia('(prefers-color-scheme: light)').matches)
+  ) {
+    instances.forEach((hydrogen) => {
+      hydrogen.dataset.h2 =
+        hydrogen.dataset.h2.replace(/dark/g, '').replace(/light/g, '') + ' light';
+    });
+  } else if (
+    (localStorage.mode && localStorage.mode === 'dark') ||
+    (!localStorage.mode && window.matchMedia('(prefers-color-scheme: dark)').matches)
+  ) {
+    instances.forEach((hydrogen) => {
+      hydrogen.dataset.h2 =
+        hydrogen.dataset.h2.replace(/dark/g, '').replace(/light/g, '') + ' dark';
+    });
+  } else {
+    instances.forEach((hydrogen) => {
+      hydrogen.dataset.h2 = hydrogen.dataset.h2.replace(/dark/g, '').replace(/light/g, '');
     });
   }
 }
 window
   .matchMedia('(prefers-color-scheme: dark)')
-  .addEventListener('change', (e) => e.matches && check_for_dark_mode());
+  .addEventListener('change', (e) => e.matches && watch_for_mode_changes());
 window
   .matchMedia('(prefers-color-scheme: light)')
-  .addEventListener('change', (e) => e.matches && check_for_dark_mode());
+  .addEventListener('change', (e) => e.matches && watch_for_mode_changes());
 
-// Storage check
-if (localStorage.mode != undefined) {
-  if (localStorage.mode === 'dark') {
-    switcher.classList.add('dark');
-    switcher.classList.remove('light', 'pref');
-    instances.forEach((hydrogen) => {
-      hydrogen.dataset.h2 = hydrogen.dataset.h2 + ' dark';
-    });
-  } else if (localStorage.mode === 'light') {
-    switcher.classList.add('light');
-    switcher.classList.remove('dark', 'pref');
-    instances.forEach((hydrogen) => {
-      hydrogen.dataset.h2 = hydrogen.dataset.h2.replace(/dark/g, '');
-    });
+// Switcher class storage check
+if (!localStorage.mode) {
+  switcher.setAttribute('class', 'pref');
+} else {
+  if (localStorage.mode === 'light') {
+    switcher.setAttribute('class', 'light');
+  } else if (localStorage.mode === 'dark') {
+    switcher.setAttribute('class', 'dark');
   }
-} else if (
-  localStorage.mode == undefined &&
-  window.matchMedia('(prefers-color-scheme: dark)').matches
-) {
-  switcher.classList.remove('light', 'dark', 'pref');
-  instances.forEach((hydrogen) => {
-    hydrogen.dataset.h2 = hydrogen.dataset.h2 + ' dark';
-  });
-}
-
-// Toggles
-function enable_mode_preference() {
-  switcher.classList.add('pref');
-  switcher.classList.remove('light', 'dark');
-  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    instances.forEach((hydrogen) => {
-      if (!hydrogen.dataset.h2.includes('dark'))
-        hydrogen.dataset.h2 = hydrogen.dataset.h2 + ' dark';
-    });
-  } else {
-    instances.forEach((hydrogen) => {
-      hydrogen.dataset.h2 = hydrogen.dataset.h2.replace(/dark/g, '');
-    });
-  }
-  localStorage.removeItem('mode');
-}
-function enable_mode_light() {
-  switcher.classList.add('light');
-  switcher.classList.remove('dark', 'pref');
-  instances.forEach((hydrogen) => {
-    hydrogen.dataset.h2 = hydrogen.dataset.h2.replace(/dark/g, '');
-  });
-  localStorage.mode = 'light';
-}
-function enable_mode_dark() {
-  switcher.classList.add('dark');
-  switcher.classList.remove('light', 'pref');
-  instances.forEach((hydrogen) => {
-    if (!hydrogen.dataset.h2.includes('dark'))
-      hydrogen.dataset.h2 = hydrogen.dataset.h2 + ' dark';
-  });
-  localStorage.mode = 'dark';
 }
 
 // Toggle main menu
@@ -183,10 +171,14 @@ function toggle_fern(e) {
 }
 
 function toggle_menu(e) {
+  let body = document.querySelector('body');
+  let backdrop = document.querySelector('.mobile-menu-backdrop');
   let wrapper = e.closest('.mobile-menu');
   let links = wrapper.querySelectorAll('a');
   let buttons = wrapper.querySelectorAll('button:not(.mobile-menu-trigger)');
   if (wrapper.classList.contains('active')) {
+    body.classList.remove('locked');
+    backdrop.classList.remove('active');
     wrapper.classList.remove('active');
     links.forEach((link) => {
       link.setAttribute('tabindex', '-1');
@@ -195,6 +187,8 @@ function toggle_menu(e) {
       button.setAttribute('tabindex', '-1');
     });
   } else {
+    body.classList.add('locked');
+    backdrop.classList.add('active');
     wrapper.classList.add('active');
     links.forEach((link) => {
       link.setAttribute('tabindex', '0');
@@ -206,6 +200,8 @@ function toggle_menu(e) {
 }
 
 function capture_anchor_clicks() {
+  let body = document.querySelector('body');
+  let backdrop = document.querySelector('.mobile-menu-backdrop');
   let menu = document.querySelector('.mobile-menu');
   let links = menu.querySelectorAll('a');
   let buttons = menu.querySelectorAll('button:not(.mobile-menu-trigger)');
@@ -213,6 +209,8 @@ function capture_anchor_clicks() {
     link.addEventListener('click', (e) => {
       if (e.target.getAttribute('href').includes('#')) {
         e.target.closest('.mobile-menu').classList.remove('active');
+        body.classList.remove('locked');
+        backdrop.classList.remove('active');
         links.forEach((link) => {
           link.setAttribute('tabindex', '-1');
         });
@@ -239,3 +237,17 @@ function remove_mobile_menu_from_tab_order() {
 }
 
 remove_mobile_menu_from_tab_order();
+
+// Home start handlers
+
+function start_step_click(e) {
+  document.querySelectorAll('.start-step-button').forEach((button) => {
+    button.classList.remove('active');
+  });
+  document.querySelectorAll('.start-step-content').forEach((button) => {
+    button.classList.remove('active');
+  });
+  e.classList.add('active');
+  let step = e.getAttribute('data-step');
+  document.querySelector(`[data-step="${step}"].start-step-content`).classList.add('active');
+}

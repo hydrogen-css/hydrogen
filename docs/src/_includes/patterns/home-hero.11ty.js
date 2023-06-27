@@ -50,9 +50,11 @@ function render(data) {
       </div>
       <div
         data-h2-position="base(relative)" 
-        data-h2-container="base(center, medium, x1) p-tablet(center, medium, x2) l-tablet(center, medium, x3)">
+        data-h2-container="base(center, medium, x1) p-tablet(center, medium, x2) l-tablet(center, medium, x3)"
+        data-h2-display="base(grid)">
         <div 
-          data-h2-padding="base(x4, 0)"
+          data-h2-order="base(2) p-tablet(1)"
+          data-h2-padding="base(x1, 0, x5, 0) p-tablet(x4, 0)"
           data-h2-text-align="base(right)">
           <div 
             data-h2-width="base(100%)"
@@ -69,17 +71,49 @@ function render(data) {
               data-h2-max-width="base(x18)"
               data-h2-color="base:all(white.80)"
               data-h2-margin="base(x1, auto, 0, auto) p-tablet(x1, 0, 0, auto)"
-              data-h2-text-align="base(center) p-tablet(right)">${
-                data.site.slogan[data.locale]
-              }</p>
+              data-h2-text-align="base(center) p-tablet(right)">${data.site.slogan[data.locale]}</p>
           </div>
         </div>
-        <h1
-          data-h2-color="base:all(white)"
-          data-h2-font-weight="base(700)"
-          data-h2-padding="base(0, 0, x5, 0)"
-          data-h2-text-align="base(center) p-tablet(left)"
-          data-h2-font-size="base(display)">${data.site.name}</h1>
+        <div 
+          data-h2-order="base(1) p-tablet(2)" 
+          data-h2-padding="base(x4, 0, 0, 0) p-tablet(0, 0, x3.5, 0)"
+          data-h2-text-align="base(center) p-tablet(left)">
+          <h1
+            data-h2-color="base:all(white)"
+            data-h2-font-weight="base(700)"
+            data-h2-margin-bottom="base(x.5)"
+            data-h2-font-size="base(calc(var(--h2-font-size-display) * 1.15))"
+            data-h2-overflow-wrap="base(anywhere)">
+            ${data.site.name}
+          </h1>
+          <div 
+            class="code_wrapper"
+            data-h2-display="base(inline-block) p-tablet(block)">
+            <button
+              title="${data.site.components.code.copy_button.title[data.locale]}"
+              onclick="copy_code(this)"
+              data-h2-background-color="base(transparent) base:focus-visible(focus)"
+              data-h2-border="base(none)"
+              data-h2-cursor="base(pointer)"
+              data-h2-margin="base(0, x.25, 0, -1ch)"
+              data-h2-font-size="base(caption)"
+              data-h2-outline="base(none)"
+              data-h2-radius="base(5px)"
+              data-h2-height="base(x1.5)"
+              data-h2-width="base(x1.5)"
+              data-h2-vertical-align="base(middle)">
+              <span 
+                class="default"
+                data-h2-position="base(center)">📋</span>
+              <span 
+                class="confirmation"
+                data-h2-position="base(center)">✅</span>
+            </button><code data-h2-color="base:all(white)">npm install @hydrogen-css/hydrogen --save</code>
+            <textarea 
+              class="code_content"
+              data-h2-display="base(none)">npm install @hydrogen-css/hydrogen --save</textarea>
+          </div>
+        </div>
       </div>
     </div>
     <div
@@ -93,10 +127,11 @@ function render(data) {
         <div
           data-h2-display="base(grid)"
           data-h2-grid-template-columns="base(1fr) l-tablet(1fr 1fr 1fr)"
-          data-h2-gap="base(x1) l-tablet(x2 x1)"
+          data-h2-gap="base(x.5) l-tablet(x2 x1)"
           data-h2-background-color="base:children[>div](foreground)"
           data-h2-radius="base:children[>div](rounded)"
           data-h2-padding="base:children[>div](x1) l-tablet:children[>div](x2)"
+          data-h2-border="base:children[>div](1px solid primary.darkest.2)"
           data-h2-shadow="base:children[>div](large)"
           data-h2-color="base:children[p:first-child](primary.dark)"
           data-h2-font-weight="base:children[p:first-child](800)"

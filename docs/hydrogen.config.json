@@ -3,11 +3,12 @@
     "code": "https://github.com/hydrogen-css/hydrogen",
     "docs": "https://hydrogen.design/",
     "feedback": "https://forms.office.com/r/vz80dsUabZ",
-    "roadmap": "https://workflowy.com/s/hydrogens-roadmap/7Gjmdbjiqc0Wst1R",
+    "roadmap": "https://github.com/orgs/hydrogen-css/projects/3/views/3",
     "settings": "https://hydrogen.design/en/docs/configuration"
   },
   "input": [
-    "src/_includes"
+    "src/_includes",
+    "src/_layouts"
   ],
   "output": "_site/static/css",
   "modes": {
@@ -36,6 +37,10 @@
         "query": "print"
       },
       {
+        "key": "mobile",
+        "query": "screen and (min-width: 414px)"
+      },
+      {
         "key": "p-tablet",
         "query": "screen and (min-width: 48em)"
       },
@@ -59,21 +64,27 @@
       "typography": [
         {
           "query_key": "base",
-          "size": "100%",
-          "line_height": "1.5",
-          "type_scale": "1.15"
+          "size": "95%",
+          "type_scale": "1.1",
+          "line_heights": {
+            "body": "1.45"
+          }
         },
         {
-          "query_key": "p-tablet",
-          "size": "100%",
-          "line_height": "1.5",
-          "type_scale": "1.2"
+          "query_key": "mobile",
+          "size": "105%",
+          "type_scale": "1.15",
+          "line_heights": {
+            "body": "1.45"
+          }
         },
         {
           "query_key": "desktop",
           "size": "112.5%",
-          "line_height": "1.5",
-          "type_scale": "1.2"
+          "type_scale": "1.15",
+          "line_heights": {
+            "body": "1.45"
+          }
         }
       ],
       "colors": [
@@ -134,7 +145,7 @@
             "modifiers": []
           },
           "dark": {
-            "color": "#d2d3d9",
+            "color": "#a8acc1",
             "modifiers": []
           }
         },
@@ -145,7 +156,7 @@
             "modifiers": []
           },
           "dark": {
-            "color": "#2a2b38",
+            "color": "#303142",
             "modifiers": []
           }
         },
@@ -198,7 +209,7 @@
         {
           "key": "large",
           "default": {
-            "max_width": "90rem"
+            "max_width": "85rem"
           }
         }
       ],
@@ -278,46 +289,46 @@
         {
           "key": "small",
           "default": {
-            "shadow": "0 0.1rem 0.2rem 0 rgba(0, 0, 0, .2)"
+            "shadow": "0 0.1rem 0.2rem 0 rgba(0, 0, 0, .25)"
           },
           "dark": {
-            "shadow": "0 0.1rem 0.2rem 0 rgba(0, 0, 0, .5)"
+            "shadow": "0 0.1rem 0.2rem 0 rgba(0, 0, 0, .8)"
           }
         },
         {
           "key": "medium",
           "default": {
-            "shadow": "0 0.25rem 0.5rem -0.05rem rgba(0, 0, 0, .2)"
+            "shadow": "0 0.25rem 0.5rem -0.05rem rgba(0, 0, 0, .25)"
           },
           "dark": {
-            "shadow": "0 0.25rem 0.5rem -0.05rem rgba(0, 0, 0, .5)"
+            "shadow": "0 0.25rem 0.5rem -0.05rem rgba(0, 0, 0, .8)"
           }
         },
         {
           "key": "large",
           "default": {
-            "shadow": "0 0.4rem 0.7rem -0.1rem rgba(0, 0, 0, .2)"
+            "shadow": "0 0.4rem 0.7rem -0.1rem rgba(0, 0, 0, .25)"
           },
           "dark": {
-            "shadow": "0 0.4rem 0.7rem -0.1rem rgba(0, 0, 0, .5)"
+            "shadow": "0 0.4rem 0.7rem -0.1rem rgba(0, 0, 0, .8)"
           }
         },
         {
           "key": "larger",
           "default": {
-            "shadow": "0 0.55rem 1rem -0.2rem rgba(0, 0, 0, .2)"
+            "shadow": "0 0.55rem 1rem -0.2rem rgba(0, 0, 0, .25)"
           },
           "dark": {
-            "shadow": "0 0.55rem 1rem -0.2rem rgba(0, 0, 0, .5)"
+            "shadow": "0 0.55rem 1rem -0.2rem rgba(0, 0, 0, .8)"
           }
         },
         {
           "key": "largest",
           "default": {
-            "shadow": "0 0.7rem 1.5rem -0.3rem rgba(0, 0, 0, .2)"
+            "shadow": "0 0.7rem 1.5rem -0.3rem rgba(0, 0, 0, .25)"
           },
           "dark": {
-            "shadow": "0 0.7rem 1.5rem -0.3rem rgba(0, 0, 0, .5)"
+            "shadow": "0 0.7rem 1.5rem -0.3rem rgba(0, 0, 0, .8)"
           }
         }
       ],
@@ -333,14 +344,14 @@
         {
           "key": "primary",
           "default": {
-            "color": "#1747d9",
+            "color": "#3b67ed",
             "modifiers": []
           }
         },
         {
           "key": "secondary",
           "default": {
-            "color": "#17bed9",
+            "color": "#3bed9d",
             "modifiers": []
           }
         },
@@ -371,19 +382,19 @@
         {
           "key": "divider",
           "default": {
-            "gradient": "linear-gradient(90deg, #17bed9, #1747d9)"
+            "gradient": "linear-gradient(90deg, #3bed9d, #3b67ed)"
           }
         },
         {
           "key": "primaryRadial",
           "default": {
-            "gradient": "radial-gradient(rgba(23, 190, 217, 1), rgba(23, 71, 217, 1))"
+            "gradient": "radial-gradient(rgba(59, 103, 237, .5), rgba(23, 71, 217, 1))"
           }
         },
         {
           "key": "accentRadial",
           "default": {
-            "gradient": "radial-gradient(rgba(23, 190, 217, 1), rgba(23, 71, 217, 1))"
+            "gradient": "radial-gradient(#3bed9d, rgba(23, 71, 217, 1))"
           }
         }
       ]
@@ -438,7 +449,7 @@
         {
           "key": "primaryRadial",
           "default": {
-            "gradient": "radial-gradient(rgba(255, 26, 123, 1), rgba(255, 198, 26, 1))"
+            "gradient": "radial-gradient(rgba(255, 26, 123, .7), rgba(255, 198, 26, 1))"
           }
         },
         {
@@ -455,14 +466,14 @@
         {
           "key": "primary",
           "default": {
-            "color": "rgb(21, 157, 106)",
+            "color": "rgb(29, 193, 119)",
             "modifiers": []
           }
         },
         {
           "key": "secondary",
           "default": {
-            "color": "rgb(138, 217, 23)",
+            "color": "rgb(78, 221, 17)",
             "modifiers": []
           }
         },
@@ -493,19 +504,19 @@
         {
           "key": "divider",
           "default": {
-            "gradient": "linear-gradient(90deg, rgb(21, 157, 106), rgb(138, 217, 23))"
+            "gradient": "linear-gradient(90deg, rgb(78, 221, 17), rgb(29, 193, 119))"
           }
         },
         {
           "key": "primaryRadial",
           "default": {
-            "gradient": "radial-gradient(rgba(21, 157, 106, 1), rgba(138, 217, 23, 1))"
+            "gradient": "radial-gradient(rgb(29, 193, 119), rgba(138, 217, 23, 1))"
           }
         },
         {
           "key": "accentRadial",
           "default": {
-            "gradient": "radial-gradient(rgba(21, 157, 106, 1), rgba(138, 217, 23, 1))"
+            "gradient": "radial-gradient(rgba(78, 221, 17, .5), rgba(138, 217, 23, 1))"
           }
         }
       ]

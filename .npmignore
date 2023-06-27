@@ -1,7 +1,14 @@
 .DS_Store
+
 .vscode
-tests
 docs
 node_modules
+test
+.gitattributes
+.gitignore
+.prettierignore
 deploy.sh
+jest.config.js
 setup.sh
+
+*.test.js

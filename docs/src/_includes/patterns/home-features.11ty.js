@@ -1,10 +1,3 @@
-// Local dependencies
-const heading = require('../components/headings.11ty');
-const flourish = require('../components/flourish.11ty');
-const rule = require('../components/rule.11ty');
-const code = require('../components/code.11ty');
-const chip = require('../components/chip.11ty.js');
-
 // Create pattern-specific data
 var data = {};
 
@@ -14,6 +7,12 @@ var data = {};
  * @returns {String} the rendered pattern
  */
 function render(data) {
+  // Local dependencies
+  let heading = require('../components/headings.11ty');
+  let flourish = require('../components/flourish.11ty');
+  let rule = require('../components/rule.11ty');
+  let code = require('../components/code.11ty');
+  let chip = require('../components/chip.11ty.js');
   // Generate main features
   let main_features = ``;
   data.features.main.list.forEach(function (item, index) {
@@ -23,15 +22,15 @@ function render(data) {
         <div 
           data-h2-display="base(grid)" 
           data-h2-grid-template-columns="base(1fr 1fr)" 
-          data-h2-gap="base(x1)" 
+          data-h2-gap="base(x.5)" 
           data-h2-height="base(100%)"
-          data-h2-background="base:children[button](foreground)"
+          data-h2-background="base:children[button](foreground) base:children[button:focus-visible](focus)"
           data-h2-cursor="base:children[button](pointer)"
-          data-h2-border="base:children[button](none)"
+          data-h2-border="base:children[button](1px solid primary.darkest.2)"
           data-h2-outline="base:children[button:focus-visible](none)"
           data-h2-radius="base:children[button](rounded)"
           data-h2-padding="base:children[button](x1)"
-          data-h2-color="base:children[button](black)"
+          data-h2-color="base:children[button](black) base:all:children[button:focus-visible](black)"
           data-h2-text-decoration="base:children[button](underline)"
           data-h2-shadow="
             base:children[button](medium)
@@ -63,8 +62,7 @@ function render(data) {
       ];
       let example_pills = ``;
       examples.forEach((item) => {
-        example_pills =
-          example_pills + chip.render(data, { label: item, color: 'primary' });
+        example_pills = example_pills + chip.render(data, { label: item, color: 'primary' });
       });
       example = String.raw`
         <div
@@ -78,10 +76,7 @@ function render(data) {
         </div>
       `;
     } else {
-      example = code.render(data, {
-        file: item.code.file,
-        lines: item.code.lines,
-      });
+      example = code.render(data, item.code);
     }
     main_features =
       main_features +
@@ -90,13 +85,14 @@ function render(data) {
         data-h2-margin="base(x2, 0, 0, 0) p-tablet(x3, 0, 0, 0)"
         data-h2-display="base(grid)"
         data-h2-grid-template-columns="base(100%) p-tablet(4rem auto)"
-        data-h2-gap="base(x1) p-tablet(x2)">
+        data-h2-gap="base(x1)">
         <div>
           ${flourish.render(data, { heading: 'h6' })}
         </div>
         <div>
           <div 
             data-h2-display="base(grid)"
+            data-h2-align-items="base(center)"
             data-h2-grid-template-columns="base(100%) l-tablet(repeat(2, minmax(0, 1fr)))"
             data-h2-gap="base(x1) p-tablet(x2) l-tablet(x4)">
             <div>
@@ -144,38 +140,53 @@ function render(data) {
   });
   // Render the pattern
   return String.raw`
-    <div data-h2-margin="base(x3, 0) l-tablet(x5, 0)">
+    <div data-h2-margin="base(x3, 0) l-tablet(x4, 0)">
       <div data-h2-container="base(center, medium, x1) p-tablet(center, medium, x2) l-tablet(center, medium, x3)">
         ${heading.render(data, {
           tag: 'h2',
           size: 'h2',
           label: 'Feature overview',
           id: 'features',
+          svg: 'robot',
           img: {
             path: '/static/img/icon-robot.svg',
             alt: "A sticker-style icon of one of Hydrogen's adorable little mascots, Beep. Beep is a robot.",
           },
         })}
         ${main_features}
-        ${heading.render(data, {
-          tag: 'h3',
-          size: 'h6',
-          label: 'And a whole lot more...',
-          id: 'more',
-          margin: "data-h2-margin='base(x4, 0, x1, 0)'",
-        })}
-        <div
+        <div 
+          data-h2-margin="base(x2, 0, 0, 0) p-tablet(x3, 0, 0, 0)"
           data-h2-display="base(grid)"
-          data-h2-grid-template-columns="base(1fr) p-tablet(repeat(2, minmax(0, 1fr))) l-tablet(repeat(3, minmax(0, 1fr))) laptop(repeat(4, minmax(0, 1fr)))"
-          data-h2-gap="base(x1)"
-          data-h2-background-color="base:children[>div](foreground)"
-          data-h2-border="base:children[>div](1px solid primary.darkest.20)"
-          data-h2-radius="base:children[>div](rounded)"
-          data-h2-padding="base:children[>div](x1)"
-          data-h2-color="base:children[p:first-child](primary.dark)"
-          data-h2-font-weight="base:children[p:first-child](800)"
-          data-h2-margin="base:children[p:not(:first-child)](x.5, 0, 0, 0)">
-          ${sub_features}
+          data-h2-grid-template-columns="base(100%) p-tablet(4rem auto)"
+          data-h2-gap="base(x1)">
+          <div>
+            ${flourish.render(data, { heading: 'h6' })}
+          </div>
+          <div>
+            <div>
+              ${heading.render(data, {
+                tag: 'h3',
+                size: 'h6',
+                label: 'And a whole lot more...',
+                id: 'more',
+                alignment: 'left',
+                margin: 'data-h2-margin="base(0, 0, x1, 0)"',
+              })}
+            </div>
+            <div
+              data-h2-display="base(grid)"
+              data-h2-grid-template-columns="base(1fr) p-tablet(repeat(2, minmax(0, 1fr))) l-tablet(repeat(3, minmax(0, 1fr))) laptop(repeat(4, minmax(0, 1fr)))"
+              data-h2-gap="base(x.5) p-tablet(x1)"
+              data-h2-background-color="base:children[>div](foreground)"
+              data-h2-border="base:children[>div](1px solid primary.darkest.20)"
+              data-h2-radius="base:children[>div](rounded)"
+              data-h2-padding="base:children[>div](x1)"
+              data-h2-color="base:children[p:first-child](primary.dark)"
+              data-h2-font-weight="base:children[p:first-child](800)"
+              data-h2-margin="base:children[p:not(:first-child)](x.5, 0, 0, 0)">
+              ${sub_features}
+            </div>
+          </div>
         </div>
       </div>
     </div>

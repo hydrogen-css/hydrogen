@@ -1,4 +1,1 @@
 *.json
-*.njk
-lib/data/settings-model.md
-lib/data/properties-model.md

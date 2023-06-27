@@ -1,8 +1,7 @@
-const footer = require('../patterns/footer.11ty');
-
 var data = {};
 
 function render(data) {
+  let footer = require('../patterns/footer.11ty');
   return String.raw`
     <div 
       data-h2-margin="base(x3, 0, 0, 0) p-tablet(x4, 0, 0, 0) desktop(x5, 0, 0, 0)"

@@ -1,17 +1,16 @@
-const heading = require('./headings.11ty');
-
 var data = {};
 
 function render(data, unique, release) {
+  let heading = require('./headings.11ty');
   // Create the release information
   function get_release_content(release, change) {
     let title = '';
     if (change === 'features') {
-      title = 'New features';
+      title = '✨ New features (' + release[change].length + ')';
     } else if (change === 'optimizations') {
-      title = 'Optimizations';
+      title = '🛠️ Optimizations (' + release[change].length + ')';
     } else if (change === 'bugfixes') {
-      title = 'Bugfixes';
+      title = '🪲 Bugfixes (' + release[change].length + ')';
     }
     let output = ``;
     if (release[change] && release[change].length > 0) {
@@ -22,18 +21,18 @@ function render(data, unique, release) {
           tag: 'h5',
           size: 'h6',
           label: title,
-          margin: 'data-h2-margin="base(x1, 0, x.5, 0)"',
+          margin: 'data-h2-margin="base(x1, 0, 0, 0)"',
           id: unique + '-' + release.version + '-' + change,
           alignment: 'left',
         })}
-        <ul data-h2-padding="base(0, 0, 0, x1)">
+        <ul data-h2-padding="base(0, 0, 0, x.75) p-tablet(0, 0, 0, x1) base:children[li](x.5, 0, 0, 0)" data-h2-word-break="base:children[code](break-all)">
       `;
       release[change].forEach((item) => {
         let breaking_label = ``;
         if (item.breaking) {
           breaking_label = String.raw`
             <span
-              data-h2-color="base(error.darker)"
+              data-h2-color="base(error.dark)"
               data-h2-font-weight="base(700)">Breaking: </span>
           `;
         }
@@ -42,7 +41,9 @@ function render(data, unique, release) {
           if (item.changes[data.locale].length > 1) {
             item.changes[data.locale].forEach((change, index) => {
               if (index === 0) {
-                output = output + String.raw`${breaking_label}${change}<ul>`;
+                output =
+                  output +
+                  String.raw`${breaking_label}${change}<ul data-h2-padding="base(0, 0, 0, x.75) p-tablet(0, 0, 0, x1)">`;
               } else if (index === item.changes[data.locale].length - 1) {
                 output = output + String.raw`<li>${change}</li></ul>`;
               } else {
@@ -84,6 +85,9 @@ function render(data, unique, release) {
   }
   // Generate the release HTML
   return String.raw`
+    ${require('./rule.11ty').render(data, {
+      margin: 'data-h2-margin="base(x1, 0, 0, 0)"',
+    })}
     ${features}
     ${optimizations}
     ${bugfixes}

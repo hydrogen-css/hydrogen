@@ -1,7 +1,5 @@
-const docs_layout = require('../../../../_includes/pages/docs.11ty');
-
 let data = {
-  layout: 'pages/docs.11ty.js',
+  layout: 'docs.11ty.js',
   navigation: {
     order: 3,
     key: 'getting-started',
@@ -29,6 +27,8 @@ let data = {
         {
           type: 'code',
           file: 'terminal',
+          language: 'powershell',
+          count: 1,
           lines: ['npm install @hydrogen-css/hydrogen --save-dev'],
         },
       ],
@@ -53,6 +53,8 @@ let data = {
             {
               type: 'code',
               file: 'terminal',
+              language: 'powershell',
+              count: 1,
               lines: ['npm install @hydrogen-css/hydrogen@beta --save-dev'],
             },
           ],
@@ -76,6 +78,8 @@ let data = {
         {
           type: 'code',
           file: 'terminal',
+          language: 'powershell',
+          count: 1,
           lines: ['npx h2-init'],
         },
       ],
@@ -99,6 +103,8 @@ let data = {
         {
           type: 'code',
           file: 'index.html',
+          language: 'html',
+          count: 11,
           lines: [
             '<!DOCTYPE html>',
             '<html data-h2>',

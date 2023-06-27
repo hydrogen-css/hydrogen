@@ -1,18 +1,24 @@
+// Hydrogen
 'use strict';
-var exec = require('child_process').execSync;
-var path = require('path');
 
-const stable = exec('npm view @hydrogen-css/hydrogen@latest version')
-  .toString()
-  .trim();
+// Data models
 
-const beta = exec('npm view @hydrogen-css/hydrogen@beta version')
-  .toString()
-  .trim();
+// Data imports
+let releases = require('@hydrogen-css/hydrogen/releases');
+
+// Local functions
+
+// Helper functions
+
+// Vendor imports
+
+// Script ==========================================================================================
 
 module.exports = {
-  history: require(path.resolve('../releases')).releases(),
-  latest: require(path.resolve('../releases/' + stable)),
-  beta: require(path.resolve('../releases/' + beta)),
-  featured: require(path.resolve('../releases')).featured(),
+  history: releases.releases(),
+  latest: releases.stable(),
+  stable: releases.stable(),
+  beta: releases.beta(),
+  featured: releases.featured(),
+  rss: releases.rss(),
 };

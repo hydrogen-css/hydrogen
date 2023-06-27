@@ -1,7 +1,5 @@
-const docs_layout = require('../../../../_includes/pages/docs.11ty');
-
 let data = {
-  layout: 'pages/docs.11ty.js',
+  layout: 'docs.11ty.js',
   navigation: {
     order: 14,
     key: 'colors',
@@ -31,7 +29,8 @@ let data = {
         {
           type: 'code',
           file: 'hydrogen.config.json',
-          copy: true,
+          language: 'json',
+          count: 10,
           lines: [
             '"colors": [',
             '  {',
@@ -114,7 +113,8 @@ let data = {
             {
               type: 'code',
               file: 'hydrogen.config.json',
-              copy: true,
+              language: 'json',
+              count: 16,
               lines: [
                 '"colors": [',
                 '  {',
@@ -158,7 +158,8 @@ let data = {
         {
           type: 'code',
           file: 'hydrogen.config.json',
-          copy: true,
+          language: 'json',
+          count: 14,
           lines: [
             '"colors": [',
             '  {',
@@ -195,7 +196,8 @@ let data = {
         {
           type: 'code',
           file: 'hydrogen.config.json',
-          copy: true,
+          language: 'json',
+          count: 13,
           lines: [
             '"themes": [',
             '  {',

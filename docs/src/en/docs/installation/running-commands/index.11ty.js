@@ -1,7 +1,5 @@
-const docs_layout = require('../../../../_includes/pages/docs.11ty');
-
 let data = {
-  layout: 'pages/docs.11ty.js',
+  layout: 'docs.11ty.js',
   navigation: {
     order: 4,
     key: 'commands',
@@ -31,6 +29,8 @@ let data = {
         {
           type: 'code',
           file: 'terminal',
+          language: 'powershell',
+          count: 1,
           lines: ['npx h2-init'],
         },
       ],
@@ -70,6 +70,8 @@ let data = {
         {
           type: 'code',
           file: 'terminal',
+          language: 'powershell',
+          count: 1,
           lines: ['npx h2-build'],
         },
       ],
@@ -91,6 +93,8 @@ let data = {
         {
           type: 'code',
           file: 'terminal',
+          language: 'powershell',
+          count: 1,
           lines: ['npx h2-watch'],
         },
       ],
@@ -134,6 +138,8 @@ let data = {
             {
               type: 'code',
               file: 'terminal',
+              language: 'powershell',
+              count: 2,
               lines: ['npx h2-build --h2_prefix', 'npx h2-build --h2_minify'],
             },
           ],
@@ -157,18 +163,15 @@ let data = {
               style: 'unordered',
               items: [
                 '<code>--h2_logs</code> will enable/disable log file generation for debugging.',
-                "<code>--h2_timers</code> will toggle whether Hydrogen's build timers show in the console output.",
                 '<code>--h2_verbose</code> will toggle how much contextual information is displayed by Hydrogen in the console.',
               ],
             },
             {
               type: 'code',
               file: 'terminal',
-              lines: [
-                'npx h2-build --h2_logs',
-                'npx h2-build --h2_timers',
-                'npx h2-build --h2_verbose',
-              ],
+              language: 'powershell',
+              count: 2,
+              lines: ['npx h2-build --h2_logs', 'npx h2-build --h2_verbose'],
             },
           ],
         },
@@ -211,10 +214,9 @@ let data = {
             {
               type: 'code',
               file: 'terminal',
-              lines: [
-                'npx h2-build --h2_env_dev',
-                'npx h2-build --h2_env_prod',
-              ],
+              language: 'powershell',
+              count: 2,
+              lines: ['npx h2-build --h2_env_dev', 'npx h2-build --h2_env_prod'],
             },
           ],
         },

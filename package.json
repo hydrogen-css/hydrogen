@@ -1,6 +1,6 @@
 {
   "name": "@hydrogen-css/hydrogen",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "An open-source, inline CSS framework powered by data-attributes. MIT Licensed.",
   "keywords": [
     "Hydrogen",
@@ -31,30 +31,33 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/hydrogen-css/hydrogen"
+    "url": "https://github.com/hydrogen-css/hydrogen"
   },
   "scripts": {
     "setup": "./setup.sh",
     "deploy": "./deploy.sh",
-    "docs": "cd docs && npm start",
-    "": "",
-    "tests": "node -e 'require(\"./lib/scripts/run-all.test\").runTest()'",
-    "test-cmd-build": "node -e 'require(\"./lib/build.test\").run_tests()'",
-    "test-basics": "cd tests/test-basics && node -e 'require(\"./run.test\").run_tests()'"
+    "docs": "npm link --no-fund --no-audit && cd docs && npm link @hydrogen-css/hydrogen --no-fund --no-audit && H2DEBUG=true npm start",
+    "docs:build": "npm link --no-fund --no-audit && cd docs && npm link @hydrogen-css/hydrogen --no-fund --no-audit && H2DEBUG=true npm run build",
+    "docs:build:logs": "npm link --no-fund --no-audit && cd docs && npm link @hydrogen-css/hydrogen --no-fund --no-audit && H2DEBUG=true HYDROGEN_LOGS=true npm run build",
+    "test": "npm link --no-fund --no-audit && cd test && npm link @hydrogen-css/hydrogen --no-fund --no-audit && H2DEBUG=true npm start",
+    "test:build": "npm link --no-fund --no-audit && cd test && npm link @hydrogen-css/hydrogen --no-fund --no-audit && H2DEBUG=true npm run build",
+    "test:build:logs": "npm link --no-fund --no-audit && cd test && npm link @hydrogen-css/hydrogen --no-fund --no-audit && H2DEBUG=true HYDROGEN_LOGS=true npm run build",
+    "test:watch": "npm link --no-fund --no-audit && cd test && npm link @hydrogen-css/hydrogen --no-fund --no-audit && H2DEBUG=true npm run watch",
+    "jest": "jest"
   },
   "dependencies": {
-    "autoprefixer": "^10.4.13",
-    "browserlist": "^1.0.1",
+    "autoprefixer": "^10.4.14",
+    "browserslist": "^4.21.9",
     "chokidar": "^3.5.3",
     "color": "^4.2.3",
     "colors": "^1.4.0",
-    "cssnano": "^5.1.14",
+    "cssnano": "^6.0.1",
     "csstree-validator": "^3.0.0",
-    "glob": "^8.0.3",
+    "glob": "^10.3.0",
     "lodash.clonedeep": "^4.5.0",
-    "postcss": "^8.4.21",
+    "postcss": "^8.4.24",
     "prompt": "^1.3.0",
-    "yargs": "^17.6.2"
+    "yargs": "^17.7.2"
   },
   "engines": {
     "node": ">=14.18.1",
@@ -69,6 +72,10 @@
     "bracketSpacing": true,
     "tabWidth": 2,
     "useTabs": false,
-    "singleAttributePerLine": true
+    "singleAttributePerLine": true,
+    "printWidth": 100
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
   }
 }
