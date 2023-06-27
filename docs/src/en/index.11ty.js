@@ -81,12 +81,11 @@ var data = {
           ],
           code: {
             language: 'powershell',
-            count: 4,
+            count: 3,
             lines: [
-              '☼ Hydrogen - System - Starting the build...',
-              '  Message  > Hydrogen v' + latest.version,
-              '☼ Hydrogen - Timers - 0238ms (Total build)',
-              '☼ Hydrogen - Success - Exporting CSS',
+              '☼ Hydrogen - v' + latest.version + ' - Starting the build...',
+              '☼ Hydrogen - v' + latest.version + ' - CSS file written (301ms)',
+              '  Message  > The Hydrogen build completed successfully.',
             ],
           },
         },

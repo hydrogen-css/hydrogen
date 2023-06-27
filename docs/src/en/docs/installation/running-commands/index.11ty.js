@@ -163,7 +163,6 @@ let data = {
               style: 'unordered',
               items: [
                 '<code>--h2_logs</code> will enable/disable log file generation for debugging.',
-                "<code>--h2_timers</code> will toggle whether Hydrogen's build timers show in the console output.",
                 '<code>--h2_verbose</code> will toggle how much contextual information is displayed by Hydrogen in the console.',
               ],
             },
@@ -171,12 +170,8 @@ let data = {
               type: 'code',
               file: 'terminal',
               language: 'powershell',
-              count: 3,
-              lines: [
-                'npx h2-build --h2_logs',
-                'npx h2-build --h2_timers',
-                'npx h2-build --h2_verbose',
-              ],
+              count: 2,
+              lines: ['npx h2-build --h2_logs', 'npx h2-build --h2_verbose'],
             },
           ],
         },

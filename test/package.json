@@ -19,7 +19,8 @@
   },
   "scripts": {
     "start": "browser-sync start -s -w --startPath='markup/index.html' --no-open & H2DEBUG=true npx h2-watch",
-    "build": "H2DEBUG=true npx h2-build"
+    "build": "H2DEBUG=true npx h2-build",
+    "watch": "H2DEBUG=true npx h2-watch"
   },
   "devDependencies": {
     "@hydrogen-css/hydrogen": "^2.0.1",

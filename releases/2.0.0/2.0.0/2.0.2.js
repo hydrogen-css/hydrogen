@@ -44,6 +44,14 @@ module.exports = {
       breaking: false,
       changes: {
         en: [
+          'Further updates and minimizes console output by replacing the "system" label with Hydrogen\'s version and appending timers to their relevant behaviours.',
+        ],
+      },
+    },
+    {
+      breaking: false,
+      changes: {
+        en: [
           'Restructures the <code>releases</code> directory for better organization and glob references.',
         ],
       },

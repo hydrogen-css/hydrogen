@@ -42,6 +42,7 @@
     "test": "npm link --no-fund --no-audit && cd test && npm link @hydrogen-css/hydrogen --no-fund --no-audit && H2DEBUG=true npm start",
     "test:build": "npm link --no-fund --no-audit && cd test && npm link @hydrogen-css/hydrogen --no-fund --no-audit && H2DEBUG=true npm run build",
     "test:build:logs": "npm link --no-fund --no-audit && cd test && npm link @hydrogen-css/hydrogen --no-fund --no-audit && H2DEBUG=true HYDROGEN_LOGS=true npm run build",
+    "test:watch": "npm link --no-fund --no-audit && cd test && npm link @hydrogen-css/hydrogen --no-fund --no-audit && H2DEBUG=true npm run watch",
     "jest": "jest"
   },
   "dependencies": {

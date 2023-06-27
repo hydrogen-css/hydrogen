@@ -107,7 +107,6 @@ let data = {
               type: 'copy',
               items: [
                 'The <code>generate_logs</code> setting tells Hydrogen whether to generate a series of debug files in the output directory. This is especially helpful for developing new Hydrogen features, but can also shed light on unexpected build errors.',
-                "The <code>show_timers</code> setting will enable/disable timer information in Hydrogen's console output.",
                 "The <code>verbose_console_output</code> setting will increase/decrease the volume of information provided in Hydrogen's console output.",
               ],
             },
@@ -115,11 +114,10 @@ let data = {
               type: 'code',
               file: 'hydrogen.config.json',
               language: 'json',
-              count: 5,
+              count: 4,
               lines: [
                 '"logging": {',
                 '  "generate_logs": false',
-                '  "show_timers": true',
                 '  "verbose_console_output": true',
                 '}',
               ],
