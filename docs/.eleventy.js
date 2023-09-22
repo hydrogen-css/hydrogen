@@ -66,6 +66,7 @@ module.exports = function (eleventyConfig) {
     './node_modules/prismjs/themes/prism-funky.min.css': './static/css/prism-funky.min.css',
     './src/static/scripts/app.js': './static/js/app.js',
     './src/static/_redirects': './_redirects',
+    './src/static/robots.txt': './robots.txt',
     './src/static/img': './static/img',
     './src/static/img/favicons': './',
   });
