@@ -6,6 +6,7 @@ let data = {
     parent: 'installation',
     pagination: true,
   },
+  terms: ['getting', 'started', 'install', 'package', 'beta', 'initialization'],
   title: 'Getting started',
   subtitle: 'Learn how to install and initialize Hydrogen using Node.',
   main: [

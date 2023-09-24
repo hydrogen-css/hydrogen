@@ -4,7 +4,7 @@ function render(data) {
   let menu_data = require('../components/menu.11ty');
   return String.raw`
     <div
-      class="mobile-menu"
+      class="menu mobile-menu"
       data-h2-display="
         base(block) 
         l-tablet(none)
@@ -15,14 +15,14 @@ function render(data) {
       data-h2-location="base(auto, auto, 0, 0)"
       data-h2-width="base(100%)"
       data-h2-layer="base(100, fixed)"
-      data-h2-opacity="base:children[>nav >a](0%) base:selectors[.active]:children[>nav >a](100%)"
+      data-h2-opacity="base:children[.old-nav >a](0%) base:selectors[.active]:children[.old-nav >a](100%)"
       data-h2-transform="
-        base:children[>nav](translate(0, 100%)) 
-        base:selectors[.active]:children[>nav](translate(0, -100%))"
+        base:children[.old-nav](translate(0, 100%)) 
+        base:selectors[.active]:children[.old-nav](translate(0, -100%))"
       data-h2-transition="
-        base:children[>nav](.5s ease) 
-        base:selectors[.active]:children[>nav](.5s ease)
-        base:selectors[.active]:children[>nav >a](.2s ease)">
+        base:children[.old-nav](.5s ease) 
+        base:selectors[.active]:children[.old-nav](.5s ease)
+        base:selectors[.active]:children[.old-nav >a](.2s ease)">
       <div data-h2-padding="base(x.5)">
         <button
           class="mobile-menu-trigger"
@@ -46,7 +46,8 @@ function render(data) {
           <span>Close menu</span>
         </button>
       </div>
-      <nav 
+      <div 
+        class="old-nav"
         data-h2-padding="base(x.5, x.5, 0, x.5)"
         data-h2-position="base(absolute)"
         data-h2-layer="base(1)"
@@ -70,7 +71,7 @@ function render(data) {
             ${menu_data.render(data)}
           </div>
         </div>
-      </nav>
+      </div>
     </div>
   `;
 }

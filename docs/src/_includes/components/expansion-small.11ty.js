@@ -19,7 +19,7 @@ function render(data, props) {
   if (props.active) {
     active_state = `
       data-h2-font-weight="base(700)"
-      data-h2-color="base(primary.darker) base:focus-visible(black)"
+      data-h2-color="base(black) base:focus-visible(black)"
       data-h2-text-decoration="base(none)"
     `;
   }

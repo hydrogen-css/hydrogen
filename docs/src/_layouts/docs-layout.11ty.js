@@ -22,11 +22,7 @@ function render(data) {
           data-h2-display="base(grid)"
           data-h2-grid-template-columns="base(100%) l-tablet(x15 minmax(0, 1fr))"
           data-h2-gap="base(x1) l-tablet(x3) desktop(x4)">
-          <div
-            data-h2-position="base(relative)" 
-            data-h2-display="base(none) l-tablet(block)">
-            ${docs_menu.render(data)}
-          </div>
+          ${docs_menu.render(data)}
           <div>
             ${data.content}
             ${get_pagination()}

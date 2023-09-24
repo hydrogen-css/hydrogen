@@ -251,3 +251,74 @@ function start_step_click(e) {
   let step = e.getAttribute('data-step');
   document.querySelector(`[data-step="${step}"].start-step-content`).classList.add('active');
 }
+
+// Search
+
+document.onreadystatechange = () => {
+  if (document.readyState === 'complete') {
+    function get_visible_search() {
+      let inputs = document.querySelectorAll('.search');
+      let search;
+      inputs.forEach((item) => {
+        let parent = item.closest('.menu');
+        if (window.getComputedStyle(parent).display == 'block') {
+          search = item;
+        }
+      });
+      return search;
+    }
+    function get_visible_results() {
+      let inputs = document.querySelectorAll('.results');
+      let results;
+      inputs.forEach((item) => {
+        let parent = item.closest('.menu');
+        if (window.getComputedStyle(parent).display == 'block') {
+          results = item;
+        }
+      });
+      return results;
+    }
+    let search = get_visible_search();
+    let results = get_visible_results();
+    document.addEventListener('keyup', (event) => {
+      if (event.ctrlKey && event.key == '/') {
+        search.focus();
+      }
+    });
+    search.addEventListener('keyup', (event) => {
+      let input = event.target.value.toLowerCase();
+      let input_array = input.split(' ');
+      let total_matches = 0;
+      if (input.length > 0) {
+        results.classList.add('active');
+        let pages = results.querySelectorAll('.result-item');
+        pages.forEach((result) => {
+          if (result.dataset.terms != 'undefined' && result.dataset.terms != undefined) {
+            let terms = result.dataset.terms.split(',');
+            let matches = [];
+            terms.forEach((term) => {
+              input_array.forEach((value) => {
+                if (term.match(new RegExp('^' + value))) {
+                  matches.push(term);
+                }
+              });
+            });
+            if (matches.length > 0) {
+              result.classList.add('active');
+              total_matches += matches.length;
+            } else {
+              result.classList.remove('active');
+            }
+          }
+        });
+        if (total_matches == 0) {
+          results.querySelector('.null-state').classList.add('active');
+        } else {
+          results.querySelector('.null-state').classList.remove('active');
+        }
+      } else {
+        results.classList.remove('active');
+      }
+    });
+  }
+};

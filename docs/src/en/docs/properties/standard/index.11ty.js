@@ -1,6 +1,4 @@
-const {
-  get_css_property_data,
-} = require('@hydrogen-css/hydrogen/lib/data/css-property-data');
+const { get_css_property_data } = require('@hydrogen-css/hydrogen/lib/data/css-property-data');
 
 let prop_data = get_css_property_data();
 let custom_props = prop_data.properties.custom_identifiers;
@@ -31,6 +29,20 @@ let data = {
     parent: 'properties',
     pagination: true,
   },
+  terms: [
+    'property',
+    'properties',
+    'custom',
+    'supports',
+    'colors',
+    'gradients',
+    'radius',
+    'radii',
+    'space',
+    'multipliers',
+    'shadows',
+    'transitions',
+  ],
   title: 'Standard properties',
   subtitle: "A list of CSS properties supported by Hydrogen's syntax.",
   main: [

@@ -4,6 +4,7 @@ let data = {
     key: 'docs',
     parent: 'home',
   },
+  terms: ['documentation', 'docs', 'home', 'landing'],
   title: 'Documentation',
   title_long: 'Documentation',
   header_index: [

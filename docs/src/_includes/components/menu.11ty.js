@@ -19,7 +19,7 @@ function return_menu_item(label, url, props) {
   if (props.active) {
     active_state = `
       data-h2-font-weight="base(700)"
-      data-h2-color="base(primary.darker) base:focus-visible(black)"
+      data-h2-color="base(black) base:focus-visible(black)"
       data-h2-text-decoration="base(none)"
     `;
   }
@@ -81,10 +81,11 @@ function active(url, key) {
 }
 
 function render(data) {
+  let locale = [data.locale] + '_site';
   let expansion_small = require('./expansion-small.11ty');
   let rule = require('./rule.11ty');
   let getting_started_content;
-  data.collections.all.forEach((item) => {
+  data.collections[locale].forEach((item) => {
     if (item.data.navigation.key === 'getting-started') {
       getting_started_content = String.raw`<ul data-h2-padding-left="base(x1)">${create_page_menu(
         item.data
@@ -92,7 +93,7 @@ function render(data) {
     }
   });
   let running_commands_content;
-  data.collections.all.forEach((item) => {
+  data.collections[locale].forEach((item) => {
     if (item.data.navigation.key === 'commands') {
       running_commands_content = String.raw`<ul data-h2-padding-left="base(x1)">${create_page_menu(
         item.data
@@ -128,7 +129,7 @@ function render(data) {
     </ul>
   `;
   let core_settings_content;
-  data.collections.all.forEach((item) => {
+  data.collections[locale].forEach((item) => {
     if (item.data.navigation.key === 'core-settings') {
       core_settings_content = String.raw`<ul data-h2-padding-left="base(x1)">${create_page_menu(
         item.data
@@ -136,7 +137,7 @@ function render(data) {
     }
   });
   let configuring_queries_content;
-  data.collections.all.forEach((item) => {
+  data.collections[locale].forEach((item) => {
     if (item.data.navigation.key === 'configuring-queries') {
       configuring_queries_content = String.raw`<ul data-h2-padding-left="base(x1)">${create_page_menu(
         item.data
@@ -144,7 +145,7 @@ function render(data) {
     }
   });
   let configuring_modes_content;
-  data.collections.all.forEach((item) => {
+  data.collections[locale].forEach((item) => {
     if (item.data.navigation.key === 'configuring-modes') {
       configuring_modes_content = String.raw`<ul data-h2-padding-left="base(x1)">${create_page_menu(
         item.data
@@ -152,7 +153,7 @@ function render(data) {
     }
   });
   let creating_themes_content;
-  data.collections.all.forEach((item) => {
+  data.collections[locale].forEach((item) => {
     if (item.data.navigation.key === 'creating-themes') {
       creating_themes_content = String.raw`<ul data-h2-padding-left="base(x1)">${create_page_menu(
         item.data
@@ -212,7 +213,7 @@ function render(data) {
     </ul>
   `;
   let syntax_content;
-  data.collections.all.forEach((item) => {
+  data.collections[locale].forEach((item) => {
     if (item.data.navigation.key === 'syntax') {
       syntax_content = String.raw`<ul data-h2-padding-left="base(x1)">${create_page_menu(
         item.data
@@ -220,7 +221,7 @@ function render(data) {
     }
   });
   let typography_content;
-  data.collections.all.forEach((item) => {
+  data.collections[locale].forEach((item) => {
     if (item.data.navigation.key === 'typography') {
       typography_content = String.raw`<ul data-h2-padding-left="base(x1)">${create_page_menu(
         item.data
@@ -228,7 +229,7 @@ function render(data) {
     }
   });
   let layout_content;
-  data.collections.all.forEach((item) => {
+  data.collections[locale].forEach((item) => {
     if (item.data.navigation.key === 'layout') {
       layout_content = String.raw`<ul data-h2-padding-left="base(x1)">${create_page_menu(
         item.data
@@ -236,7 +237,7 @@ function render(data) {
     }
   });
   let colors_content;
-  data.collections.all.forEach((item) => {
+  data.collections[locale].forEach((item) => {
     if (item.data.navigation.key === 'colors') {
       colors_content = String.raw`<ul data-h2-padding-left="base(x1)">${create_page_menu(
         item.data
@@ -296,7 +297,7 @@ function render(data) {
     </ul>
   `;
   let standard_properties_content;
-  data.collections.all.forEach((item) => {
+  data.collections[locale].forEach((item) => {
     if (item.data.navigation.key === 'standard-properties') {
       standard_properties_content = String.raw`<ul data-h2-padding-left="base(x1)">${create_page_menu(
         item.data
@@ -304,7 +305,7 @@ function render(data) {
     }
   });
   let custom_properties_content;
-  data.collections.all.forEach((item) => {
+  data.collections[locale].forEach((item) => {
     if (item.data.navigation.key === 'hydrogen-properties') {
       custom_properties_content = String.raw`<ul data-h2-padding-left="base(x1)">${create_page_menu(
         item.data
@@ -340,7 +341,7 @@ function render(data) {
     </ul>
   `;
   let variables_content;
-  data.collections.all.forEach((item) => {
+  data.collections[locale].forEach((item) => {
     if (item.data.navigation.key === 'variables') {
       variables_content = String.raw`<ul data-h2-padding-left="base(x1)">${create_page_menu(
         item.data
@@ -397,7 +398,7 @@ function render(data) {
           content: properties_content,
         })}
       </li>
-      <li data-h2-margin="base(x.5, 0, 0, 0)">
+      <!-- <li data-h2-margin="base(x.5, 0, 0, 0)">
         ${expansion_small.render(data, {
           state: parent(data.page.url, 'variables'),
           active: active(data.page.url, 'variables'),
@@ -408,14 +409,54 @@ function render(data) {
           },
           content: variables_content,
         })}
-      </li>
+      </li> -->
     </ul>
   `;
+  let search_content = String.raw`
+    <div 
+      class="results"
+      data-h2-display="base(none) base:selectors[.active](block)"
+      data-h2-padding-bottom="base(x1.5)"
+      data-h2-border-bottom="base(1px solid primary.darkest.2)">
+      <p
+        data-h2-font-weight="base(700)"
+        data-h2-margin="base(x1.5, 0, x.5, 0)"
+        data-h2-color="base(black)">Search results:</p>
+      <div 
+        class='null-state'
+        data-h2-display="base(none) base:selectors[.active](block)">Sorry, there were no matching results.</div>
+      <ul data-h2-padding-left="base(x1)">
+  `;
+  data.collections[locale].forEach((page) => {
+    search_content += String.raw`
+      <li 
+        class="result-item" 
+        data-h2-display="base(none) base:selectors[.active](block)"
+        data-h2-margin-top="base(x.5)" 
+        data-terms=${page.data.terms}>
+        <div data-h2-position="base(relative)">
+          <div 
+            data-h2-height="base(x1)" 
+            data-h2-width="base(x1)" 
+            data-h2-position="base(absolute)"
+            data-h2-top="base(0)"
+            data-h2-left="base(-x.75)"
+            data-h2-transform="base(translate(-50%, 0))">
+            <span
+              data-h2-font-size="base(1rem)"
+              data-h2-color="base(primary.dark)"
+              data-h2-position="base(center)">•</span>
+          </div>
+          <a
+            href=${page.url}
+            title="">${page.data.title}</a>
+        </div>
+      </li>
+    `;
+  });
+  search_content += `</ul></div>`;
   let menu_content = String.raw`
     <div data-h2-margin="base(x1.5, 0, 0, 0)">
-      <!-- ${rule.render(data, {
-        margin: 'data-h2-margin="base(x.25, 0, x2, 0)"',
-      })} -->
       <nav>
         <ul data-h2-padding="base(0, 0, 0, x1)" data-h2-list-style="base(none) base:children[ul](none)">
           <li data-h2-margin="base(x.5, 0, 0, 0)">
@@ -446,32 +487,50 @@ function render(data) {
   return String.raw`
     <h1
       data-h2-font-weight="base(800)"
-      data-h2-text-align="base(center)">
+      data-h2-text-align="base(center)"
+      data-h2-margin-bottom="base(x1.5)">
       <a
         href="/${data.locale}"
         title="Return the main home page."
         data-h2-color="base(black) base:hover(primary) base:all:focus-visible(black)"
         data-h2-transition="base:hover(color, .2s, ease, 0s)"
-        data-h2-text-decoration="base(none)"
-        data-h2-margin-bottom="base(x1.5)">
+        data-h2-text-decoration="base(none)">
         Hydrogen
       </a>
     </h1>
-    <!-- <label
-      data-h2-display="base(block)">
-      <span data-h2-visually-hidden="base(hidden)">Search</span>
+    <label
+      data-h2-display="base(block)"
+      data-h2-position="base(relative)">
+      <span data-h2-visually-hidden="base(invisible)">Search</span>
+      <svg 
+        width="68" 
+        height="68" 
+        viewBox="0 0 68 68" 
+        fill="none" 
+        xmlns="http://www.w3.org/2000/svg"
+        data-h2-display="base(block)"
+        data-h2-position="base(absolute)"
+        data-h2-location="base(50%, auto, auto, x.75)"
+        data-h2-transform="base(translate(0, -50%))"
+        data-h2-height="base(x.75)"
+        data-h2-width="base(x.75)"
+        data-h2-color="base:all(black.lightest)">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M47.6616 30.5843C47.6616 40.3926 39.7104 48.3438 29.9021 48.3438C20.0938 48.3438 12.1426 40.3926 12.1426 30.5843C12.1426 20.7759 20.0938 12.8247 29.9021 12.8247C39.7104 12.8247 47.6616 20.7759 47.6616 30.5843ZM46.2728 55.4403C41.5765 58.5397 35.95 60.3438 29.9021 60.3438C13.4664 60.3438 0.142578 47.02 0.142578 30.5843C0.142578 14.1485 13.4664 0.824738 29.9021 0.824738C46.3378 0.824738 59.6616 14.1485 59.6616 30.5843C59.6616 36.6322 57.8575 42.2587 54.7581 46.9551L65.3442 57.541C67.6873 59.8842 67.6874 63.6832 65.3442 66.0263C63.0011 68.3695 59.2021 68.3695 56.8589 66.0264L46.2728 55.4403Z" fill="currentColor"/>
+      </svg>
       <input 
+        class="search"
         type="text" 
-        placeholder='Use CTRL / to start typing...' 
+        placeholder='CTRL + /' 
         data-h2-background-color="base(foreground)"
         data-h2-color="base(font)"
         data-h2-outline="base(none)"
-        data-h2-padding="base(x.5 x1)"
+        data-h2-padding="base(x.5 x1 x.5 x2)"
         data-h2-radius="base(rounded)"
         data-h2-border="base(1px solid primary.darkest.5) base:focus-visible(1px solid transparent)"
         data-h2-shadow="base:focus-visible(0 0 0 3px focus)"
         data-h2-width="base(100%)"/>
-    </label> -->
+    </label>
+    ${search_content}
     ${menu_content}
   `;
 }

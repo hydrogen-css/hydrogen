@@ -6,6 +6,7 @@ let data = {
     parent: 'docs',
     pagination: true,
   },
+  terms: ['property', 'properties', 'custom', 'supports'],
   title: 'Properties',
   title_long: 'Property support',
   subtitle: 'A summary of CSS and custom properties supported by Hydrogen.',
