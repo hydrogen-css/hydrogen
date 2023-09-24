@@ -6,8 +6,8 @@ function render(data) {
     <div
       data-h2-position="base(sticky)"
       data-h2-layer="base(5)"
-      data-h2-location="base(0, auto, auto, auto)">
-      <div data-h2-padding="base(x1, 0, 0, 0) l-tablet(x2, 0, 0, 0) laptop(x3, 0, 0, 0) desktop(x4, 0, 0, 0)">
+      data-h2-location="base(0, auto, auto, auto) l-tablet(-x1, 0, 0, 0) desktop(-x2, 0, 0, 0)">
+      <div data-h2-padding="base(x1, 0, 0, 0) l-tablet(x3, 0, 0, 0) desktop(x4, 0, 0, 0)">
         <div
           id="nav"
           data-h2-background="
@@ -28,9 +28,7 @@ function render(data) {
           data-h2-overflow="base(visible, auto)"
           data-h2-max-height="
             base(calc(100vh - x5.25 - x1))
-            l-tablet(calc(100vh - x5.25 - x2))
-            laptop(calc(100vh - x6.25 - x3))
-            desktop(calc(100vh - x7.25 - x4))">
+            l-tablet(calc(100vh - x4.25))">
             ${get_menu.render(data)}
         </div>
       </div>

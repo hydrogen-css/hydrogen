@@ -14,6 +14,15 @@ function render(data, props) {
     state_class = 'expand-collapse-wrapper active';
     state_string = props.state + '-';
   }
+  // Check for active state
+  let active_state = '';
+  if (props.active) {
+    active_state = `
+      data-h2-font-weight="base(700)"
+      data-h2-color="base(primary.darker) base:focus-visible(black)"
+      data-h2-text-decoration="base(none)"
+    `;
+  }
   // Render label
   function render_label() {
     if (props.link) {
@@ -21,14 +30,16 @@ function render(data, props) {
         <a 
           href="${props.link.url}"
           title=""
-          data-h2-text-align="base(left)">
+          data-h2-text-align="base(left)"
+          ${active_state}>
           ${props.link.label}
         </a>
       `;
     } else {
       return String.raw`
         <p 
-          data-h2-text-align="base(left)">
+          data-h2-text-align="base(left)"
+          ${active_state}>
           ${props.label}
         </p>
       `;
@@ -89,18 +100,13 @@ function render(data, props) {
             </svg>
           </span>
         </button>
-        <!-- <div
-          data-h2-height="base(x.75)"
-          data-h2-width="base(1px)"
-          data-h2-background="base(black.darkest.2)"
-          data-h2-margin="base(0, x.5, 0, x.25)"></div> -->
         ${render_label()}
       </div>
       <div 
         class="expand-collapse-content"
         data-h2-position="base(relative) base:selectors[::before](absolute)"
         data-h2-left="base:selectors[::before](calc(-x.75 - 1px))"
-        data-h2-background="base:selectors[::before](primary.dark.5)"
+        data-h2-background="base:selectors[::before](primary.darkest.2)"
         data-h2-content="base:selectors[::before](' ')"
         data-h2-height="base:selectors[::before](100%)"
         data-h2-width="base:selectors[::before](1px)"
