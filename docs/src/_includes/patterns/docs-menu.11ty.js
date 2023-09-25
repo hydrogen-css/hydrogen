@@ -33,7 +33,7 @@ function render(data) {
             data-h2-max-height="
               base(calc(100vh - x5.25 - x1))
               l-tablet(calc(100vh - x4.25))">
-              ${get_menu.render(data)}
+              ${get_menu.render(data, 'desktop')}
           </div>
         </div>
       </div>

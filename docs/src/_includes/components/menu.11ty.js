@@ -80,7 +80,7 @@ function active(url, key) {
   return false;
 }
 
-function render(data) {
+function render(data, context) {
   let locale = [data.locale] + '_site';
   let expansion_small = require('./expansion-small.11ty');
   let rule = require('./rule.11ty');
@@ -456,7 +456,7 @@ function render(data) {
               data-h2-text-decoration="base(underline)">${page.data.title}</span>
             <span
               data-h2-display="base(block)" 
-              data-h2-color="base(black.lighter)"
+              data-h2-color="base:all(black.lighter)"
               data-h2-font-size="base(caption)">${page.data.subtitle}</span>
           </a>
         </div>
@@ -493,6 +493,10 @@ function render(data) {
       </nav>
     </div>
   `;
+  let placeholder = `CTRL + /`;
+  if (context === 'mobile') {
+    placeholder = 'Find something...';
+  }
   return String.raw`
     <h1
       data-h2-font-weight="base(800)"
@@ -529,7 +533,7 @@ function render(data) {
       <input 
         class="search"
         type="text" 
-        placeholder='CTRL + /' 
+        placeholder="${placeholder}"
         data-h2-background-color="base(foreground)"
         data-h2-color="base(font)"
         data-h2-outline="base(none)"
