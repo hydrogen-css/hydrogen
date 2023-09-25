@@ -449,7 +449,16 @@ function render(data) {
           </div>
           <a
             href=${page.url}
-            title="">${page.data.title}</a>
+            title=""
+            data-h2-text-decoration="base(none)">
+            <span
+              data-h2-display="base(block)" 
+              data-h2-text-decoration="base(underline)">${page.data.title}</span>
+            <span
+              data-h2-display="base(block)" 
+              data-h2-color="base(black.lighter)"
+              data-h2-font-size="base(caption)">${page.data.subtitle}</span>
+          </a>
         </div>
       </li>
     `;

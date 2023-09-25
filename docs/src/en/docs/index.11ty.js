@@ -7,6 +7,7 @@ let data = {
   terms: ['documentation', 'docs', 'home', 'landing'],
   title: 'Documentation',
   title_long: 'Documentation',
+  subtitle: 'The documentation home page.',
   header_index: [
     {
       path: '/en/docs/installation',

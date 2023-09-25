@@ -289,6 +289,7 @@ document.onreadystatechange = () => {
       let input = event.target.value.toLowerCase();
       let input_array = input.split(' ');
       let total_matches = 0;
+      console.log(input_array);
       if (input.length > 0) {
         results.classList.add('active');
         let pages = results.querySelectorAll('.result-item');
@@ -298,8 +299,10 @@ document.onreadystatechange = () => {
             let matches = [];
             terms.forEach((term) => {
               input_array.forEach((value) => {
-                if (term.match(new RegExp('^' + value))) {
-                  matches.push(term);
+                if (value != '') {
+                  if (term.match(new RegExp('^' + value))) {
+                    matches.push(term);
+                  }
                 }
               });
             });
