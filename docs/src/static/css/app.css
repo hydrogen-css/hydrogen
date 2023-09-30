@@ -124,20 +124,3 @@ strong {
   opacity: 1;
   transition: opacity 0.2s ease;
 }
-
-#main p code {
-  background: rgba(var(--h2-color-black-lightest), 0.4);
-  font-family: var(--h2-font-family-mono);
-  color: rgba(var(--h2-color-font), 1);
-}
-
-#main > pre {
-  background: rgba(var(--h2-color-black-lightest), 0.4);
-  font-family: var(--h2-font-family-mono);
-  color: rgba(var(--h2-color-font), 1);
-  padding: calc(var(--h2-base-whitespace) * 1rem);
-}
-
-#main pre code {
-  background: none;
-}

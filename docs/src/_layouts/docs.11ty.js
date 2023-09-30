@@ -502,7 +502,11 @@ function render(data) {
   }
   return String.raw`
     ${docs_header.render(data)}
-    <div id="main" data-h2-padding="base(x2, 0, 0, 0) l-tablet(x3, 0, 0, 0) desktop(x4, 0, 0, 0)">
+    <div 
+      id="main" 
+      data-h2-background="base:children[>pre, p code](background.dark.3) base:dark:children[>pre, p code](foreground)"
+      data-h2-font-size="base:children[>pre](caption)"
+      data-h2-padding="base(x2, 0, 0, 0) l-tablet(x3, 0, 0, 0) desktop(x4, 0, 0, 0) base:children[>pre](x.5)">
       ${create_content()}
     </div>
   `;

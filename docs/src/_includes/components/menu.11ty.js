@@ -83,7 +83,6 @@ function active(url, key) {
 function render(data, context) {
   let locale = [data.locale] + '_site';
   let expansion_small = require('./expansion-small.11ty');
-  let rule = require('./rule.11ty');
   let getting_started_content;
   data.collections[locale].forEach((item) => {
     if (item.data.navigation.key === 'getting-started') {
@@ -450,13 +449,13 @@ function render(data, context) {
           <a
             href=${page.url}
             title=""
-            data-h2-text-decoration="base(none)">
+            data-h2-text-decoration="base(none)"
+            data-h2-color="base:children[span:first-child](black) base:all:children[span:last-child](black.lighter) base:all:focus-visible:children[span](black)">
             <span
               data-h2-display="base(block)" 
               data-h2-text-decoration="base(underline)">${page.data.title}</span>
             <span
-              data-h2-display="base(block)" 
-              data-h2-color="base:all(black.lighter)"
+              data-h2-display="base(block)"
               data-h2-font-size="base(caption)">${page.data.subtitle}</span>
           </a>
         </div>
