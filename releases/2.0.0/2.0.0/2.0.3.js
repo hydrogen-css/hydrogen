@@ -16,13 +16,38 @@ module.exports = {
   author: 'Josh Beveridge',
   features: [],
   optimizations: [],
-  bugfixes: [],
+  bugfixes: [
+    {
+      breaking: false,
+      changes: {
+        en: [
+          "Fixes a bug where <code>data-h2-shadow</code> wasn't processing configured color values.",
+        ],
+      },
+    },
+  ],
   documentation: [
     {
       breaking: false,
       changes: {
         en: [
           'Reworks the menu on both desktop and mobile so that page content is nested inside of its relevant page and so that the menu opens to and highlights your current location for better navigation.',
+        ],
+      },
+    },
+    {
+      breaking: false,
+      changes: {
+        en: [
+          'Adds a search bar to the documentation menu to help you quickly find specific pages or terms.',
+        ],
+      },
+    },
+    {
+      breaking: false,
+      changes: {
+        en: [
+          "Adds a new glossary page for variable generated during Hydrogen's build that you can use in your CSS.",
         ],
       },
     },

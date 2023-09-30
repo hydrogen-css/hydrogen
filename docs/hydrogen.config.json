@@ -333,30 +333,9 @@
         }
       ],
       "transitions": {
-        "durations": [
-          {
-            "key": "slow",
-            "default": {
-              "duration": "3s"
-            }
-          }
-        ],
-        "functions": [
-          {
-            "key": "easing",
-            "default": {
-              "function": "ease"
-            }
-          }
-        ],
-        "delays": [
-          {
-            "key": "fast",
-            "default": {
-              "delay": ".2s"
-            }
-          }
-        ]
+        "durations": [],
+        "functions": [],
+        "delays": []
       }
     },
     {
