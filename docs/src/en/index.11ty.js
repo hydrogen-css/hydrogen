@@ -6,7 +6,7 @@ var data = {
     key: 'home',
   },
   title: 'Home',
-  terms: ['home', 'marketing'],
+  terms: ['home', 'hydrogen', 'features', 'marketing'],
   subtitle: "Hydrogen's main landing page.",
   home_nav: [
     {

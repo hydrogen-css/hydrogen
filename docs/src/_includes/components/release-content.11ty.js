@@ -11,6 +11,8 @@ function render(data, unique, release) {
       title = '🛠️ Optimizations (' + release[change].length + ')';
     } else if (change === 'bugfixes') {
       title = '🪲 Bugfixes (' + release[change].length + ')';
+    } else if (change === 'documentation') {
+      title = '📚 Documentation (' + release[change].length + ')';
     }
     let output = ``;
     if (release[change] && release[change].length > 0) {
@@ -83,6 +85,11 @@ function render(data, unique, release) {
   if (release.bugfixes) {
     bugfixes = get_release_content(release, 'bugfixes');
   }
+  // Check for documentation
+  let documentation = ``;
+  if (release.documentation) {
+    documentation = get_release_content(release, 'documentation');
+  }
   // Generate the release HTML
   return String.raw`
     ${require('./rule.11ty').render(data, {
@@ -91,6 +98,7 @@ function render(data, unique, release) {
     ${features}
     ${optimizations}
     ${bugfixes}
+    ${documentation}
   `;
 }
 

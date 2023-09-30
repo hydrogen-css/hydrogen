@@ -398,7 +398,7 @@ function render(data, context) {
           content: properties_content,
         })}
       </li>
-      <!-- <li data-h2-margin="base(x.5, 0, 0, 0)">
+      <li data-h2-margin="base(x.5, 0, 0, 0)">
         ${expansion_small.render(data, {
           state: parent(data.page.url, 'variables'),
           active: active(data.page.url, 'variables'),
@@ -409,7 +409,7 @@ function render(data, context) {
           },
           content: variables_content,
         })}
-      </li> -->
+      </li>
     </ul>
   `;
   let search_content = String.raw`
