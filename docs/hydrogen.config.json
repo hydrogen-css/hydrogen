@@ -22,7 +22,7 @@
     "include_reset_css": true,
     "browser_prefix_css": true,
     "minify_css": true,
-    "export_variable_file": false
+    "export_variable_file": true
   },
   "logging": {
     "generate_logs": false,

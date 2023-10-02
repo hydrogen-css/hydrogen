@@ -6,6 +6,7 @@ let data = {
     parent: 'docs',
     pagination: true,
   },
+  terms: ['installation', 'install', 'basics', 'getting', 'set', 'up', 'start', 'here', 'commands'],
   title: 'Installation',
   title_long: 'Installing Hydrogen',
   subtitle: 'Instructions on how to install and run Hydrogen on your project.',

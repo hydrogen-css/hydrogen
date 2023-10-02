@@ -6,10 +6,23 @@ let data = {
     parent: 'docs',
     pagination: true,
   },
+  terms: [
+    'style',
+    'styling',
+    'css',
+    'syntax',
+    'overview',
+    'typography',
+    'layouts',
+    'grids',
+    'flex',
+    'flexbox',
+    'colors',
+    'colours',
+  ],
   title: 'Styling',
   title_long: 'Styling with Hydrogen',
-  subtitle:
-    'Everything you need to know about using Hydrogen to style your project.',
+  subtitle: 'Everything you need to know about using Hydrogen to style your project.',
   main: [
     {
       type: 'title',

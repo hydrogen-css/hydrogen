@@ -4,8 +4,10 @@ let data = {
     key: 'docs',
     parent: 'home',
   },
+  terms: ['documentation', 'docs', 'home', 'landing'],
   title: 'Documentation',
   title_long: 'Documentation',
+  subtitle: 'The documentation home page.',
   header_index: [
     {
       path: '/en/docs/installation',
@@ -47,7 +49,7 @@ let data = {
     {
       type: 'copy',
       items: [
-        "<a href='/en/docs/releases/#latest' title='View Hydrogen's latest stable release.'><img alt='npm (tag)' src='https://img.shields.io/npm/v/@hydrogen-css/hydrogen/latest?color=%239D5CFF&label=latest'></a> <a href='/en/docs/releases/#latest' title='View Hydrogen's latest beta release.'><img alt='npm (tag)' src='https://img.shields.io/npm/v/@hydrogen-css/hydrogen/beta?color=%239D5CFF&label=beta'></a> <img alt='Netlify' src='https://img.shields.io/netlify/f508b5d3-904e-4a1b-9ec9-cf8c2334f0e3?label=docs'> <a href='https://hydrogen.design/feed.xml' title='Subscribe to updates.'><img src='https://img.shields.io/badge/feed-subscribe-orange'></a>",
+        "<a href='/en/docs/releases/#latest' title='View Hydrogen's latest stable release.'><img alt='npm (tag)' src='https://img.shields.io/npm/v/@hydrogen-css/hydrogen/latest?color=%239D5CFF&label=latest'></a> <img alt='Netlify' src='https://img.shields.io/netlify/f508b5d3-904e-4a1b-9ec9-cf8c2334f0e3?label=docs'> <a href='https://hydrogen.design/feed.xml' title='Subscribe to updates.'><img src='https://img.shields.io/badge/feed-subscribe-orange'></a>",
         "Thanks for visiting Hydrogen's documentation! This site contains everything you'll need to install Hydrogen on your project, create a theme, run commands, style your interfaces, and troubleshoot common problems.",
         "Have a question but can't find the answer here? <a href='https://github.com/hydrogen-css/hydrogen/issues/new' title='Create a new issue on Github.' target='_blank' rel='noreferrer'>Submit a ticket on Github</a> and perhaps the community can provide some insight. We'd also love to receive feedback on how this documentation can be improved.",
       ],

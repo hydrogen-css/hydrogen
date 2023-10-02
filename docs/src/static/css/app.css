@@ -24,6 +24,24 @@ a:hover {
   opacity: 20%;
 }
 
+.color-value {
+  white-space: nowrap;
+}
+
+[class*='color-sample'] {
+  display: inline-block;
+  vertical-align: middle;
+  height: 15px;
+  width: 15px;
+  border-radius: 3px;
+  margin-top: -2px;
+  margin-right: 2px;
+}
+
+[class*='-7440d6'] {
+  background: #7440d6;
+}
+
 .section-icon {
   transform: rotate(-15deg);
 }
