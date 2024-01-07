@@ -46,13 +46,13 @@ function render(data) {
       let content = ``;
       if (post[type] && post[type].length > 0) {
         if (type === 'features') {
-          content = content + `<h2>✨ New features (${post[type].length})</h2><ul>`;
+          content = content + `<br><h2>✨ New features (${post[type].length})</h2><ul>`;
         } else if (type === 'optimizations') {
-          content = content + `<h2>🛠️ Optimizations (${post[type].length})</h2><ul>`;
+          content = content + `<br><h2>🛠️ Optimizations (${post[type].length})</h2><ul>`;
         } else if (type === 'bugfixes') {
-          content = content + `<h2>🪲 Bugfixes (${post[type].length})</h2><ul>`;
+          content = content + `<br><h2>🪲 Bugfixes (${post[type].length})</h2><ul>`;
         } else if (type === 'documentation') {
-          content = content + `<h2>📚 Documentation (${post[type].length})</h2><ul>`;
+          content = content + `<br><h2>📚 Documentation (${post[type].length})</h2><ul>`;
         }
         post[type].forEach((item) => {
           // Check to see if the change is breaking and set the breaking flag
@@ -95,6 +95,7 @@ function render(data) {
     let bugfixes = content_type(post, 'bugfixes');
     let documentation = content_type(post, 'documentation');
     return String.raw`
+      <br>
       ${summary}
       <p>
         <span>${release_type} • </span>
@@ -103,6 +104,7 @@ function render(data) {
         })} ${post.date.getDate()}, ${post.date.getFullYear()}</span>
         ${breaking_chip}
       </p>
+      <br>
       <hr>
       ${features}
       ${optimizations}
@@ -122,7 +124,9 @@ function render(data) {
         <link href="${absoluteUrl('en/releases#' + post.version, data.metadata.url)}" />
         <updated>${dateToRfc3339(post.date)}</updated>
         <id>${absoluteUrl('en/releases#' + post.version, data.metadata.url)}</id>
-        <content xml:lang="en" type="html">${escape(post_content(post))}</content>
+        <content xml:lang="en" type="html"><image>${
+          data.site.base_url
+        }/static/img/social-hydrogen.png</image>${escape(post_content(post))}</content>
       </entry>
     `;
   });
@@ -138,7 +142,6 @@ function render(data) {
         <name>${data.metadata.author.name}</name>
         <email>${data.metadata.author.email}</email>
       </author>
-      <logo>${data.site.base_url}/static/img/social-hydrogen.png</logo>
       ${posts}
     </feed>
   `;
