@@ -124,9 +124,9 @@ function render(data) {
         <link href="${absoluteUrl('en/releases#' + post.version, data.metadata.url)}" />
         <updated>${dateToRfc3339(post.date)}</updated>
         <id>${absoluteUrl('en/releases#' + post.version, data.metadata.url)}</id>
-        <content xml:lang="en" type="html"><image>${
+        <content xml:lang="en" type="html"><img src="${
           data.site.base_url
-        }/static/img/social-hydrogen.png</image>${escape(post_content(post))}</content>
+        }/static/img/social-hydrogen.png" />${escape(post_content(post))}</content>
       </entry>
     `;
   });
