@@ -5,6 +5,12 @@ let custom_props = prop_data.properties.custom_identifiers;
 let color_props = prop_data.properties.color.filter((item) => {
   return custom_props.indexOf(item) === -1;
 });
+let family_props = prop_data.properties['font-family'].filter((item) => {
+  return custom_props.indexOf(item) === -1;
+});
+let weight_props = prop_data.properties['font-weight'].filter((item) => {
+  return custom_props.indexOf(item) === -1;
+});
 let gradient_props = prop_data.properties.gradient.filter((item) => {
   return custom_props.indexOf(item) === -1;
 });
@@ -75,6 +81,38 @@ let data = {
       type: 'list',
       style: 'grid',
       items: color_props,
+    },
+    {
+      type: 'title',
+      label: 'Font family support',
+      id: 'font-family',
+    },
+    {
+      type: 'copy',
+      items: [
+        "The following properties support font families configured in your settings file. You can learn about <a href='/en/docs/configuration/creating-themes/#fonts' title='Find out how to configure font family settings.'>configuring custom font families in the configuration section</a>.",
+      ],
+    },
+    {
+      type: 'list',
+      style: 'grid',
+      items: family_props,
+    },
+    {
+      type: 'title',
+      label: 'Font weight support',
+      id: 'font-weight',
+    },
+    {
+      type: 'copy',
+      items: [
+        "The following properties support font weights configured in your settings file. You can learn about <a href='/en/docs/configuration/creating-themes/#weights' title='Find out how to configure font weight settings.'>configuring custom font weights in the configuration section</a>.",
+      ],
+    },
+    {
+      type: 'list',
+      style: 'grid',
+      items: weight_props,
     },
     {
       type: 'title',
