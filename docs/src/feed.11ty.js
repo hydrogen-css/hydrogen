@@ -114,36 +114,49 @@ function render(data) {
   }
   data.releases.rss.reverse().forEach((post, index) => {
     if (index === 0) {
-      last_updated = dateToRfc3339(post.date);
+      last_updated = dateToRfc822(post.date);
     }
     posts =
       posts +
       String.raw`
-      <entry>
-        <title>Release ${post.version}</title>
-        <link href="${absoluteUrl('en/releases#' + post.version, data.metadata.url)}" />
-        <updated>${dateToRfc3339(post.date)}</updated>
-        <id>${absoluteUrl('en/releases#' + post.version, data.metadata.url)}</id>
-        <content xml:lang="en" type="html"><img src="${
+      <item>
+      <title>Release ${post.version}</title>
+        <link>${absoluteUrl('en/releases#' + post.version, data.metadata.url)}</link>
+        <enclosure url="${
           data.site.base_url
-        }/static/img/social-hydrogen.png" />${escape(post_content(post))}</content>
-      </entry>
+        }/static/img/social-hydrogen.png" length="150000" type="image/png" />
+        <description>${escape(post_content(post))}</description>
+        <pubDate>${dateToRfc822(post.date)}</pubDate>
+        <author>hydrogen@joshbeveridge.ca (${data.metadata.author.name})</author>
+        <guid isPermaLink="true">${absoluteUrl(
+          'en/releases#' + post.version,
+          data.metadata.url
+        )}</guid>
+      </item>
     `;
   });
   return String.raw`<?xml version="1.0" encoding="utf-8"?>
-    <feed xmlns="http://www.w3.org/2005/Atom" xml:base="${data.metadata.url}">
-      <title>${data.metadata.title}</title>
-      <subtitle>${data.metadata.subtitle}</subtitle>
-      <link href="${absoluteUrl(data.metadata.url)}" rel="self"/>
-      <link href="${data.metadata.url}" />
-      <updated>${last_updated}</updated>
-      <id>${data.metadata.url}</id>
-      <author>
-        <name>${data.metadata.author.name}</name>
-        <email>${data.metadata.author.email}</email>
-      </author>
-      ${posts}
-    </feed>
+    <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="${
+      data.metadata.url
+    }" xmlns:atom="http://www.w3.org/2005/Atom">
+      <channel>
+        <title>${data.metadata.title}</title>
+        <link>${data.metadata.url}</link>
+        <description>${data.metadata.subtitle}</description>
+        <language>en-us</language>
+        <pubDate>${last_updated}</pubDate>
+        <managingEditor>hydrogen@joshbeveridge.ca (Josh Beveridge)</managingEditor>
+        <atom:link href="${absoluteUrl(
+          data.metadata.url + data.permalink
+        )}" rel="self" type="applications/rss+xml" />
+        <image>
+          <url>${data.site.base_url}/static/img/social-hydrogen.png</url>
+          <title>${data.metadata.title}</title>
+          <link>${data.metadata.url}</link>
+        </image>
+        ${posts}
+      </channel>
+    </rss>
   `;
 }
 
