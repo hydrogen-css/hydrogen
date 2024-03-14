@@ -86,7 +86,7 @@ var data = {
             count: 3,
             lines: [
               '☼ Hydrogen - v' + latest.version + ' - Starting the build...',
-              '☼ Hydrogen - v' + latest.version + ' - CSS file written (202ms)',
+              '☼ Hydrogen - v' + latest.version + ' - CSS file written (186ms)',
               '  Message  > The Hydrogen build completed successfully.',
             ],
           },

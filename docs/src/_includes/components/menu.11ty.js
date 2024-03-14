@@ -536,7 +536,7 @@ function render(data, context) {
         data-h2-background-color="base(foreground)"
         data-h2-color="base(font)"
         data-h2-outline="base(none)"
-        data-h2-padding="base(x.5 x1 calc(x.5 - 2px) x2)"
+        data-h2-padding="base(x.5 x1 calc(x.5 - 1px) x2)"
         data-h2-radius="base(rounded)"
         data-h2-border="base(1px solid primary.darkest.5) base:focus-visible(1px solid transparent)"
         data-h2-shadow="base:focus-visible(0 0 0 3px focus)"
