@@ -68,7 +68,7 @@ let data = {
             'Find and validate your configuration file',
             'Parse the input you pass to it for Hydrogen attributes',
             "Assemble custom CSS based on the attributes you've used",
-            "Run the resulting CSS through <a href='https://github.com/postcss/autoprefixer' title='Learn about Autoprefixer and its helpful additions for maintaining browser support.' target='_blank' rel='noreferrer'>Autoprefixer</a> and a very <a href='https://github.com/cssnano/cssnano' title='Learn about how Hydrogen uses PostCSS and CSSnano to minify its output.' target='_blank' rel='noreferrer'>light minification</a>",
+            "Run the resulting CSS through <a href='https://lightningcss.dev/' title='Learn more about Lightning CSS in a new tab.' target='_blank'>Lightning CSS</a> for automated browser prefixing and file minification",
             "Generate a CSS variable file if you've requested one",
             'Export the final Hydrogen CSS file',
           ],
@@ -136,15 +136,15 @@ let data = {
             {
               type: 'copy',
               items: [
-                'Processing flags allow you to control how the final CSS output is processed by PostCSS.',
+                "Processing flags allow you to control how the final CSS output is processed by <a href='https://lightningcss.dev/' title='Learn more about Lightning CSS in a new tab.' target='_blank'>Lightning CSS</a>.",
               ],
             },
             {
               type: 'list',
               style: 'unordered',
               items: [
-                '<code>--h2_prefix</code> will enable/disable AutoPrefixer.',
-                '<code>--h2_minify</code> will enable/disable CSSnano.',
+                '<code>--h2_prefix</code> will enable/disable browser prefixing.',
+                '<code>--h2_minify</code> will enable/disable file minification.',
               ],
             },
             {
