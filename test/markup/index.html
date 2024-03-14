@@ -79,6 +79,15 @@
           aliquam malesuada bibendum arcu. Tortor id aliquet lectus proin nibh
           nisl.
         </p>
+        <p data-h2-font-weight="base(thin)">thin text</p>
+        <p data-h2-font-weight="base(extralight)">extralight text</p>
+        <p data-h2-font-weight="base(light)">light text</p>
+        <p data-h2-font-weight="base(normal)">normal text</p>
+        <p data-h2-font-weight="base(medium)">medium text</p>
+        <p data-h2-font-weight="base(semibold)">semibold text</p>
+        <p data-h2-font-weight="base(bold)">bold text</p>
+        <p data-h2-font-weight="base(extrabold)">extrabold text</p>
+        <p data-h2-font-weight="base(black)">black text</p>
       </div>
       <div
         data-h2-flex-grid="base(flex-start, x2)"
@@ -188,9 +197,31 @@
           <div data-h2-background-color="base(secondary.100)"></div>
         </div>
       </div>
+      <!-- Children with pseudo elements test -->
+      <p
+        data-h2-background="base:children[span](cyan) base:children[span::before](red)"
+        data-h2-content="base:children[span::before](' ')"
+        data-h2-display="base:children[span::before](block)"
+        data-h2-height="base:children[span::before](5px)"
+        data-h2-margin="base(x2, 0)"
+        data-h2-width="base:children[span::before](5px)"
+      >
+        <span>Test</span>
+      </p>
+      <details
+        data-h2-content="base:children[summary::marker]('+') base:selectors[[open]]:children[summary::marker]('−')"
+      >
+        <summary>This is a test details element.</summary>
+        <ul>
+          <li>Item 01</li>
+          <li>Item 02</li>
+          <li>Item 03</li>
+        </ul>
+      </details>
     </div>
-    <!-- Expected errors -->
+    <!-- Reported by CSSNANO but not Lightning -->
     <p data-h2-margin="base(calc(true, false))"></p>
+    <!-- Expected errors -->
     <p data-h2-bugaloo="base(welrfjadsf)"></p>
     <p data-h2-color="base(rgb\(50, 50, 50))"></p>
     <!-- Known errors -->

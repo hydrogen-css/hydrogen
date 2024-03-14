@@ -12,7 +12,8 @@ let data = {
     'css',
     'colors',
     'colours',
-    'font',
+    'fonts',
+    'weights',
     'sizes',
     'line',
     'heights',
@@ -214,6 +215,30 @@ let data = {
 --h2-line-height-h2
 --h2-line-height-h1
 --h2-line-height-display</code></pre>`,
+      ],
+    },
+    {
+      type: 'title',
+      label: 'Font weight variables',
+      id: 'font-weights',
+    },
+    {
+      type: 'group',
+      items: [
+        {
+          type: 'copy',
+          items: [
+            "Font weight variables follow the standard pattern and are named using your specified <code>key</code> value and return the <code>font-weight</code> value you've chosen.",
+            '<code>--h2-font-weight-[KEY]</code>',
+          ],
+        },
+        {
+          type: 'code',
+          file: 'app.css',
+          language: 'css',
+          count: 3,
+          lines: ['.weight: {', '  font-weight: var(--h2-font-weight-thin);', '}'],
+        },
       ],
     },
     {

@@ -50,7 +50,7 @@ Hydrogen supports almost all CSS properties and includes a handful of custom pro
 `data-h2-display="base(grid)"`
 `data-h2-border-top="base(1px solid black)"`
 
-Custom Hydrogen properties use a comma separated syntax to accept specific options:
+Properties that are unique to Hydrogen use a comma separated syntax to accept specific options:
 
 `data-h2-container="base(center, large)"`
 `data-h2-flex-grid="base(flex-start, x2)"`
@@ -65,7 +65,7 @@ The biggest advantage to Hydrogen's `data-attribute` syntax is that it enables t
 
 Hydrogen uses custom scripting to scan your code for `data-h2-` attributes and then builds a CSS stylesheet that contains only Hydrogen's core and the attributes you've used. No bloat. No duplication. This means that the library in production is concise while allowing it to provide a robust set of features and support complex customization.
 
-It also runs Autoprefixer and CSSNano on itself to provide a complete, production ready file.
+It also runs [Lightning CSS](https://lightningcss.dev/) on itself to provide a complete, production ready file.
 
 # Development and contribution
 

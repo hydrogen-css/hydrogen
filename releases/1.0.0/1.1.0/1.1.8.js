@@ -10,7 +10,7 @@
 module.exports = {
   author: 'Josh Beveridge',
   date: new Date('2021-09-27'),
-  version: '1.1.9',
+  version: '1.1.8',
   features: [
     {
       breaking: false,

@@ -14,7 +14,7 @@ let data = {
 };
 
 function render(data) {
-  let { absoluteUrl, dateToRfc822 } = require('@11ty/eleventy-plugin-rss');
+  let { absoluteUrl, dateToRfc822, dateToRfc3339 } = require('@11ty/eleventy-plugin-rss');
   var escape = require('escape-html');
   let posts = ``;
   let last_updated;
@@ -46,11 +46,13 @@ function render(data) {
       let content = ``;
       if (post[type] && post[type].length > 0) {
         if (type === 'features') {
-          content = content + `<h2>✨ New features (${post[type].length})</h2><ul>`;
+          content = content + `<br><h2>✨ New features (${post[type].length})</h2><ul>`;
         } else if (type === 'optimizations') {
-          content = content + `<h2>🛠️ Optimizations (${post[type].length})</h2><ul>`;
+          content = content + `<br><h2>🛠️ Optimizations (${post[type].length})</h2><ul>`;
         } else if (type === 'bugfixes') {
-          content = content + `<h2>🪲 Bugfixes (${post[type].length})</h2><ul>`;
+          content = content + `<br><h2>🪲 Bugfixes (${post[type].length})</h2><ul>`;
+        } else if (type === 'documentation') {
+          content = content + `<br><h2>📚 Documentation (${post[type].length})</h2><ul>`;
         }
         post[type].forEach((item) => {
           // Check to see if the change is breaking and set the breaking flag
@@ -91,7 +93,9 @@ function render(data) {
     let features = content_type(post, 'features');
     let optimizations = content_type(post, 'optimizations');
     let bugfixes = content_type(post, 'bugfixes');
+    let documentation = content_type(post, 'documentation');
     return String.raw`
+      <br>
       ${summary}
       <p>
         <span>${release_type} • </span>
@@ -100,10 +104,12 @@ function render(data) {
         })} ${post.date.getDate()}, ${post.date.getFullYear()}</span>
         ${breaking_chip}
       </p>
+      <br>
       <hr>
       ${features}
       ${optimizations}
       ${bugfixes}
+      ${documentation}
     `;
   }
   data.releases.rss.reverse().forEach((post, index) => {
@@ -114,12 +120,18 @@ function render(data) {
       posts +
       String.raw`
       <item>
-        <title>Release ${post.version}</title>
+      <title>Release ${post.version}</title>
         <link>${absoluteUrl('en/releases#' + post.version, data.metadata.url)}</link>
+        <enclosure url="${
+          data.site.base_url
+        }/static/img/social-hydrogen.png" length="150000" type="image/png" />
         <description>${escape(post_content(post))}</description>
         <pubDate>${dateToRfc822(post.date)}</pubDate>
-        <dc:creator>${data.metadata.author.name}</dc:creator>
-        <guid>${absoluteUrl('en/releases#' + post.version, data.metadata.url)}</guid>
+        <author>hydrogen@joshbeveridge.ca (${data.metadata.author.name})</author>
+        <guid isPermaLink="true">${absoluteUrl(
+          'en/releases#' + post.version,
+          data.metadata.url
+        )}</guid>
       </item>
     `;
   });
@@ -130,15 +142,17 @@ function render(data) {
       <channel>
         <title>${data.metadata.title}</title>
         <link>${data.metadata.url}</link>
+        <description>${data.metadata.subtitle}</description>
+        <language>en-us</language>
+        <pubDate>${last_updated}</pubDate>
+        <managingEditor>hydrogen@joshbeveridge.ca (Josh Beveridge)</managingEditor>
         <atom:link href="${absoluteUrl(
           data.metadata.url + data.permalink
-        )}" rel="self" type="application/rss+xml" />
-        <description>${data.metadata.subtitle}</description>
-        <language>${data.metadata.language}</language>
+        )}" rel="self" type="applications/rss+xml" />
         <image>
           <url>${data.site.base_url}/static/img/social-hydrogen.png</url>
-          <title>The Hydrogen logo</title>
-          <link>${data.site.base_url}/en</link>
+          <title>${data.metadata.title}</title>
+          <link>${data.metadata.url}</link>
         </image>
         ${posts}
       </channel>

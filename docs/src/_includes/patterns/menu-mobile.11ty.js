@@ -23,13 +23,13 @@ function render(data) {
         base:children[.old-nav](.5s ease) 
         base:selectors[.active]:children[.old-nav](.5s ease)
         base:selectors[.active]:children[.old-nav >a](.2s ease)">
-      <div data-h2-padding="base(x.5)">
+      <div data-h2-padding="base(x.5, x.5, 0, x.5)">
         <button
           class="mobile-menu-trigger"
           id="mobileNav"
           data-h2-background="base:all(code) base:all:focus-visible(focus)"
           data-h2-border="base:all(1px solid primary.lightest.2)"
-          data-h2-radius="base(rounded)"
+          data-h2-radius="base(rounded, rounded, 0, 0)"
           data-h2-padding="base(x1, x1, calc(x1 + 5px), x1)"
           data-h2-shadow="base(largest)"
           data-h2-overflow="base(hidden)"
