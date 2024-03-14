@@ -23,8 +23,8 @@
     "watch": "H2DEBUG=true npx h2-watch"
   },
   "devDependencies": {
-    "@hydrogen-css/hydrogen": "^2.0.1",
-    "browser-sync": "^2.29.1"
+    "@hydrogen-css/hydrogen": "^2.0.4",
+    "browser-sync": "^3.0.2"
   },
   "engines": {
     "node": ">=14.18.1",
