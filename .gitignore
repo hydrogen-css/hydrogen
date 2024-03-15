@@ -6,5 +6,7 @@ cache
 # Documentation
 docs/_site/
 docs/_tmp/
+docs/package-lock.json
 # Test caches
 test/styles
+test/package-lock.json
