@@ -53,7 +53,7 @@ Hydrogen's folder structure inside of the `lib` directory does its best to repre
    1. Custom selectors are generated and are added to the record
    2. The actual CSS code is created and added to the record
    3. The attribute record is added to the media query object generated earlier
-7. The media query object is then looped through, assembling a single unprocssed CSS string
-8. The CSS string is then optionally run through Autoprefixer (browser prefixing) and CSSnano (CSS minification)
+7. The media query object is then looped through, assembling a single unprocessed CSS string
+8. The CSS string is then optionally run through Lightning CSS (browser prefixing and CSS minification)
 9. If requested, a `hydrogen.vars.css` variable file is written to the configured `output` directory
 10. The final processed CSS is written to a `hydrogen.css` file in the configured `output` directory
