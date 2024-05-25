@@ -25,7 +25,7 @@
     "export_variable_file": true
   },
   "logging": {
-    "generate_logs": false,
+    "generate_logs": true,
     "verbose_console_output": true
   },
   "media": {
@@ -33,27 +33,27 @@
     "queries": [
       {
         "key": "print",
-        "query": "print"
+        "query": "@media print"
       },
       {
         "key": "mobile",
-        "query": "screen and (min-width: 414px)"
+        "query": "@media screen and (min-width: 414px)"
       },
       {
         "key": "p-tablet",
-        "query": "screen and (min-width: 48em)"
+        "query": "@media screen and (min-width: 48em)"
       },
       {
         "key": "l-tablet",
-        "query": "screen and (min-width: 73em)"
+        "query": "@media screen and (min-width: 73em)"
       },
       {
         "key": "laptop",
-        "query": "screen and (min-width: 80em)"
+        "query": "@media screen and (min-width: 80em)"
       },
       {
         "key": "desktop",
-        "query": "screen and (min-width: 100em)"
+        "query": "@media screen and (min-width: 100em)"
       }
     ]
   },
