@@ -21,11 +21,11 @@
     "include_reset_css": true,
     "browser_prefix_css": true,
     "minify_css": true,
-    "export_variable_file": false
+    "export_variable_file": false,
+    "error_recovery": true
   },
   "logging": {
     "generate_logs": false,
-    "show_timers": true,
     "verbose_console_output": true
   },
   "media": {
