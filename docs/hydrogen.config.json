@@ -25,7 +25,7 @@
     "export_variable_file": true
   },
   "logging": {
-    "generate_logs": true,
+    "generate_logs": false,
     "verbose_console_output": true
   },
   "media": {

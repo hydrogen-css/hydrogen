@@ -125,7 +125,7 @@ function render(data, props) {
         data-h2-height="base(x1.5)"
         data-h2-width="base(x1.5)"
         data-h2-position="base(absolute)"
-        data-h2-location="base(50%, 0, auto, auto)"
+        data-h2-location="base(55%, 0, auto, auto)"
         data-h2-transform="base(translate(0, -50%))"
         data-h2-vertical-align="base(middle)"
         href="${data.page.url}#${props.id}" 
@@ -191,7 +191,8 @@ function render(data, props) {
               ${alignment_offset}
               data-h2-position='base(relative)'
               data-h2-display="base(inline-block)"
-              data-h2-padding-right="base(x1.6)">
+              data-h2-padding-right="base(x1.6)"
+              data-h2-max-width="base(100%)">
               ${chips}
               <span data-h2-vertical-align="base(middle)" data-h2-overflow-wrap="base(anywhere)">
                 ${props.label}
