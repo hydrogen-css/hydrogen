@@ -116,25 +116,25 @@ var data = {
       },
       list: [
         {
-          title: 'Inline media queries',
+          title: 'Inline @rules',
           content: [
-            'Define media queries in your configuration and then call them directly in attributes.',
+            'Configure media queries, container queries, and more and then call them directly in attributes.',
           ],
         },
         {
-          title: 'Inline states',
+          title: 'Manage states',
           content: [
             'Style native HTML interaction states like <code>:hover</code> and <code>:focus</code> right in your markup.',
           ],
         },
         {
-          title: 'Inline selectors',
+          title: 'Target selectors',
           content: [
             'Using the <code>:selectors</code> modifier, apply styles to a specific ID, class, or attribute.',
           ],
         },
         {
-          title: 'Inline nested elements',
+          title: 'Style descendants',
           content: [
             'Using the <code>:children</code> modifier, apply styles to nested tags or selectors for bulk styling.',
           ],
@@ -142,16 +142,20 @@ var data = {
         {
           title: 'Automated dark mode',
           content: [
-            'Define sibling values for dark mode and apply them instantly using a single value.',
+            'Define sibling tokens for dark mode and activate them instantly with a single value.',
           ],
         },
         {
-          title: 'Automated theming',
-          content: ['Create entire themes for your project and apply them app-wide in an instant.'],
+          title: 'Create themes',
+          content: [
+            'Style entire themes for your project and apply them app-wide by swapping a single string.',
+          ],
         },
         {
-          title: 'Automated typography',
-          content: ['Automatically generate a type scale, vertical rhythm, and whitespace tokens.'],
+          title: 'Easy typography',
+          content: [
+            'Generate a type scale, vertical rhythm, and whitespace tokens that can adapt to media queries.',
+          ],
         },
         {
           title: 'Open-source code',
@@ -171,7 +175,7 @@ var data = {
         alt: 'A sticker-style icon of a race flag.',
       },
       link: {
-        label: 'Installation documentation',
+        label: 'Installation details',
         title: 'Visit the docs and learn more about installing Hydrogen in depth.',
         path: '/en/docs/installation',
       },
@@ -261,6 +265,11 @@ var data = {
       icon: {
         path: '/static/img/icon-compass.svg',
         alt: 'A sticker-style icon of a compass.',
+      },
+      link: {
+        label: 'Visit the docs',
+        title: 'Head on over to the documentation main page.',
+        path: '/en/docs',
       },
     },
     sections: [

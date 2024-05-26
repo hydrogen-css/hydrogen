@@ -409,28 +409,6 @@
             "color": "#3bed9d",
             "modifiers": []
           }
-        },
-        {
-          "key": "foreground",
-          "default": {
-            "color": "white",
-            "modifiers": []
-          },
-          "dark": {
-            "color": "#2a2b38",
-            "modifiers": []
-          }
-        },
-        {
-          "key": "background",
-          "default": {
-            "color": "#f9fcff",
-            "modifiers": []
-          },
-          "dark": {
-            "color": "#212130",
-            "modifiers": []
-          }
         }
       ],
       "gradients": [
@@ -470,28 +448,6 @@
             "color": "#ffc61a",
             "modifiers": []
           }
-        },
-        {
-          "key": "foreground",
-          "default": {
-            "color": "white",
-            "modifiers": []
-          },
-          "dark": {
-            "color": "#2a2b38",
-            "modifiers": []
-          }
-        },
-        {
-          "key": "background",
-          "default": {
-            "color": "#fff9fb",
-            "modifiers": []
-          },
-          "dark": {
-            "color": "#212130",
-            "modifiers": []
-          }
         }
       ],
       "gradients": [
@@ -529,28 +485,6 @@
           "key": "secondary",
           "default": {
             "color": "rgb(78, 221, 17)",
-            "modifiers": []
-          }
-        },
-        {
-          "key": "foreground",
-          "default": {
-            "color": "white",
-            "modifiers": []
-          },
-          "dark": {
-            "color": "#2a2b38",
-            "modifiers": []
-          }
-        },
-        {
-          "key": "background",
-          "default": {
-            "color": "#f9fffd",
-            "modifiers": []
-          },
-          "dark": {
-            "color": "#212130",
             "modifiers": []
           }
         }

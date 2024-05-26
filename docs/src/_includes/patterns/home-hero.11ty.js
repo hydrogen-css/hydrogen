@@ -53,39 +53,20 @@ function render(data) {
         data-h2-container="base(center, medium, x1) p-tablet(center, medium, x2) l-tablet(center, medium, x3)"
         data-h2-display="base(grid)">
         <div 
-          data-h2-order="base(2) p-tablet(1)"
-          data-h2-padding="base(x1, 0, x5, 0) p-tablet(x4, 0)"
-          data-h2-text-align="base(right)">
-          <div 
-            data-h2-width="base(100%)"
-            data-h2-max-width="base(x20)"
-            data-h2-display="base(inline-block)">
-            <div
-              data-h2-height="base(x.25)"
-              data-h2-width="base(100%)"
-              data-h2-background-color="base(secondary)"
-              data-h2-radius="base(rounded)"></div>
-            <p
-              data-h2-font-size="base(h6)"
-              data-h2-font-weight="base(300)"
-              data-h2-max-width="base(x18)"
-              data-h2-color="base:all(white.80)"
-              data-h2-margin="base(x1, auto, 0, auto) p-tablet(x1, 0, 0, auto)"
-              data-h2-text-align="base(center) p-tablet(right)">${data.site.slogan[data.locale]}</p>
-          </div>
-        </div>
-        <div 
           data-h2-order="base(1) p-tablet(2)" 
-          data-h2-padding="base(x4, 0, 0, 0) p-tablet(0, 0, x3.5, 0)"
-          data-h2-text-align="base(center) p-tablet(left)">
+          data-h2-padding="base(x2, 0, x4, 0) p-tablet(x4, 0, x6, 0)"
+          data-h2-text-align="base(center)">
           <h1
             data-h2-color="base:all(white)"
             data-h2-font-weight="base(700)"
             data-h2-margin-bottom="base(x.5)"
-            data-h2-font-size="base(calc(var(--h2-font-size-display) * 1.15))"
+            data-h2-font-size="base(calc(var(--h2-font-size-display) * 1.25))"
             data-h2-overflow-wrap="base(anywhere)">
             ${data.site.name}
           </h1>
+          <p 
+            data-h2-color="base:all(white.5)"
+            data-h2-margin-bottom="base(x1)">${data.site.slogan[data.locale]}</p>
           <div 
             class="code_wrapper"
             data-h2-display="base(inline-block) p-tablet(block)">
@@ -135,7 +116,7 @@ function render(data) {
           data-h2-shadow="base:children[>div](large)"
           data-h2-color="base:children[p:first-child](primary.dark)"
           data-h2-font-weight="base:children[p:first-child](800)"
-          data-h2-margin="base:children[p:not(:first-child)](x.5, 0, 0, 0)">
+          data-h2-margin="base:children[p:not(:first-child)](x.25, 0, 0, 0)">
           ${generate_hero_content(data)}
         </div>
       </div>

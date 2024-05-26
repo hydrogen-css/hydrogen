@@ -56,6 +56,11 @@ function render(data) {
             path: data.jump.title.icon.path,
             alt: data.jump.title.icon.alt,
           },
+          link: {
+            label: data.jump.title.link.label,
+            title: data.jump.title.link.title,
+            path: data.jump.title.link.path,
+          },
         })}
       </div>
     </div>

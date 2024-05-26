@@ -183,7 +183,7 @@ function render(data) {
               data-h2-padding="base:children[>div](x1)"
               data-h2-color="base:children[p:first-child](primary.dark)"
               data-h2-font-weight="base:children[p:first-child](800)"
-              data-h2-margin="base:children[p:not(:first-child)](x.5, 0, 0, 0)">
+              data-h2-margin="base:children[p:not(:first-child)](x.25, 0, 0, 0)">
               ${sub_features}
             </div>
           </div>
