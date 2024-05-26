@@ -46,8 +46,10 @@ function render(data, props) {
   }
   // Set alignment
   let alignment = 'data-h2-text-align="base(center) p-tablet(left)"';
+  let alignment_offset = 'data-h2-margin-right="base(-x1.6) p-tablet(auto)"';
   if (props.alignment && props.alignment === 'left') {
     alignment = 'data-h2-text-align="base(left)"';
+    alignment_offset = '';
   }
   // Set margins
   let margin = '';
@@ -122,9 +124,9 @@ function render(data, props) {
         data-h2-outline="base(none)"
         data-h2-height="base(x1.5)"
         data-h2-width="base(x1.5)"
-        data-h2-position="base(relative)"
-        data-h2-margin="base(-x.25 0)"
-        data-h2-left="base(-x.15)"
+        data-h2-position="base(absolute)"
+        data-h2-location="base(50%, 0, auto, auto)"
+        data-h2-transform="base(translate(0, -50%))"
         data-h2-vertical-align="base(middle)"
         href="${data.page.url}#${props.id}" 
         title="Skip to this section.">
@@ -186,8 +188,10 @@ function render(data, props) {
               ${font_sizes[props.size]}
               ${font_weights[props.size]}
               ${color}
+              ${alignment_offset}
               data-h2-position='base(relative)'
-              data-h2-display="base(inline-block) p-tablet(block)">
+              data-h2-display="base(inline-block)"
+              data-h2-padding-right="base(x1.6)">
               ${chips}
               <span data-h2-vertical-align="base(middle)" data-h2-overflow-wrap="base(anywhere)">
                 ${props.label}
