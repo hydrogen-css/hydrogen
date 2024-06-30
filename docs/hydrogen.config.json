@@ -192,26 +192,6 @@
           }
         }
       ],
-      "containers": [
-        {
-          "key": "small",
-          "default": {
-            "max_width": "39rem"
-          }
-        },
-        {
-          "key": "medium",
-          "default": {
-            "max_width": "75rem"
-          }
-        },
-        {
-          "key": "large",
-          "default": {
-            "max_width": "85rem"
-          }
-        }
-      ],
       "fonts": [
         {
           "key": "sans",
@@ -391,7 +371,27 @@
         "durations": [],
         "functions": [],
         "delays": []
-      }
+      },
+      "wrappers": [
+        {
+          "key": "small",
+          "default": {
+            "max_width": "39rem"
+          }
+        },
+        {
+          "key": "medium",
+          "default": {
+            "max_width": "75rem"
+          }
+        },
+        {
+          "key": "large",
+          "default": {
+            "max_width": "85rem"
+          }
+        }
+      ]
     },
     {
       "key": "wave",

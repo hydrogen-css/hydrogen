@@ -40,6 +40,10 @@
         "query": "screen and (min-width: 48em)"
       },
       {
+        "key": "container",
+        "query": "@container named (min-width: 500px)"
+      },
+      {
         "key": "l-tablet",
         "query": "screen and (min-width: 73em)"
       },

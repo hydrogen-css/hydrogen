@@ -140,7 +140,7 @@ let data = {
     },
     {
       type: 'title',
-      label: 'Container variables',
+      label: 'Container variables (deprecated)',
       id: 'containers',
     },
     {
@@ -149,16 +149,8 @@ let data = {
         {
           type: 'copy',
           items: [
-            "Container variables follow the standard pattern and are named using your specified <code>key</code> value and return the <code>max-width</code> value you've chosen.",
-            '<code>--h2-container-[KEY]</code>',
+            'Container variables have been deprecated. Please see wrapper variables for the newest implementation.',
           ],
-        },
-        {
-          type: 'code',
-          file: 'app.css',
-          language: 'css',
-          count: 3,
-          lines: ['.container: {', '  max-width: var(--h2-container-large);', '}'],
         },
       ],
     },
@@ -360,6 +352,30 @@ let data = {
             '  transition: all .2s var(--h2-transition-function-swish);',
             '}',
           ],
+        },
+      ],
+    },
+    {
+      type: 'title',
+      label: 'Wrapper variables',
+      id: 'wrappers',
+    },
+    {
+      type: 'group',
+      items: [
+        {
+          type: 'copy',
+          items: [
+            "Wrapper variables follow the standard pattern and are named using your specified <code>key</code> value and return the <code>max-width</code> value you've chosen.",
+            '<code>--h2-wrapper-[KEY]</code>',
+          ],
+        },
+        {
+          type: 'code',
+          file: 'app.css',
+          language: 'css',
+          count: 3,
+          lines: ['.wrapper: {', '  max-width: var(--h2-wrapper-large);', '}'],
         },
       ],
     },

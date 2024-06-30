@@ -160,7 +160,7 @@ var data = {
         {
           title: 'Open-source code',
           content: [
-            'Hydrogen is provided under an MIT license; fork the code and change it to suit your needs.',
+            'Hydrogen is provided under an GPL-3.0 license; fork the code and change it to suit your needs.',
           ],
         },
       ],

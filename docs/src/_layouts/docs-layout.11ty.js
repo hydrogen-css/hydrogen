@@ -17,7 +17,7 @@ function render(data) {
   return String.raw`
     ${breadcrumb_component.render(data)}
     <div data-h2-position="base(relative)">
-      <div data-h2-container="base(center, large, x1) p-tablet(center, large, x2) l-tablet(center, large, x3)">
+      <div data-h2-wrapper="base(center, large, x1) p-tablet(center, large, x2) l-tablet(center, large, x3)">
         <div
           data-h2-display="base(grid)"
           data-h2-grid-template-columns="base(100%) l-tablet(x15 minmax(0, 1fr))"

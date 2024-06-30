@@ -119,8 +119,8 @@ function render(data) {
         data-h2-location="
           base(0px, calc(0px - x1), auto, calc(0px - x1)) 
           p-tablet(0px, calc(0px - x2), auto, calc(0px - x2)) 
-          l-tablet(0px, min(calc(0px - x3), calc(0px - x3 - ((100vw - (var(--h2-container-large) + x4)) / 2))), auto, min(calc(0px - x3 - x15 - x3), calc(0px - x3 - x15 - x3 - ((100vw - (var(--h2-container-large) + x4)) / 2))))
-          desktop(0px, min(calc(0px - x3), calc(0px - x3 - ((100vw - (var(--h2-container-large) + x6)) / 2))), auto, min(calc(0px - x4 - x15 - x3), calc(0px - x4 - x15 - x3 - ((100vw - (var(--h2-container-large) + x6)) / 2))))"
+          l-tablet(0px, min(calc(0px - x3), calc(0px - x3 - ((100vw - (var(--h2-wrapper-large) + x4)) / 2))), auto, min(calc(0px - x3 - x15 - x3), calc(0px - x3 - x15 - x3 - ((100vw - (var(--h2-wrapper-large) + x4)) / 2))))
+          desktop(0px, min(calc(0px - x3), calc(0px - x3 - ((100vw - (var(--h2-wrapper-large) + x6)) / 2))), auto, min(calc(0px - x4 - x15 - x3), calc(0px - x4 - x15 - x3 - ((100vw - (var(--h2-wrapper-large) + x6)) / 2))))"
         data-h2-height="base(100%)"
         data-h2-background-color="base:all(black)"
         data-h2-overflow="base(hidden)">
