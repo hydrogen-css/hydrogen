@@ -2,7 +2,6 @@ const { DateTime } = require('luxon');
 const { hydrogen_build } = require('@hydrogen-css/hydrogen/lib/build');
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
-const UpgradeHelper = require('@11ty/eleventy-upgrade-help');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.setServerOptions({
