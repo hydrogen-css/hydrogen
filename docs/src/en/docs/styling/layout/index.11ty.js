@@ -170,6 +170,12 @@ let data = {
               ],
             },
             {
+              type: 'copy',
+              items: [
+                'Note that pairing <code>flex-grid</code> with <code>margin</code> will not work, and <code>flex-grid</code> will always take precedence. This is the due to <code>flex-grid</code> requiring specific margins in order to work as intended. You can get around this by using <code>padding</code> or wrapping the <code>flex-grid</code> element in a <code>div</code> and applying the <code>margin</code> to that instead.',
+              ],
+            },
+            {
               type: 'code',
               file: 'index.html',
               language: 'html',
