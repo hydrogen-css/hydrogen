@@ -265,6 +265,23 @@
           <li>Item 03</li>
         </ul>
       </details>
+      <!-- Property ordering test -->
+      <div data-h2-padding-top="base(100px)"></div>
+      <h3>Property order test</h3>
+      <h5
+        data-h2-background="base(cyan)"
+        data-h2-padding="base(50px)"
+        data-h2-padding-top="base(100px)"
+      >
+        This heading should have 100px top padding and 50px padding on the
+        remaining sides
+      </h5>
+      <p>
+        This test ensures that specific properties override shortcut properties
+        even when a specific property is declared in the markup sooner than the
+        shortcut. In this example, <code>padding-top</code> should always
+        override <code>padding</code> when both are on the same element.
+      </p>
     </div>
     <!-- Reported by CSSNANO but not Lightning -->
     <p data-h2-margin="base(calc(true, false))"></p>
