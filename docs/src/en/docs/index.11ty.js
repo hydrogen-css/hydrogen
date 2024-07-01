@@ -83,7 +83,7 @@ let data = {
         },
         {
           type: 'title',
-          label: 'Latest stable and beta releases',
+          label: 'Latest stable release',
           id: 'latest',
         },
         {
