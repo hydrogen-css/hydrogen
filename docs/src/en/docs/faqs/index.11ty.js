@@ -126,16 +126,16 @@ let data = {
         {
           type: 'list',
           items: [
-            "Importing Hydrogen's <code>build</code> script and calling it each time the framework is built",
-            "Importing Hydrogen's <code>watch</code> script and running it in parallel with your build script (this is particularly helpful during development)",
-            'Selective disabling Hydrogen from writing a CSS file and instead passing its output to your framework to handle instead',
+            "Using Hydrogen's <code>build</code> script each time the framework is built",
+            "Using Hydrogen's <code>watch</code> script in parallel with your build script (this is particularly helpful during development)",
+            'Selectively disabling Hydrogen from writing a CSS file and instead passing its output to your framework to handle instead',
           ],
         },
         {
           type: 'copy',
           items: [
             "Adding Hydrogen to your production build or one-off development build commands is generally easy, however things tend to get more complicated if your framework offers a watch mode or hot-reloading. If you're having trouble, try running Hydrogen's <code>watch</code> script on the initial build, at which point it will automatically rebuild when changes are detected.",
-            "If your integration is causing an infinite loop, this is likely due to your framework detecting Hydrgen's CSS file being written. In this situation, depending on your framework, you might be able to disable the file writing and pass Hydrogen's processed CSS to the framework directly, at which point it can write the file instead. Alternatively, trying a different build hook earlier in the build process might also resolve the loop.",
+            "If your integration is causing an infinite loop, this is likely due to your framework detecting Hydrogen's CSS file being written. The first thing you can try to avoid this is to have Hydrogen output the CSS file to your compiled directiory (often <code>dist</code>). If this isn't possible, depending on your framework, you might be able to disable the file writing and pass Hydrogen's processed CSS to the framework directly, at which point it can write the file instead. Alternatively, trying a different build hook earlier in the build process might also resolve the loop.",
           ],
         },
       ],
