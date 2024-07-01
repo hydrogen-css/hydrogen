@@ -8,7 +8,7 @@
 // Release
 /** @type {Release} */
 module.exports = {
-  version: '2.0.6',
+  version: '2.1.0',
   summary:
     'This patch enhances the query configuration so that you can configure more than just media queries, fixes one or two bugs, and updates the documentation site.',
   featured: false,
