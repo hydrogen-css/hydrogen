@@ -1,5 +1,5 @@
 const { DateTime } = require('luxon');
-const { hydrogen_build } = require('@hydrogen-css/hydrogen/lib/build');
+const { hydrogen_build } = require('@hydrogen-css/hydrogen');
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 

@@ -18,6 +18,11 @@ function render(data) {
         path: '/static/img/icon-test-tubes.svg',
         alt: '',
       };
+    } else if (data.navigation.key === 'faqs') {
+      icon = {
+        path: '/static/img/icon-chat.svg',
+        alt: '',
+      };
     }
     return icon;
   }

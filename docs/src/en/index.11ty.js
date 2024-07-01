@@ -25,6 +25,11 @@ var data = {
       label: 'Releases',
     },
     {
+      path: '/en/docs/faqs',
+      title: 'Find answers to common questions about Hydrogen.',
+      label: 'FAQs',
+    },
+    {
       path: 'https://github.com/hydrogen-css/hydrogen',
       title: "View Hydrogen's open source code in a new tab.",
       label: 'Github',

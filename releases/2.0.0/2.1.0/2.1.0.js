@@ -12,7 +12,7 @@ module.exports = {
   summary:
     'This patch enhances the query configuration so that you can configure more than just media queries, fixes one or two bugs, and updates the documentation site.',
   featured: false,
-  date: new Date('2024-05-26'),
+  date: new Date('2024-07-01'),
   author: 'Josh Beveridge',
   features: [
     {
