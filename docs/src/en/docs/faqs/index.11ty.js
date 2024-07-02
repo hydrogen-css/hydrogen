@@ -33,6 +33,37 @@ let data = {
     },
     {
       type: 'expansion',
+      label: '"What is a CSS utility framework?"',
+      expanded: '',
+      id: 'utility',
+      items: [
+        {
+          type: 'copy',
+          items: [
+            'While CSS frameworks come in a bunch of flavors, Hydrogen opts to leverage a utility-style approach. What does this mean? Normally when you style an element, you assign it a <code>class</code> and write custom CSS.',
+            "As your project grows, this custom CSS starts to become complicated - classes begin to conflict, some styles change elements unexpectedly, and you're forced to invent a naming scheme for your classes that often becomes unruly.",
+            'Utility frameworks abstract these problems away by eliminating the need for you to write custom CSS. The framework provides you with pre-made classes that do very specific things, such as styling a <code>margin</code> or <code>background-color</code>. This provides some unique benefits:',
+          ],
+        },
+        {
+          type: 'list',
+          items: [
+            'You can write styles directly in your markup, including media queries, hover states, and nested elements',
+            'Utilities are safe and reusable, meaning you can change or remove them without worrying about how it will affect other parts of your project',
+            "As you repeat styles, your CSS file doesn't continue to grow",
+            'You no longer have to name classes or IDs, as the framework handles CSS generation for you',
+          ],
+        },
+        {
+          type: 'copy',
+          items: [
+            'Hydrogen takes this approach in a slightly different direction, leveraging the more flexible syntax offered by <code>data-attributes</code> to allow for highly legible, extremely flexible styling.',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'expansion',
       label: '"Why does Hydrogen use data attributes instead of classes?"',
       expanded: '',
       id: 'attributes',
@@ -49,18 +80,19 @@ let data = {
             },
             {
               type: 'code',
-              file: 'app.css',
-              language: 'css',
-              count: 8,
+              file: 'app.html',
+              language: 'html',
+              count: 9,
               lines: [
-                '/* Tailwind */',
-                'class="my-0 mx-1.5 bg-white text-base text-black dark:bg-black dark:text-white"',
+                '<!-- Tailwind -->',
+                '<p class="my-0 mx-1.5 bg-white text-base text-black dark:bg-black dark:text-white">',
+                '  Styled text',
+                '</p>',
                 '',
-                '/* Hydrogen */',
-                'data-h2-margin="base(0px x1.5)"',
-                'data-h2-background="base(white)"',
-                'data-h2-font-size="base(body)"',
-                'data-h2-color="base(black)"',
+                '<!-- Hydrogen -->',
+                '<p data-h2-margin="base(0px x1.5)" data-h2-background="base(white)" data-h2-font-size="base(body)" data-h2-color="base(black)">',
+                '  Styled text',
+                '</p>',
               ],
             },
           ],
@@ -68,9 +100,8 @@ let data = {
         {
           type: 'copy',
           items: [
-            'This verbosity has its downsides; mainly, a less concise character count. In practice this means that your file sizes are likely to be slightly larger in comparison.',
-            "Data attributes, however, aren't limited by the same syntax constraints that the class attribute is, meaning Hydrogen attributes can provide features such as selector and child element targeting in ways that leverage the syntax you already know.",
-            'Beyond legibility and code clarity, custom data attributes allow for Hydrogen styles to be explicitly scoped to the framework, meaning they are far less likely to conflict with other frameworks, tools, or custom CSS.',
+            'This verbosity has its obvious downsides; mainly, a less concise character count. In practice this means that your file sizes are likely to be slightly larger in comparison to other frameworks.',
+            "Data attributes, however, aren't limited by the same syntax constraints that the class attribute is, meaning Hydrogen can provide features such as selector and child element targeting that mimics syntax that you already know.",
           ],
         },
       ],
