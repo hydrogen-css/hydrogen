@@ -59,9 +59,15 @@
   },
   "hydrogen-container": {
     "prefix": "data-h2-container",
-    "body": [
-      "data-h2-container=\"${1:query}${2::modifiers}(${3:alignment}, ${4:width}, ${5:padding})\""
-    ]
+    "body": ["data-h2-container=\"${1:query}${2::modifiers}(${3:css})\""]
+  },
+  "hydrogen-container-name": {
+    "prefix": "data-h2-container-name",
+    "body": ["data-h2-container-name=\"${1:query}${2::modifiers}(${3:css})\""]
+  },
+  "hydrogen-container-type": {
+    "prefix": "data-h2-container-type",
+    "body": ["data-h2-container-type=\"${1:query}${2::modifiers}(${3:css})\""]
   },
   "hydrogen-cursor": {
     "prefix": "data-h2-cursor",
@@ -143,15 +149,11 @@
   },
   "hydrogen-grid-template-columns": {
     "prefix": "data-h2-grid-template-columns",
-    "body": [
-      "data-h2-grid-template-columns=\"${1:query}${2::modifiers}(${3:css})\""
-    ]
+    "body": ["data-h2-grid-template-columns=\"${1:query}${2::modifiers}(${3:css})\""]
   },
   "hydrogen-grid-template-rows": {
     "prefix": "data-h2-grid-template-rows",
-    "body": [
-      "data-h2-grid-template-rows=\"${1:query}${2::modifiers}(${3:css})\""
-    ]
+    "body": ["data-h2-grid-template-rows=\"${1:query}${2::modifiers}(${3:css})\""]
   },
   "hydrogen-justify-content": {
     "prefix": "data-h2-justify-content",
@@ -163,9 +165,7 @@
   },
   "hydrogen-layer": {
     "prefix": "data-h2-layer",
-    "body": [
-      "data-h2-layer=\"${1:query}${2::modifiers}(${3:index}, ${4:position})\""
-    ]
+    "body": ["data-h2-layer=\"${1:query}${2::modifiers}(${3:index}, ${4:position})\""]
   },
   "hydrogen-list-style": {
     "prefix": "data-h2-list-style",
@@ -173,9 +173,7 @@
   },
   "hydrogen-list-style-position": {
     "prefix": "data-h2-list-style-position",
-    "body": [
-      "data-h2-list-style-position=\"${1:query}${2::modifiers}(${3:css})\""
-    ]
+    "body": ["data-h2-list-style-position=\"${1:query}${2::modifiers}(${3:css})\""]
   },
   "hydrogen-line-height": {
     "prefix": ["data-h2-line-height", "data-h2-leading"],
@@ -245,9 +243,7 @@
   },
   "hydrogen-overlay": {
     "prefix": "data-h2-overlay",
-    "body": [
-      "data-h2-overlay=\"${1:query}${2::modifiers}(${3:color/gradient}, ${4:opacity})\""
-    ]
+    "body": ["data-h2-overlay=\"${1:query}${2::modifiers}(${3:color/gradient}, ${4:opacity})\""]
   },
   "hydrogen-padding": {
     "prefix": "data-h2-padding",
@@ -350,5 +346,11 @@
   "hydrogen-width": {
     "prefix": "data-h2-width",
     "body": ["data-h2-width=\"${1:query}${2::modifiers}(${3:css})\""]
+  },
+  "hydrogen-wrapper": {
+    "prefix": "data-h2-wrapper",
+    "body": [
+      "data-h2-wrapper=\"${1:query}${2::modifiers}(${3:alignment}, ${4:width}, ${5:padding})\""
+    ]
   }
 }
