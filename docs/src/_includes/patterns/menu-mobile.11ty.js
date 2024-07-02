@@ -53,7 +53,7 @@ function render(data) {
         data-h2-layer="base(1)"
         data-h2-location="base(0, auto, auto, 0)"
         data-h2-height="base(x24)"
-        data-h2-max-height="base(70vh)"
+        data-h2-max-height="base(calc(100vh - x3.5 - 5px))"
         data-h2-width="base(100%)"
         aria-hidden="true">
         <div

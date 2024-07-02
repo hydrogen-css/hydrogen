@@ -25,6 +25,7 @@ function render(data, unique, release) {
   }
   // Create the breaking chip
   let breaking_chip = ``;
+  let warning_chip = ``;
   // let breaking_chip_template = chip.render(data, {
   //   label: 'breaking',
   //   color: 'error',
@@ -32,23 +33,32 @@ function render(data, unique, release) {
   let breaking_chip_template = String.raw`
     <span data-h2-margin="base(0, x.25)" data-h2-display="base(none) p-tablet(inline)">•</span><span data-h2-display="base(block) p-tablet(inline)" data-h2-font-weight="base(700)" data-h2-color="base(error.dark) base:dark(error.lighter)">🚨 Breaking</span>
   `;
+  let warning_chip_template = String.raw`
+    <span data-h2-margin="base(0, x.25)" data-h2-display="base(none) p-tablet(inline)">•</span><span data-h2-display="base(block) p-tablet(inline)" data-h2-font-weight="base(700)" data-h2-color="base(warning.dark) base:dark(warning.lighter)">⚠️ Warning</span>
+  `;
   if (release.features && release.features.length > 0) {
     release.features.forEach((feature) => {
-      if (feature.breaking) {
+      if (feature.breaking && feature.breaking === 'warning') {
+        warning_chip = warning_chip_template;
+      } else if (feature.breaking) {
         breaking_chip = breaking_chip_template;
       }
     });
   }
   if (release.optimizations && release.optimizations.length > 0) {
     release.optimizations.forEach((optimization) => {
-      if (optimization.breaking) {
+      if (optimization.breaking && optimization.breaking === 'warning') {
+        warning_chip = warning_chip_template;
+      } else if (optimization.breaking) {
         breaking_chip = breaking_chip_template;
       }
     });
   }
   if (release.bugfixes && release.bugfixes.length > 0) {
     release.bugfixes.forEach((bugfix) => {
-      if (bugfix.breaking) {
+      if (bugfix.breaking && bugfix.breaking === 'warning') {
+        warning_chip = warning_chip_template;
+      } else if (bugfix.breaking) {
         breaking_chip = breaking_chip_template;
       }
     });
@@ -83,6 +93,7 @@ function render(data, unique, release) {
         }
       )} ${release.date.getDate()}, ${release.date.getFullYear()}</span>
       ${breaking_chip}
+      ${warning_chip}
     </p>
   `;
 }
