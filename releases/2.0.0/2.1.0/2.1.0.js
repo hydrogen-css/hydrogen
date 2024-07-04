@@ -12,7 +12,7 @@ module.exports = {
   summary:
     'This minor release enhances the query configuration so that you can configure more than just media queries, adds a few quality of life features, fixes a few bugs, and updates the documentation site.',
   featured: false,
-  date: new Date('2024-07-02'),
+  date: new Date('2024-07-04'),
   author: 'Josh Beveridge',
   features: [
     {

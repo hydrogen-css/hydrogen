@@ -1,7 +1,7 @@
 {
   "name": "@hydrogen-css/hydrogen",
   "version": "2.1.0",
-  "description": "An open-source, inline CSS framework powered by data-attributes. MIT Licensed.",
+  "description": "An open-source, inline CSS framework powered by data-attributes. GPL3.0 Licensed.",
   "keywords": [
     "Hydrogen",
     "css",
