@@ -177,10 +177,10 @@ function render(data, context) {
         ${expansion_small.render(data, {
           state: parent(data.page.url, 'configuring-queries'),
           active: active(data.page.url, 'configuring-queries'),
-          label: 'Configuring media queries',
+          label: 'Queries and @rules',
           link: {
             url: '/' + data.locale + '/docs/configuration/configuring-queries',
-            label: 'Configuring media queries',
+            label: 'Queries and @rules',
           },
           content: configuring_queries_content,
         })}
