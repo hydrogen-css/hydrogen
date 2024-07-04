@@ -18,7 +18,7 @@
     "name": "Josh Beveridge",
     "url": "https://joshbeveridge.ca"
   },
-  "main": "./hydrogen.js",
+  "main": "./index.js",
   "bin": {
     "hydrogen-init": "./bin/init.js",
     "hydrogen-watch": "./bin/watch.js",
