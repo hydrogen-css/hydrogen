@@ -12,7 +12,7 @@ module.exports = {
   summary:
     'This minor release enhances the query configuration so that you can configure more than just media queries, adds a few quality of life features, fixes a few bugs, and updates the documentation site.',
   featured: false,
-  date: new Date('2024-07-04'),
+  date: new Date('2024-07-09'),
   author: 'Josh Beveridge',
   features: [
     {
@@ -75,7 +75,7 @@ module.exports = {
         en: [
           'Addresses inconsistencies created by the random order of the cascade generated based on file-read order.',
           'All properties are now written in alphabetical order, which forces shortcut properties (e.g. <code>margin</code>) to always be overridden by their specific variants (e.g. <code>margin-right</code>).',
-          'In practice, this means that if you apply a shortcut property and one or more of its variants to the same element, the specific variants will always take precendence.',
+          'In practice, this means that if you apply a shortcut property and one or more of its variants to the same element, the specific variants will always take precedence.',
           "This change is labelled with a warning because Hydrogen's output order is liable to change, meaning certain projects might experience a swap in the way overridden properties display.",
         ],
       },
