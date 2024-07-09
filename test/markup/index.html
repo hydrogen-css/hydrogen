@@ -90,6 +90,23 @@
         <p data-h2-font-weight="base(black)">black text</p>
       </div>
       <div
+        data-h2-wrapper="base(center, small, x2)"
+        data-h2-padding-bottom="base(x3)"
+      >
+        <p data-h2-margin="base(0, 0, x.5, 0)">
+          This copy should be contained in a small wrapper
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh
+          nisl condimentum id venenatis a. Nibh sit amet commodo nulla facilisi
+          nullam vehicula. Sit amet commodo nulla facilisi nullam. Placerat
+          vestibulum lectus mauris ultrices eros in cursus. Sagittis eu volutpat
+          odio facilisis. Mattis pellentesque id nibh tortor. Amet mauris
+          commodo quis imperdiet massa tincidunt nunc pulvinar.
+        </p>
+      </div>
+      <div
         data-h2-flex-grid="base(flex-start, x2)"
         data-h2-height="base:children[>div>div](x4)"
         data-h2-cursor="base:children[>div>div](pointer)"
@@ -197,7 +214,32 @@
           <div data-h2-background-color="base(secondary.100)"></div>
         </div>
       </div>
+      <!-- Container queries -->
+      <h3 data-h2-margin-top="base(x3)">Container query tests</h3>
+      <div
+        data-h2-background="base(cyan)"
+        data-h2-margin="base(x1, 0)"
+        data-h2-max-width="base(200px)"
+        data-h2-container-name="base:children[>div](named)"
+        data-h2-container-type="base:children[>div](inline-size)"
+      >
+        <div>
+          <p data-h2-background="container(red)">This should be cyan</p>
+        </div>
+      </div>
+      <div
+        data-h2-background="base(cyan)"
+        data-h2-margin="base(x1, 0)"
+        data-h2-max-width="base(600px)"
+        data-h2-container-name="base:children[>div](named)"
+        data-h2-container-type="base:children[>div](inline-size)"
+      >
+        <div>
+          <p data-h2-background="container(red)">This should be red</p>
+        </div>
+      </div>
       <!-- Children with pseudo elements test -->
+      <h3 data-h2-margin-top="base(x3)">Psuedo element tests</h3>
       <p
         data-h2-background="base:children[span](cyan) base:children[span::before](red)"
         data-h2-content="base:children[span::before](' ')"
@@ -206,18 +248,40 @@
         data-h2-margin="base(x2, 0)"
         data-h2-width="base:children[span::before](5px)"
       >
-        <span>Test</span>
+        <span
+          >This text should have a red :before element that is 5px by 5px.</span
+        >
       </p>
       <details
         data-h2-content="base:children[summary::marker]('+') base:selectors[[open]]:children[summary::marker]('−')"
       >
-        <summary>This is a test details element.</summary>
+        <summary>
+          This details element should show a + symbol when collapsed, and a -
+          symbol when opened.
+        </summary>
         <ul>
           <li>Item 01</li>
           <li>Item 02</li>
           <li>Item 03</li>
         </ul>
       </details>
+      <!-- Property ordering test -->
+      <div data-h2-padding-top="base(100px)"></div>
+      <h3>Property order test</h3>
+      <h5
+        data-h2-background="base(cyan)"
+        data-h2-padding="base(50px)"
+        data-h2-padding-top="base(100px)"
+      >
+        This heading should have 100px top padding and 50px padding on the
+        remaining sides
+      </h5>
+      <p>
+        This test ensures that specific properties override shortcut properties
+        even when a specific property is declared in the markup sooner than the
+        shortcut. In this example, <code>padding-top</code> should always
+        override <code>padding</code> when both are on the same element.
+      </p>
     </div>
     <!-- Reported by CSSNANO but not Lightning -->
     <p data-h2-margin="base(calc(true, false))"></p>

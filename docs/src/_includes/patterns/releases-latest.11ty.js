@@ -17,14 +17,14 @@ function render(data, content) {
       content: release_content.render(data, 'latest-stable', latest),
     });
   // Render the latest beta release
-  output =
-    output +
-    expansion.render(data, {
-      state: '',
-      label: release_title.render(data, 'latest-beta', beta),
-      content: release_content.render(data, 'latest-beta', beta),
-    });
-  output = output + String.raw`</div>`;
+  // output =
+  //   output +
+  //   expansion.render(data, {
+  //     state: '',
+  //     label: release_title.render(data, 'latest-beta', beta),
+  //     content: release_content.render(data, 'latest-beta', beta),
+  //   });
+  // output = output + String.raw`</div>`;
   return output;
 }
 

@@ -32,28 +32,14 @@ let data = {
   main: [
     {
       type: 'title',
-      label: 'Latest releases',
-      id: 'latest',
+      label: 'Upcoming features',
+      id: 'roadmap',
       link: {
         path: '/feed.xml',
         title: "Subscribe to Hydrogen's RSS feed to stay in the loop.",
         label: 'Subscribe to updates',
         external: true,
       },
-    },
-    {
-      type: 'copy',
-      items: [
-        'The following are the latest <strong>stable</strong> production-ready Hydrogen release, as well as the latest <strong>beta</strong> release with the newest features.',
-      ],
-    },
-    {
-      type: 'latest',
-    },
-    {
-      type: 'title',
-      label: 'Upcoming features',
-      id: 'roadmap',
     },
     {
       type: 'copy',

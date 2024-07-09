@@ -86,7 +86,6 @@ let data = {
                 '    "key": "default",',
                 '    "typography": []',
                 '    "colors": []',
-                '    "containers": []',
                 '    "fonts": []',
                 '    "font_weights": []',
                 '    "gradients": []',
@@ -97,6 +96,7 @@ let data = {
                 '      "functions": []',
                 '      "delays": []',
                 '    },',
+                '    "wrappers": []',
                 '  },',
                 '  ...',
                 ']',
@@ -360,7 +360,7 @@ let data = {
         },
         {
           type: 'title',
-          label: 'Containers',
+          label: 'Containers (deprecated)',
           id: 'containers',
         },
         {
@@ -369,31 +369,7 @@ let data = {
             {
               type: 'copy',
               items: [
-                'Containers allow you to specify consistent, reusable width values that can be helpful in ensuring consistent page or element sizes.',
-              ],
-            },
-            {
-              type: 'list',
-              style: 'unordered',
-              items: [
-                "<code>max_width</code> allows you to set the container's width value in any CSS unit.",
-              ],
-            },
-            {
-              type: 'code',
-              file: 'hydrogen.config.json',
-              language: 'json',
-              count: 9,
-              lines: [
-                '"containers": [',
-                '  {',
-                '    "key": "small",',
-                '    "default": {',
-                '      "max_width": "39rem",',
-                '    },',
-                '  },',
-                '  ...',
-                '],',
+                'Containers have been deprecated in favor of the newer wrapper theme setting found below.',
               ],
             },
           ],
@@ -659,6 +635,46 @@ let data = {
                 '    ...',
                 '  ]',
                 '}',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'title',
+          label: 'Wrappers',
+          id: 'wrappers',
+        },
+        {
+          type: 'group',
+          items: [
+            {
+              type: 'copy',
+              items: [
+                'Wrappers allow you to specify consistent, reusable width values that can be helpful in ensuring consistent page or element sizes.',
+              ],
+            },
+            {
+              type: 'list',
+              style: 'unordered',
+              items: [
+                "<code>max_width</code> allows you to set the wrapper's width value in any CSS unit.",
+              ],
+            },
+            {
+              type: 'code',
+              file: 'hydrogen.config.json',
+              language: 'json',
+              count: 9,
+              lines: [
+                '"wrappers": [',
+                '  {',
+                '    "key": "small",',
+                '    "default": {',
+                '      "max_width": "39rem",',
+                '    },',
+                '  },',
+                '  ...',
+                '],',
               ],
             },
           ],

@@ -177,10 +177,10 @@ function render(data, context) {
         ${expansion_small.render(data, {
           state: parent(data.page.url, 'configuring-queries'),
           active: active(data.page.url, 'configuring-queries'),
-          label: 'Configuring media queries',
+          label: 'Queries and @rules',
           link: {
             url: '/' + data.locale + '/docs/configuration/configuring-queries',
-            label: 'Configuring media queries',
+            label: 'Queries and @rules',
           },
           content: configuring_queries_content,
         })}
@@ -484,6 +484,11 @@ function render(data, context) {
             external: false,
             children: false,
           })}
+          ${return_menu_item('FAQs', '/' + data.locale + '/docs/faqs', {
+            active: active(data.page.url, 'faqs'),
+            external: false,
+            children: false,
+          })}
           ${return_menu_item('Github', 'https://github.com/hydrogen-design-system/hydrogen', {
             external: true,
             children: false,
@@ -526,7 +531,7 @@ function render(data, context) {
         data-h2-transform="base(translate(0, -50%))"
         data-h2-height="base(x.75)"
         data-h2-width="base(x.75)"
-        data-h2-color="base:all(black.lightest)">
+        data-h2-color="base(primary.darkest.5)">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M47.6616 30.5843C47.6616 40.3926 39.7104 48.3438 29.9021 48.3438C20.0938 48.3438 12.1426 40.3926 12.1426 30.5843C12.1426 20.7759 20.0938 12.8247 29.9021 12.8247C39.7104 12.8247 47.6616 20.7759 47.6616 30.5843ZM46.2728 55.4403C41.5765 58.5397 35.95 60.3438 29.9021 60.3438C13.4664 60.3438 0.142578 47.02 0.142578 30.5843C0.142578 14.1485 13.4664 0.824738 29.9021 0.824738C46.3378 0.824738 59.6616 14.1485 59.6616 30.5843C59.6616 36.6322 57.8575 42.2587 54.7581 46.9551L65.3442 57.541C67.6873 59.8842 67.6874 63.6832 65.3442 66.0263C63.0011 68.3695 59.2021 68.3695 56.8589 66.0264L46.2728 55.4403Z" fill="currentColor"/>
       </svg>
       <input 

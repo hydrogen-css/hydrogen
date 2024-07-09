@@ -53,7 +53,7 @@ function render(data) {
         data-h2-layer="base(1)"
         data-h2-location="base(0, auto, auto, 0)"
         data-h2-height="base(x24)"
-        data-h2-max-height="base(70vh)"
+        data-h2-max-height="base(calc(100vh - x3.5 - 5px))"
         data-h2-width="base(100%)"
         aria-hidden="true">
         <div
@@ -66,7 +66,7 @@ function render(data) {
           data-h2-max-width="base(x18)"
           data-h2-margin="base(0, auto)">
           <div
-            data-h2-padding="base(x1.5) mobile(x1.5, x2, x2, x2)"
+            data-h2-padding="base(x1.5) mobile(x2)"
             data-h2-min-height="base(100%)">
             ${menu_data.render(data, 'mobile')}
           </div>

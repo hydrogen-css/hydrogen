@@ -31,7 +31,14 @@ function render(data, unique, release) {
       `;
       release[change].forEach((item) => {
         let breaking_label = ``;
-        if (item.breaking) {
+        let warning_label = ``;
+        if (item.breaking && item.breaking === 'warning') {
+          warning_label = String.raw`
+            <span
+              data-h2-color="base(warning.dark)"
+              data-h2-font-weight="base(700)">Warning: </span>
+          `;
+        } else if (item.breaking) {
           breaking_label = String.raw`
             <span
               data-h2-color="base(error.dark)"
@@ -45,7 +52,7 @@ function render(data, unique, release) {
               if (index === 0) {
                 output =
                   output +
-                  String.raw`${breaking_label}${change}<ul data-h2-padding="base(0, 0, 0, x.75) p-tablet(0, 0, 0, x1)">`;
+                  String.raw`${breaking_label}${warning_label}${change}<ul data-h2-padding="base(0, 0, 0, x.75) p-tablet(0, 0, 0, x1)">`;
               } else if (index === item.changes[data.locale].length - 1) {
                 output = output + String.raw`<li>${change}</li></ul>`;
               } else {
@@ -54,7 +61,7 @@ function render(data, unique, release) {
             });
           } else {
             item.changes[data.locale].forEach((change, index) => {
-              output = output + String.raw`${breaking_label}${change}`;
+              output = output + String.raw`${breaking_label}${warning_label}${change}`;
             });
           }
           output = output + String.raw`</li>`;
@@ -62,7 +69,7 @@ function render(data, unique, release) {
           output =
             output +
             String.raw`
-              <li>${breaking_label}${item.changes[data.locale]}</li>
+              <li>${breaking_label}${warning_label}${item.changes[data.locale]}</li>
             `;
         }
       });

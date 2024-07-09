@@ -12,6 +12,7 @@ let data = {
     'custom',
     'supports',
     'containers',
+    'wrappers',
     'data',
     'h2',
     'flex',
@@ -60,23 +61,13 @@ let data = {
       content: [
         {
           type: 'title',
-          label: 'Container',
+          label: 'Container (deprecated)',
           id: 'container',
         },
         {
           type: 'copy',
           items: [
-            '<code>data-h2-container="base(alignment, size, inline-padding)"</code>',
-            'The container property applies a <code>max-width</code> to an element, aligns it using various left/right margin values, and optionally, does the math to add padding to the left and right sides. The container property accepts the following comma-separated arguments:',
-          ],
-        },
-        {
-          type: 'list',
-          style: 'unordered',
-          items: [
-            '<code>alignment</code>: accepts <code>center</code>, <code>left</code>, and <code>right</code>',
-            '<code>size</code>: accepts configured container settings, any CSS unit value, as well as Hydrogen space multipliers',
-            '<code>inline-padding</code>: accepts any CSS unit value, as well as Hydrogen space multipliers',
+            'This property has been deprecated in order to avoid conflicts with the native <code>container</code> CSS property. Please see <code>data-h2-wrapper</code> below for the newly supported property.',
           ],
         },
         {
@@ -107,6 +98,12 @@ let data = {
                 '<code>alignment</code>: accepts any valid CSS <code>align-items</code> value',
                 '<code>column-gap</code>: accepts any CSS unit value, as well as Hydrogen space multipliers',
                 '<code>row-gap</code>: accepts any CSS unit value, as well as Hydrogen space multipliers',
+              ],
+            },
+            {
+              type: 'copy',
+              items: [
+                'Note that pairing <code>flex-grid</code> with <code>margin</code> will not work, and <code>flex-grid</code> will always take precedence. This is the due to <code>flex-grid</code> requiring specific margins in order to work as intended. You can get around this by using <code>padding</code> or wrapping the <code>flex-grid</code> element in a <code>div</code> and applying the <code>margin</code> to that instead.',
               ],
             },
             {
@@ -231,6 +228,27 @@ let data = {
           style: 'unordered',
           items: [
             '<code>visibility</code>: accepts either <code>visible</code>, <code>invisible</code>, or <code>hidden</code>',
+          ],
+        },
+        {
+          type: 'title',
+          label: 'Wrapper',
+          id: 'wrapper',
+        },
+        {
+          type: 'copy',
+          items: [
+            '<code>data-h2-wrapper="base(alignment, size, inline-padding)"</code>',
+            'The wrapper property applies a <code>max-width</code> to an element, aligns it using various left/right margin values, and optionally, does the math to add padding to the left and right sides. The wrapper property accepts the following comma-separated arguments:',
+          ],
+        },
+        {
+          type: 'list',
+          style: 'unordered',
+          items: [
+            '<code>alignment</code>: accepts <code>center</code>, <code>left</code>, and <code>right</code>',
+            '<code>size</code>: accepts configured container settings, any CSS unit value, as well as Hydrogen space multipliers',
+            '<code>inline-padding</code>: accepts any CSS unit value, as well as Hydrogen space multipliers',
           ],
         },
       ],

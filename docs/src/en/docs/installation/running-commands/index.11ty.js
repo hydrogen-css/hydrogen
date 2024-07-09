@@ -136,7 +136,7 @@ let data = {
             {
               type: 'copy',
               items: [
-                "Processing flags allow you to control how the final CSS output is processed by <a href='https://lightningcss.dev/' title='Learn more about Lightning CSS in a new tab.' target='_blank'>Lightning CSS</a>.",
+                "Processing flags allow you to control how the final CSS output is processed, including options for <a href='https://lightningcss.dev/' title='Learn more about Lightning CSS in a new tab.' target='_blank'>Lightning CSS</a>.",
               ],
             },
             {
@@ -145,14 +145,21 @@ let data = {
               items: [
                 '<code>--h2_prefix</code> will enable/disable browser prefixing.',
                 '<code>--h2_minify</code> will enable/disable file minification.',
+                '<code>--h2_error_recovery</code> will allow Lightning CSS to run regardless of errors.',
+                '<code>--h2_write_css_file</code> tells Hydrogen whether you want it to write a final CSS file',
               ],
             },
             {
               type: 'code',
               file: 'terminal',
               language: 'powershell',
-              count: 2,
-              lines: ['npx h2-build --h2_prefix', 'npx h2-build --h2_minify'],
+              count: 4,
+              lines: [
+                'npx h2-build --h2_prefix',
+                'npx h2-build --h2_minify',
+                'npx h2-build --h2_error_recovery',
+                'npx h2-build --h2_write_css_file',
+              ],
             },
           ],
         },

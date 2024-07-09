@@ -21,11 +21,11 @@
     "include_reset_css": true,
     "browser_prefix_css": true,
     "minify_css": true,
-    "export_variable_file": false
+    "export_variable_file": false,
+    "error_recovery": true
   },
   "logging": {
     "generate_logs": false,
-    "show_timers": true,
     "verbose_console_output": true
   },
   "media": {
@@ -38,6 +38,10 @@
       {
         "key": "p-tablet",
         "query": "screen and (min-width: 48em)"
+      },
+      {
+        "key": "container",
+        "query": "@container named (min-width: 500px)"
       },
       {
         "key": "l-tablet",
